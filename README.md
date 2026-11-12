@@ -23,6 +23,13 @@ This repository is built for two strategic purposes:
 /home/mohamed/Desktop/Work/aws/
 ├── README.md                                  <-- Master Repository Index
 │
+├── .vscode/mcp.json                           <-- AWS MCP Server Configuration (Agent Toolkit)
+├── mcp.json                                   <-- Workspace MCP Descriptor
+│
+├── .agents/                                   <-- Official AWS Agent Toolkit Integration
+│   ├── rules/aws-agent-rules.md               (AWS operational & architectural rules for agents)
+│   └── skills/                                (26 official AWS core skills: Bedrock, IAM, VPC, etc.)
+│
 ├── cloud/
 │   └── foundation/                            <-- Track 1: AWS Certified Cloud Practitioner (CLF-C02)
 │       ├── README.md                          (Track roadmap, syllabus, and module index)
@@ -140,3 +147,13 @@ For comprehensive offline study and deeper explanations, the curriculum referenc
 2. **AWS Certified Cloud Practitioner (CLF-C02) Study Guide (1st Edition, 2026)**
    * **Author:** Tom Taulli (*O'Reilly Media*) — `ISBN: 978-8-34164-022-2`
    * *Best For:* Conceptual grounding, cloud economics, TCO modeling, and enterprise architecture perspectives.
+
+---
+
+## 🛠️ Agent Toolkit for AWS (AI Assistant Layer)
+
+This repository includes official integration with the **[Agent Toolkit for AWS](https://docs.aws.amazon.com/agent-toolkit/latest/userguide/what-is-agent-toolkit.html)** to provide AI coding assistants with live AWS documentation, regional feature verification, and governed architectural runbooks:
+
+* **AWS MCP Server (`.vscode/mcp.json` / `mcp.json`):** Connects to the AWS remote MCP server via `uvx mcp-proxy-for-aws-cli@latest` with `--skip-auth`. Enables live documentation search (`aws___search_documentation`) and Markdown retrieval (`aws___read_documentation`) without requiring AWS credentials.
+* **Agent Rules (`.agents/rules/aws-agent-rules.md`):** Mandates evidence-based verification against current AWS documentation, Infrastructure as Code (CDK/CloudFormation), and Well-Architected Framework principles.
+* **Agent Skills (`.agents/skills/`):** 26 modular AWS core runbooks (Amazon Bedrock, SageMaker AI, IAM, VPC networking, CloudFormation, cost optimization) dynamically referenced during course development and maintenance.
