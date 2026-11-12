@@ -11,3 +11,5 @@ sources/
 **/sources/
 *.epub
 *.pdf
+graphify-out/*.lock
+graphify-out/.*.lock
