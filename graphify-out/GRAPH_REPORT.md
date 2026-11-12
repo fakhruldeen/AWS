@@ -1,17 +1,17 @@
 # Graph Report - aws  (2026-11-12)
 
 ## Corpus Check
-- 491 files · ~570,385 words
+- 493 files · ~570,936 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 5 file(s) not represented in the graph (top: .tmpl 3, (none) 2)
 
 ## Summary
-- 5703 nodes · 6756 edges · 479 communities (428 shown, 51 thin omitted)
+- 5712 nodes · 6763 edges · 478 communities (428 shown, 50 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 77 edges (avg confidence: 0.91)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `5e16ad6c`
+- Built from commit: `7c21c684`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -34,7 +34,7 @@
 - format_detector.py
 - 5. Per-service metric catalog
 - New applications
-- di_status_rendering.py
+- di_status_assessment.py
 - Managed Knowledge Base — API Reference
 - model-selection.md
 - Distributed Tracing: X-Ray and ADOT
@@ -166,7 +166,7 @@
 - Fast Deployments: Hotswap and Express Mode
 - Import and Migrate Reference
 - CloudTrail Operational Auditing
-- build_client
+- di_logs_client.py
 - Client Configuration Reference
 - AWS SDK for Python (boto3)
 - Pass 3 — Inventory to Service Recommendation Matrix
@@ -217,7 +217,7 @@
 - CodeBuild
 - IAM Role Management
 - di_error_translation.py
-- HashLocation
+- boto3
 - capture_dataset_from_traces.py
 - _DatasetLister
 - Error Handling Patterns
@@ -358,8 +358,8 @@
 - AWS Pricing Lookup
 - RDS Optimization
 - Savings Plans
-- Testing CDK Infrastructure
-- Troubleshooting
+- Steps
+- _write_back
 - eks.md
 - Compute
 - aws-emulator/SKILL.md
@@ -418,7 +418,7 @@
 - Processing Job Troubleshooting
 - SDK Getting Started
 - Free Tier
-- Choosing Construct Levels
+- re
 - UPDATE_ROLLBACK_FAILED Recovery
 - Cross-Account Deployment
 - 3. Choosing an evaluator
@@ -444,8 +444,8 @@
 - Spec for Deployment
 - Spec for Fine-tuning
 - AWS AI/ML Model Customization
-- API Gateway Multi-Stage
-- Lambda Cannot Find Module at Runtime
+- Architectural Rule: Obsidian Vault vs. Work Repository Separation
+- Agent Guidelines & Operational Rules for AWS Repository
 - Amazon Elastic Kubernetes Service
 - eks-control-plane.md
 - Lambda
@@ -455,7 +455,6 @@
 - Sensitive-data discovery decisions
 - Risk Assessment Procedure
 - SageMaker Managed MLflow Guide
-- render_get_instrumentation_configuration_status_output
 - aws-mcp
 - aws-mcp
 - eula_links.md
@@ -488,42 +487,42 @@
 1. `_make_session()` - 23 edges
 2. `Workflow` - 21 edges
 3. `Troubleshooting` - 19 edges
-4. `Cost analysis — self-managed vector store vs. Managed KB` - 18 edges
+4. `Pass 2 — Security Service Enablement Checks` - 18 edges
 5. `Workflow` - 18 edges
-6. `Pass 2 — Security Service Enablement Checks` - 18 edges
+6. `Cost analysis — self-managed vector store vs. Managed KB` - 18 edges
 7. `AWS SDK for JavaScript v3` - 17 edges
-8. `8. Common Query Patterns` - 16 edges
-9. `Breakpoint Creation and Troubleshooting Reference` - 16 edges
-10. `_ok()` - 16 edges
+8. `_ok()` - 16 edges
+9. `8. Common Query Patterns` - 16 edges
+10. `Breakpoint Creation and Troubleshooting Reference` - 16 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `Phase 4 — Implement (opt-in only)` --references--> `invalid()`  [INFERRED]
-  .agents/skills/amazon-bedrock/references/migrate-knowledge-base-to-managed.md → .agents/skills/aws-observability/scripts/cloudwatch-omni/capture_dataset_from_traces.py
-- `Cause` --references--> `handler()`  [INFERRED]
-  .agents/skills/aws-cdk/references/troubleshooting-deployment.md → .agents/skills/aws-serverless/assets/powertools-handler.py
 - `Automatic node repair` --references--> `Ready`  [INFERRED]
   .agents/skills/aws-containers/references/eks-managing-compute.md → .agents/skills/aws-observability/scripts/cloudwatch/di_status_assessment.py
 - `Discover evaluators first — never hardcode ids` --references--> `evaluate()`  [INFERRED]
   .agents/skills/aws-observability/references/cloudwatch-omni/agent-evaluation.md → .agents/skills/aws-observability/scripts/cloudwatch-omni/test_evaluate_traces.py
+- `Phase 4 — Implement (opt-in only)` --references--> `invalid()`  [INFERRED]
+  .agents/skills/amazon-bedrock/references/migrate-knowledge-base-to-managed.md → .agents/skills/aws-observability/scripts/cloudwatch-omni/capture_dataset_from_traces.py
 - `AWS Security Incident Response` --references--> `Active`  [INFERRED]
   .agents/skills/aws-security/references/service-recommendations/enablement-checks.md → .agents/skills/aws-observability/scripts/cloudwatch/di_status_assessment.py
+- `Preconditions` --references--> `validate()`  [INFERRED]
+  .agents/skills/amazon-bedrock/references/bedrock-kb-migration/implement-iac.md → .agents/skills/aws-ai-ml/references/model-evaluation/scripts/validate_custom_metrics.py
 
 ## Import Cycles
 - None detected.
 
-## Communities (479 total, 51 thin omitted)
+## Communities (478 total, 50 thin omitted)
 
 ### Community 0 - "typing"
 Cohesion: 0.07
-Nodes (16): capture_from_response(), CaptureLimits, _code_capture_from_dict(), CodeCapture, UnknownCapture, _format_batch_delete_response(), _render_create_capture_limits(), render_create_success_message() (+8 more)
+Nodes (15): capture_from_response(), CaptureLimits, _code_capture_from_dict(), CodeCapture, UnknownCapture, _format_batch_delete_response(), _render_create_capture_limits(), render_create_success_message() (+7 more)
 
 ### Community 1 - "auth.py"
-Cohesion: 0.09
-Nodes (23): main(), _create_sso_oidc_client(), _exchange_code(), _generate_pkce(), _generate_state(), get_access_token(), has_valid_session(), load_session() (+15 more)
+Cohesion: 0.10
+Nodes (22): main(), _create_sso_oidc_client(), _exchange_code(), _generate_pkce(), _generate_state(), get_access_token(), has_valid_session(), load_session() (+14 more)
 
 ### Community 2 - "archive.py"
-Cohesion: 0.07
-Nodes (19): _escape_logs_insights_regex(), _AllowlistRedirectHandler, ArchiveError, _decode_git_paths(), download_github_zip(), _git_included_files(), _gitignore_files_without_repo(), _has_git_metadata() (+11 more)
+Cohesion: 0.08
+Nodes (18): _AllowlistRedirectHandler, ArchiveError, _decode_git_paths(), download_github_zip(), _git_included_files(), _gitignore_files_without_repo(), _has_git_metadata(), _has_gitignore() (+10 more)
 
 ### Community 3 - "Data investigation"
 Cohesion: 0.05
@@ -539,23 +538,23 @@ Nodes (44): 400 error on prefill with Claude 4.6, AccessDeniedException, Additio
 
 ### Community 6 - "di_status_tools.py"
 Cohesion: 0.08
-Nodes (19): batch_delete_instrumentations_by_arns(), batch_delete_instrumentations_by_scope(), delete_instrumentation(), get_instrumentation(), list_instrumentations(), _render_location_identifier_help(), render_error(), parse_lookup_inputs() (+11 more)
+Nodes (18): batch_delete_instrumentations_by_arns(), batch_delete_instrumentations_by_scope(), delete_instrumentation(), get_instrumentation(), list_instrumentations(), _render_location_identifier_help(), render_error(), OpResult (+10 more)
 
 ### Community 7 - "launch_with_aws.py"
-Cohesion: 0.09
-Nodes (23): load_config(), cmd_auth_start(), cmd_auth_wait(), cmd_create_launch(), cmd_delete_launch(), cmd_get_launch(), cmd_get_launch_download_url(), cmd_get_launch_status() (+15 more)
+Cohesion: 0.08
+Nodes (24): SessionExpiredError, load_config(), cmd_auth_start(), cmd_auth_wait(), cmd_create_launch(), cmd_delete_launch(), cmd_get_launch(), cmd_get_launch_download_url() (+16 more)
 
 ### Community 8 - "8. Common Query Patterns"
 Cohesion: 0.05
 Nodes (42): 0. Running a Query, 1. Tables & Addressing, 2. Required Time Range, 3. System Fields, 4. Field Access & Quoting, 5. Schema Discovery, 6. Supported SQL Operations, 7. Functions Reference (+34 more)
 
 ### Community 9 - "evaluate_traces.py"
-Cohesion: 0.08
-Nodes (20): _die(), _err_code(), _eval_result_records(), _fetch_spans(), _fetch_trace(), _log_group_segment(), main(), _normalize_span_kind() (+12 more)
+Cohesion: 0.09
+Nodes (16): _die(), _eval_result_records(), _fetch_spans(), _fetch_trace(), main(), _normalize_span_kind(), _omni_query(), _public_rows() (+8 more)
 
 ### Community 10 - "di_location.py"
-Cohesion: 0.07
-Nodes (7): _code_location_from_dict(), CodeLocation, _freeze_mapping(), location_from_response(), parse_create_inputs(), UnknownLocation, _validate_location_inputs()
+Cohesion: 0.05
+Nodes (10): _code_location_from_dict(), CodeLocation, _freeze_mapping(), HashLocation, location_from_response(), parse_create_inputs(), parse_lookup_inputs(), UnknownLocation (+2 more)
 
 ### Community 11 - "Syllabus & Blueprint / Exam Cheat Sheet"
 Cohesion: 0.06
@@ -585,9 +584,9 @@ Nodes (35): 1. Metrics are PromQL, not SQL, 2. What is queryable — and what is
 Cohesion: 0.06
 Nodes (30): 1. Local skills directory, 2. AWS MCP server (if available), Before loading (skip once the service is known), How to load a service skill, If the service skill is not available, Service Skill Handoff, Procedure, Report Issue (+22 more)
 
-### Community 18 - "di_status_rendering.py"
-Cohesion: 0.11
-Nodes (14): resolve_snapshot_log_group(), Active, assess(), _check_result(), ErrorOrPending, _format_iso(), Ready, _StatusCheckResult (+6 more)
+### Community 18 - "di_status_assessment.py"
+Cohesion: 0.27
+Nodes (6): Active, assess(), _check_result(), _format_iso(), _StatusCheckResult, AWS Security Incident Response
 
 ### Community 19 - "Managed Knowledge Base — API Reference"
 Cohesion: 0.06
@@ -602,16 +601,16 @@ Cohesion: 0.07
 Nodes (30): Adaptive sampling (newer), ADOT collector configuration, ADOT vs X-Ray SDK, Annotations require explicit opt-in, Annotations vs metadata, API Gateway: enable tracing, Architecture, Cardinality prevention (three-layer defense) (+22 more)
 
 ### Community 22 - "boto3"
-Cohesion: 0.12
+Cohesion: 0.13
 Nodes (6): resolve_submitted_job(), unique_job_prefix(), resolve_submitted_job(), unique_job_prefix(), resolve_submitted_job(), unique_job_prefix()
 
 ### Community 23 - "di_gateway.py"
-Cohesion: 0.12
-Nodes (10): get_application_signals_client(), batch_delete_instrumentation_configurations(), _bind_method(), _call(), create_instrumentation_configuration(), delete_instrumentation_configuration(), GatewayError, get_instrumentation_configuration() (+2 more)
+Cohesion: 0.09
+Nodes (12): get_application_signals_client(), batch_delete_instrumentation_configurations(), _bind_method(), _call(), create_instrumentation_configuration(), delete_instrumentation_configuration(), GatewayError, get_instrumentation_configuration() (+4 more)
 
 ### Community 24 - "di_snapshot_tools.py"
-Cohesion: 0.11
-Nodes (9): _escape_logs_insights_string(), _parse_snapshot_fields(), _preview_captured_value(), _execute_cloudwatch_query(), render_get_sample_snapshot_for_breakpoint_output(), render_search_snapshots_for_status_event_output(), _build_base_filters(), get_sample_snapshot_for_breakpoint() (+1 more)
+Cohesion: 0.07
+Nodes (19): resolve_snapshot_log_group(), format_timestamp(), _escape_logs_insights_string(), _parse_snapshot_fields(), _preview_captured_value(), _execute_cloudwatch_query(), render_get_sample_snapshot_for_breakpoint_output(), render_search_snapshots_for_status_event_output() (+11 more)
 
 ### Community 25 - "AgentCore Payments"
 Cohesion: 0.07
@@ -646,12 +645,12 @@ Cohesion: 0.14
 Nodes (14): 1. AWS Local Zones, 1. Overview of AWS Global Infrastructure, 2. AWS Regions, 2. AWS Wavelength, 3. Availability Zones (AZs), 3. AWS Outposts, 4. Edge Locations & Point of Presence (PoP), 4 Pillars of Region Selection (High-Yield Exam Focus): (+6 more)
 
 ### Community 33 - "nova_rlvr_reward_function_source_template.py"
-Cohesion: 0.11
-Nodes (7): coerce_ground_truth(), compute_reasoning_quality(), content_to_text(), extract_answer(), extract_number(), lambda_handler(), reward_function()
+Cohesion: 0.12
+Nodes (6): coerce_ground_truth(), compute_reasoning_quality(), content_to_text(), extract_number(), lambda_handler(), reward_function()
 
 ### Community 34 - "nova_reward_function_source_template.py"
-Cohesion: 0.11
-Nodes (7): coerce_ground_truth(), compute_reasoning_quality(), content_to_text(), extract_answer(), extract_number(), lambda_handler(), reward_function()
+Cohesion: 0.12
+Nodes (6): coerce_ground_truth(), compute_reasoning_quality(), content_to_text(), extract_number(), lambda_handler(), reward_function()
 
 ### Community 35 - "Security & Compliance (D2)"
 Cohesion: 0.15
@@ -846,8 +845,8 @@ Cohesion: 0.10
 Nodes (21): 1. Validate Prerequisites, 2. Select Chunking Strategy, 3. Select and Configure Vector Store, 4. Create IAM Service Role and Knowledge Base, 5. Create Data Source, 6. Run Initial Ingestion, 7. Verify Knowledge Base, Create a Bedrock Knowledge Base with Data Source (+13 more)
 
 ### Community 85 - "Construct Patterns"
-Cohesion: 0.10
-Nodes (20): Compose L3 (has-a), Construct ID (second argument), Construct Patterns, Creating Custom Constructs, Cross-region or cross-account (same app), Cross-Stack References, Different apps, Escalation ladder (+12 more)
+Cohesion: 0.06
+Nodes (32): Application best practices, Choosing Construct Levels, Compose L3 (has-a), Construct ID (second argument), Construct Patterns, Creating Custom Constructs, Cross-region or cross-account (same app), Cross-Stack References (+24 more)
 
 ### Community 86 - "Steps"
 Cohesion: 0.10
@@ -902,8 +901,8 @@ Cohesion: 0.10
 Nodes (19): 1. Authentication, 2. Create Launch, 3. Poll Launch Status, 4. Get Full Launch Details & Confirm, 5. Start Execution, 6. Download, 7. List or Delete Launches, 8. Post-Migration: Apply Migrated Code Locally (+11 more)
 
 ### Community 100 - "validate_custom_metrics.py"
-Cohesion: 0.14
-Nodes (8): Preconditions, CustomMetric, CustomMetricDefinition, main(), RatingScaleEntry, RatingValue, validate(), `EarlyValidationFailure` specifically
+Cohesion: 0.20
+Nodes (4): CustomMetric, CustomMetricDefinition, RatingScaleEntry, RatingValue
 
 ### Community 102 - "Workflow"
 Cohesion: 0.11
@@ -939,7 +938,7 @@ Nodes (16): Annotating with Evidence, Building the Call Tree, Call Tree and Inve
 
 ### Community 110 - "Pass 2 — Security Service Enablement Checks"
 Cohesion: 0.11
-Nodes (18): Account-scoped coverage interpretation, Amazon Detective, Amazon GuardDuty, Amazon Inspector, Amazon Macie, Amazon Security Lake, AWS Certificate Manager, AWS Config (+10 more)
+Nodes (17): Account-scoped coverage interpretation, Amazon Detective, Amazon GuardDuty, Amazon Inspector, Amazon Macie, Amazon Security Lake, AWS Certificate Manager, AWS Config (+9 more)
 
 ### Community 111 - "Plan the migration (advisory)"
 Cohesion: 0.11
@@ -1027,7 +1026,7 @@ Nodes (8): _parse_version(), search_deployable_models(), _search_error(), Search
 
 ### Community 132 - "Steps"
 Cohesion: 0.12
-Nodes (16): 1. Verify Dependencies, 2. Confirm Express Mode is Appropriate, 3. Upload Template (if needed), 4. Execute Stack Operation with Express Mode, 5. Express Mode with Change Sets, 6. CDK Express Mode, 7. Monitor Resource Readiness After Completion, Deploy with Express Mode (+8 more)
+Nodes (15): Custom resources do not complete faster, `deploy` command does not accept `--deployment-config`, Deploy with Express Mode, `--deployment-config` not recognized, Example: CDK deploy with Express mode, Example: Create a stack with Express mode, Example: Express mode with rollback enabled, Examples (+7 more)
 
 ### Community 133 - "Lookup CloudFormation Resource Properties"
 Cohesion: 0.12
@@ -1058,8 +1057,8 @@ Cohesion: 0.12
 Nodes (15): Capture the request first, Contents, Explore mode and detours, Migrate a Knowledge Base to a Managed Knowledge Base, Phase 0 — Introduce, then choose mode, style, and target type (gates), Phase 1 — Identify (read-only), Phase 2 — Discover (read-only), Phase 3 — Plan (writes the plan; no AWS change) (+7 more)
 
 ### Community 140 - "Dataset Transformation Code Reference"
-Cohesion: 0.14
-Nodes (12): Dataset Transformation Code Reference, Execution Examples, Generating a dataset transformation execution script, Generating a dataset transformation function, Local execution, Related Files, Requirements, SageMaker Processing Job (+4 more)
+Cohesion: 0.18
+Nodes (10): Dataset Transformation Code Reference, Execution Examples, Generating a dataset transformation execution script, Generating a dataset transformation function, Local execution, Related Files, Requirements, SageMaker Processing Job (+2 more)
 
 ### Community 141 - "CDK v1 to v2 Migration"
 Cohesion: 0.12
@@ -1108,10 +1107,6 @@ Nodes (14): CI-Friendly Import (--import-existing-resources), First Deploy After
 ### Community 152 - "CloudTrail Operational Auditing"
 Cohesion: 0.13
 Nodes (15): Alert on specific API calls, CloudTrail → CloudWatch integration, CloudTrail Operational Auditing, Common lookups, Common operational queries, Contents, Event history, Event selectors (+7 more)
-
-### Community 153 - "build_client"
-Cohesion: 0.17
-Nodes (4): _build_logs_client(), _LazyLogsClient, resolve_region(), build_client()
 
 ### Community 154 - "Client Configuration Reference"
 Cohesion: 0.13
@@ -1454,8 +1449,8 @@ Cohesion: 0.20
 Nodes (9): Available Templates, AWS Blocks Application Development, Development Workflow, Overview, Scaffolding a New Project, Security Considerations, To add AWS Blocks to an Amplify Gen 2 project:, To add AWS Blocks to an existing project: (+1 more)
 
 ### Community 242 - "Troubleshooting: Deployment Failures"
-Cohesion: 0.20
-Nodes (10): Deadly Embrace (Cross-Stack Reference Deadlock), Fix, Fix — legacy two-deploy (`exportValue`), Fix — reference strength (recommended), Manual deploy ordering (`cdk deploy -e`), Non-Empty Bucket Deletion, Overview, Prevention (+2 more)
+Cohesion: 0.14
+Nodes (14): API Gateway Multi-Stage, Cause, Deadly Embrace (Cross-Stack Reference Deadlock), Fix, Fix, Fix — legacy two-deploy (`exportValue`), Fix — reference strength (recommended), Manual deploy ordering (`cdk deploy -e`) (+6 more)
 
 ### Community 243 - "Amazon ECS Action Logs — recommend, enable, and read"
 Cohesion: 0.20
@@ -1797,6 +1792,10 @@ Nodes (8): Corpus source — the frozen manifest is authoritative, Coverage stra
 Cohesion: 0.25
 Nodes (8): AI Foundation Labs:, AWS Certification, Training & Delivery Repository, Cloud Foundation Labs:, 🎯 Dual-Track Mission, 📁 Repository Structure, 🚀 Student Hands-On Learning Paths, 🧭 Track 1: Cloud Practitioner (CLF-C02) Blueprint, 🤖 Track 2: AI Practitioner (AIF-C01) Blueprint
 
+### Community 332 - "handler"
+Cohesion: 0.18
+Nodes (6): How shims are deployed — hand-author the code target, CLI builds it at deploy, Cause, Fix, Lambda Cannot Find Module at Runtime, Symptom, handler()
+
 ### Community 333 - "Discovery & source resolution (Phases 1–2)"
 Cohesion: 0.29
 Nodes (6): Discovery & source resolution (Phases 1–2), Manifest schema — the script is the source of truth, Path A (preferred): bundled fetcher, Path B (fallback): AWS CLI read commands, Resolving the source agent, Two discovery paths — prefer the script, fall back to the AWS CLI
@@ -1857,13 +1856,13 @@ Nodes (6): Compute Optimizer for RDS, Gotchas, Multi-AZ Considerations, RDS Opti
 Cohesion: 0.29
 Nodes (6): CLI Commands, Gotchas, How Recommendations Are Calculated, Plan Types, Savings Plans, SP vs Reserved Instances
 
-### Community 348 - "Testing CDK Infrastructure"
-Cohesion: 0.29
-Nodes (7): Application best practices, Fine-grained assertions, Integration tests, Logical ID stability tests, Partial matching, Snapshot tests, Testing CDK Infrastructure
+### Community 348 - "Steps"
+Cohesion: 0.25
+Nodes (8): 1. Verify Dependencies, 2. Confirm Express Mode is Appropriate, 3. Upload Template (if needed), 4. Execute Stack Operation with Express Mode, 5. Express Mode with Change Sets, 6. CDK Express Mode, 7. Monitor Resource Readiness After Completion, Steps
 
-### Community 349 - "Troubleshooting"
+### Community 349 - "_write_back"
 Cohesion: 0.29
-Nodes (7): Custom resources do not complete faster, `deploy` command does not accept `--deployment-config`, `--deployment-config` not recognized, Resources not ready to serve traffic after stack completes, Rollback not happening on failure, StackSets error with Express mode, Troubleshooting
+Nodes (4): _err_code(), _log_group_segment(), _provision_group(), _write_back()
 
 ### Community 352 - "Compute"
 Cohesion: 0.29
@@ -1970,8 +1969,8 @@ Cohesion: 0.33
 Nodes (5): Compute Optimizer for Lambda, Gotchas, Lambda Optimization, Memory-CPU Relationship, Optimization Levers
 
 ### Community 380 - "Deploy Failure Root Cause Analysis"
-Cohesion: 0.33
-Nodes (6): Deploy Failure Root Cause Analysis, Step 1: Re-run with `--verbose`, Step 2: `cdk diagnose` (preferred, CDK CLI ≥ 2.1120.0), Step 3: CloudFormation events (fallback), Step 4: Read the `ResourceStatusReason`, Step 5: Service logs for Lambda / API Gateway / custom resources
+Cohesion: 0.18
+Nodes (10): Preconditions, main(), validate(), Deploy Failure Root Cause Analysis, `EarlyValidationFailure` specifically, Step 1: Re-run with `--verbose`, Step 2: `cdk diagnose` (preferred, CDK CLI ≥ 2.1120.0), Step 3: CloudFormation events (fallback) (+2 more)
 
 ### Community 381 - "CloudFormation Validation Workflow"
 Cohesion: 0.33
@@ -2089,9 +2088,9 @@ Nodes (4): Principles, References, SDK Getting Started, Workflow
 Cohesion: 0.40
 Nodes (4): Critical Rules, Free Tier, July 2025 Transition, Recommended Workflow
 
-### Community 410 - "Choosing Construct Levels"
-Cohesion: 0.40
-Nodes (5): Choosing Construct Levels, Decision tree, When an L2 doesn't expose a property, When L1 is viable, When using L3
+### Community 410 - "re"
+Cohesion: 0.29
+Nodes (3): extract_answer(), extract_answer(), _escape_logs_insights_regex()
 
 ### Community 412 - "UPDATE_ROLLBACK_FAILED Recovery"
 Cohesion: 0.40
@@ -2185,13 +2184,13 @@ Nodes (3): Phase 1: Discovery (1–3 turns), Phase 2: Produce Spec, Spec for Fin
 Cohesion: 0.50
 Nodes (3): AWS AI/ML Model Customization, Routing, Rules
 
-### Community 437 - "API Gateway Multi-Stage"
-Cohesion: 0.50
-Nodes (4): API Gateway Multi-Stage, Cause, Fix, Symptom
+### Community 437 - "Architectural Rule: Obsidian Vault vs. Work Repository Separation"
+Cohesion: 0.40
+Nodes (4): 1. Core Division of Responsibilities, 2. Obsidian Vault (`/home/mohamed/Documents/Obsidian Vault/Brain/AWS`), 3. Work Directory (`/home/mohamed/Desktop/Work/aws`), Architectural Rule: Obsidian Vault vs. Work Repository Separation
 
-### Community 438 - "Lambda Cannot Find Module at Runtime"
+### Community 438 - "Agent Guidelines & Operational Rules for AWS Repository"
 Cohesion: 0.50
-Nodes (4): Cause, Fix, Lambda Cannot Find Module at Runtime, Symptom
+Nodes (3): Agent Guidelines & Operational Rules for AWS Repository, 🚨 Mandatory Architectural Rule: Vault vs. Work Repo Separation, 🛠️ Operational Rules
 
 ### Community 439 - "Amazon Elastic Kubernetes Service"
 Cohesion: 0.50
@@ -2227,23 +2226,23 @@ Nodes (3): Internal gate: risk assessment complete, Risk Assessment Procedure, S
 
 ## Knowledge Gaps
 - **297 isolated node(s):** `uvx`, `uvx`, `📊 Exam Domain Weighting`, `🎯 High-Yield Master Cheat Sheet & Trap Matrix`, `🧭 Zero-Redundancy Knowledge Navigation` (+292 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 4069 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **51 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 4076 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **50 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `_make_session()` connect `test_evaluate_traces.py` to `evaluate`?**
-  _High betweenness centrality (0.041) - this node is a cross-community bridge._
+  _High betweenness centrality (0.066) - this node is a cross-community bridge._
 - **What connects `uvx`, `uvx`, `📊 Exam Domain Weighting` to the rest of the system?**
   _297 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `typing` be split into smaller, more focused modules?**
-  _Cohesion score 0.06638714185883997 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06711915535444947 - nodes in this community are weakly interconnected._
 - **Why does `evaluate()` connect `evaluate` to `3. Choosing an evaluator`, `test_evaluate_traces.py`?**
-  _High betweenness centrality (0.041) - this node is a cross-community bridge._
+  _High betweenness centrality (0.065) - this node is a cross-community bridge._
 - **Should `auth.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.09098639455782313 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.0971322849213691 - nodes in this community are weakly interconnected._
 - **Why does `CloudWatch Omni: Agent Evaluation` connect `CloudWatch Omni: Agent Evaluation` to `evaluate`, `6. Datasets (create, manage, and build from traces)`, `8. From scores to changes`, `aws-observability/SKILL.md`, `3. Choosing an evaluator`?**
-  _High betweenness centrality (0.039) - this node is a cross-community bridge._
+  _High betweenness centrality (0.063) - this node is a cross-community bridge._
 - **Should `archive.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.07092198581560284 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.07575757575757576 - nodes in this community are weakly interconnected._

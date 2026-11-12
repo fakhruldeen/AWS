@@ -2944,5 +2944,17 @@
     "seen": 1794491381.490598,
     "ast_hash": "ce3d05285574ec1574e5dfe12dcfc9ca",
     "semantic_hash": ""
+  },
+  ".agents/rules/workspace-separation-rule.md": {
+    "mtime": 1794491666.6273258,
+    "seen": 1794491732.7075899,
+    "ast_hash": "b2da321f4e9978294bb39d7f224f138f",
+    "semantic_hash": ""
+  },
+  "AGENTS.md": {
+    "mtime": 1794491678.6262197,
+    "seen": 1794491732.7080522,
+    "ast_hash": "e42037fab611a85bc077a5bf33dc8116",
+    "semantic_hash": ""
   }
 }
