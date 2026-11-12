@@ -1,0 +1,548 @@
+{
+  "cloud/foundation/AwsCcpTrainer_Questions/raw_json/billing-pricing-and-support.json": {
+    "mtime": 1794333446.3490489,
+    "seen": 1794488747.357778,
+    "ast_hash": "f8128d4b3ac50e4b7d6adcb06b947405",
+    "semantic_hash": "f8128d4b3ac50e4b7d6adcb06b947405"
+  },
+  "cloud/foundation/AwsCcpTrainer_Questions/raw_json/cloud-concepts.json": {
+    "mtime": 1794333446.3481624,
+    "seen": 1794488747.3577847,
+    "ast_hash": "f84c35520a229f8ca835289825a238c7",
+    "semantic_hash": "f84c35520a229f8ca835289825a238c7"
+  },
+  "cloud/foundation/AwsCcpTrainer_Questions/raw_json/cloud-technology-and-services.json": {
+    "mtime": 1794333446.3464026,
+    "seen": 1794488747.3577878,
+    "ast_hash": "17edb9118f103f8a87cc17c5cf1a8507",
+    "semantic_hash": "17edb9118f103f8a87cc17c5cf1a8507"
+  },
+  "cloud/foundation/AwsCcpTrainer_Questions/raw_json/security-and-compliance.json": {
+    "mtime": 1794333446.3498223,
+    "seen": 1794488747.3577895,
+    "ast_hash": "d5cf4547f5400079bdcb360b5eea3881",
+    "semantic_hash": "d5cf4547f5400079bdcb360b5eea3881"
+  },
+  "cloud/foundation/CertPrep_Offline_Questions/raw_json/cert_prep_clf_136.json": {
+    "mtime": 1794333446.32851,
+    "seen": 1794488747.3577907,
+    "ast_hash": "5bfe5d1a3fecd5d4903cd8e8e13b9e32",
+    "semantic_hash": "5bfe5d1a3fecd5d4903cd8e8e13b9e32"
+  },
+  "cloud/foundation/CloudCertPrep_Questions/raw_json/domain1.json": {
+    "mtime": 1794321543.405014,
+    "seen": 1794488747.3577917,
+    "ast_hash": "c13eaf67d200ad12ee8a89349d1f39e9",
+    "semantic_hash": "c13eaf67d200ad12ee8a89349d1f39e9"
+  },
+  "cloud/foundation/CloudCertPrep_Questions/raw_json/domain2.json": {
+    "mtime": 1794333402.0227206,
+    "seen": 1794488747.3577929,
+    "ast_hash": "8cfdbc2670b3c43fc4b2bdc121fc0538",
+    "semantic_hash": "8cfdbc2670b3c43fc4b2bdc121fc0538"
+  },
+  "cloud/foundation/CloudCertPrep_Questions/raw_json/domain3.json": {
+    "mtime": 1794321546.4874225,
+    "seen": 1794488747.3577938,
+    "ast_hash": "d01e84c71b6c661fd3584adb84e28e83",
+    "semantic_hash": "d01e84c71b6c661fd3584adb84e28e83"
+  },
+  "cloud/foundation/CloudCertPrep_Questions/raw_json/domain4.json": {
+    "mtime": 1794321547.1104872,
+    "seen": 1794488747.357795,
+    "ast_hash": "552d9c19eb54d3ac46128849d234a705",
+    "semantic_hash": "552d9c19eb54d3ac46128849d234a705"
+  },
+  "cloud/foundation/Edurely_Questions/raw_json/edurely_mock_exam_100.json": {
+    "mtime": 1794333446.3255527,
+    "seen": 1794488747.357796,
+    "ast_hash": "bb80703df16f9bbe9c1e808ea230c431",
+    "semantic_hash": "bb80703df16f9bbe9c1e808ea230c431"
+  },
+  "cloud/foundation/Edurely_Questions/raw_json/edurely_seo_15.json": {
+    "mtime": 1794332893.299459,
+    "seen": 1794488747.357797,
+    "ast_hash": "e21479019da4d68e0cbdad725d68887c",
+    "semantic_hash": "e21479019da4d68e0cbdad725d68887c"
+  },
+  "cloud/foundation/Quban301_Practice_Questions/raw_json/aws-final.json": {
+    "mtime": 1794332633.4619143,
+    "seen": 1794488747.3577979,
+    "ast_hash": "cc18d3709f7546ed9079013b5e6f4fc9",
+    "semantic_hash": "cc18d3709f7546ed9079013b5e6f4fc9"
+  },
+  "cloud/foundation/Quban301_Practice_Questions/raw_json/aws-practice-1.json": {
+    "mtime": 1794332633.4618096,
+    "seen": 1794488747.3577988,
+    "ast_hash": "4d860d59476638a4ad81ea5294e759e7",
+    "semantic_hash": "4d860d59476638a4ad81ea5294e759e7"
+  },
+  "README.md": {
+    "mtime": 1794488300.1859496,
+    "seen": 1794488747.3577998,
+    "ast_hash": "d648f27606636eb6ecbc995af8062c2b",
+    "semantic_hash": "d648f27606636eb6ecbc995af8062c2b"
+  },
+  "ai/foundation/labs/Lab_01_Amazon_Bedrock_Playground_and_Prompt_Engineering.md": {
+    "mtime": 1794488244.7002773,
+    "seen": 1794488747.3578007,
+    "ast_hash": "87cf6bc6607db870136e457f2ad0f20e",
+    "semantic_hash": "87cf6bc6607db870136e457f2ad0f20e"
+  },
+  "ai/foundation/labs/Lab_02_Building_RAG_with_Bedrock_Knowledge_Bases.md": {
+    "mtime": 1794488260.9771836,
+    "seen": 1794488747.3578014,
+    "ast_hash": "323852fd5bf17f714b2039598b7dad2b",
+    "semantic_hash": "323852fd5bf17f714b2039598b7dad2b"
+  },
+  "ai/foundation/labs/Lab_03_Responsible_AI_Bedrock_Guardrails.md": {
+    "mtime": 1794488274.4331045,
+    "seen": 1794488747.3578024,
+    "ast_hash": "7b697ec06858992f5be427be940c67ef",
+    "semantic_hash": "7b697ec06858992f5be427be940c67ef"
+  },
+  "ai/foundation/notes/01_GenAI_Fundamentals.md": {
+    "mtime": 1794488187.0735588,
+    "seen": 1794488747.3578036,
+    "ast_hash": "3abea8d6fb639c29862d86c0e8d2b2e4",
+    "semantic_hash": "3abea8d6fb639c29862d86c0e8d2b2e4"
+  },
+  "ai/foundation/notes/02_Prompt_Engineering_Guide.md": {
+    "mtime": 1794488187.074549,
+    "seen": 1794488747.3578043,
+    "ast_hash": "1ad2ae8c12edb6c54be240246d7992d5",
+    "semantic_hash": "1ad2ae8c12edb6c54be240246d7992d5"
+  },
+  "ai/foundation/notes/03_Amazon_Bedrock_and_RAG.md": {
+    "mtime": 1794488187.0754614,
+    "seen": 1794488747.3578053,
+    "ast_hash": "22a403bd24bd8b664375013acbaeea00",
+    "semantic_hash": "22a403bd24bd8b664375013acbaeea00"
+  },
+  "ai/foundation/notes/04_Amazon_SageMaker_Suite.md": {
+    "mtime": 1794488187.0763535,
+    "seen": 1794488747.357806,
+    "ast_hash": "19f0906c7a7e7e2d8ce89b553c0921ab",
+    "semantic_hash": "19f0906c7a7e7e2d8ce89b553c0921ab"
+  },
+  "ai/foundation/notes/05_Responsible_AI_and_Governance.md": {
+    "mtime": 1794488187.0772192,
+    "seen": 1794488747.3578072,
+    "ast_hash": "53f6f3da66aaf43f28bfc296b98a66ac",
+    "semantic_hash": "53f6f3da66aaf43f28bfc296b98a66ac"
+  },
+  "ai/foundation/notes/06_AIF-C01_Exam_CheatSheet.md": {
+    "mtime": 1794488187.0781412,
+    "seen": 1794488747.3578084,
+    "ast_hash": "1b49b185b5c9d82801b933805e2d8a12",
+    "semantic_hash": "1b49b185b5c9d82801b933805e2d8a12"
+  },
+  "ai/foundation/slides/Module_01_AI_and_GenAI_Foundations_Slides.md": {
+    "mtime": 1794488208.864477,
+    "seen": 1794488747.357809,
+    "ast_hash": "a60a28b25500a6e163cf085eda99be75",
+    "semantic_hash": "a60a28b25500a6e163cf085eda99be75"
+  },
+  "ai/foundation/slides/Module_02_Amazon_Bedrock_and_RAG_Slides.md": {
+    "mtime": 1794488226.7363787,
+    "seen": 1794488747.3578103,
+    "ast_hash": "94ddb48b7ac81d1a874225882d5cadf3",
+    "semantic_hash": "94ddb48b7ac81d1a874225882d5cadf3"
+  },
+  "ai/foundation/syllabus/AIF-C01_Course_Syllabus.md": {
+    "mtime": 1794488177.6156423,
+    "seen": 1794488747.3578112,
+    "ast_hash": "f790a3484596bbb687120eef9f1c416b",
+    "semantic_hash": "f790a3484596bbb687120eef9f1c416b"
+  },
+  "ai/foundation/syllabus/AIF-C01_Exam_Guide_and_Blueprint.md": {
+    "mtime": 1794488187.0724335,
+    "seen": 1794488747.3578122,
+    "ast_hash": "f09c4d27c6005ce8ccc8645a1dffb5b7",
+    "semantic_hash": "f09c4d27c6005ce8ccc8645a1dffb5b7"
+  },
+  "cloud/foundation/AwsCcpTrainer_Questions/01_Domain_1_Cloud_Concepts_181Q.md": {
+    "mtime": 1794333446.329944,
+    "seen": 1794488747.3578134,
+    "ast_hash": "b9e556f72e9aaaaec17b226e91bee4c0",
+    "semantic_hash": "b9e556f72e9aaaaec17b226e91bee4c0"
+  },
+  "cloud/foundation/AwsCcpTrainer_Questions/02_Domain_2_Security_and_Compliance_191Q.md": {
+    "mtime": 1794333446.3334026,
+    "seen": 1794488747.357814,
+    "ast_hash": "88a1cc895e30304533f18015ed892590",
+    "semantic_hash": "88a1cc895e30304533f18015ed892590"
+  },
+  "cloud/foundation/AwsCcpTrainer_Questions/03_Domain_3_Cloud_Technology_and_Services_383Q.md": {
+    "mtime": 1794333446.3314025,
+    "seen": 1794488747.3578148,
+    "ast_hash": "11595c5e4e193e6e95f2a4e4e2d2602e",
+    "semantic_hash": "11595c5e4e193e6e95f2a4e4e2d2602e"
+  },
+  "cloud/foundation/AwsCcpTrainer_Questions/04_Domain_4_Billing_Pricing_and_Support_232Q.md": {
+    "mtime": 1794333446.3459237,
+    "seen": 1794488747.3578157,
+    "ast_hash": "150968fff5efe9c671385d5c87b7232c",
+    "semantic_hash": "150968fff5efe9c671385d5c87b7232c"
+  },
+  "cloud/foundation/AwsCcpTrainer_Questions/ALL_AWS_CCP_TRAINER_987_QUESTIONS.md": {
+    "mtime": 1794333446.3424027,
+    "seen": 1794488747.357817,
+    "ast_hash": "3d03d8b7b9be99285117f9de912229e7",
+    "semantic_hash": "3d03d8b7b9be99285117f9de912229e7"
+  },
+  "cloud/foundation/AwsCcpTrainer_Questions/README.md": {
+    "mtime": 1794332655.4789474,
+    "seen": 1794488747.3578176,
+    "ast_hash": "12a2b0f6ab26ca111e4bff36a0d34107",
+    "semantic_hash": "12a2b0f6ab26ca111e4bff36a0d34107"
+  },
+  "cloud/foundation/CertPrep_Offline_Questions/CertPrep_CLF-C02_136_Questions.md": {
+    "mtime": 1794333446.3274024,
+    "seen": 1794488747.3578186,
+    "ast_hash": "514e74d586be54644080a6c765fe44f2",
+    "semantic_hash": "514e74d586be54644080a6c765fe44f2"
+  },
+  "cloud/foundation/CertPrep_Offline_Questions/README.md": {
+    "mtime": 1794332613.2195177,
+    "seen": 1794488747.3578196,
+    "ast_hash": "617d37e4f97bad9be84e1a3cfa7ec4bb",
+    "semantic_hash": "617d37e4f97bad9be84e1a3cfa7ec4bb"
+  },
+  "cloud/foundation/CertSafari_Questions/01_Domain_1_Cloud_Concepts.md": {
+    "mtime": 1794321070.985769,
+    "seen": 1794488747.3578207,
+    "ast_hash": "d686adecbc44bd3381f400268b303afe",
+    "semantic_hash": "d686adecbc44bd3381f400268b303afe"
+  },
+  "cloud/foundation/CertSafari_Questions/02_Domain_2_Security_and_Compliance.md": {
+    "mtime": 1794321070.98604,
+    "seen": 1794488747.3578215,
+    "ast_hash": "05e46534127da324a9984f7b142b03c7",
+    "semantic_hash": "05e46534127da324a9984f7b142b03c7"
+  },
+  "cloud/foundation/CertSafari_Questions/03_Domain_3_Cloud_Technology_and_Services.md": {
+    "mtime": 1794321070.986333,
+    "seen": 1794488747.3578224,
+    "ast_hash": "1b974941458ec3ede0784da69355985a",
+    "semantic_hash": "1b974941458ec3ede0784da69355985a"
+  },
+  "cloud/foundation/CertSafari_Questions/04_Domain_4_Billing_Pricing_and_Support.md": {
+    "mtime": 1794333401.6934133,
+    "seen": 1794488747.3578231,
+    "ast_hash": "958f991954888b45a88f3deff6a941b9",
+    "semantic_hash": "958f991954888b45a88f3deff6a941b9"
+  },
+  "cloud/foundation/CertSafari_Questions/ALL_QUESTIONS_MASTER_BANK.md": {
+    "mtime": 1794333401.681609,
+    "seen": 1794488747.3578243,
+    "ast_hash": "df20ee2998436c8e05cd44985c7f5d0c",
+    "semantic_hash": "df20ee2998436c8e05cd44985c7f5d0c"
+  },
+  "cloud/foundation/CertSafari_Questions/README.md": {
+    "mtime": 1794321071.1104758,
+    "seen": 1794488747.357825,
+    "ast_hash": "aa15fe7d180912a74ef0d5f50907b29c",
+    "semantic_hash": "aa15fe7d180912a74ef0d5f50907b29c"
+  },
+  "cloud/foundation/CertSafari_Questions/VERIFICATION_REPORT.md": {
+    "mtime": 1794321071.0857527,
+    "seen": 1794488747.357826,
+    "ast_hash": "07add39265ce4479389b70c054aafeca",
+    "semantic_hash": "07add39265ce4479389b70c054aafeca"
+  },
+  "cloud/foundation/CloudCertPrep_Questions/01_Domain_1_Cloud_Concepts.md": {
+    "mtime": 1794321568.2539475,
+    "seen": 1794488747.3578272,
+    "ast_hash": "cc9c00d25005f3cb52d981cac3f08cc2",
+    "semantic_hash": "cc9c00d25005f3cb52d981cac3f08cc2"
+  },
+  "cloud/foundation/CloudCertPrep_Questions/02_Domain_2_Security_and_Compliance.md": {
+    "mtime": 1794333401.9910443,
+    "seen": 1794488747.3578284,
+    "ast_hash": "25fda41dcca0e0b346c253083002c232",
+    "semantic_hash": "25fda41dcca0e0b346c253083002c232"
+  },
+  "cloud/foundation/CloudCertPrep_Questions/03_Domain_3_Cloud_Technology_and_Services.md": {
+    "mtime": 1794321568.2609475,
+    "seen": 1794488747.3578293,
+    "ast_hash": "abbd30f8ad794d3dd414ee77cd1e1e62",
+    "semantic_hash": "abbd30f8ad794d3dd414ee77cd1e1e62"
+  },
+  "cloud/foundation/CloudCertPrep_Questions/04_Domain_4_Billing_Pricing_and_Support.md": {
+    "mtime": 1794321568.2631576,
+    "seen": 1794488747.3578303,
+    "ast_hash": "fa7c19ce28ce3fbcb8123812ad994177",
+    "semantic_hash": "fa7c19ce28ce3fbcb8123812ad994177"
+  },
+  "cloud/foundation/CloudCertPrep_Questions/ALL_CLOUDCERTPREP_1050_QUESTIONS.md": {
+    "mtime": 1794333402.0127935,
+    "seen": 1794488747.3578312,
+    "ast_hash": "79f086b700b6d2f4f99ae226d78d03a2",
+    "semantic_hash": "79f086b700b6d2f4f99ae226d78d03a2"
+  },
+  "cloud/foundation/CloudCertPrep_Questions/README.md": {
+    "mtime": 1794321568.2641196,
+    "seen": 1794488747.357832,
+    "ast_hash": "f07045fc4e09d6b6e5612a7ca9bc4404",
+    "semantic_hash": "f07045fc4e09d6b6e5612a7ca9bc4404"
+  },
+  "cloud/foundation/EXAM_OBJECTIVES_ALIGNMENT_REPORT.md": {
+    "mtime": 1794333446.3244274,
+    "seen": 1794488747.357833,
+    "ast_hash": "386c7e8dc7d765099e0140e7afba25fb",
+    "semantic_hash": "386c7e8dc7d765099e0140e7afba25fb"
+  },
+  "cloud/foundation/Edurely_Questions/Edurely_CLF-C02_115_Questions.md": {
+    "mtime": 1794333446.325259,
+    "seen": 1794488747.3578336,
+    "ast_hash": "aff82d25af7f37b4873ddd617a5b8271",
+    "semantic_hash": "aff82d25af7f37b4873ddd617a5b8271"
+  },
+  "cloud/foundation/Edurely_Questions/README.md": {
+    "mtime": 1794332893.3016493,
+    "seen": 1794488747.3578348,
+    "ast_hash": "ebd0cd3c1bdd9e38dfab349c0f05b037",
+    "semantic_hash": "ebd0cd3c1bdd9e38dfab349c0f05b037"
+  },
+  "cloud/foundation/ExamDumpsNet_Questions/ExamDumps_Page1_Questions.md": {
+    "mtime": 1794323513.6351643,
+    "seen": 1794488747.3578355,
+    "ast_hash": "cc30d3950f483d2a62c2602ab82951b4",
+    "semantic_hash": "cc30d3950f483d2a62c2602ab82951b4"
+  },
+  "cloud/foundation/ExamTopics_Questions/ExamTopics_CLF-C02_290_Questions.md": {
+    "mtime": 1794333446.3264024,
+    "seen": 1794488747.3578365,
+    "ast_hash": "13de2dcd76765892bb39d28fd5b5cd07",
+    "semantic_hash": "13de2dcd76765892bb39d28fd5b5cd07"
+  },
+  "cloud/foundation/FreeCram_Questions/FreeCram_CLF-C02_Verified.md": {
+    "mtime": 1794323688.8600504,
+    "seen": 1794488747.3578377,
+    "ast_hash": "cbe290b26aadae05fd57be1869599b79",
+    "semantic_hash": "cbe290b26aadae05fd57be1869599b79"
+  },
+  "cloud/foundation/Quban301_Practice_Questions/01_Practice_Exam_1_87_Questions.md": {
+    "mtime": 1794332633.4635537,
+    "seen": 1794488747.3578384,
+    "ast_hash": "f2040d0752ee938626f012402896eba0",
+    "semantic_hash": "f2040d0752ee938626f012402896eba0"
+  },
+  "cloud/foundation/Quban301_Practice_Questions/02_Final_Exam_87_Questions.md": {
+    "mtime": 1794332633.4639468,
+    "seen": 1794488747.3578393,
+    "ast_hash": "dc7f96d1250dcdee146635bda4368903",
+    "semantic_hash": "dc7f96d1250dcdee146635bda4368903"
+  },
+  "cloud/foundation/Quban301_Practice_Questions/Quban301_CLF-C02_174_Questions.md": {
+    "mtime": 1794332633.4631782,
+    "seen": 1794488747.35784,
+    "ast_hash": "40e977c8e15ba8e400bfe9653e54de9a",
+    "semantic_hash": "40e977c8e15ba8e400bfe9653e54de9a"
+  },
+  "cloud/foundation/Quban301_Practice_Questions/README.md": {
+    "mtime": 1794332633.464017,
+    "seen": 1794488747.3578413,
+    "ast_hash": "e6b61bc6cf6955a321b2759b68ccf411",
+    "semantic_hash": "e6b61bc6cf6955a321b2759b68ccf411"
+  },
+  "cloud/foundation/README.md": {
+    "mtime": 1794333276.6538222,
+    "seen": 1794488747.3578422,
+    "ast_hash": "c977a69786b13e9a6f2578fcb6d5306a",
+    "semantic_hash": "c977a69786b13e9a6f2578fcb6d5306a"
+  },
+  "cloud/foundation/SecByte_Questions/SecByte_MockExam10_72_Questions.md": {
+    "mtime": 1794333446.3260376,
+    "seen": 1794488747.3578432,
+    "ast_hash": "2324fee7c3a91b6f61a28b626a61e554",
+    "semantic_hash": "2324fee7c3a91b6f61a28b626a61e554"
+  },
+  "cloud/foundation/labs/Lab_01_AWS_IAM_Least_Privilege_and_MFA.md": {
+    "mtime": 1794487362.8603973,
+    "seen": 1794488747.3578439,
+    "ast_hash": "87ba53de7881679f22a7b626fca3855c",
+    "semantic_hash": "87ba53de7881679f22a7b626fca3855c"
+  },
+  "cloud/foundation/labs/Lab_02_Static_Website_S3_and_CloudFront.md": {
+    "mtime": 1794487383.9831643,
+    "seen": 1794488747.357845,
+    "ast_hash": "caa5e7e6985cbf771f9db93dc9ff5179",
+    "semantic_hash": "caa5e7e6985cbf771f9db93dc9ff5179"
+  },
+  "cloud/foundation/labs/Lab_03_Resilient_MultiAZ_Web_Tier_EC2.md": {
+    "mtime": 1794487406.1409194,
+    "seen": 1794488747.357846,
+    "ast_hash": "9e42a09e4bd11c6b32411196683670da",
+    "semantic_hash": "9e42a09e4bd11c6b32411196683670da"
+  },
+  "cloud/foundation/labs/Lab_04_Proactive_Budget_Alerts_AWS_Budgets.md": {
+    "mtime": 1794487426.5366938,
+    "seen": 1794488747.3578467,
+    "ast_hash": "85426abc6f13fd10fb6036e158f9047d",
+    "semantic_hash": "85426abc6f13fd10fb6036e158f9047d"
+  },
+  "cloud/foundation/notes/concepts/Cloud_Adoption_Framework_CAF.md": {
+    "mtime": 1794487485.240276,
+    "seen": 1794488747.3578477,
+    "ast_hash": "4d3f58643e09d4a019e7b416a5c5a40b",
+    "semantic_hash": "4d3f58643e09d4a019e7b416a5c5a40b"
+  },
+  "cloud/foundation/notes/concepts/Cloud_Economics_and_Billing_Models.md": {
+    "mtime": 1794487485.2403116,
+    "seen": 1794488747.3578486,
+    "ast_hash": "fbbfa1aef444053e7f397f43d6681cf8",
+    "semantic_hash": "fbbfa1aef444053e7f397f43d6681cf8"
+  },
+  "cloud/foundation/notes/concepts/Disaster_Recovery_and_High_Availability.md": {
+    "mtime": 1794487485.2403326,
+    "seen": 1794488747.3578498,
+    "ast_hash": "c878b1a164300fce48eaf9bbbdbe123e",
+    "semantic_hash": "c878b1a164300fce48eaf9bbbdbe123e"
+  },
+  "cloud/foundation/notes/concepts/Global_Infrastructure.md": {
+    "mtime": 1794487485.2403505,
+    "seen": 1794488747.3578508,
+    "ast_hash": "0927cfc58b839fd3d730583513bf1316",
+    "semantic_hash": "0927cfc58b839fd3d730583513bf1316"
+  },
+  "cloud/foundation/notes/concepts/Shared_Responsibility_Model.md": {
+    "mtime": 1794487485.2403693,
+    "seen": 1794488747.357852,
+    "ast_hash": "e7ac26d7798757051fe56b93dee13f09",
+    "semantic_hash": "e7ac26d7798757051fe56b93dee13f09"
+  },
+  "cloud/foundation/notes/concepts/Well_Architected_Framework.md": {
+    "mtime": 1794487485.240386,
+    "seen": 1794488747.357853,
+    "ast_hash": "cb824c94abfaf8b301441e70c8123645",
+    "semantic_hash": "cb824c94abfaf8b301441e70c8123645"
+  },
+  "cloud/foundation/notes/services/AI_Analytics/AI_and_Analytics_Services.md": {
+    "mtime": 1794487485.2415054,
+    "seen": 1794488747.357854,
+    "ast_hash": "e927b25a63dc17c4e6bbf9a5ee022947",
+    "semantic_hash": "e927b25a63dc17c4e6bbf9a5ee022947"
+  },
+  "cloud/foundation/notes/services/Application_Integration/Application_Integration_Services.md": {
+    "mtime": 1794487485.2415624,
+    "seen": 1794488747.3578546,
+    "ast_hash": "aa8425e1066ae0cf5ad855269ef03672",
+    "semantic_hash": "aa8425e1066ae0cf5ad855269ef03672"
+  },
+  "cloud/foundation/notes/services/Billing_CostManagement/AWS_Billing_and_Pricing_Tools.md": {
+    "mtime": 1794487485.2416027,
+    "seen": 1794488747.3578558,
+    "ast_hash": "5c4b18b89bced8619e41cec44ed01cc5",
+    "semantic_hash": "5c4b18b89bced8619e41cec44ed01cc5"
+  },
+  "cloud/foundation/notes/services/Compute/Amazon_EC2.md": {
+    "mtime": 1794487485.2416432,
+    "seen": 1794488747.3578565,
+    "ast_hash": "20a228d50de1a8cefc5614893501b4ed",
+    "semantic_hash": "20a228d50de1a8cefc5614893501b4ed"
+  },
+  "cloud/foundation/notes/services/Compute/Containers_ECS_EKS_Fargate.md": {
+    "mtime": 1794487485.2416632,
+    "seen": 1794488747.3578575,
+    "ast_hash": "45d88e649b12044fd705369ab4f2aaa5",
+    "semantic_hash": "45d88e649b12044fd705369ab4f2aaa5"
+  },
+  "cloud/foundation/notes/services/Compute/Serverless_AWS_Lambda.md": {
+    "mtime": 1794487485.2416787,
+    "seen": 1794488747.3578587,
+    "ast_hash": "26d0a43aafd464b213b78ac4ea63aa3b",
+    "semantic_hash": "26d0a43aafd464b213b78ac4ea63aa3b"
+  },
+  "cloud/foundation/notes/services/Database/AWS_Databases_Overview.md": {
+    "mtime": 1794487485.241712,
+    "seen": 1794488747.3578594,
+    "ast_hash": "73d553b5f5021d8159c7be412b42237b",
+    "semantic_hash": "73d553b5f5021d8159c7be412b42237b"
+  },
+  "cloud/foundation/notes/services/Management_Governance/AWS_Organizations_and_Governance.md": {
+    "mtime": 1794487485.2417505,
+    "seen": 1794488747.3578603,
+    "ast_hash": "6b978d13fa688739d7e36721a012e27c",
+    "semantic_hash": "6b978d13fa688739d7e36721a012e27c"
+  },
+  "cloud/foundation/notes/services/Networking_ContentDelivery/Amazon_CloudFront_and_Global_Accelerator.md": {
+    "mtime": 1794487485.241831,
+    "seen": 1794488747.3578613,
+    "ast_hash": "a2a8f12a45c62b9d3d7775025751fd9a",
+    "semantic_hash": "a2a8f12a45c62b9d3d7775025751fd9a"
+  },
+  "cloud/foundation/notes/services/Networking_ContentDelivery/Amazon_VPC_and_Networking.md": {
+    "mtime": 1794487485.2418094,
+    "seen": 1794488747.3578625,
+    "ast_hash": "9ba7dabc8db63c91e15298c81be653b4",
+    "semantic_hash": "9ba7dabc8db63c91e15298c81be653b4"
+  },
+  "cloud/foundation/notes/services/Security_Identity_Compliance/AWS_IAM_and_Identity.md": {
+    "mtime": 1794487485.2418673,
+    "seen": 1794488747.3578634,
+    "ast_hash": "25a4aaae7529659caff98d9e030fb558",
+    "semantic_hash": "25a4aaae7529659caff98d9e030fb558"
+  },
+  "cloud/foundation/notes/services/Security_Identity_Compliance/AWS_Security_Services.md": {
+    "mtime": 1794487485.241887,
+    "seen": 1794488747.3578644,
+    "ast_hash": "3543a09c31f33cf7f02e2727060fba7b",
+    "semantic_hash": "3543a09c31f33cf7f02e2727060fba7b"
+  },
+  "cloud/foundation/notes/services/Storage/Amazon_S3.md": {
+    "mtime": 1794487485.2419214,
+    "seen": 1794488747.3578653,
+    "ast_hash": "45bb2160a931d2afb70b7b96a391b4d6",
+    "semantic_hash": "45bb2160a931d2afb70b7b96a391b4d6"
+  },
+  "cloud/foundation/notes/services/Storage/Block_and_File_Storage_EBS_EFS.md": {
+    "mtime": 1794487485.2419415,
+    "seen": 1794488747.3578665,
+    "ast_hash": "01b61d5ef6cc4fa11f54f5648a4902d7",
+    "semantic_hash": "01b61d5ef6cc4fa11f54f5648a4902d7"
+  },
+  "cloud/foundation/slides/Module_01_Cloud_Concepts_and_Architecture_Slides.md": {
+    "mtime": 1794487344.5865986,
+    "seen": 1794488747.3578675,
+    "ast_hash": "1e2f3b82c8be687d529817bc03472477",
+    "semantic_hash": "1e2f3b82c8be687d529817bc03472477"
+  },
+  "cloud/foundation/syllabus/CLF-C02_Master_Blueprint.md": {
+    "mtime": 1794487485.2429392,
+    "seen": 1794488747.3578682,
+    "ast_hash": "86cbaa23d8f997b53c2b10262d6330ec",
+    "semantic_hash": "86cbaa23d8f997b53c2b10262d6330ec"
+  },
+  "cloud/foundation/syllabus/Domain_1_Cloud_Concepts.md": {
+    "mtime": 1794487485.2429643,
+    "seen": 1794488747.3578699,
+    "ast_hash": "8dfe245879395ca39aed9f7d72fc9f2a",
+    "semantic_hash": "8dfe245879395ca39aed9f7d72fc9f2a"
+  },
+  "cloud/foundation/syllabus/Domain_2_Security_Compliance.md": {
+    "mtime": 1794487485.2429826,
+    "seen": 1794488747.3578708,
+    "ast_hash": "8baf0845f1f8fc39b80ee8ce67aee461",
+    "semantic_hash": "8baf0845f1f8fc39b80ee8ce67aee461"
+  },
+  "cloud/foundation/syllabus/Domain_3_Cloud_Technology.md": {
+    "mtime": 1794487485.2430096,
+    "seen": 1794488747.3578718,
+    "ast_hash": "9076ffbd2fc90332f662960463913c54",
+    "semantic_hash": "9076ffbd2fc90332f662960463913c54"
+  },
+  "cloud/foundation/syllabus/Domain_4_Billing_Pricing.md": {
+    "mtime": 1794487485.2430286,
+    "seen": 1794488747.3578727,
+    "ast_hash": "d2fa14efbe689fdcc989a5abda8d64ab",
+    "semantic_hash": "d2fa14efbe689fdcc989a5abda8d64ab"
+  },
+  "cloud/foundation/syllabus/Exam_Distinction_CheatSheet.md": {
+    "mtime": 1794487485.243045,
+    "seen": 1794488747.3578737,
+    "ast_hash": "d7204fcdfa21e7d9d2c3f889bbddb64f",
+    "semantic_hash": "d7204fcdfa21e7d9d2c3f889bbddb64f"
+  }
+}
