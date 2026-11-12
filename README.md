@@ -25,8 +25,11 @@ This repository is built for two strategic purposes:
 │
 ├── cloud/
 │   └── foundation/                            <-- Track 1: AWS Certified Cloud Practitioner (CLF-C02)
-│       ├── README.md                          (Questions bank master index & domain alignment)
-│       ├── EXAM_OBJECTIVES_ALIGNMENT_REPORT.md(Detailed 2,924-question blueprint audit)
+│       ├── README.md                          (Track roadmap, syllabus, and module index)
+│       │
+│       ├── syllabus/                          <-- Exam Blueprint & Domain Breakdowns
+│       │   ├── CLF-C02_Master_Blueprint.md
+│       │   └── Exam_Distinction_CheatSheet.md
 │       │
 │       ├── slides/                            <-- Student Lecture Decks (Marp Format)
 │       │   └── Module_01_Cloud_Concepts_and_Architecture_Slides.md
@@ -41,17 +44,19 @@ This repository is built for two strategic purposes:
 │       │   ├── concepts/                      (Global Infra, Well-Architected, Shared Responsibility, CAF)
 │       │   └── services/                      (Compute, Storage, Database, Networking, Security, Billing)
 │       │
-│       └── [Question Banks]                   <-- 2,924 Verified Offline Questions
-│           ├── CloudCertPrep_Questions/       (1,050 questions with domain mapping & rationales)
-│           ├── AwsCcpTrainer_Questions/       (987 questions with detailed option notes)
-│           ├── ExamTopics_Questions/          (290 public questions with community discussions)
-│           ├── Quban301_Practice_Questions/   (174 modular practice & final exam questions)
-│           ├── CertPrep_Offline_Questions/    (136 offline mock questions)
-│           ├── Edurely_Questions/             (115 mock & challenge scenario questions)
-│           ├── CertSafari_Questions/          (79 verified questions with option explanations)
-│           ├── SecByte_Questions/             (72 mock exam questions)
-│           ├── FreeCram_Questions/            (13 verified questions)
-│           └── ExamDumpsNet_Questions/        (8 verified questions)
+│       └── questions_bank/                    <-- 2,924 Offline Practice Questions (GitIgnored)
+│           ├── README.md                      (Questions library catalog & source attribution)
+│           ├── EXAM_OBJECTIVES_ALIGNMENT_REPORT.md (Detailed 2,924-question blueprint audit)
+│           ├── CloudCertPrep_Questions/       (1,050 questions)
+│           ├── AwsCcpTrainer_Questions/       (987 questions)
+│           ├── ExamTopics_Questions/          (290 questions)
+│           ├── Quban301_Practice_Questions/   (174 questions)
+│           ├── CertPrep_Offline_Questions/    (136 questions)
+│           ├── Edurely_Questions/             (115 questions)
+│           ├── CertSafari_Questions/          (79 questions)
+│           ├── SecByte_Questions/             (72 questions)
+│           ├── FreeCram_Questions/            (13 questions)
+│           └── ExamDumpsNet_Questions/        (8 questions)
 │
 └── ai/
     └── foundation/                            <-- Track 2: AWS Certified AI Practitioner (AIF-C01)
