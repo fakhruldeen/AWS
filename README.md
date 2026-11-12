@@ -44,6 +44,8 @@ This repository is built for two strategic purposes:
 │       │   ├── concepts/                      (Global Infra, Well-Architected, Shared Responsibility, CAF)
 │       │   └── services/                      (Compute, Storage, Database, Networking, Security, Billing)
 │       │
+│       ├── sources/                           <-- Reference Literature (Packt & O'Reilly - GitIgnored)
+│       │
 │       └── questions_bank/                    <-- 2,924 Offline Practice Questions (GitIgnored)
 │           ├── README.md                      (Questions library catalog & source attribution)
 │           ├── EXAM_OBJECTIVES_ALIGNMENT_REPORT.md (Detailed 2,924-question blueprint audit)
@@ -125,3 +127,16 @@ The AI Foundation curriculum maps 1-to-1 to the 5 domains of the official **AIF-
 1. **[Lab 1: Bedrock Playgrounds & Prompt Engineering](./ai/foundation/labs/Lab_01_Amazon_Bedrock_Playground_and_Prompt_Engineering.md)** - Master Temperature, Top-P, Zero-shot, Few-shot, and Chain-of-Thought prompting.
 2. **[Lab 2: Building a RAG Knowledge Base](./ai/foundation/labs/Lab_02_Building_RAG_with_Bedrock_Knowledge_Bases.md)** - Ingest enterprise documents from S3 into OpenSearch Serverless via Titan Embeddings and query with Claude.
 3. **[Lab 3: Responsible AI & PII Masking](./ai/foundation/labs/Lab_03_Responsible_AI_Bedrock_Guardrails.md)** - Configure Denied Topics, content filters, and PII redaction using Amazon Bedrock Guardrails.
+
+---
+
+## 📚 Course Reference Books (Sources)
+
+For comprehensive offline study and deeper explanations, the curriculum references two core textbooks stored locally in `cloud/foundation/sources/` (excluded from git):
+
+1. **AWS Certified Cloud Practitioner (CLF-C02) Certification Guide (2nd Edition, 2026)**
+   * **Author:** Rajesh Daswani (*Packt Publishing*) — `ISBN: 978-1-83546-429-8`
+   * *Best For:* Practical exam readiness, exam-trap walkthroughs, and end-of-chapter review questions.
+2. **AWS Certified Cloud Practitioner (CLF-C02) Study Guide (1st Edition, 2026)**
+   * **Author:** Tom Taulli (*O'Reilly Media*) — `ISBN: 978-8-34164-022-2`
+   * *Best For:* Conceptual grounding, cloud economics, TCO modeling, and enterprise architecture perspectives.

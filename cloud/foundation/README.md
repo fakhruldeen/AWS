@@ -16,7 +16,8 @@ flowchart LR
     Syllabus["1. Exam Blueprint & Domains\n(syllabus/)"] --> Notes["2. Conceptual & Service Notes\n(notes/)"]
     Notes --> Slides["3. Marp Lecture Slides\n(slides/)"]
     Slides --> Labs["4. 100% Free-Tier Labs\n(labs/)"]
-    Labs --> Questions["5. Offline Practice Bank\n(questions_bank/ - GitIgnored)"]
+    Labs --> Refs["5. Reference Books\n(sources/ - Local Reference)"]
+    Refs --> Questions["6. Practice Questions Bank\n(questions_bank/ - GitIgnored)"]
 ```
 
 ---
@@ -48,6 +49,10 @@ cloud/foundation/
 │   ├── Lab_03_Resilient_MultiAZ_Web_Tier_EC2.md
 │   └── Lab_04_Proactive_Budget_Alerts_AWS_Budgets.md
 │
+├── sources/                       <-- Offline Reference Literature (GitIgnored / Local Only)
+│   ├── Rajesh Daswani - AWS Certified Cloud Practitioner Certification (Packt)
+│   └── Tom Taulli - AWS Certified Cloud Practitioner Study Guide (O'Reilly)
+│
 └── questions_bank/                <-- 2,924 Offline Practice Questions (GitIgnored)
     ├── README.md                  (Catalog index and source attribution)
     ├── EXAM_OBJECTIVES_ALIGNMENT_REPORT.md
@@ -65,10 +70,24 @@ cloud/foundation/
 
 ---
 
+## 📚 Recommended Reference Books (Course Sources)
+
+Students seeking further in-depth explanations, alternative analogies, or extended enterprise case studies can refer to these two foundational textbooks available locally in the `sources/` directory:
+
+| Reference Book | Author & Publisher | Edition & ISBN | Key Focus & Strengths |
+|---|---|---|---|
+| **AWS Certified Cloud Practitioner (CLF-C02) Certification Guide** | **Rajesh Daswani**<br>*Packt Publishing* | 2nd Edition (2026)<br>`ISBN: 978-1-83546-429-8` | **Hands-On Exam Preparation:** Focused chapter reviews, scenario walk-throughs, practical console tips, and domain-by-domain summaries mapped to CLF-C02 objectives. |
+| **AWS Certified Cloud Practitioner (CLF-C02) Study Guide** | **Tom Taulli**<br>*O'Reilly Media* | 1st Edition (2026)<br>`ISBN: 978-8-34164-022-2` | **Architectural & Business Concepts:** Deep explanations of cloud economics, Total Cost of Ownership (TCO), organizational governance, and enterprise cloud migration strategies. |
+
+> [!NOTE]
+> *Notice on Local References:* The `sources/` and `questions_bank/` directories contain copyrighted literary and assessment assets and are strictly excluded from online version control (`.gitignore`). Students access them locally during classroom instruction.
+
+---
+
 ## 🚀 Hands-On Student Labs
 
 All labs are designed to run within the **AWS Free Tier** with zero infrastructure cost:
-1. **[Lab 1: IAM Least Privilege & MFA](./labs/Lab_01_AWS_IAM_Least_Privilege_and_MFA.md)**
-2. **[Lab 2: Static S3 & CloudFront Distribution](./labs/Lab_02_Static_Website_S3_and_CloudFront.md)**
-3. **[Lab 3: Fault-Tolerant Multi-AZ EC2 Tier](./labs/Lab_03_Resilient_MultiAZ_Web_Tier_EC2.md)**
-4. **[Lab 4: Proactive Budget Alerts with AWS Budgets](./labs/Lab_04_Proactive_Budget_Alerts_AWS_Budgets.md)**
+1. **[Lab 1: IAM Least Privilege & MFA](./labs/Lab_01_AWS_IAM_Least_Privilege_and_MFA.md)** - Root account hardening, password policy enforcement, and group-based RBAC.
+2. **[Lab 2: Static S3 & CloudFront Distribution](./labs/Lab_02_Static_Website_S3_and_CloudFront.md)** - Global HTTPS content delivery using CloudFront Origin Access Control (OAC).
+3. **[Lab 3: Fault-Tolerant Multi-AZ EC2 Tier](./labs/Lab_03_Resilient_MultiAZ_Web_Tier_EC2.md)** - Deploying dual Availability Zone Apache instances behind an Application Load Balancer.
+4. **[Lab 4: Proactive Budget Alerts with AWS Budgets](./labs/Lab_04_Proactive_Budget_Alerts_AWS_Budgets.md)** - Setting automated actual and forecasted spending thresholds.

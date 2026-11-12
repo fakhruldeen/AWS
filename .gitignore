@@ -2,6 +2,12 @@
 graphify-out/cache/
 graphify-out/.graphify_*
 
-# Question Banks (Offline practice sets)
+# Question Banks (Offline practice sets - Never publish online)
 cloud/foundation/questions_bank/
 **/questions_bank/
+
+# Reference Books & Source Literature (Copyrighted - Never publish online)
+sources/
+**/sources/
+*.epub
+*.pdf
