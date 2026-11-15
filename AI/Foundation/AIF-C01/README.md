@@ -31,6 +31,22 @@ AI/Foundation/AIF-C01/
 │   ├── AIF-C01_Course_Syllabus.md
 │   └── AIF-C01_Exam_Guide_and_Blueprint.md
 │
+├── prerequisites/                             <-- Machine Learning & Data Science Foundations
+│   ├── README.md                              (Prerequisites overview)
+│   ├── 01_Machine_Learning_Fundamentals.md    (Supervised/Unsupervised, Metrics, Overfitting)
+│   └── 02_Generative_AI_and_Transformers.md   (Attention, Tokens, Context Windows, Embeddings)
+│
+├── lectures/                                  <-- Instructor Delivery Guides & Lesson Plans
+│   ├── README.md                              (Lecture delivery catalog)
+│   ├── Lecture_01_AI_ML_Fundamentals_and_AWS_Ecosystem.md
+│   ├── Lecture_02_Generative_AI_and_Amazon_Bedrock.md
+│   ├── Lecture_03_Prompt_Engineering_and_RAG_Architecture.md
+│   └── Lecture_04_Responsible_AI_and_Model_Governance.md
+│
+├── slides/                                    <-- Student Lecture Decks (Marp Format)
+│   ├── Module_01_AI_and_GenAI_Foundations_Slides.md
+│   └── Module_02_Amazon_Bedrock_and_RAG_Slides.md
+│
 ├── notes/                                     <-- Atomic Study Notes & Exam Cheat Sheets
 │   ├── 01_GenAI_Fundamentals.md
 │   ├── 02_Prompt_Engineering_Guide.md
@@ -39,14 +55,20 @@ AI/Foundation/AIF-C01/
 │   ├── 05_Responsible_AI_and_Governance.md
 │   └── 06_AIF-C01_Exam_CheatSheet.md
 │
-├── slides/                                    <-- Student Lecture Decks (Marp Format)
-│   ├── Module_01_AI_and_GenAI_Foundations_Slides.md
-│   └── Module_02_Amazon_Bedrock_and_RAG_Slides.md
+├── labs/                                      <-- Hands-On Student Lab Manuals
+│   ├── Lab_01_Amazon_Bedrock_Playground_and_Prompt_Engineering.md
+│   ├── Lab_02_Building_RAG_with_Bedrock_Knowledge_Bases.md
+│   └── Lab_03_Responsible_AI_Bedrock_Guardrails.md
 │
-└── labs/                                      <-- Hands-On Student Lab Manuals
-    ├── Lab_01_Amazon_Bedrock_Playground_and_Prompt_Engineering.md
-    ├── Lab_02_Building_RAG_with_Bedrock_Knowledge_Bases.md
-    └── Lab_03_Responsible_AI_Bedrock_Guardrails.md
+├── revision_questions/                        <-- Curated Student Revision Question Sets
+│   ├── README.md                              (Revision questions index)
+│   └── AIF_C01_Domains_1_to_5_Revision_Questions.md
+│
+└── knowledge_checks/                          <-- End-of-Module Diagnostic Quizzes
+    ├── README.md                              (Knowledge checks catalog)
+    ├── Module_01_AI_Foundations_Knowledge_Check.md
+    ├── Module_02_Bedrock_and_RAG_Knowledge_Check.md
+    └── Module_03_Responsible_AI_Knowledge_Check.md
 ```
 
 ---

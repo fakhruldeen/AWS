@@ -40,6 +40,36 @@ Cloud/Foundation/CLF-C02/
 │   ├── Domain_4_Billing_Pricing.md
 │   └── Exam_Distinction_CheatSheet.md
 │
+├── prerequisites/                          <-- Computer Science & Cloud Foundations
+│   ├── README.md                              (Prerequisite modules roadmap)
+│   ├── 01_Operating_Systems_and_Virtualization.md (Hypervisors, VMs vs Containers, Nitro)
+│   ├── 02_Networking_and_OSI_Model.md         (OSI 7 layers, TCP/IP, CIDR math, Subnetting)
+│   ├── 03_Storage_Paradigms.md                (Block vs File vs Object, IOPS vs Throughput)
+│   ├── 04_Security_and_Cryptography.md        (Symmetric/Asymmetric, TLS, Envelope Encryption)
+│   └── 05_Cloud_Economics_and_FinOps.md       (CapEx vs OpEx, TCO, Elasticity, Economies of Scale)
+│
+├── lectures/                                  <-- Instructor Delivery Guides & Lesson Plans
+│   ├── README.md                              (Lecture delivery catalog)
+│   ├── Lecture_01_Introduction_to_Cloud_and_Global_Infra.md
+│   ├── Lecture_02_Compute_Virtualization_and_Containers.md
+│   ├── Lecture_03_Storage_and_Database_Architectures.md
+│   ├── Lecture_04_Networking_Perimeter_Security_and_Identity.md
+│   ├── Lecture_05_Observability_Auditing_and_Governance.md
+│   └── Lecture_06_Billing_FinOps_and_Exam_Strategy.md
+│
+├── slides/                                    <-- Student Presentation Slide Decks (Marp Format)
+│   ├── Module_01_Cloud_Concepts_and_Architecture_Slides.md
+│   ├── Module_02_Compute_Storage_and_Databases_Slides.md
+│   ├── Module_03_Networking_Security_and_Identity_Slides.md
+│   ├── Module_04_Monitoring_Governance_and_DevOps_Slides.md
+│   └── Module_05_Billing_Pricing_and_Support_Slides.md
+│
+├── notes/                                     <-- High-Yield Study Notes & Rapid Review Sheets
+│   ├── Rapid_Review_Cheatsheet.md             (Ultra-dense quick reference sheet)
+│   ├── concepts/                              (Global Infra, Well-Architected, Shared Responsibility, CAF)
+│   ├── services/                              (Compute, Storage, Database, Networking, Security, Billing)
+│   └── distinctions/                          (Pairwise "X vs Y" Comparison Cheat Sheets)
+│
 ├── explanations/                              <-- Comprehensive Conceptual & Service Guides
 │   ├── README.md                              (CLF-C02 4-domain reference portal)
 │   ├── 01_Cloud_Concepts/                     (Economics, TCO, CAF, Well-Architected, Global Infra, DR)
@@ -90,39 +120,21 @@ Cloud/Foundation/CLF-C02/
 │   ├── assets/                                (70+ real console screenshots & terminal outputs)
 │   └── fast_track/                            (Accelerated 8-lab module)
 │
-├── notes/                                     <-- High-Yield Study Notes & Rapid Review Sheets
-│   ├── Rapid_Review_Cheatsheet.md             (Ultra-dense quick reference sheet)
-│   ├── concepts/                              (Global Infra, Well-Architected, Shared Responsibility, CAF)
-│   ├── services/                              (Compute, Storage, Database, Networking, Security, Billing)
-│   └── distinctions/                          (Pairwise "X vs Y" Comparison Cheat Sheets)
+├── revision_questions/                        <-- Curated Student Revision Sets & Timed Mock
+│   ├── README.md                              (Revision library index)
+│   ├── Domain_1_Cloud_Concepts_Revision_Questions.md
+│   ├── Domain_2_Security_and_Compliance_Revision_Questions.md
+│   ├── Domain_3_Cloud_Technology_and_Services_Revision_Questions.md
+│   ├── Domain_4_Billing_and_Pricing_Revision_Questions.md
+│   └── CLF_C02_Full_Length_Mock_Revision_Exam.md (65-question timed simulation)
 │
-├── slides/                                    <-- Student Presentation Slide Decks (Marp Format)
-│   ├── Module_01_Cloud_Concepts_and_Architecture_Slides.md
-│   ├── Module_02_Compute_Storage_and_Databases_Slides.md
-│   ├── Module_03_Networking_Security_and_Identity_Slides.md
-│   ├── Module_04_Monitoring_Governance_and_DevOps_Slides.md
-│   └── Module_05_Billing_Pricing_and_Support_Slides.md
-│
-├── sources/                                   <-- Offline Reference Literature (GitIgnored)
-│   ├── Rajesh Daswani - AWS Certified Cloud Practitioner Certification (Packt)
-│   └── Tom Taulli - AWS Certified Cloud Practitioner Study Guide (O'Reilly)
-│
-└── questions_bank/                            <-- 4,954 Offline Practice Questions (GitIgnored)
-    ├── README.md                  (Comprehensive catalog of all 14 banks)
-    ├── Kananinirav_Exams/         (1,142 questions across 23 modular exams)
-    ├── DevOpsKing_Questions/      (597 verified practice questions across 6 sets)
-    ├── GustavoFreze_Questions/    (165 domain questions with documentation citations)
-    ├── OReilly_Taulli_Questions/  (126 questions - Textbook Quizzes & Mock Exam)
-    ├── CloudCertPrep_Questions/   (450 questions & JSON datasets)
-    ├── AwsCcpTrainer_Questions/   (240 questions & option notes)
-    ├── CertSafari_Questions/      (674 questions)
-    ├── Quban301_Practice_Questions/ (301 questions & exam dumps)
-    ├── SecByte_Questions/         (296 questions)
-    ├── Edurely_Questions/         (300 questions)
-    ├── ExamDumpsNet_Questions/    (230 questions)
-    ├── CertPrep_Offline_Questions/ (200 questions)
-    ├── FreeCram_Questions/        (128 questions)
-    └── ExamTopics_Questions/      (105 questions)
+└── knowledge_checks/                          <-- End-of-Module Diagnostic Quizzes
+    ├── README.md                              (Knowledge checks catalog)
+    ├── Module_01_Cloud_Foundations_Knowledge_Check.md
+    ├── Module_02_Compute_and_Networking_Knowledge_Check.md
+    ├── Module_03_Storage_and_Databases_Knowledge_Check.md
+    ├── Module_04_Security_and_IAM_Knowledge_Check.md
+    └── Module_05_Billing_and_Support_Knowledge_Check.md
 ```
 
 ---
