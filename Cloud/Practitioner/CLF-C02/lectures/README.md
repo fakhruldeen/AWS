@@ -1,6 +1,6 @@
 # 🎓 Cloud Practitioner (CLF-C02) Lecture Delivery Manual
 
-> **Course Workspace:** `Cloud/Foundation/CLF-C02/lectures/`  
+> **Course Workspace:** `Cloud/Practitioner/CLF-C02/lectures/`  
 > **Target Audience:** Lead Trainers, Instructors, and Trainees  
 > **Purpose:** Pedagogical lesson plans, talking points, interactive whiteboard sketches, and transition prompts connecting lecture slides to hands-on labs.
 

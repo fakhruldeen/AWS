@@ -1,6 +1,6 @@
 # 📝 AI Practitioner (AIF-C01) Modular Knowledge Checks
 
-> **Course Workspace:** `AI/Foundation/AIF-C01/knowledge_checks/`  
+> **Course Workspace:** `AI/Practitioner/AIF-C01/knowledge_checks/`  
 > **Format:** Rapid diagnostic knowledge checks with answer keys and concept rationales.  
 > **Usage:** Used at the end of each lecture module to verify student retention of AI/ML concepts.
 

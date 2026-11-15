@@ -3,7 +3,7 @@
 > **Domain / Track:** AI / Foundation  
 > **Exam Code:** `AIF-C01` (AWS Certified AI Practitioner)  
 > **Course Author & Lead Trainer:** Mohamed Fakhruldeen  
-> **Repository Path:** `AI/Foundation/AIF-C01/`  
+> **Repository Path:** `AI/Practitioner/AIF-C01/`  
 > **Version:** 1.5.0
 
 ---
@@ -24,7 +24,7 @@ flowchart TD
 ## 📁 Directory Structure
 
 ```text
-AI/Foundation/AIF-C01/
+AI/Practitioner/AIF-C01/
 ├── README.md                                  <-- Course Portal (This File)
 │
 ├── syllabus/                                  <-- Official Blueprint & Course Syllabus

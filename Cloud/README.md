@@ -12,7 +12,7 @@ The AWS Cloud domain is structured hierarchically by certification level and exa
 
 ```text
 Cloud/
-├── Foundation/
+├── Practitioner/
 │   └── CLF-C02/                               <-- AWS Certified Cloud Practitioner (ACTIVE)
 │
 ├── Associate/                                 <-- (Planned Next Phases)
@@ -33,4 +33,4 @@ Cloud/
 
 ## 🚀 Active Exam Portals
 
-- **[Cloud / Foundation / CLF-C02](./Foundation/CLF-C02/README.md)** - AWS Certified Cloud Practitioner comprehensive standalone curriculum featuring 14 visual labs, 7 architectural tutorials, 19 domain guides, and 10 production Mermaid blueprints.
+- **[Cloud / Practitioner / CLF-C02](./Practitioner/CLF-C02/README.md)** - AWS Certified Cloud Practitioner comprehensive standalone curriculum featuring 14 visual labs, 7 architectural tutorials, 19 domain guides, and 10 production Mermaid blueprints.

@@ -1,6 +1,6 @@
 # 🎓 AI Practitioner (AIF-C01) Lecture Delivery Manual
 
-> **Course Workspace:** `AI/Foundation/AIF-C01/lectures/`  
+> **Course Workspace:** `AI/Practitioner/AIF-C01/lectures/`  
 > **Target Audience:** Trainers, Instructors, and AI Students  
 > **Purpose:** Comprehensive teaching outlines, conceptual talking points, and transitions between slides and Bedrock labs.
 

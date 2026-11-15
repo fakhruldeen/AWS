@@ -12,7 +12,7 @@ The AWS AI domain is structured hierarchically by certification level and exam c
 
 ```text
 AI/
-├── Foundation/
+├── Practitioner/
 │   └── AIF-C01/                               <-- AWS Certified AI Practitioner (ACTIVE)
 │
 ├── Associate/                                 <-- (Planned Next Phase)
@@ -26,4 +26,4 @@ AI/
 
 ## 🚀 Active Exam Portals
 
-- **[AI / Foundation / AIF-C01](./Foundation/AIF-C01/README.md)** - AWS Certified AI Practitioner curriculum featuring Bedrock playgrounds, prompt engineering, RAG knowledge bases with OpenSearch Serverless, and Bedrock Guardrails.
+- **[AI / Practitioner / AIF-C01](./Practitioner/AIF-C01/README.md)** - AWS Certified AI Practitioner curriculum featuring Bedrock playgrounds, prompt engineering, RAG knowledge bases with OpenSearch Serverless, and Bedrock Guardrails.

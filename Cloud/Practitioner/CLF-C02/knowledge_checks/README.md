@@ -1,6 +1,6 @@
 # 📝 Cloud Practitioner (CLF-C02) Modular Knowledge Checks
 
-> **Course Workspace:** `Cloud/Foundation/CLF-C02/knowledge_checks/`  
+> **Course Workspace:** `Cloud/Practitioner/CLF-C02/knowledge_checks/`  
 > **Format:** 10-Question rapid diagnostic assessments with immediate answer keys and concept cross-references.  
 > **Usage:** Administered at the end of each lecture module to verify student retention before advancing to hands-on labs.
 

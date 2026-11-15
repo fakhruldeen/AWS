@@ -2,7 +2,7 @@
 
 > **Level:** Foundation  
 > **Parent Domain:** `AI/`  
-> **Path:** `AI/Foundation/`
+> **Path:** `AI/Practitioner/`
 
 ---
 

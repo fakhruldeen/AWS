@@ -3,7 +3,7 @@
 > **Domain / Track:** Cloud / Foundation  
 > **Exam Code:** `CLF-C02` (AWS Certified Cloud Practitioner)  
 > **Course Author & Lead Trainer:** Mohamed Fakhruldeen  
-> **Repository Path:** `Cloud/Foundation/CLF-C02/`  
+> **Repository Path:** `Cloud/Practitioner/CLF-C02/`  
 > **Version:** 2.5.0 (Full Standalone Visual Curriculum)
 
 ---
@@ -28,7 +28,7 @@ flowchart TD
 ## 📁 Directory Structure
 
 ```text
-Cloud/Foundation/CLF-C02/
+Cloud/Practitioner/CLF-C02/
 ├── README.md                                  <-- Master Course Portal (This File)
 │
 ├── syllabus/                                  <-- Official Exam Blueprints & Preparation Plans

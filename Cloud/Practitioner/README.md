@@ -2,7 +2,7 @@
 
 > **Level:** Foundation  
 > **Parent Domain:** `Cloud/`  
-> **Path:** `Cloud/Foundation/`
+> **Path:** `Cloud/Practitioner/`
 
 ---
 

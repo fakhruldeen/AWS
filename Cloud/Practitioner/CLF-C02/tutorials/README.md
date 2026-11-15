@@ -1,6 +1,6 @@
 # 🏗️ AWS End-to-End Architectural Build Tutorials
 
-> **Workspace:** `/home/mohamed/Desktop/Work/aws/Cloud/Foundation/CLF-C02/tutorials/`  
+> **Workspace:** `/home/mohamed/Desktop/Work/aws/Cloud/Practitioner/CLF-C02/tutorials/`  
 > **Target Audience:** Engineering Students, Cloud Architects, and Practitioners  
 > **Methodology:** Multi-service, production-grade architectural builds with architecture diagrams, step-by-step console instructions, and CLI verification.
 
