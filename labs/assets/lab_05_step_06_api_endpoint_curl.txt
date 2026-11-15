@@ -1,0 +1,4 @@
+Step 06 - API endpoint response (text captured from browser page text, 2026-11-14)
+URL: https://imbt0pf3sa.execute-api.eu-north-1.amazonaws.com/orders
+Response body: {"message": "Order processing OK"}
+Note: browser screenshot was denied on this domain; cloud and device curl were blocked by network policy.

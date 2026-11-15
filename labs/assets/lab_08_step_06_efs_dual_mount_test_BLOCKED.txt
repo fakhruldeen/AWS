@@ -1,0 +1,10 @@
+Lab 08 step 06 - EFS dual mount test: BLOCKED (no terminal screenshot captured).
+
+Needs a shell on two EC2 instances (for example via SSM Session Manager or EC2 Instance Connect) to mount
+the same EFS endpoint at the same time. Session Manager requires an instance role with AmazonSSMManagedInstanceCore,
+and creating IAM roles is denied for this browser session (see Lab 07 SSM notes). No SSH key was used.
+
+What the user can do:
+1. Add the SSM instance role (AmazonSSMManagedInstanceCore) to the web instances, or enable EC2 Instance Connect.
+2. Then on each instance run: sudo mkdir -p /mnt/efs && sudo mount -t nfs4 -o nfsvers=4.1 fs-0e6465ca875c8b0cb.efs.eu-north-1.amazonaws.com:/ /mnt/efs
+3. Write a file on one instance and read it on the other, then capture a split-screen screenshot.

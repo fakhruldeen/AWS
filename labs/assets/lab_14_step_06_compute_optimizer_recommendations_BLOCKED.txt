@@ -1,0 +1,4 @@
+BLOCKED - Lab 14 step 06 (Compute Optimizer EC2 rightsizing dashboard)
+Attempted: https://<account>.eu-north-1.console.aws.amazon.com/compute-optimizer/home#/dashboard
+Result: browser domain policy denied the page.
+Steps to unblock: opt in to Compute Optimizer (it needs ~14 days of CloudWatch metrics for recommendations), then open the EC2 instances recommendations view and capture.

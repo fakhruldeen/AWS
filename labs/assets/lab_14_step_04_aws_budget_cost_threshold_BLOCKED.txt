@@ -1,0 +1,3 @@
+BLOCKED - Lab 14 step 04 (AWS Budgets monthly $20 with 80% actual and forecasted alerts)
+Attempted: Billing/Budgets console. Result: browser domain policy denied the page.
+Steps to unblock: Billing and Cost Management > Budgets > Create budget > Cost budget, monthly, amount 20 USD, add alerts at 80% ACTUAL and 80% FORECASTED, then capture the review page.

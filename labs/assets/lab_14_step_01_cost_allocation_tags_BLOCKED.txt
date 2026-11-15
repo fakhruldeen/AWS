@@ -1,0 +1,8 @@
+BLOCKED - Lab 14 step 01 (Billing > Cost allocation tags)
+Attempted: https://<account>.eu-north-1.console.aws.amazon.com/billing/home#/tags (and costmanagement/home#/tags)
+Result: the browser domain policy returned "Permission denied for this action on this domain" when rendering the Billing / Cost Management console.
+Steps to unblock (manual, in your own browser):
+1. Sign in as the management/root or a role with billing access (Billing and Cost Management permissions).
+2. Billing and Cost Management > Cost allocation tags > User-defined cost allocation tags.
+3. Activate the tags "Environment" and "Project" (tags must already exist on resources; allow up to 24h to appear).
+4. Re-run the capture for this step once the page is reachable from the browser.

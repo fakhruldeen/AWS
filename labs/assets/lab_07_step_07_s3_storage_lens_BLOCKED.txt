@@ -1,0 +1,9 @@
+Lab 07 step 07 - S3 Storage Lens dashboard: BLOCKED (no screenshot captured).
+
+Observed on 2026-11-14 in the AWS console (account redacted):
+"Insufficient permissions to retrieve dashboard. To view this dashboard configuration, you'll need the s3:GetStorageLensConfiguration permission."
+API response: AccountFullAccessRole is not authorized to perform s3:GetStorageLensConfiguration
+on storage-lens/default-account-dashboard with an EXPLICIT DENY in a service control policy (organization SCP p-ouqkh2x9).
+
+Action needed by the user/admin: allow s3:GetStorageLensConfiguration (or lift the SCP deny) for this account, then re-run the capture.
+The browser agent did not attempt to bypass the policy.

@@ -1,0 +1,4 @@
+BLOCKED - Lab 14 step 02 (Cost Explorer, last 6 months grouped by Service)
+Attempted: Billing/Cost Management console in eu-north-1 account-scoped host.
+Result: "Permission denied for this action on this domain" on the Cost Management domain.
+Steps to unblock: open Billing and Cost Management > Cost Explorer manually, set Date range = last 6 months, Granularity = Monthly, Group by = Service, then capture. Cost Explorer must also be enabled (first enablement can take up to 24h).

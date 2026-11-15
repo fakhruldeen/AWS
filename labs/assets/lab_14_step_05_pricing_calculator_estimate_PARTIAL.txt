@@ -1,0 +1,4 @@
+PARTIAL - Lab 14 step 05 (AWS Pricing Calculator architecture estimate summary card)
+Calculator site (calculator.aws) loads in the browser; the cookie banner was left untouched.
+Building the full architecture estimate (VPC, EC2 ASG, RDS PostgreSQL, DynamoDB, ALB, S3, CloudFront, Lambda, API Gateway) is not complete in this run.
+Steps to finish: calculator.aws > Create estimate > add each service with the lab sizes, then capture the "Estimate summary" card.

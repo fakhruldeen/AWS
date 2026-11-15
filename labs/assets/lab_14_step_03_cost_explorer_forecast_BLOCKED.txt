@@ -1,0 +1,3 @@
+BLOCKED - Lab 14 step 03 (Cost Explorer forecast through end of next quarter)
+Attempted: Cost Management console. Result: browser domain policy denied the page.
+Steps to unblock: Cost Explorer > Forecast toggle, set end date to end of next quarter, capture. Requires Cost Explorer enabled (up to 24h after enablement for forecasts).
