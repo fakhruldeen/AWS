@@ -3,7 +3,7 @@
 > **Instructor:** Mohamed Fakhruldeen  
 > **Course Track:** AI Foundation  
 > **Target Certification:** AWS Certified AI Practitioner (AIF-C01)  
-> **Repository:** `fakhruldeen/AWS` -> `ai/foundation/`
+> **Repository:** `fakhruldeen/AWS` -> `AI/Foundation/AIF-C01/`
 
 ---
 

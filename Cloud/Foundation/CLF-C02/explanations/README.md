@@ -1,6 +1,6 @@
 # 📖 AWS Certified Cloud Practitioner (CLF-C02) Master Explanations Library
 
-> **Workspace:** `/home/mohamed/Desktop/Work/aws/explanations/`  
+> **Workspace:** `/home/mohamed/Desktop/Work/aws/Cloud/Foundation/CLF-C02/explanations/`  
 > **Author & Lead Architect:** Mohamed Fakhruldeen  
 > **Design:** Exhaustive, standalone pedagogical explanations across all 4 CLF-C02 exam domains.
 

@@ -1,6 +1,6 @@
 # 🛠️ AWS Certified Cloud Practitioner (CLF-C02) Hands-On Student Lab Manual
 
-> **Course Workspace:** `/home/mohamed/Desktop/Work/aws/labs`  
+> **Course Workspace:** `/home/mohamed/Desktop/Work/aws/Cloud/Foundation/CLF-C02/labs`  
 > **Author & Lead Trainer:** Mohamed Fakhruldeen  
 > **Region:** `eu-north-1` (Stockholm) — 100% Free-Tier / Zero-Cost Optimized  
 > **Architecture:** Conceptual Refresher ➔ Step-by-Step Console Walkthrough (with Screenshots) ➔ AWS CLI v2 Verification ➔ Cost Teardown Safeguards  
