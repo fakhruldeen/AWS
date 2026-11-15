@@ -1,70 +1,58 @@
-# AWS Certified AI Practitioner (AIF-C01) Master Blueprint
+# AWS Certified AI Practitioner (AIF-C01) Exam Guide & Blueprint (v1.2)
 
-> **Exam Code:** AIF-C01  
-> **Target Audience:** Practitioners, developers, cloud engineers, and technical leaders seeking foundational mastery of Artificial Intelligence, Machine Learning, and Generative AI on AWS.  
-> **Passing Score:** **700 / 1000** (Scaled scoring model)  
-> **Format:** 65 questions (Multiple choice and multiple response), 85 minutes.  
-> **Tags:** `#aws/certification` `#aif-c01` `#blueprint` `#ai-practitioner`
-
----
-
-## 1. Exam Domain Breakdown & Weightings
-
-```mermaid
-pie title AIF-C01 Domain Weightings
-    "Domain 1: Fundamentals of AI and ML (20%)" : 20
-    "Domain 2: Fundamentals of Generative AI (24%)" : 24
-    "Domain 3: Applications of Foundation Models (28%)" : 28
-    "Domain 4: Guidelines for Responsible AI (14%)" : 14
-    "Domain 5: Security, Compliance, and Governance (14%)" : 14
-```
-
-| Domain | Weight | Core Focus | Link to Roadmap |
-|---|---|---|---|
-| **Domain 1** | **20%** | AI/ML/DL fundamentals, ML lifecycle, training vs. inference, SageMaker capabilities. | [[Domain_1_AI_ML_Fundamentals\|Domain 1 Study Guide]] |
-| **Domain 2** | **24%** | Generative AI mechanics, Foundation Models, tokens, context window, parameters, prompt engineering. | [[Domain_2_GenAI_Fundamentals\|Domain 2 Study Guide]] |
-| **Domain 3** | **28%** | Model selection, RAG, Fine-tuning, Amazon Bedrock architecture, Bedrock Agents, Amazon Q. | [[Domain_3_Foundation_Models_Applications\|Domain 3 Study Guide]] |
-| **Domain 4** | **14%** | Responsible AI pillars, bias types, SageMaker Clarify, Bedrock Guardrails, Model Cards. | [[Domain_4_Responsible_AI\|Domain 4 Study Guide]] |
-| **Domain 5** | **14%** | Data isolation in GenAI, encryption (KMS), VPC PrivateLink, IAM policies, CloudWatch & CloudTrail. | [[Domain_5_Security_Compliance_Governance\|Domain 5 Study Guide]] |
+> **Document:** AWS Certified AI Practitioner Exam Guide (`AIF-C01`)  
+> **Official Version:** 1.2 (October 29, 2026)  
+> **Target Certification:** AWS Certified AI Practitioner  
+> **Course Track:** `AI/Practitioner/AIF-C01/`  
+> **Passing Score:** 700 / 1000 (Scaled score across 50 scored + 15 unscored questions)  
+> **Question Types:** Multiple choice, Multiple response, Ordering (3-5 steps), Matching (3-7 items)
 
 ---
 
-## 2. In-Scope AWS Services Catalog
+## 📊 Exam Content Domains & Weightings
 
-### Tier 1: Core Foundation & Generative AI Services (Must Know In-Depth)
-* **Amazon Bedrock:** Foundation Models (Claude, Titan, Nova, Llama, Mistral, Cohere), Bedrock Knowledge Bases (RAG), Bedrock Agents, Bedrock Guardrails, Bedrock Prompt Management, Bedrock Prompt Flows, Bedrock Model Evaluation.
-* **Amazon SageMaker AI:** Studio, Canvas, Data Wrangler, Ground Truth, Feature Store, Autopilot, JumpStart, Training & Tuning, Inference options (Real-Time, Serverless, Batch, Async), Pipelines, Clarify, Model Cards, Model Dashboard, Model Monitor.
-* **Amazon Q:** Amazon Q Developer, Amazon Q Business, Amazon Q in QuickSight, Amazon Q data integration for AWS Glue.
-
-### Tier 2: Pre-Trained AI & Analytics Services
-* **Vision & Speech:** Amazon Rekognition, Amazon Polly, Amazon Transcribe, Amazon Translate.
-* **Text & Document AI:** Amazon Comprehend, Amazon Textract, Amazon Lex.
-* **Recommendations:** Amazon Personalize.
-* **Vector Storage & Data:** Amazon OpenSearch Serverless, Amazon Aurora PostgreSQL (`pgvector`), Amazon Neptune Analytics, Amazon S3, AWS Glue.
-
-### Tier 3: Security, Governance & Auditing Services
-* **Security & Identity:** AWS IAM, AWS Key Management Service (KMS), AWS PrivateLink (VPC Endpoints).
-* **Monitoring & Governance:** Amazon CloudWatch (metrics & model invocation logs), AWS CloudTrail, AWS Organizations (SCPs).
+| Domain | Domain Title | Official Weighting | Question Pool Share |
+|:---:|:---|:---:|:---|
+| **Domain 1** | Fundamentals of AI and ML | **20%** | ~13 Questions |
+| **Domain 2** | Fundamentals of Generative AI (GenAI) | **24%** | ~16 Questions |
+| **Domain 3** | Applications of Foundation Models (FMs) | **28%** | ~18 Questions |
+| **Domain 4** | Guidelines for Responsible AI | **14%** | ~9 Questions |
+| **Domain 5** | Security, Compliance, and Governance for AI Solutions | **14%** | ~9 Questions |
+| **TOTAL** | | **100%** | **65 Questions** |
 
 ---
 
-## 3. Out-of-Scope Services & Capabilities (Do Not Waste Study Time)
+## 🗺️ Domain & Task Breakdown
 
-* Writing deep custom neural network architectures in PyTorch or TensorFlow from scratch.
-* Low-level AWS infrastructure operations (Direct Connect, Global Accelerator, AWS WAF rules, AWS Shield Advanced configurations).
-* Complex distributed GPU cluster orchestrations (EKS Slurm clusters, deep AWS ParallelCluster networking).
-* Services like AWS IoT Greengrass, AWS HealthOmics, AWS RoboMaker.
+### Domain 1: Fundamentals of AI and ML (20%)
+* **Task 1.1:** Explain basic AI concepts and terminologies (AI, ML, Deep Learning, Neural Networks, Computer Vision, NLP, Model, Algorithm, Training vs Inferencing, Bias, Fairness, Fit, LLM, GenAI, Agentic AI; Inferencing types: batch, real-time, async, serverless; Data types: labeled/unlabeled, tabular, time-series, image, text, structured/unstructured; Supervised, Unsupervised, Reinforcement Learning).
+* **Task 1.2:** Identify practical use cases for AI (Decision assist, scalability, automation; when NOT appropriate: deterministic outcome needed vs prediction, cost-benefit; regression, classification, clustering; real-world applications; AWS AI services: SageMaker AI, Transcribe, Translate, Comprehend, Lex, Polly; traditional ML vs FMs: explainability, operational constraints).
+* **Task 1.3:** Describe the AI/ML development lifecycle (Pipeline components, FM sources: open source pre-trained vs custom training; production methods: managed API vs self-hosted; AWS tools: Bedrock, Quick, Kiro, SageMaker AI; MLOps fundamentals: experimentation, technical debt, production readiness, monitoring, re-training; Model metrics: accuracy, precision, recall, F1; Business metrics: cost per user, ROI).
+
+### Domain 2: Fundamentals of Generative AI (24%)
+* **Task 2.1:** Explain basic concepts of GenAI (Tokens, chunking, embeddings, vectors, prompt engineering, transformer LLMs, FMs, multi-modal, diffusion models; use cases: image/video/audio generation, summarization, assistants, code generation; FM lifecycle; token-based pricing; context engineering; Agentic AI: multi-agent system patterns, Model Context Protocol [MCP], multi-agent communication patterns, memory management, tool usage, workflow orchestration).
+* **Task 2.2:** Capabilities and limitations of GenAI for business problems (Advantages: adaptability, responsiveness, conversational, content generation; Disadvantages: hallucinations, interpretability, inaccuracy, nondeterminism; model selection factors: compliance, cost, latency, complexity; business metrics: cross-domain performance, ROI, ARPU, CLV).
+* **Task 2.3:** AWS infrastructure and technologies for building GenAI applications (AWS services: Amazon Bedrock, SageMaker AI, SageMaker JumpStart, Amazon Quick, Kiro, Strands Agents, Bedrock AgentCore; AWS infrastructure benefits: security, compliance, responsibility, safety; cost trade-offs: responsiveness, availability, redundancy, token-based pricing, provisioned throughput, custom models).
+
+### Domain 3: Applications of Foundation Models (28%)
+* **Task 3.1:** Design considerations for applications that use FMs (Selection criteria: cost, modality, latency, multi-lingual, size, complexity, customization, context length, prompt caching; inference parameters: temperature, output length; RAG: Amazon Bedrock Knowledge Bases; Vector databases: OpenSearch Service, Aurora, Neptune, RDS PostgreSQL; Cost trade-offs: pre-training, fine-tuning, in-context learning, RAG, distillation; Role of AI agents).
+* **Task 3.2:** Choose effective prompt engineering techniques (Constructs: context, instruction, negative prompts; Techniques: chain-of-thought, zero-shot, single-shot, few-shot, templates; Best practices: quality, experimentation, guardrails, concision; Risks: exposure, poisoning, hijacking, jailbreaking; Versioning: Amazon Bedrock Prompt Management).
+* **Task 3.3:** Training and fine-tuning process for FMs (Pre-training, fine-tuning, continuous pre-training, distillation; Instruction tuning, domain adaptation, transfer learning; Data prep: curation, governance, size, labeling, RLHF).
+* **Task 3.4:** Describe methods to evaluate FM performance (Approaches: human-in-the-loop, benchmark datasets, Amazon Bedrock Model Evaluation; Metrics: ROUGE, BLEU, BERTScore, LLM-as-a-judge; Business alignment: task completion rate, user satisfaction, cost per interaction; App evaluation: RAG, agents, workflows).
+
+### Domain 4: Guidelines for Responsible AI (14%)
+* **Task 4.1:** Explain development of AI systems that are responsible (Features: bias, fairness, inclusivity, robustness, safety, veracity; Tools: Amazon Bedrock Guardrails; Responsible model selection: environmental considerations, sustainability; Legal risks: IP infringement, biased outputs, customer trust, hallucinations; Dataset characteristics: diversity, curated sources, balanced data; Bias/variance: demographic groups, overfitting, underfitting; Monitoring tools: label quality, human audits, subgroup analysis).
+* **Task 4.2:** Recognize importance of transparent and explainable models (Transparent vs opaque; Tools: Amazon SageMaker Model Cards, Bedrock Model Evaluations, open-source models, data, licensing; Trade-offs: safety vs transparency, interpretability vs performance; Human-centered design for XAI: user feedback, AI decision transparency).
+
+### Domain 5: Security, Compliance, and Governance for AI Solutions (14%)
+* **Task 5.1:** Explain methods to secure AI systems (Services: IAM roles/policies, encryption, Amazon Macie, AWS PrivateLink, shared responsibility, Amazon Bedrock AgentCore Identity, Policy in AgentCore, Amazon Bedrock Guardrails; Source citation: data lineage, data cataloging, SageMaker Model Cards; Secure data engineering: PETs, access control, integrity; Security & privacy: prompt injection, encryption at rest/transit, data leakage prevention, output filtering, audit trail, toxicity; Hallucination detection & grounding: RAG grounding, output validation, confidence scoring).
+* **Task 5.2:** Recognize governance and compliance regulations for AI systems (Services: AWS Config, Amazon Inspector, AWS Artifact, AWS CloudTrail, AWS Trusted Advisor; Data governance: data lifecycles, logging, residency, monitoring, retention; Governance protocols: review cadence, Generative AI Security Scoping Matrix, transparency standards, team training).
 
 ---
 
-## 4. Structured Study & Preparation Plan
-
-```mermaid
-flowchart LR
-    Step1["Step 1:\nCore Concepts\n(Tokens, Inference params,\nPrompt engineering)"] --> Step2["Step 2:\nAmazon Bedrock\n(FMs, RAG, Agents,\nGuardrails)"]
-    Step2 --> Step3["Step 3:\nSageMaker Suite\n(Canvas, Data Wrangler,\n4 Deployments, Clarify)"]
-    Step3 --> Step4["Step 4:\nResponsible AI\n& Security\n(Bias types, Guardrails,\nKMS, PrivateLink)"]
-    Step4 --> Step5["Step 5:\nCheat Sheets\n& Practice Exams\n(Distinction tables)"]
-```
-
-* **High-Yield Shortcut:** Review the [[AIF-C01_Exam_Distinction_CheatSheet|AIF-C01 Exam Distinction Cheat Sheet]] before practice exams to lock in key differentiators.
+## 🎯 In-Scope Modern AWS Offerings
+- **Foundation Models:** Amazon Bedrock, Amazon Nova (Nova Micro, Nova Lite, Nova Pro, Nova Premier).
+- **Agentic AI & Tooling:** Amazon Bedrock AgentCore (Identity & Policy), Strands Agents, Kiro, Model Context Protocol (MCP).
+- **RAG & Vector Stores:** Amazon Bedrock Knowledge Bases, Amazon OpenSearch Service, Amazon Aurora pgvector, Amazon Neptune, Amazon RDS PostgreSQL.
+- **ML Lifecycle & Explainability:** Amazon SageMaker AI (Studio, Canvas, Data Wrangler, Clarify, Model Cards, JumpStart).
+- **Applied AI Services:** Amazon Textract, Amazon Transcribe, Amazon Comprehend, Amazon Translate, Amazon Polly, Amazon Rekognition, Amazon Lex, Amazon Personalize, AWS Transform.

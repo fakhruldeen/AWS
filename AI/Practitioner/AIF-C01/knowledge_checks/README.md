@@ -1,15 +1,25 @@
-# 📝 AI Practitioner (AIF-C01) Modular Knowledge Checks
+# 📝 AWS Certified AI Practitioner (AIF-C01) Diagnostic Knowledge Checks
 
-> **Course Workspace:** `AI/Practitioner/AIF-C01/knowledge_checks/`  
-> **Format:** Rapid diagnostic knowledge checks with answer keys and concept rationales.  
-> **Usage:** Used at the end of each lecture module to verify student retention of AI/ML concepts.
+> **Module:** Module-by-Module Rapid Diagnostic Quizzes  
+> **Course:** AWS Certified AI Practitioner (`AIF-C01`)  
+> **Exam Version Alignment:** Official v1.2 (October 2026)  
+> **Total Questions:** 50 Diagnostic Questions across 5 Modules (10 Questions each) with instant answer keys and deep conceptual rationales.
 
 ---
 
-## 🗺️ Knowledge Checks Catalog
+## 🗺️ Master Knowledge Checks Index
 
-| Check # | Subject Domain | Focus Topics | Time Limit |
-| :--- | :--- | :--- | :---: |
-| **[Module 01 Check](./Module_01_AI_Foundations_Knowledge_Check.md)** | AI/ML Foundations | Supervised/Unsupervised Learning, Overfitting, SageMaker Canvas | 10 Mins |
-| **[Module 02 Check](./Module_02_Bedrock_and_RAG_Knowledge_Check.md)** | GenAI & Bedrock | Foundation Models, Temperature, Vector Embeddings, RAG KB | 10 Mins |
-| **[Module 03 Check](./Module_03_Responsible_AI_Knowledge_Check.md)** | Responsible AI & Safety | Bias Detection (Clarify), Guardrails, PII Masking, Model Cards | 10 Mins |
+| Module | Title & Focus | Exam Weight | Question Count | Core Concepts Assessed |
+|:---:|:--- |:---:|:---:|---|
+| **[Module 01](./Module_01_AI_Foundations_Knowledge_Check.md)** | **Fundamentals of AI & Machine Learning** | 20% | 10 | Regression vs Classification, Overfitting/Underfitting, Confusion Matrix, Recall/Precision, SageMaker Canvas, Textract, Transcribe. |
+| **[Module 02](./Module_02_Generative_AI_and_Nova_Knowledge_Check.md)** | **Fundamentals of Generative AI & Nova** | 24% | 10 | Transformer self-attention, tokens/embeddings, Temperature/Top-P, Amazon Nova family (Micro, Lite, Pro), Model Context Protocol (MCP). |
+| **[Module 03](./Module_03_Applications_of_FMs_and_RAG_Knowledge_Check.md)** | **Applications of Foundation Models & RAG** | 28% | 10 | RAG architecture, OpenSearch Serverless, Prompt Caching, Few-Shot/CoT, PEFT/LoRA, ROUGE metric, Bedrock Agents, LLM-as-a-judge. |
+| **[Module 04](./Module_04_Responsible_AI_Knowledge_Check.md)** | **Guidelines for Responsible AI** | 14% | 10 | Responsible AI pillars, Clarify pre/post bias (CI, DPL, DI), SHAP explainability, Bedrock Guardrails, Contextual Grounding, Model Cards. |
+| **[Module 05](./Module_05_Security_Compliance_and_Governance_Knowledge_Check.md)** | **Security, Compliance & Governance** | 14% | 10 | Generative AI Security Scoping Matrix, zero data retention, PrivateLink, IAM, Macie, CloudTrail Data Events, KMS CMKs. |
+
+---
+
+## 🎯 How to Use These Diagnostic Quizzes
+1. Complete each 10-question check immediately after reviewing the corresponding Domain Explanation or Lecture.
+2. Target achieving $\ge 80\%$ (8/10 correct) before proceeding to the next module.
+3. Review the detailed rationales for any missed questions to solidify conceptual boundaries.
