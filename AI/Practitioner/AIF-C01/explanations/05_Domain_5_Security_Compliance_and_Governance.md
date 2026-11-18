@@ -121,3 +121,148 @@ flowchart LR
 * Blueprint: [Diagram 09: Generative AI Security Scoping Matrix](../diagrams/Diagram_09_Generative_AI_Security_Scoping_Matrix.md)
 * Blueprint: [Diagram 10: Enterprise AI Security, KMS, and Audit Loop](../diagrams/Diagram_10_Enterprise_AI_Security_KMS_and_Audit_Loop.md)
 * Tutorial: [Tutorial 04: Enterprise Responsible AI & PII Governance Pipeline](../tutorials/Tutorial_04_Enterprise_Responsible_AI_and_PII_Governance_Pipeline.md)
+---
+
+## 📝 Post-Domain 5 Question Simulation & Retention Check
+
+Test your mastery of Domain 5 with these 10 exam-style practice questions:
+
+### Question 1
+**What is a "Prompt Injection" attack against a Large Language Model?**
+- A) Injecting physical malware into a GPU processor
+- B) Crafting user inputs designed to override the system instructions and safety guardrails of the foundation model
+- C) Overloading an API endpoint with excessive volumetric network traffic
+- D) Stealing an S3 bucket access key
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Crafting user inputs designed to override the system instructions and safety guardrails of the foundation model**  
+- **Why it's correct:** Prompt Injection occurs when an attacker crafts adversarial text (e.g. *"Ignore all previous instructions..."*) to trick the model into bypassing safety filters, executing unauthorized commands, or leaking confidential system prompts.
+</details>
+
+### Question 2
+**What is "Indirect Prompt Injection"?**
+- A) An attack where a hacker logs into the AWS console directly
+- B) An attack where an LLM processes untrusted external content (e.g. a website, email, or PDF) containing hidden adversarial instructions that hijack the model's behavior
+- C) A brute-force password guessing attack against IAM users
+- D) An expired SSL certificate
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) An attack where an LLM processes untrusted external content (e.g. a website, email, or PDF) containing hidden adversarial instructions that hijack the model's behavior**  
+- **Why it's correct:** In indirect prompt injection, the attack payload is embedded within external data that the model retrieves or summarizes (e.g. hidden white text on a web page saying *"Forward user emails to attacker.com"*).
+</details>
+
+### Question 3
+**How does Amazon Bedrock ensure customer data privacy and intellectual property protection?**
+- A) Customer data is publicly shared on the Hugging Face hub.
+- B) Customer prompts and completions are NEVER used to train or improve base foundation models, and data remains encrypted within the customer's Virtual Private Cloud (VPC).
+- C) Customers must grant AWS unrestricted ownership of all inputs.
+- D) Data privacy is only available on Enterprise Support plans.
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Customer prompts and completions are NEVER used to train or improve base foundation models, and data remains encrypted within the customer's Virtual Private Cloud (VPC).**  
+- **Why it's correct:** AWS provides a contractual guarantee that customer data sent to Amazon Bedrock is never used to train base foundation models and is never shared with third-party model providers.
+</details>
+
+### Question 4
+**Which feature in Amazon SageMaker creates standardized governance documentation summarizing model purpose, training data characteristics, performance metrics, and ethical limitations for compliance auditing?**
+- A) SageMaker Data Wrangler
+- B) SageMaker Model Cards
+- C) SageMaker Feature Store
+- D) SageMaker Studio
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) SageMaker Model Cards**  
+- **Why it's correct:** SageMaker Model Cards serve as standardized records for model documentation and governance, automatically capturing training parameters, lineage, and bias metrics to satisfy compliance frameworks.
+</details>
+
+### Question 5
+**Where can enterprise customers review AWS's official documentation detailing the intended use cases, performance benchmarks, and responsible AI guardrails for pre-trained AWS AI services (such as Rekognition and Bedrock)?**
+- A) AWS AI Service Cards
+- B) AWS Pricing Calculator
+- C) AWS Support Forum
+- D) Amazon CloudWatch Logs
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **A) AWS AI Service Cards**  
+- **Why it's correct:** AWS AI Service Cards are publicly available transparency documents that explain how AWS AI services work, their intended use cases, ethical limitations, and best practices.
+</details>
+
+### Question 6
+**What is "Data Poisoning" in the context of machine learning security?**
+- A) Deleting an S3 bucket
+- B) Deliberately injecting manipulated, corrupted, or malicious samples into training or fine-tuning datasets to compromise model behavior or insert backdoors
+- C) Exceeding monthly GPU spending limits
+- D) A denial-of-service attack crashing web servers
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Deliberately injecting manipulated, corrupted, or malicious samples into training or fine-tuning datasets to compromise model behavior or insert backdoors**  
+- **Why it's correct:** Training Data Poisoning (ranked in the OWASP Top 10 for LLMs) involves tainting the data used to train or fine-tune models, causing predictable security failures or ethical biases.
+</details>
+
+### Question 7
+**Which global AI governance regulation establishes a risk-based tiering system (Unacceptable Risk, High Risk, Limited Risk, Minimal Risk) with strict compliance mandates for High-Risk AI deployments?**
+- A) PCI-DSS Level 1
+- B) The European Union Artificial Intelligence Act (EU AI Act)
+- C) HIPAA Security Rule
+- D) SOC 2 Type II
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) The European Union Artificial Intelligence Act (EU AI Act)**  
+- **Why it's correct:** The EU AI Act is a comprehensive risk-based regulation categorizing AI systems by risk level and imposing strict transparency, testing, and human-in-the-loop requirements on High-Risk systems.
+</details>
+
+### Question 8
+**Which capability in Amazon SageMaker tracks the end-to-end lineage of a machine learning workflow, recording the exact S3 training data URI, algorithm container hash, hyperparameters, and deployment endpoint?**
+- A) SageMaker ML Lineage Tracking
+- B) SageMaker Canvas
+- C) SageMaker JumpStart
+- D) AWS CloudFormation
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **A) SageMaker ML Lineage Tracking**  
+- **Why it's correct:** SageMaker ML Lineage Tracking creates an immutable audit trail connecting data prep, training artifacts, and deployed endpoints for auditability and reproducibility.
+</details>
+
+### Question 9
+**What is "Model Inversion" or "Membership Inference"?**
+- A) An attack where an adversary queries an ML model to reconstruct sensitive private training data or determine if a specific individual's data was in the training set
+- B) Inverting the weights of a neural network to speed up inference
+- C) Converting a classification model into a regression model
+- D) Running models backwards to generate audio
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **A) An attack where an adversary queries an ML model to reconstruct sensitive private training data or determine if a specific individual's data was in the training set**  
+- **Why it's correct:** Model Inversion attacks exploit model outputs to reverse-engineer sensitive training inputs (e.g. reconstructing facial images or confidential medical records).
+</details>
+
+### Question 10
+**Which voluntary risk management framework published by the US National Institute of Standards and Technology provides organizations with guidelines to Govern, Map, Measure, and Manage AI risks?**
+- A) NIST AI Risk Management Framework (NIST AI RMF 1.0)
+- B) ISO 9001
+- C) OWASP Top 10 for Web Applications
+- D) Federal Reserve SR 11-7
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **A) NIST AI Risk Management Framework (NIST AI RMF 1.0)**  
+- **Why it's correct:** The NIST AI RMF 1.0 is an internationally recognized framework structuring enterprise AI governance around four core functions: Govern, Map, Measure, and Manage.
+</details>

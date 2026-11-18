@@ -152,3 +152,148 @@ flowchart LR
 * Blueprint: [Diagram 07: Bedrock Guardrails Multi-Layered Perimeter](../diagrams/Diagram_07_Bedrock_Guardrails_Multi_Layered_Perimeter.md)
 * Lab: [Lab 05: Responsible AI & PII Masking with Amazon Bedrock Guardrails](../labs/Lab_05_Responsible_AI_and_PII_Masking_with_Amazon_Bedrock_Guardrails.md)
 * Lab: [Lab 09: Model Fairness, Bias Detection & SHAP with SageMaker Clarify](../labs/Lab_09_Model_Fairness_Bias_Detection_and_SHAP_Explainability_with_SageMaker_Clarify.md)
+---
+
+## 📝 Post-Domain 4 Question Simulation & Retention Check
+
+Test your mastery of Domain 4 with these 10 exam-style practice questions:
+
+### Question 1
+**Which of the following is considered a core pillar of Responsible AI?**
+- A) Maximizing model parameter count
+- B) Fairness, Explainability, Robustness, Privacy, and Transparency
+- C) Eliminating human review completely
+- D) Overclocking GPU clusters
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Fairness, Explainability, Robustness, Privacy, and Transparency**  
+- **Why it's correct:** Responsible AI frameworks establish governance around fairness (avoiding unfair bias), explainability (understanding predictions), robustness (security against adversarial inputs), privacy, and transparency.
+</details>
+
+### Question 2
+**Which AWS service allows organizations to implement custom responsible AI safeguards, block prompt injection attacks, deny prohibited conversational topics, and automatically mask PII across foundation models?**
+- A) Amazon GuardDuty
+- B) Amazon Bedrock Guardrails
+- C) AWS WAF
+- D) AWS Shield
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Amazon Bedrock Guardrails**  
+- **Why it's correct:** Amazon Bedrock Guardrails evaluates both user prompts and model responses against custom safety policies (Denied Topics, Content Filters, Sensitive Information Filters for PII, Contextual Grounding Checks).
+</details>
+
+### Question 3
+**Which Amazon SageMaker AI feature detects pre-training bias in datasets, post-training bias in model predictions, and explains feature importance using SHAP (Shapley values)?**
+- A) SageMaker Canvas
+- B) SageMaker Clarify
+- C) SageMaker Feature Store
+- D) SageMaker Model Cards
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) SageMaker Clarify**  
+- **Why it's correct:** SageMaker Clarify detects statistical bias across demographic groups (pre-training Class Imbalance and post-training Disparate Impact) and provides local and global feature attribution using KernelSHAP.
+</details>
+
+### Question 4
+**In a mortgage loan approval model, a customer asks why their application was rejected. Which type of explainability is required to explain this single applicant's decision?**
+- A) Global Explainability
+- B) Local Explainability (Feature Attribution)
+- C) Dimensionality Reduction
+- D) Batch Transform
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Local Explainability (Feature Attribution)**  
+- **Why it's correct:** Local explainability explains the specific score for an individual instance, showing exactly how each input feature (e.g. debt-to-income ratio) pushed the model's prediction higher or lower relative to the baseline.
+</details>
+
+### Question 5
+**What pre-training bias metric in SageMaker Clarify measures whether a protected demographic group is significantly underrepresented in the training dataset?**
+- A) Disparate Impact (DI)
+- B) Class Imbalance (CI)
+- C) Mean Squared Error (MSE)
+- D) Accuracy Difference
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Class Imbalance (CI)**  
+- **Why it's correct:** Class Imbalance (CI) evaluates whether the proportion of samples from a sensitive demographic group in the training data deviates from equal representation.
+</details>
+
+### Question 6
+**A company wants to automatically redact customer Social Security Numbers, credit cards, and email addresses from chat transcripts before logging data. Which feature in Amazon Bedrock Guardrails performs this?**
+- A) Denied Topics
+- B) Sensitive Information Filters (PII Redaction/Masking)
+- C) Word Filters
+- D) Grounding Checks
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Sensitive Information Filters (PII Redaction/Masking)**  
+- **Why it's correct:** Bedrock Guardrails Sensitive Information Filters can identify and either block or replace PII entities with generic masking tokens (e.g. `[SSN_REDACTED]`).
+</details>
+
+### Question 7
+**Which alignment technique trains a reward model based on human preference rankings and uses Proximal Policy Optimization (PPO) to align a foundation model with human values?**
+- A) K-Means Clustering
+- B) Reinforcement Learning from Human Feedback (RLHF)
+- C) Principal Component Analysis (PCA)
+- D) Unsupervised Pre-training
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Reinforcement Learning from Human Feedback (RLHF)**  
+- **Why it's correct:** RLHF aligns foundation models to be helpful, honest, and harmless by incorporating human preference feedback into reinforcement learning policy optimization.
+</details>
+
+### Question 8
+**How does Constitutional AI (RLAIF) improve the efficiency of aligning foundation models compared to traditional RLHF?**
+- A) It eliminates the need for foundation models.
+- B) It replaces manual human feedback with automated AI-generated feedback guided by a predefined "Constitution" of ethical principles.
+- C) It makes model training free of charge.
+- D) It guarantees 100% accuracy on mathematical problems.
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) It replaces manual human feedback with automated AI-generated feedback guided by a predefined "Constitution" of ethical principles.**  
+- **Why it's correct:** Constitutional AI uses a model to critique and revise its own responses based on structured ethical rules, drastically reducing the time, cost, and human labor required for alignment.
+</details>
+
+### Question 9
+**What is the purpose of a Contextual Grounding Check in Amazon Bedrock Guardrails?**
+- A) To detect if the user is using a VPN
+- B) To detect and block model hallucinations by measuring factual overlap between the generated response and reference source documents
+- C) To measure token billing rates
+- D) To translate responses into Spanish
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) To detect and block model hallucinations by measuring factual overlap between the generated response and reference source documents**  
+- **Why it's correct:** Contextual Grounding calculates a Grounding Score (is the answer substantiated by the source text?) and Relevance Score (does it answer the prompt?), filtering out ungrounded hallucinations.
+</details>
+
+### Question 10
+**Which service allows easily incorporating human review workflows into automated ML predictions when model confidence falls below a defined threshold?**
+- A) Amazon Augmented AI (Amazon A2I)
+- B) Amazon Rekognition
+- C) AWS Step Functions
+- D) AWS IAM
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **A) Amazon Augmented AI (Amazon A2I)**  
+- **Why it's correct:** Amazon A2I provides built-in human-in-the-loop review workflows for Amazon Textract, Rekognition, and custom ML models to ensure human oversight on sensitive or low-confidence predictions.
+</details>

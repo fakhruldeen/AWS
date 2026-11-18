@@ -102,3 +102,88 @@ flowchart LR
 | *"Scaled-down, minimal version of application runs 24/7 in secondary Region"* | **Warm Standby** |
 | *"Requires near-zero downtime and zero data loss; customer cannot afford even a minute of interruption"* | **Multi-Site Active-Active** |
 | *"Wants a centralized tool to enforce automated daily backups and retention across all AWS accounts"* | **AWS Backup** |
+---
+
+## 7. Post-Topic Question Simulation & Retention Check
+
+Test your understanding of Disaster Recovery & High Availability with these 5 exam-style questions:
+
+### Question 1
+**An application requires a Disaster Recovery strategy that provides the lowest possible ongoing infrastructure cost while tolerating several hours of Recovery Time Objective (RTO) and Recovery Point Objective (RPO). Which DR strategy should be selected?**
+- A) Multi-Site Active/Active
+- B) Warm Standby
+- C) Backup and Restore
+- D) Pilot Light
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **C) Backup and Restore**  
+- **Why it's correct:** Backup and Restore is the most cost-effective DR strategy because zero compute infrastructure runs in the secondary DR region during normal operations. Data is backed up to S3, and servers are provisioned only when disaster strikes.
+- **Distractor Analysis:**
+  - *A is incorrect:* Multi-Site is the most expensive strategy (near-zero RTO/RPO).
+  - *B & D are incorrect:* Both maintain running infrastructure in the secondary region, incurring higher baseline costs.
+</details>
+
+### Question 2
+**What is the defining characteristic of a "Pilot Light" Disaster Recovery strategy?**
+- A) A scaled-down version of the full application runs 24/7 in the secondary region.
+- B) Critical core data is continuously replicated to the DR region, while compute servers are kept turned off until disaster strikes.
+- C) Full production workloads run simultaneously in two AWS Regions.
+- D) Data is backed up to tape and physically shipped off-site.
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Critical core data is continuously replicated to the DR region, while compute servers are kept turned off until disaster strikes.**  
+- **Why it's correct:** Like a gas water heater's pilot light, the core database engine runs continuously to stay in sync with production, but the heavy compute servers (web/app fleet) are provisioned from AMIs only during failover.
+- **Distractor Analysis:**
+  - *A describes:* Warm Standby.
+  - *C describes:* Multi-Site Active/Active.
+</details>
+
+### Question 3
+**An e-commerce business requires that in the event of an outage, maximum data loss cannot exceed 15 minutes of customer transactions. What metric does this represent?**
+- A) Recovery Time Objective (RTO)
+- B) Recovery Point Objective (RPO)
+- C) Mean Time to Detect (MTTD)
+- D) Service Level Agreement (SLA)
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Recovery Point Objective (RPO)**  
+- **Why it's correct:** RPO measures the maximum acceptable amount of data loss backward in time from the point of failure.
+- **Distractor Analysis:**
+  - *A is incorrect:* RTO measures downtime duration forward in time until service restoration.
+</details>
+
+### Question 4
+**Which database configuration provides automated synchronous replication across multiple data centers and automatic failover within 60-120 seconds if an Availability Zone fails?**
+- A) Amazon RDS Read Replica
+- B) Amazon RDS Multi-AZ Deployment
+- C) Single-AZ Amazon RDS with daily snapshots
+- D) Amazon S3 Glacier archive
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Amazon RDS Multi-AZ Deployment**  
+- **Why it's correct:** RDS Multi-AZ provisions a synchronous standby replica in a different AZ within the same region, providing automated failover with zero data loss upon primary failure.
+- **Distractor Analysis:**
+  - *A is incorrect:* Read Replicas use asynchronous replication primarily for read scalability, not automated synchronous failover.
+</details>
+
+### Question 5
+**Which Disaster Recovery strategy delivers near-zero RTO and near-zero RPO with traffic actively served from multiple AWS Regions simultaneously?**
+- A) Pilot Light
+- B) Warm Standby
+- C) Backup and Restore
+- D) Multi-Site Active/Active
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **D) Multi-Site Active/Active**  
+- **Why it's correct:** Multi-Site Active/Active runs full-scale production environments in multiple regions simultaneously, routing global traffic via Route 53 with real-time bidirectional data synchronization (e.g. DynamoDB Global Tables).
+</details>

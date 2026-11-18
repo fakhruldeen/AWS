@@ -159,3 +159,148 @@ flowchart TD
 * Blueprint: [Diagram 04: Enterprise RAG Ingestion and Retrieval Flow](../diagrams/Diagram_04_Enterprise_RAG_Ingestion_and_Retrieval_Flow.md)
 * Blueprint: [Diagram 06: Model Customization Spectrum](../diagrams/Diagram_06_Model_Customization_Spectrum_Prompt_to_Pretraining.md)
 * Lab: [Lab 03: Enterprise RAG with Bedrock Knowledge Bases](../labs/Lab_03_Enterprise_RAG_with_Bedrock_Knowledge_Bases_and_OpenSearch_Serverless.md)
+---
+
+## 📝 Post-Domain 3 Question Simulation & Retention Check
+
+Test your mastery of Domain 3 with these 10 exam-style practice questions:
+
+### Question 1
+**Which fully managed AWS service provides a single unified API to access leading foundation models from Anthropic, Meta, Mistral, Cohere, AI21 Labs, Stability AI, and Amazon without managing servers?**
+- A) Amazon SageMaker Canvas
+- B) Amazon Bedrock
+- C) AWS Lambda
+- D) Amazon Rekognition
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Amazon Bedrock**  
+- **Why it's correct:** Amazon Bedrock is the serverless foundation model hub on AWS, giving developers seamless API access to models like Claude 3.5 Sonnet, Llama 3, and Titan Text.
+</details>
+
+### Question 2
+**A healthcare company wants an AI assistant to answer patient questions based on constantly updated hospital clinical guidelines stored as PDFs in an Amazon S3 bucket. The answers must cite exact document page numbers and cannot hallucinate. Which architecture is best suited?**
+- A) Pre-training a new LLM from scratch
+- B) Retrieval Augmented Generation (RAG) using Amazon Bedrock Knowledge Bases
+- C) Full parameter fine-tuning on a GPU cluster
+- D) Hardcoding policies into Python regex scripts
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Retrieval Augmented Generation (RAG) using Amazon Bedrock Knowledge Bases**  
+- **Why it's correct:** RAG dynamically retrieves authoritative context from external vector knowledge stores (S3 PDFs converted to embeddings) at query time, grounding LLM generation in factual corporate data and providing source citations without retraining.
+</details>
+
+### Question 3
+**How does Parameter-Efficient Fine-Tuning (PEFT), specifically Low-Rank Adaptation (LoRA), differ from Full Fine-Tuning?**
+- A) LoRA trains all billions of model weights from random initialization.
+- B) LoRA freezes the original pre-trained model weights and trains a small set of low-rank adapter matrices (< 1% of parameters), reducing GPU memory and preventing catastrophic forgetting.
+- C) LoRA converts text models into image generation models.
+- D) LoRA is only used during data preparation.
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) LoRA freezes the original pre-trained model weights and trains a small set of low-rank adapter matrices (< 1% of parameters), reducing GPU memory and preventing catastrophic forgetting.**  
+- **Why it's correct:** LoRA updates $W = W_0 + B 	imes A$, training only low-rank matrices $A$ and $B$, which drastically slashes VRAM requirements and compute costs while preserving generalized reasoning.
+</details>
+
+### Question 4
+**Which feature of Amazon Bedrock automates the end-to-end RAG workflow including document chunking, embedding generation, indexing into OpenSearch Serverless, and generating grounded responses with citations?**
+- A) Amazon Bedrock Agents
+- B) Amazon Bedrock Knowledge Bases
+- C) Amazon Bedrock Guardrails
+- D) Amazon Bedrock Model Evaluation
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Amazon Bedrock Knowledge Bases**  
+- **Why it's correct:** Bedrock Knowledge Bases provides turnkey managed RAG, integrating directly with S3 and vector stores to execute chunking, embedding, vector search, and augmented generation.
+</details>
+
+### Question 5
+**An enterprise needs an autonomous AI system that can interpret multi-step customer inquiries, determine necessary API calls, query an external database via AWS Lambda, and email a confirmation to the customer. Which service fulfills this?**
+- A) Amazon Bedrock Agents
+- B) Amazon Polly
+- C) AWS Glue
+- D) Amazon Comprehend
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **A) Amazon Bedrock Agents**  
+- **Why it's correct:** Amazon Bedrock Agents utilizes the ReAct framework to break user requests into logical steps, dynamically invoking Action Groups (OpenAPI schemas executed via AWS Lambda) and referencing Knowledge Bases.
+</details>
+
+### Question 6
+**When deploying a fine-tuned custom model on Amazon Bedrock, which purchasing option is required?**
+- A) On-Demand Pay-per-token
+- B) Provisioned Throughput (committed model units)
+- C) Spot Instances
+- D) Free Tier
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Provisioned Throughput (committed model units)**  
+- **Why it's correct:** Custom fine-tuned models on Amazon Bedrock require Provisioned Throughput to dedicate dedicated model units (purchased in 1-month or 6-month commitments) to guarantee consistent low-latency capacity.
+</details>
+
+### Question 7
+**Which purchasing option on Amazon Bedrock allows processing massive volumes of non-real-time text summarization prompts stored in Amazon S3 at a 50% discount compared to On-Demand pricing?**
+- A) Spot Inference
+- B) Batch Inference
+- C) Provisioned Throughput
+- D) Savings Plans
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Batch Inference**  
+- **Why it's correct:** Bedrock Batch Inference processes bulk inputs asynchronously from S3, writing results back to S3 at half the price of standard On-Demand API invocations.
+</details>
+
+### Question 8
+**Which generative AI assistant connects to 40+ enterprise repositories (SharePoint, Salesforce, Jira, Google Drive) and answers employee questions while strictly enforcing existing document-level access permissions?**
+- A) Amazon Q Developer
+- B) Amazon Q Business
+- C) Amazon Kendra
+- D) AWS PartyRock
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Amazon Q Business**  
+- **Why it's correct:** Amazon Q Business is an enterprise GenAI assistant that integrates with corporate identity providers via IAM Identity Center, strictly adhering to source document Access Control Lists (ACLs).
+</details>
+
+### Question 9
+**Which developer tool assists software engineers with real-time AI code completion, automated unit test generation, security vulnerability scanning, and automated Java version upgrades?**
+- A) Amazon Q Business
+- B) Amazon Q Developer
+- C) Amazon Bedrock Agents
+- D) AWS Cloud9
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Amazon Q Developer**  
+- **Why it's correct:** Amazon Q Developer (formerly CodeWhisperer) is a generative AI assistant for software development in IDEs and the AWS Console, offering code generation, security remediation, and code transformation.
+</details>
+
+### Question 10
+**What is the primary danger when performing full fine-tuning of an LLM on a small, narrow domain dataset without regularizing the base model weights?**
+- A) Vanishing gradients
+- B) Catastrophic Forgetting
+- C) Inverted embeddings
+- D) Model Inversion
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Catastrophic Forgetting**  
+- **Why it's correct:** Catastrophic Forgetting occurs when fine-tuning drastically alters base model weights, causing the model to lose its general linguistic knowledge, common sense reasoning, or language abilities.
+</details>

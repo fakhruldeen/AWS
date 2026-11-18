@@ -198,3 +198,156 @@ flowchart TD
 * Next: [Domain 2: Fundamentals of Generative AI](./02_Domain_2_Fundamentals_of_Generative_AI.md)
 * Blueprint: [Diagram 01: Traditional ML vs GenAI Lifecycle](../diagrams/Diagram_01_Traditional_ML_vs_GenAI_Lifecycle.md)
 * Knowledge Check: [Module 01: AI Foundations Knowledge Check](../knowledge_checks/Module_01_AI_Foundations_Knowledge_Check.md)
+---
+
+## 📝 Post-Domain 1 Question Simulation & Retention Check
+
+Test your mastery of Domain 1 with these 10 exam-style practice questions:
+
+### Question 1
+**Which machine learning paradigm is used when training an algorithm on input features paired with known historical ground-truth target labels to predict continuous numeric outcomes?**
+- A) Unsupervised Learning - Clustering
+- B) Supervised Learning - Regression
+- C) Reinforcement Learning
+- D) Supervised Learning - Classification
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Supervised Learning - Regression**  
+- **Why it's correct:** Supervised learning uses labeled pairs $(X, Y)$. When the target $Y$ is a continuous numerical value (e.g., house price, temperature, stock value), the task is **Regression**. If $Y$ were categorical (e.g., fraud/no fraud), it would be **Classification**.
+- **Distractor Analysis:**
+  - *A is incorrect:* Clustering is unsupervised (no labels).
+  - *C is incorrect:* Reinforcement learning uses agents, states, and reward signals.
+  - *D is incorrect:* Classification predicts discrete categorical labels, not continuous numeric values.
+</details>
+
+### Question 2
+**A bank is building a credit card fraud detection model where only 0.1% of transactions are fraudulent. The data science team trains a model that achieves 99.9% accuracy, but investigation reveals the model predicted "Not Fraud" for every single transaction. Which metric should the team optimize instead of accuracy?**
+- A) Mean Squared Error (MSE)
+- B) Recall (Sensitivity)
+- C) R-Squared ($R^2$)
+- D) Latency
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Recall (Sensitivity)**  
+- **Why it's correct:** Accuracy is misleading on heavily imbalanced datasets. Recall measures the percentage of actual fraudulent transactions caught out of all true fraud cases: $rac{TP}{TP + FN}$. Maximizing recall minimizes catastrophic False Negatives.
+- **Distractor Analysis:**
+  - *A & C are incorrect:* MSE and $R^2$ are regression metrics, not classification metrics.
+</details>
+
+### Question 3
+**An online retailer wants to automatically segment customer purchase histories into distinct buyer personas without defining pre-existing demographic rules or labels. Which technique should they employ?**
+- A) Logistic Regression
+- B) K-Means Clustering
+- C) Linear Regression
+- D) Reinforcement Learning
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) K-Means Clustering**  
+- **Why it's correct:** K-Means is an unsupervised clustering algorithm that groups unlabeled data points together based on geometric feature similarity in vector space.
+</details>
+
+### Question 4
+**A deployed machine learning model begins experiencing degraded prediction accuracy because consumer spending habits drastically shifted following an economic crisis, changing the relationship between customer features and purchase frequency. What is this phenomenon called?**
+- A) Data Poisoning
+- B) Concept Drift
+- C) Overfitting
+- D) Gradient Descent
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Concept Drift**  
+- **Why it's correct:** Concept Drift occurs when the underlying statistical relationship between the input features ($X$) and the target output ($Y$) changes fundamentally over time. (Data Drift, by contrast, is a shift only in the distribution of $X$).
+</details>
+
+### Question 5
+**Which service allows business analysts with no programming or data science background to build predictive machine learning models, prepare data visually, and generate predictions via a point-and-click graphical interface?**
+- A) Amazon SageMaker Studio
+- B) Amazon SageMaker Canvas
+- C) AWS Deep Learning AMIs
+- D) Amazon Bedrock
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Amazon SageMaker Canvas**  
+- **Why it's correct:** SageMaker Canvas is a visual, no-code AutoML workspace that allows non-technical business users to build classification, regression, and forecasting models without writing code.
+</details>
+
+### Question 6
+**A company needs to extract structured table data, key-value form pairs, and printed/handwritten text from thousands of scanned PDF tax forms and receipts. Which service is purpose-built for this task?**
+- A) Amazon Rekognition
+- B) Amazon Textract
+- C) Amazon Comprehend
+- D) Amazon Translate
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Amazon Textract**  
+- **Why it's correct:** Amazon Textract uses machine learning to automatically extract printed and handwritten text, form fields, and structured tables from scanned documents and PDFs without manual templating.
+- **Distractor Analysis:**
+  - *A is incorrect:* Rekognition is for computer vision in general images/videos (faces, objects).
+</details>
+
+### Question 7
+**Which AWS service analyzes customer support tickets and product reviews to automatically determine overall sentiment (positive, negative, neutral) and extract key entities like company names and locations?**
+- A) Amazon Transcribe
+- B) Amazon Comprehend
+- C) Amazon Polly
+- D) Amazon Lex
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Amazon Comprehend**  
+- **Why it's correct:** Amazon Comprehend is an analytical Natural Language Processing (NLP) service that extracts key phrases, entities, language, and customer sentiment.
+</details>
+
+### Question 8
+**An autonomous vehicle simulation uses trial-and-error exploration where a software agent receives positive numerical rewards for staying in lane and penalties for collisions. Which learning paradigm is this?**
+- A) Supervised Learning
+- B) Unsupervised Learning
+- C) Reinforcement Learning
+- D) Self-Supervised Learning
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **C) Reinforcement Learning**  
+- **Why it's correct:** Reinforcement learning revolves around an agent taking actions in an environment to maximize cumulative reward through exploration and exploitation.
+</details>
+
+### Question 9
+**What is the primary role of the Validation dataset during the Machine Learning development lifecycle?**
+- A) To train the initial weights of the neural network
+- B) To tune hyperparameters and detect overfitting during the training process
+- C) To run final blind inference after model production deployment
+- D) To serve as an immutable regulatory audit backup
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) To tune hyperparameters and detect overfitting during the training process**  
+- **Why it's correct:** In the standard Train/Validation/Test split (e.g. 70/15/15), the training set fits model weights; the validation set evaluates model performance during training iterations to guide hyperparameter tuning and prevent overfitting; the test set provides an unbiased final evaluation on unseen data.
+</details>
+
+### Question 10
+**Which regression metric calculates the square root of the average squared differences between predicted values and actual values, penalizing large outlier errors heavily while returning the metric to the original target units?**
+- A) Mean Absolute Error (MAE)
+- B) Root Mean Squared Error (RMSE)
+- C) F1-Score
+- D) Area Under the Curve (AUC)
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Root Mean Squared Error (RMSE)**  
+- **Why it's correct:** RMSE squares errors (heavily penalizing large misses), averages them, and takes the square root, returning the error to the same dimensional units as the target variable ($Y$).
+</details>

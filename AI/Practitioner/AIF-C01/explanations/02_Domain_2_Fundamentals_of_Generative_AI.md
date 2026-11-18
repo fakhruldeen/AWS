@@ -153,3 +153,148 @@ When invoking a Foundation Model via the Amazon Bedrock API (`InvokeModel` or `C
 * Blueprint: [Diagram 02: Transformer Architecture and Tokenization](../diagrams/Diagram_02_Transformer_Architecture_and_Tokenization.md)
 * Blueprint: [Diagram 03: Amazon Bedrock Serverless Topology and Nova Models](../diagrams/Diagram_03_Amazon_Bedrock_Serverless_Topology_and_Nova_Models.md)
 * Lab: [Lab 01: Amazon Bedrock Model Access, Playgrounds & Prompt Engineering](../labs/Lab_01_Amazon_Bedrock_Model_Access_Playgrounds_and_Prompt_Engineering.md)
+---
+
+## 📝 Post-Domain 2 Question Simulation & Retention Check
+
+Test your mastery of Domain 2 with these 10 exam-style practice questions:
+
+### Question 1
+**How does Generative AI differ fundamentally from Traditional / Discriminative Machine Learning?**
+- A) Discriminative AI creates novel images, while Generative AI only processes tabular numbers.
+- B) Discriminative AI learns decision boundaries to classify or predict labels ($P(Y|X)$), whereas Generative AI models data distributions to synthesize new, original content ($P(X)$ or $P(X, Y)$).
+- C) Discriminative AI requires GPUs; Generative AI runs strictly on CPUs.
+- D) Generative AI does not use deep learning.
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Discriminative AI learns decision boundaries to classify or predict labels ($P(Y|X)$), whereas Generative AI models data distributions to synthesize new, original content ($P(X)$ or $P(X, Y)$).**  
+- **Why it's correct:** Discriminative models separate data into classes (e.g. spam/ham), while generative models learn the underlying probability distribution of training data to generate plausible new samples.
+</details>
+
+### Question 2
+**Which revolutionary architectural mechanism enables Transformer models to process all tokens in a sequence in parallel and compute contextual relevance between words regardless of distance?**
+- A) Convolutional Pooling
+- B) Self-Attention
+- C) Recurrent Hidden State Looping
+- D) Bag of Words
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Self-Attention**  
+- **Why it's correct:** Introduced in *"Attention Is All You Need"* (2017), the Multi-Head Self-Attention mechanism allows every token in an input to attend to all other tokens simultaneously using Query, Key, and Value matrices.
+</details>
+
+### Question 3
+**A customer service chatbot needs to answer technical software documentation questions with factual accuracy, high determinism, and minimal hallucination. Which inference parameter adjustment is most appropriate?**
+- A) Increase Temperature to 1.5
+- B) Decrease Temperature to 0.0 or 0.2
+- C) Increase Top-K to 500
+- D) Set Max Generation Length to 10
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Decrease Temperature to 0.0 or 0.2**  
+- **Why it's correct:** Lower temperature reduces randomness in token selection, forcing the model to greedily choose the highest-probability, most factual tokens, which minimizes creative embellishments and hallucinations.
+</details>
+
+### Question 4
+**What does the Top-P (Nucleus Sampling) parameter control during foundation model inference?**
+- A) The maximum number of tokens generated before stopping
+- B) The cumulative probability threshold that dynamically limits the pool of candidate next tokens
+- C) The cost per token billed by AWS Bedrock
+- D) The learning rate during fine-tuning
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) The cumulative probability threshold that dynamically limits the pool of candidate next tokens**  
+- **Why it's correct:** Top-P pools the top candidate tokens whose cumulative softmax probability sums to $P$ (e.g. 0.90), dynamically expanding or contracting the candidate pool depending on model confidence.
+</details>
+
+### Question 5
+**Which prompt engineering technique provides the foundation model with several input-output demonstration examples within the prompt before asking it to solve the target task?**
+- A) Zero-Shot Prompting
+- B) Few-Shot Prompting
+- C) Chain-of-Thought Prompting
+- D) Prompt Injection
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Few-Shot Prompting**  
+- **Why it's correct:** Few-shot prompting provides 2 to 5 exemplary demonstration pairs (input -> output) in-context, teaching the model desired formatting, style, and task constraints without modifying model weights.
+</details>
+
+### Question 6
+**An architect prompts a foundation model: "Think step-by-step to calculate the total shipping cost and explain each calculation before providing the final answer." Which prompt engineering technique is this?**
+- A) Directional Stimulus Prompting
+- B) Chain-of-Thought (CoT) Prompting
+- C) Least-to-Most Prompting
+- D) Fine-Tuning
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Chain-of-Thought (CoT) Prompting**  
+- **Why it's correct:** Chain-of-Thought prompting encourages the model to break complex reasoning, mathematical, or multi-step deduction problems into intermediate logical steps before generating the final answer.
+</details>
+
+### Question 7
+**What is an "Emergent Capability" in Large Language Models?**
+- A) An ability that is explicitly programmed into the software by human developers
+- B) A capability (such as multi-step arithmetic, reasoning, or code debugging) that appears spontaneously as model scale crosses certain parameter and compute thresholds
+- C) The ability to connect directly to the internet without APIs
+- D) A technique for compressing models into 8-bit precision
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) A capability (such as multi-step arithmetic, reasoning, or code debugging) that appears spontaneously as model scale crosses certain parameter and compute thresholds**  
+- **Why it's correct:** Emergent capabilities are abilities that do not exist in small models but materialize sharply in foundation models once scale (parameters, dataset size, training compute) exceeds a critical threshold.
+</details>
+
+### Question 8
+**Which evaluation metric evaluates automated text summarization by calculating the recall of n-grams (unigrams, bigrams, longest common subsequences) between candidate summaries and reference human summaries?**
+- A) BLEU
+- B) ROUGE
+- C) Perplexity
+- D) Mean Absolute Error
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) ROUGE**  
+- **Why it's correct:** ROUGE (Recall-Oriented Understudy for Gisting Evaluation) is the standard metric for evaluating summarization quality by measuring how many words/phrases from reference human summaries appear in the model summary.
+</details>
+
+### Question 9
+**Which metric measures the quality of machine translation by computing n-gram precision against expert human translations and applying a brevity penalty for short sentences?**
+- A) ROUGE
+- B) BLEU
+- C) F1-Score
+- D) Perplexity
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) BLEU**  
+- **Why it's correct:** BLEU (Bilingual Evaluation Understudy) evaluates machine translation by measuring n-gram precision against reference translations.
+</details>
+
+### Question 10
+**Which free, web-based playground powered by Amazon Bedrock allows students, beginners, and educators to create, experiment with, and remix generative AI applications using plain English without requiring an AWS account?**
+- A) Amazon SageMaker Studio Lab
+- B) AWS PartyRock
+- C) Amazon Q Developer
+- D) Amazon Bedrock Console
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) AWS PartyRock**  
+- **Why it's correct:** AWS PartyRock (partyrock.aws) is a no-code generative AI app-building playground powered by Amazon Bedrock that requires no AWS account or credit card.
+</details>

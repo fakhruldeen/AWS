@@ -150,3 +150,87 @@ flowchart LR
 | *"Purchasing Compute Savings Plans for predictable workloads"* | **Cost Optimization** |
 | *"Selecting AWS Graviton3 instances to lower carbon emissions"* | **Sustainability** |
 | *"Setting up S3 Lifecycle rules to delete unneeded test datasets"* | **Sustainability** & **Cost Optimization** |
+---
+
+## 7. Post-Topic Question Simulation & Retention Check
+
+Test your understanding of the AWS Well-Architected Framework with these 5 exam-style questions:
+
+### Question 1
+**An organization wants to evaluate its cloud workload against AWS architectural best practices and generate remediation guidance. Which AWS tool should they use?**
+- A) AWS Trusted Advisor
+- B) AWS Well-Architected Tool
+- C) AWS Systems Manager
+- D) AWS Compute Optimizer
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) AWS Well-Architected Tool**  
+- **Why it's correct:** The AWS Well-Architected Tool is a free service in the management console that guides teams through structured questions based on the 6 Pillars and produces an actionable milestone improvement plan.
+- **Distractor Analysis:**
+  - *A is incorrect:* Trusted Advisor performs automated checks against active infrastructure, but doesn't conduct structured architectural reviews.
+  - *D is incorrect:* Compute Optimizer uses ML to recommend rightsizing instance types.
+</details>
+
+### Question 2
+**Which pillar of the AWS Well-Architected Framework focuses on minimizing the environmental impact of running cloud workloads through rightsizing and efficient resource utilization?**
+- A) Operational Excellence
+- B) Sustainability
+- C) Performance Efficiency
+- D) Reliability
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Sustainability**  
+- **Why it's correct:** The Sustainability Pillar (introduced as the 6th pillar) focuses on understanding environmental impacts, maximizing hardware utilization, reducing idle capacity, and adopting energy-efficient chips (e.g. AWS Graviton).
+- **Distractor Analysis:**
+  - *A is incorrect:* Operational Excellence focuses on running and monitoring systems to deliver business value.
+  - *C is incorrect:* Performance Efficiency focuses on using computing resources efficiently to meet requirements.
+</details>
+
+### Question 3
+**A company implements Infrastructure as Code (IaC) using AWS CloudFormation and automated CI/CD deployment pipelines to release small, frequent, and reversible changes. Which Well-Architected Pillar does this best practice represent?**
+- A) Security Pillar
+- B) Operational Excellence Pillar
+- C) Cost Optimization Pillar
+- D) Sustainability Pillar
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Operational Excellence Pillar**  
+- **Why it's correct:** A primary design principle of the Operational Excellence Pillar is *"Perform operations as code"* and *"Make frequent, small, reversible changes"* so that issues can be detected and rolled back quickly.
+</details>
+
+### Question 4
+**Which design principle is central to the Reliability Pillar of the Well-Architected Framework?**
+- A) Stop spending money on undifferentiated heavy lifting
+- B) Automatically recover from failure
+- C) Enable traceability across all API calls
+- D) Democratize advanced technologies
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Automatically recover from failure**  
+- **Why it's correct:** The Reliability Pillar advocates designing systems that monitor Key Performance Indicators (KPIs) and trigger automated recovery (e.g. EC2 Auto Scaling, Route 53 health check failover, RDS Multi-AZ).
+- **Distractor Analysis:**
+  - *C is incorrect:* Traceability belongs to the Security Pillar.
+  - *D is incorrect:* Democratizing technology belongs to Performance Efficiency.
+</details>
+
+### Question 5
+**An architectural team chooses an Amazon S3 Intelligent-Tiering storage class and configures Amazon EC2 Auto Scaling based on CPU demand. Which Well-Architected Pillar are they directly optimizing?**
+- A) Security Pillar
+- B) Cost Optimization Pillar
+- C) Operational Excellence Pillar
+- D) Reliability Pillar
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Cost Optimization Pillar**  
+- **Why it's correct:** Cost Optimization focuses on avoiding unnecessary spending through right-sizing, eliminating idle resources, adopting consumption models, and measuring overall expenditure efficiency.
+</details>

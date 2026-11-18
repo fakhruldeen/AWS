@@ -137,3 +137,81 @@ flowchart LR
 | *"Which CAF perspective focuses on bridging staff cloud skill gaps and change management?"* | **People Perspective** |
 | *"Which CAF perspective focuses on ROI, business model innovation, and financial justification?"* | **Business Perspective** |
 | *"Single pane of glass to monitor migration progress across servers and databases"* | **AWS Migration Hub** |
+---
+
+## 7. Post-Topic Question Simulation & Retention Check
+
+Test your understanding of the AWS Cloud Adoption Framework (CAF) with these 5 exam-style questions:
+
+### Question 1
+**Which perspective of the AWS Cloud Adoption Framework (AWS CAF) focuses on building modern, scalable, and secure cloud architectures and migrating infrastructure workloads?**
+- A) People Perspective
+- B) Platform Perspective
+- C) Business Perspective
+- D) Governance Perspective
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Platform Perspective**  
+- **Why it's correct:** The Platform Perspective focuses on architectural blueprints, landing zones, data engineering, and modernizing cloud infrastructure.
+- **Distractor Analysis:**
+  - *A is incorrect:* People Perspective focuses on organizational culture, training, and change management.
+  - *C is incorrect:* Business Perspective focuses on business models, finance, and strategy.
+</details>
+
+### Question 2
+**An organization is bridging the skills gap of its IT engineering workforce by implementing comprehensive cloud certification programs and upskilling initiatives. Which AWS CAF perspective encompasses this effort?**
+- A) Security Perspective
+- B) Operations Perspective
+- C) People Perspective
+- D) Governance Perspective
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **C) People Perspective**  
+- **Why it's correct:** The People Perspective centers on organizational readiness, culture change, skill development, cloud literacy, and career transition roadmaps.
+</details>
+
+### Question 3
+**Managing program portfolios, measuring business outcomes, and aligning cloud financial management (FinOps) belongs to which AWS CAF perspective?**
+- A) Governance Perspective
+- B) Platform Perspective
+- C) Operations Perspective
+- D) Security Perspective
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **A) Governance Perspective**  
+- **Why it's correct:** The Governance Perspective focuses on orchestrating cloud initiatives, enterprise architecture governance, portfolio prioritization, and financial governance (FinOps).
+</details>
+
+### Question 4
+**Which AWS CAF perspective ensures that cloud workloads comply with regulatory standards (e.g., GDPR, HIPAA, PCI-DSS) and enforces access control and data protection policies?**
+- A) Operations Perspective
+- B) Security Perspective
+- C) People Perspective
+- D) Business Perspective
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Security Perspective**  
+- **Why it's correct:** The Security Perspective defines IAM access boundaries, data privacy, threat detection, compliance auditing, and incident response procedures.
+</details>
+
+### Question 5
+**What is the primary objective of the Operations Perspective within the AWS Cloud Adoption Framework?**
+- A) Negotiating enterprise software licensing agreements
+- B) Delivering and maintaining cloud services at agreed-upon business SLA levels, health monitoring, and incident management
+- C) Designing multi-region database replication schemas
+- D) Conducting human resource talent acquisition interviews
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Delivering and maintaining cloud services at agreed-upon business SLA levels, health monitoring, and incident management**  
+- **Why it's correct:** The Operations Perspective focuses on day-to-day service delivery, observability, event management, release management, and business continuity.
+</details>

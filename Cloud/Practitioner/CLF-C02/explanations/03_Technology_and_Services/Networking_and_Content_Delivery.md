@@ -70,3 +70,78 @@ flowchart LR
 | **[[AWS_Site_to_Site_VPN]]** | IPsec VPN Connection | Fast, secure encrypted tunnel over the public internet. |
 | **[[AWS_Direct_Connect]]** | Dedicated Private Connection | Bypasses public internet entirely; consistent throughput, lower data egress costs. |
 | **[[AWS_Client_VPN]]** | Managed Remote Access VPN | Secure OpenVPN client for remote employees accessing VPC resources. |
+---
+
+## 7. Post-Topic Question Simulation & Retention Check
+
+Test your understanding of AWS Networking & Content Delivery with these 5 exam-style questions:
+
+### Question 1
+**What is the key functional difference between a Security Group and a Network Access Control List (NACL) in Amazon VPC?**
+- A) Security Groups operate at the subnet level; NACLs operate at the instance level.
+- B) Security Groups are stateful and support only Allow rules; NACLs are stateless and support both Allow and Deny rules.
+- C) Security Groups inspect Layer 7 HTTP requests; NACLs inspect Layer 2 MAC addresses.
+- D) NACLs are attached directly to EC2 Elastic Network Interfaces (ENIs).
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Security Groups are stateful and support only Allow rules; NACLs are stateless and support both Allow and Deny rules.**  
+- **Why it's correct:** Security Groups act as instance-level stateful firewalls (return traffic is automatically allowed). Network ACLs act as subnet-level stateless firewalls requiring explicit inbound and outbound rules, and can explicitly deny specific IP addresses.
+</details>
+
+### Question 2
+**A backend database running on an Amazon EC2 instance in a private subnet needs to download security patches from the internet, but must not be publicly reachable from the outside world. Which component enables this?**
+- A) Internet Gateway (IGW)
+- B) NAT Gateway
+- C) Virtual Private Gateway (VGW)
+- D) VPC Peering connection
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) NAT Gateway**  
+- **Why it's correct:** A NAT Gateway deployed in a public subnet allows instances in private subnets to initiate outbound egress connections to the internet (e.g. for OS patches) while blocking unsolicited inbound connections from the internet.
+</details>
+
+### Question 3
+**Which service provides a highly available, scalable Domain Name System (DNS) web service that translates human-friendly names (e.g., `www.example.com`) into numeric IP addresses and supports health-check routing?**
+- A) Amazon Route 53
+- B) Amazon CloudFront
+- C) AWS Direct Connect
+- D) AWS Global Accelerator
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **A) Amazon Route 53**  
+- **Why it's correct:** Amazon Route 53 is AWS's authoritative global DNS service, offering latency-based routing, weighted routing, geo-routing, and automated endpoint health checking.
+</details>
+
+### Question 4
+**A global web application wants to reduce latency for international users accessing static images, video streams, and dynamic web content by caching assets at over 600 Edge Locations worldwide. Which service should they deploy?**
+- A) Amazon Route 53
+- B) Amazon CloudFront
+- C) AWS Transit Gateway
+- D) Amazon VPC Peering
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Amazon CloudFront**  
+- **Why it's correct:** Amazon CloudFront is a Content Delivery Network (CDN) service that caches static and streaming media at worldwide Edge Locations (Points of Presence) to deliver low latency and high transfer speeds.
+</details>
+
+### Question 5
+**An enterprise requires a dedicated, private physical network connection from its corporate data center to AWS that bypasses the public internet entirely to deliver consistent network performance and high throughput. Which service should they order?**
+- A) AWS Site-to-Site VPN
+- B) AWS Direct Connect
+- C) Amazon VPC Peering
+- D) AWS Client VPN
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) AWS Direct Connect**  
+- **Why it's correct:** AWS Direct Connect establishes a dedicated physical 1 Gbps, 10 Gbps, or 100 Gbps fiber-optic link between the customer's on-premises network and AWS, bypassing the public internet for consistent latency and reduced bandwidth costs.
+</details>

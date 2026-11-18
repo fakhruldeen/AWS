@@ -80,3 +80,81 @@ flowchart TD
 - [[Amazon_CloudFront|Amazon CloudFront]]
 - [[Amazon_VPC_and_Networking|Security Groups & Network ACLs]]
 - [[AWS_Security_Services|Security Overview Hub]]
+---
+
+## 7. Post-Topic Question Simulation & Retention Check
+
+Test your understanding of AWS Shield & WAF with these 5 exam-style questions:
+
+### Question 1
+**Which AWS service provides Layer 7 application protection against common web exploits such as SQL injection (SQLi) and Cross-Site Scripting (XSS)?**
+- A) AWS Shield Standard
+- B) AWS WAF (Web Application Firewall)
+- C) Network Access Control Lists (NACLs)
+- D) Amazon GuardDuty
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) AWS WAF (Web Application Firewall)**  
+- **Why it's correct:** AWS WAF inspects HTTP/HTTPS traffic at Layer 7, applying custom or managed rules to block SQL injection, XSS, rate-limit abusive IP addresses, and block bot scraping.
+- **Distractor Analysis:**
+  - *A is incorrect:* Shield Standard protects at Layer 3/4 against volumetric DDoS attacks.
+  - *C is incorrect:* NACLs filter at Layer 4 (IP/port).
+</details>
+
+### Question 2
+**What tier of AWS Shield is automatically enabled at no additional charge for all AWS customers globally?**
+- A) AWS Shield Enterprise
+- B) AWS Shield Standard
+- C) AWS Shield Advanced
+- D) AWS Shield Pro
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) AWS Shield Standard**  
+- **Why it's correct:** Shield Standard is free, transparent, and automatically active for all AWS services to defend against common network and transport layer (Layer 3/4) SYN floods and UDP reflection attacks.
+</details>
+
+### Question 3
+**An enterprise website is experiencing a massive Distributed Denial of Service (DDoS) attack. The company wants 24/7 direct access to the AWS Shield Response Team (SRT) and financial cost protection against scaling spikes during attacks. Which service should they subscribe to?**
+- A) AWS WAF Managed Rules
+- B) AWS Shield Advanced
+- C) AWS Network Firewall
+- D) Amazon Inspector
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) AWS Shield Advanced**  
+- **Why it's correct:** Shield Advanced ($3,000/month) includes 24/7 SRT proactive engagement, advanced DDoS mitigation across CloudFront/Route53/ALB, and "DDoS cost protection" to reimburse scaling costs from attacks.
+</details>
+
+### Question 4
+**On which AWS resources can AWS WAF Web ACLs be directly attached?**
+- A) Amazon S3 Buckets and AWS Lambda functions directly
+- B) Application Load Balancer (ALB), Amazon CloudFront, and Amazon API Gateway
+- C) Amazon EC2 instances and Amazon EBS volumes
+- D) AWS Storage Gateway and Direct Connect
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Application Load Balancer (ALB), Amazon CloudFront, and Amazon API Gateway**  
+- **Why it's correct:** AWS WAF deploys at Layer 7 ingress points: ALB, CloudFront distributions, Amazon API Gateway REST APIs, and AWS AppSync GraphQL endpoints.
+</details>
+
+### Question 5
+**A company wants to block web traffic originating from specific sanctioned geographic countries. Which feature in AWS WAF enables this?**
+- A) Geographic Match Rule (Geo-blocking)
+- B) Rate-based rules
+- C) SQL injection match rules
+- D) AWS Shield Standard
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **A) Geographic Match Rule (Geo-blocking)**  
+- **Why it's correct:** AWS WAF Geo-match condition inspects the country of origin of incoming requests based on client IP addresses and allows administrators to block or allow designated countries.
+</details>

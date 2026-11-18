@@ -74,3 +74,78 @@ flowchart TD
 | **[[Amazon_MemoryDB]]** | In-Memory Database for Redis | Primary transactional database, sub-millisecond reads, single-digit ms writes. |
 | **[[Amazon_Specialty_Databases]]** | Purpose-Built Specialty DBs | DocumentDB, Neptune, QLDB, and Timestream details. |
 | **[[AWS_Database_Migration_Service_DMS]]** | Database Migration Service | CDC (Change Data Capture), homogenous and heterogeneous migrations. |
+---
+
+## 7. Post-Topic Question Simulation & Retention Check
+
+Test your understanding of AWS Database Services with these 5 exam-style questions:
+
+### Question 1
+**Which AWS database service provides a fully managed NoSQL key-value and document database engine capable of delivering single-digit millisecond latency at any scale with automated multi-AZ replication?**
+- A) Amazon RDS
+- B) Amazon DynamoDB
+- C) Amazon Redshift
+- D) Amazon DocumentDB
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Amazon DynamoDB**  
+- **Why it's correct:** Amazon DynamoDB is a serverless NoSQL database engineered for high-throughput, millisecond performance with automatic horizontal scaling, built-in security, and Global Tables for multi-region replication.
+</details>
+
+### Question 2
+**A company is running an existing MySQL database on-premises and wants to migrate to an enterprise cloud-native relational database that provides up to 5 times the throughput of standard MySQL, self-healing storage up to 128 TiB, and up to 15 Read Replicas. Which service should they choose?**
+- A) Amazon DynamoDB
+- B) Amazon Aurora
+- C) Amazon Redshift
+- D) Amazon Neptune
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Amazon Aurora**  
+- **Why it's correct:** Amazon Aurora is AWS's proprietary cloud-native relational database engine compatible with MySQL and PostgreSQL, delivering 3-5x the throughput of standard open-source engines with a distributed storage system replicating 6 copies across 3 AZs.
+</details>
+
+### Question 3
+**An e-commerce website experiences heavy read traffic on its Amazon RDS database during flash sales. How can the architecture be modified to reduce database read latency to microseconds without re-architecting the database?**
+- A) Upgrade the EC2 web instances
+- B) Add an Amazon ElastiCache in-memory caching layer in front of the database
+- C) Convert the database to Amazon Redshift
+- D) Enable S3 Versioning
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Add an Amazon ElastiCache in-memory caching layer in front of the database**  
+- **Why it's correct:** Amazon ElastiCache (Redis or Memcached) caches frequent query results in memory, serving responses with sub-millisecond latency and offloading read pressure from the backend database.
+</details>
+
+### Question 4
+**Which database service is specifically optimized for Online Analytical Processing (OLAP), complex SQL queries across petabytes of historical structured business intelligence data, and columnar storage?**
+- A) Amazon RDS for PostgreSQL
+- B) Amazon Redshift
+- C) Amazon DynamoDB
+- D) Amazon DocumentDB
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Amazon Redshift**  
+- **Why it's correct:** Amazon Redshift is a petabyte-scale cloud data warehouse designed for OLAP workloads, reporting, and BI analytics using columnar storage and massively parallel processing (MPP).
+</details>
+
+### Question 5
+**Which purpose-built database service is designed specifically for storing and navigating highly connected relationship data, such as social graphs, fraud rings, and recommendation engines?**
+- A) Amazon Neptune
+- B) Amazon Timestream
+- C) Amazon DocumentDB
+- D) Amazon RDS
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **A) Amazon Neptune**  
+- **Why it's correct:** Amazon Neptune is a purpose-built graph database supporting property graph (Apache TinkerPop Gremlin) and W3C RDF (SPARQL) queries for mapping complex interconnected relationships.
+</details>

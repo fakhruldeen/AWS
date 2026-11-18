@@ -77,3 +77,80 @@ flowchart LR
 > - *What is the response time for Business-Critical System Down?* **< 15 minutes** (Enterprise Support only; 30 min for Enterprise On-Ramp).
 > - *Which plan includes a designated Technical Account Manager (TAM)?* **Enterprise Support**.
 > - *Can you open technical support cases on the Basic Plan?* **NO**. Only billing, account management, and service quota requests.
+---
+
+## 7. Post-Topic Question Simulation & Retention Check
+
+Test your understanding of AWS Support Plans & Marketplace with these 5 exam-style questions:
+
+### Question 1
+**Which AWS Support plan is the lowest-tier plan that provides 24/7 access to Cloud Support Engineers via phone, email, and chat for an unlimited number of contacts?**
+- A) Developer Support
+- B) Business Support
+- C) Basic Support
+- D) Enterprise On-Ramp
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Business Support**  
+- **Why it's correct:** The Business Support plan is the entry tier for production workloads, offering 24/7 phone/chat/email technical support with 1-hour response times for production system outages and full access to all AWS Trusted Advisor checks.
+- **Distractor Analysis:**
+  - *A is incorrect:* Developer Support provides business-hours email support only for a single primary contact.
+</details>
+
+### Question 2
+**An enterprise running mission-critical workloads on AWS requires a designated Technical Account Manager (TAM) to provide proactive architectural guidance and operational reviews. Which support plan must they purchase?**
+- A) Business Support
+- B) Enterprise Support
+- C) Developer Support
+- D) Basic Support
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Enterprise Support**  
+- **Why it's correct:** The Enterprise Support plan includes a dedicated Technical Account Manager (TAM), consultative architectural reviews, Infrastructure Event Management (IEM), and a 15-minute response SLA for business-critical outages.
+</details>
+
+### Question 3
+**What response time SLA does the AWS Enterprise Support plan guarantee for a "Business-Critical System Down" support case?**
+- A) Under 15 minutes
+- B) Under 1 hour
+- C) Under 4 hours
+- D) Under 24 hours
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **A) Under 15 minutes**  
+- **Why it's correct:** Enterprise Support provides a guaranteed response time of less than 15 minutes for business-critical outages (Enterprise On-Ramp guarantees < 30 minutes).
+</details>
+
+### Question 4
+**What is AWS Marketplace?**
+- A) A physical hardware store for purchasing AWS Snowball devices
+- B) A digital catalog featuring thousands of software listings from third-party independent software vendors (ISVs) that run on AWS with integrated billing
+- C) A retail website for purchasing Amazon consumer electronics
+- D) A forum for hiring freelance cloud consultants
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) A digital catalog featuring thousands of software listings from third-party independent software vendors (ISVs) that run on AWS with integrated billing**  
+- **Why it's correct:** AWS Marketplace is an online store where customers can find, test, buy, and deploy third-party software, AMIs, containers, and SaaS solutions with charges appearing directly on their AWS invoice.
+</details>
+
+### Question 5
+**Which AWS support tier includes full access to all 5 categories of AWS Trusted Advisor best-practice checks at the lowest cost?**
+- A) Developer Support
+- B) Business Support
+- C) Basic Support
+- D) AWS Free Tier
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Business Support**  
+- **Why it's correct:** While Basic and Developer plans only include the 7 core security and service quota checks, Business Support unlocks the full library of all Trusted Advisor checks across Cost Optimization, Security, Fault Tolerance, Performance, and Service Quotas.
+</details>

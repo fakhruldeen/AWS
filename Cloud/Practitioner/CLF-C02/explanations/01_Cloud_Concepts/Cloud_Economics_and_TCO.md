@@ -119,3 +119,96 @@ AWS provides flexible licensing models to accommodate enterprise software:
 | *"Customer wants to migrate existing Microsoft SQL Server licenses to EC2 to reduce costs"* | **Bring Your Own License (BYOL)** via **AWS License Manager** |
 | *"Is there a charge for uploading 50 TB of data from an on-prem server to Amazon S3?"* | **No (Inbound Data Transfer into AWS is always free)** |
 | *"Which costs are included in on-prem TCO that are eliminated when moving to AWS?"* | **Power, cooling, data center real estate, and hardware maintenance** |
+---
+
+## 7. Post-Topic Question Simulation & Retention Check
+
+Test your understanding of Cloud Economics and TCO with these 5 exam-style questions:
+
+### Question 1
+**An enterprise is evaluating moving its on-premises data center to AWS. Which financial benefit allows the company to replace large upfront hardware capital investments with ongoing pay-as-you-go operational expenses?**
+- A) Stopping guessing capacity
+- B) Trading capital expense for operational expense
+- C) Benefiting from massive economies of scale
+- D) Increasing speed and agility
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Trading capital expense for operational expense**  
+- **Why it's correct:** By moving to the cloud, organizations eliminate large upfront Capital Expenditures (CapEx) for physical servers, storage arrays, and data center facilities, replacing them with variable monthly Operational Expenditures (OpEx).
+- **Distractor Analysis:**
+  - *A is incorrect:* Stopping guessing capacity refers to elastic scaling, not the financial asset vs. operational cost model.
+  - *C is incorrect:* Economies of scale refer to AWS lowering unit costs as aggregate customer usage grows.
+  - *D is incorrect:* Speed and agility refer to provisioning resources in seconds instead of waiting weeks for procurement.
+- **Exam Trigger:** *"Replace upfront capital investments with pay-as-you-go"* -> **Trade CapEx for OpEx**.
+</details>
+
+### Question 2
+**Which of the following costs is an indirect Total Cost of Ownership (TCO) expense eliminated when migrating physical servers to Amazon EC2?**
+- A) Monthly outbound internet data transfer
+- B) Software development salaries
+- C) Data center cooling, electricity, and floor real estate
+- D) Application code bug fixes
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **C) Data center cooling, electricity, and floor real estate**  
+- **Why it's correct:** Running an on-premises data center involves extensive indirect physical overhead: HVAC chillers, electricity, raised floor space, and physical security guards. AWS manages 100% of these physical facilities.
+- **Distractor Analysis:**
+  - *A is incorrect:* Outbound internet data transfer (DTO) is an ongoing AWS operational cost.
+  - *B & D are incorrect:* Software engineering and bug fixing remain the customer's responsibility.
+</details>
+
+### Question 3
+**How does AWS pass operational efficiencies and purchasing advantages to customers as total global cloud usage grows?**
+- A) By mandating 3-year Enterprise Agreements for all users
+- B) Through regular, proactive price reductions driven by massive economies of scale
+- C) By charging higher rates for inbound data transfer
+- D) By requiring customer-managed virtualization hypervisors
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Through regular, proactive price reductions driven by massive economies of scale**  
+- **Why it's correct:** Because AWS aggregates usage across millions of customers, it achieves unprecedented purchasing power with hardware suppliers, continually driving down infrastructure costs and passing these savings to customers (over 130 price cuts).
+- **Distractor Analysis:**
+  - *A is incorrect:* On-Demand pricing requires no contracts or commitments.
+  - *C is incorrect:* Inbound data transfer into AWS is always free.
+  - *D is incorrect:* AWS manages the virtualization hypervisor (Nitro System).
+</details>
+
+### Question 4
+**A company uploads 20 TB of video files from an on-premises media studio into an Amazon S3 bucket located in the us-east-1 Region. How much will AWS charge for this data transfer?**
+- A) $0.09 per GB
+- B) $0.01 per GB
+- C) $0.00 (Inbound data transfer is completely free)
+- D) A flat fee based on bucket size
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **C) $0.00 (Inbound data transfer is completely free)**  
+- **Why it's correct:** Inbound data transfer into AWS from the internet across all AWS services is **always free of charge**.
+- **Distractor Analysis:**
+  - *A & B are incorrect:* Charges apply to outbound data transfer (egress to internet) or inter-AZ transfer, never inbound from the internet.
+</details>
+
+### Question 5
+**An enterprise has existing software licenses for Microsoft Windows Server and SQL Server with active Software Assurance. Which AWS program or tool helps the company run these licenses on AWS without paying twice?**
+- A) Consolidated Billing
+- B) Bring Your Own License (BYOL) managed via AWS License Manager
+- C) AWS Free Tier
+- D) AWS Cost Explorer
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Bring Your Own License (BYOL) managed via AWS License Manager**  
+- **Why it's correct:** BYOL allows organizations to migrate existing eligible enterprise software licenses to Amazon EC2 (often on Dedicated Hosts), while AWS License Manager tracks and enforces license usage to prevent compliance violations.
+- **Distractor Analysis:**
+  - *A is incorrect:* Consolidated Billing combines multi-account usage for volume discounts.
+  - *C is incorrect:* Free Tier provides limited free usage for new accounts.
+  - *D is incorrect:* Cost Explorer visualizes historical and forecasted costs.
+</details>

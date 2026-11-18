@@ -71,3 +71,78 @@ flowchart LR
 | **[[Amazon_EventBridge]]** | Serverless Event Bus | Default, Custom, and Partner Event Buses, declarative JSON pattern filtering. |
 | **[[AWS_Step_Functions]]** | Serverless Workflow Orchestrator | State machines, Amazon States Language (ASL), error handling, sagas. |
 | **[[Amazon_MQ]]** | Managed Message Broker | Apache ActiveMQ, RabbitMQ, legacy protocol migration (JMS, AMQP). |
+---
+
+## 7. Post-Topic Question Simulation & Retention Check
+
+Test your understanding of Application Integration & DevOps with these 5 exam-style questions:
+
+### Question 1
+**Which messaging service provides a fully managed, scalable message queuing service that allows asynchronous decoupling of distributed microservices?**
+- A) Amazon SNS
+- B) Amazon SQS
+- C) Amazon EventBridge
+- D) AWS Step Functions
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Amazon SQS**  
+- **Why it's correct:** Amazon Simple Queue Service (SQS) is a pull-based message queuing service that decouples producers from consumers, buffering messages until downstream worker nodes process them.
+</details>
+
+### Question 2
+**What is the primary difference between Amazon SQS and Amazon SNS?**
+- A) SQS uses a publish/subscribe (push) model; SNS uses a message queue (pull) model.
+- B) SQS is a message queue where consumers pull messages; SNS is a pub/sub messaging service that pushes messages simultaneously to multiple subscribers.
+- C) SQS only supports email notifications; SNS supports video streaming.
+- D) SQS requires physical server management; SNS is serverless.
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) SQS is a message queue where consumers pull messages; SNS is a pub/sub messaging service that pushes messages simultaneously to multiple subscribers.**  
+- **Why it's correct:** SQS buffers messages for individual consumers (1-to-1 asynchronous queue). SNS fans out messages to multiple subscribers (1-to-many publish/subscribe push to Lambda, SQS, email, SMS, HTTP).
+</details>
+
+### Question 3
+**Which service allows developers to model, provision, and version AWS infrastructure using declarative JSON or YAML templates as Infrastructure as Code (IaC)?**
+- A) AWS Elastic Beanstalk
+- B) AWS CloudFormation
+- C) AWS CodeDeploy
+- D) AWS OpsWorks
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) AWS CloudFormation**  
+- **Why it's correct:** AWS CloudFormation lets you treat your infrastructure as code, enabling repeatable, automated provisioning and updating of complete stacks of AWS resources.
+</details>
+
+### Question 4
+**Which Platform as a Service (PaaS) offering allows developers to upload application code (e.g., Java, Node.js, Python) while AWS automatically handles provisioning, load balancing, scaling, and health monitoring?**
+- A) Amazon EC2
+- B) AWS Elastic Beanstalk
+- C) AWS CodePipeline
+- D) AWS Lambda
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) AWS Elastic Beanstalk**  
+- **Why it's correct:** Elastic Beanstalk is AWS's PaaS solution for deploying web applications quickly without having to manually architect the underlying EC2, Auto Scaling, and ALB infrastructure.
+</details>
+
+### Question 5
+**Which service coordinates distributed microservices and serverless workflows into visual state machines, handling branching logic, retries, and timeouts?**
+- A) Amazon EventBridge
+- B) AWS Step Functions
+- C) Amazon SQS
+- D) AWS CodeBuild
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) AWS Step Functions**  
+- **Why it's correct:** AWS Step Functions is a low-code visual workflow orchestrator that sequences Lambda functions, ECS tasks, and AWS services into resilient state machines.
+</details>

@@ -145,3 +145,95 @@ graph TD
 | **Local Zone** | Urban metro area extension | Single-digit ms latency to urban centers. | Extend VPC subnets into designated Local Zones. |
 | **Wavelength Zone** | 5G telecom carrier network | Ultra-low latency for 5G mobile devices. | Deploy mobile app backends into carrier Wavelength subnets. |
 | **Outposts** | Customer on-prem data center | On-premises AWS hardware & data residency. | Managed by AWS; connected back to parent AWS Region. |
+---
+
+## 7. Post-Topic Question Simulation & Retention Check
+
+Test your understanding of AWS Global Infrastructure with these 5 exam-style questions:
+
+### Question 1
+**An architecture requires high availability and automatic failover if a natural disaster floods a single physical facility. How should the application be deployed within an AWS Region?**
+- A) Across multiple Edge Locations
+- B) Across multiple Availability Zones (Multi-AZ)
+- C) Inside a single Local Zone
+- D) In an AWS Outposts rack
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Across multiple Availability Zones (Multi-AZ)**  
+- **Why it's correct:** Each Availability Zone consists of one or more physically isolated data centers separated by a meaningful distance (tens of kilometers) on distinct floodplains and power grids. Deploying across Multi-AZ provides fault isolation against localized disasters.
+- **Distractor Analysis:**
+  - *A is incorrect:* Edge Locations cache static content (CloudFront); you cannot deploy compute instances in Edge Locations.
+  - *C is incorrect:* A Local Zone is an extension for single-digit ms latency to urban centers, not multi-AZ redundancy.
+  - *D is incorrect:* Outposts runs on-premises and does not provide multi-AZ cloud redundancy.
+</details>
+
+### Question 2
+**What is the fundamental architectural difference between an Availability Zone and an Edge Location?**
+- A) Edge Locations host EC2 instances, while Availability Zones host S3 buckets.
+- B) Availability Zones run compute and database workloads, while Edge Locations cache content closer to end users.
+- C) Edge Locations are connected only via the public internet.
+- D) Availability Zones are only located outside the United States.
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Availability Zones run compute and database workloads, while Edge Locations cache content closer to end users.**  
+- **Why it's correct:** AZs are regional clusters of data centers for primary compute and storage execution. Edge Locations (Points of Presence) cache data via Amazon CloudFront and Route 53 to reduce delivery latency globally.
+- **Distractor Analysis:**
+  - *A is incorrect:* EC2 instances cannot run in Edge Locations.
+  - *C is incorrect:* Edge Locations connect directly to AWS Regions over AWS's private high-speed global fiber backbone.
+</details>
+
+### Question 3
+**A hospital requires ultra-low latency (< 5ms) processing on a manufacturing plant floor and must store patient records on-site due to strict national data sovereignty laws. Which AWS solution fits this requirement?**
+- A) Amazon CloudFront
+- B) AWS Outposts
+- C) AWS Local Zones
+- D) AWS Wavelength
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) AWS Outposts**  
+- **Why it's correct:** AWS Outposts brings physical AWS hardware racks directly into the customer's on-premises facility, allowing local data processing and compliance with strict data residency mandates while being managed centrally by AWS.
+- **Distractor Analysis:**
+  - *A is incorrect:* CloudFront is a global CDN for caching web assets.
+  - *C is incorrect:* Local Zones are located in metropolitan centers managed by AWS, not on customer premises.
+  - *D is incorrect:* Wavelength is embedded inside 5G telecommunication networks.
+</details>
+
+### Question 4
+**Which AWS extension embeds AWS compute and storage directly within telecommunication providers' 5G networks to deliver single-digit millisecond latency to mobile devices?**
+- A) AWS Outposts
+- B) AWS Wavelength
+- C) AWS Direct Connect
+- D) AWS Transit Gateway
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) AWS Wavelength**  
+- **Why it's correct:** AWS Wavelength allows developers to build applications for 5G connected devices (autonomous vehicles, smart robotics, mobile gaming) by hosting compute inside carrier 5G networks, bypassing internet hops.
+- **Distractor Analysis:**
+  - *A is incorrect:* Outposts is customer on-premises.
+  - *C is incorrect:* Direct Connect is a dedicated private fiber link to AWS.
+  - *D is incorrect:* Transit Gateway connects VPCs and on-premises networks in a hub-and-spoke model.
+</details>
+
+### Question 5
+**What is the minimum number of Availability Zones contained within every AWS Region?**
+- A) Exactly 1
+- B) Minimum of 2 (typically 3 or more)
+- C) Exactly 5
+- D) 10 or more
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Minimum of 2 (typically 3 or more)**  
+- **Why it's correct:** Every AWS Region is composed of a minimum of two physically isolated Availability Zones (most have 3 or more) to ensure high-availability architectures can be designed within any region.
+- **Distractor Analysis:**
+  - *A is incorrect:* A single data center or single AZ cannot constitute an AWS Region.
+</details>

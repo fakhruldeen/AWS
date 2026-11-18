@@ -141,3 +141,89 @@ The **AWS Acceptable Use Policy** stipulates what customers **cannot do** when u
 | *"Who is responsible for physical facility certifications such as SOC 1/2/3, ISO 27001, and PCI DSS compliance of data centers?"* | **AWS** | AWS maintains physical data center compliance; audit reports are downloadable via **AWS Artifact**. |
 | *"A network administrator notices an external AWS IP address actively port scanning their corporate firewall. Who should they contact?"* | **AWS Abuse Team** | The AWS Abuse Team investigates unauthorized probing, hacking, and spam originating from AWS IPs. |
 | *"Which document outlines prohibited activities on AWS infrastructure, such as distributed denial of service (DDoS) and spamming?"* | **AWS Acceptable Use Policy** | The AUP specifies terms regarding prohibited network and content practices. |
+---
+
+## 7. Post-Topic Question Simulation & Retention Check
+
+Test your understanding of the AWS Shared Responsibility Model with these 5 exam-style questions:
+
+### Question 1
+**Under the AWS Shared Responsibility Model, which of the following is considered "Security OF the Cloud" and is the exclusive responsibility of AWS?**
+- A) Configuring IAM user password policies
+- B) Patching the operating system on an Amazon EC2 instance
+- C) Physical security of data centers and hardware disposal
+- D) Encrypting client-side application data before uploading to S3
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **C) Physical security of data centers and hardware disposal**  
+- **Why it's correct:** AWS is responsible for "Security OF the Cloud": physical facilities, server hardware, virtualization layer, power, cooling, and certified media destruction (NIST 800-88).
+- **Distractor Analysis:**
+  - *A, B, & D are incorrect:* These are customer responsibilities ("Security IN the Cloud"). The customer controls IAM, OS patching on EC2, and data encryption.
+</details>
+
+### Question 2
+**A company provisions an Amazon RDS for PostgreSQL database instance. Which security and maintenance task remains the customer's responsibility?**
+- A) Installing operating system security patches on the database host server
+- B) Replacing failed physical disks in the storage array
+- C) Managing database user accounts, permissions, and network firewall access (Security Groups)
+- D) Managing physical facility security
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **C) Managing database user accounts, permissions, and network firewall access (Security Groups)**  
+- **Why it's correct:** For managed PaaS database services like Amazon RDS, AWS manages host OS patching and disk maintenance, but the customer remains responsible for database credentials, user grants, schema design, and VPC Security Group firewall rules.
+- **Distractor Analysis:**
+  - *A & B are incorrect:* AWS automates OS patching and hardware replacement on RDS instances.
+</details>
+
+### Question 3
+**Which of the following is an example of a "Shared Control" under the Shared Responsibility Model?**
+- A) Physical data center perimeter fencing
+- B) Patch management
+- C) Customer IAM root user MFA setup
+- D) Amazon S3 bucket naming
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Patch management**  
+- **Why it's correct:** Patch management is a shared control: AWS is responsible for patching the physical infrastructure, hypervisor, and managed service runtimes (Lambda, RDS); the customer is responsible for patching guest operating systems and application code on IaaS (EC2).
+- **Distractor Analysis:**
+  - *A is incorrect:* Strictly AWS responsibility.
+  - *C & D are incorrect:* Strictly customer responsibility.
+</details>
+
+### Question 4
+**An application running on an Amazon EC2 instance is compromised due to an unpatched software vulnerability in the Linux guest operating system. Who is responsible for this failure?**
+- A) AWS, because they manage the cloud infrastructure
+- B) The customer, because guest OS patch management on EC2 is "Security IN the Cloud"
+- C) Both AWS and the customer equally
+- D) The third-party Linux distribution vendor
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) The customer, because guest OS patch management on EC2 is "Security IN the Cloud"**  
+- **Why it's correct:** Amazon EC2 is an Infrastructure as a Service (IaaS) offering. AWS provides the virtual machine, but the customer has root administrative control and is 100% responsible for patching and securing the guest OS.
+</details>
+
+### Question 5
+**Which AWS service provides on-demand access to AWS security and compliance reports (such as SOC 2 and ISO 27001 certifications) to prove AWS's adherence to "Security OF the Cloud"?**
+- A) AWS Trusted Advisor
+- B) AWS Artifact
+- C) Amazon Inspector
+- D) AWS CloudTrail
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) AWS Artifact**  
+- **Why it's correct:** AWS Artifact is the central portal for downloading AWS compliance documentation, independent third-party auditor reports, and Business Associate Agreements (BAAs).
+- **Distractor Analysis:**
+  - *A is incorrect:* Trusted Advisor provides real-time best practice recommendations.
+  - *C is incorrect:* Inspector scans EC2 and ECR container images for software vulnerabilities.
+  - *D is incorrect:* CloudTrail records API calls for account activity auditing.
+</details>

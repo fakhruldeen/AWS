@@ -80,3 +80,78 @@ flowchart LR
 | **[[AWS_Compute_Optimizer]]** | ML Resource Rightsizing | Identify over-provisioned and under-provisioned EC2, EBS, Lambda, Fargate. |
 | **[[AWS_Support_Plans]]** | Support Tier Comparison | Basic, Developer, Business, Enterprise; TAM, Concierge, response SLAs. |
 | **[[AWS_Marketplace]]** | Digital Software Catalog | 3rd-party AMIs and SaaS, consolidated monthly billing, Private Marketplace. |
+---
+
+## 7. Post-Topic Question Simulation & Retention Check
+
+Test your understanding of Pricing Models & Billing Tools with these 5 exam-style questions:
+
+### Question 1
+**Which AWS tool provides an interactive graphical interface allowing customers to visualize, understand, and forecast their AWS spending patterns over the past 12 months and project costs for the next 12 months?**
+- A) AWS Budgets
+- B) AWS Cost Explorer
+- C) AWS Pricing Calculator
+- D) AWS Billing Conductor
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) AWS Cost Explorer**  
+- **Why it's correct:** AWS Cost Explorer has an easy-to-use interface that lets you visualize, understand, and manage your AWS costs and usage over time, including customizable charts, filtering by tags, and 12-month future forecasting.
+</details>
+
+### Question 2
+**A financial manager wants to configure custom notifications that trigger an automated alert when monthly spending on Amazon EC2 exceeds $1,000 or when forecasted spending is predicted to exceed that limit. Which service should they configure?**
+- A) AWS Budgets
+- B) AWS Cost Explorer
+- C) AWS Trusted Advisor
+- D) Amazon CloudWatch
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **A) AWS Budgets**  
+- **Why it's correct:** AWS Budgets allows you to set custom budgets that track your cost or usage and alert you via email or SNS when you exceed (or are forecasted to exceed) your budgeted threshold.
+</details>
+
+### Question 3
+**Which pricing model offers the highest discount (up to 72%) on compute resources in exchange for a commitment to a consistent amount of usage (measured in $/hour) for a 1-year or 3-year period across EC2, Lambda, and Fargate?**
+- A) Standard Reserved Instances
+- B) Compute Savings Plans
+- C) Spot Instances
+- D) On-Demand Instances
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Compute Savings Plans**  
+- **Why it's correct:** Compute Savings Plans provide the greatest flexibility, automatically applying discounts of up to 72% across EC2 (regardless of family, OS, or Region), AWS Fargate, and AWS Lambda based on a committed $/hour spend.
+</details>
+
+### Question 4
+**What is the purpose of Cost Allocation Tags in AWS Billing?**
+- A) To automatically terminate resources that exceed a budget
+- B) To label and categorize AWS resources (e.g. by Department, Environment, or Project) to track and allocate costs on detailed billing reports
+- C) To encrypt data stored on S3
+- D) To restrict IAM users from launching expensive instances
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) To label and categorize AWS resources (e.g. by Department, Environment, or Project) to track and allocate costs on detailed billing reports**  
+- **Why it's correct:** Cost Allocation Tags are key-value labels assigned to AWS resources that appear in Cost Explorer and detailed billing reports, allowing finance teams to allocate expenses accurately to cost centers.
+</details>
+
+### Question 5
+**Which tool allows architects to estimate the cost of an architecture proposal before building or provisioning any resources on AWS?**
+- A) AWS Pricing Calculator
+- B) AWS Cost and Usage Report (CUR)
+- C) AWS Budgets
+- D) AWS License Manager
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **A) AWS Pricing Calculator**  
+- **Why it's correct:** The AWS Pricing Calculator is a web-based planning tool that allows you to model proposed cloud architectures and generate comprehensive monthly cost estimates without needing an AWS account.
+</details>

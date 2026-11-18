@@ -241,3 +241,78 @@ aws iam list-attached-role-policies --role-name LambdaExecutionRole
 | *"Identify which IAM permissions granted to a user have never been used in the past 90 days so they can be removed"* | **IAM Access Advisor** (Service Last Accessed Data) |
 | *"Identify which Amazon S3 buckets or KMS keys are accessible by external accounts or public internet users"* | **IAM Access Analyzer** |
 | *"Generate a comprehensive audit of all IAM users in an account showing password age and whether MFA is enabled"* | **IAM Credential Report** |
+---
+
+## 7. Post-Topic Question Simulation & Retention Check
+
+Test your understanding of AWS IAM with these 5 exam-style questions:
+
+### Question 1
+**What is the best practice recommendation for securing the AWS account root user after initial setup?**
+- A) Generate permanent access keys and distribute them to developers
+- B) Delete root access keys, enable multi-factor authentication (MFA), and use IAM roles for daily administrative tasks
+- C) Share the root login password with trusted team members
+- D) Log in as the root user every day to check billing metrics
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Delete root access keys, enable multi-factor authentication (MFA), and use IAM roles for daily administrative tasks**  
+- **Why it's correct:** The root user has unrestricted access to all resources and billing. AWS Well-Architected guidelines mandate deleting root access keys, locking down the account with hardware or virtual MFA, and using IAM Identity Center or IAM roles for day-to-day administrative tasks.
+</details>
+
+### Question 2
+**An application running on an Amazon EC2 instance needs to securely read objects from an Amazon S3 bucket. Which approach follows the principle of least privilege without hardcoding credentials?**
+- A) Embed IAM access keys directly into the application source code
+- B) Store AWS access keys in a public GitHub repository
+- C) Attach an IAM Role with an Amazon S3 read-only policy to the EC2 instance profile
+- D) Make the S3 bucket completely public so authentication is not needed
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **C) Attach an IAM Role with an Amazon S3 read-only policy to the EC2 instance profile**  
+- **Why it's correct:** IAM Roles use the AWS Security Token Service (STS) to provide short-lived, automatically rotated temporary credentials to EC2 instances, eliminating hardcoded long-term access keys.
+</details>
+
+### Question 3
+**Which security principle dictates that users and systems should only be granted the minimum permissions necessary to complete their specific job functions?**
+- A) Separation of duties
+- B) Principle of Least Privilege
+- C) Defense-in-depth
+- D) Zero-trust perimeter
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Principle of Least Privilege**  
+- **Why it's correct:** The Principle of Least Privilege requires starting with zero access (implicit deny) and granting only the explicit actions and resources required for the task.
+</details>
+
+### Question 4
+**An organization has 50 AWS accounts managed under AWS Organizations. Which service provides a centralized portal for workforce users to sign in with single sign-on (SSO) credentials?**
+- A) AWS IAM Identity Center (AWS Single Sign-On)
+- B) AWS Secrets Manager
+- C) Amazon GuardDuty
+- D) AWS Shield Advanced
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **A) AWS IAM Identity Center (AWS Single Sign-On)**  
+- **Why it's correct:** AWS IAM Identity Center centralizes workforce authentication, integrates with corporate identity providers (Active Directory, Okta), and assigns multi-account permissions across AWS Organizations.
+</details>
+
+### Question 5
+**What is the evaluation outcome in AWS IAM when a user has an attached policy allowing `s3:PutObject`, but an explicit `Deny` statement exists on the target S3 bucket policy?**
+- A) Allow, because identity policies override resource policies
+- B) Deny, because an explicit Deny always trumps an Allow
+- C) Prompt user for MFA confirmation
+- D) Partial upload with read-only access
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Deny, because an explicit Deny always trumps an Allow**  
+- **Why it's correct:** In AWS IAM policy evaluation logic, an explicit Deny in any applicable policy (SCP, identity policy, or resource policy) always overrides any Allow statement.
+</details>

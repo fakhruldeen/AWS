@@ -228,3 +228,78 @@ aws auditmanager list-assessments
 | *"Download official compliance documentation demonstrating that AWS physical data centers comply with ISO 27001 or PCI DSS"* | **AWS Artifact** |
 | *"Scan running EC2 instances and ECR container images for known Common Vulnerabilities and Exposures (CVEs)"* | **Amazon Inspector** |
 | *"Centralized dashboard providing a comprehensive view of high-priority security alerts across GuardDuty, Inspector, and Macie"* | **AWS Security Hub** |
+---
+
+## 7. Post-Topic Question Simulation & Retention Check
+
+Test your understanding of Threat Detection & Compliance with these 5 exam-style questions:
+
+### Question 1
+**Which AWS service provides intelligent, continuous threat detection by using machine learning to analyze VPC Flow Logs, DNS query logs, and AWS CloudTrail management events?**
+- A) Amazon Inspector
+- B) Amazon GuardDuty
+- C) Amazon Macie
+- D) AWS Artifact
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Amazon GuardDuty**  
+- **Why it's correct:** Amazon GuardDuty is a 1-click intelligent threat detection service that continuously monitors telemetry sources (CloudTrail, VPC Flow Logs, DNS logs, EKS audit logs) using ML and threat intelligence feeds to identify unauthorized crypto-mining, unusual API activity, and compromised instances.
+</details>
+
+### Question 2
+**A healthcare provider wants to scan its Amazon S3 buckets to identify unencrypted Personally Identifiable Information (PII) such as Social Security Numbers, patient records, and credit cards. Which service should they use?**
+- A) Amazon GuardDuty
+- B) Amazon Macie
+- C) Amazon Inspector
+- D) AWS Shield
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Amazon Macie**  
+- **Why it's correct:** Amazon Macie uses machine learning and pattern matching to discover, classify, and protect sensitive data (PII, financial records, API keys) stored in Amazon S3.
+</details>
+
+### Question 3
+**Which service conducts automated vulnerability assessments against Amazon EC2 instances, container images in Amazon ECR, and AWS Lambda functions for known Common Vulnerabilities and Exposures (CVEs)?**
+- A) Amazon Inspector
+- B) Amazon GuardDuty
+- C) AWS Artifact
+- D) AWS WAF
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **A) Amazon Inspector**  
+- **Why it's correct:** Amazon Inspector is an automated vulnerability management service that continually scans EC2 operating systems, container repositories in ECR, and Lambda functions for software vulnerabilities and unintended network exposure.
+</details>
+
+### Question 4
+**An auditor requests official proof that AWS physical data centers comply with Payment Card Industry Data Security Standard (PCI-DSS) Level 1 requirements. Where can the customer download this report?**
+- A) AWS Trusted Advisor
+- B) AWS Artifact
+- C) Amazon CloudWatch
+- D) AWS Service Health Dashboard
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) AWS Artifact**  
+- **Why it's correct:** AWS Artifact is the central self-service compliance portal for accessing AWS ISO, SOC, and PCI-DSS audit certifications and executing Business Associate Agreements (BAAs).
+</details>
+
+### Question 5
+**Which service acts as a centralized dashboard aggregating, organizing, and prioritizing security alerts and compliance checks across GuardDuty, Inspector, Macie, and IAM Access Analyzer?**
+- A) AWS Security Hub
+- B) Amazon Detective
+- C) AWS Systems Manager
+- D) AWS CloudTrail
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **A) AWS Security Hub**  
+- **Why it's correct:** AWS Security Hub provides a single-pane-of-glass dashboard that consolidates security findings from multiple AWS services and partners, evaluating configurations against CIS benchmarks and payment industry standards.
+</details>

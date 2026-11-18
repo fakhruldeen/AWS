@@ -77,3 +77,81 @@ flowchart TD
 - [[AWS_Security_Services|AWS Secrets Manager]]
 - [[AWS_Config_and_Systems_Manager|SSM Parameter Store]]
 - [[AWS_CloudWatch_and_CloudTrail|AWS CloudTrail Auditing]]
+---
+
+## 7. Post-Topic Question Simulation & Retention Check
+
+Test your understanding of Encryption & Secrets Management with these 5 exam-style questions:
+
+### Question 1
+**An organization needs to store database credentials and API tokens with automated, scheduled rotation every 30 days without application downtime. Which AWS service should they use?**
+- A) AWS Systems Manager Parameter Store
+- B) AWS Secrets Manager
+- C) AWS Key Management Service (AWS KMS)
+- D) Amazon S3 Glacier
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) AWS Secrets Manager**  
+- **Why it's correct:** AWS Secrets Manager is specifically engineered for storing, managing, and automatically rotating credentials (RDS databases, API keys) using built-in AWS Lambda rotation functions.
+- **Distractor Analysis:**
+  - *A is incorrect:* Parameter Store does not provide built-in automated rotation out of the box.
+  - *C is incorrect:* KMS manages encryption keys, not plaintext database passwords.
+</details>
+
+### Question 2
+**Which AWS service manages cryptographic keys and integrates natively with over 100 AWS services to perform envelope encryption?**
+- A) AWS CloudHSM
+- B) AWS Key Management Service (AWS KMS)
+- C) AWS Secrets Manager
+- D) Amazon Macie
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) AWS Key Management Service (AWS KMS)**  
+- **Why it's correct:** AWS KMS is a fully managed, FIPS 140-2/3 validated service that creates, controls, and rotates customer master keys (KMS keys) used for envelope encryption across AWS.
+</details>
+
+### Question 3
+**A financial institution requires dedicated, single-tenant Hardware Security Module (HSM) appliances under their exclusive administrative control to meet strict regulatory compliance. Which service should they choose?**
+- A) AWS KMS
+- B) AWS CloudHSM
+- C) AWS Secrets Manager
+- D) AWS Shield
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) AWS CloudHSM**  
+- **Why it's correct:** AWS CloudHSM provides dedicated physical HSM appliances inside the customer's VPC. The customer has sole control of the cryptographic keys; AWS has zero visibility into keys stored inside CloudHSM.
+</details>
+
+### Question 4
+**What is the difference between Server-Side Encryption (SSE) and Client-Side Encryption when storing data in Amazon S3?**
+- A) Server-side encryption encrypts data on the client device before transit.
+- B) Server-side encryption encrypts data after it reaches AWS S3 disks; client-side encrypts data locally before sending it across the network.
+- C) Client-side encryption is managed by AWS automatically.
+- D) Server-side encryption requires physical hardware tokens.
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **B) Server-side encryption encrypts data after it reaches AWS S3 disks; client-side encrypts data locally before sending it across the network.**  
+- **Why it's correct:** In Server-Side Encryption (SSE-S3, SSE-KMS), AWS manages encryption upon disk write. In Client-Side Encryption, data is encrypted by the application prior to transmitting over TLS to AWS.
+</details>
+
+### Question 5
+**Which service allows developers to store hierarchical configuration strings and simple plaintext or encrypted strings (e.g., database hostnames or license keys) at low cost?**
+- A) AWS Systems Manager Parameter Store
+- B) AWS Artifact
+- C) AWS CloudTrail
+- D) AWS License Manager
+
+<details>
+<summary><b>Click to View Answer & Explanation</b></summary>
+
+**Correct Answer:** **A) AWS Systems Manager Parameter Store**  
+- **Why it's correct:** Systems Manager Parameter Store is a serverless key-value store for application configuration data and secrets, offering standard parameters free of charge.
+</details>
