@@ -88,6 +88,41 @@ flowchart TD
 3. **Semantic Chunking:** Detects natural topic boundaries and splits paragraphs accordingly.
 4. **No Chunking:** Treats each file as a single chunk (ideal for short FAQ items).
 
+### Supported Vector Databases for Bedrock Knowledge Bases:
+
+| Vector Database Solution | Type / Engine | Scalability & Performance | Primary Exam Use Case |
+| :--- | :--- | :--- | :--- |
+| **Amazon OpenSearch Serverless** | Managed serverless k-NN search | Auto-scales compute and storage independently; sub-second search | Enterprise-grade RAG; millions of embeddings; production search |
+| **Amazon Aurora (PostgreSQL with `pgvector`)** | Relational ACID database with vector extension | High performance alongside transactional application tables | Embeddings must co-locate with existing transactional relational data |
+| **Amazon Neptune Analytics (GraphRAG)** | Managed graph database + vector indexing | Graph traversals combined with vector similarity | Knowledge graphs, complex relational reasoning, fraud, entity linking |
+| **Pinecone / Redis Enterprise** | Managed 3rd-party vector native stores | Ultra-low latency specialized vector indexing | Existing cloud-native vector store adoption |
+
+---
+
+## 3.1 Model Adaptation Spectrum & Cost Analysis
+
+Choosing how to adapt a Foundation Model involves balancing performance, customization depth, computational expense, and engineering effort:
+
+| Adaptation Strategy | Relative Cost | Compute Requirement | Labeled Data Needed | Primary Purpose & Trigger |
+| :--- | :---: | :--- | :--- | :--- |
+| **Prompt Engineering** | **Very Low ($)** | Zero training compute; standard token invocation | Zero samples (or 1–5 in-context examples) | Formatting, task instruction, simple reasoning |
+| **Retrieval-Augmented Generation (RAG)** | **Moderate ($$)** | Embedding inference + vector store storage | External unstructured knowledge files (PDFs, docs) | Dynamic external knowledge, live proprietary data, citations |
+| **Instruction-Based Fine-Tuning** | **Medium ($$$)** | SageMaker / Bedrock training cluster (hours) | Hundreds to thousands of labeled prompt-response pairs | Style, domain vocabulary, formatting, task specialization |
+| **Continued Pre-training** | **High ($$$$)** | Multi-GPU / Trainium clusters (days) | Millions of tokens of unlabeled domain text | Deep technical jargon (medical, legal, financial) |
+| **Pre-training from Scratch** | **Extreme ($$$$$)** | Massive distributed clusters (months) | Trillions of tokens; massive multi-terabyte corpus | Creating brand new proprietary foundation models |
+
+---
+
+## 3.2 RAG vs. Fine-Tuning Decision Guide
+
+| Dimension | Retrieval-Augmented Generation (RAG) | Fine-Tuning |
+| :--- | :--- | :--- |
+| **Knowledge Source** | External vector database / document store | Internalized within model weights |
+| **Data Freshness** | **Real-Time:** Updates immediately when docs sync to S3/Vector DB | **Static:** Requires new training run to absorb new facts |
+| **Hallucination Risk** | **Low:** Grounded in retrieved facts with source citations | **Moderate:** Can hallucinate or suffer catastrophic forgetting |
+| **Auditability & Provenance** | **High:** Returns exact chunk, page, and S3 URI | **Low:** Black-box parametric memory |
+| **Best For** | *"Answer customer questions using our latest return policy"* | *"Ensure customer support replies adopt our corporate brand tone"* |
+
 ---
 
 ## 4. Bedrock Agents (Autonomous Multi-Step Workflows)
