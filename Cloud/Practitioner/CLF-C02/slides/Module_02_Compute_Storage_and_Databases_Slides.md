@@ -161,3 +161,26 @@ Frequent Access ─────────────────────�
    - Multi-AZ = Synchronous standby for High Availability.
    - Read Replicas = Asynchronous copies for Read Scaling.
 4. **DynamoDB:** Serverless NoSQL key-value database for predictable millisecond scale.
+
+---
+
+# Module 2 Student Review Quiz
+
+1. **A startup needs a compute service to process JPEG images uploaded to S3. Tasks take 30 seconds and run sporadically. Which service is MOST cost-effective?**
+   * A) Amazon EC2 On-Demand
+   * B) AWS Lambda *(Correct — serverless, pay per millisecond, zero idle cost)*
+   * C) Amazon ECS with dedicated EC2 instances
+   * D) AWS Elastic Beanstalk
+
+2. **A healthcare company must retain medical records for 10 years for compliance. Records are rarely accessed, but retrieval within 12–48 hours is acceptable. Which storage class offers the LOWEST cost?**
+   * A) Amazon S3 Standard
+   * B) Amazon S3 Standard-IA
+   * C) Amazon S3 Glacier Deep Archive *(Correct — lowest cost storage at ~$1/TB/month)*
+   * D) Amazon EBS Cold HDD (sc1)
+
+3. **Which AWS database service provides fully managed NoSQL key-value storage with single-digit millisecond latency at any scale?**
+   * A) Amazon RDS for MySQL
+   * B) Amazon Aurora
+   * C) Amazon DynamoDB *(Correct — serverless NoSQL key-value with DAX in-memory acceleration)*
+   * D) Amazon Redshift
+

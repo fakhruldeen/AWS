@@ -140,3 +140,26 @@ Scans your environment against **5 Well-Architected Pillars**:
 5. **Amplify vs. Device Farm:**
    - Amplify builds and hosts full-stack apps.
    - Device Farm tests apps on real physical mobile phones in the cloud.
+
+---
+
+# Module 4 Student Review Quiz
+
+1. **An IT auditor needs a complete record of who terminated a critical production EC2 instance, including the IAM username, IP address, and timestamp. Which service should they query?**
+   * A) Amazon CloudWatch Metrics
+   * B) AWS CloudTrail Event History *(Correct — audits API calls and management events)*
+   * C) AWS Config Configuration History
+   * D) Amazon Inspector Assessment Reports
+
+2. **A company wants to continuously evaluate whether all Amazon S3 buckets in their account have server-side encryption enabled, and trigger automated remediation if non-compliant. Which service should they use?**
+   * A) AWS Trusted Advisor
+   * B) AWS Config *(Correct — continuously monitors, tracks, and evaluates resource configurations)*
+   * C) AWS Systems Manager Parameter Store
+   * D) Amazon GuardDuty
+
+3. **Which service enables teams to model, provision, and version their entire cloud infrastructure using declarative JSON or YAML templates?**
+   * A) AWS CodeBuild
+   * B) AWS CloudFormation *(Correct — Infrastructure as Code / IaC)*
+   * C) AWS Elastic Beanstalk
+   * D) AWS CodeDeploy
+

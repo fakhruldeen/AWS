@@ -114,3 +114,26 @@ graph LR
 4. **Support Plan Memorization:**
    - Business Support = Minimum tier for 24/7 phone/chat and full Trusted Advisor.
    - Enterprise Support = Only tier with a designated TAM and 15-minute response SLA.
+
+---
+
+# Module 5 Student Review Quiz
+
+1. **A finance director wants to visualize historical AWS spending patterns over the past 12 months and generate predictive cost forecasts for the next quarter. Which tool should they use?**
+   * A) AWS Pricing Calculator
+   * B) AWS Cost Explorer *(Correct — historical 12-month analytics and predictive forecasting)*
+   * C) AWS Budgets
+   * D) AWS Billing Conductor
+
+2. **An e-commerce company runs batch data processing jobs that can tolerate unexpected interruptions. Which EC2 purchasing option offers up to a 90% discount compared to On-Demand rates?**
+   * A) EC2 Reserved Instances
+   * B) EC2 Spot Instances *(Correct — spare EC2 capacity with 2-minute termination notice)*
+   * C) EC2 Savings Plans
+   * D) EC2 Dedicated Hosts
+
+3. **Which AWS Support tier is the MINIMUM plan that provides 24/7 technical phone, email, and chat access with a 1-hour response SLA for production system outages?**
+   * A) Basic Support
+   * B) Developer Support
+   * C) Business Support *(Correct — 24/7 access, 1-hr production response, full Trusted Advisor)*
+   * D) Enterprise On-Ramp Support
+

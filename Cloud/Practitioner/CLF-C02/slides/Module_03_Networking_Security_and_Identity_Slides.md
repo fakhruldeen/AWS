@@ -141,3 +141,26 @@ IAM securely manages access to AWS services and resources.
 3. **IAM Least Privilege:** Always attach policies to Groups or Roles, never hardcode root keys.
 4. **Shared Responsibility:** AWS protects the cloud hardware; you protect your data, access policies, and configurations.
 5. **Secrets Manager:** The only service that provides automated database password rotation out of the box.
+
+---
+
+# Module 3 Student Review Quiz
+
+1. **Which statement accurately describes the difference between an Amazon EC2 Security Group and a Network ACL?**
+   * A) Security Groups are stateless; Network ACLs are stateful
+   * B) Security Groups operate at subnet level; Network ACLs operate at instance level
+   * C) Security Groups are stateful (inbound return traffic allowed); Network ACLs are stateless *(Correct)*
+   * D) Network ACLs only support ALLOW rules; Security Groups support DENY rules
+
+2. **A web application running on an EC2 instance needs to read and write objects to an Amazon S3 bucket. What is the AWS-recommended security best practice?**
+   * A) Embed root access keys into the application source code
+   * B) Store IAM user credentials in a plaintext file on the EC2 instance
+   * C) Assign an IAM Role with an S3 policy directly to the EC2 instance profile *(Correct — temporary credentials)*
+   * D) Make the S3 bucket completely public
+
+3. **Which AWS service provides protection against Layer 7 application attacks, such as SQL Injection (SQLi) and Cross-Site Scripting (XSS)?**
+   * A) AWS Shield Standard
+   * B) AWS WAF (Web Application Firewall) *(Correct — inspects HTTP/S request bodies)*
+   * C) AWS Network Firewall
+   * D) Amazon Inspector
+
