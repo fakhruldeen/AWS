@@ -1,7 +1,7 @@
 # AWS CLF-C02 Rapid Review Cheatsheet & Memory Anchors
 
 > **Role:** Ultra-dense, high-yield review sheet for fast revision before exams and teaching sessions.  
-> **Source Synthesis:** Medium (@h42318), kananinirav, Shripad Khandare, Thiago-code-lab, & AWS Official Exam Guide.
+> **Canonical Literature Grounding:** Tom Taulli (*O'Reilly 2026*), Rajesh Daswani (*Packt 2026*), Gaurav H Kankaria (*Orange 2026*), and official AWS CLF-C02 Exam Guide v1.2.
 
 ---
 
