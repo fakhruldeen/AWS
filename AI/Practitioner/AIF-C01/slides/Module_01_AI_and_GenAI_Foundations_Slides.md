@@ -192,3 +192,26 @@ style: |
 # Questions & Discussion
 
 **Next Module:** Module 2: Applications of Foundation Models & Amazon Bedrock RAG
+
+---
+
+# Module 1 Student Review Quiz
+
+1. **A hospital wants to build a machine learning model to detect malignant tumors from patient CT scans. Which evaluation metric should the data science team prioritize to MINIMIZE undetected cancer cases?**
+   * A) Precision
+   * B) Recall (Sensitivity) *(Correct — minimizes False Negatives)*
+   * C) Mean Absolute Error (MAE)
+   * D) R-squared (^2$)
+
+2. **A retail company has a database of 2 million customer transaction records with no predefined labels. They want to group customers with similar buying habits into marketing segments. Which machine learning technique is required?**
+   * A) Supervised Binary Classification
+   * B) Linear Regression
+   * C) Unsupervised Clustering *(Correct — discovers latent groupings without ground truth labels)*
+   * D) Reinforcement Learning
+
+3. **A machine learning model achieves 99.4% accuracy on training data, but drops to 62.1% accuracy on independent test data. What problem is the model experiencing, and what is the primary remedy?**
+   * A) Underfitting (High Bias); increase model complexity
+   * B) Overfitting (High Variance); apply regularization, dropout, or collect more data *(Correct)*
+   * C) Data drift; retrain the model on the same training set
+   * D) High precision; increase learning rate
+

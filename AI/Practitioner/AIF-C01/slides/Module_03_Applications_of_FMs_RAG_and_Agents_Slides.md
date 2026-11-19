@@ -118,3 +118,26 @@ style: |
 * ⚡ **Tone & Style Customization?** $\rightarrow$ **Fine-Tuning / PEFT (LoRA)**.
 * ⚡ **Evaluating Summarization Recall?** $\rightarrow$ **ROUGE**.
 * ⚡ **Predictable Sub-Second Peak Throughput?** $\rightarrow$ **Provisioned Throughput (Model Units)**.
+
+---
+
+# Module 3 Student Review Quiz
+
+1. **An enterprise wants to customize an open-source Large Language Model for a customer support domain with minimal GPU memory overhead and without retraining all billions of parameters. Which technique should they select?**
+   * A) Full Pre-training from scratch
+   * B) Low-Rank Adaptation (LoRA / PEFT) *(Correct — freezes base model weights and trains small adapter matrices)*
+   * C) Zero-Shot Prompting
+   * D) Retrieval-Augmented Generation only
+
+2. **Which prompt engineering technique explicitly instructs a Large Language Model to break down complex multi-step arithmetic or logic problems into sequential reasoning steps before generating the final answer?**
+   * A) Few-Shot In-Context Prompting
+   * B) Chain-of-Thought (CoT) Prompting *(Correct — "Think step-by-step")*
+   * C) Directional Stimulus Prompting
+   * D) System Persona Prompting
+
+3. **An insurance company needs an AI assistant that can autonomously look up policy details, check weather records via an API, and file claims in a PostgreSQL database. Which Amazon Bedrock feature coordinates this multi-step execution?**
+   * A) Amazon Bedrock Guardrails
+   * B) Amazon Bedrock Agents with Action Groups *(Correct — breaks tasks into steps and invokes AWS Lambda APIs)*
+   * C) Amazon Bedrock Model Evaluation
+   * D) Amazon Bedrock Watermarking
+

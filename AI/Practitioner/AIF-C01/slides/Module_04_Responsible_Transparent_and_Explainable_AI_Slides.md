@@ -104,3 +104,26 @@ style: |
 * ⚡ **Explaining Single-Applicant Loan Rejections?** $\rightarrow$ Local SHAP Feature Attribution.
 * ⚡ **Masking PII across Multiple LLMs?** $\rightarrow$ Amazon Bedrock Guardrails Sensitive Info Policy.
 * ⚡ **Standardized Compliance Documentation?** $\rightarrow$ SageMaker Model Cards.
+
+---
+
+# Module 4 Student Review Quiz
+
+1. **A mortgage lender uses a machine learning model to evaluate loan applications. Federal regulators demand proof of which specific features (e.g., credit score, debt-to-income ratio) influenced an individual rejection decision. Which tool provides this explainability?**
+   * A) Amazon SageMaker Clarify using SHAP values *(Correct — provides feature attribution explanations)*
+   * B) AWS CloudTrail Insights
+   * C) Amazon Inspector Assessment Reports
+   * D) Amazon SageMaker Canvas AutoML
+
+2. **Where should a machine learning engineering team publish standardized documentation detailing a production model's intended use cases, training dataset distribution, performance evaluation metrics, and ethical limitations?**
+   * A) Amazon S3 Glacier Vault
+   * B) Amazon SageMaker Model Cards *(Correct — standardized governance fact sheets)*
+   * C) AWS Artifact Compliance Agreements
+   * D) AWS Systems Manager Parameter Store
+
+3. **Which AWS service allows developers to configure custom content filters to mask PII (credit cards, SSNs) and block toxic language across both user prompts and model completions in Amazon Bedrock?**
+   * A) AWS WAF
+   * B) Amazon Bedrock Guardrails *(Correct — multi-layered responsible AI perimeter)*
+   * C) Amazon GuardDuty
+   * D) AWS Shield Advanced
+

@@ -180,3 +180,26 @@ style: |
 # Questions & Discussion
 
 **Next Module:** Module 3: Amazon SageMaker AI Ecosystem & Custom Machine Learning
+
+---
+
+# Module 2 Student Review Quiz
+
+1. **A developer is building a legal document question-answering assistant with Amazon Bedrock. The model must produce strictly factual, deterministic answers with zero creative deviation. Which inference parameter setting is MOST appropriate?**
+   * A) Temperature = 1.0, Top-P = 1.0
+   * B) Temperature = 0.0, Top-P low *(Correct — minimizes randomness; greedy decoding)*
+   * C) Temperature = 0.9, Top-K = 500
+   * D) Max Generation Length = 10 tokens
+
+2. **A bank wants to build an AI assistant that answers questions about internal private credit policies without updating the neural network weights of the underlying foundation model. Which architecture solves this?**
+   * A) Full Model Pre-training
+   * B) Instruction Fine-Tuning
+   * C) Retrieval-Augmented Generation (RAG) using Bedrock Knowledge Bases *(Correct — grounds responses in external vector store)*
+   * D) Prompt Injection
+
+3. **Which family of AWS foundation models natively supports multimodal input processing across text, images, and video with state-of-the-art price-performance?**
+   * A) Amazon Titan Text Express
+   * B) Amazon Nova (Micro, Lite, Pro) *(Correct — next-generation multimodal foundation models)*
+   * C) AWS DeepRacer
+   * D) Amazon Kendra
+
