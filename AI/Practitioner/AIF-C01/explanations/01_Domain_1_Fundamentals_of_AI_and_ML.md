@@ -23,6 +23,16 @@ flowchart TD
 
 ---
 
+## 💡 The Real-World Analogy (ELI5)
+
+> **The Culinary Apprenticeship (How Computers Learn):**
+> - **Traditional Rule-Based Software:** Following an unyielding, handwritten cookbook recipe. *"If oven timer == 45 minutes, turn off heat."* If the kitchen temperature changes or the chicken is frozen, the recipe fails blindly because it cannot adapt.
+> - **Supervised Machine Learning:** An apprentice chef studying under a master. The master shows the apprentice 10,000 labeled photographs of cakes: *"This is undercooked,"* *"This is perfectly baked,"* *"This is burned."* The apprentice learns the mathematical relationship between oven temperature, pan size, and doneness.
+> - **Unsupervised Machine Learning:** Unloading 500 crates of unlabeled, mysterious exotic spices into a warehouse. Nobody tells the apprentice what they are. The apprentice groups them by scent, grain texture, and color (clustering) discovering hidden patterns without labels.
+> - **Reinforcement Learning:** A chef learning by trial and error in a live dining room. Every time customers applaud and tip $50, the chef receives a positive reward; every time a dish is sent back to the kitchen, the chef receives a negative penalty. Over thousands of meals, the chef optimizes a policy to maximize total tips.
+
+---
+
 ## 🎯 Task Statement 1.1: Explain basic AI and ML concepts and terminologies
 
 ### 1. The Core Taxonomy
@@ -198,6 +208,21 @@ flowchart TD
 * Next: [Domain 2: Fundamentals of Generative AI](./02_Domain_2_Fundamentals_of_Generative_AI.md)
 * Blueprint: [Diagram 01: Traditional ML vs GenAI Lifecycle](../diagrams/Diagram_01_Traditional_ML_vs_GenAI_Lifecycle.md)
 * Knowledge Check: [Module 01: AI Foundations Knowledge Check](../knowledge_checks/Module_01_AI_Foundations_Knowledge_Check.md)
+---
+
+## 🎯 Exam Traps & 'Clue-to-Answer' Trigger Words
+
+| Exam Question Clue Keyword | Correct ML Category / Metric | Common Distractor Traps |
+| :--- | :--- | :--- |
+| *'Predict discrete categorical labels (e.g., spam vs ham, fraudulent vs legitimate)'* | **Classification (Supervised)** | Regression (Regression predicts continuous numbers, not categories). |
+| *'Predict continuous numerical quantities (e.g., house prices, rainfall, revenue)'* | **Regression (Supervised)** | Classification. |
+| *'Group customers based on purchasing behavior without pre-existing labels'* | **Clustering (Unsupervised)** | Classification (Classification requires pre-labeled training data). |
+| *'Agent learns optimal behavior by interacting with an environment to maximize rewards'* | **Reinforcement Learning (RL)** | Supervised Learning. |
+| *'Model performs with 99% accuracy on training data but fails catastrophically on test data'* | **Overfitting (High Variance)** | Underfitting (High Bias). Mitigate via regularization, dropout, more data. |
+| *'Model is too simple to capture underlying trends in both training and test data'* | **Underfitting (High Bias)** | Overfitting. Mitigate via increasing model complexity and feature engineering. |
+| *'Cost of False Positives is extremely high (e.g., legitimate emails marked as spam)'* | **Precision** ($rac{TP}{TP+FP}$) | Recall (Recall focuses on minimizing False Negatives). |
+| *'Cost of False Negatives is critical or life-threatening (e.g., cancer detection, fraud)'* | **Recall** ($rac{TP}{TP+FN}$) | Precision. |
+
 ---
 
 ## 📝 Post-Domain 1 Question Simulation & Retention Check

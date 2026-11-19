@@ -13,6 +13,16 @@ Domain 4 assesses the practitioner's understanding of ethics, bias, fairness, tr
 
 ---
 
+## 💡 The Real-World Analogy (ELI5)
+
+> **The Transparent Self-Driving Car:**
+> - **Explainability (SHAP Values):** When an autonomous car swerves to the left, the black box telemetry must prove *why*: *"70% weight given to pedestrian detected on right curb, 30% weight given to clear lane on left."* (SageMaker Clarify feature attributions).
+> - **Fairness & Bias Detection:** Proving through empirical testing that the car detects pedestrians wearing dark winter coats just as reliably as pedestrians in bright summer clothes across all demographic zip codes (SageMaker Clarify pre/post-training bias metrics).
+> - **Privacy & Protection:** The car's in-cabin dashcam automatically blurs passenger faces, credit card numbers, and house addresses before uploading footage to the cloud (Bedrock Guardrails PII masking).
+> - **Transparency & Accountability:** A clear, published owner's manual detailing the car's operational design domain, speed limits, sensor limitations, and verified crash-test safety scores (SageMaker Model Cards).
+
+---
+
 ## 🎯 Task Statement 4.1: Explain the core pillars of Responsible AI
 
 AWS defines Responsible AI through eight fundamental dimensions:
@@ -152,6 +162,18 @@ flowchart LR
 * Blueprint: [Diagram 07: Bedrock Guardrails Multi-Layered Perimeter](../diagrams/Diagram_07_Bedrock_Guardrails_Multi_Layered_Perimeter.md)
 * Lab: [Lab 05: Responsible AI & PII Masking with Amazon Bedrock Guardrails](../labs/Lab_05_Responsible_AI_and_PII_Masking_with_Amazon_Bedrock_Guardrails.md)
 * Lab: [Lab 09: Model Fairness, Bias Detection & SHAP with SageMaker Clarify](../labs/Lab_09_Model_Fairness_Bias_Detection_and_SHAP_Explainability_with_SageMaker_Clarify.md)
+---
+
+## 🎯 Exam Traps & 'Clue-to-Answer' Trigger Words
+
+| Responsible AI Objective | Correct AWS Tool / Feature | Exam Trap Distractor |
+| :--- | :--- | :--- |
+| *'Detect pre-training bias in training data and post-training bias in model predictions'* | **Amazon SageMaker Clarify** | Amazon Inspector (scans for software CVEs, not statistical bias). |
+| *'Explain individual predictions using SHAP (Shapley Additive exPlanations) values'* | **Amazon SageMaker Clarify** | Amazon CloudWatch (monitors system metrics, not feature attribution). |
+| *'Standardized fact sheets documenting intended use, limitations, and evaluation metrics'* | **Amazon SageMaker Model Cards** | Amazon QuickSight (BI dashboard, not model governance metadata). |
+| *'Continuously monitor production deployed models for data drift and concept drift'* | **Amazon SageMaker Model Monitor** | AWS CloudTrail (audits API actions, not ML model statistical drift). |
+| *'Filter hate speech, profanity, PII, and custom denied topics across LLM inputs & outputs'* | **Amazon Bedrock Guardrails** | AWS WAF (WAF inspects HTTP headers/SQLi; cannot parse LLM semantic toxicity). |
+
 ---
 
 ## 📝 Post-Domain 4 Question Simulation & Retention Check

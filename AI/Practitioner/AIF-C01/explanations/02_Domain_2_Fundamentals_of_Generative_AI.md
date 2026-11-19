@@ -13,6 +13,15 @@ Domain 2 evaluates understanding of Generative AI architectures, foundation mode
 
 ---
 
+## 💡 The Real-World Analogy (ELI5)
+
+> **The Art Critic vs. The Master Painter:**
+> - **Discriminative Traditional AI (The Art Critic):** An expert who looks at a painting and classifies it: *"This is an authentic Monet with 98% confidence."* Or detects anomalies: *"This brushstroke is counterfeit."* It analyzes, categorizes, and labels existing reality.
+> - **Generative AI (The Master Painter):** An artist who spent 20 years studying every brushstroke, color palette, and texture Monet ever used. Handed a blank canvas and a prompt: *"Paint a rainy afternoon in Paris with cherry blossoms in Monet's style,"* the artist synthesizes a completely original, never-before-seen masterpiece that reflects the statistical distribution of Monet's art.
+> - **Autocomplete on Steroids:** At its core, a Large Language Model (LLM) is predicting the single next most probable word (token) across billions of possibilities based on context: *"The cat sat on the... [mat / sofa / windowsill]"*.
+
+---
+
 ## 🎯 Task Statement 2.1: Explain the concepts and capabilities of generative AI
 
 ### 1. What Defines Generative AI?
@@ -153,6 +162,20 @@ When invoking a Foundation Model via the Amazon Bedrock API (`InvokeModel` or `C
 * Blueprint: [Diagram 02: Transformer Architecture and Tokenization](../diagrams/Diagram_02_Transformer_Architecture_and_Tokenization.md)
 * Blueprint: [Diagram 03: Amazon Bedrock Serverless Topology and Nova Models](../diagrams/Diagram_03_Amazon_Bedrock_Serverless_Topology_and_Nova_Models.md)
 * Lab: [Lab 01: Amazon Bedrock Model Access, Playgrounds & Prompt Engineering](../labs/Lab_01_Amazon_Bedrock_Model_Access_Playgrounds_and_Prompt_Engineering.md)
+---
+
+## 🎯 Exam Traps & 'Clue-to-Answer' Trigger Words
+
+| Exam Question Clue Keyword | Correct Generative AI Concept | Key Distinctions & Constraints |
+| :--- | :--- | :--- |
+| *'Self-attention mechanism processing tokens in parallel across long sequences'* | **Transformer Architecture** | Replaced sequential RNNs/LSTMs; foundation of modern LLMs. |
+| *'Smallest discrete unit of text processed by an LLM (e.g., ~4 characters or 0.75 words)'* | **Token** | Billing and context windows are strictly measured in tokens, not words. |
+| *'Controls output randomness/creativity; lower value produces deterministic answers'* | **Temperature** |  = greedy/deterministic (factual tasks);  = creative/divergent. |
+| *'Limits token candidate pool to cumulative probability threshold (Nucleus sampling)'* | **Top-P** | Dynamic candidate pool based on sum of probabilities. |
+| *'Limits token candidate pool to top K most probable words regardless of probability'* | **Top-K** | Fixed number of top choices. |
+| *'Generates synthetic photorealistic images by iteratively removing Gaussian noise'* | **Diffusion Models** | Stability AI Stable Diffusion, Amazon Titan Image Generator. |
+| *'Processes and correlates multiple disparate input data types (text, images, audio, video)'* | **Multimodal Foundation Models** | Amazon Nova (Micro, Lite, Pro), Anthropic Claude 3.5 Sonnet. |
+
 ---
 
 ## 📝 Post-Domain 2 Question Simulation & Retention Check

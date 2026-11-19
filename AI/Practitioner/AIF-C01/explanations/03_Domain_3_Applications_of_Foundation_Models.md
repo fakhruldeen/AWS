@@ -13,6 +13,16 @@ Domain 3 represents the core operational center of the AIF-C01 certification. It
 
 ---
 
+## 💡 The Real-World Analogy (ELI5)
+
+> **The Medical Licensing Exam Spectrum:**
+> - **Prompt Engineering (Better Questioning):** You give the medical student a clearer, structured question on the exam, providing 2 solved sample diagnoses (Few-Shot Prompting) and telling them to write out their diagnostic steps before answering (Chain-of-Thought). Zero changes to the student's brain.
+> - **RAG (Open-Book Exam):** You allow the student to bring the hospital's internal proprietary formulary into the exam room. When asked about Drug X, the student flips to the index (semantic search), reads the exact paragraph (retrieval), and answers citing the page number (grounded generation).
+> - **Fine-Tuning (Specialized Fellowship):** Sending the general physician to a 3-year pediatric cardiology residency. The specialized knowledge is permanently baked into their synaptic neural connections (model weights). Expensive, time-consuming, and risks catastrophic forgetting of general medicine.
+> - **Pre-Training from Scratch (Raising a Child to Adulthood):** Training a child from infancy to adulthood on the entire corpus of human knowledge. Costs $50M–$100M+ in supercomputer GPU clusters.
+
+---
+
 ## 🎯 Task Statement 3.1: Determine criteria for foundation model selection
 
 When selecting a Foundation Model in Amazon Bedrock or Amazon SageMaker JumpStart, evaluate five core engineering dimensions:
@@ -159,6 +169,18 @@ flowchart TD
 * Blueprint: [Diagram 04: Enterprise RAG Ingestion and Retrieval Flow](../diagrams/Diagram_04_Enterprise_RAG_Ingestion_and_Retrieval_Flow.md)
 * Blueprint: [Diagram 06: Model Customization Spectrum](../diagrams/Diagram_06_Model_Customization_Spectrum_Prompt_to_Pretraining.md)
 * Lab: [Lab 03: Enterprise RAG with Bedrock Knowledge Bases](../labs/Lab_03_Enterprise_RAG_with_Bedrock_Knowledge_Bases_and_OpenSearch_Serverless.md)
+---
+
+## 🎯 Exam Traps & 'Clue-to-Answer' Trigger Words
+
+| Business Requirement / Scenario | Correct Model Adaptation Strategy | Why Alternative Strategies Fail |
+| :--- | :--- | :--- |
+| *'Incorporate private internal company data, prevent hallucinations, zero weight updates'* | **Retrieval-Augmented Generation (RAG)** | Fine-Tuning is expensive, slow, and does NOT prevent hallucinations. |
+| *'Guide model through multi-step arithmetic, logic, or symbolic reasoning problems'* | **Chain-of-Thought (CoT) Prompting** | Standard Zero-Shot prompts fail on multi-step reasoning. |
+| *'Adapt model to highly specialized medical/legal vocabulary or tone with minimal compute'* | **Parameter-Efficient Fine-Tuning (PEFT / LoRA)** | Full Fine-Tuning requires massive VRAM and compute budgets. |
+| *'Autonomous execution of database lookups, booking APIs, and enterprise workflows'* | **Amazon Bedrock Agents (Action Groups)** | Standard LLMs can only generate text; agents invoke live APIs. |
+| *'High-dimensional vector storage and sub-second similarity search for RAG'* | **Amazon OpenSearch Serverless (Vector Engine)** | S3 is object storage (no native vector distance cosine search). |
+
 ---
 
 ## 📝 Post-Domain 3 Question Simulation & Retention Check
