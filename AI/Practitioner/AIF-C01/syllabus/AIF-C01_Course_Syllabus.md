@@ -166,3 +166,6 @@ Before taking the official AWS Certified AI Practitioner (AIF-C01) exam:
 - [ ] Complete all 5 Domain Revision Question sets (15 questions each) in `revision_questions/`.
 - [ ] Complete the 65-question timed mock exam `revision_questions/AIF_C01_Full_Length_Mock_Exam.md` scoring $\ge 700$ scaled score ($\ge 46/65$).
 - [ ] Review the high-yield distinction tables in `notes/06_AIF-C01_Exam_CheatSheet.md`.
+- [ ] Review all 10 pairwise comparison guides in `notes/distinctions/` (Prompting vs. RAG vs. Fine-Tuning, ROUGE vs. BLEU, 4 SageMaker Deployment Modes, Decoding Parameters, etc.).
+- [ ] Drill with the **Master Unique Revision Question Banks** (1,814 vetted, deduplicated questions across all 5 domains in the Vault at `Questions_Bank/Unique_Revision_Banks/AI_Practitioner_AIF-C01/`).
+

@@ -52,3 +52,20 @@ To study for Domain 1 without redundancy, review these atomic concept notes:
   * *People Perspective:* Overcoming organizational inertia, cloud training, bridging skills gaps.
   * *Business Perspective:* Business value, ROI, customer outcomes.
   * *Governance Perspective:* Portfolio management and program prioritization.
+
+---
+
+## 📚 Canonical Literature & Framework Citations
+
+- **Daswani & Kankaria (Packt, 2026), Chapter 1 & 2:**
+  - In-depth breakdown of the 6 Cloud Adoption Framework (CAF 3.0) perspectives and the 7 Rs migration matrix, highlighting the 7th R ("Relocate" for VMware Cloud on AWS).
+  - High Availability vs Fault Tolerance architectural boundaries and trade-offs.
+- **Tom Taulli (O'Reilly, 2026), Chapter 1 & 2:**
+  - CapEx vs. OpEx economic transformation, TCO direct and indirect cost eliminations, and speed-to-market agility benefits.
+
+---
+
+## 🎯 Master Unique Practice Questions
+
+- **Practice Set:** [[Domain_1_Cloud_Concepts_Unique_Questions|Domain 1 Unique Revision Bank]] (353 unique, deduplicated questions across 18 source providers with interactive checkboxes and explanations).
+

@@ -29,6 +29,22 @@ pie title CLF-C02 Exam Weighting Breakdown
 
 ---
 
+## 📚 Prescribed Canonical Textbooks & Primary Sources (2026 Editions)
+
+All course materials, lectures, and revision sets in this repository are strictly grounded in canonical 2026 literature:
+1. **Rajesh Daswani (*Packt Publishing, 2026*):**  
+   *AWS Certified Cloud Practitioner (CLF-C02) Certification* (ISBN: 978-1-83546-429-8).  
+   *Core focus: Well-Architected Framework, CAF 3.0 perspectives, 7 Rs migration taxonomy, and modern Graviton price-performance.*
+2. **Tom Taulli (*O'Reilly Media, 2026*):**  
+   *AWS Certified Cloud Practitioner (CLF-C02) Study Guide* (ISBN: 978-8-341-64022-2).  
+   *Core focus: Service distinction matrices, Compute Savings Plans vs RIs, S3 lifecycle pricing rules, and security perimeter defense.*
+3. **Gaurav Kankaria (*Orange Education, 2026*):**  
+   *Ultimate AWS Certified Cloud Practitioner (CLF-C02)* (ISBN: 978-93-6152-302-1).  
+   *Core focus: Enterprise billing views, Consolidated Billing mechanics, and shared governance models.*
+
+
+---
+
 ## 🧭 Zero-Redundancy Knowledge Navigation
 
 This blueprint serves as your **Map of Content (MOC)**. All underlying technical concepts and services are maintained as atomic single-source-of-truth notes in the vault:
@@ -74,3 +90,30 @@ Before sitting the exam or teaching a review session, master the quick distincti
 * **Cost Estimating vs Analysis:** AWS Pricing Calculator (*Before deployment / "What-if"*) vs AWS Cost Explorer (*After deployment / Historical trends*).
 * **Identity Solutions:** IAM Users/Roles (Internal infra) vs Amazon Cognito (External end-users) vs IAM Identity Center (Multi-account workforce SSO).
 * **Infrastructure Tiers:** Outposts (On-premises hardware) vs Local Zones (Single-digit ms latency to urban centers) vs Wavelength (5G telco edge).
+
+---
+
+## ⚖️ Dedicated "X vs. Y" Pairwise Distinction Suite
+
+Review all 10 pairwise comparison guides in `notes/distinctions/`:
+1. `AWS_Support_Plans_Comparison_Matrix.md` (Basic vs Developer vs Business vs Enterprise On-Ramp vs Enterprise)
+2. `Disaster_Recovery_Strategies_Comparison.md` (Backup & Restore vs Pilot Light vs Warm Standby vs Multi-Site Active/Active)
+3. `Security_Services_Four_Guardians_Shield_WAF_GuardDuty_Inspector_Macie.md`
+4. `Monitoring_Governance_Trio_CloudWatch_vs_CloudTrail_vs_Config.md`
+5. `KMS_vs_CloudHSM_vs_SecretsManager_vs_ParameterStore.md`
+6. `VPC_Endpoints_Gateway_vs_Interface_vs_PrivateLink.md`
+7. `Hybrid_Networking_DirectConnect_vs_SiteToSiteVPN_vs_TransitGateway.md`
+8. `Storage_and_Hybrid_AWS_Backup_vs_DataSync_vs_StorageGateway.md`
+9. `Developer_and_Mobile_Amplify_vs_DeviceFarm_vs_AppSync.md`
+10. `AWS_Health_Dashboard_Global_vs_Account.md`
+
+---
+
+## 🎯 Master Unique Revision Question Banks
+
+Drill with the **2,350 unique questions** deduplicated across 18 source banks in the Vault:
+- [[Domain_1_Cloud_Concepts_Unique_Questions|Domain 1: Cloud Concepts]] (353 Unique Questions)
+- [[Domain_2_Security_and_Compliance_Unique_Questions|Domain 2: Security & Compliance]] (552 Unique Questions)
+- [[Domain_3_Cloud_Technology_and_Services_Unique_Questions|Domain 3: Cloud Technology & Services]] (909 Unique Questions)
+- [[Domain_4_Billing_Pricing_and_Support_Unique_Questions|Domain 4: Billing, Pricing & Support]] (536 Unique Questions)
+

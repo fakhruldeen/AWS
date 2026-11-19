@@ -66,3 +66,21 @@ graph TD
 * [ ] **CloudFront vs Global Accelerator:**
   * *CloudFront:* Caches web assets (HTTP/HTTPS) at Edge Locations.
   * *Global Accelerator:* Provides 2 static Anycast IPs and routes traffic (including TCP/UDP) over AWS private fiber without caching.
+
+---
+
+## 📚 Canonical Literature & Framework Citations
+
+- **Daswani & Kankaria (Packt, 2026), Chapters 4 & 5:**
+  - Modern compute selection decision tree (EC2, ECS, EKS, Fargate, Lambda).
+  - S3 Express One Zone and modern S3 default encryption behaviors.
+- **Tom Taulli (O'Reilly, 2026), Chapters 3, 4 & 5:**
+  - Database selection guide: OLTP (RDS, Aurora, DynamoDB) vs OLAP (Redshift) vs In-Memory (ElastiCache).
+  - Multi-tier decoupling architectures using Amazon SQS and Amazon EventBridge.
+
+---
+
+## 🎯 Master Unique Practice Questions
+
+- **Practice Set:** [[Domain_3_Cloud_Technology_and_Services_Unique_Questions|Domain 3 Unique Revision Bank]] (909 unique, deduplicated questions across 18 source providers with interactive checkboxes and explanations).
+

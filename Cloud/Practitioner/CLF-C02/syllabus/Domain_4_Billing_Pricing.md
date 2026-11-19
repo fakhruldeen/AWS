@@ -51,3 +51,21 @@ graph TD
   * Must be **activated** in the Billing console before they appear in Cost Explorer or CUR.
 * [ ] **Inbound Data Transfer:**
   * Data transferred **INTO** AWS from the internet is **always \$0.00**.
+
+---
+
+## 📚 Canonical Literature & Framework Citations
+
+- **Daswani & Kankaria (Packt, 2026), Chapter 6 ("Billing, Pricing, and Support"):**
+  - Consolidated Billing mechanics and volume discount tier aggregation rules across AWS Organizations.
+  - Compute Optimizer ML rightsizing heuristics and AWS Budgets automated action triggers.
+- **Tom Taulli (O'Reilly, 2026), Chapter 7 ("Billing, Governance, and Support"):**
+  - Support plan SLA comparison matrices and TAM pooling tiers.
+  - AWS Trusted Advisor 6 pillar checks and cost anomaly detection.
+
+---
+
+## 🎯 Master Unique Practice Questions
+
+- **Practice Set:** [[Domain_4_Billing_Pricing_and_Support_Unique_Questions|Domain 4 Unique Revision Bank]] (536 unique, deduplicated questions across 18 source providers with interactive checkboxes and explanations).
+

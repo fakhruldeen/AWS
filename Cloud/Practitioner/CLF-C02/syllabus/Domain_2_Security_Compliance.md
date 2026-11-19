@@ -55,3 +55,20 @@ graph TD
   * *GuardDuty:* Detects compromised accounts and unauthorized activity from logs.
   * *Inspector:* Scans running EC2 servers and container images for software CVE vulnerabilities.
   * *Macie:* Scans S3 buckets for sensitive personal data (credit card numbers, PII).
+
+---
+
+## 📚 Canonical Literature & Framework Citations
+
+- **Daswani & Kankaria (Packt, 2026), Chapter 3 ("Security, Identity, and Governance"):**
+  - Modern IAM evaluation logic (SCP -> Permission Boundary -> Identity Policy -> Resource Policy).
+  - IAM Identity Center centralized workforce federation architecture.
+- **Tom Taulli (O'Reilly, 2026), Chapter 6 ("Security and Compliance"):**
+  - Defense-in-depth perimeter design: Shield Standard vs Shield Advanced (DDoS cost protection), WAF web ACL rulesets, and KMS envelope encryption.
+
+---
+
+## 🎯 Master Unique Practice Questions
+
+- **Practice Set:** [[Domain_2_Security_and_Compliance_Unique_Questions|Domain 2 Unique Revision Bank]] (552 unique, deduplicated questions across 18 source providers with interactive checkboxes and explanations).
+
