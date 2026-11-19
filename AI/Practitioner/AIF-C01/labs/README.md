@@ -4,6 +4,7 @@
 > **Course:** AWS Certified AI Practitioner (`AIF-C01`)  
 > **Exam Version Alignment:** Official v1.2 (October 2026)  
 > **Visual Screenshot Runbook:** [BROWSER_AGENT_CAPTURE_PROMPT.md](./BROWSER_AGENT_CAPTURE_PROMPT.md)  
+> **Master Safety Guide & Emergency Teardown Runbook:** [LAB_SAFETY_AND_VERIFICATION_GUIDE.md](./LAB_SAFETY_AND_VERIFICATION_GUIDE.md)  
 > **Image Directory:** `AI/Practitioner/AIF-C01/labs/images/`
 
 ---
