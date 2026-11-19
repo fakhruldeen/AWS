@@ -66,6 +66,6 @@ Test your retention of Module 01 concepts. Review each question before checking 
 | **5** | **A** | The Business perspective of CAF aligns cloud investments with business strategy and KPIs. |
 | **6** | **B** | Monthly pay-as-you-go cloud compute is classified as OpEx under standard accounting. |
 | **7** | **B** | Edge locations cache content via Amazon CloudFront to deliver lowest latency to end-users. |
-| **8** | **B** | Pilot Light runs core components (e.g. database replication) with compute scaled down until needed. |
+| **8** | **C** | Warm Standby maintains a scaled-down but live version of the core system running 24/7 that can quickly scale up to full production. (Pilot Light keeps data mirrored, but compute servers are off until disaster). |
 | **9** | **C** | Every AWS Region contains a minimum of 3 physical Availability Zones. |
 | **10** | **B** | Reliability focuses on self-healing recovery, fault tolerance, and multi-AZ resilience. |
