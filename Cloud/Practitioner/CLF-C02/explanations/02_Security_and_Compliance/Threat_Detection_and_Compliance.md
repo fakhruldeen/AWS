@@ -6,6 +6,16 @@
 
 ---
 
+## 💡 The Real-World Analogy (ELI5)
+
+> **Corporate Security & Audit Team:**
+> - **Amazon GuardDuty:** The intelligent AI security guard walking the hallways 24/7. It watches surveillance cameras (CloudTrail logs, VPC flow logs, DNS logs) and spots suspicious behavior (e.g. an employee accessing the server room from a Russian IP at 3 AM).
+> - **Amazon Inspector:** The building fire marshal and structural inspector. It systematically inspects software code, EC2 instances, and container images for known vulnerabilities (CVEs) and open ports before an attacker can exploit them.
+> - **Amazon Macie:** The forensic privacy investigator. It scans every cardboard box in your S3 storage room, detects sensitive personal data (credit card numbers, passports, social security numbers), and alerts you if sensitive data is left in an unencrypted or public bucket.
+> - **AWS Security Hub:** The master security executive dashboard in the CEO's office. It collects alerts from GuardDuty, Inspector, Macie, and IAM Access Analyzer into a single unified security posture score.
+
+---
+
 ## 1. Perimeter & Application Protection: Shield vs. WAF
 
 ```mermaid
@@ -233,6 +243,18 @@ aws auditmanager list-assessments
 ## 7. Post-Topic Question Simulation & Retention Check
 
 Test your understanding of Threat Detection & Compliance with these 5 exam-style questions:
+
+## 🎯 Exam Traps & 'Clue-to-Answer' Trigger Words
+
+| Exam Question Clue Keyword | Correct Service | Exam Trap Tip |
+| :--- | :--- | :--- |
+| *'Intelligent threat detection using ML across CloudTrail, VPC Flow Logs, DNS'* | **Amazon GuardDuty** | Detects unauthorized behavior, crypto-mining, and compromised accounts. |
+| *'Automated vulnerability assessment scanning EC2, ECR, and Lambda for CVEs'* | **Amazon Inspector** | Discovers software package vulnerabilities and network exposure. |
+| *'Discover and protect Personally Identifiable Information (PII) in Amazon S3'* | **Amazon Macie** | Specifically designed for S3 sensitive data discovery. |
+| *'Centralized security score and compliance checks against CIS / PCI-DSS benchmarks'* | **AWS Security Hub** | Aggregates findings from multiple AWS security services. |
+| *'Download AWS compliance reports (SOC 1/2/3, ISO 27001, PCI-DSS) and agreements'* | **AWS Artifact** | Free self-service portal for compliance documentation. |
+
+---
 
 ### Question 1
 **Which AWS service provides intelligent, continuous threat detection by using machine learning to analyze VPC Flow Logs, DNS query logs, and AWS CloudTrail management events?**

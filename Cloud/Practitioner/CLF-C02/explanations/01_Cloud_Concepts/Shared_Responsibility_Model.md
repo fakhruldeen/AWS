@@ -6,6 +6,14 @@
 
 ---
 
+## 💡 The Real-World Analogy (ELI5)
+
+> **Renting an Apartment:**
+> - **The Landlord (AWS — Security OF the Cloud):** The landlord is strictly responsible for the structural foundation of the building, the roof, exterior brick walls, common hallways, physical security cameras at the lobby entrance, plumbing, and electrical grid.
+> - **The Tenant (You — Security IN the Cloud):** You are completely responsible for locking your front door, deciding who gets guest keys, closing your windows when it rains, keeping your private jewelry safe, and setting your home security alarm. If you leave your front door unlocked and invite a stranger in, you cannot blame the landlord!
+
+---
+
 ## 1. Core Principle: Security OF the Cloud vs. Security IN the Cloud
 
 Security and compliance are a **shared effort** between AWS and the customer:
@@ -146,6 +154,19 @@ The **AWS Acceptable Use Policy** stipulates what customers **cannot do** when u
 ## 7. Post-Topic Question Simulation & Retention Check
 
 Test your understanding of the AWS Shared Responsibility Model with these 5 exam-style questions:
+
+## 🎯 Exam Traps & 'Clue-to-Answer' Trigger Words
+
+| Task / Responsibility | Owner: AWS or Customer? | Exam Trap Tip |
+| :--- | :---: | :--- |
+| Physical data center security & biometric guards | **AWS** (Security OF the Cloud) | Customer can never touch physical servers. |
+| Decommissioning and destroying retired hard drives | **AWS** (Security OF the Cloud) | AWS uses NIST 800-88 hardware sanitization. |
+| Operating System patching on Amazon EC2 | **Customer** (Security IN the Cloud) | On EC2, customer owns the OS completely! |
+| Operating System patching on Amazon RDS / DynamoDB | **AWS** (Security OF the Cloud) | RDS is a managed service; AWS patches the OS. |
+| Configuring Security Groups and Network ACLs | **Customer** (Security IN the Cloud) | Customer defines all firewall rules. |
+| Customer data encryption and IAM user passwords | **Customer** (Security IN the Cloud) | Customer always owns and controls their data. |
+
+---
 
 ### Question 1
 **Under the AWS Shared Responsibility Model, which of the following is considered "Security OF the Cloud" and is the exclusive responsibility of AWS?**

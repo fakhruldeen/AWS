@@ -6,6 +6,15 @@
 
 ---
 
+## 💡 The Real-World Analogy (ELI5)
+
+> **The Global Airport System:**
+> - **AWS Region:** A major world metropolitan area (e.g., London, Tokyo, Stockholm). It is an independent geographic territory with multiple physical facilities.
+> - **Availability Zone (AZ):** An individual, fully functional airport terminal within that city (Terminal A, Terminal B, Terminal C). Each terminal has its own independent backup power generators, air filtration, and flood protections, but they are connected to each other by a high-speed underground monorail (< 1 ms latency). If Terminal A has a power failure, flights instantly divert to Terminal B.
+> - **Edge Location (Point of Presence - PoP):** City-center satellite ticket kiosks and package lockers located in hundreds of cities worldwide. Travelers can print boarding passes or pick up deliveries locally without driving all the way to the airport.
+
+---
+
 ## 1. Overview of AWS Global Infrastructure
 
 AWS operates a purpose-built, high-availability global cloud infrastructure consisting of geographically dispersed **Regions**, isolated **Availability Zones (AZs)**, an ultra-fast private global network backbone, and a distributed footprint of **Edge Locations**, **Local Zones**, and **Wavelength Zones**.
@@ -150,6 +159,19 @@ graph TD
 ## 7. Post-Topic Question Simulation & Retention Check
 
 Test your understanding of AWS Global Infrastructure with these 5 exam-style questions:
+
+## 🎯 Exam Traps & 'Clue-to-Answer' Trigger Words
+
+| Exam Question Clue Keyword | Correct Infrastructure Component | Exam Trap Tip |
+| :--- | :--- | :--- |
+| *'One or more discrete data centers with redundant power and networking'* | **Availability Zone (AZ)** | Never confuse an AZ with a single data center (an AZ has $\ge 1$ data centers). |
+| *'Physical location in the world with multiple isolated AZs'* | **AWS Region** | Minimum of 3 AZs per Region for resilience. |
+| *'Cache content closer to worldwide end users with low latency'* | **Edge Location / CloudFront PoP** | Used for CloudFront CDN caching and Route 53 DNS. |
+| *'Ultra-low single-digit millisecond latency for 5G mobile devices'* | **AWS Wavelength** | Embedded in telecom carrier 5G networks. |
+| *'Single-digit millisecond latency in cities with no AWS Region'* | **AWS Local Zones** | Edge compute in major metro areas (e.g., Dallas, Boston). |
+| *'Deploy physical AWS infrastructure racks on-premises in own data center'* | **AWS Outposts** | True hybrid cloud infrastructure managed by AWS. |
+
+---
 
 ### Question 1
 **An architecture requires high availability and automatic failover if a natural disaster floods a single physical facility. How should the application be deployed within an AWS Region?**

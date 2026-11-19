@@ -6,6 +6,16 @@
 
 ---
 
+## 💡 The Real-World Analogy (ELI5)
+
+> **Personal Storage Around Your House:**
+> - **Amazon EBS (Elastic Block Store):** The internal SSD installed directly inside your desktop computer. Ultra-fast, formatted with a filesystem, but hardwired by a cable to that single computer in one room (Availability Zone).
+> - **Amazon EFS (Elastic File System):** A shared home network Wi-Fi hard drive (NAS). Multiple family members across different bedrooms can open and edit the same photo album simultaneously (multi-AZ Linux shared file storage).
+> - **Amazon S3 (Simple Storage Service):** An infinite, magical valet parking garage in the cloud. You hand an item to the valet, receive a unique claim ticket (URL), and retrieve it from anywhere in the world over the internet.
+> - **Amazon S3 Glacier Deep Archive:** A climate-controlled underground salt mine for tax documents you need to keep for 10 years but never look at. Very cheap, but takes 12–48 hours to retrieve a box.
+
+---
+
 ## 1. Architectural Taxonomy of AWS Storage
 
 AWS divides storage services across three fundamental paradigms—**Object Storage**, **Block Storage**, and **File Storage**—alongside hybrid and data transfer appliances:
@@ -83,6 +93,19 @@ flowchart LR
 ## 7. Post-Topic Question Simulation & Retention Check
 
 Test your understanding of AWS Storage Services with these 5 exam-style questions:
+
+## 🎯 Exam Traps & 'Clue-to-Answer' Trigger Words
+
+| Exam Question Clue Keyword | Correct Storage Class / Service | Exam Trap Tip |
+| :--- | :--- | :--- |
+| *'Block storage attached to a single EC2 instance for OS boot drive'* | **Amazon EBS** | Bound to a single AZ; backed up via EBS Snapshots to S3. |
+| *'Shared POSIX file system accessible concurrently by hundreds of Linux EC2s'* | **Amazon EFS** | Automatically grows and shrinks elastically; Multi-AZ. |
+| *'Native Windows file share using SMB protocol'* | **Amazon FSx for Windows File Server** | Built on native Windows Server and Active Directory. |
+| *'High-performance compute (HPC) sub-millisecond scratch storage'* | **Amazon FSx for Lustre** | Optimized for fast machine learning and video rendering. |
+| *'Long-term archival storage at lowest cost, 12-48 hour retrieval'* | **S3 Glacier Deep Archive** | Lowest cost storage in AWS;  per TB per month. |
+| *'Hybrid cloud storage appliance connecting on-prem to S3'* | **AWS Storage Gateway** | Volume Gateway, Tape Gateway, File Gateway (S3 File Gateway). |
+
+---
 
 ### Question 1
 **Which Amazon S3 storage class automatically optimizes customer costs by analyzing access patterns and moving objects between frequent and infrequent access tiers without operational overhead or retrieval fees?**

@@ -6,6 +6,16 @@
 
 ---
 
+## 💡 The Real-World Analogy (ELI5)
+
+> **The 4 DR Strategies as Spare Tire Options:**
+> 1. **Backup & Restore (Hours/Days):** Keeping a patch kit and hand pump in the trunk. Cheap to carry, but takes hours on the side of the road to patch the tire and pump it up.
+> 2. **Pilot Light (Tens of Minutes):** Keeping a deflated spare tire and an electric air compressor in the trunk. The core wheel is ready, but you must plug in the compressor and inflate it before you can drive.
+> 3. **Warm Standby (Minutes):** Keeping an inflated donut spare tire mounted on the axle, but driving slowly until you reach a mechanic. A scaled-down version of your full system running 24/7.
+> 4. **Multi-Site Active/Active (Real-Time Zero Downtime):** Driving an 18-wheel tractor-trailer with dual tires on every axle. If one tire blows out at 70 mph, the vehicle keeps rolling without skipping a beat.
+
+---
+
 ## 1. Resilience Terminology: HA vs. FT vs. DR
 
 * **High Availability (HA):** Systems designed to operate continuously without failure for a long period of time (typically measured in 99.9% to 99.999% uptime). Achieved by eliminating single points of failure across multiple Availability Zones (Multi-AZ).
@@ -107,6 +117,19 @@ flowchart LR
 ## 7. Post-Topic Question Simulation & Retention Check
 
 Test your understanding of Disaster Recovery & High Availability with these 5 exam-style questions:
+
+## 🎯 Exam Traps & 'Clue-to-Answer' Trigger Words
+
+| Exam Question Clue Keyword | Correct DR Strategy / Concept | Key Difference |
+| :--- | :--- | :--- |
+| *'Maximum acceptable downtime before system is restored'* | **RTO (Recovery Time Objective)** | Focuses on **Time** / Clock downtime. |
+| *'Maximum acceptable data loss measured in time'* | **RPO (Recovery Point Objective)** | Focuses on **Data** freshness / backup frequency. |
+| *'Lowest cost DR strategy, acceptable downtime of hours'* | **Backup & Restore** | Data backed up to S3; spun up only after disaster. |
+| *'Core database replication live, compute spun up on disaster'* | **Pilot Light** | Database running minimal; app servers zero. |
+| *'Scaled-down version of full environment running 24/7'* | **Warm Standby** | Can handle minimal production traffic immediately. |
+| *'Zero downtime, full multi-region active traffic handling'* | **Multi-Site Active/Active** | Highest cost, lowest RTO/RPO (near zero). |
+
+---
 
 ### Question 1
 **An application requires a Disaster Recovery strategy that provides the lowest possible ongoing infrastructure cost while tolerating several hours of Recovery Time Objective (RTO) and Recovery Point Objective (RPO). Which DR strategy should be selected?**

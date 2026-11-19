@@ -6,6 +6,14 @@
 
 ---
 
+## 💡 The Real-World Analogy (ELI5)
+
+> **Renting an Apartment vs. Buying a Condominium:**
+> - **Traditional On-Premises (CapEx):** Buying a condo outright. You must pay a massive upfront cash down payment, pay for property taxes, replace the roof, maintain the boiler, and pay the electric bill every month whether you live there or travel. If your family grows, you must sell the condo and wait months to buy a bigger house.
+> - **AWS Cloud Computing (OpEx):** Booking a fully furnished luxury suite on Airbnb. Zero upfront down payment. You pay strictly for the nights you stay. Electricity, heating, maintenance, and physical security are included in the nightly price. If you need 10 extra rooms for family visiting this weekend, you rent 10 rooms instantly and release them Monday morning.
+
+---
+
 ## 1. Fundamental Financial Shift: CapEx vs. OpEx
 
 Cloud computing transforms corporate finance by shifting IT spending from upfront capital investments to ongoing operational expenses:
@@ -124,6 +132,18 @@ AWS provides flexible licensing models to accommodate enterprise software:
 ## 7. Post-Topic Question Simulation & Retention Check
 
 Test your understanding of Cloud Economics and TCO with these 5 exam-style questions:
+
+## 🎯 Exam Traps & 'Clue-to-Answer' Trigger Words
+
+| Exam Question Clue Keyword | Correct Concept | Exam Trap Tip |
+| :--- | :--- | :--- |
+| *'Heavy upfront investment', 'hardware procurement', 'depreciation'* | **Capital Expenditure (CapEx)** | On-premises traditional IT; cloud eliminates this. |
+| *'Pay only for what you consume', 'utility billing', 'operational expense'* | **Operational Expenditure (OpEx)** | Core cloud economic model. |
+| *'Overprovisioning to meet peak traffic', 'idle servers outside Christmas'* | **Stop Guessing Capacity** | Solved by EC2 Auto Scaling. |
+| *'Lower prices over time due to aggregated customer volume'* | **Massive Economies of Scale** | Over 130+ proactive AWS price cuts historically. |
+| *'Racking, stacking, server cabling, data center air conditioning'* | **Undifferentiated Heavy Lifting** | Tasks that cost money but deliver zero unique business value. |
+
+---
 
 ### Question 1
 **An enterprise is evaluating moving its on-premises data center to AWS. Which financial benefit allows the company to replace large upfront hardware capital investments with ongoing pay-as-you-go operational expenses?**

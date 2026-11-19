@@ -6,6 +6,16 @@
 
 ---
 
+## 💡 The Real-World Analogy (ELI5)
+
+> **Modes of Transportation:**
+> - **Amazon EC2 (IaaS):** Buying a personal car. You choose the exact engine size, seat fabric, and transmission. You are 100% responsible for changing the oil, replacing the tires, and pumping gas (patching the OS and configuring firewall ports).
+> - **AWS Elastic Beanstalk (PaaS):** Leasing a car with a full maintenance contract. You just bring your luggage (code), turn the ignition key, and drive. The leasing company handles oil changes and engine tuning.
+> - **AWS Lambda (Serverless FaaS):** Hailing an Uber or taxi. You don't buy a car, pay for gas, or park it. The car appears instantly when you need a ride, drives you for 5 minutes, and disappears. You pay strictly for the exact minutes and miles traveled. When not riding, you pay literally bash.00.
+> - **Amazon ECS & EKS (Containers):** Standard shipping containers. Whether you transport electronics, furniture, or food, the standardized container fits on any cargo ship, freight train, or flatbed truck.
+
+---
+
 ## 1. Architectural Taxonomy of AWS Compute
 
 AWS compute services span four distinct operational models, ranging from direct virtual server control to serverless function execution:
@@ -80,6 +90,18 @@ flowchart LR
 ## 7. Post-Topic Question Simulation & Retention Check
 
 Test your understanding of AWS Compute Services with these 5 exam-style questions:
+
+## 🎯 Exam Traps & 'Clue-to-Answer' Trigger Words
+
+| Exam Question Clue Keyword | Correct Compute Option | Key Constraint |
+| :--- | :--- | :--- |
+| *'Event-driven, pay per millisecond, zero server management'* | **AWS Lambda** | Max execution timeout is **15 minutes**. |
+| *'Run containers without provisioning or managing EC2 virtual servers'* | **AWS Fargate** | Serverless container compute engine for ECS and EKS. |
+| *'Fault-tolerant batch jobs, non-critical workloads, up to 90% discount'* | **EC2 Spot Instances** | Can be interrupted with a **2-minute notice**. |
+| *'Dedicated physical server for per-socket software licensing (BYOL)'* | **EC2 Dedicated Hosts** | Provides socket and core visibility for regulatory compliance. |
+| *'Deploy web application code without managing underlying infrastructure'* | **AWS Elastic Beanstalk** | PaaS service; handles provisioning, load balancing, auto scaling. |
+
+---
 
 ### Question 1
 **Which EC2 pricing option offers up to a 90% discount on on-demand rates by allowing workloads to run on spare, unused EC2 capacity with the caveat that instances can be terminated with a 2-minute notice?**

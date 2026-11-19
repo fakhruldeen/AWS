@@ -6,6 +6,16 @@
 
 ---
 
+## 💡 The Real-World Analogy (ELI5)
+
+> **Healthcare Coverage Tiers:**
+> - **Basic Support (Free):** The emergency first-aid kit in your home cabinet. You can read the instruction manual and call billing if your card is charged wrongly, but you cannot call a nurse.
+> - **Developer Support (9/mo):** Telehealth clinic during business hours. 1 primary contact can ask general guidance questions with a 12–24 hour callback time.
+> - **Business Support (00/mo+):** 24/7 urgent care emergency room. Unlimited contacts can call or live chat anytime; doctors arrive within 1 hour if your production system is down. Full Trusted Advisor health checks.
+> - **Enterprise Support (5,000/mo+):** A personal, dedicated concierge doctor (Technical Account Manager - TAM) living on your property who reviews your architecture, participates in disaster game days, and rushes into the room in under 15 minutes if a crisis occurs.
+
+---
+
 ## 1. Overview & Comparison Matrix
 
 AWS provides four primary commercial support tiers designed to meet varying business needs, from hobbyists and experimenters to mission-critical global enterprises.
@@ -82,6 +92,19 @@ flowchart LR
 ## 7. Post-Topic Question Simulation & Retention Check
 
 Test your understanding of AWS Support Plans & Marketplace with these 5 exam-style questions:
+
+## 🎯 Exam Traps & 'Clue-to-Answer' Trigger Words
+
+| Support Plan Feature | Developer | Business | Enterprise On-Ramp | Enterprise |
+| :--- | :---: | :---: | :---: | :---: |
+| **Technical Account Manager (TAM)** | No | No | Pool of TAMs | **Dedicated TAM** |
+| **Critical System Down SLA** | None | < 1 hr (Production down) | < 30 min (Business-critical) | **< 15 min** (Business-critical) |
+| **Who can open support cases?** | 1 primary contact | Unlimited contacts | Unlimited contacts | Unlimited contacts |
+| **Support Channels** | Business hours email | 24/7 phone, web, chat | 24/7 phone, web, chat | 24/7 phone, web, chat |
+| **Infrastructure Event Management (IEM)** | No | Available for fee | 1 event / year | **Included** |
+| **AWS Trusted Advisor** | 7 core checks | **Full 115+ checks** | **Full 115+ checks** | **Full 115+ checks** |
+
+---
 
 ### Question 1
 **Which AWS Support plan is the lowest-tier plan that provides 24/7 access to Cloud Support Engineers via phone, email, and chat for an unlimited number of contacts?**

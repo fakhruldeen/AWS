@@ -6,6 +6,16 @@
 
 ---
 
+## 💡 The Real-World Analogy (ELI5)
+
+> **Big Data & Artificial Intelligence Factory:**
+> - **Amazon Athena:** An interactive searchlight. Instead of importing millions of spreadsheets into a database, you shine a light directly at your files in Amazon S3 and run SQL queries immediately on demand.
+> - **AWS Glue:** The automated data cleaning assembly line. It crawls messy data files, cataloging and transforming them so data analysts can use them (ETL — Extract, Transform, Load).
+> - **Amazon EMR:** A fleet of giant industrial dump trucks running Apache Spark and Hadoop for massive distributed petabyte data processing.
+> - **Amazon Bedrock:** An AI vending machine. You don't train massive multi-billion parameter neural networks yourself; you swipe your API card and get instant access to leading foundation models (Claude, Titan, Llama).
+
+---
+
 ## 1. Architectural Taxonomy of AWS Analytics
 
 AWS provides an end-to-end analytics stack covering the complete lifecycle: **Ingestion & Streaming**, **Data Lake & Catalogs**, **Data Warehousing**, **Big Data Frameworks**, **Interactive SQL**, **Log Analytics**, and **Business Intelligence**:
@@ -72,6 +82,21 @@ flowchart TD
 ## 7. Post-Topic Question Simulation & Retention Check
 
 Test your understanding of Analytics, AI & Migration with these 5 exam-style questions:
+
+## 🎯 Exam Traps & 'Clue-to-Answer' Trigger Words
+
+| Exam Question Clue Keyword | Correct Service | Exam Trap Tip |
+| :--- | :--- | :--- |
+| *'Serverless interactive query service analyzing data directly in S3 with standard SQL'* | **Amazon Athena** | Pay only for bytes scanned by queries; no servers to manage. |
+| *'Serverless Extract, Transform, and Load (ETL) and centralized Data Catalog'* | **AWS Glue** | Discovers data schema automatically via Glue Crawlers. |
+| *'Serverless business intelligence (BI) dashboard and interactive data visualization'* | **Amazon QuickSight** | Pay-per-session pricing; ML-powered insights. |
+| *'Real-time streaming data ingestion and processing at massive scale'* | **Amazon Kinesis** | Kinesis Data Streams / Data Firehose. |
+| *'Build, train, and deploy custom machine learning models end-to-end'* | **Amazon SageMaker** | Comprehensive ML platform for data scientists. |
+| *'Access leading foundation models via an API without managing infrastructure'* | **Amazon Bedrock** | Serverless Generative AI service. |
+| *'Migrate on-premises physical, virtual, or cloud servers to AWS with minimal downtime'* | **AWS Application Migration Service (MGN)** | Continuous block-level data replication. |
+| *'Migrate relational and NoSQL databases to AWS with zero downtime'* | **AWS Database Migration Service (DMS)** | Source database remains fully operational during migration. |
+
+---
 
 ### Question 1
 **Which serverless interactive query service allows analyzing data directly in Amazon S3 using standard SQL without needing to load or manage database infrastructure?**
