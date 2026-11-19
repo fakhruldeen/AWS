@@ -3,7 +3,9 @@
 > **Module:** Domain-Mapped Revision Questions & Full-Length Practice Exams  
 > **Course:** AWS Certified AI Practitioner (`AIF-C01`)  
 > **Exam Version Alignment:** Official v1.2 (October 2026)  
-> **Total Question Bank:** 140 Questions (75 Domain Revision Questions + Full 65-Question Timed Mock Exam)
+> **Total Question Bank:** 140 Questions (75 Domain Revision Questions + Full 65-Question Timed Mock Exam)  
+> **Master Knowledge Brain Link:** For the complete offline repository of **1,814 unique deduplicated practice questions** across all 5 domains (with 23% redundancy eliminated from 17 public banks), see the Knowledge Vault at `Brain/AWS/Questions_Bank/Unique_Revision_Banks/AI_Practitioner_AIF-C01/`.
+
 
 ---
 
