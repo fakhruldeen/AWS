@@ -133,6 +133,17 @@ aws ec2 describe-instance-status \
 
 ---
 
+## 🎯 Exam Practice: Scenarios & Traps
+
+| Exam Scenario | Correct Recommendation | Why Distractors Fail |
+|---|---|---|
+| *"An EC2 instance fails its System Status Check due to an underlying physical host hardware degradation. What is the immediate recommended action?"* | **Stop and then Start the instance** | Simply rebooting the OS keeps the instance on the same damaged physical host. Stopping and starting moves the instance to a healthy physical host. |
+| *"A cloud administrator needs to automatically install Apache web server and clone a Git repo every time an EC2 instance launches from a standard base AMI."* | **Provide a shell script in the EC2 User Data field** | Instance Metadata is read-only information about the instance. CloudWatch monitors metrics; it does not bootstrap software. |
+| *"From inside an EC2 instance, an application needs to query its own public IP address and Availability Zone. What URL endpoint should it query?"* | **The Instance Metadata service at `http://169.254.169.254/latest/meta-data/`** | `user-data` returns the bootstrap script, not live operational metadata. Localhost `127.0.0.1` has no AWS metadata knowledge. |
+| *"When does AWS charge for an Elastic IP (EIP) address?"* | **When the Elastic IP is allocated in your account but NOT associated with a running EC2 instance (or when attached to a stopped instance)** | AWS provides one free Elastic IP while it is actively associated with a running instance to encourage efficient IPv4 utilization. |
+
+---
+
 ## 🧹 Free Tier Cleanup & Cost Safeguard
 
 > [!WARNING]

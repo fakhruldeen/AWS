@@ -115,6 +115,17 @@ aws rds describe-db-subnet-groups \
 
 ---
 
+## 🎯 Exam Practice: Scenarios & Traps
+
+| Exam Scenario | Correct Recommendation | Why Distractors Fail |
+|---|---|---|
+| *"A business needs its relational MySQL database to achieve high availability with zero data loss and automated failover in case an Availability Zone suffers an outage."* | **Enable Amazon RDS Multi-AZ Deployment** | Read Replicas are asynchronous and designed for read scaling, not immediate automated failover. S3 backups take hours to restore. |
+| *"A reporting dashboard is causing severe CPU contention on the primary production database due to heavy read-only SQL queries. How can this be resolved without downtime?"* | **Create one or more Amazon RDS Read Replicas and point the reporting dashboard to the read replica endpoints** | Multi-AZ standby instances are synchronous disaster recovery copies and cannot accept read queries. Upgrading instance size requires brief maintenance downtime. |
+| *"Which cloud-native AWS database engine replicates 6 copies of data across 3 Availability Zones and delivers up to 5x the throughput of standard MySQL?"* | **Amazon Aurora** | Standard Amazon RDS MySQL stores data on single-AZ EBS volumes with optional synchronous replication to one standby. Aurora replicates 6 ways across 3 AZs by default. |
+| *"What administrative task remains the customer's responsibility when running Amazon RDS under the Shared Responsibility Model?"* | **Optimizing database queries, building schema tables, and managing database user credentials** | AWS manages OS installation, OS security patches, underlying hardware, and automated disk storage backups. |
+
+---
+
 ## 🧹 Free Tier Cleanup & Cost Safeguard
 > [!CAUTION]
 > Even under the Free Tier, keeping active RDS instances running long-term will exhaust your 750 monthly free hours. Always delete when done.

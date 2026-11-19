@@ -138,6 +138,17 @@ aws efs describe-file-systems \
 
 ---
 
+## 🎯 Exam Practice: Scenarios & Traps
+
+| Exam Scenario | Correct Recommendation | Why Distractors Fail |
+|---|---|---|
+| *"A fleet of 50 EC2 instances running across multiple Availability Zones in a region need concurrent read and write access to a shared POSIX file system."* | **Amazon Elastic File System (Amazon EFS)** | Amazon EBS is locked to a single Availability Zone and cannot be mounted simultaneously across multiple AZs. S3 is object storage, not a POSIX file system. |
+| *"An application requires high-performance temporary cache storage with maximum disk I/O speed. The data is non-critical and can be regenerated if lost upon stopping the server."* | **Amazon EC2 Instance Store (Ephemeral Storage)** | EBS volumes incur network latency as network-attached block devices. Instance Store provides physically attached NVMe speed, but is ephemeral. |
+| *"How are Amazon EBS Snapshots backed up and billed?"* | **They are stored in Amazon S3 and are incremental (billing only for changed blocks since the last snapshot)** | Snapshots do not duplicate unchanged data; they store only the delta blocks in Amazon S3. |
+| *"Can an Amazon EBS volume be attached to an EC2 instance in a different Availability Zone?"* | **No. EBS volumes are single-AZ resources and must reside in the exact same Availability Zone as the EC2 instance** | To move an EBS volume across AZs, you must take an EBS Snapshot and restore it as a new volume in the target AZ. |
+
+---
+
 ## 🧹 Free Tier Cleanup & Cost Safeguard
 1. In the **EC2 Console**, go to **Volumes** -> Select the 20 GiB volume -> Click **Actions** -> **Detach volume** (wait for `Available`), then **Delete volume**.
 2. Go to **Snapshots** -> Select your snapshot -> Click **Actions** -> **Delete snapshot**.

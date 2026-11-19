@@ -117,6 +117,17 @@ aws dynamodb describe-table \
 
 ---
 
+## 🎯 Exam Practice: Scenarios & Traps
+
+| Exam Scenario | Correct Recommendation | Why Distractors Fail |
+|---|---|---|
+| *"An application requires a serverless NoSQL database that can store JSON user profile documents and guarantees single-digit millisecond response times at massive scale."* | **Amazon DynamoDB** | Amazon RDS and Aurora are relational SQL engines requiring schema migrations and instance management. DynamoDB is serverless NoSQL. |
+| *"A gaming leaderboard running on DynamoDB requires sub-millisecond (microsecond) read response times during international tournaments."* | **Amazon DynamoDB Accelerator (DAX)** | ElastiCache Redis requires application code refactoring. DAX is a seamless, API-compatible in-memory cache purpose-built for DynamoDB. |
+| *"A mobile app experiences unpredictable, spiky viral traffic bursts with long quiet periods. How should DynamoDB capacity be configured to optimize cost?"* | **On-Demand Capacity Mode** | Provisioned capacity requires estimating RCUs/WCUs and will either throttle during sudden spikes or waste money during quiet periods. |
+| *"An enterprise must deploy a multi-region active-active database that allows users in Tokyo, London, and Virginia to read and write locally with automatic multi-directional replication."* | **Amazon DynamoDB Global Tables** | Amazon RDS Multi-AZ does not support multi-master writes across multiple global AWS regions. DynamoDB Global Tables provides fully managed multi-region active-active replication. |
+
+---
+
 ## 🧹 Free Tier Cleanup & Cost Safeguard
 > [!NOTE]
 > DynamoDB provides **25 GB of storage** and 25 WCU/RCU in the Always Free tier.

@@ -1,21 +1,21 @@
-# 🔬 AWS Certified AI Practitioner (AIF-C01) Student Labs Guide
+# 🔬 AWS Certified AI Practitioner (AIF-C01) Guided Student Labs
 
-> **Module:** Hands-On Visual Student Labs  
+> **Module:** Self-Contained Guided Hands-On Student Labs  
 > **Course:** AWS Certified AI Practitioner (`AIF-C01`)  
 > **Exam Version Alignment:** Official v1.2 (October 2026)  
-> **Visual Screenshot Runbook:** [BROWSER_AGENT_CAPTURE_PROMPT.md](./BROWSER_AGENT_CAPTURE_PROMPT.md)  
 > **Master Safety Guide & Emergency Teardown Runbook:** [LAB_SAFETY_AND_VERIFICATION_GUIDE.md](./LAB_SAFETY_AND_VERIFICATION_GUIDE.md)  
-> **Image Directory:** `AI/Practitioner/AIF-C01/labs/images/`
+> **Format:** 100% Written Guided Walkthroughs with Mermaid Architectures, Step-by-Step Console Options, AWS CLI v2 Runbooks, and Exam Scenario Matrices (No reliance on screenshots).
 
 ---
 
-## 🎯 Hands-On Philosophy & Safety Standards
+## 🎯 Hands-On Philosophy & Exam Alignment Standards
 
-Every lab in this curriculum follows four pedagogical standards:
-1. **Zero / Minimal Cost:** Labs utilize AWS Free Tier allocations or lightweight pay-per-token models (total cost across all 12 labs is typically $<\$1.50$).
-2. **Step-by-Step Console Guidance:** Numbered walkthroughs with explicit visual screenshot references.
-3. **AWS CLI v2 Equivalents:** Production commands provided for scriptability and terminal mastery.
-4. **Mandatory Teardown Checklists:** Clear deletion instructions to prevent unexpected charges.
+Every lab in this curriculum is engineered to directly prepare students for official exam scenarios:
+1. **100% Text-Guided Self-Sufficiency:** Every UI button, dropdown value, configuration parameter, and input prompt is detailed explicitly in text—allowing students to complete labs smoothly without external media dependencies.
+2. **Dedicated Exam Scenario Matrices:** Every lab features an **Exam Practice: Scenarios & Traps** section directly connecting configuration options to real exam distractor choices.
+3. **AWS CLI v2 Equivalents:** Production commands provided with expected JSON responses for programmatic terminal mastery.
+4. **Mandatory Cost Safeguards & Teardowns:** Clear, step-by-step deletion runbooks to prevent unexpected cloud charges.
+
 
 ---
 

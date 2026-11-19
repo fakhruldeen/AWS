@@ -147,6 +147,17 @@ aws ec2 describe-network-acls \
 
 ---
 
+## 🎯 Exam Practice: Scenarios & Traps
+
+| Exam Scenario | Correct Recommendation | Why Distractors Fail |
+|---|---|---|
+| *"A security administrator needs to block a specific malicious IP address (`198.51.100.25`) from connecting to all web servers in a subnet."* | **Add a DENY rule for `198.51.100.25` in the subnet's Network ACL (NACL)** | Security Groups do NOT support DENY rules (they only support ALLOW rules). Explicit IP blocking requires a Network ACL. |
+| *"You allow inbound HTTP traffic on port 80 in a Security Group. Why do you NOT need to configure an outbound rule for the web server to send responses back?"* | **Security Groups are stateful; return traffic is automatically allowed regardless of outbound rules** | Network ACLs are stateless and would require explicit outbound rules, but Security Groups automatically track connection state. |
+| *"In a Network ACL, Rule 100 allows all HTTP traffic, and Rule 200 denies all traffic. An incoming HTTP packet arrives. What action is taken?"* | **The packet is ALLOWED** | Network ACLs process rules in strict numerical order starting with the lowest number. Rule 100 matches first and allows the packet; Rule 200 is never evaluated. |
+| *"A compliance team needs to audit accepted and rejected network connection attempts across their VPC. What feature should they enable?"* | **VPC Flow Logs (publishing to CloudWatch Logs or S3)** | CloudTrail logs management API calls (who created a subnet), not packet connection flows. AWS Config tracks resource configuration changes. |
+
+---
+
 ## 🧹 Free Tier Cleanup & Cost Safeguard
 1. Navigate to **Security Groups** -> Select `web-tier-sg` -> Click **Actions** -> **Delete security group**.
 2. If VPC Flow Logs were created, select your VPC -> **Flow logs** tab -> Select flow log -> **Delete flow log**.

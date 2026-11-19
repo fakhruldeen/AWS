@@ -135,6 +135,17 @@ curl -I http://YOUR-CLOUDFRONT-DOMAIN.cloudfront.net
 
 ---
 
+## 🎯 Exam Practice: Scenarios & Traps
+
+| Exam Scenario | Correct Recommendation | Why Distractors Fail |
+|---|---|---|
+| *"A website needs to point its root apex domain name (`example.com`) directly to an Application Load Balancer. Standard DNS CNAME records cannot be used at the root level. What should be configured?"* | **Create an Amazon Route 53 Alias Record** | DNS RFC prohibits CNAME records on the zone apex. Route 53 Alias records are AWS-native pointers that work seamlessly at the root level and update automatically when underlying ALB IPs change. |
+| *"A media streaming website has global users in Australia and Europe complaining of slow video buffering from a centralized S3 bucket in Virginia. How can latency be reduced globally?"* | **Deploy an Amazon CloudFront Distribution in front of the S3 bucket** | Moving the S3 bucket to Australia only harms European users. CloudFront caches content at 600+ Points of Presence worldwide, serving data from local edge caches. |
+| *"How can a company strictly enforce that users cannot bypass a CloudFront CDN and access the underlying private Amazon S3 bucket directly?"* | **Configure Origin Access Control (OAC) on the CloudFront distribution and restrict the S3 bucket policy** | Bucket policies alone without OAC will either block CloudFront or expose the bucket publicly. OAC signs requests from CloudFront to S3. |
+| *"What is the primary difference between Amazon CloudFront and AWS Global Accelerator?"* | **CloudFront caches content (HTTP/S) at Edge Locations; Global Accelerator does NOT cache, but provides 2 static Anycast IPs to route TCP/UDP traffic over AWS's private network** | Both leverage AWS global edge infrastructure, but Global Accelerator is for non-HTTP routing and static IP preservation without content caching. |
+
+---
+
 ## 🧹 Free Tier Cleanup & Cost Safeguard
 > [!NOTE]
 > Route 53 charges \$0.50 per hosted zone per month. Delete hosted zones when testing is complete.

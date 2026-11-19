@@ -176,6 +176,17 @@ aws autoscaling describe-scaling-activities \
 
 ---
 
+## 🎯 Exam Practice: Scenarios & Traps
+
+| Exam Scenario | Correct Recommendation | Why Distractors Fail |
+|---|---|---|
+| *"An e-commerce website experiences sudden morning traffic spikes and needs its web tier to scale out automatically to maintain average CPU utilization at 65%."* | **Configure an Auto Scaling Group with a Target Tracking Scaling Policy** | Simple scaling requires manual threshold step configuration. Target Tracking acts like a thermostat, dynamically scaling capacity to keep the metric at the target. |
+| *"An enterprise needs to route incoming HTTP traffic to different backend microservice target groups based on URL paths (`/api` vs `/images`). Which load balancer is required?"* | **Application Load Balancer (ALB)** | Network Load Balancer (NLB) operates at Layer 4 (TCP/UDP) and cannot read HTTP URL paths or headers. Gateway Load Balancers inspect third-party firewall traffic. |
+| *"An EC2 instance behind an Application Load Balancer fails its HTTP health check for 3 consecutive intervals. What does the Auto Scaling Group do if configured with ELB health checks?"* | **The ASG marks the instance unhealthy, terminates it, and launches a fresh replacement instance** | Without ELB health checks enabled on the ASG, the ASG only monitors physical EC2 hardware, leaving a broken web server running. |
+| *"Which load balancer type is engineered for extreme performance, capable of handling millions of requests per second with single-digit millisecond latency and providing a static Anycast IP address per AZ?"* | **Network Load Balancer (NLB)** | ALB is optimized for Layer 7 advanced routing. NLB is engineered for raw Layer 4 ultra-low latency and static IP preservation. |
+
+---
+
 ## 🧹 Free Tier Cleanup & Cost Safeguard
 
 > [!WARNING]

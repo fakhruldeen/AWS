@@ -157,6 +157,17 @@ aws configservice get-compliance-summary-by-config-rule \
 
 ---
 
+## 🎯 Exam Practice: Scenarios & Traps
+
+| Exam Scenario | Correct Recommendation | Why Distractors Fail |
+|---|---|---|
+| *"A security analyst needs to find out which IAM user terminated a production EC2 instance at 2:00 AM last night, including their source IP address."* | **AWS CloudTrail Event History (`StopInstances` / `TerminateInstances` API calls)** | CloudWatch monitors performance metrics (CPU/Disk), not identity or API call provenance. AWS Config tracks configuration changes, not API credentials. |
+| *"An administrator needs to receive an automated SMS alert when the CPU utilization of an EC2 instance exceeds 85% for 5 consecutive minutes."* | **Amazon CloudWatch Alarm sending a notification to an Amazon SNS Topic** | CloudTrail records API calls, not real-time resource utilization percentages. Config audits rule compliance. |
+| *"A compliance officer requires a timeline of changes made to a security group over the last 90 days to verify whether port 22 was ever opened to the public internet."* | **AWS Config Configuration Timeline** | CloudTrail tells you who called `AuthorizeSecurityGroupIngress`, but AWS Config tracks the exact state and timeline of the resource over time. |
+| *"How can an organization collect memory utilization and disk space metrics from an EC2 instance into Amazon CloudWatch?"* | **Install and configure the unified CloudWatch Agent on the EC2 instance OS** | Standard CloudWatch hypervisor metrics only track CPU, Network, and Disk I/O. Memory and disk space are guest OS metrics requiring the CloudWatch Agent. |
+
+---
+
 ## 🧹 Free Tier Cleanup & Cost Safeguard
 > [!WARNING]
 > AWS Config charges per configuration item recorded ($0.003 per item) and per rule evaluation.

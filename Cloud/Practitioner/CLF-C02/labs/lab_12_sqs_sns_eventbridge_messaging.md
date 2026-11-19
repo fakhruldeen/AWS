@@ -162,6 +162,17 @@ aws sqs receive-message \
 
 ---
 
+## 🎯 Exam Practice: Scenarios & Traps
+
+| Exam Scenario | Correct Recommendation | Why Distractors Fail |
+|---|---|---|
+| *"An e-commerce application needs to decouple its web order checkout tier from its backend invoice generator so that a surge in orders does not crash the database."* | **Amazon Simple Queue Service (Amazon SQS)** | SQS acts as a buffer, allowing orders to queue up safely while backend workers process them at their own pace. |
+| *"A banking system processes financial fund transfers and strictly requires that transactions are executed in the exact order they were received with zero duplicate messages."* | **Amazon SQS FIFO Queue** | Standard SQS queues offer best-effort ordering and at-least-once delivery (duplicates are possible). FIFO ensures First-In-First-Out strict order and exactly-once processing. |
+| *"When an order is placed, an application must simultaneously notify the shipping system, charge the credit card, and send a confirmation email. How should this fanout pattern be built?"* | **Publish to an Amazon SNS Topic subscribed to multiple Amazon SQS queues (SNS-to-SQS Fanout)** | SQS alone is a 1-to-1 queue; once a consumer reads a message, it is hidden from others. SNS delivers pub/sub 1-to-many fanout. |
+| *"A cloud architect wants an automated serverless rule that runs a Lambda function every time an EC2 instance is terminated in the account."* | **Amazon EventBridge Rule matching the AWS API Call / State Change event pattern** | SQS does not monitor AWS infrastructure state changes automatically; EventBridge is AWS's native serverless event bus. |
+
+---
+
 ## 🧹 Free Tier Cleanup & Cost Safeguard
 > [!NOTE]
 > Amazon SNS (1 million requests/mo) and Amazon SQS (1 million requests/mo) are part of the Always Free tier.

@@ -136,6 +136,17 @@ aws ecs describe-tasks \
 
 ---
 
+## 🎯 Exam Practice: Scenarios & Traps
+
+| Exam Scenario | Correct Recommendation | Why Distractors Fail |
+|---|---|---|
+| *"A company wants to run Docker containers on AWS without provisioning, configuring, or scaling underlying virtual machine instances."* | **AWS Fargate (Serverless Container Compute)** | Running ECS with the EC2 Launch Type requires managing, patching, and maintaining EC2 instances. Fargate is serverless. |
+| *"An enterprise needs a private, secure Docker container image registry integrated with AWS IAM and automated vulnerability scanning."* | **Amazon Elastic Container Registry (ECR)** | Amazon S3 stores raw object files, not container image layers with Docker registry APIs. CodeCommit is a Git repository. |
+| *"When should a company choose Amazon EKS over Amazon ECS?"* | **When they have existing Kubernetes manifests and desire cross-cloud/on-prem Kubernetes compatibility** | Amazon ECS is AWS-proprietary and easier to operate, but lacks direct Kubernetes API compatibility. |
+| *"What is the primary configuration blueprint that defines container images, memory, CPU allocations, and port mappings in Amazon ECS?"* | **ECS Task Definition** | An ECS Cluster is a logical grouping. An ECS Service maintains task counts. The Task Definition is the JSON blueprint defining container specs. |
+
+---
+
 ## 🧹 Free Tier Cleanup & Cost Safeguard
 1. In the **ECS Console**, open `microservices-fargate-cluster` -> Select `web-microservice` -> Click **Delete service** (confirm with "delete").
 2. Select `microservices-fargate-cluster` -> Click **Delete cluster**.

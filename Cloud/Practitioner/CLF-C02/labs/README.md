@@ -3,8 +3,10 @@
 > **Course Workspace:** `/home/mohamed/Desktop/Work/aws/Cloud/Practitioner/CLF-C02/labs`  
 > **Author & Lead Trainer:** Mohamed Fakhruldeen  
 > **Region:** `eu-north-1` (Stockholm) — 100% Free-Tier / Zero-Cost Optimized  
-> **Architecture:** Conceptual Refresher ➔ Step-by-Step Console Walkthrough (with Screenshots) ➔ AWS CLI v2 Verification ➔ Cost Teardown Safeguards  
+> **Architecture:** Conceptual Refresher ➔ Detailed Step-by-Step Console Walkthrough ➔ AWS CLI v2 Verification ➔ Dedicated Exam Practice Matrices (Scenarios & Traps) ➔ Cost Teardown Safeguards  
+> **Format:** 100% Self-Contained Written Guided Labs (No reliance on external screenshots)  
 > **Master Safety Guide & Cleanup Runbook:** [LAB_SAFETY_AND_VERIFICATION_GUIDE.md](LAB_SAFETY_AND_VERIFICATION_GUIDE.md)
+
 
 ---
 

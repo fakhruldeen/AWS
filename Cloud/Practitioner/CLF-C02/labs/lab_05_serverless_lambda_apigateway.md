@@ -168,6 +168,17 @@ aws apigatewayv2 get-apis \
 
 ---
 
+## 🎯 Exam Practice: Scenarios & Traps
+
+| Exam Scenario | Correct Recommendation | Why Distractors Fail |
+|---|---|---|
+| *"A startup is building a microservice that runs occasionally when a file is uploaded. It must scale to zero and cost \$0.00 when idle without managing OS patches."* | **AWS Lambda** | EC2 instances bill per hour 24/7 as long as they run, and require OS security patch management. ECS Fargate still incurs container management. |
+| *"What is the maximum execution time limit for an AWS Lambda function before it automatically times out?"* | **15 Minutes (900 Seconds)** | Long-running tasks exceeding 15 minutes should be run on AWS Fargate, Amazon ECS/EKS, or Amazon EC2. |
+| *"An API receives 10,000 requests per minute and needs to protect backend services by enforcing rate limiting (throttling) and validating API keys."* | **Amazon API Gateway** | Application Load Balancers lack built-in token-bucket rate limiting per client or API key management. CloudFront caches assets but does not manage API keys. |
+| *"How does AWS bill for AWS Lambda executions?"* | **Based on the number of requests and the execution duration (measured in milliseconds) multiplied by allocated memory** | Lambda never charges for idle server time; billing strictly reflects actual compute duration and invocations. |
+
+---
+
 ## 🧹 Free Tier Cleanup & Cost Safeguard
 > [!NOTE]
 > AWS Lambda includes **1 million free requests per month** and 3.2 million seconds of compute time in the Always Free tier. However, deleting unused endpoints is good practice.

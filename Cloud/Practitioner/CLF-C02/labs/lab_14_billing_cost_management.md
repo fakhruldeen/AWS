@@ -119,6 +119,17 @@ aws budgets describe-budgets \
 
 ---
 
+## 🎯 Exam Practice: Scenarios & Traps
+
+| Exam Scenario | Correct Recommendation | Why Distractors Fail |
+|---|---|---|
+| *"A startup wants to estimate how much it will cost to host a web application with 4 EC2 instances and 1 RDS database on AWS before signing up for an account."* | **AWS Pricing Calculator** | AWS Cost Explorer requires an active AWS account with historical billing data. Pricing Calculator is a free public web tool for forward-looking estimations. |
+| *"A financial controller wants to receive an email alert when the company's monthly cloud spend is projected to exceed \$5,000 before the month actually ends."* | **AWS Budgets with a Forecasted Cost Alert threshold** | Cost Explorer visualizes data, it does not send automated threshold breach alerts. CloudWatch billing alarms only trigger on actual current spend. |
+| *"A developer applies a tag `CostCenter=Marketing` to an EC2 instance, but cannot see or filter by this tag in AWS Cost Explorer. What is the cause?"* | **The Cost Allocation Tag has not been activated in the Billing and Cost Management console** | User-defined tags do not appear in billing reports or Cost Explorer until explicitly activated in the Billing console. |
+| *"Which service uses machine learning to analyze historical resource utilization and recommend rightsizing over-provisioned EC2 instances to reduce cost?"* | **AWS Compute Optimizer** | Trusted Advisor provides rule-based checks. Compute Optimizer uses machine learning to analyze CPU, memory, and network utilization over time. |
+
+---
+
 ## 🧹 Free Tier Cleanup & Cost Safeguard
 1. In the **AWS Budgets Console**, select `Monthly-Cloud-Practitioner-Budget` -> Click **Actions** -> **Delete**.
 2. If any stray resources from previous labs remain active, use the AWS Console Resource Groups or Billing Cost by Service view to locate and terminate them immediately.

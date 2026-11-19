@@ -158,6 +158,17 @@ aws s3api list-object-versions \
 
 ---
 
+## 🎯 Exam Practice: Scenarios & Traps
+
+| Exam Scenario | Correct Recommendation | Why Distractors Fail |
+|---|---|---|
+| *"A company has unpredictable data access patterns where some files are read daily while others remain untouched for months. They want to minimize costs with zero management overhead."* | **S3 Intelligent-Tiering** | S3 Standard-IA charges retrieval fees if access becomes frequent. S3 Intelligent-Tiering automatically moves data between frequent and infrequent access tiers without retrieval fees. |
+| *"A healthcare provider must archive X-ray images for 10 years to meet compliance mandates. Data is almost never accessed, but when requested, a 12-hour retrieval window is acceptable. Lowest cost is the primary factor."* | **S3 Glacier Deep Archive** | S3 Glacier Flexible Retrieval is more expensive per GB. S3 Glacier Deep Archive offers the absolute lowest storage cost in the entire AWS Cloud. |
+| *"An employee accidentally deletes an essential file from an S3 bucket with Versioning enabled. How can the file be restored?"* | **Delete the Delete Marker associated with that file** | In a versioned bucket, a DELETE operation simply places a Delete Marker at the top of the version stack. Removing the marker makes the previous version active again. |
+| *"A financial institution requires that audit records stored in S3 cannot be deleted, altered, or overwritten by ANY user, including the AWS account Root user, for 7 years."* | **S3 Object Lock in Compliance Mode** | S3 Versioning can be disabled by Root. Governance Mode allows privileged users to delete files. Compliance Mode enforces strict WORM (Write Once, Read Many) compliance that cannot be overridden by anyone. |
+
+---
+
 ## 🧹 Free Tier Cleanup & Cost Safeguard
 > [!CAUTION]
 > An S3 bucket cannot be deleted if it contains objects or past versions!
