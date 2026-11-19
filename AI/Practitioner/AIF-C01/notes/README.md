@@ -20,6 +20,26 @@
 
 ---
 
+## ⚖️ Dedicated "X vs. Y" Pairwise Distinction Suite (`distinctions/`)
+
+For resolving close "distractor" choices on the exam, consult our 10 focused pairwise comparison guides:
+
+| Distinction Guide | Compared Services & Concepts | Exam Domain Focus |
+|---|---|:---:|
+| **[01_Model_Adaptation_Prompting_vs_RAG_vs_FineTuning_vs_Pretraining.md](./distinctions/01_Model_Adaptation_Prompting_vs_RAG_vs_FineTuning_vs_Pretraining.md)** | Prompting vs. RAG vs. Fine-Tuning vs. Pretraining | Domain 2 & 3 |
+| **[02_Evaluation_Metrics_ROUGE_vs_BLEU_vs_Perplexity_vs_BERTScore.md](./distinctions/02_Evaluation_Metrics_ROUGE_vs_BLEU_vs_Perplexity_vs_BERTScore.md)** | ROUGE vs. BLEU vs. Perplexity vs. BERTScore | Domain 2 |
+| **[03_SageMaker_Deployment_Modes_RealTime_vs_Serverless_vs_Async_vs_Batch.md](./distinctions/03_SageMaker_Deployment_Modes_RealTime_vs_Serverless_vs_Async_vs_Batch.md)** | Real-Time vs. Serverless vs. Async vs. Batch Transform | Domain 1 & 4 |
+| **[04_Inference_Parameters_Temperature_vs_TopP_vs_TopK.md](./distinctions/04_Inference_Parameters_Temperature_vs_TopP_vs_TopK.md)** | Temperature vs. Top-P vs. Top-K vs. Stop Sequences | Domain 2 |
+| **[05_Bedrock_Model_Families_Claude_vs_Titan_vs_Nova_vs_Llama_vs_Mistral.md](./distinctions/05_Bedrock_Model_Families_Claude_vs_Titan_vs_Nova_vs_Llama_vs_Mistral.md)** | Claude 3.5 vs. Amazon Nova vs. Titan vs. Llama 3.1 vs. Mistral | Domain 3 |
+| **[06_Responsible_AI_Clarify_vs_Guardrails_vs_ModelCards_vs_ModelDashboard.md](./distinctions/06_Responsible_AI_Clarify_vs_Guardrails_vs_ModelCards_vs_ModelDashboard.md)** | SageMaker Clarify vs. Bedrock Guardrails vs. Model Cards vs. Model Dashboard | Domain 4 & 5 |
+| **[07_Generative_AI_Security_Scopes_1_vs_2_vs_3_vs_4.md](./distinctions/07_Generative_AI_Security_Scopes_1_vs_2_vs_3_vs_4.md)** | GenAI Security Scopes 1, 2, 3, and 4 (Bedrock PrivateLink & KMS) | Domain 5 |
+| **[08_Vector_Databases_OpenSearch_Serverless_vs_Aurora_pgvector_vs_Neptune.md](./distinctions/08_Vector_Databases_OpenSearch_Serverless_vs_Aurora_pgvector_vs_Neptune.md)** | OpenSearch Serverless vs. Aurora pgvector vs. Neptune Analytics | Domain 3 |
+| **[09_Learning_Paradigms_Supervised_vs_Unsupervised_vs_Reinforcement_Learning.md](./distinctions/09_Learning_Paradigms_Supervised_vs_Unsupervised_vs_Reinforcement_Learning.md)** | Supervised vs. Unsupervised vs. RL vs. RLHF/RLAIF | Domain 1 |
+| **[10_Auditing_Trio_CloudTrail_Data_Events_vs_Bedrock_Invocation_Logs_vs_Macie.md](./distinctions/10_Auditing_Trio_CloudTrail_Data_Events_vs_Bedrock_Invocation_Logs_vs_Macie.md)** | CloudTrail Data Events vs. Bedrock Model Invocation Logs vs. Amazon Macie | Domain 5 |
+
+
+---
+
 ## 🎯 How to Use These Notes for Revision
 
 1. **Phase 1: Deep Dive Review:** Read files `01` through `05` after watching the lectures or reviewing the slide decks.
