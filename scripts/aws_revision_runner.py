@@ -100,6 +100,204 @@ MOCK_TIME_LIMIT_MINUTES = {
     "SAA": 130,
 }
 
+# =====================================================================
+# EXAM DECRYPTION & MNEMONIC TRIGGERS DATABASE
+# =====================================================================
+TRIGGERS_DB = [
+    # Messaging & Decoupling
+    {
+        "patterns": [r"decouple\w*", r"asynchronous\w*", r"queue\w*", r"buffer\w* spikes"],
+        "target": "Amazon SQS",
+        "mnemonic": "Reliability Pillar (PERCOS) — SQS buffers asynchronous load spikes so workers process at steady rates.",
+        "trap": "Beware of scaling up EC2 instances vertically or using synchronous HTTP calls instead of decoupling with SQS."
+    },
+    {
+        "patterns": [r"fan-out", r"push\w* notification\w*", r"multiple subscribers", r"publish/subscribe"],
+        "target": "Amazon SNS",
+        "mnemonic": "Pub/Sub Fan-Out — Publishing once to an SNS Topic fans out identical messages to multiple SQS queues or mobile/email endpoints.",
+        "trap": "Multiple consumers on a single SQS queue compete for messages (only one consumes); SNS fan-out is needed for parallel delivery."
+    },
+    {
+        "patterns": [r"event bus", r"saas partner", r"content-based filtering"],
+        "target": "Amazon EventBridge",
+        "mnemonic": "Serverless Event Routing — EventBridge routes events from AWS services, SaaS apps, and microservices based on JSON content.",
+        "trap": "EventBridge evaluates JSON payload content; CloudWatch Events is legacy; SQS only buffers messages."
+    },
+    {
+        "patterns": [r"state machine", r"saga pattern", r"compensating transaction", r"coordinate\w* workflow"],
+        "target": "AWS Step Functions",
+        "mnemonic": "Workflow Orchestration — Step Functions coordinates distributed microservices into visual serverless state machines with retries and rollbacks.",
+        "trap": "SQS and SNS do not maintain multi-step workflow execution state or handle compensating rollbacks."
+    },
+    # Audit & Monitoring
+    {
+        "patterns": [r"audit\w*", r"who made what", r"api call history", r"management events"],
+        "target": "AWS CloudTrail",
+        "mnemonic": "Accountability & Auditing — CloudTrail records 'Who did what and when' across AWS management and data APIs.",
+        "trap": "CloudWatch monitors metrics & logs; CloudTrail records API audit history; AWS Config evaluates configuration rules over time."
+    },
+    {
+        "patterns": [r"monitor\w* cpu", r"cloudwatch alarm", r"operational metric", r"dashboard"],
+        "target": "Amazon CloudWatch",
+        "mnemonic": "Observability & Alarms — CloudWatch collects real-time metrics, logs, and triggers automated alarms.",
+        "trap": "CloudWatch does not record API caller identity (CloudTrail does); it monitors performance metrics and health."
+    },
+    {
+        "patterns": [r"configuration drift", r"compliance rule\w*", r"track resource changes"],
+        "target": "AWS Config",
+        "mnemonic": "Continuous Compliance — AWS Config records point-in-time configuration history and evaluates resources against compliance rules.",
+        "trap": "CloudTrail logs the API event that caused the change; AWS Config evaluates whether the resulting resource state is compliant."
+    },
+    # Security & Protection
+    {
+        "patterns": [r"compliance report\w*", r"soc 1", r"soc 2", r"pci-dss agreement"],
+        "target": "AWS Artifact",
+        "mnemonic": "Compliance Portal — AWS Artifact is your on-demand self-service portal for official AWS compliance reports and agreements.",
+        "trap": "AWS Artifact provides audit reports; AWS Certificate Manager manages SSL/TLS certificates."
+    },
+    {
+        "patterns": [r"rotate\w* database credential\w*", r"rotate\w* secret", r"automatic rotation"],
+        "target": "AWS Secrets Manager",
+        "mnemonic": "Credential Lifecycle — Secrets Manager automatically rotates RDS database credentials using Lambda without application downtime.",
+        "trap": "Systems Manager Parameter Store stores encrypted strings, but does NOT provide built-in automated database credential rotation like Secrets Manager."
+    },
+    {
+        "patterns": [r"layer 7", r"sql injection", r"sqli", r"cross-site scripting", r"xss"],
+        "target": "AWS WAF",
+        "mnemonic": "Web Application Firewall — WAF operates at Layer 7 (HTTP/HTTPS) inspecting request bodies, query strings, and headers.",
+        "trap": "Security Groups and Network ACLs operate at Layer 4 (IP/port) and cannot detect SQLi or XSS attacks."
+    },
+    {
+        "patterns": [r"ddos", r"shield standard", r"shield advanced", r"response team"],
+        "target": "AWS Shield",
+        "mnemonic": "DDoS Mitigation — Shield Standard is free/automatic for Layer 3/4; Shield Advanced provides 24/7 SRT and DDoS cost protection.",
+        "trap": "WAF blocks Layer 7 exploits; Shield mitigates Layer 3/4 volumetric DDoS attacks."
+    },
+    {
+        "patterns": [r"worm", r"compliance mode", r"write once read many", r"object lock"],
+        "target": "S3 Object Lock (Compliance Mode)",
+        "mnemonic": "Immutable WORM — In Compliance Mode, NO user (not even root) can overwrite or delete objects during the retention period.",
+        "trap": "Governance Mode allows users with bypass permissions to delete; Compliance Mode is strict and irreversible."
+    },
+    {
+        "patterns": [r"session manager", r"port 22", r"bastion host"],
+        "target": "AWS Systems Manager Session Manager",
+        "mnemonic": "Secure Shell Access — Session Manager provides browser-based CLI access to private EC2 instances without opening port 22 or bastion hosts.",
+        "trap": "Opening port 22 to 0.0.0.0/0 on a public bastion host is an immediate security anti-pattern."
+    },
+    # Storage Economics
+    {
+        "patterns": [r"unpredictable\w* access", r"changing access pattern", r"no retrieval fee"],
+        "target": "Amazon S3 Intelligent-Tiering",
+        "mnemonic": "S-I-G-G Temperature — Intelligent-Tiering automatically moves data between tiers with ZERO retrieval fees.",
+        "trap": "Standard-IA charges per-GB retrieval fees; if access surges, retrieval fees make IA far more expensive than Intelligent-Tiering."
+    },
+    {
+        "patterns": [r"lowest storage cost", r"lowest cost.*archive", r"12 to 48 hours", r"deep archive"],
+        "target": "Amazon S3 Glacier Deep Archive",
+        "mnemonic": "Frozen Archive — Glacier Deep Archive is the absolute lowest-cost storage in AWS ($0.00099/GB/month) with 12-48h retrieval.",
+        "trap": "S3 Standard costs ~23x more than Glacier Deep Archive."
+    },
+    # FinOps & Compute
+    {
+        "patterns": [r"least operational overhead", r"minimal management", r"minimal operational overhead"],
+        "target": "AWS Managed / Serverless Services",
+        "mnemonic": "Stop Heavy Lifting — Favor managed/serverless (Aurora, Fargate, S3, Secrets Manager) over custom scripts and EC2 VMs.",
+        "trap": "Custom shell scripts, EC2 cron daemons, and manual failovers violate least operational overhead."
+    },
+    {
+        "patterns": [r"up to 90% discount", r"stateless batch", r"can be interrupted", r"spot instance"],
+        "target": "Amazon EC2 Spot Instances",
+        "mnemonic": "Spare Capacity Economics — Spot offers up to 90% savings for fault-tolerant, interruptible workloads.",
+        "trap": "Do not use Spot for databases or stateful applications that cannot tolerate 2-minute interruption notices."
+    },
+    {
+        "patterns": [r"technical account manager", r"tam", r"concierge", r"15 minutes"],
+        "target": "AWS Enterprise Support",
+        "mnemonic": "B-D-B-E Support Ladder — Enterprise Support is the ONLY tier providing a dedicated Technical Account Manager (TAM) and 15-minute response.",
+        "trap": "Business Support provides 24/7 phone/chat, but does NOT include a designated TAM."
+    },
+    {
+        "patterns": [r"consolidated billing", r"volume discount\w* across", r"linked account"],
+        "target": "AWS Organizations Consolidated Billing",
+        "mnemonic": "Combined Usage Economics — Consolidated Billing aggregates usage across all member accounts to reach higher volume discount tiers.",
+        "trap": "Separate standalone AWS accounts pay individual tiered rates and cannot share volume pricing tiers."
+    },
+    # AI / Generative AI
+    {
+        "patterns": [r"hallucination\w*", r"ground\w* foundation", r"citations", r"proprietary internal data"],
+        "target": "RAG (Amazon Bedrock Knowledge Bases)",
+        "mnemonic": "Model Adaptation (P-R-F-C) — RAG retrieves vector context without altering base model weights and provides verifiable source citations.",
+        "trap": "Fine-tuning modifies weights and does NOT provide source citations or eliminate hallucinations like RAG."
+    },
+    {
+        "patterns": [r"multi-step task", r"execute api call", r"orchestrate\w* tool"],
+        "target": "Amazon Bedrock Agents",
+        "mnemonic": "Autonomous Action Execution — Bedrock Agents break user requests into multi-step actions and invoke AWS Lambda APIs.",
+        "trap": "Knowledge Bases retrieve static document context; Bedrock Agents take active transactional actions."
+    },
+    {
+        "patterns": [r"mask\w* pii", r"filter toxic", r"prompt injection", r"guardrail\w*"],
+        "target": "Amazon Bedrock Guardrails",
+        "mnemonic": "Responsible AI (F-A-T-E) — Bedrock Guardrails filters harmful topics, redacts PII, and halts jailbreak attempts at runtime.",
+        "trap": "SageMaker Clarify audits bias and SHAP explainability; Bedrock Guardrails enforces runtime input/output safety."
+    },
+    {
+        "patterns": [r"translation", r"bleu"],
+        "target": "BLEU Metric",
+        "mnemonic": "B-P Rule — BLEU = Precision-oriented evaluation for Machine Translation against human reference texts.",
+        "trap": "ROUGE has an R (Recall-oriented) and is used for Summarization, NOT translation."
+    },
+    {
+        "patterns": [r"summariz\w*", r"rouge"],
+        "target": "ROUGE Metric",
+        "mnemonic": "R-R Rule — ROUGE = Recall-oriented evaluation for Text Summarization (n-gram overlap).",
+        "trap": "BLEU has a P (Precision) for Translation; ROUGE is for Summaries."
+    },
+    {
+        "patterns": [r"perplexity"],
+        "target": "Perplexity (PPL)",
+        "mnemonic": "The Confusion Metric — The more perplexed the model is, the worse it is! Lower Perplexity = Higher Fluency.",
+        "trap": "Eliminate any option claiming 'higher perplexity indicates a better model'."
+    },
+    {
+        "patterns": [r"without modifying base", r"without retraining", r"peft", r"lora", r"low-rank"],
+        "target": "PEFT / LoRA (Parameter-Efficient Fine-Tuning)",
+        "mnemonic": "Lightweight Adaptation — PEFT/LoRA freezes original base weights and trains small adapter matrices with ~90% less GPU compute.",
+        "trap": "Full fine-tuning updates all weights, incurring massive compute cost and risking catastrophic forgetting."
+    },
+    {
+        "patterns": [r"shap\w*", r"feature attribution", r"detect\w* bias", r"explainability"],
+        "target": "Amazon SageMaker Clarify",
+        "mnemonic": "Transparency (F-A-T-E) — SageMaker Clarify computes SHAP values to explain feature importance and detects pre-/post-training bias.",
+        "trap": "Model Cards documents metadata; Clarify calculates the quantitative mathematical SHAP and bias values."
+    },
+    {
+        "patterns": [r"payload up to 1 gb", r"up to 1 hour", r"queued in sqs"],
+        "target": "SageMaker Asynchronous Inference",
+        "mnemonic": "R-S-A-B Inference Modes — Asynchronous inference buffers requests in SQS, handles payloads up to 1 GB, and runs up to 1 hour.",
+        "trap": "Real-time inference maxes out at 6 MB payload and 60 seconds."
+    },
+    {
+        "patterns": [r"scale\w* to zero", r"sporadic\w* traffic", r"unpredictable\w* inference"],
+        "target": "SageMaker Serverless Inference",
+        "mnemonic": "R-S-A-B Inference Modes — Serverless inference automatically scales compute down to zero when idle, charging strictly per second of usage.",
+        "trap": "Real-time inference bills 24/7 per provisioned instance-hour even when completely idle."
+    }
+]
+
+def find_tricks(text: str) -> List[Dict[str, Any]]:
+    matches = []
+    seen_targets = set()
+    for item in TRIGGERS_DB:
+        for p in item["patterns"]:
+            if re.search(r'\b' + p + r'\b', text, re.IGNORECASE):
+                if item["target"] not in seen_targets:
+                    seen_targets.add(item["target"])
+                    matches.append(item)
+                break
+    return matches
+
 def locate_bank(cert: str, custom_path: Optional[str] = None) -> Path:
     if custom_path:
         p = Path(custom_path)
@@ -231,7 +429,8 @@ def display_question(
     idx: int,
     total: int,
     cert: str,
-    show_meta: bool = True
+    show_meta: bool = True,
+    show_tricks: bool = False
 ) -> Tuple[List[str], Set[str]]:
     q_id = q.get("id", "Q")
     prompt = q.get("prompt", "")
@@ -247,9 +446,21 @@ def display_question(
     print(f"{Colors.BOLD}[Question {idx}/{total}]  ID: {q_id}  |  {domain_str}{Colors.RESET}")
     if show_meta:
         print(f"{Colors.DIM}Verified Sources ({consensus}): {', '.join(sources[:4])}{'...' if len(sources)>4 else ''}{Colors.RESET}")
+    if show_tricks:
+        print(f"{Colors.YELLOW}{Colors.BOLD}💡 TRICKS & MNEMONIC MODE ACTIVE — Key trigger words are highlighted in gold.{Colors.RESET}")
     print(f"{Colors.CYAN}{'-'*80}{Colors.RESET}\n")
 
-    print(f"{Colors.BOLD}{prompt}{Colors.RESET}\n")
+    display_prompt = prompt
+    if show_tricks:
+        for item in TRIGGERS_DB:
+            for p in item["patterns"]:
+                display_prompt = re.sub(
+                    r'(?i)\b(' + p + r')\b',
+                    f"{Colors.YELLOW}{Colors.BOLD}\\1{Colors.RESET}{Colors.BOLD}",
+                    display_prompt
+                )
+
+    print(f"{Colors.BOLD}{display_prompt}{Colors.RESET}\n")
 
     if is_multi:
         print(f"{Colors.YELLOW}{Colors.BOLD}⚡ MULTI-SELECT: Choose {len(expected)} options (e.g., A, C){Colors.RESET}\n")
@@ -293,12 +504,27 @@ def prompt_user_answer(expected_count: int) -> Optional[Set[str]]:
 
         return chosen
 
-def render_feedback(is_correct: bool, expected: Set[str], explanation: str):
+def render_feedback(
+    is_correct: bool,
+    expected: Set[str],
+    explanation: str,
+    prompt: str = "",
+    show_tricks: bool = False
+):
     if is_correct:
         print(f"\n{Colors.GREEN}{Colors.BOLD}✅ CORRECT! Excellent job.{Colors.RESET}")
     else:
         print(f"\n{Colors.RED}{Colors.BOLD}❌ INCORRECT.{Colors.RESET}")
         print(f"{Colors.BOLD}Verified Correct Answer: {Colors.GREEN}{', '.join(sorted(expected))}{Colors.RESET}")
+
+    if show_tricks:
+        tricks = find_tricks(prompt + " " + explanation)
+        if tricks:
+            print(f"\n{Colors.YELLOW}{Colors.BOLD}💡 EXAM DECRYPTION & MNEMONIC ANCHORS ({len(tricks)} detected):{Colors.RESET}")
+            for t in tricks[:2]:
+                print(f"  {Colors.BOLD}{Colors.CYAN}🔑 Target Match:{Colors.RESET} {Colors.BOLD}{t['target']}{Colors.RESET}")
+                print(f"  {Colors.BOLD}{Colors.YELLOW}🧠 Mnemonic Cue:{Colors.RESET} {t['mnemonic']}")
+                print(f"  {Colors.BOLD}{Colors.RED}🚫 Distractor Trap:{Colors.RESET} {t['trap']}")
 
     if explanation:
         print(f"\n{Colors.CYAN}{Colors.BOLD}📖 Architectural Rationale & Distractor Breakdown:{Colors.RESET}")
@@ -308,7 +534,8 @@ def run_practice_or_drill(
     cert: str,
     questions: List[Dict[str, Any]],
     mode: str,
-    history_file: Path
+    history_file: Path,
+    show_tricks: bool = False
 ):
     total = len(questions)
     if total == 0:
@@ -326,7 +553,7 @@ def run_practice_or_drill(
     results_summary = []
 
     for idx, q in enumerate(questions, 1):
-        clean_choices, expected = display_question(q, idx, total, cert, show_meta=True)
+        clean_choices, expected = display_question(q, idx, total, cert, show_meta=True, show_tricks=show_tricks)
         user_ans = prompt_user_answer(len(expected))
 
         if user_ans is None:
@@ -358,7 +585,7 @@ def run_practice_or_drill(
         })
 
         if mode == "practice":
-            render_feedback(is_correct, expected, q.get("explanation", ""))
+            render_feedback(is_correct, expected, q.get("explanation", ""), prompt=q.get("prompt", ""), show_tricks=show_tricks)
             try:
                 input(f"{Colors.DIM}Press [Enter] to continue to the next question...{Colors.RESET}")
             except (EOFError, KeyboardInterrupt):
@@ -559,6 +786,7 @@ Examples:
     parser.add_argument("--service", "--tag", dest="service", default=None, help="Filter by AWS service or keyword (e.g., S3, Bedrock, VPC)")
     parser.add_argument("--consensus", type=int, default=None, help="Minimum source consensus count (e.g., 2, 3)")
     parser.add_argument("--count", "-n", type=int, default=None, help="Number of questions to test (default: 10 for practice/drill, 65 for mock)")
+    parser.add_argument("--tricks", action="store_true", help="Enable Exam Decryption & Mnemonic Mode (highlights trigger keywords and reveals memory pegs)")
     parser.add_argument("--bank-path", default=None, help="Custom path to question bank JSON file")
     parser.add_argument("--history-file", default=str(Path.home() / ".aws_revision_history.json"), help="Path to weakness tracking history file")
     parser.add_argument("--no-color", action="store_true", help="Disable colored terminal output")
@@ -586,7 +814,7 @@ Examples:
         all_q = load_questions(bank_file)
         filtered = filter_questions(all_q, weak_ids=set(weak_cert_ids))
         print(f"\n{Colors.YELLOW}{Colors.BOLD}🔍 Found {len(filtered)} previously missed question(s) in weakness history.{Colors.RESET}")
-        run_practice_or_drill(args.cert, filtered, "practice", history_path)
+        run_practice_or_drill(args.cert, filtered, "practice", history_path, show_tricks=args.tricks)
         return
 
     # Locate and load bank
@@ -613,7 +841,7 @@ Examples:
     count = args.count if args.count is not None else 10
     selected = filtered[:count]
 
-    run_practice_or_drill(args.cert, selected, args.mode, history_path)
+    run_practice_or_drill(args.cert, selected, args.mode, history_path, show_tricks=args.tricks)
 
 if __name__ == "__main__":
     main()
