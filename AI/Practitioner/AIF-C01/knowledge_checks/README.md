@@ -23,3 +23,10 @@
 1. Complete each 10-question check immediately after reviewing the corresponding Domain Explanation or Lecture.
 2. Target achieving $\ge 80\%$ (8/10 correct) before proceeding to the next module.
 3. Review the detailed rationales for any missed questions to solidify conceptual boundaries.
+4. **Deep Drilling in Unique Revision Banks:** For comprehensive question practice beyond the diagnostic checks, drill with the **1,814 Master Unique Questions** in the Vault:
+   - [[Domain_1_Fundamentals_of_AI_and_ML_Unique_Questions|Domain 1 Master Bank]] (363 Unique Questions)
+   - [[Domain_2_Fundamentals_of_Generative_AI_Unique_Questions|Domain 2 Master Bank]] (529 Unique Questions)
+   - [[Domain_3_Applications_of_Foundation_Models_Unique_Questions|Domain 3 Master Bank]] (510 Unique Questions)
+   - [[Domain_4_Guidelines_for_Responsible_AI_Unique_Questions|Domain 4 Master Bank]] (241 Unique Questions)
+   - [[Domain_5_Security_Compliance_and_Governance_Unique_Questions|Domain 5 Master Bank]] (171 Unique Questions)
+
