@@ -144,6 +144,8 @@ def check_guided_labs(report: TestReport):
     lab_dirs = [
         ("CLF-C02", WORK_REPO / "Cloud/Practitioner/CLF-C02/labs"),
         ("AIF-C01", WORK_REPO / "AI/Practitioner/AIF-C01/labs"),
+        ("SAA-C03", WORK_REPO / "Cloud/Associate/SAA-C03/labs"),
+        ("MLA-C01", WORK_REPO / "AI/Associate/MLA-C01/labs"),
     ]
 
     for cert_name, lab_dir in lab_dirs:
