@@ -65,6 +65,7 @@ def check_question_banks(report: TestReport):
     banks = [
         ("CLF-C02", VAULT_REPO / "Questions_Bank/Unique_Revision_Banks/Cloud_Practitioner_CLF-C02/CLF_C02_Master_Unique_Questions.json", 4),
         ("AIF-C01", VAULT_REPO / "Questions_Bank/Unique_Revision_Banks/AI_Practitioner_AIF-C01/AIF_C01_Master_Unique_Questions.json", 5),
+        ("MLA-C01", VAULT_REPO / "Questions_Bank/Unique_Revision_Banks/Machine_Learning_Associate_MLA-C01/MLA_C01_Master_Unique_Questions.json", 4),
     ]
 
     for cert_name, path, max_domain in banks:
@@ -194,7 +195,7 @@ def check_vault_wiki_links(report: TestReport):
         VAULT_REPO / "01_Certifications/Cloud_Practitioner_CLF-C02/CLF-C02_Master_Blueprint.md",
     ]
 
-    wiki_link_pattern = re.compile(r'\[\[([^\]\|#]+)(?:[\|#][^\]]*)?\]\]')
+    wiki_link_pattern = re.compile(r'\[\[([^\]\\\|#]+)(?:\\?[\|#][^\]]*)?\]\]')
 
     for tf in test_files:
         if not tf.is_file():
@@ -203,7 +204,7 @@ def check_vault_wiki_links(report: TestReport):
         links = wiki_link_pattern.findall(content)
         broken = []
         for l in links:
-            l_clean = l.strip()
+            l_clean = l.strip().rstrip('\\').strip()
             # If link has folder path, take stem
             stem = Path(l_clean).stem
             if stem not in vault_note_basenames and l_clean not in vault_note_basenames:

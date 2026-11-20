@@ -71,17 +71,25 @@ DOMAINS_MAP = {
         3: "Domain 3: Applications of Foundation Models (28%)",
         4: "Domain 4: Guidelines for Responsible AI (14%)",
         5: "Domain 5: Security, Compliance, and Governance (14%)",
+    },
+    "MLA": {
+        1: "Domain 1: Data Preparation for Machine Learning (28%)",
+        2: "Domain 2: ML Model Development (26%)",
+        3: "Domain 3: Deployment and Orchestration of ML Workflows (22%)",
+        4: "Domain 4: ML Solution Monitoring and Maintenance (24%)",
     }
 }
 
 MOCK_DISTRIBUTION = {
     "CLF": {1: 16, 2: 20, 3: 21, 4: 8},  # Total = 65 questions
     "AIF": {1: 13, 2: 16, 3: 18, 4: 9, 5: 9},  # Total = 65 questions
+    "MLA": {1: 18, 2: 17, 3: 14, 4: 16},  # Total = 65 questions
 }
 
 MOCK_TIME_LIMIT_MINUTES = {
     "CLF": 90,
     "AIF": 85,
+    "MLA": 130,
 }
 
 def locate_bank(cert: str, custom_path: Optional[str] = None) -> Path:
@@ -95,8 +103,12 @@ def locate_bank(cert: str, custom_path: Optional[str] = None) -> Path:
     search_paths = [Path(env_vault)] if env_vault else []
     search_paths.extend(DEFAULT_VAULT_PATHS)
 
-    subfolder = "Cloud_Practitioner_CLF-C02" if cert == "CLF" else "AI_Practitioner_AIF-C01"
-    filename = f"{cert}_C0{2 if cert=='CLF' else 1}_Master_Unique_Questions.json"
+    subfolder_map = {
+        "CLF": ("Cloud_Practitioner_CLF-C02", "CLF_C02_Master_Unique_Questions.json"),
+        "AIF": ("AI_Practitioner_AIF-C01", "AIF_C01_Master_Unique_Questions.json"),
+        "MLA": ("Machine_Learning_Associate_MLA-C01", "MLA_C01_Master_Unique_Questions.json"),
+    }
+    subfolder, filename = subfolder_map.get(cert, (f"{cert}_Track", f"{cert}_Master_Unique_Questions.json"))
 
     for base in search_paths:
         target = base / "Questions_Bank" / "Unique_Revision_Banks" / subfolder / filename
@@ -529,7 +541,7 @@ Examples:
         """
     )
 
-    parser.add_argument("--cert", choices=["CLF", "AIF"], default="CLF", help="Certification track (CLF or AIF)")
+    parser.add_argument("--cert", choices=["CLF", "AIF", "MLA"], default="CLF", help="Certification track (CLF, AIF, or MLA)")
     parser.add_argument("--mode", choices=["practice", "drill", "mock", "weakness"], default="practice", help="Operating mode")
     parser.add_argument("--domain", type=int, choices=[1, 2, 3, 4, 5], default=None, help="Filter by domain number")
     parser.add_argument("--service", "--tag", dest="service", default=None, help="Filter by AWS service or keyword (e.g., S3, Bedrock, VPC)")
