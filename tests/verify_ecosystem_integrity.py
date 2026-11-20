@@ -66,6 +66,7 @@ def check_question_banks(report: TestReport):
         ("CLF-C02", VAULT_REPO / "Questions_Bank/Unique_Revision_Banks/Cloud_Practitioner_CLF-C02/CLF_C02_Master_Unique_Questions.json", 4),
         ("AIF-C01", VAULT_REPO / "Questions_Bank/Unique_Revision_Banks/AI_Practitioner_AIF-C01/AIF_C01_Master_Unique_Questions.json", 5),
         ("MLA-C01", VAULT_REPO / "Questions_Bank/Unique_Revision_Banks/Machine_Learning_Associate_MLA-C01/MLA_C01_Master_Unique_Questions.json", 4),
+        ("SAA-C03", VAULT_REPO / "Questions_Bank/Unique_Revision_Banks/Solutions_Architect_Associate_SAA-C03/SAA_C03_Master_Unique_Questions.json", 4),
     ]
 
     for cert_name, path, max_domain in banks:
@@ -195,6 +196,8 @@ def check_vault_wiki_links(report: TestReport):
         VAULT_REPO / "05_Knowledge_Tests/README.md",
         VAULT_REPO / "01_Certifications/AI_Practitioner_AIF-C01/AIF-C01_Master_Blueprint.md",
         VAULT_REPO / "01_Certifications/Cloud_Practitioner_CLF-C02/CLF-C02_Master_Blueprint.md",
+        VAULT_REPO / "01_Certifications/Solutions_Architect_Associate_SAA-C03/SAA-C03_Master_Blueprint.md",
+        VAULT_REPO / "01_Certifications/Machine_Learning_Associate_MLA-C01/MLA-C01_Master_Blueprint.md",
     ]
 
     wiki_link_pattern = re.compile(r'\[\[([^\]\\\|#]+)(?:\\?[\|#][^\]]*)?\]\]')

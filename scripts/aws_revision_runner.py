@@ -77,6 +77,12 @@ DOMAINS_MAP = {
         2: "Domain 2: ML Model Development (26%)",
         3: "Domain 3: Deployment and Orchestration of ML Workflows (22%)",
         4: "Domain 4: ML Solution Monitoring and Maintenance (24%)",
+    },
+    "SAA": {
+        1: "Domain 1: Design Secure Architectures (30%)",
+        2: "Domain 2: Design Resilient Architectures (26%)",
+        3: "Domain 3: Design High-Performing Architectures (24%)",
+        4: "Domain 4: Design Cost-Optimized Architectures (20%)",
     }
 }
 
@@ -84,12 +90,14 @@ MOCK_DISTRIBUTION = {
     "CLF": {1: 16, 2: 20, 3: 21, 4: 8},  # Total = 65 questions
     "AIF": {1: 13, 2: 16, 3: 18, 4: 9, 5: 9},  # Total = 65 questions
     "MLA": {1: 18, 2: 17, 3: 14, 4: 16},  # Total = 65 questions
+    "SAA": {1: 20, 2: 17, 3: 15, 4: 13},  # Total = 65 questions
 }
 
 MOCK_TIME_LIMIT_MINUTES = {
     "CLF": 90,
     "AIF": 85,
     "MLA": 130,
+    "SAA": 130,
 }
 
 def locate_bank(cert: str, custom_path: Optional[str] = None) -> Path:
@@ -107,6 +115,7 @@ def locate_bank(cert: str, custom_path: Optional[str] = None) -> Path:
         "CLF": ("Cloud_Practitioner_CLF-C02", "CLF_C02_Master_Unique_Questions.json"),
         "AIF": ("AI_Practitioner_AIF-C01", "AIF_C01_Master_Unique_Questions.json"),
         "MLA": ("Machine_Learning_Associate_MLA-C01", "MLA_C01_Master_Unique_Questions.json"),
+        "SAA": ("Solutions_Architect_Associate_SAA-C03", "SAA_C03_Master_Unique_Questions.json"),
     }
     subfolder, filename = subfolder_map.get(cert, (f"{cert}_Track", f"{cert}_Master_Unique_Questions.json"))
 
@@ -350,7 +359,10 @@ def run_practice_or_drill(
 
         if mode == "practice":
             render_feedback(is_correct, expected, q.get("explanation", ""))
-            input(f"{Colors.DIM}Press [Enter] to continue to the next question...{Colors.RESET}")
+            try:
+                input(f"{Colors.DIM}Press [Enter] to continue to the next question...{Colors.RESET}")
+            except (EOFError, KeyboardInterrupt):
+                break
 
     save_history(history_file, history)
 
@@ -541,7 +553,7 @@ Examples:
         """
     )
 
-    parser.add_argument("--cert", choices=["CLF", "AIF", "MLA"], default="CLF", help="Certification track (CLF, AIF, or MLA)")
+    parser.add_argument("--cert", choices=["CLF", "AIF", "MLA", "SAA"], default="CLF", help="Certification track (CLF, AIF, MLA, or SAA)")
     parser.add_argument("--mode", choices=["practice", "drill", "mock", "weakness"], default="practice", help="Operating mode")
     parser.add_argument("--domain", type=int, choices=[1, 2, 3, 4, 5], default=None, help="Filter by domain number")
     parser.add_argument("--service", "--tag", dest="service", default=None, help="Filter by AWS service or keyword (e.g., S3, Bedrock, VPC)")
