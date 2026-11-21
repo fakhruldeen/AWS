@@ -72,6 +72,6 @@ By the end of this lecture, candidates will be able to:
 ---
 
 ## 🔬 Hands-on Lab & Homework Alignment
-- **Decision Matrix Review:** Study [Storage Architecture Decision Matrix](../notes/Storage_Architecture_Decision_Matrix.md) and [Database Architecture Decision Matrix](../notes/Database_Architecture_Decision_Matrix.md).
-- **Knowledge Check:** Assign [Module 03 Knowledge Check](../knowledge_checks/Module_03_High_Performing_Architectures_Knowledge_Check.md).
-- **Revision Questions:** Direct students to practice [Domain 3 Revision Questions](../revision_questions/Domain_3_Design_High_Performing_Architectures_Revision_Questions.md).
+- **Decision Matrix Review:** Study [Storage Architecture Decision Matrix](../phase3_step09_notes/Storage_Architecture_Decision_Matrix.md) and [Database Architecture Decision Matrix](../phase3_step09_notes/Database_Architecture_Decision_Matrix.md).
+- **Knowledge Check:** Assign [Module 03 Knowledge Check](../phase4_step10_knowledge_checks/Module_03_High_Performing_Architectures_Knowledge_Check.md).
+- **Revision Questions:** Direct students to practice [Domain 3 Revision Questions](../phase4_step11_revision_questions/Domain_3_Design_High_Performing_Architectures_Revision_Questions.md).

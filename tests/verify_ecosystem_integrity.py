@@ -143,8 +143,8 @@ def check_question_banks(report: TestReport):
 def check_guided_labs(report: TestReport):
     print("\n--- 2. Testing Guided Labs Written Standard ---")
     lab_dirs = [
-        ("CLF-C02", WORK_REPO / "Cloud/Practitioner/CLF-C02/labs"),
-        ("AIF-C01", WORK_REPO / "AI/Practitioner/AIF-C01/labs"),
+        ("CLF-C02", WORK_REPO / "Cloud/Practitioner/CLF-C02/phase2_step07_labs" if (WORK_REPO / "Cloud/Practitioner/CLF-C02/phase2_step07_labs").is_dir() else WORK_REPO / "Cloud/Practitioner/CLF-C02/labs"),
+        ("AIF-C01", WORK_REPO / "AI/Practitioner/AIF-C01/phase2_step07_labs" if (WORK_REPO / "AI/Practitioner/AIF-C01/phase2_step07_labs").is_dir() else WORK_REPO / "AI/Practitioner/AIF-C01/labs"),
         ("SAA-C03", WORK_REPO / "Cloud/Associate/SAA-C03/labs"),
         ("MLA-C01", WORK_REPO / "AI/Associate/MLA-C01/labs"),
     ]

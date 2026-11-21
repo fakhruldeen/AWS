@@ -34,7 +34,9 @@ By the end of this lecture, candidates will be able to:
 ## 🗣️ Instructor Talking Points & Whiteboard Guidance
 
 ### 1. Asynchronous Decoupling & Queue Topologies (Whiteboard Prompt)
-- *Whiteboard Diagram:* Draw Web Tier $ightarrow$ SQS Queue $ightarrow$ EC2 Worker Fleet.
+- *Whiteboard Diagram:* Draw Web Tier $
+ightarrow$ SQS Queue $
+ightarrow$ EC2 Worker Fleet.
 - **Why Decouple?** Without a queue, a traffic surge knocks over the backend database. With SQS, the queue absorbs the shock wave; workers pull messages at their own rate.
 - **SQS Standard vs. FIFO:**
   - **Standard:** Nearly unlimited throughput, at-least-once delivery (occasional duplicate messages), best-effort ordering.
@@ -69,6 +71,6 @@ By the end of this lecture, candidates will be able to:
 ---
 
 ## 🔬 Hands-on Lab & Homework Alignment
-- **Hands-on Lab:** Guide students through [Lab 02: HA & Scalable Web Tier (ALB + ASG)](../labs/lab_02_ha_scalable_web_tier_asg_alb.md), [Lab 03: Aurora Fault-Tolerant Database](../labs/lab_03_aurora_fault_tolerant_relational_database.md), and [Lab 04: Decoupled Microservices (SQS + SNS)](../labs/lab_04_decoupled_asynchronous_microservices_sqs_sns.md).
-- **Knowledge Check:** Assign [Module 02 Knowledge Check](../knowledge_checks/Module_02_Resilient_Architectures_Knowledge_Check.md).
-- **Revision Questions:** Direct students to practice [Domain 2 Revision Questions](../revision_questions/Domain_2_Design_Resilient_Architectures_Revision_Questions.md).
+- **Hands-on Lab:** Guide students through [Lab 02: HA & Scalable Web Tier (ALB + ASG)](../phase2_step07_labs/lab_02_ha_scalable_web_tier_asg_alb.md), [Lab 03: Aurora Fault-Tolerant Database](../phase2_step07_labs/lab_03_aurora_fault_tolerant_relational_database.md), and [Lab 04: Decoupled Microservices (SQS + SNS)](../phase2_step07_labs/lab_04_decoupled_asynchronous_microservices_sqs_sns.md).
+- **Knowledge Check:** Assign [Module 02 Knowledge Check](../phase4_step10_knowledge_checks/Module_02_Resilient_Architectures_Knowledge_Check.md).
+- **Revision Questions:** Direct students to practice [Domain 2 Revision Questions](../phase4_step11_revision_questions/Domain_2_Design_Resilient_Architectures_Revision_Questions.md).

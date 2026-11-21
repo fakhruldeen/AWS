@@ -76,7 +76,7 @@ By the end of this lecture, candidates will be able to:
 
 ## 🔬 Action Plan & Exam Day Readiness
 1. **Complete All 5 Guided Labs:** Ensure students have hands-on familiarity with VPC, ALB/ASG, Aurora, SQS/SNS, and Transit Gateway.
-2. **Review High-Yield Notes:** [Networking & Decoupling CheatSheet](../notes/Networking_and_Decoupling_CheatSheet.md).
+2. **Review High-Yield Notes:** [Networking & Decoupling CheatSheet](../phase3_step09_notes/Networking_and_Decoupling_CheatSheet.md).
 3. **Practice with CLI Revision Runner:**
    ```bash
    python3 scripts/aws_revision_runner.py --cert SAA --mode mock

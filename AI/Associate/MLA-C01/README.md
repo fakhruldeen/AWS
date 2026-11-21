@@ -32,10 +32,10 @@ pie title MLA-C01 Domain Weighting
     "Domain 3: Deployment and Orchestration of ML Workflows" : 22
 ```
 
-1. **[Domain 1: Data Preparation for Machine Learning (28%)](syllabus/MLA-C01_Official_Blueprint.md#domain-1-data-preparation-for-machine-learning-28):** Ingestion pipelines (Glue, Kinesis, EMR), feature engineering, handling data imbalances, chunking & vector embeddings.
-2. **[Domain 2: ML Model Development (26%)](syllabus/MLA-C01_Official_Blueprint.md#domain-2-ml-model-development-26):** Algorithm selection (tabular, CV, NLP), foundation model adaptation (PEFT/LoRA, Continued Pre-training), hyperparameter tuning (HPO), model evaluation.
-3. **[Domain 3: Deployment and Orchestration of ML Workflows (22%)](syllabus/MLA-C01_Official_Blueprint.md#domain-3-deployment-and-orchestration-of-ml-workflows-22):** SageMaker 4 inference deployment types (Real-Time, Serverless, Async, Batch Transform), SageMaker Pipelines CI/CD, container packaging.
-4. **[Domain 4: ML Solution Monitoring and Maintenance (24%)](syllabus/MLA-C01_Official_Blueprint.md#domain-4-ml-solution-monitoring-and-maintenance-24):** Detecting data & concept drift (Model Monitor), bias detection and explainability (Clarify / SHAP), model cards, safety guardrails, cost management.
+1. **[Domain 1: Data Preparation for Machine Learning (28%)](phase0_step01_syllabus/MLA-C01_Official_Blueprint.md#domain-1-data-preparation-for-machine-learning-28):** Ingestion pipelines (Glue, Kinesis, EMR), feature engineering, handling data imbalances, chunking & vector embeddings.
+2. **[Domain 2: ML Model Development (26%)](phase0_step01_syllabus/MLA-C01_Official_Blueprint.md#domain-2-ml-model-development-26):** Algorithm selection (tabular, CV, NLP), foundation model adaptation (PEFT/LoRA, Continued Pre-training), hyperparameter tuning (HPO), model evaluation.
+3. **[Domain 3: Deployment and Orchestration of ML Workflows (22%)](phase0_step01_syllabus/MLA-C01_Official_Blueprint.md#domain-3-deployment-and-orchestration-of-ml-workflows-22):** SageMaker 4 inference deployment types (Real-Time, Serverless, Async, Batch Transform), SageMaker Pipelines CI/CD, container packaging.
+4. **[Domain 4: ML Solution Monitoring and Maintenance (24%)](phase0_step01_syllabus/MLA-C01_Official_Blueprint.md#domain-4-ml-solution-monitoring-and-maintenance-24):** Detecting data & concept drift (Model Monitor), bias detection and explainability (Clarify / SHAP), model cards, safety guardrails, cost management.
 
 ---
 

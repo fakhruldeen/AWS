@@ -71,6 +71,6 @@ By the end of this lecture, candidates will be able to:
 ---
 
 ## 🔬 Hands-on Lab & Homework Alignment
-- **Hands-on Lab:** Guide students through [Lab 01: Multi-Tier Resilient VPC Architecture](../labs/lab_01_multi_tier_resilient_vpc_architecture.md) and [Lab 05: Hybrid & Private Connectivity](../labs/lab_05_hybrid_private_connectivity_transit_gateway_endpoints.md).
-- **Knowledge Check:** Assign [Module 01 Knowledge Check](../knowledge_checks/Module_01_Secure_Architectures_Knowledge_Check.md).
-- **Revision Questions:** Direct students to practice [Domain 1 Revision Questions](../revision_questions/Domain_1_Design_Secure_Architectures_Revision_Questions.md).
+- **Hands-on Lab:** Guide students through [Lab 01: Multi-Tier Resilient VPC Architecture](../phase2_step07_labs/lab_01_multi_tier_resilient_vpc_architecture.md) and [Lab 05: Hybrid & Private Connectivity](../phase2_step07_labs/lab_05_hybrid_private_connectivity_transit_gateway_endpoints.md).
+- **Knowledge Check:** Assign [Module 01 Knowledge Check](../phase4_step10_knowledge_checks/Module_01_Secure_Architectures_Knowledge_Check.md).
+- **Revision Questions:** Direct students to practice [Domain 1 Revision Questions](../phase4_step11_revision_questions/Domain_1_Design_Secure_Architectures_Revision_Questions.md).
