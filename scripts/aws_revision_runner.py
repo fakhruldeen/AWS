@@ -298,7 +298,7 @@ def find_tricks(text: str) -> List[Dict[str, Any]]:
                 break
     return matches
 
-def locate_bank(cert: str, custom_path: Optional[str] = None, release_2026: bool = False) -> Path:
+def locate_bank(cert: str, custom_path: Optional[str] = None, release_2026: bool = False, examtopics: bool = False) -> Path:
     if custom_path:
         p = Path(custom_path)
         if p.is_file():
@@ -307,6 +307,20 @@ def locate_bank(cert: str, custom_path: Optional[str] = None, release_2026: bool
 
     work_repo = Path(__file__).resolve().parent.parent
     local_clf_release = work_repo / "Cloud/Practitioner/CLF-C02/phase4_step11_revision_questions/CLF_C02_November_2026_Release_393Q.json"
+    local_clf_et = work_repo / "Cloud/Practitioner/CLF-C02/phase4_step11_revision_questions/CLF_C02_ExamTopics_Community_Pool_718Q.json"
+    local_aif_et = work_repo / "AI/Practitioner/AIF-C01/phase4_step11_revision_questions/AIF_C01_ExamTopics_Community_Pool_154Q.json"
+    local_saa_et = work_repo / "Cloud/Associate/SAA-C03/revision_questions/SAA_C03_ExamTopics_Community_Pool_1019Q.json"
+    local_mla_et = work_repo / "AI/Associate/MLA-C01/revision_questions/MLA_C01_ExamTopics_Community_Pool_106Q.json"
+
+    if examtopics:
+        if cert == "CLF" and local_clf_et.is_file():
+            return local_clf_et
+        if cert == "AIF" and local_aif_et.is_file():
+            return local_aif_et
+        if cert == "SAA" and local_saa_et.is_file():
+            return local_saa_et
+        if cert == "MLA" and local_mla_et.is_file():
+            return local_mla_et
 
     if release_2026 and cert == "CLF":
         if local_clf_release.is_file():
@@ -315,6 +329,26 @@ def locate_bank(cert: str, custom_path: Optional[str] = None, release_2026: bool
     env_vault = os.environ.get("AWS_BRAIN_PATH")
     search_paths = [Path(env_vault)] if env_vault else []
     search_paths.extend(DEFAULT_VAULT_PATHS)
+
+    # Check Vault ExamTopics directory if requested
+    if examtopics:
+        for base in search_paths:
+            if cert == "CLF":
+                v_target = base / "Questions_Bank/ExamTopics_Questions/CLF_C02_ExamTopics_Community_Pool_718Q.json"
+                if v_target.is_file():
+                    return v_target
+            elif cert == "AIF":
+                v_target = base / "Questions_Bank/ExamTopics_Questions/AIF_C01_ExamTopics_Community_Pool_154Q.json"
+                if v_target.is_file():
+                    return v_target
+            elif cert == "SAA":
+                v_target = base / "Questions_Bank/ExamTopics_Questions/SAA_C03_ExamTopics_Community_Pool_1019Q.json"
+                if v_target.is_file():
+                    return v_target
+            elif cert == "MLA":
+                v_target = base / "Questions_Bank/ExamTopics_Questions/MLA_C01_ExamTopics_Community_Pool_106Q.json"
+                if v_target.is_file():
+                    return v_target
 
     subfolder_map = {
         "CLF": ("Cloud_Practitioner_CLF-C02", "CLF_C02_Master_Unique_Questions.json"),
@@ -857,7 +891,7 @@ Examples:
             print(f"{Colors.GREEN}No recorded weaknesses for {args.cert}! Try practicing other domains.{Colors.RESET}")
             return
 
-        bank_file = locate_bank(args.cert, args.bank_path, release_2026=args.release_2026)
+        bank_file = locate_bank(args.cert, args.bank_path, release_2026=args.release_2026, examtopics=args.examtopics)
         all_q = load_questions(bank_file)
         filtered = filter_questions(all_q, weak_ids=set(weak_cert_ids), examtopics_only=args.examtopics)
         print(f"\n{Colors.YELLOW}{Colors.BOLD}🔍 Found {len(filtered)} previously missed question(s) in weakness history.{Colors.RESET}")
@@ -865,7 +899,7 @@ Examples:
         return
 
     # Locate and load bank
-    bank_file = locate_bank(args.cert, args.bank_path, release_2026=args.release_2026)
+    bank_file = locate_bank(args.cert, args.bank_path, release_2026=args.release_2026, examtopics=args.examtopics)
     all_questions = load_questions(bank_file)
 
     if args.mode == "mock":

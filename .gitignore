@@ -40,3 +40,8 @@ gemini_shared_chat*.txt
 Thumbs.db
 *.tmp
 *.log
+downloads/
+**/downloads/
+__pycache__/
+**/__pycache__/
+
