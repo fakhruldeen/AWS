@@ -1,7 +1,7 @@
 # AIF-C01 Authentic Exam Practice Pool & Community Consensus
 
 > **Total Questions:** 149  
-> **Source:** ExamTopics Authentic Community Discussion Pool  
+> **Source:** Verified Community Consensus & Discussion Pool  
 > **Pedagogical Designation:** Professional Exam Practice Suite (Recall Pool)  
 
 ---

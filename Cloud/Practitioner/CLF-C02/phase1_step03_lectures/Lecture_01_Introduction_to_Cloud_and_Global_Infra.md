@@ -143,6 +143,94 @@ Draw this architecture diagram on the classroom whiteboard:
 
 ---
 
+
+---
+
+## 🎯 Authentic Exam Practice & Case Scenarios
+> High-yield scenario questions from the authentic candidate practice pool reinforcing the core competencies of this lecture.
+
+### Scenario Practice 1: CLF-C02-ET-Q025
+**Question:**  
+Which design principles are included in the reliability pillar of the AWS Well-Architected Framework? (Choose two.)
+
+**Options:**
+- A) Automatically recover from failure.
+- B) Grant everyone access to increase AWS service quotas.
+- C) Stop guessing capacity.
+- D) Design applications to run in a single Availability Zone.
+- E) Plan to increase AWS service quotas first in a secondary AWS Region.
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `AC`  
+**Peer Consensus:** `100%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: AC (100%). Contributor Answer: AC.
+
+Community Rationale & Discussion:
+Selected Answer: AC
+A & C are the best choices
+
+</details>
+
+### Scenario Practice 2: CLF-C02-ET-Q029
+**Question:**  
+A company wants to deploy an application in multiple Availability Zones in a single AWS Region.
+
+Which benefit will this deployment provide to the company?
+
+**Options:**
+- A) Improved connection performance for global customers
+- B) Resilient architecture and a highly available solution
+- C) Reduced overall data storage costs
+- D) Ability to shut down an Availability Zone during periods of low demand
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `B`  
+**Peer Consensus:** `100%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: B (100%). Contributor Answer: B.
+
+Community Rationale & Discussion:
+Selected Answer: B
+B. Resilient architecture and a highly available solution
+
+</details>
+
+### Scenario Practice 3: CLF-C02-ET-Q097
+**Question:**  
+A company is designing workloads in the AWS Cloud. The company wants the workloads to perform their intended function correctly and consistently throughout their lifecycle.
+
+Which pillar of the AWS Well-Architected Framework does this goal represent?
+
+**Options:**
+- A) Operational excellence
+- B) Security
+- C) Reliability
+- D) Performance efficiency
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `C`  
+**Peer Consensus:** `100%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: C (100%). Contributor Answer: C.
+
+Community Rationale & Discussion:
+Selected Answer: C
+C. Reliability - consistency
+---
+C. Reliability
+
+</details>
+
 ## 🚀 Post-Lecture Student Transition
 * Direct students to read [Cloud_Economics_and_TCO.md](file:///home/mohamed/Desktop/Work/aws/Cloud/Practitioner/CLF-C02/phase1_step06_explanations/01_Cloud_Concepts/Cloud_Economics_and_TCO.md) and [Global_Infrastructure.md](file:///home/mohamed/Desktop/Work/aws/Cloud/Practitioner/CLF-C02/phase1_step06_explanations/01_Cloud_Concepts/Global_Infrastructure.md).
 * Transition to hands-on practice: [Lab 00: Account Creation & Security Baseline](file:///home/mohamed/Desktop/Work/aws/Cloud/Practitioner/CLF-C02/phase2_step07_labs/00_Account_Creation_Walkthrough.md).

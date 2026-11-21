@@ -1,7 +1,7 @@
 # SAA-C03 Authentic Exam Practice Pool & Community Consensus
 
 > **Total Questions:** 1019  
-> **Source:** ExamTopics Authentic Community Discussion Pool  
+> **Source:** Verified Community Consensus & Discussion Pool  
 > **Pedagogical Designation:** Professional Exam Practice Suite (Recall Pool)  
 
 ---
@@ -6218,7 +6218,7 @@ Community Most Voted: D (75%). Contributor Answer: D.
 
 Community Rationale & Discussion:
 Selected Answer: D
-https://www.examtopics.com/discussions/amazon/view/83281-exam-aws-certified-solutions-architect-associate-saa-c02/
+
 ---
 D IS WRONG - Its used for caching. you cannot 'Move the on-premises file data to the FSx File Gateway.' which is stated in answer D. It pretty sure AWS employee's are spamming this site with the wrong answers intentionally.
 ---
@@ -6826,7 +6826,7 @@ Community Rationale & Discussion:
 Selected Answer: A
 I'm not sure, but I think this question is from professional solution architect question pool.
 Please have a look at this one as well.
-https://www.examtopics.com/discussions/amazon/view/112780-exam-aws-certified-solutions-architect-professional-sap-c02/
+
 ---
 Selected Answer: B
 A policy cannot look up "the cost center ID of the user who created the resource", we need Lambda to do that. Thus A is out.
@@ -9610,7 +9610,7 @@ Community Rationale & Discussion:
 Selected Answer: A
 Answer is A.
 Amazon CloudFront is a web service that speeds up distribution of your static and dynamic web content
-https://www.examtopics.com/discussions/amazon/view/81081-exam-aws-certified-solutions-architect-associate-saa-c02/
+
 ---
 Selected Answer: B
 Answer should be B,
@@ -10510,7 +10510,7 @@ https://docs.aws.amazon.com/eks/latest/userguide/autoscaling.html
 Selected Answer: B
 Refer to 
 
-https://www.examtopics.com/discussions/amazon/view/109702-exam-aws-certified-solutions-architect-associate-saa-c03/
+
 ---
 Selected Answer: B
 AnswerB
@@ -10593,7 +10593,7 @@ Selected Answer: D
 To add more to all the answer Redis has built-in support for geospatial data, making it ideal for updates and retrieval of locations.
 ---
 Selected Answer: D
-Refer to https://www.examtopics.com/discussions/amazon/view/53854-exam-aws-certified-solutions-architect-associate-saa-c02/
+Refer to 
 
 </details>
 
@@ -25627,7 +25627,7 @@ E.(X) EC2 launch type
 The EC2 launch type can be used to run your containerized applications on Amazon EC2 instances that you register to your Amazon ECS cluster and manage yourself.
 ---
 AD for sure
-Link: https://www.examtopics.com/discussions/amazon/view/43729-exam-aws-certified-solutions-architect-associate-saa-c02/
+Link: 
 ---
 Selected Answer: AD
 RDS Multi AZ and AWS Fargate are the most suitable here.
@@ -28404,7 +28404,7 @@ Community Most Voted: B (66%). Contributor Answer: B.
 
 Community Rationale & Discussion:
 Selected Answer: B
-https://www.examtopics.com/discussions/amazon/view/68306-exam-aws-certified-solutions-architect-associate-saa-c02/
+
 ---
 Selected Answer: C
 The requested result is a graph, so...
@@ -30120,7 +30120,7 @@ Selected Answer: A
 here keyword is "before" "the data is encrypted at rest before the data is uploaded to the S3 buckets."
 ---
 Selected Answer: A
-https://www.examtopics.com/discussions/amazon/view/53840-exam-aws-certified-solutions-architect-associate-saa-c02/
+
 ---
 Selected Answer: A
 For those who are confused with the data also must be encrypted in transit, Amazon S3 TLS (Transport Layer Security) is used by default and you can't disable it.
@@ -30686,7 +30686,7 @@ Which solution will meet these requirements?
 Community Most Voted: B (100%). Contributor Answer: B.
 
 Community Rationale & Discussion:
-Read the discussion, that’s the whole point why examtopics picks the wrong answer. Follow most voted answer not examtopics answer
+Read the discussion, that’s the whole point why community_consensus picks the wrong answer. Follow most voted answer not community_consensus answer
 ---
 Selected Answer: B
 Configure the security group for the EC2 instances to only allow traffic that comes from the security group for the ALB
@@ -30993,7 +30993,7 @@ This solution satisfies the needs in the most secure manner:
 • The IAM policy grants least privilege access by specifying read access only to the specific S3 bucket needed. Access is not granted to all S3 buckets.
 • If the Lambda function is compromised, the attacker would only gain access to the one specified S3 bucket. They would not receive broad access to resources.
 ---
-Has anyone passed this exam, choosing the wrong answers from ExamTopics? or what's the reason for the confusion???
+Has anyone passed this exam, choosing the wrong answers from Community Consensus Pool? or what's the reason for the confusion???
 ---
 Selected Answer: B
 B is correct.
@@ -33523,7 +33523,7 @@ Parameter Store does not provide automatic credential rotation.
 Selected Answer: C
 C. Create credentials on the RDS for MySQL database for the application user and store the credentials in AWS Secrets Manager. Configure the application to load the database credentials from Secrets Manager. Set up a credentials rotation schedule for the application user in the RDS for MySQL database using Secrets Manager.
 
-https://www.examtopics.com/discussions/amazon/view/46483-exam-aws-certified-solutions-architect-associate-saa-c02/
+
 ---
 Selected Answer: C
 Management says the application must be made more secure with the least amount of programming effort.
@@ -35952,7 +35952,7 @@ A is exlucded since root account is never a choice for the principle of least pr
 D, E left are the correct ones.
 ---
 D, E
-https://www.examtopics.com/discussions/amazon/view/46428-exam-aws-certified-solutions-architect-associate-saa-c02/
+
 ---
 Selected Answer: DE
 ABC are just giving too much access so CD are logical choices
@@ -36335,7 +36335,7 @@ C. Configure the application to upload images directly from each user's browser 
 D. Configure S3 Event Notifications to invoke an AWS Lambda function when an image is uploaded. Use the function to resize the image. This will allow the application to resize images asynchronously, rather than having to do it synchronously during the upload request, which can improve performance.
 ---
 Selected Answer: BD
-Why would anyone vote C? signed URL is for temporary access. also, look at the vote here: https://www.examtopics.com/discussions/amazon/view/82971-exam-aws-certified-solutions-architect-associate-saa-c02/
+Why would anyone vote C? signed URL is for temporary access. also, look at the vote here: 
 ---
 Selected Answer: CD
 see https://aws.amazon.com/blogs/compute/uploading-large-objects-to-amazon-s3-using-multipart-upload-and-transfer-acceleration/

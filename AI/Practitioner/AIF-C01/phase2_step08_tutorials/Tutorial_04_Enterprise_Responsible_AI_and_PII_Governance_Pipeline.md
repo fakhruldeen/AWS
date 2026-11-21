@@ -156,3 +156,83 @@ aws cloudtrail put-event-selectors \
 ## 🔒 Production Security Takeaways
 * **Independent Defense:** Guardrails prevent prompt injection and data leaks even if an attacker attempts sophisticated hypothetical roleplay.
 * **Contextual Grounding:** Eliminates hallucinations in customer-facing support portals by validating responses against reference sources.
+
+
+---
+
+## 4. 🎯 Authentic Architecture Exam Practice
+> Practice real-world scenarios tested on official AWS examinations that directly apply the architectural patterns built in this tutorial.
+
+### Scenario Practice 1: AIF-C01-ET-Q053
+**Question:**  
+Which functionality does Amazon SageMaker Clarify provide?
+
+**Options:**
+- A) Integrates a Retrieval Augmented Generation (RAG) workflow
+- B) Monitors the quality of ML models in production
+- C) Documents critical details about ML models
+- D) Identifies potential bias during data preparation
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `D`  
+**Peer Consensus:** `100%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: D (100%). Contributor Answer: D.
+
+Community Rationale & Discussion:
+Selected Answer: D
+Amazon SageMaker Clarify provides functionality to detect and identify potential bias in data both before and after training, helping teams uncover imbalances in datasets that might lead to biased model predictions. This is essential for ensuring fairness and compliance, especially in sensitive applications.
+
+Why Not the Other Options?
+A. Integrates a Retrieval Augmented Generation (RAG) workflow: RAG workflows are used for combining retrieved documents with model outputs, typically in language models, but this is not a function of SageMaker Clarify.
+B. Monitors the quality of ML models in production: Monitoring model quality in production is handled by SageMaker Model Monitor, not SageMaker Clarify.
+C. Documents critical details about ML models: This functionality is part of Amazon SageMaker Model Cards, which documents model details for transparency and compliance.
+---
+Selected Answer: D
+Explicação:
+O Amazon SageMaker Clarify é uma ferramenta que auxilia na detecção de vieses e na explicabilidade de modelos de machine learning (ML). Ele oferece funcionalidades como:
+
+Detecção de vieses: Ajuda a identificar possíveis vieses nos dados durante a preparação e também nos modelos após o treinamento. 
+
+Explicabilidade de modelos: Fornece insights sobre como os modelos de ML fazem previsões, aumentando a transparência
+---
+Selected Answer: D
+Identifies potential bias during data preparation: This is the core functionality of Amazon SageMaker Clarify. It helps data scientists and AI practitioners detect bias in training data, providing insights into how the data might introduce bi
+
+</details>
+
+### Scenario Practice 2: AIF-C01-ET-Q004
+**Question:**  
+A company is developing an ML model to make loan approvals. The company must implement a solution to detect bias in the model. The company must also be able to explain the model's predictions.
+
+Which solution will meet these requirements?
+
+**Options:**
+- A) Amazon SageMaker Clarify
+- B) Amazon SageMaker Data Wrangler
+- C) Amazon SageMaker Model Cards
+- D) AWS AI Service Cards
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `A`  
+**Peer Consensus:** `100%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: A (100%). Contributor Answer: A.
+
+Community Rationale & Discussion:
+Selected Answer: A
+The solution that meets the requirements of detecting bias and explaining model predictions in a loan approval scenario is A. Amazon SageMaker Clarify
+---
+Selected Answer: A
+The correct answer is A. SageMaker Clarify provides both bias detection and model explainability features.
+---
+Selected Answer: A
+Amazon SageMaker Clarify provides both bias detection and model explainability features, making it the most suitable choice for detecting bias in a loan approval model and explaining its predictions.
+
+</details>

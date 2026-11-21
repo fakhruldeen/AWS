@@ -192,3 +192,112 @@ flowchart TD
 - [ ] Experiment with Temperature ($0.1$ vs $0.9$) and Top-P in the Amazon Bedrock Console.
 - [ ] Review `explanations/02_Domain_2_Fundamentals_of_Generative_AI.md`.
 - [ ] Complete the Module 2 review quiz in `slides/Module_02_Amazon_Bedrock_and_RAG_Slides.md`.
+
+
+---
+
+## 🎯 Authentic Exam Practice & Case Scenarios
+> High-yield scenario questions from the authentic candidate practice pool reinforcing the core competencies of this lecture.
+
+### Scenario Practice 1: AIF-C01-ET-Q017
+**Question:**  
+A company wants to improve the accuracy of the responses from a generative AI application. The application uses a foundation model (FM) on Amazon Bedrock.
+
+Which solution meets these requirements MOST cost-effectively?
+
+**Options:**
+- A) Fine-tune the FM.
+- B) Retrain the FM.
+- C) Train a new FM.
+- D) Use prompt engineering.
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `D`  
+**Peer Consensus:** `100%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: D (100%). Contributor Answer: D.
+
+Community Rationale & Discussion:
+Selected Answer: D
+A solução mais econômica é D. Use engenharia rápida.
+
+A técnica de engenharia rápida permite melhorar a precisão das respostas sem a necessidade de ajustar ou treinar novamente o modelo, o que pode ser bastante custoso em termos de tempo e recursos computacionais. A engenharia rápida envolve a criação de prompts mais eficazes e direcionados, otimizando os resultados gerados pelo modelo com investimentos mínimos.
+
+</details>
+
+### Scenario Practice 2: AIF-C01-ET-Q031
+**Question:**  
+A company wants to build a generative AI application by using Amazon Bedrock and needs to choose a foundation model (FM). The company wants to know how much information can fit into one prompt.
+Which consideration will inform the company's decision?
+
+**Options:**
+- A) Temperature
+- B) Context window
+- C) Batch size
+- D) Model size
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `B`  
+**Peer Consensus:** `100%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: B (100%). Contributor Answer: B.
+
+Community Rationale & Discussion:
+Selected Answer: B
+A company needs to know the maximum input size for a single prompt when choosing a Foundation Model (FM) in Amazon Bedrock.
+
+A. Temperature: This controls the randomness of the output, not the input prompt length. Temperature affects creativity, not input size.
+B. Context window: This defines the maximum length of the input prompt the model can process. It directly limits how much information can be included.
+C. Batch size: This is the number of prompts processed at once, affecting throughput, not individual prompt length. It's about processing multiple prompts efficiently.
+D. Model size: This relates to the model's overall capacity and complexity, not directly to the input prompt length. Size impacts performance, not input limits.
+Therefore, B. Context window is the correct answer.
+---
+Selected Answer: B
+Context window: The context window refers to the amount of text (or tokens) that a model can process at once. This is crucial when working with foundation models (FMs) like those available in Amazon Bedrock, as it defines the maximum input size for the prompt. The context window determines how much of the prompt the model can "remember" and use to generate responses. If the prompt exceeds the context window, the model will only process the portion of the prompt that fits within this limit, potentially missing important details.
+---
+Selected Answer: B
+The context-window is the input prompt for the model generation.
+
+</details>
+
+### Scenario Practice 3: AIF-C01-ET-Q102
+**Question:**  
+A company wants to assess the costs that are associated with using a large language model (LLM) to generate inferences. The company wants to use Amazon Bedrock to build generative AI applications.
+Which factor will drive the inference costs?
+
+**Options:**
+- A) Number of tokens consumed
+- B) Temperature value
+- C) Amount of data used to train the LLM
+- D) Total training time
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `A`  
+**Peer Consensus:** `100%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: A (100%). Contributor Answer: A.
+
+Community Rationale & Discussion:
+Selected Answer: A
+In the context of using Amazon Bedrock and generative AI models, inference costs are typically driven by the number of tokens consumed during the input and output processing.
+
+Number of tokens consumed refers to how many tokens (words, subwords, characters) the model processes during inference (both input and output). More tokens mean higher processing and hence higher costs.
+---
+Selected Answer: A
+A. Number of tokens consumed. More tokens used = higher cost. 
+
+All other affects training costs, not inference costs. Correct answer is A
+---
+Selected Answer: A
+No. of tokens consumed while processing. Tokens are the basic units of input and output that a generative AI model operates on, representing words, subwords, or other linguistic units.
+
+</details>

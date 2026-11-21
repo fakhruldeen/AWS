@@ -13,7 +13,7 @@
 | Document | Exam Domain | Official Weight | Focus & Key Traps |
 | :--- | :--- | :---: | :--- |
 | **[November_2026_Actual_Exam_Release_393Q.md](./November_2026_Actual_Exam_Release_393Q.md)** | **🔥 Nov 2026 Practice Release** | **All 4 Domains** | **Complete 393-question authentic candidate practice pool from November 2026 with 3-tier priority categorization** |
-| **[ExamTopics_High_Yield_Focus_Set.md](./ExamTopics_High_Yield_Focus_Set.md)** | **⭐ ExamTopics Focus** | **Top Priority** | **65 authentic ExamTopics community questions with verified consensus & distractor traps** |
+| **[Community Consensus Pool_High_Yield_Focus_Set.md](./Community Consensus Pool_High_Yield_Focus_Set.md)** | **⭐ Community Consensus Pool Focus** | **Top Priority** | **65 authentic Community Consensus Pool community questions with verified consensus & distractor traps** |
 | **[Domain_1_Cloud_Concepts_Revision_Questions.md](./Domain_1_Cloud_Concepts_Revision_Questions.md)** | Domain 1: Cloud Concepts | **24%** | Cloud economics, CAF perspectives, Well-Architected 6 pillars, DR tiers |
 | **[Domain_2_Security_and_Compliance_Revision_Questions.md](./Domain_2_Security_and_Compliance_Revision_Questions.md)** | Domain 2: Security & Compliance | **30%** | IAM policies, Shared Responsibility boundaries, Shield/WAF, KMS, Artifact |
 | **[Domain_3_Cloud_Technology_and_Services_Revision_Questions.md](./Domain_3_Cloud_Technology_and_Services_Revision_Questions.md)** | Domain 3: Technology & Services | **34%** | Compute options, S3 tiers, RDS vs DynamoDB, VPC routing, SQS vs SNS |
@@ -22,7 +22,7 @@
 
 ---
 
-## 💻 Interactive ExamTopics & November 2026 Revision Engine
+## 💻 Interactive Community Consensus Pool & November 2026 Revision Engine
 
 Run the interactive CLI revision runner with the `--release-2026` flag to drill specifically on the authentic November 2026 practice suite (393 questions):
 

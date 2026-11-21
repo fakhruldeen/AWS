@@ -175,3 +175,105 @@ flowchart TD
 - [ ] Review `explanations/04_Domain_4_Guidelines_for_Responsible_AI.md`.
 - [ ] Memorize the 6 Core Pillars of Responsible AI and SHAP use cases.
 - [ ] Complete the Module 4 review quiz in `slides/Module_04_Responsible_AI_and_Governance_Slides.md`.
+
+
+---
+
+## 🎯 Authentic Exam Practice & Case Scenarios
+> High-yield scenario questions from the authentic candidate practice pool reinforcing the core competencies of this lecture.
+
+### Scenario Practice 1: AIF-C01-ET-Q004
+**Question:**  
+A company is developing an ML model to make loan approvals. The company must implement a solution to detect bias in the model. The company must also be able to explain the model's predictions.
+
+Which solution will meet these requirements?
+
+**Options:**
+- A) Amazon SageMaker Clarify
+- B) Amazon SageMaker Data Wrangler
+- C) Amazon SageMaker Model Cards
+- D) AWS AI Service Cards
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `A`  
+**Peer Consensus:** `100%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: A (100%). Contributor Answer: A.
+
+Community Rationale & Discussion:
+Selected Answer: A
+The solution that meets the requirements of detecting bias and explaining model predictions in a loan approval scenario is A. Amazon SageMaker Clarify
+---
+Selected Answer: A
+The correct answer is A. SageMaker Clarify provides both bias detection and model explainability features.
+---
+Selected Answer: A
+Amazon SageMaker Clarify provides both bias detection and model explainability features, making it the most suitable choice for detecting bias in a loan approval model and explaining its predictions.
+
+</details>
+
+### Scenario Practice 2: AIF-C01-ET-Q014
+**Question:**  
+A company built an AI-powered resume screening system. The company used a large dataset to train the model. The dataset contained resumes that were not representative of all demographics.
+
+Which core dimension of responsible AI does this scenario present?
+
+**Options:**
+- A) Fairness
+- B) Explainability
+- C) Privacy and security
+- D) Transparency
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `U`  
+**Peer Consensus:** `100%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: U (100%). Contributor Answer: U.
+
+Community Rationale & Discussion:
+Selected Answer: U
+A dimensão central apresentada nesse cenário é A. Justiça.
+
+O sistema de triagem de currículos enfrenta desafios relacionados à justiça, pois foi treinado com dados que não são representativos de todos os grupos demográficos. Isso pode introduzir vieses no modelo, prejudicando certos grupos enquanto favorece outros. Em sistemas de IA responsáveis, é essencial abordar esses vieses, garantindo que os dados de treinamento sejam equilibrados e inclusivos para promover resultados justos.
+
+</details>
+
+### Scenario Practice 3: AIF-C01-ET-Q046
+**Question:**  
+An AI practitioner is building a model to generate images of humans in various professions. The AI practitioner discovered that the input data is biased and that specific attributes affect the image generation and create bias in the model.
+Which technique will solve the problem?
+
+**Options:**
+- A) Data augmentation for imbalanced classes
+- B) Model monitoring for class distribution
+- C) Retrieval Augmented Generation (RAG)
+- D) Watermark detection for images
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `A`  
+**Peer Consensus:** `100%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: A (100%). Contributor Answer: A.
+
+Community Rationale & Discussion:
+Selected Answer: A
+Data augmentation for imbalanced classes: If the input data is biased and leads to undesirable attributes in the generated images (such as certain professions being overrepresented by specific attributes like gender or race), data augmentation can help balance the dataset. Data augmentation involves creating new training samples by applying transformations like cropping, rotating, or altering color schemes to existing data. This can help create a more diverse, balanced dataset and reduce bias by ensuring the model sees a more representative set of examples.
+---
+Selected Answer: A
+Data augmentation for imbalanced classes
+
+Data augmentation techniques can help mitigate bias in image generation models by artificially increasing the diversity of the training data. By applying transformations like rotations, flips, and color jittering to existing images, you can create new, synthetic images that are similar to the original ones. This can help balance the dataset and reduce the impact of biases present in the original data.
+---
+Selected Answer: A
+A. Data augmentation for imbalanced classes is the most effective technique to mitigate bias in the input data by ensuring a more balanced representation of classes and attributes in the training set, leading to fairer and more accurate image generation.
+
+</details>

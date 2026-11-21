@@ -179,3 +179,64 @@ Imagine business requirements mandate upgrading the EC2 instance type from `t3.m
   - `!Sub`: Performs string substitution using variables (`${EnvironmentName}`).
 - **Change Sets prevent unintended outages:** Always review a Change Set before executing an update on production infrastructure.
 - **Drift Detection:** Identifies if an engineer made out-of-band manual changes directly in the console, violating IaC governance.
+
+
+---
+
+## 4. 🎯 Authentic Architecture Exam Practice
+> Practice real-world scenarios tested on official AWS examinations that directly apply the architectural patterns built in this tutorial.
+
+### Scenario Practice 1: CLF-C02-ET-Q052
+**Question:**  
+Why are AWS CloudFormation templates used?
+
+**Options:**
+- A) To reduce provisioning time by using automation.
+- B) To transfer existing infrastructure to another company.
+- C) To reuse on-premises infrastructure in the AWS Cloud.
+- D) To deploy large infrastructure with no cost implications.
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `A`  
+**Peer Consensus:** `100%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: A (100%). Contributor Answer: A.
+
+Community Rationale & Discussion:
+Selected Answer: A
+A. To reduce provisioning time by using automation.
+
+</details>
+
+### Scenario Practice 2: CLF-C02-ET-Q108
+**Question:**  
+A developer needs to use a standardized template to create copies of a company's AWS architecture for development, test, and production environments.
+
+Which AWS service should the developer use to meet this requirement?
+
+**Options:**
+- A) AWS Cloud Map
+- B) AWS CloudFormation
+- C) Amazon Cloud Front
+- D) AWS CloudTrail
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `B`  
+**Peer Consensus:** `100%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: B (100%). Contributor Answer: B.
+
+Community Rationale & Discussion:
+Selected Answer: B
+Keyword: Template, development, test, and production environments
+---
+Selected Answer: B
+B. AWS CloudFormation
+
+</details>

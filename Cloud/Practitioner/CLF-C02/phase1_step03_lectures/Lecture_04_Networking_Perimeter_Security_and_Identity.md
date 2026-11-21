@@ -95,6 +95,104 @@ Spend 10 minutes drilling this exact matrix into students—it accounts for 3–
 
 ---
 
+
+---
+
+## 🎯 Authentic Exam Practice & Case Scenarios
+> High-yield scenario questions from the authentic candidate practice pool reinforcing the core competencies of this lecture.
+
+### Scenario Practice 1: CLF-C02-ET-Q467
+**Question:**  
+A company wants to generate a list of IAM users. The company also wants to view the status of various credentials that are associated with the users, such as password, access keys, and multi-factor authentication (MFA) devices.
+
+Which AWS service or feature will meet these requirements?
+
+**Options:**
+- A) IAM credential report
+- B) AWS IAM Identity Center (AWS Single Sign-On)
+- C) AWS Identity and Access Management Access Analyzer
+- D) AWS Cost and Usage Report
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `A`  
+**Peer Consensus:** `100%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: A (100%). Contributor Answer: A.
+
+Community Rationale & Discussion:
+Selected Answer: A
+
+---
+Selected Answer: A
+You can generate and download a credential report that lists all users in your account and the status of their various credentials, including passwords, access keys, and MFA devices. 
+
+---
+Selected Answer: A
+A.
+
+Its a report that lists all your account's users and the status of their various
+credentials.
+
+</details>
+
+### Scenario Practice 2: CLF-C02-ET-Q051
+**Question:**  
+Which of the following actions are controlled with AWS Identity and Access Management (IAM)? (Choose two.)
+
+**Options:**
+- A) Control access to AWS service APIs and to other specific resources.
+- B) Provide intelligent threat detection and continuous monitoring.
+- C) Protect the AWS environment using multi-factor authentication (MFA).
+- D) Grant users access to AWS data centers.
+- E) Provide firewall protection for applications from common web attacks.
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `AC`  
+**Peer Consensus:** `100%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: AC (100%). Contributor Answer: AC.
+
+Community Rationale & Discussion:
+Selected Answer: AC
+My choices are A & C
+
+</details>
+
+### Scenario Practice 3: CLF-C02-ET-Q053
+**Question:**  
+A company is using AWS Identity and Access Management (IAM).
+
+Who can manage the access keys of the AWS account root user?
+
+**Options:**
+- A) IAM users in the same account that have been granted permission
+- B) IAM roles in any account that have been granted permission
+- C) IAM users and roles that have been granted permission
+- D) The AWS account owner
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `D`  
+**Peer Consensus:** `100%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: D (100%). Contributor Answer: D.
+
+Community Rationale & Discussion:
+Selected Answer: D
+D. The AWS account owner
+---
+D. The AWS account owner
+
+</details>
+
 ## 🚀 Post-Lecture Student Transition
 * Direct students to review [AWS_IAM_and_Identity.md](file:///home/mohamed/Desktop/Work/aws/Cloud/Practitioner/CLF-C02/phase1_step06_explanations/02_Security_and_Compliance/AWS_IAM_and_Identity.md) and [Shield_and_WAF.md](file:///home/mohamed/Desktop/Work/aws/Cloud/Practitioner/CLF-C02/phase1_step06_explanations/02_Security_and_Compliance/Shield_and_WAF.md).
 * Transition to hands-on practice: [Lab 01: Multi-Tier VPC Networking](file:///home/mohamed/Desktop/Work/aws/Cloud/Practitioner/CLF-C02/phase2_step07_labs/lab_01_vpc_networking.md) and [Lab 02: VPC Security Controls](file:///home/mohamed/Desktop/Work/aws/Cloud/Practitioner/CLF-C02/phase2_step07_labs/lab_02_vpc_security_controls.md).

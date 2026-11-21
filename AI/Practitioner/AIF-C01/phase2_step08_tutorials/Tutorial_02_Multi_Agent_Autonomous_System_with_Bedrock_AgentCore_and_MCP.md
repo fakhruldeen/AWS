@@ -190,3 +190,77 @@ Create a lightweight MCP server implementing the carrier rescheduling tool:
 * **AgentCore Least Privilege:** Ensure the Agent IAM role only has permissions to invoke specific Lambda ARNs.
 * **Bedrock Guardrail Attachment:** Attach an active Guardrail to redact PII (phone numbers, addresses) from the conversational agent transcript.
 * **Audit Traces:** Inspect the Amazon CloudWatch log groups created for the agent to review intermediate reasoning thoughts and tool invocations.
+
+
+---
+
+## 4. 🎯 Authentic Architecture Exam Practice
+> Practice real-world scenarios tested on official AWS examinations that directly apply the architectural patterns built in this tutorial.
+
+### Scenario Practice 1: AIF-C01-ET-Q099
+**Question:**  
+A large retailer receives thousands of customer support inquiries about products every day. The customer support inquiries need to be processed and responded to quickly. The company wants to implement Agents for Amazon Bedrock.
+What are the key benefits of using Amazon Bedrock agents that could help this retailer?
+
+**Options:**
+- A) Generation of custom foundation models (FMs) to predict customer needs
+- B) Automation of repetitive tasks and orchestration of complex workflows
+- C) Automatically calling multiple foundation models (FMs) and consolidating the results
+- D) Selecting the foundation model (FM) based on predefined criteria and metrics
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `B`  
+**Peer Consensus:** `86%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: B (86%). Contributor Answer: B.
+
+Community Rationale & Discussion:
+Selected Answer: B
+B. Main advantage of using Amazon Bedrock Agent is the automation of repetitive tasks and the orchestration of complex workflows. Customer support inquiries are often patterned and repetitive. By using Amazon Bedrock Agent, you can automate the initial response to such routine inquiries and information gathering. In addition, even in cases where the workflow is somewhat complex and the response required varies depending on the inquiry content, Amazon Bedrock can flexibly respond by combining multiple AI models. This will enable quick and accurate customer support while optimally utilizing human resources. It will lead to efficient processing of large volumes of inquiries, which will lead to improved customer satisfaction.
+---
+Selected Answer: B
+Amazon Bedrock agents are designed to help automate and manage complex workflows, such as orchestrating multiple tasks and interacting with other systems, making them particularly suitable for automating repetitive tasks. In the case of the retailer, this would help in efficiently processing customer support inquiries and responding to them quickly.
+---
+Selected Answer: B
+Amazon Bedrock agents are specifically designed to automate tasks and orchestrate workflows
+They can handle repetitive customer support inquiries efficiently
+They can break down complex customer requests into smaller steps and execute them in sequence
+This directly addresses the retailer's need to process thousands of inquiries quickly
+
+</details>
+
+### Scenario Practice 2: AIF-C01-ET-Q005
+**Question:**  
+A company has developed a generative text summarization model by using Amazon Bedrock. The company will use Amazon Bedrock automatic model evaluation capabilities.
+
+Which metric should the company use to evaluate the accuracy of the model?
+
+**Options:**
+- A) Area Under the ROC Curve (AUC) score
+- B) F1 score
+- C) BERTScore
+- D) Real world knowledge (RWK) score
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `C`  
+**Peer Consensus:** `100%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: C (100%). Contributor Answer: C.
+
+Community Rationale & Discussion:
+Selected Answer: C
+BERTScore: This metric leverages the capabilities of a pre-trained BERT model to assess the semantic similarity between the generated summaries and the reference text, providing a more accurate evaluation of the model's ability to capture the key points of the original text, which is crucial for text summarization.
+---
+Selected Answer: C
+The correct answer is C. BERTScore is specifically designed for evaluating text generation quality.
+---
+Selected Answer: C
+BERTScore is the most appropriate metric for evaluating the accuracy of a generative text summarization model because it compares semantic similarity in a manner that aligns well with the goal of text summarization.
+
+</details>

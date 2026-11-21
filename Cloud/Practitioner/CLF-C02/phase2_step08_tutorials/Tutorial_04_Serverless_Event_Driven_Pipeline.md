@@ -167,3 +167,67 @@ flowchart LR
 - **Zero Infrastructure Maintenance:** This entire architecture is 100% serverless; no virtual servers, OS patches, or idle costs exist. When no files are uploaded, billing is strictly zero.
 - **Event-Driven Coupling:** The S3 bucket does not know or care how Lambda processes the file; Lambda does not manage email delivery directly (SNS handles fan-out delivery).
 - **Idempotency & Deduplication:** In production systems, ensure Lambda functions are **idempotent** (can be executed multiple times with identical results) since event delivery guarantees are at-least-once.
+
+
+---
+
+## 4. 🎯 Authentic Architecture Exam Practice
+> Practice real-world scenarios tested on official AWS examinations that directly apply the architectural patterns built in this tutorial.
+
+### Scenario Practice 1: CLF-C02-ET-Q018
+**Question:**  
+Which AWS service provides serverless compute for use with containers?
+
+**Options:**
+- A) Amazon Simple Queue Service (Amazon SQS)
+- B) AWS Fargate
+- C) AWS Elastic Beanstalk
+- D) Amazon SageMaker
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `B`  
+**Peer Consensus:** `100%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: B (100%). Contributor Answer: B.
+
+Community Rationale & Discussion:
+Selected Answer: B
+AWS Fargate is a serverless compute engine for containers that allows you to run containers without managing servers
+---
+Selected Answer: B
+B. AWS Fargate
+
+</details>
+
+### Scenario Practice 2: CLF-C02-ET-Q132
+**Question:**  
+Which AWS services are serverless? (Choose two.)
+
+**Options:**
+- A) AWS Fargate
+- B) Amazon Managed Streaming for Apache Kafka
+- C) Amazon EMR
+- D) Amazon S3
+- E) Amazon EC2
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `AD`  
+**Peer Consensus:** `100%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: AD (100%). Contributor Answer: AD.
+
+Community Rationale & Discussion:
+Selected Answer: AD
+A& D. Fargate and S3 are serverless.
+---
+S3 or Simple Storage Service is classified as a cloud storage service which forms a functional base for all serverless solutions without having to configure any OS or management of any underlying infrastructure.
+---
+A. AWS Fargate and D. Amazon S3.
+
+</details>

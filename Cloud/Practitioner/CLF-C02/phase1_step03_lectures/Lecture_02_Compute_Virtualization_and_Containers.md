@@ -108,6 +108,101 @@ Draw this high-yield matrix on the classroom board:
 
 ---
 
+
+---
+
+## 🎯 Authentic Exam Practice & Case Scenarios
+> High-yield scenario questions from the authentic candidate practice pool reinforcing the core competencies of this lecture.
+
+### Scenario Practice 1: CLF-C02-ET-Q124
+**Question:**  
+A company wants a cost-effective option when running its applications in an Amazon EC2 instance for short time periods. The applications can be interrupted.
+
+Which EC2 instance type will meet these requirements?
+
+**Options:**
+- A) Spot Instances
+- B) On-Demand Instances
+- C) Reserved Instances
+- D) Dedicated Instances
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `A`  
+**Peer Consensus:** `100%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: A (100%). Contributor Answer: A.
+
+Community Rationale & Discussion:
+A. Spot Instances
+
+</details>
+
+### Scenario Practice 2: CLF-C02-ET-Q156
+**Question:**  
+A company has data lakes designed for high performance computing (HPC) workloads.
+
+Which Amazon EC2 instance type should the company use to meet these requirements?
+
+**Options:**
+- A) General purpose instances
+- B) Compute optimized instances
+- C) Memory optimized instances
+- D) Storage optimized instances
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `B`  
+**Peer Consensus:** `67%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: B (67%). Contributor Answer: B.
+
+Community Rationale & Discussion:
+Selected Answer: B
+Compute optimized all the way
+---
+Selected Answer: B
+Compute optimized instances are specifically designed for compute-intensive tasks and are ideal for High-Performance Computing (HPC) workloads.
+---
+Selected Answer: B
+Compute optimized instances are ideal for high performance computing (HPC) workloads because they are specifically designed to deliver high performance for compute-intensive applications.
+
+</details>
+
+### Scenario Practice 3: CLF-C02-ET-Q184
+**Question:**  
+Which type of workload should a company run on Amazon EC2 Spot Instances?
+
+**Options:**
+- A) A steady-state workload that requires a particular EC2 instance configuration for a long period of time
+- B) A workload that can be interrupted and can control costs
+- C) A steady-state workload that does not require a long-term commitment
+- D) A workload that cannot be interrupted and can control costs
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `B`  
+**Peer Consensus:** `100%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: B (100%). Contributor Answer: B.
+
+Community Rationale & Discussion:
+Selected Answer: B
+Spot Instances – short workloads, cheap, can lose instances (less reliable)
+---
+Selected Answer: B
+B. A workload that can be interrupted and can control costs
+---
+B. A workload that can be interrupted and can control costs
+
+</details>
+
 ## 🚀 Post-Lecture Student Transition
 * Direct students to review [Compute_Services.md](file:///home/mohamed/Desktop/Work/aws/Cloud/Practitioner/CLF-C02/phase1_step06_explanations/03_Technology_and_Services/Compute_Services.md).
 * Transition to hands-on practice: [Lab 03: EC2 Compute & Bootstrap](file:///home/mohamed/Desktop/Work/aws/Cloud/Practitioner/CLF-C02/phase2_step07_labs/lab_03_ec2_compute_bootstrap.md) and [Lab 05: Serverless Lambda & API Gateway](file:///home/mohamed/Desktop/Work/aws/Cloud/Practitioner/CLF-C02/phase2_step07_labs/lab_05_serverless_lambda_apigateway.md).

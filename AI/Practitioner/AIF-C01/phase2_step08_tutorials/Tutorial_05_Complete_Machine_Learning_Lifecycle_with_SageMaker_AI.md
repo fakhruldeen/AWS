@@ -118,3 +118,83 @@ clarify_processor.run_pre_training_bias(
 ## ⚖️ Governance Takeaways
 * **Auditable Provenance:** Every step—from raw data transformation in Data Wrangler to final sign-off in Model Registry—is tracked with cryptographically verifiable lineage.
 * **Algorithmic Accountability:** Regulators can review the exact SHAP feature attributions and Clarify reports embedded within the SageMaker Model Card.
+
+
+---
+
+## 4. 🎯 Authentic Architecture Exam Practice
+> Practice real-world scenarios tested on official AWS examinations that directly apply the architectural patterns built in this tutorial.
+
+### Scenario Practice 1: AIF-C01-ET-Q001
+**Question:**  
+A company makes forecasts each quarter to decide how to optimize operations to meet expected demand. The company uses ML models to make these forecasts.
+An AI practitioner is writing a report about the trained ML models to provide transparency and explainability to company stakeholders.
+What should the AI practitioner include in the report to meet the transparency and explainability requirements?
+
+**Options:**
+- A) Code for model training
+- B) Partial dependence plots (PDPs)
+- C) Sample data for training
+- D) Model convergence tables
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `B`  
+**Peer Consensus:** `100%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: B (100%). Contributor Answer: B.
+
+Community Rationale & Discussion:
+Selected Answer: B
+B. Partial Dependence Plots (PDPs)
+
+Explanation:
+Partial Dependence Plots (PDPs) are useful tools for understanding the relationship between specific features and the model's predictions, making it easier to see how changes in input variables affect the forecast. PDPs are particularly helpful for stakeholders because they visually show the impact of individual features on predictions without requiring a deep understanding of the model's inner workings.
+---
+Selected Answer: B
+B is the answer Thanks to
+---
+Selected Answer: B
+Explicação:Gráficos de dependência parcial (Partial Dependence Plots - PDPs) são usados para mostrar como uma variável de entrada afeta a previsão do modelo, mantendo as outras variáveis constantes.São ferramentas poderosas de explicabilidade e transparência, especialmente para partes interessadas não técnicas. Eles ajudam a visualizar a relação entre características importantes e as previsões do modelo, respondendo perguntas como:
+"Se aumentarmos o orçamento em marketing, o que acontece com a demanda prevista?"
+
+</details>
+
+### Scenario Practice 2: AIF-C01-ET-Q002
+**Question:**  
+A company wants to use language models to create an application for inference on edge devices. The inference must have the lowest latency possible.
+Which solution will meet these requirements?
+
+**Options:**
+- A) Deploy optimized small language models (SLMs) on edge devices.
+- B) Deploy optimized large language models (LLMs) on edge devices.
+- C) Incorporate a centralized small language model (SLM) API for asynchronous communication with edge devices.
+- D) Incorporate a centralized large language model (LLM) API for asynchronous communication with edge devices.
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `A`  
+**Peer Consensus:** `92%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: A (92%). Contributor Answer: A.
+
+Community Rationale & Discussion:
+Selected Answer: U
+Quando o objetivo é inferência com a menor latência possível, a melhor abordagem é executar o modelo diretamente no dispositivo de borda (edge).
+SLMs (Small Language Models) são projetados para serem leves, rápidos e eficientes, o que os torna ideais para: Dispositivos com recursos limitados
+Tempo de resposta imediato . Execução offline ou com pouca conectividade
+---
+Selected Answer: A
+Optimized small language models (SLMs) are specifically designed to run efficiently on edge devices with limited resources (such as memory and processing power). Deploying smaller, optimized models directly on the edge devices allows for near-instantaneous inference with minimal latency, as the data doesn't need to travel to a central server for processing.
+---
+Selected Answer: A
+A: Deploy optimized small language models (SLMs) on edge devices.
+
+Explanation:
+Deploying optimized small language models (SLMs) on edge devices ensures low latency because the inference happens directly on the device without relying on cloud communication. Small language models are lightweight and designed to run efficiently on devices with limited resources, making them ideal for edge computing.
+
+</details>

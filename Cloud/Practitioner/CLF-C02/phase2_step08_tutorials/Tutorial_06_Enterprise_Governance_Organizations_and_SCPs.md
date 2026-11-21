@@ -134,3 +134,74 @@ Ensure local root or administrator accounts cannot disable audit trails or threa
   - One monthly invoice for all member accounts.
   - Automatic **volume tiering discounts** across all aggregated S3 and EC2 usage.
   - Automatic sharing of **Reserved Instances and Savings Plans discounts** across accounts in the organization.
+
+
+---
+
+## 4. 🎯 Authentic Architecture Exam Practice
+> Practice real-world scenarios tested on official AWS examinations that directly apply the architectural patterns built in this tutorial.
+
+### Scenario Practice 1: CLF-C02-ET-Q297
+**Question:**  
+A company needs to centrally configure and manage Amazon VPC security groups across multiple AWS accounts within an organization in AWS Organizations.
+
+Which AWS service should the company use to meet these requirements?
+
+**Options:**
+- A) AWS Firewall Manager
+- B) Amazon GuardDuty
+- C) Amazon Detective
+- D) AWS WAF
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `A`  
+**Peer Consensus:** `100%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: A (100%). Contributor Answer: A.
+
+Community Rationale & Discussion:
+Selected Answer: A
+AWS Firewall Manager is a security management service that allows you to centrally configure and manage firewall rules across your accounts and applications
+---
+Selected Answer: A
+
+---
+Selected Answer: A
+A is correct
+
+</details>
+
+### Scenario Practice 2: CLF-C02-ET-Q026
+**Question:**  
+A company is using Amazon DynamoDB.
+Which task is the company’s responsibility, according to the AWS shared responsibility model?
+
+**Options:**
+- A) Patch the operating system.
+- B) Provision hosts.
+- C) Manage database access permissions.
+- D) Secure the operating system.
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `C`  
+**Peer Consensus:** `100%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: C (100%). Contributor Answer: C.
+
+Community Rationale & Discussion:
+Selected Answer: C
+ccording to the AWS shared responsibility model, AWS manages the security of the cloud (e.g., physical infrastructure, hardware, and network), while the customer is responsible for security in the cloud (e.g., managing access, configuring services, and securing data).
+---
+Selected Answer: C
+But the questions ask for the company's responsibility
+---
+Selected Answer: C
+Manage database access permissions: This is the customer's responsibility. Customers are responsible for defining and managing access permissions to their DynamoDB tables, specifying who can perform various operations on the tables.
+
+</details>

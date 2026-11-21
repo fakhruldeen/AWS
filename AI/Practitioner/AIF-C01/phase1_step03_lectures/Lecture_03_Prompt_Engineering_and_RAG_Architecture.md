@@ -190,3 +190,114 @@ flowchart TD
 - [ ] Review `explanations/03_Domain_3_Applications_of_Foundation_Models.md`.
 - [ ] Practice the ROUGE vs BLEU vs Perplexity distinction table.
 - [ ] Run the Module 3 review quiz in `slides/Module_03_Prompt_Engineering_and_Applications_Slides.md`.
+
+
+---
+
+## 🎯 Authentic Exam Practice & Case Scenarios
+> High-yield scenario questions from the authentic candidate practice pool reinforcing the core competencies of this lecture.
+
+### Scenario Practice 1: AIF-C01-ET-Q122
+**Question:**  
+A company is using Retrieval Augmented Generation (RAG) with Amazon Bedrock and Stable Diffusion to generate product images based on text descriptions. The results are often random and lack specific details. The company wants to increase the specificity of the generated images.
+
+Which solution meets these requirements?
+
+**Options:**
+- A) Increase the number of generation steps.
+- B) Use the MASK_IMAGE_BLACK mask source option.
+- C) Increase the classifier-free guidance (CFG) scale.
+- D) Increase the prompt strength.
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `C`  
+**Peer Consensus:** `57%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: C (57%). Contributor Answer: C.
+
+Community Rationale & Discussion:
+Selected Answer: D
+Explicação:
+A força do prompt (prompt strength) se refere ao grau de influência que o texto fornecido tem sobre a imagem gerada.
+
+Quando a força do prompt é baixa, o modelo (como o Stable Diffusion) pode gerar imagens mais abstratas ou genéricas.
+
+Ao aumentar a força do prompt, você orienta o modelo a seguir mais fielmente os detalhes fornecidos no texto, gerando imagens mais específicas e controladas — o que é justamente o que a empresa deseja.
+---
+Selected Answer: D
+In Retrieval Augmented Generation (RAG) with Stable Diffusion, the prompt strength determines how closely the generated image aligns with the given text description. By increasing prompt strength, the model places more emphasis on the input prompt, making the output more specific and detailed, which directly addresses the company's concern about random and lacking specific details in generated images.
+---
+Selected Answer: C
+Classifier-Free Guidance (CFG) is a technique used in generative models, especially in image generation tasks, that helps guide the generation process toward more specific or desired outputs. By increasing the CFG scale, the model's generated image becomes more closely aligned with the given text prompt, improving the specificity and control over the details in the generated image.
+
+A higher CFG scale ensures that the model generates images that are more faithful to the prompt by reducing randomness and making the generation more deterministic. This technique allows for more control over the image generation process, making it suitable for use cases like generating product images from text descriptions, where specific details are important.
+
+</details>
+
+### Scenario Practice 2: AIF-C01-ET-Q033
+**Question:**  
+A company wants to use a large language model (LLM) on Amazon Bedrock for sentiment analysis. The company wants to classify the sentiment of text passages as positive or negative.
+
+Which prompt engineering strategy meets these requirements?
+
+**Options:**
+- A) Provide examples of text passages with corresponding positive or negative labels in the prompt followed by the new text passage to be classified.
+- B) Provide a detailed explanation of sentiment analysis and how LLMs work in the prompt.
+- C) Provide the new text passage to be classified without any additional context or examples.
+- D) Provide the new text passage with a few examples of unrelated tasks, such as text summarization or question answering.
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `A`  
+**Peer Consensus:** `100%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: A (100%). Contributor Answer: A.
+
+Community Rationale & Discussion:
+Selected Answer: A
+This approach is known as few-shot prompting, where you include a few labeled examples to guide the model on how to classify sentiment.
+---
+Selected Answer: A
+Provide examples of text passages with corresponding positive or negative labels in the prompt followed by the new text passage to be classified: This approach uses few-shot learning, where you give the model clear examples of text passages labeled with sentiment (positive or negative). By providing these examples in the prompt, the model is better able to understand the task and generalize it to classify the new text passage correctly. This is a common and effective strategy for tasks like sentiment analysis.
+---
+Selected Answer: A
+Set the proper label with a few examples to the prompts
+
+</details>
+
+### Scenario Practice 3: AIF-C01-ET-Q037
+**Question:**  
+A company wants to use a large language model (LLM) to develop a conversational agent. The company needs to prevent the LLM from being manipulated with common prompt engineering techniques to perform undesirable actions or expose sensitive information.
+Which action will reduce these risks?
+
+**Options:**
+- A) Create a prompt template that teaches the LLM to detect attack patterns.
+- B) Increase the temperature parameter on invocation requests to the LLM.
+- C) Avoid using LLMs that are not listed in Amazon SageMaker.
+- D) Decrease the number of input tokens on invocations of the LLM.
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `A`  
+**Peer Consensus:** `88%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: A (88%). Contributor Answer: A.
+
+Community Rationale & Discussion:
+Selected Answer: U
+Explicação: A criação de cuidadosamente projetados,ados com técnicas de segurança como validação de entrada,agem de conteúdo e detecção padrões de engenharia de prompt (prompt injection), é prática fundamental para reduzir os riscos de manipulação de LLM. Essa abordagem ensina modelo a reconhecer e resistir tentativas maliciosas, como comandos disfarçados exploração de brechas prompt.
+---
+Selected Answer: A
+Create a prompt template that teaches the LLM to detect attack patterns: By creating a prompt template that is specifically designed to identify and mitigate common attack patterns (e.g., prompt injections or malicious requests), you can make the LLM more robust to manipulation. This can help the LLM recognize when it's being manipulated into performing undesirable actions or exposing sensitive data, and take preventive measures accordingly.
+---
+Selected Answer: A
+Ask model to use Prompt template to avoid the various types of prompt injection attacks.
+
+</details>

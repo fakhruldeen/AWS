@@ -35,9 +35,9 @@
       ]
     },
     "explanation": "Community Most Voted: C (100%). Contributor Answer: C.\n\nCommunity Rationale & Discussion:\nSelected Answer: C\nhttps://docs.aws.amazon.com/sagemaker/latest/dg/model-registry-models.html\n\"Each model package in a Model Group corresponds to a trained model. The version of each model package is a numerical value that starts at 1 and is incremented with each new model package added to a Model Group. For example, if 5 model packages are added to a Model Group, the model package versions will be 1, 2, 3, 4, and 5.\"\n---\nSelected Answer: C\nSageMaker Model Registry is specifically designed for managing ML models within the SageMaker ecosystem.\nIt provides built-in versioning and cataloging capabilities for ML models.\nModel groups in the Model Registry allow for logical organization of related models.\nIt integrates seamlessly with other SageMaker components like training, deployment, and monitoring.\nThis solution offers the least operational overhead as it's a native SageMaker feature designed for this exact purpose.\nIt provides features like model approval workflows, which are crucial for managing models in production environments.\n---\nSelected Answer: C\nThe correct answer is C. Use the SageMaker Model Registry and model groups to catalog the models.\n\nSageMaker Model Registry is specifically designed for managing ML models within the SageMaker ecosystem.\nIt provides built-in versioning and cataloging capabilities for ML models.\nModel groups in the Model Registry allow for logical organization of related models.\nIt integrates seamlessly with other SageMaker components like training, deployment, and monitoring.\nThis solution offers the least operational overhead as it's a native SageMaker feature designed for this exact purpose.\nIt provides features like model approval workflows, which are crucial for managing models in production environments.",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152098-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -78,9 +78,9 @@
       ]
     },
     "explanation": "Community Most Voted: D (71%). Contributor Answer: D.\n\nCommunity Rationale & Discussion:\nSelected Answer: A\nAmazon EMR with Spark is an excellent choice for aggregating, processing, and transforming large datasets from multiple sources (e.g., Amazon S3 and on-premises MySQL database). Spark jobs can handle both structured and unstructured. While Lake Formation is great for managing data lakes, it doesn\u2019t provide the ETL and data processing capabilities required to aggregate and transform datasets from multiple sources.\n---\nSelected Answer: D\nIs it D? AWS Lake Formation ? EMR Spark jobs is more manual.\n---\nSelected Answer: A\nEMR with Spark can aggregate large datasets from multiple sources, including S3 and on-premises MySQL.",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152088-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -118,9 +118,9 @@
       ]
     },
     "explanation": "Community Most Voted: B (100%). Contributor Answer: B.\n\nCommunity Rationale & Discussion:\nSelected Answer: B\nUse private subnets and S3 gateway VPC endpoint to bypass public Internet.",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/168860-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -158,9 +158,9 @@
       ]
     },
     "explanation": "Community Most Voted: D (100%). Contributor Answer: D.\n\nCommunity Rationale & Discussion:\nSelected Answer: D\nD is the correct answer.\n\nA The csv and docx files has to be vectorized first. Beside this option does not mention anything about the data\nB and C are not applicable in this case.",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/168861-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -198,9 +198,9 @@
       ]
     },
     "explanation": "Community Most Voted: B (100%). Contributor Answer: B.\n\nCommunity Rationale & Discussion:\nSelected Answer: B\nAgree with B.\n\nIn general, real-time inference supports payloads up to 5 MB for synchronous requests, while asynchronous inference can support larger payloads, often up to 5 GB. \n\nThe use case in this questions involves inference payloads of 100 MB to 300 MB and needs to be processed in under 60 minutes, Asynchronous Inference is the best choice for handling large payloads without strict real-time requirements.",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/168862-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -239,9 +239,9 @@
       ]
     },
     "explanation": "Community Most Voted: D (100%). Contributor Answer: D.\n\nCommunity Rationale & Discussion:\nSelected Answer: D\nLarge datasets + Multiple file formats + Complex automation & orchestration of ML workflows + NLP Transformation ---> Sagemaker pipelines + Event bridge for trigger\n---\nSelected Answer: D\nAt first sight it sounds like C but because of \"complex manipulations that can take hours to finish\" for sure sounds like D.",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152191-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -281,9 +281,9 @@
       ]
     },
     "explanation": "Community Most Voted: A (100%). Contributor Answer: A.\n\nCommunity Rationale & Discussion:\nSelected Answer: A\nA. AWS::SageMaker::Model \u2705\n\n This resource defines the model, including:\n Location of model artifacts in S3\n Inference image/container\n IAM role\n It is a prerequisite for deploying a model to an endpoint.\n---\nSelected Answer: A\nType: AWS::SageMaker::Model\nProperties:\n Containers: \n - ContainerDefinition\n EnableNetworkIsolation: Boolean\n ExecutionRoleArn: String\n InferenceExecutionConfig: \n InferenceExecutionConfig\n ModelName: String\n PrimaryContainer: \n ContainerDefinition\n Tags: \n - Tag\n VpcConfig: \n VpcConfig\n---\nSelected Answer: A\nhttps://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-model.html",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152192-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -322,9 +322,9 @@
       ]
     },
     "explanation": "Community Most Voted: C (100%). Contributor Answer: C.\n\nCommunity Rationale & Discussion:\nSelected Answer: C\nAWS Lake Formation \u2192 Tag resources with campaigns \u2192 Map ML engineers to campaigns \u2192 Fine-grained access control \u2192 Operational efficiency\n---\nSelected Answer: C\n\"engineers must have access to only the resources that are specific to their assigned advertisement campaigns\" This is a clear use-case for lakeformation",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152193-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -363,9 +363,9 @@
       ]
     },
     "explanation": "Community Most Voted: D (100%). Contributor Answer: D.\n\nCommunity Rationale & Discussion:\nSelected Answer: D\nMinimize processing time: -Why Apache Parquet? Columnar, fast I/O; Efficient for complex data; Built-in compression; SageMaker Canvas compatible\n---\nSelected Answer: D\nParquet is optimized for performance",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152194-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -404,9 +404,9 @@
       ]
     },
     "explanation": "Community Most Voted: D (100%). Contributor Answer: D.\n\nCommunity Rationale & Discussion:\nSelected Answer: D\nA. Low precision: Increases false positives; less relevant here.\nB. High precision: Reduces false positives; not the priority.\nC. Low recall: Increases false negatives; must be avoided.\nD. High recall: Correct; minimizes false negatives.\n---\nSelected Answer: D\nhttps://docs.aws.amazon.com/comprehend/latest/dg/cer-doc-class.html\n\"High recall means that the classifier returned most of the relevant results.\"",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152195-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -447,9 +447,9 @@
       ]
     },
     "explanation": "Community Most Voted: C (82%). Contributor Answer: C.\n\nCommunity Rationale & Discussion:\nSelected Answer: C\nI pick C. The company needs to implement a solution to record and monitor all the API call events for the SageMaker endpoint. Its needs to RECORD all events.\n---\nSelected Answer: C\nC. CloudTrail + CloudWatch dashboard + CloudWatch alarm\n\n \u2705 Correcto.\n\n AWS CloudTrail captura todos los eventos de API, incluidas las invocaciones a endpoints de SageMaker (InvokeEndpoint).\n\n CloudWatch puede procesar estos logs para generar m\u00e9tricas personalizadas.\n\n Puedes usar un alarm de CloudWatch para notificar cuando el n\u00famero de eventos supera un umbral.\n\n Esto cubre tanto registro como notificaci\u00f3n\n---\nSelected Answer: C\n\u2705 Breakdown of the correct answer:\nCloudTrail:\n\n Logs all SageMaker API calls, including InvokeEndpoint.\n Provides auditing and visibility into who called the endpoint, when, and with what parameters.\n Essential for tracking all invocation events (as required).\n\nCloudWatch Dashboard + Alarm:\n\n Use a CloudWatch dashboard to monitor invocation patterns and metrics.\n Set up an alarm based on metrics like the number of invocations (from CloudTrail logs or the Invocations metric) to trigger notifications when thresholds are breached.",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152091-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -490,9 +490,9 @@
       ]
     },
     "explanation": "Community Most Voted: C (75%). Contributor Answer: C.\n\nCommunity Rationale & Discussion:\nSelected Answer: C\n\u2705 Explanation:\nSageMaker Pipelines + AWS Glue Integration Goal:\n\nYou want SageMaker Pipelines to wait for AWS Glue jobs to finish, since their outputs are needed during the model development phase. You also want to keep operational overhead low.\nWhy Callback steps are the best option:\n\n Callback steps in SageMaker Pipelines allow you to pause the pipeline execution until an external process completes.\n You can:\n Use the callback step to trigger an AWS Glue workflow (or job).\n Use a Lambda function or a service like EventBridge or Step Functions to report back to SageMaker when the Glue job completes.\n This approach provides tight integration while maintaining low operational overhead\u2014you don\u2019t need to build a whole orchestration layer.\n---\nSelected Answer: C\nhttps://sagemaker-examples.readthedocs.io/en/latest/sagemaker-pipelines/tabular/custom_callback_pipelines_step/sagemaker-pipelines-callback-step.html This shows how to use the Callback Step and how to include a Glue ETL job as part of a SageMaker ML pipeline.\n---\nSelected Answer: B\nI think it's B when I consider 'LEAST operational overhead'.",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152099-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -531,9 +531,9 @@
       ]
     },
     "explanation": "Community Most Voted: A (100%). Contributor Answer: A.\n\nCommunity Rationale & Discussion:\nSelected Answer: A\nAmazon Redshift database \u2192 Sensitive data \u2192 Dynamic Data Masking \u2192 Query-time masking for data scientist \u2192 No transformation or additional storage \u2192 Least effort\n---\nSelected Answer: A\nhttps://docs.aws.amazon.com/redshift/latest/dg/t_ddm.html\nLEAST effort leads to A.",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152196-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -572,9 +572,9 @@
       ]
     },
     "explanation": "Community Most Voted: D (100%). Contributor Answer: D.\n\nCommunity Rationale & Discussion:\nSelected Answer: D\nSageMaker Debugger \u2192 Built-in rules \u2192 Monitor training (vanishing gradients, GPU use, overfitting) \u2192 Predefined actions \u2192 Low overhead\n---\nSelected Answer: D\nhttps://docs.aws.amazon.com/sagemaker/latest/dg/debugger-built-in-rules.html",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152197-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -613,9 +613,9 @@
       ]
     },
     "explanation": "Community Most Voted: D (100%). Contributor Answer: D.\n\nCommunity Rationale & Discussion:\nSelected Answer: D\nShadow testing is a technique used to evaluate a new model's performance by running it alongside the current production model, processing the same live data but without affecting production outcomes.\n---\nSelected Answer: D\nhttps://docs.aws.amazon.com/sagemaker/latest/dg/shadow-tests-create.html",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152198-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -654,9 +654,9 @@
       ]
     },
     "explanation": "Community Most Voted: C (100%). Contributor Answer: C.\n\nCommunity Rationale & Discussion:\nSelected Answer: C\nTime-series data \u2192 Partition by date in S3 \u2192 Optimized Athena queries \u2192 S3 lifecycle policies \u2192 Move partitions >30 days to S3 Glacier Flexible Retrieval\n---\nSelected Answer: C\nThis is more an S3 question than a ML one.",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152199-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -695,9 +695,9 @@
       ]
     },
     "explanation": "Community Most Voted: A (100%). Contributor Answer: A.\n\nCommunity Rationale & Discussion:\nSelected Answer: A\nSagemaker Real-Time Inference - Faster predictions to solve delay issues; \nModel Monitor to tracks model quality and sends alerts for deviations\n---\nSelected Answer: A\nThe delay comes from using an async inference.",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152200-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -736,9 +736,9 @@
       ]
     },
     "explanation": "Community Most Voted: D (100%). Contributor Answer: D.\n\nCommunity Rationale & Discussion:\nSelected Answer: D\nSagemaker endpoint to host ML models; Cloudwatch metrics like CPU for autoscaling. \n{\n \"TargetValue\": 50.0,\n \"CustomizedMetricSpecification\":\n {\n \"MetricName\": \"CPUUtilization\",\n \"Namespace\": \"/aws/sagemaker/Endpoints\",\n \"Dimensions\": [\n {\"Name\": \"EndpointName\", \"Value\": \"my-endpoint\" },\n {\"Name\": \"VariantName\",\"Value\": \"my-variant\"}\n ],\n \"Statistic\": \"Average\",\n \"Unit\": \"Percent\"\n }\n}\n---\nSelected Answer: D\nhttps://docs.aws.amazon.com/sagemaker/latest/dg/endpoint-auto-scaling.html",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152201-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -777,9 +777,9 @@
       ]
     },
     "explanation": "Community Most Voted: B (100%). Contributor Answer: B.\n\nCommunity Rationale & Discussion:\nSelected Answer: B\nSagemaker user profiles tagging: https://docs.aws.amazon.com/sagemaker/latest/dg/domain-user-profile-add.html \nBudgets : For cost tracking and setting thresholds\n---\nSelected Answer: B\nThis is a clear scenario for using Budgets.",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152202-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -818,9 +818,9 @@
       ]
     },
     "explanation": "Community Most Voted: D (100%). Contributor Answer: D.\n\nCommunity Rationale & Discussion:\nSelected Answer: D\nParquet data file \u2192 SageMaker Data Wrangler \u2192 Explore data \u2192 Transform \u2192 Drop unnecessary columns \u2192 Clean and preprocess data \u2192 Export to S3 \u2192 Fraud detection model\n---\nSelected Answer: D\nhttps://docs.aws.amazon.com/sagemaker/latest/dg/data-wrangler-transform.html",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152203-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -859,9 +859,9 @@
       ]
     },
     "explanation": "Community Most Voted: A (100%). Contributor Answer: A.\n\nCommunity Rationale & Discussion:\nSelected Answer: A\nThe correct answer is: A. Configure the competitor's name as a blocked phrase in Amazon Q Business.\n\u2705 Explanation:\nRequirement:\n\n Prevent Amazon Q Business from including the name of a specific competitor in its responses.\n\n\u2705 Option A: Blocked Phrase\n\n Amazon Q Business supports blocked phrases, which you can configure to filter out or redact sensitive terms (like a competitor\u2019s name) from its responses.\n This is a direct feature designed for this exact use case: ensuring certain words or phrases do not appear in generated content.\n Lowest operational overhead and highest precision.\n---\nSelected Answer: A\nhttps://docs.aws.amazon.com/amazonq/latest/api-reference/API_BlockedPhrasesConfiguration.html",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152204-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -900,9 +900,9 @@
       ]
     },
     "explanation": "Community Most Voted: D (100%). Contributor Answer: D.\n\nCommunity Rationale & Discussion:\nSelected Answer: D\nLCNC solution: SageMaker Autopilot \u2192 SageMaker JumpStart \u2192 Deploy pre-trained LLM \u2192 Fine-tune for text summarization\n---\nSelected Answer: D\nhttps://d1.awsstatic.com/events/Summits/reinvent2023/AIM217_Democratize-ML-with-no-code-low-code-using-Amazon-SageMaker-Canvas.pdf",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152205-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -941,9 +941,9 @@
       ]
     },
     "explanation": "Community Most Voted: D (100%). Contributor Answer: D.\n\nCommunity Rationale & Discussion:\nSelected Answer: D\nServerlessConfig:-\nMemorySizeInMB: Set to 2048 MB (options: 1024\u20136144 MB).\nMaxConcurrency: Set to 1 (minimum for nightly predictions).\nEfficient and cost-effective for one-time nightly use.\n---\nSelected Answer: D\n\"The prediction process takes less than 1 minute to finish running\" so why would you provision something in the first place - go serverless",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152206-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -984,9 +984,9 @@
       ]
     },
     "explanation": "Community Most Voted: B (75%). Contributor Answer: B.\n\nCommunity Rationale & Discussion:\nSelected Answer: B\nIt's B. Did you guys clearly understand the question? \"The model performed well during training and validation. However, the model is underperforming in production because of variations in the quality of the images from various cameras.\"\n\nhttps://aws.amazon.com/blogs/machine-learning/prepare-image-data-with-amazon-sagemaker-data-wrangler/\nCorrupting an image or creating any kind of noise helps make a model more robust. The model can predict with more accuracy even if it receives a corrupted image because it was trained with corrupt and non-corrupt images.\n---\nSelected Answer: B\nRecreate the training dataset by using the Data Wrangler corrupt image transform. Specify the impulse noise option.\n\n \u2705 Adds noise to images, simulating low-quality or distorted camera feeds.\n\n \u2705 Fast \u2014 can be done with existing data.\n\n \u2705 Makes model more robust to variations in image quality.\n\n \u2705 Best for improving accuracy in the least amount of time.\n---\nSelected Answer: B\nCorrupting an image or creating any kind of noise helps make a model more robust. The model can predict with more accuracy even if it receives a corrupted image because it was trained with corrupt and non-corrupt images. https://aws.amazon.com/blogs/machine-learning/prepare-image-data-with-amazon-sagemaker-data-wrangler/",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152093-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -1024,9 +1024,9 @@
       ]
     },
     "explanation": "Community Most Voted: A (100%). Contributor Answer: A.\n\nCommunity Rationale & Discussion:\nSelected Answer: A\nSecret manager has automatic rotation",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152209-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -1065,9 +1065,9 @@
       ]
     },
     "explanation": "Community Most Voted: A (100%). Contributor Answer: A.\n\nCommunity Rationale & Discussion:\nSelected Answer: A\nA: SageMaker Data Wrangler simplifies merging and cleaning datasets. (Correct answer)\nB: Ground Truth is for labeling, not cleaning.\nC: Manual merging is slow and inefficient.\nD: Data Labeling adds labels but doesn\u2019t clean data.\n---\nSelected Answer: A\nThis is basic use-case for data wrangler",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152210-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -1106,9 +1106,9 @@
       ]
     },
     "explanation": "Community Most Voted: C (100%). Contributor Answer: C.\n\nCommunity Rationale & Discussion:\nSelected Answer: C\nA. Anomaly detection: For rare events, not binary classification.\nB. Linear regression: For predicting continuous numbers, not Yes/No.\nC. Logistic regression: Perfect for Yes/No predictions (binary classification). --> RIGHT\nD. Semantic segmentation: For images, not customer prediction.\n---\nSelected Answer: C\nhttps://aws.amazon.com/what-is/logistic-regression/",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152217-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -1149,9 +1149,9 @@
       ]
     },
     "explanation": "Community Most Voted: BC (100%). Contributor Answer: BC.\n\nCommunity Rationale & Discussion:\nSelected Answer: BC\nFor model outside of Amazon SageMaker, canvas user needs access to S3; Model --> Model registry\n---\nSelected Answer: BC\nThat's basic how Sagemaker works.",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152223-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -1190,9 +1190,9 @@
       ]
     },
     "explanation": "Community Most Voted: A (100%). Contributor Answer: A.\n\nCommunity Rationale & Discussion:\nSelected Answer: A\nA. Hyperband: Efficient & best --> Right answer\nB. Grid Search: Exhaustive and tries all combos\nC. Bayesian Optimization: Smart with best combination\nD. Random Search: Random\n---\nSelected Answer: A\nhttps://aws.amazon.com/blogs/machine-learning/amazon-sagemaker-automatic-model-tuning-now-provides-up-to-three-times-faster-hyperparameter-tuning-with-hyperband/\n\"efficient resource utilization and a better time-to-convergence.\"",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152224-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -1231,9 +1231,9 @@
       ]
     },
     "explanation": "Community Most Voted: D (100%). Contributor Answer: D.\n\nCommunity Rationale & Discussion:\nSelected Answer: D\nVPC endpoints for sagemaker and gateway endpoint for S3 is needed to access without public access to connect to VPC\n---\nSelected Answer: D\nThis is privatelink use-case",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152225-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -1272,9 +1272,9 @@
       ]
     },
     "explanation": "Community Most Voted: C (100%). Contributor Answer: C.\n\nCommunity Rationale & Discussion:\nSelected Answer: C\nCloudWatch alarm is the keyword; Needed to alert\n---\nSelected Answer: C\nSimple event-driven architecture",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152226-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -1315,9 +1315,9 @@
       ]
     },
     "explanation": "Community Most Voted: C (67%). Contributor Answer: C.\n\nCommunity Rationale & Discussion:\nSelected Answer: C\nAmazon SageMaker Model Monitor:\n\n Continuously monitors model endpoints to detect issues like:\n Data quality drift\n Model quality drift\n Bias drift\n Feature attribution drift\n\nBaseline:\n\n Model Monitor compares incoming data against a baseline dataset that represents \"normal\" or expected data distributions.\n If the data distribution changes after a model update, the old baseline may no longer be valid\u2014leading to false positives in data quality issues.\n---\nSelected Answer: C\nagree with GiorgioGss - If the problems start appearing \"After a model update\" then C is the only valid option.\n---\nSelected Answer: D\nthe model needs to be retrained",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152227-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -1356,9 +1356,9 @@
       ]
     },
     "explanation": "Community Most Voted: B (100%). Contributor Answer: B.\n\nCommunity Rationale & Discussion:\nSelected Answer: B\nhttps://docs.aws.amazon.com/sagemaker/latest/dg/async-inference-autoscale.html To autoscale asynchronous endpoint -> Register model -> Define and apply scaling policy; Other options are complex to implement\n---\nSelected Answer: B\nLEAST effort = B",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152228-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -1397,9 +1397,9 @@
       ]
     },
     "explanation": "Community Most Voted: D (100%). Contributor Answer: D.\n\nCommunity Rationale & Discussion:\nSelected Answer: D\nKey phrase extraction and custom entity recognition - Amazon Comprehend helps with least operational overhead.\n---\nSelected Answer: D\nhttps://docs.aws.amazon.com/comprehend/latest/dg/what-is.html",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152229-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -1438,9 +1438,9 @@
       ]
     },
     "explanation": "Community Most Voted: D (100%). Contributor Answer: D.\n\nCommunity Rationale & Discussion:\nSelected Answer: D\nIAM policies helps to define the access required and control. Can be applied to user or role.\n---\nSelected Answer: D\nIAM to have 'granular' permissions",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152230-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -1479,9 +1479,9 @@
       ]
     },
     "explanation": "Community Most Voted: C (100%). Contributor Answer: C.\n\nCommunity Rationale & Discussion:\nSelected Answer: C\nLoad is predictable and sustainable with 2 hrs usage pattern; Needs quick response as well; Sagemaker - Provisioned concurrency + Serverless inference will be able to support it. https://docs.aws.amazon.com/sagemaker/latest/dg/serverless-endpoints.html\n---\nSelected Answer: C\nFor only 2h each day it does not worth provisioning resources. Go serverless.",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152231-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -1519,9 +1519,9 @@
       ]
     },
     "explanation": "Community Most Voted: B (100%). Contributor Answer: B.\n\nCommunity Rationale & Discussion:\nSelected Answer: B\nSentiment analysis model \u2192 SageMaker Clarify \u2192 Analyze feature impact \u2192 Explain predictions to stakeholders",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152232-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -1560,9 +1560,9 @@
       ]
     },
     "explanation": "Community Most Voted: C (100%). Contributor Answer: C.\n\nCommunity Rationale & Discussion:\nSelected Answer: C\nDistributed training model \u2192 Same VPC subnet \u2192 Same Region and Availability Zone for data and instances \u2192 Minimize communication overhead\n---\nSelected Answer: C\nThat's a basic network question.",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152233-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -1601,9 +1601,9 @@
       ]
     },
     "explanation": "Community Most Voted: B (100%). Contributor Answer: B.\n\nCommunity Rationale & Discussion:\nSelected Answer: B\nOn-premise PyTorch models \u2192 SageMaker script mode \u2192 Premade PyTorch images \u2192 Minimal effort to migrate\n---\nSelected Answer: B\nhttps://aws.amazon.com/blogs/machine-learning/bring-your-own-model-with-amazon-sagemaker-script-mode/\n\n\"Script mode enables you to write custom training and inference code while still utilizing common ML framework containers \"",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152234-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -1642,9 +1642,9 @@
       ]
     },
     "explanation": "Community Most Voted: B (100%). Contributor Answer: B.\n\nCommunity Rationale & Discussion:\nSelected Answer: B\nhttps://aws.amazon.com/blogs/machine-learning/speed-up-training-on-amazon-sagemaker-using-amazon-efs-or-amazon-fsx-for-lustre-file-systems/\n---\nSelected Answer: B\nS3 data \u2192 FSx for Lustre \u2192 High throughput and low latency \u2192 Improved training performance",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152235-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -1685,9 +1685,9 @@
       ]
     },
     "explanation": "Community Most Voted: B (77%). Contributor Answer: B.\n\nCommunity Rationale & Discussion:\nSelected Answer: B\nPrepare the data by using AWS Glue DataBrew\n\n \u2705 Purpose-built for data preparation \u2014 works with tabular data.\n\n \u2705 Offers data masking, pseudonymization, and data transformations.\n\n \u2705 No-code/low-code tool suitable for collaborative workflows between engineers and analysts.\n\n \u2705 Keeps the order and structure of features intact.\n\n \u2705 Best fit for masking sensitive info before ML modeling.\n---\nSelected Answer: B\nAWS Glue DataBrew (Option B) is the most efficient and user-friendly solution for masking sensitive information while retaining the structure and order of tabular data, making it ideal for preparing data for ML model development.\nAWS Macie cannot mask data.\n---\nSelected Answer: A\nquestion error\nmade -> macie",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152288-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -1726,9 +1726,9 @@
       ]
     },
     "explanation": "Community Most Voted: D (100%). Contributor Answer: D.\n\nCommunity Rationale & Discussion:\nSelected Answer: D\nhttps://docs.aws.amazon.com/sagemaker/latest/dg/model-monitor.html Model Monitor tracks data quality, model quality, bias drift, and feature attribution drift for production models. Model monitor setup with continuous monitoring with batch transform will work\n---\nSelected Answer: D\nA is not valid. Monitoring data quality in model is done by model monitor, not by cloudwatch.",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152289-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -1767,9 +1767,9 @@
       ]
     },
     "explanation": "Community Most Voted: B (100%). Contributor Answer: B.\n\nCommunity Rationale & Discussion:\nSelected Answer: B\nModels are sensitive to data distribution. Consistency needed for accurate predictions and hence Option-B keeping the same min-max normalization statistics will help; Option C & D affect model performance; Option-A introduces inconsistency\n---\nSelected Answer: B\nTo ensure reliable and accurate model predictions, it's essential to use the same min-max normalization statistics from the training data.",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152292-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -1807,9 +1807,9 @@
       ]
     },
     "explanation": "Community Most Voted: A (100%). Contributor Answer: A.\n\nCommunity Rationale & Discussion:\nSelected Answer: A\nhttps://docs.netapp.com/us-en/netapp-solutions/ai/mlops_fsxn_sagemaker_integration_training.html#introduction Option A would work since you can mount FSx for ONTAP directly to SageMaker, enabling fast access to the 6 TB data in the same VPC without extra steps",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152294-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -1848,9 +1848,9 @@
       ]
     },
     "explanation": "Community Most Voted: C (100%). Contributor Answer: C.\n\nCommunity Rationale & Discussion:\nSelected Answer: C\nAmazon EventBridge can automatically trigger the SageMaker pipeline when new data is uploaded to S3, making it a simple and efficient soln.\n---\nSelected Answer: C\n\"run the pipeline when new data is uploaded to the S3 bucket.\" This is plain event-driven architecture.",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152295-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -1888,9 +1888,9 @@
       ]
     },
     "explanation": "Community Most Voted: D (100%). Contributor Answer: D.\n\nCommunity Rationale & Discussion:\nSelected Answer: D\nThis is the scenario of overfitting where it works well with trained data and not with new data. Reducing the max_depth hyperparameter makes the model less complex, helping it generalize better to new data.",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152298-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -1930,9 +1930,9 @@
       ]
     },
     "explanation": "Community Most Voted: A (100%). Contributor Answer: A.\n\nCommunity Rationale & Discussion:\nSelected Answer: A\n\ud83d\udd11 Keyword: Maximize correct predictions of both positive and negative labels\n\u2705 Correct Answer: A. Accuracy\n\nWhy?\n\nAccuracy measures the proportion of correctly classified instances (both positive and negative).\n\nIt is the most appropriate metric when both false positives and false negatives need to be minimized.\n\nWhy Others Are Wrong?\n\u274c B. Precision focuses only on correctly predicted positives, not overall correctness.\n\u274c C. Recall focuses only on capturing all true positives, ignoring true negatives.\n\u274c D. Specificity only measures the ability to identify true negatives.\n---\nSelected Answer: A\nFor imbalanced data, F1 score is preferred over confusion matrix-derived metrics. Ideally, option A would be \"F1 Score\". Given the choices, A (Accuracy) is the most reasonable, though not ideal.\n---\nSelected Answer: A\nA. Accuracy: Correct choice; maximizes both true positives and true negatives. Formula: (TP + TN) / Total Predictions\nB. Precision: Focuses only on true positives, not negatives. Formula: TP / (TP + FP)\nC. Recall: Focuses on capturing all true positives, ignoring negatives. Formula: TP / (TP + FN)\nD. Specificity: Focuses only on true negatives, ignoring positives. Formula: TN / (TN + FP)",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152299-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -1973,9 +1973,9 @@
       ]
     },
     "explanation": "Community Most Voted: C (67%). Contributor Answer: C.\n\nCommunity Rationale & Discussion:\nSelected Answer: D\nSageMaker Pipelines provides a robust way to manage and visualize ML workflows as directed acyclic graphs (DAGs), while SageMaker Experiments helps track and manage the history of model experiments and supports model governance\n---\nSelected Answer: C\nhttps://docs.aws.amazon.com/sagemaker/latest/dg/define-pipeline.html\nI don't see how you can manage the \"entire ML flow\" (as question asks) with something else other than Studio.\n---\nSelected Answer: C\n\ud83d\udd11 Keyword: Fine-grained control, DAG visualization, model governance, auditing\n\u2705 Correct Answer: C. Use SageMaker Pipelines and its integration with SageMaker Studio to manage the entire ML workflows. Use SageMaker ML Lineage Tracking for the running history of experiments and for auditing and compliance verifications.\n\nWhy?\n\nSageMaker Pipelines provides workflow orchestration with DAG visualization.\n\nSageMaker ML Lineage Tracking enables experiment history and model governance for auditing.\n\nWhy Others Are Wrong?\n\u274c A & B. AWS CodePipeline is more suited for software CI/CD than for ML workflows.\n\u274c D. SageMaker Experiments focuses on tracking experiments but lacks full model lineage tracking.",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152095-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -2015,9 +2015,9 @@
       ]
     },
     "explanation": "Community Most Voted: D (100%). Contributor Answer: D.\n\nCommunity Rationale & Discussion:\nSelected Answer: D\n\ud83d\udd11 Keyword: Identify inefficient ML resources, generate cost recommendations with minimal effort\n\u2705 Correct Answer: D. Run AWS Compute Optimizer.\n\nWhy?\n\nAWS Compute Optimizer provides automated recommendations for optimizing EC2 instances, EBS volumes, and Lambda.\n\nIt minimizes development effort by analyzing workloads automatically.\n\nWhy Others Are Wrong?\n\u274c A. Writing custom code for resource evaluation is manual and inefficient.\n\u274c B. Cost allocation tags help track expenses but do not provide recommendations.\n\u274c C. CloudTrail shows historical logs but does not analyze cost inefficiencies.\n---\nSelected Answer: D\nAWS Compute Optimizer finds wasted resources in EC2, EBS and suggests easy ways to save money and boost performance.\n---\nSelected Answer: D\nAll is compute related so, D.",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152305-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -2058,9 +2058,9 @@
       ]
     },
     "explanation": "Community Most Voted: C (88%). Contributor Answer: C.\n\nCommunity Rationale & Discussion:\nSelected Answer: C\nThe question asks for a \"central catalog\" so I believe metadata, lineage tracking are also \"included\". ECR could not be the solution.\n---\nSelected Answer: C\n\ud83d\udd11 Keyword: Central catalog for ML models across AWS accounts, models stored in ECR\n\u2705 Correct Answer: C. Use the Amazon SageMaker Model Registry to create a model group for models hosted in Amazon ECR. Create a new AWS account. In the new account, use the SageMaker Model Registry as the central catalog. Attach a cross-account resource policy to each model group in the initial AWS accounts.\n\nWhy?\n\nSageMaker Model Registry provides a central catalog for ML models, supporting cross-account access.\n\nCross-account resource policies enable access to models across AWS accounts.\n\nWhy Others Are Wrong?\n\u274c A. ECR cross-account replication does not create a centralized catalog.\n\u274c B. A new ECR repository with replication does not offer model versioning or governance.\n\u274c D. AWS Glue Data Catalog is for metadata storage, not for ML model management.\n---\nSelected Answer: B\nThis approach allows you to centralize all models in a single ECR repository, making it easier to manage and access them across different AWS accounts. Cross-account replication ensures that the models are synchronized between the initial repositories and the central catalog, maintaining consistency and availability.",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152097-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -2100,9 +2100,9 @@
       ]
     },
     "explanation": "Community Most Voted: A (100%). Contributor Answer: A.\n\nCommunity Rationale & Discussion:\nSelected Answer: A\n\ud83d\udd11 Keyword: Validate new model on 10% of traffic with minimal overhead\n\u2705 Correct Answer: A. Use production variants to add the new model to the existing SageMaker endpoint. Set the variant weight to 0.1 for the new model. Monitor the number of invocations by using Amazon CloudWatch.\n\nWhy?\n\nSageMaker production variants allow traffic splitting across multiple models on a single endpoint.\n\nSetting variant weight to 0.1 ensures only 10% of traffic is sent to the new model.\n\nCloudWatch can monitor invocations for validation.\n\nWhy Others Are Wrong?\n\u274c B. Setting the variant weight to 1 will send all traffic to the new model, defeating the purpose.\n\u274c C. Creating a new endpoint increases operational overhead unnecessarily.\n\u274c D. ALB-based routing is more complex than using SageMaker variants for traffic splitting.\n---\nSelected Answer: A\nhttps://docs.aws.amazon.com/sagemaker/latest/dg/model-ab-testing.html\n---\nSelected Answer: A\n{\n 'ProductionVariants': [\n {\n 'VariantName': 'existing-model',\n 'ModelName': 'existing-model',\n 'InitialVariantWeight': 0.9\n },\n {\n 'VariantName': 'new-model',\n 'ModelName': 'new-model',\n 'InitialVariantWeight': 0.1\n }\n ]\n}",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152310-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -2141,9 +2141,9 @@
       ]
     },
     "explanation": "Community Most Voted: C (100%). Contributor Answer: C.\n\nCommunity Rationale & Discussion:\nSelected Answer: C\nThe most common family of techniques in this category is resampling, which includes oversampling (adding more instances from the minority classes) and undersampling (removing instances from the majority classes)\n---\nSelected Answer: C\ncorrect",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/169496-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -2184,9 +2184,9 @@
       ]
     },
     "explanation": "Community Most Voted: B (67%). Contributor Answer: B.\n\nCommunity Rationale & Discussion:\nSelected Answer: B\nLa empresa necesita una soluci\u00f3n automatizada para enmascarar n\u00fameros de tarjetas de cr\u00e9dito en archivos CSV almacenados en Amazon S3, antes de que los datos sean utilizados para reentrenar un modelo de Machine Learning.\n\nLa opci\u00f3n B es la mejor soluci\u00f3n porque:\n\n\u2705 AWS Glue tiene integraci\u00f3n nativa con S3, lo que facilita el procesamiento de los archivos sin desarrollo adicional.\n\u2705 Glue Studio proporciona detecci\u00f3n de datos sensibles (Sensitive Data Detection), lo que reduce el esfuerzo de desarrollo comparado con programar regex manualmente.\n\u2705 Es una soluci\u00f3n completamente administrada, eliminando la necesidad de mantener infraestructura en EC2.\n\u2705 Spark en AWS Glue permite manejar grandes vol\u00famenes de datos, ideal para procesamiento de m\u00faltiples archivos diarios.\n---\nSelected Answer: B\nMacie can't take any actions, It can be only a discovery service.\n---\nSelected Answer: A\ncorrect",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/168863-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -2226,9 +2226,9 @@
       ]
     },
     "explanation": "Community Most Voted: C (50%). Contributor Answer: C.\n\nCommunity Rationale & Discussion:\nSelected Answer: A\nhttps://aws.amazon.com/blogs/aws/now-process-pdfs-word-documents-and-images-with-amazon-comprehend-for-idp/\nAmazon Comprehend feature for intelligent document processing (IDP). This feature allows you to classify and extract entities from PDF documents, Microsoft Word files, and images directly from Amazon Comprehend without you needing to extract the text first.\n---\nSelected Answer: C\nAgree with C.\n\nNormally Amazon Comprehend is sufficient if the pdf contains only text. Since the question does not mention the exact contents of the pdf files. It would be safer to use Amazon Textract to extract the text, then Amazon Comprehend do the entity extraction.",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/168865-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -2269,9 +2269,9 @@
       ]
     },
     "explanation": "Community Most Voted: A (57%). Contributor Answer: A.\n\nCommunity Rationale & Discussion:\nSelected Answer: A\nVPN - predefined IP range\n---\nSelected Answer: A\n\u2705 Explanation:\nContext:\n\n The company is using Amazon SageMaker Studio notebooks.\n Access is allowed through a VPN, meaning users are coming from known, fixed IP ranges.\n The concern is unauthorized access via presigned URLs, which could potentially be used outside the trusted network.\n\n\u2705 Why aws:sourceIp is the right choice:\n\n The aws:sourceIp condition in IAM policies allows you to restrict access based on the client's IP address.\n This is perfect for VPN-based setups where you know the IP range.\n It ensures that only users accessing from allowed IPs (e.g., your VPN subnet) can access SageMaker Studio resources, even if they have a valid presigned URL.\n This directly mitigates the risk of URL misuse from outside the VPN.\n---\nSelected Answer: A\nA is correct.\n\nhttps://aws.amazon.com/blogs/machine-learning/secure-amazon-sagemaker-studio-presigned-urls-part-1-foundational-infrastructure/\n\nStudio supports a few methods for enforcing access controls against presigned URL data exfiltration:\n\nClient IP validation using the IAM policy condition aws:sourceIp\nClient VPC validation using the IAM condition aws:sourceVpc\nClient VPC endpoint validation using the IAM policy condition aws:sourceVpce",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/157638-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -2311,9 +2311,9 @@
       ]
     },
     "explanation": "Community Most Voted: C (100%). Contributor Answer: C.\n\nCommunity Rationale & Discussion:\nSelected Answer: C\nSageMaker Data Wangler identify anomalies as part of the Data Quality and Insights Report (https://docs.aws.amazon.com/sagemaker/latest/dg/data-wrangler-data-insights.html) and provides various options for data visualization - https://docs.aws.amazon.com/sagemaker/latest/dg/data-wrangler-analyses.html\n---\nSelected Answer: C\nWhy Transform Categorical Data into Numerical Data?\n Machine learning algorithms generally require categorical data to be converted into numerical representations (e.g., one-hot encoding or embeddings) for training. Transforming numerical data into categorical data is unnecessary unless the problem explicitly requires it (e.g., binning for some specific applications).\n\nWhy Use SageMaker Data Wrangler?\n Minimal Operational Overhead: Amazon SageMaker Data Wrangler provides a user-friendly interface to clean, preprocess, and transform data without needing to write custom code.\n Comprehensive Data Handling: Supports data sources like S3 and on-premises databases, and can handle both categorical and numerical data transformations efficiently.\n\nWhy Not AWS Glue?\n AWS Glue is more suitable for large-scale ETL (Extract, Transform, Load) operations, such as schema inference or combining large datasets. It has higher operational overhead for specific ML data preprocessing tasks compared to SageMaker Data Wrangler.\n---\nSelected Answer: C\nhttps://docs.aws.amazon.com/sagemaker/latest/dg/data-wrangler-analyses.html\n\"Amazon SageMaker Data Wrangler includes built-in analyses that help you generate visualizations and data analyses in a few clicks. \"\nThis question is tricky because it makes you think you need Quicksight for the \"visualization' part.",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152145-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -2352,9 +2352,9 @@
       ]
     },
     "explanation": "Community Most Voted: C (100%). Contributor Answer: C.\n\nCommunity Rationale & Discussion:\nSelected Answer: C\n\ud83d\udd11 Keyword: Identify an item in an image and provide its location\n\u2705 Correct Answer: C. Object detection\n\nWhy?\n\nObject detection algorithms detect and localize objects within images (bounding boxes).\n\nSageMaker supports built-in object detection using SSD (Single Shot Multibox Detector) and Faster R-CNN.\n\nWhy Others Are Wrong?\n\u274c A. Image classification only identifies the object but does not provide its location.\n\u274c B. XGBoost is a gradient boosting algorithm for structured/tabular data, not images.\n\u274c D. k-NN is for classification/regression, not object localization.\n---\nSelected Answer: C\nhttps://docs.aws.amazon.com/sagemaker/latest/dg/algo-object-detection-tech-notes.html",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/168847-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -2395,9 +2395,9 @@
       ]
     },
     "explanation": "Community Most Voted: A (57%). Contributor Answer: A.\n\nCommunity Rationale & Discussion:\nSelected Answer: A\n\ud83d\udd11 Keyword: Process mixed file types with AWS Glue DataBrew & store for AWS Glue\n\u2705 Correct Answer: A. Use DataBrew to process the existing S3 folder. Store the output in Apache Parquet format.\n\nWhy?\n\nAWS Glue performs best with Parquet because it is optimized for analytical queries.\n\nNo need to split data into separate folders\u2014DataBrew can handle mixed file types.\n\nWhy Others Are Wrong?\n\u274c B. \"AWS Glue Parquet format\" is not a valid term. Apache Parquet is the correct format.\n\u274c C & D. Separating files into different folders is unnecessary\u2014DataBrew can process multiple formats in a single folder.\n---\nSelected Answer: A\nC implies that you have to re-organize all files (1 TB is a lot). This means a lot of work. For me is A, less performance but without initial overhead of organization\n---\nSelected Answer: C\n\u2705 Explanation:\nProblem Summary:\n\n The data in S3 is mixed file formats: CSV, JSON, XLSX, and Parquet \u2014 all in one folder.\n You need to use AWS Glue DataBrew to process the data.\n The processed data must be stored in S3 for AWS Glue to consume later.\n\nKey Considerations:\n\n DataBrew Input Requirements:\n DataBrew datasets must be in a consistent format (CSV, JSON, XLSX, or Parquet).\n DataBrew cannot process mixed formats in a single dataset. You must split the data by format.\n\n DataBrew Output Format:\n Apache Parquet is preferred for:\n Efficient storage\n Better performance with AWS Glue and other analytics tools\n Columnar storage benefits in querying and transformations\n\n \"AWS Glue Parquet format\" does not exist \u2014 this is a distractor in the answer options.",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/157315-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -2437,9 +2437,9 @@
       ]
     },
     "explanation": "Community Most Voted: C (100%). Contributor Answer: C.\n\nCommunity Rationale & Discussion:\nSelected Answer: C\nA. Precision and recall\nC. Accuracy and F1 score",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/157316-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -2478,9 +2478,9 @@
       ]
     },
     "explanation": "Community Most Voted: B (100%). Contributor Answer: B.\n\nCommunity Rationale & Discussion:\nSelected Answer: B\n\ud83d\udd11 Keyword: Encrypt data in transit during SageMaker training\n\u2705 Correct Answer: B. Encrypt communication between nodes in a training cluster.\n\nWhy?\n\nEncryption in transit refers to securing data as it moves between components of the SageMaker training infrastructure (e.g., between nodes in a distributed training job).\n\nSageMaker automatically encrypts communication between nodes using TLS 1.2 in multi-node training clusters.\n\nWhy Others Are Wrong?\n\u274c A. \"Batch processing\" is not relevant to SageMaker training jobs.\n\u274c C. AWS KMS is used for encrypting data at rest, not for securing in-transit data.\n\u274c D. SageMaker domain encryption is for Studio environments, not training jobs.\n---\nSelected Answer: B\nthis is it",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/168853-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -2521,9 +2521,9 @@
       ]
     },
     "explanation": "Community Most Voted: CE (100%). Contributor Answer: CE.\n\nCommunity Rationale & Discussion:\nSelected Answer: CE\nC. Root mean square error (RMSE)\n\u2705 E. Average weighted quantile loss (wQL)\nHere's why:\n\n RMSE is a standard regression metric that measures the average magnitude of the error between predicted and actual values. It penalizes larger errors more than smaller ones.\n\n Weighted Quantile Loss (wQL) is commonly used in probabilistic forecasting models (e.g., Amazon Forecast, DeepAR). It assesses the accuracy of quantile predictions.\n---\nSelected Answer: CE\n\ud83d\udd11 Keyword: Time-series forecasting model evaluation metrics\n\u2705 Correct Answers: C. Root mean square error (RMSE) & E. Average weighted quantile loss (wQL)\n\nWhy?\n\nRMSE (Root Mean Square Error): Measures error magnitude in time-series predictions.\n\nwQL (Weighted Quantile Loss): Used in Amazon Forecast to evaluate quantile forecasts.\n\nWhy Others Are Wrong?\n\u274c A. Recall is a classification metric, not for forecasting.\n\u274c B. LogLoss is used for classification models, not time-series.\n\u274c D. Inference latency is about model performance, not accuracy.",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/169486-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -2563,9 +2563,9 @@
       ]
     },
     "explanation": "Community Most Voted: C (67%). Contributor Answer: C.\n\nCommunity Rationale & Discussion:\nSelected Answer: C\n\u2705 Explanation:\nRequirements Recap:\n\n Real-time inference: Needs low-latency predictions.\n Accelerated instances: Likely GPU-backed, costly to scale inefficiently.\n No cold starts: Endpoints must always be warm and responsive.\n Each model has different scaling needs: Must support independent scaling of each model.\n\n\u2705 Why Option C is correct:\n\n Inference components are a new SageMaker feature that allow:\n Hosting multiple models on a single endpoint.\n Independent scaling of each model (component).\n Avoiding cold starts via minimum number of copies.\n Setting min invocations or min replicas \u2265 1 keeps the model always warm, eliminating cold starts.\n This solution meets all requirements efficiently.\n---\nSelected Answer: A\nthis is correct",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/169487-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -2603,9 +2603,9 @@
       ]
     },
     "explanation": "Community Most Voted: D (100%). Contributor Answer: D.\n\nCommunity Rationale & Discussion:\nSelected Answer: D\nSageMaker Savings Plans offer a discount for long-term use of SageMaker instances.",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/168854-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -2643,9 +2643,9 @@
       ]
     },
     "explanation": "Community Most Voted: C (100%). Contributor Answer: C.\n\nCommunity Rationale & Discussion:\nSelected Answer: C\nOption C - SageMaker Clarify is built for bias detection and explainability.   \nIt can analyze training data and model predictions to identify potential biases.   \nIt provides insights into how different demographic groups are affected by the model.",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/168856-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -2684,9 +2684,9 @@
       ]
     },
     "explanation": "Community Most Voted: B (100%). Contributor Answer: B.\n\nCommunity Rationale & Discussion:\nSelected Answer: B\nthis is it\n---\nSelected Answer: B\nshould be B.\n\nD doesn\u2019t provide a clear strategy for managing traffic during the transition.",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/168857-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -2725,9 +2725,9 @@
       ]
     },
     "explanation": "Community Most Voted: B (100%). Contributor Answer: B.\n\nCommunity Rationale & Discussion:\nSelected Answer: B\nOption A and C out (SQS). Cloudtrail not monitor performance metrcs\n---\nSelected Answer: B\nCloudwatch with SNS, SQS is for queuing messages and not sending.\nCloudTrail options doesn't apply here",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/168858-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -2767,9 +2767,9 @@
       ]
     },
     "explanation": "Community Most Voted: D (67%). Contributor Answer: D.\n\nCommunity Rationale & Discussion:\nSelected Answer: C\nC. Enable Amazon CloudWatch metrics. Observe the ModelSetupTime metric in the SageMaker namespace.\n\n \u2705 Correct: This metric will show if model startup time is contributing to the latency.\n\n \u2705 Directly confirms or denies the cold start hypothesis.\n\nModelSetupTime \nThe time it takes to launch new compute resources for a serverless endpoint. The time can vary depending on the model size, how long it takes to download the model, and the start-up time of the container.\n\nUnits: Microseconds\n\nValid statistics: Average, Min, Max, Sample Count, Percentiles\n\nhttps://docs.aws.amazon.com/sagemaker/latest/dg/monitoring-cloudwatch.html\n---\nSelected Answer: D\nModelLoadingWaitTime metric \nmeasures the time taken to load the model",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/168918-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -2807,9 +2807,9 @@
       ]
     },
     "explanation": "Community Most Voted: A (100%). Contributor Answer: A.\n\nCommunity Rationale & Discussion:\nSelected Answer: A\ncorrect",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/169510-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -2851,9 +2851,9 @@
       ]
     },
     "explanation": "Community Most Voted: D (50%). Contributor Answer: D.\n\nCommunity Rationale & Discussion:\nSelected Answer: D\n\u2705 Why Option D is correct:\nRequirements Recap:\n\n Real-time ingestion of high-volume clickstream data\n SQL-based data processing\n Jupyter notebooks for interactive analysis\n Near real-time visualization\n\nAmazon MSK + Managed Flink (Apache Flink):\n\n MSK is ideal for handling high-throughput, real-time event streams like clickstream data.\n Amazon Managed Service for Apache Flink:\n Provides stream processing with low latency\n Supports SQL via Apache Flink SQL\n Can integrate with Jupyter Notebooks via Apache Zeppelin or SageMaker notebooks (for interactive analysis)\n Flink dashboard allows for real-time data visualization and monitoring\n\nThis stack is purpose-built for real-time streaming analytics, supports SQL for processing, and integrates well with notebooks and dashboards.\n---\nSelected Answer: B\ncorrect\n---\nSelected Answer: C\nShould be C.\n\nAWS Glue with PySpark supports SQL-like transformations and can be integrated with Jupyter notebooks.\n\nD is incorrect because Apache Flink for processing does not natively support SQL for data processing.",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/168979-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -2891,9 +2891,9 @@
       ]
     },
     "explanation": "Community Most Voted: C (100%). Contributor Answer: C.\n\nCommunity Rationale & Discussion:\nSelected Answer: C\ncorrect",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/169514-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -2933,9 +2933,9 @@
       ]
     },
     "explanation": "Community Most Voted: C (100%). Contributor Answer: C.\n\nCommunity Rationale & Discussion:\nSelected Answer: C\nYou need to transform category to numeric as ML model works with numbers, thus it is either A or C. Data Wrangler provides a builtin transformation to encode categorical data - https://docs.aws.amazon.com/sagemaker/latest/dg/data-wrangler-transform.html#data-wrangler-transform-cat-encode while Glue doesn't provide a managed transformation for encoding data - https://docs.aws.amazon.com/glue/latest/dg/edit-jobs-transforms.html\n---\nSelected Answer: C\nData Wrangler can be used for encoding categorical data, i.e. the process of creating a numerical representation for categories. Categorical encoding encodes categorical data that is in string format into arrays of integers. Data Wrangler supports ordinal and a one-hot encoding, also similarity encoding (more advanced). \nhttps://docs.aws.amazon.com/sagemaker/latest/dg/data-wrangler-transform.html#data-wrangler-transform-cat-encode\n\nAWS Glue also has Data science recipe steps for One Hot Encoding and Categorical Mapping. \nhttps://docs.aws.amazon.com/databrew/latest/dg/recipe-actions.data-science.html\n\nHowever Data Wrangler is more user-friendly with visual and natural language interfaces for less operational overhead\n---\nSelected Answer: C\nhttps://docs.aws.amazon.com/sagemaker/latest/dg/data-wrangler-transform.html",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152147-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -2975,9 +2975,9 @@
       ]
     },
     "explanation": "Community Most Voted: D (100%). Contributor Answer: D.\n\nCommunity Rationale & Discussion:\nSelected Answer: D\nLEAST effort\nhttps://aws.amazon.com/blogs/machine-learning/balance-your-data-for-machine-learning-with-amazon-sagemaker-data-wrangler/\n---\nSelected Answer: D\nSageMaker Data Wrangler provides a \"balance data\" operation designed to handle class imbalance.\n---\nSelected Answer: D\nBoth Glue DataBrew and Data Wrangler allows data preparation for ML with no-code/low-code (aka low ops effort). However, Data Wrangler provides built-in transformation for balancing dataset (random oversampling, random undersampling and smote) https://docs.aws.amazon.com/sagemaker/latest/dg/data-wrangler-transform.html#data-wrangler-transform-balance-data while DataBrew doesn't provide built-in recipe step for balancing dataset, actually it provides a smaller set of data science recipe steps limited to binarization, bucketization, categorical mapping, one-hot encoding, scaling, skewness and tokenization https://docs.aws.amazon.com/databrew/latest/dg/recipe-actions.data-science.html",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152148-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -3018,9 +3018,9 @@
       ]
     },
     "explanation": "Community Most Voted: A (57%). Contributor Answer: A.\n\nCommunity Rationale & Discussion:\nSelected Answer: A\nhttps://docs.aws.amazon.com/en_kr/sagemaker/latest/dg/lightgbm.html\n---\nSelected Answer: B\nAnswer is B\n---\nSelected Answer: A\n1. Clase desbalanceada:\n\nLightGBM (Light Gradient Boosted Machine) es muy eficaz para trabajar con datasets desbalanceados, gracias a su capacidad para ajustar los pesos de clases y usar t\u00e9cnicas como el weighted loss o boosting adaptativo.\n2. Interdependencia entre variables:\n\nLightGBM puede capturar relaciones no lineales e interacciones entre variables gracias a su estructura basada en \u00e1rboles de decisi\u00f3n. Esto lo hace m\u00e1s adecuado que modelos lineales como el Linear Learner, que solo captura relaciones lineales.\n3. No captura de patrones complejos:\n\nLa descripci\u00f3n indica que el algoritmo actual no est\u00e1 capturando patrones subyacentes complejos, lo que sugiere la necesidad de un modelo m\u00e1s robusto como LightGBM, capaz de modelar relaciones complejas y no lineales en los datos",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152212-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -3060,9 +3060,9 @@
       ]
     },
     "explanation": "Community Most Voted: A (100%). Contributor Answer: A.\n\nCommunity Rationale & Discussion:\nSelected Answer: A\nA. Yes, concept drift is an evolution of data that invalidates the data model. It happens when the statistical properties of the target variable, which the model is trying to predict, change over time in unforeseen ways. This causes problems because the predictions become less accurate as time passes. \nB. No, if it was the case the F1 would have been low since the begin and this is not justifying a change after months\nC. No, same as B\nD. No, incorrect labels in the baseline calculations would undermine F1 baseline value, but this is not explain a significant drop after months\n---\nSelected Answer: A\nConcept Drift: Occurs when the statistical properties of the data used for predictions change over time, causing the model to underperform on current data.\n\nWhy Not the Other Options?\n\nB. If the model complexity was insufficient, the issue would have been detected during the initial evaluation or baseline analysis, not after months of stable performance.\nC. A data quality issue would have impacted the model's performance immediately after deployment, not months later.\nD. Incorrect labels during baseline calculation could result in an inaccurate baseline F1 score, but it wouldn't explain a significant drop after stable performance over months.\n---\nSelected Answer: A\nConcept Drift: Refers to the change in the statistical properties of the underlying data distribution over time --> Decrease F1 score --> perform poorly on new data",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152149-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -3102,9 +3102,9 @@
       ]
     },
     "explanation": "Community Most Voted: A (100%). Contributor Answer: A.\n\nCommunity Rationale & Discussion:\nSelected Answer: A\nYet another unclear question from AWS ... anyway, I am basically picking A as all the other options are not applicable or are unclear.\n\nA. Yes, this make sense\nB. No, you cannot assign (aka associate) group to notebook instances\nC. No, for two reason: AdministratorAccess policy is overly broad (violate least privilege principle) and you cannot assign IAM user to notebook instance\nD. No, for many reasons: AdministratorAccess policy is overly broad, not clear what associating a role to a group means (maybe a group has permissions to assume a role ...) and you cannot assign a group to a notebook\n---\nSelected Answer: A\nCreating a single IAM role allows centralized management of permissions for all SageMaker notebook instances. When permissions need to be updated, the changes are applied to the role, and all notebook instances automatically inherit the updated permissions.\n Why IAM Roles?\n IAM roles are the recommended way to provide permissions to AWS services like SageMaker because they securely delegate permissions without requiring long-term credentials.\n\nWhy Not the Other Options?\nB. IAM groups manage permissions for users, not for AWS services or resources like SageMaker notebook instances. Groups cannot be attached directly to notebook instances.\nC. Using an IAM user with AdministratorAccess violates the principle of least privilege, granting unnecessary permissions. Additionally, IAM users are not intended to be attached to resources like notebook instances.\nD. This option combines unnecessary complexity (group and role association) and grants excessive permissions (AdministratorAccess), which is not secure or efficient.\n---\nSelected Answer: A\nActually this is a best practice when working with notebooks in SageMaker. \nhttps://docs.aws.amazon.com/sagemaker/latest/dg/gs-setup-working-env.html",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152166-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -3144,9 +3144,9 @@
       ]
     },
     "explanation": "Community Most Voted: D (100%). Contributor Answer: D.\n\nCommunity Rationale & Discussion:\nSelected Answer: D\nThe only one for regression is D. Other 3 are for classification.\n---\nSelected Answer: D\nprediction the price of apartments is regression.\n---\nSelected Answer: D\nThis is a regression problem, thus MAE is the right answer. Accuracy, AUC-ROC and F1 are for classification.",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152167-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -3186,9 +3186,9 @@
       ]
     },
     "explanation": "Community Most Voted: D (100%). Contributor Answer: D.\n\nCommunity Rationale & Discussion:\nSelected Answer: D\nThe oscillating pattern of training and validation loss indicates that the learning rate is too high. A high learning rate causes the model to overshoot the optimal point in the loss landscape, leading to oscillations instead of convergence. Reducing the learning rate allows the model to make smaller, more precise updates to the weights, improving convergence.\n\nA. Early stopping prevents overfitting by halting training when validation performance stops improving. However, it does not address the root cause of oscillating loss.\nB. The size of the test set does not affect the training dynamics or loss patterns.\nC. Increasing the learning rate would worsen the oscillations and prevent the model from converging.\n---\nSelected Answer: D\nA. No, early stopping is for preventing overfitting\nB. No, increasing test will not help with oscillating loss\nC. No, increasing learning rate will make things worsening\nD. Oscillating loss in training is a sign that the training is not converging, this can happen when learning rate is too high. Reducing learning rate will help here\n---\nSelected Answer: D\nOscillating patterns in a train/validation loss shows it's not converging to a minima. Low learning rate will make it converge.",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152168-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -3228,9 +3228,9 @@
       ]
     },
     "explanation": "Community Most Voted: A (100%). Contributor Answer: A.\n\nCommunity Rationale & Discussion:\nSelected Answer: A\nA. Yes, Athena is the right service to query data in S3.\nB. No, maybe this might also work, but it is quite cumbersome\nC. No, SparkSQL can be used to query files on data, but it is more work than Athena and creating a new S3 bucket is not needed\nD. No, Data Firehose cannot consume from S3 directly\n---\nSelected Answer: A\nUsing Amazon Athena with a CREATE TABLE AS SELECT (CTAS) statement is the simplest and most efficient way to query the CSV objects based on the transaction date, while requiring minimal operational effort.\n---\nSelected Answer: A\nAthena allows direct querying of data stored in Amazon S3 using SQL without requiring data movement or transformation. CTAS (CREATE TABLE AS SELECT): Creates a new table based on a filtered or transformed dataset, such as transaction dates, and stores the results in S3.\nWhy Not the Other Options?\nB. S3 Object Lambda is designed for on-the-fly data transformation, not querying data efficiently. Adding replication increases complexity without addressing the querying requirement directly.\nC. Glue is suited for complex ETL workflows, but it introduces significant operational overhead for a task that Athena can handle more easily.\nD. Firehose is designed for streaming data, not processing large existing datasets.",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152169-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -3270,9 +3270,9 @@
       ]
     },
     "explanation": "Community Most Voted: B (100%). Contributor Answer: B.\n\nCommunity Rationale & Discussion:\nSelected Answer: B\nSageMaker managed warm pools allow instances to stay in a ready state between consecutive training jobs, which minimizes infrastructure startup times. This feature is ideal for scenarios with frequent or consecutive training jobs, as it avoids the time-consuming process of provisioning infrastructure for each job.\n---\nSelected Answer: B\nSageMaker managed warm pools allow instances to stay in a ready state between consecutive training jobs, which minimizes infrastructure startup times. This feature is ideal for scenarios with frequent or consecutive training jobs, as it avoids the time-consuming process of provisioning infrastructure for each job.\n---\nSelected Answer: B\nA. No, Managed Spot Training is used to reduce the compute cost for training\nB. Yes, Warm Pool allow to retain and re-use provisioned infrastructure, also use a persistent cache to store data across training job and help reduce infrastructure startup time as well as cost - https://docs.aws.amazon.com/sagemaker/latest/dg/train-warm-pools.html\nC. No, SageMaker Training Compiler is used to optimize your code for a specific target architecture\nD. No, the SageMaker distributed data parallelism (SMDDP) library is used parallelize training by distributing data across multiple instances. This doesn't reduce infrastructure startu ptime",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152135-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -3314,9 +3314,9 @@
       ]
     },
     "explanation": "Community Most Voted: D (80%). Contributor Answer: D.\n\nCommunity Rationale & Discussion:\nSelected Answer: D\nAWS Glue FindMatches is specifically designed to identify duplicate or matching records in datasets without requiring labeled training data. It uses machine learning to find fuzzy matches and allows customization to fine-tune the matching process, making it ideal for this scenario.\n---\nSelected Answer: D\nhttps://aws.amazon.com/about-aws/whats-new/2021/11/aws-glue-findmatches-new-data-existing-dataset/\n\"allows you to identify duplicate or matching records in your dataset\"\n---\nSelected Answer: C\nI would argue you can should use Data Wrangler if you want to have the least code development. See https://docs.aws.amazon.com/sagemaker/latest/dg/data-wrangler-data-insights.html#data-wrangler-data-insights-samples\n\"You can remove duplicate samples from the dataset using the Drop duplicates transform under Manage rows.\"",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152170-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -3355,9 +3355,9 @@
       ]
     },
     "explanation": "Community Most Voted: A (100%). Contributor Answer: A.\n\nCommunity Rationale & Discussion:\nSelected Answer: A\nCost effective + Interruptions + Short duration 90mins = Spot instance\n---\nSelected Answer: A\nkey: \"The processing can handle interruptions\"",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152171-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -3397,9 +3397,9 @@
       ]
     },
     "explanation": "Community Most Voted: B (100%). Contributor Answer: B.\n\nCommunity Rationale & Discussion:\nSelected Answer: B\nhttps://docs.aws.amazon.com/comprehend/latest/dg/custom-copy-importing.html\n---\nSelected Answer: B\nAmazon Comprehend - ImportModel API to facilitate the transfer of custom models between AWS accounts. STEPS:\n1. Exporting the model from Account A.\n2. Creating a resource-based IAM policy in Account A to grant access to Account B.\n3. Using the ImportModel API in Account B to import the model.\n---\nSelected Answer: B\nhttps://docs.aws.amazon.com/comprehend/latest/APIReference/API_ImportModel.html\n\"The source model can be in your AWS account or another one.\"",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152172-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -3440,9 +3440,9 @@
       ]
     },
     "explanation": "Community Most Voted: AB (100%). Contributor Answer: AB.\n\nCommunity Rationale & Discussion:\nSelected Answer: AB\nThe issue is overfitting. Soln:- \nA. Early stopping:- Stops training when validation performance declines\nB. Increase dropout:- reduces overfitting by randomly disabling neurons\n---\nSelected Answer: AB\n\"improves substantially at first and then degrades after a specific number of epochs.\"\nClear sign to stop it early and to drop",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152173-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -3481,9 +3481,9 @@
       ]
     },
     "explanation": "Community Most Voted: C (100%). Contributor Answer: C.\n\nCommunity Rationale & Discussion:\nSelected Answer: C\nKendra for semantic search\n---\nSelected Answer: C\nhttps://docs.aws.amazon.com/kendra/latest/dg/data-source-s3.html",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152174-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -3523,9 +3523,9 @@
       ]
     },
     "explanation": "Community Most Voted: A (100%). Contributor Answer: A.\n\nCommunity Rationale & Discussion:\nSelected Answer: A\nAmazon Bedrock provides foundation models (LLMs) for tasks like text generation but is not used for structured data prediction.\n---\nSelected Answer: A\nBest answere\n---\nSelected Answer: A\nA is the most logical answer.\n\nB. There is too much effort to set up those scripts and EC2.\nC. Macie does not fit this use case.\nD. Lots of effort to set up bedrock for this purpose.",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152175-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -3565,9 +3565,9 @@
       ]
     },
     "explanation": "Community Most Voted: D (100%). Contributor Answer: D.\n\nCommunity Rationale & Discussion:\nSelected Answer: D\n1. Label Encoding: Ordinal relationship\n2. Padding: Sequence data\n3. Dimensionality Reduction: High-dimensional data\n4. One-Hot Encoding: Categorical data (Right)\n---\nSelected Answer: D\nLabel encoding is not ideal for categorical data in neural networks because the model might assume a numerical relationship (e.g., Blue is twice more important than Red), which is incorrect.\n---\nSelected Answer: D\nCategorical data one hot always",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152176-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -3607,9 +3607,9 @@
       ]
     },
     "explanation": "Community Most Voted: C (100%). Contributor Answer: C.\n\nCommunity Rationale & Discussion:\nSelected Answer: C\nMacie: Automate processe helps in handle the sensitive data\n---\nSelected Answer: C\nMacie - Identify sensitive data\n---\nSelected Answer: C\nThis is the purpose of Macie. Comprehend will work also for PII but that EC2...",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152177-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -3649,9 +3649,9 @@
       ]
     },
     "explanation": "Community Most Voted: B (100%). Contributor Answer: B.\n\nCommunity Rationale & Discussion:\nSelected Answer: B\nAmazon Kinesis Data Firehose is for real-time streaming ingestion, the question implies batch processing (raw data is in S3).\n---\nSelected Answer: B\nData ingestion - Glue ; Model deployment pipeline - sagemaker studio classic\n---\nSelected Answer: B\nThis is the main use-case for Glue.",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152178-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -3691,9 +3691,9 @@
       ]
     },
     "explanation": "Community Most Voted: D (100%). Contributor Answer: D.\n\nCommunity Rationale & Discussion:\nSelected Answer: D\nBecause according to the documentation - \n\"Any operation you perform on your Collections does not affect the integrity of the individual Model Groups they contain\u2014the underlying Model Group artifacts in Amazon S3 and Amazon ECR are not modified.\"\n---\nSelected Answer: D\nOption-D Any operation you perform on your Collections does not affect the integrity of the individual Model Groups they contain\u2014the underlying Model Group artifacts in Amazon S3 and Amazon ECR are not modified.\n---\nSelected Answer: D\nhttps://docs.aws.amazon.com/sagemaker/latest/dg/modelcollections.html",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152090-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -3733,9 +3733,9 @@
       ]
     },
     "explanation": "Community Most Voted: D (100%). Contributor Answer: D.\n\nCommunity Rationale & Discussion:\nSelected Answer: D\nThe SageMaker Model Registry within the pipeline provides functionality to manually or programmatically approve models for production deployment.\n---\nSelected Answer: D\nSageMaker Pipelines is designed to orchestrate machine learning workflows, including manual approval steps for model registration. You can define a step in the pipeline where a manual approval process is required before the model's status is changed to \"Approved\" for deployment.\n---\nSelected Answer: D\nThis tricked my as option D is not clearly worded:\nA. No, SageMaker Experiments allows to track and organize your experiment but not for approving models\nB. No, SageMaker ML Lineage Tracking allows to track model lineage but do not allow to approve a model\nC. No, SageMaker Model Monitor allows to monitor data quality, model quality, bias and feature attribution\nD. Yes, After you create a model version, you typically evaluate its performance and then update the approval status of the model version. You can update the approval status of a model version by using the SDK, SageMaker Studio console or with a condition step in a SageMaker AI pipeline",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152136-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -3775,9 +3775,9 @@
       ]
     },
     "explanation": "Community Most Voted: B (100%). Contributor Answer: B.\n\nCommunity Rationale & Discussion:\nSelected Answer: B\nThere is no deny in SG's - only allows- So NACL is the clear answer here\n---\nSelected Answer: B\nProtection at subnet level: Network ACL. Specific IP addresses can be denied at inbound connection level\n---\nSelected Answer: B\nThat's basic network topic.",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152181-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -3816,9 +3816,9 @@
       ]
     },
     "explanation": "Community Most Voted: B (100%). Contributor Answer: B.\n\nCommunity Rationale & Discussion:\nSelected Answer: B\nFor Spanish : https://docs.ai21.com/docs/jurassic-2-models\n---\nSelected Answer: B\nLEAST amount of time -> A is out\nC is out because Claude does NOT fit for summarization\nD is out because that's for image generation",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152182-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -3859,9 +3859,9 @@
       ]
     },
     "explanation": "Community Most Voted: A (86%). Contributor Answer: A.\n\nCommunity Rationale & Discussion:\nSelected Answer: B\nTricky question. RANDOM_CUT_FOREST is not available as a function in flink. it is a legacy function of Kinesis Data Analytics SQL. there is a RandomCutForestOperator, but is different that the mentioned function. ( https://aws.amazon.com/blogs/big-data/real-time-anomaly-detection-via-random-cut-forest-in-amazon-managed-service-for-apache-flink/)\n---\nSelected Answer: A\nOption A \nHigh-volume real-time: Kinesis Data Streams\nScalable: Managed Apache Flink\nAnomaly detection: RANDOM_CUT_FOREST\nLow overhead: Fully managed services\n---\nSelected Answer: A\nhttps://docs.aws.amazon.com/kinesisanalytics/latest/sqlref/sqlrf-random-cut-forest.html\n\"Detects anomalies in your data stream.\"",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152183-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -3900,9 +3900,9 @@
       ]
     },
     "explanation": "Community Most Voted: C (100%). Contributor Answer: C.\n\nCommunity Rationale & Discussion:\nSelected Answer: C\nPrebuilt sentiment analysis + Fast setup + NLP --Comprehend\n---\nSelected Answer: C\nhttps://docs.aws.amazon.com/comprehend/latest/dg/what-is.html",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152184-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -3941,9 +3941,9 @@
       ]
     },
     "explanation": "Community Most Voted: D (100%). Contributor Answer: D.\n\nCommunity Rationale & Discussion:\nSelected Answer: D\nLower temperature: High probable output \nLower Top k : Focus on likely output\n---\nSelected Answer: D\nhttps://docs.aws.amazon.com/bedrock/latest/userguide/inference-parameters.html",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152185-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -3982,9 +3982,9 @@
       ]
     },
     "explanation": "Community Most Voted: C (100%). Contributor Answer: C.\n\nCommunity Rationale & Discussion:\nSelected Answer: C\nA. Weight decay = 0 \u2192 No regularization, doesn\u2019t target false positives.\nB. More epochs \u2192 Longer training, risks overfitting, no direct impact on false positives.\nC. Higher precision \u2192 Prioritizes correct positives, reduces false positives.\nD. Regressor \u2192 Predicts continuous values, unsuitable for classification.\n---\nSelected Answer: C\nhttps://docs.aws.amazon.com/sagemaker/latest/dg/ll_hyperparameters.html",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152186-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -4023,9 +4023,9 @@
       ]
     },
     "explanation": "Community Most Voted: A (100%). Contributor Answer: A.\n\nCommunity Rationale & Discussion:\nSelected Answer: A\nA. Use zero buffering to minimize latency by delivering data immediate.\nTune batch size to optimize throughput & ensures sub-second delivery for real-time dashboards.\n---\nSelected Answer: A\nAlthough is quite new solution , A will do the trick:\nhttps://aws.amazon.com/about-aws/whats-new/2023/12/amazon-kinesis-data-firehose-zero-buffering/",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152187-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -4064,9 +4064,9 @@
       ]
     },
     "explanation": "Community Most Voted: A (100%). Contributor Answer: A.\n\nCommunity Rationale & Discussion:\nSelected Answer: A\nSageMaker real-time endpoint: Purpose built for Auto scaling, low latency, handles bursts.\n---\nSelected Answer: A\nhttps://aws.amazon.com/blogs/machine-learning/configuring-autoscaling-inference-endpoints-in-amazon-sagemaker/",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152188-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -4105,9 +4105,9 @@
       ]
     },
     "explanation": "Community Most Voted: D (100%). Contributor Answer: D.\n\nCommunity Rationale & Discussion:\nSelected Answer: D\nAcceptable data loss: Spot can be used but\nyou can't change an instance purchasing option while a cluster is running. To change from On-Demand to Spot Instances or vice versa, for the primary and core nodes, you must terminate the cluster and launch a new one. For task nodes, you can launch a new task instance group or instance fleet, and remove the old one.\n---\nSelected Answer: D\nhttps://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-instances-guidelines.html#emr-plan-spot-instances\n\"The task nodes process data but do not hold persistent data in HDFS. If they terminate because the Spot price has risen above your maximum Spot price, no data is lost\"",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152189-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -4148,9 +4148,9 @@
       ]
     },
     "explanation": "Community Most Voted: AD (100%). Contributor Answer: AD.\n\nCommunity Rationale & Discussion:\nSelected Answer: AD\nBlog: https://aws.amazon.com/blogs/machine-learning/optimizing-mlops-for-sustainability/\nSustainability Goals: instances are up to 25% more energy efficient than comparable accelerated computing EC2 instances;\nhttps://aws.amazon.com/ai/machine-learning/trainium/\n\nSageMaker debugger helps to optimize resource consumption by detecting under-utilization of system resources, identifying training problems, and using built-in rules to monitor and stop training jobs as soon as bugs are detected.\n---\nSelected Answer: AD\nI will go with A and D... they seems the most logic ones here.",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152190-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   },
@@ -4190,9 +4190,9 @@
       ]
     },
     "explanation": "Community Most Voted: A (100%). Contributor Answer: A.\n\nCommunity Rationale & Discussion:\nSelected Answer: A\nA. Yes, Clarify allows to get bias - https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-configure-processing-jobs.html\nB. No, the built-in image sagemaker-model-monitor-analyzer provides a range of model monitoring capabilities (constraint suggestion, statistics generation, constraint validation against a baseline, and emitting Amazon CloudWatch metrics) but you need Clarify for bias\nC. No, Glue Data Quality doesn't analyze bias\nD. No, well from a Notebook you can execute pretty much everything including a Clarify Job, however notebooks are for experiments and models development not for enabling real-time application features\n---\nSelected Answer: A\nSageMaker Clarify can be used to analyze bias drift in models. By integrating this with a Lambda function, the workflow can be triggered on-demand whenever the application requires bias monitoring.\n---\nSelected Answer: A\nSageMaker Clarify can be used to analyze bias drift in models. By integrating this with a Lambda function, the workflow can be triggered on-demand whenever the application requires bias monitoring.",
-    "question_link": "https://www.examtopics.com/discussions/amazon/view/152137-exam-aws-certified-machine-learning-engineer-associate-mla/",
+    "question_link": "",
     "sources": [
-      "ExamTopics_Community_Pool",
+      "Community_Consensus_Pool",
       "MLA-C01_Authentic_Recall"
     ]
   }

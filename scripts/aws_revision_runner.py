@@ -298,7 +298,7 @@ def find_tricks(text: str) -> List[Dict[str, Any]]:
                 break
     return matches
 
-def locate_bank(cert: str, custom_path: Optional[str] = None, release_2026: bool = False, examtopics: bool = False) -> Path:
+def locate_bank(cert: str, custom_path: Optional[str] = None, release_2026: bool = False, community: bool = False) -> Path:
     if custom_path:
         p = Path(custom_path)
         if p.is_file():
@@ -307,20 +307,20 @@ def locate_bank(cert: str, custom_path: Optional[str] = None, release_2026: bool
 
     work_repo = Path(__file__).resolve().parent.parent
     local_clf_release = work_repo / "Cloud/Practitioner/CLF-C02/phase4_step11_revision_questions/CLF_C02_November_2026_Release_393Q.json"
-    local_clf_et = work_repo / "Cloud/Practitioner/CLF-C02/phase4_step11_revision_questions/CLF_C02_ExamTopics_Community_Pool_718Q.json"
-    local_aif_et = work_repo / "AI/Practitioner/AIF-C01/phase4_step11_revision_questions/AIF_C01_ExamTopics_Community_Pool_154Q.json"
-    local_saa_et = work_repo / "Cloud/Associate/SAA-C03/revision_questions/SAA_C03_ExamTopics_Community_Pool_1019Q.json"
-    local_mla_et = work_repo / "AI/Associate/MLA-C01/revision_questions/MLA_C01_ExamTopics_Community_Pool_106Q.json"
+    local_clf_comm = work_repo / "Cloud/Practitioner/CLF-C02/phase4_step11_revision_questions/CLF_C02_Community_Practice_Pool_718Q.json"
+    local_aif_comm = work_repo / "AI/Practitioner/AIF-C01/phase4_step11_revision_questions/AIF_C01_Community_Practice_Pool_154Q.json"
+    local_saa_comm = work_repo / "Cloud/Associate/SAA-C03/revision_questions/SAA_C03_Community_Practice_Pool_1019Q.json"
+    local_mla_comm = work_repo / "AI/Associate/MLA-C01/revision_questions/MLA_C01_Community_Practice_Pool_106Q.json"
 
-    if examtopics:
-        if cert == "CLF" and local_clf_et.is_file():
-            return local_clf_et
-        if cert == "AIF" and local_aif_et.is_file():
-            return local_aif_et
-        if cert == "SAA" and local_saa_et.is_file():
-            return local_saa_et
-        if cert == "MLA" and local_mla_et.is_file():
-            return local_mla_et
+    if community:
+        if cert == "CLF" and local_clf_comm.is_file():
+            return local_clf_comm
+        if cert == "AIF" and local_aif_comm.is_file():
+            return local_aif_comm
+        if cert == "SAA" and local_saa_comm.is_file():
+            return local_saa_comm
+        if cert == "MLA" and local_mla_comm.is_file():
+            return local_mla_comm
 
     if release_2026 and cert == "CLF":
         if local_clf_release.is_file():
@@ -330,23 +330,23 @@ def locate_bank(cert: str, custom_path: Optional[str] = None, release_2026: bool
     search_paths = [Path(env_vault)] if env_vault else []
     search_paths.extend(DEFAULT_VAULT_PATHS)
 
-    # Check Vault ExamTopics directory if requested
-    if examtopics:
+    # Check Vault Community Practice Questions directory if requested
+    if community:
         for base in search_paths:
             if cert == "CLF":
-                v_target = base / "Questions_Bank/ExamTopics_Questions/CLF_C02_ExamTopics_Community_Pool_718Q.json"
+                v_target = base / "Questions_Bank/Community_Practice_Questions/CLF_C02_Community_Pool_718Q.json"
                 if v_target.is_file():
                     return v_target
             elif cert == "AIF":
-                v_target = base / "Questions_Bank/ExamTopics_Questions/AIF_C01_ExamTopics_Community_Pool_154Q.json"
+                v_target = base / "Questions_Bank/Community_Practice_Questions/AIF_C01_Community_Pool_154Q.json"
                 if v_target.is_file():
                     return v_target
             elif cert == "SAA":
-                v_target = base / "Questions_Bank/ExamTopics_Questions/SAA_C03_ExamTopics_Community_Pool_1019Q.json"
+                v_target = base / "Questions_Bank/Community_Practice_Questions/SAA_C03_Community_Pool_1019Q.json"
                 if v_target.is_file():
                     return v_target
             elif cert == "MLA":
-                v_target = base / "Questions_Bank/ExamTopics_Questions/MLA_C01_ExamTopics_Community_Pool_106Q.json"
+                v_target = base / "Questions_Bank/Community_Practice_Questions/MLA_C01_Community_Pool_106Q.json"
                 if v_target.is_file():
                     return v_target
 
@@ -420,14 +420,14 @@ def filter_questions(
     service_query: Optional[str] = None,
     min_consensus: Optional[int] = None,
     weak_ids: Optional[Set[str]] = None,
-    examtopics_only: bool = False,
+    community_only: bool = False,
 ) -> List[Dict[str, Any]]:
     filtered = questions
 
-    if examtopics_only:
+    if community_only:
         filtered = [
             q for q in filtered
-            if any("examtopics" in s.lower() for s in q.get("sources", []))
+            if any("community" in s.lower() for s in q.get("sources", []))
         ]
 
     if weak_ids is not None:
@@ -453,15 +453,15 @@ def filter_questions(
 def sample_mock_questions(
     cert: str,
     questions: List[Dict[str, Any]],
-    examtopics_only: bool = False
+    community_only: bool = False
 ) -> List[Dict[str, Any]]:
     dist = MOCK_DISTRIBUTION.get(cert, {})
     pool_questions = questions
 
-    if examtopics_only:
-        et_pool = [q for q in questions if any("examtopics" in s.lower() for s in q.get("sources", []))]
-        if et_pool:
-            pool_questions = et_pool
+    if community_only:
+        comm_pool = [q for q in questions if any("community" in s.lower() for s in q.get("sources", []))]
+        if comm_pool:
+            pool_questions = comm_pool
 
     by_domain: Dict[int, List[Dict[str, Any]]] = {}
     for q in pool_questions:
@@ -469,12 +469,12 @@ def sample_mock_questions(
         by_domain.setdefault(d, []).append(q)
 
     mock_set = []
-    target_count = 65 if not examtopics_only or len(pool_questions) >= 65 else len(pool_questions)
+    target_count = 65 if not community_consensus_only or len(pool_questions) >= 65 else len(pool_questions)
 
     for d, count in dist.items():
         pool = by_domain.get(d, [])
-        # Prioritize ExamTopics questions within the domain pool
-        pool.sort(key=lambda q: (1 if any("examtopics" in s.lower() for s in q.get("sources", [])) else 0), reverse=True)
+        # Prioritize Community Consensus Pool questions within the domain pool
+        pool.sort(key=lambda q: (1 if any("community_consensus" in s.lower() for s in q.get("sources", [])) else 0), reverse=True)
         take_count = min(count, len(pool))
         if take_count > 0:
             mock_set.extend(random.sample(pool[:max(take_count * 2, take_count)], take_count))
@@ -518,8 +518,8 @@ def display_question(
         print(f"{Colors.DIM}Verified Sources ({consensus}): {', '.join(sources[:4])}{'...' if len(sources)>4 else ''}{Colors.RESET}")
     if any("2026" in str(s).lower() or "actual" in str(s).lower() or "q393" in str(s).lower() for s in sources):
         print(f"{Colors.YELLOW}{Colors.BOLD}🔥 NOVEMBER 2026 AUTHENTIC EXAM RELEASE — Candidate Practice Pool (393Q){Colors.RESET}")
-    elif any("examtopics" in str(s).lower() for s in sources):
-        print(f"{Colors.GREEN}{Colors.BOLD}⭐ AUTHENTIC EXAMTOPICS QUESTION — Verified Community Discussion Consensus{Colors.RESET}")
+    elif any("community" in str(s).lower() for s in sources):
+        print(f"{Colors.GREEN}{Colors.BOLD}⭐ AUTHENTIC COMMUNITY PRACTICE QUESTION — Verified Candidate Discussion Consensus{Colors.RESET}")
     if show_tricks:
         print(f"{Colors.YELLOW}{Colors.BOLD}💡 TRICKS & MNEMONIC MODE ACTIVE — Key trigger words are highlighted in gold.{Colors.RESET}")
     print(f"{Colors.CYAN}{'-'*80}{Colors.RESET}\n")
@@ -696,22 +696,22 @@ def run_mock_exam(
     cert: str,
     questions: List[Dict[str, Any]],
     history_file: Path,
-    examtopics_only: bool = False,
+    community_only: bool = False,
     show_tricks: bool = False
 ):
-    mock_set = sample_mock_questions(cert, questions, examtopics_only=examtopics_only)
+    mock_set = sample_mock_questions(cert, questions, community_only=community_only)
     total = len(mock_set)
     time_limit_mins = MOCK_TIME_LIMIT_MINUTES.get(cert, 90)
 
     print(f"\n{Colors.HEADER}{Colors.BOLD}{'='*80}{Colors.RESET}")
-    et_tag = f" [{Colors.GREEN}EXAMTOPICS FOCUS POOL{Colors.RESET}{Colors.HEADER}{Colors.BOLD}]" if examtopics_only else ""
+    et_tag = f" [{Colors.GREEN}COMMUNITY PRACTICE FOCUS POOL{Colors.RESET}{Colors.HEADER}{Colors.BOLD}]" if community_only else ""
     print(f"{Colors.HEADER}{Colors.BOLD}🎓 OFFICIAL AWS TIMED MOCK EXAM SIMULATION: {cert}-C0{2 if cert=='CLF' else 1}{et_tag}{Colors.RESET}")
     print(f"{Colors.HEADER}{Colors.BOLD}{'='*80}{Colors.RESET}")
     print(f"• Total Questions:   {Colors.BOLD}{total}{Colors.RESET}")
     print(f"• Allocated Time:    {Colors.BOLD}{time_limit_mins} minutes{Colors.RESET}")
     print(f"• Passing Threshold: {Colors.BOLD}700 / 1000 (Scaled Scoring ~70% raw){Colors.RESET}")
-    if examtopics_only:
-        print(f"• Question Provenance: {Colors.GREEN}{Colors.BOLD}ExamTopics Community Verified Items{Colors.RESET}")
+    if community_only:
+        print(f"• Question Provenance: {Colors.GREEN}{Colors.BOLD}Authentic Community Practice Pool (Discussion Consensus){Colors.RESET}")
     print(f"• Domain Balance:    Weighted exactly per official AWS Exam Blueprint")
     print(f"{Colors.DIM}Controls: Enter letters (A, B), 's' to skip, 'q' to finish and grade early.{Colors.RESET}\n")
 
@@ -866,7 +866,7 @@ Examples:
     parser.add_argument("--consensus", type=int, default=None, help="Minimum source consensus count (e.g., 2, 3)")
     parser.add_argument("--count", "-n", type=int, default=None, help="Number of questions to test (default: 10 for practice/drill, 65 for mock)")
     parser.add_argument("--tricks", action="store_true", help="Enable Exam Decryption & Mnemonic Mode (highlights trigger keywords and reveals memory pegs)")
-    parser.add_argument("--examtopics", action="store_true", help="Filter and focus exclusively on authentic ExamTopics community discussion questions")
+    parser.add_argument("--community", "--community-pool", "--practice-pool", dest="community", action="store_true", help="Filter and focus exclusively on authentic community discussion & consensus practice questions")
     parser.add_argument("--release-2026", "--nov-2026", dest="release_2026", action="store_true", help="Filter and focus exclusively on authentic November 2026 393-question exam practice suite")
     parser.add_argument("--bank-path", default=None, help="Custom path to question bank JSON file")
     parser.add_argument("--history-file", default=str(Path.home() / ".aws_revision_history.json"), help="Path to weakness tracking history file")
@@ -891,19 +891,19 @@ Examples:
             print(f"{Colors.GREEN}No recorded weaknesses for {args.cert}! Try practicing other domains.{Colors.RESET}")
             return
 
-        bank_file = locate_bank(args.cert, args.bank_path, release_2026=args.release_2026, examtopics=args.examtopics)
+        bank_file = locate_bank(args.cert, args.bank_path, release_2026=args.release_2026, community=args.community)
         all_q = load_questions(bank_file)
-        filtered = filter_questions(all_q, weak_ids=set(weak_cert_ids), examtopics_only=args.examtopics)
+        filtered = filter_questions(all_q, weak_ids=set(weak_cert_ids), community_only=args.community)
         print(f"\n{Colors.YELLOW}{Colors.BOLD}🔍 Found {len(filtered)} previously missed question(s) in weakness history.{Colors.RESET}")
         run_practice_or_drill(args.cert, filtered, "practice", history_path, show_tricks=args.tricks)
         return
 
     # Locate and load bank
-    bank_file = locate_bank(args.cert, args.bank_path, release_2026=args.release_2026, examtopics=args.examtopics)
+    bank_file = locate_bank(args.cert, args.bank_path, release_2026=args.release_2026, community=args.community)
     all_questions = load_questions(bank_file)
 
     if args.mode == "mock":
-        run_mock_exam(args.cert, all_questions, history_path, examtopics_only=args.examtopics, show_tricks=args.tricks)
+        run_mock_exam(args.cert, all_questions, history_path, community_only=args.community, show_tricks=args.tricks)
         return
 
     # Filter questions for practice or drill
@@ -912,7 +912,7 @@ Examples:
         domain=args.domain,
         service_query=args.service,
         min_consensus=args.consensus,
-        examtopics_only=args.examtopics
+        community_only=args.community
     )
 
     if not filtered:

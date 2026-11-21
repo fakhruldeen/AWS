@@ -1,22 +1,22 @@
-# AWS Certified Cloud Practitioner (CLF-C02) - ExamTopics High-Yield Focus Set
+# AWS Certified Cloud Practitioner (CLF-C02) - Community Consensus Pool High-Yield Focus Set
 
 > **Exam Code:** `CLF-C02`  
-> **Source Provenance:** Authentic ExamTopics Community Discussions & Verified Consensus  
+> **Source Provenance:** Authentic Community Consensus Pool Community Discussions & Verified Consensus  
 > **Question Count:** 65 High-Yield Scenario Questions (Full Mock Balance: 16 D1, 20 D2, 22 D3, 7 D4)  
-> **Interactive CLI Practice:** `python3 scripts/aws_revision_runner.py --cert CLF --examtopics --mode practice`  
-> **Interactive Timed Simulation:** `python3 scripts/aws_revision_runner.py --cert CLF --examtopics --mode mock`  
+> **Interactive CLI Practice:** `python3 scripts/aws_revision_runner.py --cert CLF --community_consensus --mode practice`  
+> **Interactive Timed Simulation:** `python3 scripts/aws_revision_runner.py --cert CLF --community_consensus --mode mock`  
 
 ---
 
 ## 🎯 Exam Strategy & How to Use This Set
 
-These questions represent the **most frequent scenario patterns** tested on the actual exam according to community consensus on ExamTopics.
+These questions represent the **most frequent scenario patterns** tested on the actual exam according to community consensus on Community Consensus Pool.
 Work through each question, select your choice, and review the **Architectural Rationale & Distractor Breakdown** in the collapsible details.
 
 ---
 
-### Question 1 (ExamTopics #1)
-> **Domain:** `Domain 1: Cloud Concepts (24%)` | **ID:** `ET-CLF-Q001` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/147714-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 1 (Community Consensus Pool #1)
+> **Domain:** `Domain 1: Cloud Concepts (24%)` | **ID:** `ET-CLF-Q001` | [Community Consensus Pool Discussion]()
 
 A company deployed an application in multiple AWS Regions around the world. The company wants to improve the application’s performance and availability.
 
@@ -34,7 +34,7 @@ Which AWS service will meet these requirements?
 
 **Correct Answer: A (AWS Global Accelerator)**
 
-This question (# 1) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 1) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'AWS Global Accelerator' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -47,8 +47,8 @@ This question (# 1) is directly sourced from authentic **ExamTopics** community 
 
 ---
 
-### Question 2 (ExamTopics #4)
-> **Domain:** `Domain 1: Cloud Concepts (24%)` | **ID:** `ET-CLF-Q004` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/147717-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 2 (Community Consensus Pool #4)
+> **Domain:** `Domain 1: Cloud Concepts (24%)` | **ID:** `ET-CLF-Q004` | [Community Consensus Pool Discussion]()
 
 Which option is an advantage of AWS Cloud computing that minimizes variable costs?
 
@@ -64,7 +64,7 @@ Which option is an advantage of AWS Cloud computing that minimizes variable cost
 
 **Correct Answer: B (Economies of scale)**
 
-This question (# 4) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 4) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'Economies of scale' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -77,8 +77,8 @@ This question (# 4) is directly sourced from authentic **ExamTopics** community 
 
 ---
 
-### Question 3 (ExamTopics #11)
-> **Domain:** `Domain 1: Cloud Concepts (24%)` | **ID:** `ET-CLF-Q011` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/126059-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 3 (Community Consensus Pool #11)
+> **Domain:** `Domain 1: Cloud Concepts (24%)` | **ID:** `ET-CLF-Q011` | [Community Consensus Pool Discussion]()
 
 A company has migrated its workloads to AWS. The company wants to adopt AWS at scale and operate more efficiently and securely. Which AWS service or framework should the company use for operational support?
 
@@ -94,7 +94,7 @@ A company has migrated its workloads to AWS. The company wants to adopt AWS at s
 
 **Correct Answer: C (AWS Managed Services (AMS))**
 
-This question (# 11) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 11) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'AWS Managed Services (AMS)' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -107,8 +107,8 @@ This question (# 11) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 4 (ExamTopics #15)
-> **Domain:** `Domain 1: Cloud Concepts (24%)` | **ID:** `ET-CLF-Q015` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/129593-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 4 (Community Consensus Pool #15)
+> **Domain:** `Domain 1: Cloud Concepts (24%)` | **ID:** `ET-CLF-Q015` | [Community Consensus Pool Discussion]()
 
 A company is using the AWS Free Tier for several AWS services for an application.
 
@@ -126,7 +126,7 @@ What will happen if the Free Tier usage period expires or if the application use
 
 **Correct Answer: A (The company will be charged the standard pay-as-you-go service rates for the usage that exceeds the Free Tier usage.)**
 
-This question (# 15) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 15) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'The company will be charged the standard pay-as-you-go service rates for the usage that exceeds the Free Tier usage.' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -139,8 +139,8 @@ This question (# 15) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 5 (ExamTopics #22)
-> **Domain:** `Domain 1: Cloud Concepts (24%)` | **ID:** `ET-CLF-Q022` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/147724-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 5 (Community Consensus Pool #22)
+> **Domain:** `Domain 1: Cloud Concepts (24%)` | **ID:** `ET-CLF-Q022` | [Community Consensus Pool Discussion]()
 
 A company wants to migrate to the AWS Cloud. The company needs the ability to acquire resources when the resources are necessary. The company also needs the ability to release those resources when the resources are no longer necessary.
 
@@ -158,7 +158,7 @@ Which architecture concept of the AWS Cloud meets these requirements?
 
 **Correct Answer: A (Elasticity)**
 
-This question (# 22) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 22) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'Elasticity' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -171,8 +171,8 @@ This question (# 22) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 6 (ExamTopics #26)
-> **Domain:** `Domain 1: Cloud Concepts (24%)` | **ID:** `ET-CLF-Q026` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/147727-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 6 (Community Consensus Pool #26)
+> **Domain:** `Domain 1: Cloud Concepts (24%)` | **ID:** `ET-CLF-Q026` | [Community Consensus Pool Discussion]()
 
 Which AWS Cloud Adoption Framework (AWS CAF) perspective focuses on real-time insights and answers questions about strategy?
 
@@ -188,7 +188,7 @@ Which AWS Cloud Adoption Framework (AWS CAF) perspective focuses on real-time in
 
 **Correct Answer: C (Business)**
 
-This question (# 26) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 26) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'Business' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -201,8 +201,8 @@ This question (# 26) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 7 (ExamTopics #31)
-> **Domain:** `Domain 1: Cloud Concepts (24%)` | **ID:** `ET-CLF-Q031` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/127400-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 7 (Community Consensus Pool #31)
+> **Domain:** `Domain 1: Cloud Concepts (24%)` | **ID:** `ET-CLF-Q031` | [Community Consensus Pool Discussion]()
 
 Which AWS benefit is demonstrated by on-demand technology services that enable companies to replace upfront fixed expenses with variable expenses?
 
@@ -218,7 +218,7 @@ Which AWS benefit is demonstrated by on-demand technology services that enable c
 
 **Correct Answer: C (Pay-as-you-go pricing)**
 
-This question (# 31) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 31) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'Pay-as-you-go pricing' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -231,8 +231,8 @@ This question (# 31) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 8 (ExamTopics #36)
-> **Domain:** `Domain 1: Cloud Concepts (24%)` | **ID:** `ET-CLF-Q036` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/128063-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 8 (Community Consensus Pool #36)
+> **Domain:** `Domain 1: Cloud Concepts (24%)` | **ID:** `ET-CLF-Q036` | [Community Consensus Pool Discussion]()
 
 Which of the following is an AWS value proposition that describes a user’s ability to scale infrastructure based on demand?
 
@@ -248,7 +248,7 @@ Which of the following is an AWS value proposition that describes a user’s abi
 
 **Correct Answer: B (Resource elasticity)**
 
-This question (# 36) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 36) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'Resource elasticity' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -261,8 +261,8 @@ This question (# 36) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 9 (ExamTopics #38)
-> **Domain:** `Domain 1: Cloud Concepts (24%)` | **ID:** `ET-CLF-Q038` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/127933-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 9 (Community Consensus Pool #38)
+> **Domain:** `Domain 1: Cloud Concepts (24%)` | **ID:** `ET-CLF-Q038` | [Community Consensus Pool Discussion]()
 
 A company wants to know more about the benefits offered by cloud computing. The company wants to understand the operational advantage of agility. How does AWS provide agility for users?
 
@@ -278,7 +278,7 @@ A company wants to know more about the benefits offered by cloud computing. The 
 
 **Correct Answer: D (The ability to provision and deprovision resources quickly with minimal effort)**
 
-This question (# 38) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 38) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'The ability to provision and deprovision resources quickly with minimal effort' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -291,8 +291,8 @@ This question (# 38) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 10 (ExamTopics #41)
-> **Domain:** `Domain 1: Cloud Concepts (24%)` | **ID:** `ET-CLF-Q041` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/129577-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 10 (Community Consensus Pool #41)
+> **Domain:** `Domain 1: Cloud Concepts (24%)` | **ID:** `ET-CLF-Q041` | [Community Consensus Pool Discussion]()
 
 Which architecture concept describes the ability to deploy resources on demand and release resources when they are no longer needed?
 
@@ -308,7 +308,7 @@ Which architecture concept describes the ability to deploy resources on demand a
 
 **Correct Answer: D (Elasticity)**
 
-This question (# 41) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 41) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'Elasticity' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -321,8 +321,8 @@ This question (# 41) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 11 (ExamTopics #55)
-> **Domain:** `Domain 1: Cloud Concepts (24%)` | **ID:** `ET-CLF-Q055` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/129892-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 11 (Community Consensus Pool #55)
+> **Domain:** `Domain 1: Cloud Concepts (24%)` | **ID:** `ET-CLF-Q055` | [Community Consensus Pool Discussion]()
 
 A company is migrating to the AWS Cloud. The company wants to understand and identify potential security misconfigurations or unexpected behaviors. The company wants to prioritize any protective controls it might need.
 
@@ -340,7 +340,7 @@ Which AWS Cloud Adoption Framework (AWS CAF) security perspective capability wil
 
 **Correct Answer: B (Threat detection)**
 
-This question (# 55) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 55) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'Threat detection' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -353,8 +353,8 @@ This question (# 55) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 12 (ExamTopics #63)
-> **Domain:** `Domain 1: Cloud Concepts (24%)` | **ID:** `ET-CLF-Q063` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/126200-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 12 (Community Consensus Pool #63)
+> **Domain:** `Domain 1: Cloud Concepts (24%)` | **ID:** `ET-CLF-Q063` | [Community Consensus Pool Discussion]()
 
 Which pillar of the AWS Well-Architected Framework refers to the ability of a system to recover from infrastructure or service disruptions and dynamically acquire computing resources to meet demand?
 
@@ -370,7 +370,7 @@ Which pillar of the AWS Well-Architected Framework refers to the ability of a sy
 
 **Correct Answer: B (Reliability)**
 
-This question (# 63) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 63) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'Reliability' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -383,8 +383,8 @@ This question (# 63) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 13 (ExamTopics #67)
-> **Domain:** `Domain 1: Cloud Concepts (24%)` | **ID:** `ET-CLF-Q067` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/129642-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 13 (Community Consensus Pool #67)
+> **Domain:** `Domain 1: Cloud Concepts (24%)` | **ID:** `ET-CLF-Q067` | [Community Consensus Pool Discussion]()
 
 Which of the following are benefits that a company receives when it moves an on-premises production workload to AWS? (Choose two.)
 
@@ -401,7 +401,7 @@ Which of the following are benefits that a company receives when it moves an on-
 
 **Correct Answer: DE (AWS offers high availability., AWS provides economies of scale.)**
 
-This question (# 67) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 67) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'AWS offers high availability., AWS provides economies of scale.' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -415,8 +415,8 @@ This question (# 67) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 14 (ExamTopics #70)
-> **Domain:** `Domain 1: Cloud Concepts (24%)` | **ID:** `ET-CLF-Q070` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/126223-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 14 (Community Consensus Pool #70)
+> **Domain:** `Domain 1: Cloud Concepts (24%)` | **ID:** `ET-CLF-Q070` | [Community Consensus Pool Discussion]()
 
 Which design principles support the reliability pillar of the AWS Well-Architected Framework? (Choose two.)
 
@@ -433,7 +433,7 @@ Which design principles support the reliability pillar of the AWS Well-Architect
 
 **Correct Answer: CE (Automatically scale to meet demand., Automatically recover from failure.)**
 
-This question (# 70) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 70) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'Automatically scale to meet demand., Automatically recover from failure.' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -447,8 +447,8 @@ This question (# 70) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 15 (ExamTopics #72)
-> **Domain:** `Domain 1: Cloud Concepts (24%)` | **ID:** `ET-CLF-Q072` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/126744-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 15 (Community Consensus Pool #72)
+> **Domain:** `Domain 1: Cloud Concepts (24%)` | **ID:** `ET-CLF-Q072` | [Community Consensus Pool Discussion]()
 
 A company that uses AWS needs to transfer 2 TB of data.
 
@@ -466,7 +466,7 @@ Which type of transfer of that data would result in no cost for the company?
 
 **Correct Answer: A (Inbound data transfer from the internet)**
 
-This question (# 72) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 72) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'Inbound data transfer from the internet' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -479,8 +479,8 @@ This question (# 72) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 16 (ExamTopics #78)
-> **Domain:** `Domain 1: Cloud Concepts (24%)` | **ID:** `ET-CLF-Q078` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/126319-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 16 (Community Consensus Pool #78)
+> **Domain:** `Domain 1: Cloud Concepts (24%)` | **ID:** `ET-CLF-Q078` | [Community Consensus Pool Discussion]()
 
 What is the customer ALWAYS responsible for managing, according to the AWS shared responsibility model?
 
@@ -496,7 +496,7 @@ What is the customer ALWAYS responsible for managing, according to the AWS share
 
 **Correct Answer: C (Customer data)**
 
-This question (# 78) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 78) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'Customer data' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -509,8 +509,8 @@ This question (# 78) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 17 (ExamTopics #3)
-> **Domain:** `Domain 2: Security and Compliance (30%)` | **ID:** `ET-CLF-Q003` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/147716-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 17 (Community Consensus Pool #3)
+> **Domain:** `Domain 2: Security and Compliance (30%)` | **ID:** `ET-CLF-Q003` | [Community Consensus Pool Discussion]()
 
 A company needs stateless network filtering for its VPC.
 
@@ -528,7 +528,7 @@ Which AWS service, tool, or feature will meet this requirement?
 
 **Correct Answer: C (Network access control list (ACL))**
 
-This question (# 3) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 3) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'Network access control list (ACL)' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -541,8 +541,8 @@ This question (# 3) is directly sourced from authentic **ExamTopics** community 
 
 ---
 
-### Question 18 (ExamTopics #10)
-> **Domain:** `Domain 2: Security and Compliance (30%)` | **ID:** `ET-CLF-Q010` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/126270-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 18 (Community Consensus Pool #10)
+> **Domain:** `Domain 2: Security and Compliance (30%)` | **ID:** `ET-CLF-Q010` | [Community Consensus Pool Discussion]()
 
 A company wants to migrate to AWS and use the same security software it uses on premises. The security software vendor offers its security software as a service on AWS.
 
@@ -560,7 +560,7 @@ Where can the company purchase the security solution?
 
 **Correct Answer: D (AWS Marketplace)**
 
-This question (# 10) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 10) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'AWS Marketplace' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -573,8 +573,8 @@ This question (# 10) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 19 (ExamTopics #16)
-> **Domain:** `Domain 2: Security and Compliance (30%)` | **ID:** `ET-CLF-Q016` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/123731-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 19 (Community Consensus Pool #16)
+> **Domain:** `Domain 2: Security and Compliance (30%)` | **ID:** `ET-CLF-Q016` | [Community Consensus Pool Discussion]()
 
 A user wants to allow applications running on an Amazon EC2 instance to make calls to other AWS services. The access granted must be secure.
 Which AWS service or feature should be used?
@@ -591,7 +591,7 @@ Which AWS service or feature should be used?
 
 **Correct Answer: C (IAM roles)**
 
-This question (# 16) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 16) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'IAM roles' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -604,8 +604,8 @@ This question (# 16) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 20 (ExamTopics #20)
-> **Domain:** `Domain 2: Security and Compliance (30%)` | **ID:** `ET-CLF-Q020` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/123799-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 20 (Community Consensus Pool #20)
+> **Domain:** `Domain 2: Security and Compliance (30%)` | **ID:** `ET-CLF-Q020` | [Community Consensus Pool Discussion]()
 
 A company needs to track the activity in its AWS accounts, and needs to know when an API call is made against its AWS resources.
 Which AWS tool or service can be used to meet these requirements?
@@ -622,7 +622,7 @@ Which AWS tool or service can be used to meet these requirements?
 
 **Correct Answer: C (AWS CloudTrail)**
 
-This question (# 20) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 20) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'AWS CloudTrail' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -635,8 +635,8 @@ This question (# 20) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 21 (ExamTopics #24)
-> **Domain:** `Domain 2: Security and Compliance (30%)` | **ID:** `ET-CLF-Q024` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/126969-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 21 (Community Consensus Pool #24)
+> **Domain:** `Domain 2: Security and Compliance (30%)` | **ID:** `ET-CLF-Q024` | [Community Consensus Pool Discussion]()
 
 A company has deployed an Amazon EC2 instance.
 
@@ -654,7 +654,7 @@ Which option is an AWS responsibility under the AWS shared responsibility model?
 
 **Correct Answer: C (Configuration of infrastructure devices)**
 
-This question (# 24) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 24) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'Configuration of infrastructure devices' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -667,8 +667,8 @@ This question (# 24) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 22 (ExamTopics #35)
-> **Domain:** `Domain 2: Security and Compliance (30%)` | **ID:** `ET-CLF-Q035` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/126222-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 22 (Community Consensus Pool #35)
+> **Domain:** `Domain 2: Security and Compliance (30%)` | **ID:** `ET-CLF-Q035` | [Community Consensus Pool Discussion]()
 
 Which AWS service or feature can a company use to apply security rules to specific Amazon EC2 instances?
 
@@ -684,7 +684,7 @@ Which AWS service or feature can a company use to apply security rules to specif
 
 **Correct Answer: B (Security groups)**
 
-This question (# 35) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 35) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'Security groups' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -697,8 +697,8 @@ This question (# 35) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 23 (ExamTopics #37)
-> **Domain:** `Domain 2: Security and Compliance (30%)` | **ID:** `ET-CLF-Q037` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/126203-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 23 (Community Consensus Pool #37)
+> **Domain:** `Domain 2: Security and Compliance (30%)` | **ID:** `ET-CLF-Q037` | [Community Consensus Pool Discussion]()
 
 Which action is a security best practice for access to sensitive data that is stored in an Amazon S3 bucket?
 
@@ -714,7 +714,7 @@ Which action is a security best practice for access to sensitive data that is st
 
 **Correct Answer: B (Use IAM roles for applications that require access to the S3 bucket.)**
 
-This question (# 37) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 37) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'Use IAM roles for applications that require access to the S3 bucket.' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -727,8 +727,8 @@ This question (# 37) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 24 (ExamTopics #40)
-> **Domain:** `Domain 2: Security and Compliance (30%)` | **ID:** `ET-CLF-Q040` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/126204-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 24 (Community Consensus Pool #40)
+> **Domain:** `Domain 2: Security and Compliance (30%)` | **ID:** `ET-CLF-Q040` | [Community Consensus Pool Discussion]()
 
 A company needs a central user portal so that users can log in to third-party business applications that support Security Assertion Markup Language (SAML) 2.0.
 
@@ -746,7 +746,7 @@ Which AWS service will meet this requirement?
 
 **Correct Answer: C (AWS IAM Identity Center (AWS IAM Identity Center (formerly AWS Single Sign-On)))**
 
-This question (# 40) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 40) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'AWS IAM Identity Center (AWS IAM Identity Center (formerly AWS Single Sign-On))' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -759,8 +759,8 @@ This question (# 40) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 25 (ExamTopics #42)
-> **Domain:** `Domain 2: Security and Compliance (30%)` | **ID:** `ET-CLF-Q042` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/129576-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 25 (Community Consensus Pool #42)
+> **Domain:** `Domain 2: Security and Compliance (30%)` | **ID:** `ET-CLF-Q042` | [Community Consensus Pool Discussion]()
 
 Which task requires a user to sign in as the AWS account root user?
 
@@ -776,7 +776,7 @@ Which task requires a user to sign in as the AWS account root user?
 
 **Correct Answer: B (The deletion of an AWS account)**
 
-This question (# 42) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 42) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'The deletion of an AWS account' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -789,8 +789,8 @@ This question (# 42) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 26 (ExamTopics #45)
-> **Domain:** `Domain 2: Security and Compliance (30%)` | **ID:** `ET-CLF-Q045` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/123632-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 26 (Community Consensus Pool #45)
+> **Domain:** `Domain 2: Security and Compliance (30%)` | **ID:** `ET-CLF-Q045` | [Community Consensus Pool Discussion]()
 
 A company needs to block SQL injection attacks.
 Which AWS service or feature can meet this requirement?
@@ -807,7 +807,7 @@ Which AWS service or feature can meet this requirement?
 
 **Correct Answer: A (AWS WAF)**
 
-This question (# 45) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 45) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'AWS WAF' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -820,8 +820,8 @@ This question (# 45) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 27 (ExamTopics #43)
-> **Domain:** `Domain 2: Security and Compliance (30%)` | **ID:** `ET-CLF-Q043` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/123691-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 27 (Community Consensus Pool #43)
+> **Domain:** `Domain 2: Security and Compliance (30%)` | **ID:** `ET-CLF-Q043` | [Community Consensus Pool Discussion]()
 
 A user needs programmatic access to AWS resources through the AWS CLI or the AWS API.
 Which option will provide the user with the appropriate access?
@@ -838,7 +838,7 @@ Which option will provide the user with the appropriate access?
 
 **Correct Answer: B (Access keys)**
 
-This question (# 43) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 43) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'Access keys' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -851,8 +851,8 @@ This question (# 43) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 28 (ExamTopics #56)
-> **Domain:** `Domain 2: Security and Compliance (30%)` | **ID:** `ET-CLF-Q056` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/126230-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 28 (Community Consensus Pool #56)
+> **Domain:** `Domain 2: Security and Compliance (30%)` | **ID:** `ET-CLF-Q056` | [Community Consensus Pool Discussion]()
 
 A company needs to centrally configure and manage Amazon VPC security groups across multiple AWS accounts within an organization in AWS Organizations.
 
@@ -870,7 +870,7 @@ Which AWS service should the company use to meet these requirements?
 
 **Correct Answer: A (AWS Firewall Manager)**
 
-This question (# 56) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 56) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'AWS Firewall Manager' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -883,8 +883,8 @@ This question (# 56) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 29 (ExamTopics #59)
-> **Domain:** `Domain 2: Security and Compliance (30%)` | **ID:** `ET-CLF-Q059` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/126231-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 29 (Community Consensus Pool #59)
+> **Domain:** `Domain 2: Security and Compliance (30%)` | **ID:** `ET-CLF-Q059` | [Community Consensus Pool Discussion]()
 
 Which task is a responsibility of AWS, according to the AWS shared responsibility model?
 
@@ -900,7 +900,7 @@ Which task is a responsibility of AWS, according to the AWS shared responsibilit
 
 **Correct Answer: D (Maintain the physical hardware of the infrastructure.)**
 
-This question (# 59) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 59) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'Maintain the physical hardware of the infrastructure.' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -913,8 +913,8 @@ This question (# 59) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 30 (ExamTopics #61)
-> **Domain:** `Domain 2: Security and Compliance (30%)` | **ID:** `ET-CLF-Q061` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/126199-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 30 (Community Consensus Pool #61)
+> **Domain:** `Domain 2: Security and Compliance (30%)` | **ID:** `ET-CLF-Q061` | [Community Consensus Pool Discussion]()
 
 A company needs to transfer data between an Amazon S3 bucket and an on-premises application.
 
@@ -932,7 +932,7 @@ Who is responsible for the security of this data, according to the AWS shared re
 
 **Correct Answer: A (The company)**
 
-This question (# 61) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 61) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'The company' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -945,8 +945,8 @@ This question (# 61) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 31 (ExamTopics #69)
-> **Domain:** `Domain 2: Security and Compliance (30%)` | **ID:** `ET-CLF-Q069` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/129644-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 31 (Community Consensus Pool #69)
+> **Domain:** `Domain 2: Security and Compliance (30%)` | **ID:** `ET-CLF-Q069` | [Community Consensus Pool Discussion]()
 
 Which of the following are benefits of AWS Trusted Advisor? (Choose two.)
 
@@ -963,7 +963,7 @@ Which of the following are benefits of AWS Trusted Advisor? (Choose two.)
 
 **Correct Answer: BD (Cost optimization recommendations, Security checks)**
 
-This question (# 69) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 69) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'Cost optimization recommendations, Security checks' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -977,8 +977,8 @@ This question (# 69) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 32 (ExamTopics #79)
-> **Domain:** `Domain 2: Security and Compliance (30%)` | **ID:** `ET-CLF-Q079` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/127176-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 32 (Community Consensus Pool #79)
+> **Domain:** `Domain 2: Security and Compliance (30%)` | **ID:** `ET-CLF-Q079` | [Community Consensus Pool Discussion]()
 
 Which AWS service can be used to retrieve compliance reports on demand?
 
@@ -994,7 +994,7 @@ Which AWS service can be used to retrieve compliance reports on demand?
 
 **Correct Answer: B (AWS Artifact)**
 
-This question (# 79) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 79) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'AWS Artifact' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -1007,8 +1007,8 @@ This question (# 79) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 33 (ExamTopics #80)
-> **Domain:** `Domain 2: Security and Compliance (30%)` | **ID:** `ET-CLF-Q080` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/126320-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 33 (Community Consensus Pool #80)
+> **Domain:** `Domain 2: Security and Compliance (30%)` | **ID:** `ET-CLF-Q080` | [Community Consensus Pool Discussion]()
 
 Which AWS service enables users to check for vulnerabilities on Amazon EC2 instances by using predefined assessment templates?
 
@@ -1024,7 +1024,7 @@ Which AWS service enables users to check for vulnerabilities on Amazon EC2 insta
 
 **Correct Answer: C (Amazon Inspector)**
 
-This question (# 80) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 80) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'Amazon Inspector' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -1037,8 +1037,8 @@ This question (# 80) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 34 (ExamTopics #89)
-> **Domain:** `Domain 2: Security and Compliance (30%)` | **ID:** `ET-CLF-Q089` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/123917-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 34 (Community Consensus Pool #89)
+> **Domain:** `Domain 2: Security and Compliance (30%)` | **ID:** `ET-CLF-Q089` | [Community Consensus Pool Discussion]()
 
 A social media company wants to protect its web application from common web exploits such as SQL injections and cross-site scripting.
 Which AWS service will meet these requirements?
@@ -1055,7 +1055,7 @@ Which AWS service will meet these requirements?
 
 **Correct Answer: B (AWS WAF)**
 
-This question (# 89) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 89) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'AWS WAF' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -1068,8 +1068,8 @@ This question (# 89) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 35 (ExamTopics #93)
-> **Domain:** `Domain 2: Security and Compliance (30%)` | **ID:** `ET-CLF-Q093` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/127331-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 35 (Community Consensus Pool #93)
+> **Domain:** `Domain 2: Security and Compliance (30%)` | **ID:** `ET-CLF-Q093` | [Community Consensus Pool Discussion]()
 
 Which AWS service helps users audit API activity across their AWS account?
 
@@ -1085,7 +1085,7 @@ Which AWS service helps users audit API activity across their AWS account?
 
 **Correct Answer: A (AWS CloudTrail)**
 
-This question (# 93) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 93) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'AWS CloudTrail' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -1098,8 +1098,8 @@ This question (# 93) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 36 (ExamTopics #99)
-> **Domain:** `Domain 2: Security and Compliance (30%)` | **ID:** `ET-CLF-Q099` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/147645-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 36 (Community Consensus Pool #99)
+> **Domain:** `Domain 2: Security and Compliance (30%)` | **ID:** `ET-CLF-Q099` | [Community Consensus Pool Discussion]()
 
 Which AWS network services or features allow CIDR block notation when providing an IP address range? (Choose two.)
 
@@ -1116,7 +1116,7 @@ Which AWS network services or features allow CIDR block notation when providing 
 
 **Correct Answer: AC (Security groups, Network access control list (network ACL))**
 
-This question (# 99) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 99) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'Security groups, Network access control list (network ACL)' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -1130,8 +1130,8 @@ This question (# 99) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 37 (ExamTopics #2)
-> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q002` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/147715-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 37 (Community Consensus Pool #2)
+> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q002` | [Community Consensus Pool Discussion]()
 
 A company wants to migrate its on-premises SQL Server database to the AWS Cloud. The company wants AWS to handle the day-to-day administration of the database.
 
@@ -1149,7 +1149,7 @@ Which AWS service will meet the company's requirements?
 
 **Correct Answer: C (Amazon RDS)**
 
-This question (# 2) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 2) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'Amazon RDS' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -1162,8 +1162,8 @@ This question (# 2) is directly sourced from authentic **ExamTopics** community 
 
 ---
 
-### Question 38 (ExamTopics #6)
-> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q006` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/126263-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 38 (Community Consensus Pool #6)
+> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q006` | [Community Consensus Pool Discussion]()
 
 Which AWS service or feature will search for and identify AWS resources that are shared externally?
 
@@ -1179,7 +1179,7 @@ Which AWS service or feature will search for and identify AWS resources that are
 
 **Correct Answer: C (AWS IAM Access Analyzer)**
 
-This question (# 6) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 6) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'AWS IAM Access Analyzer' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -1192,8 +1192,8 @@ This question (# 6) is directly sourced from authentic **ExamTopics** community 
 
 ---
 
-### Question 39 (ExamTopics #7)
-> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q007` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/130358-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 39 (Community Consensus Pool #7)
+> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q007` | [Community Consensus Pool Discussion]()
 
 A company is migrating its workloads to the AWS Cloud. The company must retain full control of patch management for the guest operating systems that host its applications.
 
@@ -1211,7 +1211,7 @@ Which AWS service should the company use to meet these requirements?
 
 **Correct Answer: B (Amazon EC2)**
 
-This question (# 7) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 7) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'Amazon EC2' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -1224,8 +1224,8 @@ This question (# 7) is directly sourced from authentic **ExamTopics** community 
 
 ---
 
-### Question 40 (ExamTopics #9)
-> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q009` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/126065-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 40 (Community Consensus Pool #9)
+> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q009` | [Community Consensus Pool Discussion]()
 
 Which AWS service can a company use to visually design and build serverless applications?
 
@@ -1241,7 +1241,7 @@ Which AWS service can a company use to visually design and build serverless appl
 
 **Correct Answer: C (AWS Application Composer)**
 
-This question (# 9) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 9) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'AWS Application Composer' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -1254,8 +1254,8 @@ This question (# 9) is directly sourced from authentic **ExamTopics** community 
 
 ---
 
-### Question 41 (ExamTopics #12)
-> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q012` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/129598-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 41 (Community Consensus Pool #12)
+> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q012` | [Community Consensus Pool Discussion]()
 
 A company wants to provision and manage its AWS infrastructure by using the common programming languages Typescript, Python, Java, and .NET.
 
@@ -1273,7 +1273,7 @@ Which AWS service will meet this requirement?
 
 **Correct Answer: D (AWS Cloud Development Kit (AWS CDK))**
 
-This question (# 12) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 12) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'AWS Cloud Development Kit (AWS CDK)' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -1286,8 +1286,8 @@ This question (# 12) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 42 (ExamTopics #14)
-> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q014` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/129660-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 42 (Community Consensus Pool #14)
+> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q014` | [Community Consensus Pool Discussion]()
 
 A company has a physical tape library to store data backups. The tape library is running out of space. The company needs to extend the tape library's capacity to the AWS Cloud.
 
@@ -1305,7 +1305,7 @@ Which AWS service should the company use to meet this requirement?
 
 **Correct Answer: D (AWS Storage Gateway)**
 
-This question (# 14) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 14) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'AWS Storage Gateway' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -1318,8 +1318,8 @@ This question (# 14) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 43 (ExamTopics #17)
-> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q017` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/124131-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 43 (Community Consensus Pool #17)
+> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q017` | [Community Consensus Pool Discussion]()
 
 A company wants a fully managed Windows file server for its Windows-based applications.
 Which AWS service will meet this requirement?
@@ -1336,7 +1336,7 @@ Which AWS service will meet this requirement?
 
 **Correct Answer: A (Amazon FSx)**
 
-This question (# 17) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 17) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'Amazon FSx' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -1349,8 +1349,8 @@ This question (# 17) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 44 (ExamTopics #18)
-> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q018` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/123455-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 44 (Community Consensus Pool #18)
+> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q018` | [Community Consensus Pool Discussion]()
 
 Which of the following is an advantage that users experience when they move on-premises workloads to the AWS Cloud?
 
@@ -1366,7 +1366,7 @@ Which of the following is an advantage that users experience when they move on-p
 
 **Correct Answer: A (Elimination of expenses for running and maintaining data centers)**
 
-This question (# 18) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 18) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'Elimination of expenses for running and maintaining data centers' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -1379,8 +1379,8 @@ This question (# 18) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 45 (ExamTopics #19)
-> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q019` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/123798-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 45 (Community Consensus Pool #19)
+> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q019` | [Community Consensus Pool Discussion]()
 
 A company wants to migrate its NFS on-premises workload to AWS.
 Which AWS Storage Gateway type should the company use to meet this requirement?
@@ -1397,7 +1397,7 @@ Which AWS Storage Gateway type should the company use to meet this requirement?
 
 **Correct Answer: D (Amazon S3 File Gateway)**
 
-This question (# 19) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 19) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'Amazon S3 File Gateway' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -1410,8 +1410,8 @@ This question (# 19) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 46 (ExamTopics #21)
-> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q021` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/147723-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 46 (Community Consensus Pool #21)
+> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q021` | [Community Consensus Pool Discussion]()
 
 A company wants to build graph queries for real-time fraud pattern detection.
 
@@ -1429,7 +1429,7 @@ Which AWS service will meet this requirement?
 
 **Correct Answer: A (Amazon Neptune)**
 
-This question (# 21) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 21) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'Amazon Neptune' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -1442,8 +1442,8 @@ This question (# 21) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 47 (ExamTopics #23)
-> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q023` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/147725-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 47 (Community Consensus Pool #23)
+> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q023` | [Community Consensus Pool Discussion]()
 
 A company wants to deploy a web application as a containerized application. The company wants to use a managed service that can automatically create container images from source code and deploy the containerized application.
 
@@ -1461,7 +1461,7 @@ Which AWS service will meet these requirements?
 
 **Correct Answer: C (AWS App Runner)**
 
-This question (# 23) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 23) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'AWS App Runner' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -1474,8 +1474,8 @@ This question (# 23) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 48 (ExamTopics #27)
-> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q027` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/123467-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 48 (Community Consensus Pool #27)
+> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q027` | [Community Consensus Pool Discussion]()
 
 What is the purpose of having an internet gateway within a VPC?
 
@@ -1491,7 +1491,7 @@ What is the purpose of having an internet gateway within a VPC?
 
 **Correct Answer: B (To allow communication between the VPC and the internet)**
 
-This question (# 27) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 27) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'To allow communication between the VPC and the internet' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -1504,8 +1504,8 @@ This question (# 27) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 49 (ExamTopics #28)
-> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q028` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/127239-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 49 (Community Consensus Pool #28)
+> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q028` | [Community Consensus Pool Discussion]()
 
 A company wants to migrate its PostgreSQL database to AWS. The company does not use the database frequently.
 
@@ -1523,7 +1523,7 @@ Which AWS service or resource will meet these requirements with the LEAST manage
 
 **Correct Answer: D (Amazon Aurora Serverless)**
 
-This question (# 28) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 28) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'Amazon Aurora Serverless' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -1536,8 +1536,8 @@ This question (# 28) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 50 (ExamTopics #29)
-> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q029` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/127485-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 50 (Community Consensus Pool #29)
+> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q029` | [Community Consensus Pool Discussion]()
 
 A company is using Amazon DynamoDB for its application database.
 
@@ -1556,7 +1556,7 @@ Which tasks are the responsibility of AWS, according to the AWS shared responsib
 
 **Correct Answer: DE (Provide public endpoints to store and retrieve data., Manage the infrastructure layer and the operating system.)**
 
-This question (# 29) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 29) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'Provide public endpoints to store and retrieve data., Manage the infrastructure layer and the operating system.' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -1570,8 +1570,8 @@ This question (# 29) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 51 (ExamTopics #30)
-> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q030` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/130359-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 51 (Community Consensus Pool #30)
+> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q030` | [Community Consensus Pool Discussion]()
 
 A company wants to create a globally accessible ecommerce platform for its customers. The company wants to use a highly available and scalable DNS web service to connect users to the platform.
 
@@ -1589,7 +1589,7 @@ Which AWS service will meet these requirements?
 
 **Correct Answer: C (Amazon Route 53)**
 
-This question (# 30) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 30) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'Amazon Route 53' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -1602,8 +1602,8 @@ This question (# 30) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 52 (ExamTopics #32)
-> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q032` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/126220-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 52 (Community Consensus Pool #32)
+> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q032` | [Community Consensus Pool Discussion]()
 
 Which AWS services or features enable users to connect on-premises networks to a VPC? (Choose two.)
 
@@ -1620,7 +1620,7 @@ Which AWS services or features enable users to connect on-premises networks to a
 
 **Correct Answer: AC (AWS VPN, AWS Direct Connect)**
 
-This question (# 32) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 32) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'AWS VPN, AWS Direct Connect' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -1634,8 +1634,8 @@ This question (# 32) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 53 (ExamTopics #33)
-> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q033` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/126722-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 53 (Community Consensus Pool #33)
+> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q033` | [Community Consensus Pool Discussion]()
 
 A user needs to quickly deploy a nonrelational database on AWS. The user does not want to manage the underlying hardware or the database software.
 
@@ -1653,7 +1653,7 @@ Which AWS service can be used to accomplish this?
 
 **Correct Answer: B (Amazon DynamoDB)**
 
-This question (# 33) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 33) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'Amazon DynamoDB' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -1666,8 +1666,8 @@ This question (# 33) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 54 (ExamTopics #34)
-> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q034` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/126723-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 54 (Community Consensus Pool #34)
+> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q034` | [Community Consensus Pool Discussion]()
 
 Which actions are examples of a company’s effort to rightsize its AWS resources to control cloud costs? (Choose two.)
 
@@ -1684,7 +1684,7 @@ Which actions are examples of a company’s effort to rightsize its AWS resource
 
 **Correct Answer: BC (Base the selection of Amazon EC2 instance types on past utilization patterns., Use Amazon S3 Lifecycle policies to move objects that users access infrequently to lower-cost storage tiers.)**
 
-This question (# 34) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 34) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'Base the selection of Amazon EC2 instance types on past utilization patterns., Use Amazon S3 Lifecycle policies to move objects that users access infrequently to lower-cost storage tiers.' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -1698,8 +1698,8 @@ This question (# 34) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 55 (ExamTopics #39)
-> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q039` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/123460-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 55 (Community Consensus Pool #39)
+> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q039` | [Community Consensus Pool Discussion]()
 
 A developer wants to deploy an application quickly on AWS without manually creating the required resources.
 Which AWS service will meet these requirements?
@@ -1716,7 +1716,7 @@ Which AWS service will meet these requirements?
 
 **Correct Answer: B (AWS Elastic Beanstalk)**
 
-This question (# 39) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 39) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'AWS Elastic Beanstalk' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -1729,8 +1729,8 @@ This question (# 39) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 56 (ExamTopics #44)
-> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q044` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/129784-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 56 (Community Consensus Pool #44)
+> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q044` | [Community Consensus Pool Discussion]()
 
 What does the Amazon S3 Intelligent-Tiering storage class offer?
 
@@ -1746,7 +1746,7 @@ What does the Amazon S3 Intelligent-Tiering storage class offer?
 
 **Correct Answer: C (Automatic cost savings by moving objects between tiers based on access pattern changes)**
 
-This question (# 44) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 44) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'Automatic cost savings by moving objects between tiers based on access pattern changes' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -1759,8 +1759,8 @@ This question (# 44) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 57 (ExamTopics #46)
-> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q046` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/129770-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 57 (Community Consensus Pool #46)
+> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q046` | [Community Consensus Pool Discussion]()
 
 A company needs to search for text in documents that are stored in Amazon S3.
 
@@ -1778,7 +1778,7 @@ Which AWS service will meet these requirements?
 
 **Correct Answer: A (Amazon Kendra)**
 
-This question (# 46) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 46) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'Amazon Kendra' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -1791,8 +1791,8 @@ This question (# 46) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 58 (ExamTopics #48)
-> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q048` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/129771-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 58 (Community Consensus Pool #48)
+> **Domain:** `Domain 3: Cloud Technology and Services (34%)` | **ID:** `ET-CLF-Q048` | [Community Consensus Pool Discussion]()
 
 Which AWS services make use of global edge locations? (Choose two.)
 
@@ -1809,7 +1809,7 @@ Which AWS services make use of global edge locations? (Choose two.)
 
 **Correct Answer: BC (Amazon CloudFront, AWS Global Accelerator)**
 
-This question (# 48) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 48) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'Amazon CloudFront, AWS Global Accelerator' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -1823,8 +1823,8 @@ This question (# 48) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 59 (ExamTopics #5)
-> **Domain:** `Domain 4: Billing, Pricing, and Support (12%)` | **ID:** `ET-CLF-Q005` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/147718-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 59 (Community Consensus Pool #5)
+> **Domain:** `Domain 4: Billing, Pricing, and Support (12%)` | **ID:** `ET-CLF-Q005` | [Community Consensus Pool Discussion]()
 
 A company wants to migrate its server-based applications to the AWS Cloud. The company wants to determine the total cost of ownership for its compute resources that will be hosted on the AWS Cloud.
 
@@ -1843,7 +1843,7 @@ Which combination of AWS services or tools will meet these requirements? (Choose
 
 **Correct Answer: AB (AWS Pricing Calculator, Migration Evaluator)**
 
-This question (# 5) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 5) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'AWS Pricing Calculator, Migration Evaluator' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -1857,8 +1857,8 @@ This question (# 5) is directly sourced from authentic **ExamTopics** community 
 
 ---
 
-### Question 60 (ExamTopics #8)
-> **Domain:** `Domain 4: Billing, Pricing, and Support (12%)` | **ID:** `ET-CLF-Q008` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/126265-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 60 (Community Consensus Pool #8)
+> **Domain:** `Domain 4: Billing, Pricing, and Support (12%)` | **ID:** `ET-CLF-Q008` | [Community Consensus Pool Discussion]()
 
 At what support level do users receive access to a support concierge?
 
@@ -1874,7 +1874,7 @@ At what support level do users receive access to a support concierge?
 
 **Correct Answer: D (Enterprise Support)**
 
-This question (# 8) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 8) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'Enterprise Support' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -1887,8 +1887,8 @@ This question (# 8) is directly sourced from authentic **ExamTopics** community 
 
 ---
 
-### Question 61 (ExamTopics #13)
-> **Domain:** `Domain 4: Billing, Pricing, and Support (12%)` | **ID:** `ET-CLF-Q013` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/129604-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 61 (Community Consensus Pool #13)
+> **Domain:** `Domain 4: Billing, Pricing, and Support (12%)` | **ID:** `ET-CLF-Q013` | [Community Consensus Pool Discussion]()
 
 Which Amazon EC2 pricing model provides the MOST cost savings for an always-up, right-sized database server running for a project that will last 1 year?
 
@@ -1904,7 +1904,7 @@ Which Amazon EC2 pricing model provides the MOST cost savings for an always-up, 
 
 **Correct Answer: D (Standard Reserved Instances)**
 
-This question (# 13) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 13) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'Standard Reserved Instances' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -1917,8 +1917,8 @@ This question (# 13) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 62 (ExamTopics #25)
-> **Domain:** `Domain 4: Billing, Pricing, and Support (12%)` | **ID:** `ET-CLF-Q025` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/147726-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 62 (Community Consensus Pool #25)
+> **Domain:** `Domain 4: Billing, Pricing, and Support (12%)` | **ID:** `ET-CLF-Q025` | [Community Consensus Pool Discussion]()
 
 A company has moved all its infrastructure to the AWS Cloud. To plan ahead for each quarter, the finance team wants to track the cost and usage data of all resources from previous months. The finance team wants to automatically generate reports that contains the data.
 
@@ -1936,7 +1936,7 @@ Which AWS service or feature should the finance team use to meet these requireme
 
 **Correct Answer: C (AWS Budgets)**
 
-This question (# 25) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 25) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'AWS Budgets' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -1949,8 +1949,8 @@ This question (# 25) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 63 (ExamTopics #47)
-> **Domain:** `Domain 4: Billing, Pricing, and Support (12%)` | **ID:** `ET-CLF-Q047` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/129575-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 63 (Community Consensus Pool #47)
+> **Domain:** `Domain 4: Billing, Pricing, and Support (12%)` | **ID:** `ET-CLF-Q047` | [Community Consensus Pool Discussion]()
 
 A company needs Amazon EC2 instances for a workload that can tolerate interruptions.
 
@@ -1968,7 +1968,7 @@ Which EC2 instance purchasing option meets this requirement with the LARGEST dis
 
 **Correct Answer: A (Spot Instances)**
 
-This question (# 47) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 47) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'Spot Instances' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -1981,8 +1981,8 @@ This question (# 47) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 64 (ExamTopics #53)
-> **Domain:** `Domain 4: Billing, Pricing, and Support (12%)` | **ID:** `ET-CLF-Q053` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/128065-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 64 (Community Consensus Pool #53)
+> **Domain:** `Domain 4: Billing, Pricing, and Support (12%)` | **ID:** `ET-CLF-Q053` | [Community Consensus Pool Discussion]()
 
 A company needs to use third-party software for its workload on AWS.
 
@@ -2000,7 +2000,7 @@ Which AWS service or feature can the company use to purchase the software?
 
 **Correct Answer: D (AWS Marketplace)**
 
-This question (# 53) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 53) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'AWS Marketplace' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**
@@ -2013,8 +2013,8 @@ This question (# 53) is directly sourced from authentic **ExamTopics** community
 
 ---
 
-### Question 65 (ExamTopics #58)
-> **Domain:** `Domain 4: Billing, Pricing, and Support (12%)` | **ID:** `ET-CLF-Q058` | [ExamTopics Discussion](https://www.examtopics.com/discussions/amazon/view/126198-exam-aws-certified-cloud-practitioner-clf-c02-topic-1/)
+### Question 65 (Community Consensus Pool #58)
+> **Domain:** `Domain 4: Billing, Pricing, and Support (12%)` | **ID:** `ET-CLF-Q058` | [Community Consensus Pool Discussion]()
 
 A company plans to migrate its application to AWS and run the application on Amazon EC2 instances. The application will have continuous usage for 1 year.
 
@@ -2032,7 +2032,7 @@ Which EC2 instance purchasing option will meet these requirements MOST cost-effe
 
 **Correct Answer: A (Reserved Instances)**
 
-This question (# 58) is directly sourced from authentic **ExamTopics** community discussions.
+This question (# 58) is directly sourced from authentic **Community Consensus Pool** community discussions.
 **Why this is correct:** The scenario specifically tests AWS best practices. 'Reserved Instances' directly satisfies the architectural requirement defined in the prompt.
 
 **Key Option Breakdown:**

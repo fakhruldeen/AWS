@@ -127,3 +127,68 @@ To allow your backend EC2 application instances or Lambda functions to retrieve 
 - **Secrets Manager vs. SSM Parameter Store:**
   - If a scenario requires **automatic scheduled credential rotation** for RDS, DocumentDB, or Redshift, the answer is ALWAYS **AWS Secrets Manager**.
   - SSM Parameter Store supports storing encrypted `SecureString` parameters but requires custom Lambda authoring to rotate credentials.
+
+
+---
+
+## 4. 🎯 Authentic Architecture Exam Practice
+> Practice real-world scenarios tested on official AWS examinations that directly apply the architectural patterns built in this tutorial.
+
+### Scenario Practice 1: CLF-C02-ET-Q017
+**Question:**  
+A company uses Amazon RDS for a product database. The company wants to ensure the database is highly available.
+
+Which feature of Amazon RDS will meet this requirement?
+
+**Options:**
+- A) Read replicas
+- B) Blue/green deployment
+- C) Multi-AZ deployment
+- D) Reserved Instances
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `C`  
+**Peer Consensus:** `100%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: C (100%). Contributor Answer: C.
+
+Community Rationale & Discussion:
+Selected Answer: C
+C. Multi-AZ deployment - key word "highly available"
+
+</details>
+
+### Scenario Practice 2: CLF-C02-ET-Q102
+**Question:**  
+A company wants to securely store Amazon RDS database credentials and automatically rotate user passwords periodically.
+
+Which AWS service or capability will meet these requirements?
+
+**Options:**
+- A) Amazon S3
+- B) AWS Systems Manager Parameter Store
+- C) AWS Secrets Manager
+- D) AWS CloudTrail
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `C`  
+**Peer Consensus:** `100%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: C (100%). Contributor Answer: C.
+
+Community Rationale & Discussion:
+Answer is C.
+Here's why:
+Systems Manager Parameter Store - designed to cater to a wider use case, not just secrets or passwords, but also application configuration variables like URLs, Custom settings, AMI IDs, License keys, etc.
+---
+C. AWS Secrets Manager
+
+AWS Secrets Manager is designed for securely storing and managing sensitive information, such as database credentials. It also supports automatic rotation of secrets, including database passwords, which helps to maintain security and compliance by regularly updating credentials without manual intervention.
+
+</details>

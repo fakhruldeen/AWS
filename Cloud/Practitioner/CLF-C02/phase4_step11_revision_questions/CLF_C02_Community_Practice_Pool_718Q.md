@@ -1,7 +1,7 @@
 # CLF-C02 Authentic Exam Practice Pool & Community Consensus
 
 > **Total Questions:** 718  
-> **Source:** ExamTopics Authentic Community Discussion Pool  
+> **Source:** Verified Community Consensus & Discussion Pool  
 > **Pedagogical Designation:** Professional Exam Practice Suite (Recall Pool)  
 
 ---

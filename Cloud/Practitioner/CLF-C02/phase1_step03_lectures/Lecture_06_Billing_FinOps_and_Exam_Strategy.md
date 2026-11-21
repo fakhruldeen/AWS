@@ -119,3 +119,97 @@ Share these proven test-taking principles with students:
 ## 🎓 Capstone Graduation & Final Transition
 * Direct students to complete the [Rapid_Review_Cheatsheet.md](file:///home/mohamed/Desktop/Work/aws/Cloud/Practitioner/CLF-C02/phase3_step09_notes/Rapid_Review_Cheatsheet.md).
 * Have students sit the official simulation: [CLF_C02_Full_Length_Mock_Revision_Exam.md](file:///home/mohamed/Desktop/Work/aws/Cloud/Practitioner/CLF-C02/phase4_step11_revision_questions/CLF_C02_Full_Length_Mock_Revision_Exam.md) under strict 90-minute timed conditions!
+
+
+---
+
+## 🎯 Authentic Exam Practice & Case Scenarios
+> High-yield scenario questions from the authentic candidate practice pool reinforcing the core competencies of this lecture.
+
+### Scenario Practice 1: CLF-C02-ET-Q022
+**Question:**  
+Which benefit is always free of charge with AWS, regardless of a user’s AWS Support plan?
+
+**Options:**
+- A) AWS Developer Support
+- B) AWS Developer Forums
+- C) Programmatic case management
+- D) AWS technical account manager (TAM)
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `B`  
+**Peer Consensus:** `100%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: B (100%). Contributor Answer: B.
+
+Community Rationale & Discussion:
+Selected Answer: B
+B. AWS Developer Forums
+---
+B. AWS Developer Forums
+
+</details>
+
+### Scenario Practice 2: CLF-C02-ET-Q028
+**Question:**  
+Which recommendation can AWS Cost Explorer provide to help reduce cost?
+
+**Options:**
+- A) Use a specific database engine.
+- B) Change the programming language for an application.
+- C) Deploy a specific operating system.
+- D) Terminate an idle instance.
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `D`  
+**Peer Consensus:** `100%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: D (100%). Contributor Answer: D.
+
+Community Rationale & Discussion:
+Selected Answer: D
+D. Terminate an idle instance.
+---
+D. Stop guessing your capacity needs: If you make a poor capacity decision when deploying a workload, you might end up sitting on expensive idle resources or dealing with the performance implications of limited capacity. With cloud computing, these problems can go away. You can use as much or as little capacity as you need, and scale in and out automatically.
+
+</details>
+
+### Scenario Practice 3: CLF-C02-ET-Q034
+**Question:**  
+A new AWS user needs to interact with AWS Support by using API calls.
+
+Which AWS Support plan will meet this requirement MOST cost-effectively?
+
+**Options:**
+- A) AWS Basic Support
+- B) AWS Developer Support
+- C) AWS Business Support
+- D) AWS Enterprise Support
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `C`  
+**Peer Consensus:** `52%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: C (52%). Contributor Answer: C.
+
+Community Rationale & Discussion:
+Answer C is correct.
+According to AWD Developer support doesn't support API calls, Business, Ent on Ramp and EMT does, 
+
+---
+Selected Answer: C
+
+---
+Selected Answer: C
+Developer Support DOES NOT allow you to interact with AWS Support using API calls. The Developer plan provides access to AWS Support through email only.
+
+</details>

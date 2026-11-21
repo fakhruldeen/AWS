@@ -152,3 +152,74 @@ aws events put-targets \
 1. **Fully Serverless:** Scales automatically with zero idle compute costs.
 2. **Specialized Synergy:** Textract extracts high-accuracy optical tables; Comprehend audits for sensitive PII; Bedrock synthesizes natural language executive briefs.
 3. **Resilience:** Step Functions automatically retries on transient API rate limits and routes failed documents to a Dead-Letter Queue (DLQ).
+
+
+---
+
+## 4. 🎯 Authentic Architecture Exam Practice
+> Practice real-world scenarios tested on official AWS examinations that directly apply the architectural patterns built in this tutorial.
+
+### Scenario Practice 1: AIF-C01-ET-Q005
+**Question:**  
+A company has developed a generative text summarization model by using Amazon Bedrock. The company will use Amazon Bedrock automatic model evaluation capabilities.
+
+Which metric should the company use to evaluate the accuracy of the model?
+
+**Options:**
+- A) Area Under the ROC Curve (AUC) score
+- B) F1 score
+- C) BERTScore
+- D) Real world knowledge (RWK) score
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `C`  
+**Peer Consensus:** `100%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: C (100%). Contributor Answer: C.
+
+Community Rationale & Discussion:
+Selected Answer: C
+BERTScore: This metric leverages the capabilities of a pre-trained BERT model to assess the semantic similarity between the generated summaries and the reference text, providing a more accurate evaluation of the model's ability to capture the key points of the original text, which is crucial for text summarization.
+---
+Selected Answer: C
+The correct answer is C. BERTScore is specifically designed for evaluating text generation quality.
+---
+Selected Answer: C
+BERTScore is the most appropriate metric for evaluating the accuracy of a generative text summarization model because it compares semantic similarity in a manner that aligns well with the goal of text summarization.
+
+</details>
+
+### Scenario Practice 2: AIF-C01-ET-Q008
+**Question:**  
+A company’s employees provide product descriptions and recommendations to customers when customers call the customer service center. These recommendations are based on where the customers are located. The company wants to use foundation models (FMs) to automate this process.
+
+Which AWS service meets these requirements?
+
+**Options:**
+- A) Amazon Macie
+- B) Amazon Transcribe
+- C) Amazon Bedrock
+- D) Amazon Textract
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `C`  
+**Peer Consensus:** `100%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: C (100%). Contributor Answer: C.
+
+Community Rationale & Discussion:
+Selected Answer: C
+Amazon Bedrock
+
+Amazon Bedrock is a fully managed service that provides access to a variety of foundation models (FMs) from leading AI companies. It allows you to build and scale generative AI applications, such as automating product recommendations and descriptions, by leveraging the capabilities of these models.
+---
+Selected Answer: C
+C. Amazon Bedrock
+
+</details>

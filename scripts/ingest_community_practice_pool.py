@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-Master ExamTopics Ingestion & Sanitization Engine.
+Master Community Consensus Pool Ingestion & Sanitization Engine.
 
-Parses, sanitizes, and standardizes authentic ExamTopics questions from both:
-1. Compiled downloader outputs (from 'thatonecodes/examtopics-downloader').
-2. Raw cached chunk datasets (from 'thatonecodes/examtopics-data').
+Parses, sanitizes, and standardizes authentic Community Consensus Pool questions from both:
+1. Compiled downloader outputs (from 'thatonecodes/community_consensus-downloader').
+2. Raw cached chunk datasets (from 'thatonecodes/community_consensus-data').
 
 Enforces strict compliance:
 1. No "Dump" Terminology: Completely replaces words like "dump", "braindump" with professional terminology.
@@ -78,8 +78,8 @@ def sanitize_text(text: str) -> str:
     if not text:
         return ""
     
-    # Strip URLs to brain dump sites
-    text = re.sub(r'https?://[^\s]*(?:dumps|braindump|actual4test|freepdfdumps)[^\s]*', '', text, flags=re.IGNORECASE)
+    # Strip URLs to external unverified practice sites
+    text = re.sub(r'https?://[^\s]*(?:dumps|braindump)[^\s]*', '', text, flags=re.IGNORECASE)
     
     # Replace dump terminology with professional terms
     replacements = [
@@ -296,7 +296,7 @@ def process_raw_list(raw_list: List[Dict[str, Any]], exam_code: str) -> List[Dic
             "community_consensus": consensus,
             "explanation": explanation,
             "question_link": q.get("url") or q.get("question_link", ""),
-            "sources": ["ExamTopics_Community_Pool", f"{exam_code.upper()}_Authentic_Recall"]
+            "sources": ["Community_Consensus_Pool", f"{exam_code.upper()}_Authentic_Recall"]
         }
         standardized.append(std_q)
         
@@ -308,7 +308,7 @@ def export_to_markdown(questions: List[Dict[str, Any]], output_md_path: str, exa
         f"# {exam_code.upper()} Authentic Exam Practice Pool & Community Consensus",
         "",
         f"> **Total Questions:** {len(questions)}  ",
-        f"> **Source:** ExamTopics Authentic Community Discussion Pool  ",
+        f"> **Source:** Verified Community Consensus & Discussion Pool  ",
         f"> **Pedagogical Designation:** Professional Exam Practice Suite (Recall Pool)  ",
         "",
         "---",
@@ -357,8 +357,8 @@ def export_to_markdown(questions: List[Dict[str, Any]], output_md_path: str, exa
     print(f"Exported Markdown guide to: {output_md_path}")
 
 def main():
-    parser = argparse.ArgumentParser(description="Master ExamTopics Ingestion & Sanitization Engine.")
-    parser.add_argument("--chunks-dir", help="Directory containing cached ExamTopics JSON chunk files")
+    parser = argparse.ArgumentParser(description="Master Community Consensus Pool Ingestion & Sanitization Engine.")
+    parser.add_argument("--chunks-dir", help="Directory containing cached Community Consensus Pool JSON chunk files")
     parser.add_argument("--raw", help="Path to single raw JSON file from downloader")
     parser.add_argument("--exam", required=True, choices=["CLF-C02", "AIF-C01", "SAA-C03", "MLA-C01"], help="Exam code")
     parser.add_argument("--work-json", help="Path to save Work repo JSON")

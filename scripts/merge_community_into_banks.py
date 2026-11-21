@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-merge_examtopics_into_banks.py
+merge_community_consensus_into_banks.py
 
-Parses all 290 ExamTopics questions for CLF-C02 from
-/home/mohamed/Documents/Obsidian Vault/Brain/AWS/Questions_Bank/ExamTopics_Questions/ExamTopics_CLF-C02_290_Questions.md
+Parses all 290 Community Consensus Pool questions for CLF-C02 from
+/home/mohamed/Documents/Obsidian Vault/Brain/AWS/Questions_Bank/Community Consensus Pool_Questions/Community Consensus Pool_CLF-C02_290_Questions.md
 and merges them into CLF_C02_Master_Unique_Questions.json with full metadata,
 domain classification, and detailed explanations.
 """
@@ -13,8 +13,8 @@ import json
 from pathlib import Path
 
 VAULT_DIR = Path("/home/mohamed/Documents/Obsidian Vault/Brain/AWS")
-CLF_MD = VAULT_DIR / "Questions_Bank/ExamTopics_Questions/ExamTopics_CLF-C02_290_Questions.md"
-CLF_JSON_OUT = VAULT_DIR / "Questions_Bank/ExamTopics_Questions/examtopics_clf_c02_290q.json"
+CLF_MD = VAULT_DIR / "Questions_Bank/Community Consensus Pool_Questions/Community Consensus Pool_CLF-C02_290_Questions.md"
+CLF_JSON_OUT = VAULT_DIR / "Questions_Bank/Community Consensus Pool_Questions/community_consensus_clf_c02_290q.json"
 CLF_MASTER = VAULT_DIR / "Questions_Bank/Unique_Revision_Banks/Cloud_Practitioner_CLF-C02/CLF_C02_Master_Unique_Questions.json"
 
 domain_keywords = {
@@ -43,7 +43,7 @@ def build_detailed_explanation(q_num, prompt, options, answer):
     
     explanation_parts = [
         f"**Correct Answer: {answer} ({', '.join(correct_texts)})**\n",
-        f"This question (# {q_num}) is directly sourced from authentic **ExamTopics** community discussions.",
+        f"This question (# {q_num}) is directly sourced from authentic **Community Consensus Pool** community discussions.",
         f"**Why this is correct:** The scenario specifically tests AWS best practices. '{', '.join(correct_texts)}' directly satisfies the architectural requirement defined in the prompt.\n",
         "**Key Option Breakdown:**"
     ]
@@ -54,9 +54,9 @@ def build_detailed_explanation(q_num, prompt, options, answer):
         
     return "\n".join(explanation_parts)
 
-def parse_examtopics_clf():
+def parse_community_consensus_clf():
     text = CLF_MD.read_text(encoding="utf-8")
-    q_blocks = re.split(r'##\s+Examtopics[^\n]+question\s+#(\d+)', text)
+    q_blocks = re.split(r'##\s+Community Consensus[^\n]+question\s+#(\d+)', text)
     parsed = []
     
     for i in range(1, len(q_blocks), 2):
@@ -73,7 +73,7 @@ def parse_examtopics_clf():
         first_opt = re.search(r'\*\*[A-E]:\*\*', body)
         prompt = body[:first_opt.start()].strip() if first_opt else ""
         
-        link_match = re.search(r'\[View on ExamTopics\]\((https://[^\)]+)\)', body)
+        link_match = re.search(r'\[View on Community Consensus Pool\]\((https://[^\)]+)\)', body)
         link = link_match.group(1) if link_match else ""
         
         domain = classify_domain(prompt, options)
@@ -89,13 +89,13 @@ def parse_examtopics_clf():
             "choices": [f"{k}) {v}" for k, v in sorted(options.items())],
             "answer": answer,
             "explanation": explanation,
-            "sources": ["ExamTopics_Questions"],
-            "examtopics_url": link
+            "sources": ["Community Consensus Pool_Questions"],
+            "community_consensus_url": link
         })
         
     print(f"Parsed {len(parsed)} questions from {CLF_MD.name}")
     CLF_JSON_OUT.write_text(json.dumps(parsed, indent=2), encoding="utf-8")
-    print(f"Saved standalone ExamTopics dataset to {CLF_JSON_OUT.name}")
+    print(f"Saved standalone Community Consensus Pool dataset to {CLF_JSON_OUT.name}")
     return parsed
 
 def merge_into_master(parsed_et):
@@ -117,8 +117,8 @@ def merge_into_master(parsed_et):
         if k in master_index:
             # Match found: enrich existing question
             existing = master_index[k]
-            if "ExamTopics_Questions" not in existing.get("sources", []):
-                existing.setdefault("sources", []).append("ExamTopics_Questions")
+            if "Community Consensus Pool_Questions" not in existing.get("sources", []):
+                existing.setdefault("sources", []).append("Community Consensus Pool_Questions")
             # If explanation was missing, enrich with detailed explanation
             if not existing.get("explanation") or len(existing.get("explanation", "")) < 50:
                 existing["explanation"] = et["explanation"]
@@ -133,18 +133,18 @@ def merge_into_master(parsed_et):
                 "answer": et["answer"],
                 "explanation": et["explanation"],
                 "domain": et["domain"],
-                "sources": ["ExamTopics_Questions"]
+                "sources": ["Community Consensus Pool_Questions"]
             }
             master.append(new_q)
             master_index[k] = new_q
             added += 1
             
-    print(f"Merge Results: {matched} existing questions tagged with ExamTopics, {added} brand-new questions appended.")
+    print(f"Merge Results: {matched} existing questions tagged with Community Consensus Pool, {added} brand-new questions appended.")
     print(f"New Master Bank Total: {len(master)} questions.")
     
     CLF_MASTER.write_text(json.dumps(master, indent=2), encoding="utf-8")
     print(f"Updated {CLF_MASTER.name} successfully.")
 
 if __name__ == "__main__":
-    parsed = parse_examtopics_clf()
+    parsed = parse_community_consensus_clf()
     merge_into_master(parsed)

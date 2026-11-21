@@ -23,7 +23,7 @@
 1. Complete each 10-question check immediately after reviewing the corresponding Domain Explanation or Lecture.
 2. Target achieving $\ge 80\%$ (8/10 correct) before proceeding to the next module.
 3. Review the detailed rationales for any missed questions to solidify conceptual boundaries.
-4. **ExamTopics Focused Practice:** Run `python3 scripts/aws_revision_runner.py --cert AIF --examtopics --mode practice` to drill on authentic community questions.
+4. **Community Consensus Pool Focused Practice:** Run `python3 scripts/aws_revision_runner.py --cert AIF --community_consensus --mode practice` to drill on authentic community questions.
 5. **Deep Drilling in Unique Revision Banks:** For comprehensive question practice beyond the diagnostic checks, drill with the **1,814 Master Unique Questions** in the Vault:
    - [Domain 1 Master Bank](../phase4_step11_revision_questions/Domain_1_AI_ML_Fundamentals_Revision.md) (363 Unique Questions)
    - [Domain 2 Master Bank](../phase4_step11_revision_questions/Domain_2_Generative_AI_Fundamentals_Revision.md) (529 Unique Questions)

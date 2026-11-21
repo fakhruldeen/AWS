@@ -105,3 +105,73 @@ flowchart TD
 ## 3. Key Takeaways & Exam Distinctions
 - **Application Load Balancers require at least two subnets in different Availability Zones** to be provisioned.
 - **ELB vs. EC2 Health Checks:** EC2 health checks only detect hardware or hypervisor faults. Enabling **ELB health checks** on an Auto Scaling Group ensures that if the Apache web server process crashes or returns HTTP 500 errors, the ASG terminates and replaces the instance.
+
+
+---
+
+## 4. 🎯 Authentic Architecture Exam Practice
+> Practice real-world scenarios tested on official AWS examinations that directly apply the architectural patterns built in this tutorial.
+
+### Scenario Practice 1: CLF-C02-ET-Q311
+**Question:**  
+Which of the following is a way to use Amazon EC2 Auto Scaling groups to scale capacity in the AWS Cloud?
+
+**Options:**
+- A) Scale the number of EC2 instances in or out automatically, based on demand.
+- B) Use serverless EC2 instances.
+- C) Scale the size of EC2 instances up or down automatically, based on demand.
+- D) Transfer unused CPU resources between EC2 instances.
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `A`  
+**Peer Consensus:** `100%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: A (100%). Contributor Answer: A.
+
+Community Rationale & Discussion:
+Selected Answer: A
+From what I remember, it works horizontally, so the first one makes most sense.
+---
+Selected Answer: A
+A. Scale the number of EC2 instances in or out automatically, based on demand. - EC2 Auto Scaling adjusts the number of EC2 instances based on defined policies and demand.
+---
+Selected Answer: A
+A is the right one since auto scaling is horizontal and answer C is about vertical scaling
+
+</details>
+
+### Scenario Practice 2: CLF-C02-ET-Q438
+**Question:**  
+An ecommerce company wants to use Amazon EC2 Auto Scaling to add and remove EC2 instances based on CPU utilization.
+
+Which AWS service or feature can initiate an Amazon EC2 Auto Scaling action to achieve this goal?
+
+**Options:**
+- A) Amazon Simple Queue Service (Amazon SQS)
+- B) Amazon Simple Notification Service (Amazon SNS)
+- C) AWS Systems Manager
+- D) Amazon CloudWatch alarm
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `D`  
+**Peer Consensus:** `100%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: D (100%). Contributor Answer: D.
+
+Community Rationale & Discussion:
+Selected Answer: D
+the anser is D
+---
+Selected Answer: D
+
+---
+Selected Answer: D
+
+
+</details>

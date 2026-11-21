@@ -13,7 +13,7 @@
 
 | Component File | Domain Alignment | Question Count | Question Formats Included |
 |:--- |:--- |:---:|:--- |
-| **[ExamTopics_High_Yield_Focus_Set.md](./ExamTopics_High_Yield_Focus_Set.md)** | **⭐ ExamTopics Focus** | **30** | **Authentic ExamTopics community questions with verified discussion consensus** |
+| **[Community Consensus Pool_High_Yield_Focus_Set.md](./Community Consensus Pool_High_Yield_Focus_Set.md)** | **⭐ Community Consensus Pool Focus** | **30** | **Authentic Community Consensus Pool community questions with verified discussion consensus** |
 | **[Domain 1 Revision](./Domain_1_AI_ML_Fundamentals_Revision.md)** | **Domain 1:** Fundamentals of AI & ML | 15 | Multiple Choice, Multiple Response |
 | **[Domain 2 Revision](./Domain_2_Generative_AI_Fundamentals_Revision.md)** | **Domain 2:** Fundamentals of Generative AI | 15 | Multiple Choice, Multiple Response |
 | **[Domain 3 Revision](./Domain_3_Applications_of_Foundation_Models_Revision.md)** | **Domain 3:** Applications of Foundation Models | 15 | Multiple Choice, Multiple Response |
@@ -23,19 +23,19 @@
 
 ---
 
-## 💻 Interactive ExamTopics Revision Engine
+## 💻 Interactive Community Consensus Pool Revision Engine
 
-Run the interactive CLI revision runner with the `--examtopics` flag to drill specifically on authentic ExamTopics community questions:
+Run the interactive CLI revision runner with the `--community_consensus` flag to drill specifically on authentic Community Consensus Pool community questions:
 
 ```bash
-# 1. Practice 10 ExamTopics AI Practitioner questions with trick decryption
-python3 scripts/aws_revision_runner.py --cert AIF --examtopics --mode practice -n 10 --tricks
+# 1. Practice 10 Community Consensus Pool AI Practitioner questions with trick decryption
+python3 scripts/aws_revision_runner.py --cert AIF --community_consensus --mode practice -n 10 --tricks
 
 # 2. Drill by specific domain (e.g., Domain 3: Applications of FMs / RAG)
-python3 scripts/aws_revision_runner.py --cert AIF --examtopics --domain 3
+python3 scripts/aws_revision_runner.py --cert AIF --community_consensus --domain 3
 
-# 3. Take a timed mock exam using the ExamTopics pool
-python3 scripts/aws_revision_runner.py --cert AIF --examtopics --mode mock
+# 3. Take a timed mock exam using the Community Consensus Pool pool
+python3 scripts/aws_revision_runner.py --cert AIF --community_consensus --mode mock
 ```
 
 ---

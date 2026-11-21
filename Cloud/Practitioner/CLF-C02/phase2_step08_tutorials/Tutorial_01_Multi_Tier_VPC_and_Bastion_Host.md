@@ -131,3 +131,67 @@ Create 6 distinct subnets:
 - **NAT Gateways MUST reside in a Public Subnet** and require an **Elastic IP address**.
 - **Private instances communicate with NAT Gateways via private RFC 1918 IPs.** The NAT Gateway translates this to its public Elastic IP before forwarding packets to the Internet Gateway.
 - **Security Group Chaining:** By referencing `Bastion-SG` as the source in `App-SG`, access is restricted to authenticated bastion traffic regardless of whether instances are replaced or scale out.
+
+
+---
+
+## 4. 🎯 Authentic Architecture Exam Practice
+> Practice real-world scenarios tested on official AWS examinations that directly apply the architectural patterns built in this tutorial.
+
+### Scenario Practice 1: CLF-C02-ET-Q026
+**Question:**  
+A company is using Amazon DynamoDB.
+Which task is the company’s responsibility, according to the AWS shared responsibility model?
+
+**Options:**
+- A) Patch the operating system.
+- B) Provision hosts.
+- C) Manage database access permissions.
+- D) Secure the operating system.
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `C`  
+**Peer Consensus:** `100%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: C (100%). Contributor Answer: C.
+
+Community Rationale & Discussion:
+Selected Answer: C
+ccording to the AWS shared responsibility model, AWS manages the security of the cloud (e.g., physical infrastructure, hardware, and network), while the customer is responsible for security in the cloud (e.g., managing access, configuring services, and securing data).
+---
+Selected Answer: C
+But the questions ask for the company's responsibility
+---
+Selected Answer: C
+Manage database access permissions: This is the customer's responsibility. Customers are responsible for defining and managing access permissions to their DynamoDB tables, specifying who can perform various operations on the tables.
+
+</details>
+
+### Scenario Practice 2: CLF-C02-ET-Q051
+**Question:**  
+Which of the following actions are controlled with AWS Identity and Access Management (IAM)? (Choose two.)
+
+**Options:**
+- A) Control access to AWS service APIs and to other specific resources.
+- B) Provide intelligent threat detection and continuous monitoring.
+- C) Protect the AWS environment using multi-factor authentication (MFA).
+- D) Grant users access to AWS data centers.
+- E) Provide firewall protection for applications from common web attacks.
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `AC`  
+**Peer Consensus:** `100%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: AC (100%). Contributor Answer: AC.
+
+Community Rationale & Discussion:
+Selected Answer: AC
+My choices are A & C
+
+</details>

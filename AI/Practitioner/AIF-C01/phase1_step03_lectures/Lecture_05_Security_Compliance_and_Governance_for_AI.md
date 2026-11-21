@@ -153,3 +153,123 @@ By the end of this lecture, students will be able to:
 - [ ] Complete **Lab 12:** `labs/Lab_12_AI_Security_Auditing_with_AWS_CloudTrail.md`.
 - [ ] Review `explanations/05_Domain_5_Security_Compliance_and_Governance.md`.
 - [ ] Complete the Module 5 review quiz in `slides/Module_05_Security_Compliance_and_Governance_Slides.md`.
+
+
+---
+
+## 🎯 Authentic Exam Practice & Case Scenarios
+> High-yield scenario questions from the authentic candidate practice pool reinforcing the core competencies of this lecture.
+
+### Scenario Practice 1: AIF-C01-ET-Q142
+**Question:**  
+A hospital is developing an AI system to assist doctors in diagnosing diseases based on patient records and medical images. To comply with regulations, the sensitive patient data must not leave the country the data is located in.
+
+Which data governance strategy will ensure compliance and protect patient privacy?
+
+**Options:**
+- A) Data residency
+- B) Data quality
+- C) Data discoverability
+- D) Data enrichment
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `A`  
+**Peer Consensus:** `100%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: A (100%). Contributor Answer: A.
+
+Community Rationale & Discussion:
+Selected Answer: A
+Ensures that sensitive data remains within the geographic boundaries of a specific country or region, helping to comply with data sovereignty and privacy regulations (such as HIPAA or GDPR).
+---
+Selected Answer: A
+Data residency (residencia de datos) es una estrategia de gobernanza de datos que:
+
+✔ Asegura que los datos permanezcan en una ubicación geográfica específica, según las regulaciones del país.
+✔ Cumple con normativas de privacidad y seguridad como GDPR en Europa o HIPAA en EE.UU.
+✔ Restringe el almacenamiento y procesamiento de datos fuera del país, evitando transferencias no permitidas.
+
+En este caso, un hospital que maneja datos sensibles de pacientes debe asegurarse de que la información médica no se almacene ni procese fuera del país, lo que hace que Data residency sea la mejor estrategia.
+---
+Selected Answer: A
+Only A talking about the data how to store
+
+</details>
+
+### Scenario Practice 2: AIF-C01-ET-Q015
+**Question:**  
+A global financial company has developed an ML application to analyze stock market data and provide stock market trends. The company wants to continuously monitor the application development phases and to ensure that company policies and industry regulations are followed.
+
+Which AWS services will help the company assess compliance requirements? (Choose two.)
+
+**Options:**
+- A) AWS Audit Manager
+- B) AWS Config
+- C) Amazon Inspector
+- D) Amazon CloudWatch
+- E) AWS CloudTrail
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `B`  
+**Peer Consensus:** `100%` agreement.  
+> [!WARNING] Answer Distinction  
+> Initial contributor marked `UB`, but community verified `B` with 100% consensus.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: B (100%). Contributor Answer: UB.
+
+Community Rationale & Discussion:
+Selected Answer: UB
+Os dois serviços da AWS que ajudarão a empresa a avaliar os requisitos de conformidade são:
+
+A. Gerenciador de Auditoria da AWS: Ele auxilia no gerenciamento contínuo de auditorias ao automatizar a coleta de evidências relacionadas à conformidade com as políticas da empresa e regulamentos do setor.
+
+B. Configuração da AWS: Este serviço permite monitorar e avaliar configurações de recursos continuamente para garantir que estejam em conformidade com as políticas e regulamentos definidos.
+
+</details>
+
+### Scenario Practice 3: AIF-C01-ET-Q036
+**Question:**  
+An AI company periodically evaluates its systems and processes with the help of independent software vendors (ISVs). The company needs to receive email message notifications when an ISV's compliance reports become available.
+Which AWS service can the company use to meet this requirement?
+
+**Options:**
+- A) AWS Audit Manager
+- B) AWS Artifact
+- C) AWS Trusted Advisor
+- D) AWS Data Exchange
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `B`  
+**Peer Consensus:** `67%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: B (67%). Contributor Answer: B.
+
+Community Rationale & Discussion:
+Selected Answer: B
+AWS Artifacts has email notifications that notify you when a report is available.
+
+---
+Selected Answer: B
+Portal that provides customers with on-demand access to AWS
+compliance documentation and AWS agreements
+• Artifact Reports - Allows you to download AWS security and compliance
+documents from third-party auditors, like AWS ISO certifications, Payment
+Card Industry (PCI), and System and Organization Control (SOC) reports
+• Artifact Agreements - Allows you to review, accept, and track the status of
+AWS agreements such as the Business Associate Addendum (BAA) or the
+Health Insurance Portability and Accountability Act (HIPAA) for an individual
+account or in your organization
+---
+Selected Answer: D
+However, AWS Artifact is not designed for receiving notifications about third-party compliance reports from ISVs (Independent Software Vendors). Instead, it focuses on AWS's own compliance documentation, which makes it different from services like AWS Data Exchange that facilitate access to third-party data products and notifications about new data availability.
+
+</details>

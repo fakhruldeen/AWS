@@ -105,6 +105,103 @@ Students constantly confuse CloudWatch, CloudTrail, and Config. Drill this menta
 
 ---
 
+
+---
+
+## 🎯 Authentic Exam Practice & Case Scenarios
+> High-yield scenario questions from the authentic candidate practice pool reinforcing the core competencies of this lecture.
+
+### Scenario Practice 1: CLF-C02-ET-Q297
+**Question:**  
+A company needs to centrally configure and manage Amazon VPC security groups across multiple AWS accounts within an organization in AWS Organizations.
+
+Which AWS service should the company use to meet these requirements?
+
+**Options:**
+- A) AWS Firewall Manager
+- B) Amazon GuardDuty
+- C) Amazon Detective
+- D) AWS WAF
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `A`  
+**Peer Consensus:** `100%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: A (100%). Contributor Answer: A.
+
+Community Rationale & Discussion:
+Selected Answer: A
+AWS Firewall Manager is a security management service that allows you to centrally configure and manage firewall rules across your accounts and applications
+---
+Selected Answer: A
+
+---
+Selected Answer: A
+A is correct
+
+</details>
+
+### Scenario Practice 2: CLF-C02-ET-Q026
+**Question:**  
+A company is using Amazon DynamoDB.
+Which task is the company’s responsibility, according to the AWS shared responsibility model?
+
+**Options:**
+- A) Patch the operating system.
+- B) Provision hosts.
+- C) Manage database access permissions.
+- D) Secure the operating system.
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `C`  
+**Peer Consensus:** `100%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: C (100%). Contributor Answer: C.
+
+Community Rationale & Discussion:
+Selected Answer: C
+ccording to the AWS shared responsibility model, AWS manages the security of the cloud (e.g., physical infrastructure, hardware, and network), while the customer is responsible for security in the cloud (e.g., managing access, configuring services, and securing data).
+---
+Selected Answer: C
+But the questions ask for the company's responsibility
+---
+Selected Answer: C
+Manage database access permissions: This is the customer's responsibility. Customers are responsible for defining and managing access permissions to their DynamoDB tables, specifying who can perform various operations on the tables.
+
+</details>
+
+### Scenario Practice 3: CLF-C02-ET-Q051
+**Question:**  
+Which of the following actions are controlled with AWS Identity and Access Management (IAM)? (Choose two.)
+
+**Options:**
+- A) Control access to AWS service APIs and to other specific resources.
+- B) Provide intelligent threat detection and continuous monitoring.
+- C) Protect the AWS environment using multi-factor authentication (MFA).
+- D) Grant users access to AWS data centers.
+- E) Provide firewall protection for applications from common web attacks.
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `AC`  
+**Peer Consensus:** `100%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: AC (100%). Contributor Answer: AC.
+
+Community Rationale & Discussion:
+Selected Answer: AC
+My choices are A & C
+
+</details>
+
 ## 🚀 Post-Lecture Student Transition
 * Direct students to review [Threat_Detection_and_Compliance.md](file:///home/mohamed/Desktop/Work/aws/Cloud/Practitioner/CLF-C02/phase1_step06_explanations/02_Security_and_Compliance/Threat_Detection_and_Compliance.md) and [Management_and_Observability.md](file:///home/mohamed/Desktop/Work/aws/Cloud/Practitioner/CLF-C02/phase1_step06_explanations/03_Technology_and_Services/Management_and_Observability.md).
 * Transition to hands-on practice: [Lab 12: Decoupling with SQS & SNS](file:///home/mohamed/Desktop/Work/aws/Cloud/Practitioner/CLF-C02/phase2_step07_labs/lab_12_sqs_sns_eventbridge_messaging.md) and [Lab 13: Observability with CloudWatch & CloudTrail](file:///home/mohamed/Desktop/Work/aws/Cloud/Practitioner/CLF-C02/phase2_step07_labs/lab_13_observability_cloudwatch_cloudtrail_config.md).

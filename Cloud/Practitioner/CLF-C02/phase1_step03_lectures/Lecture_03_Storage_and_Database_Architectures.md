@@ -99,6 +99,106 @@ High Frequency Access                                                   Rare / A
 
 ---
 
+
+---
+
+## 🎯 Authentic Exam Practice & Case Scenarios
+> High-yield scenario questions from the authentic candidate practice pool reinforcing the core competencies of this lecture.
+
+### Scenario Practice 1: CLF-C02-ET-Q010
+**Question:**  
+A company needs to quickly and securely move files over long distances between its client and an Amazon S3 bucket.
+
+Which S3 feature will meet this requirement?
+
+**Options:**
+- A) S3 Versioning
+- B) S3 Transfer Acceleration
+- C) S3ACLs
+- D) S3 Intelligent-Tiering
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `B`  
+**Peer Consensus:** `100%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: B (100%). Contributor Answer: B.
+
+Community Rationale & Discussion:
+Selected Answer: B
+B. S3 Transfer Acceleration
+
+S3 Transfer Acceleration is a feature that utilizes Amazon CloudFront's globally distributed edge locations to accelerate the upload of objects to an S3 bucket. It optimizes data transfer by using Amazon's backbone network, reducing latency and improving speeds when transferring files over long distances.
+---
+Key word: quickly*
+---
+Selected Answer: B
+B. S3 Transfer Acceleration
+
+</details>
+
+### Scenario Practice 2: CLF-C02-ET-Q016
+**Question:**  
+A company needs to use SQL syntax to perform a direct query of objects in an Amazon S3 bucket.
+
+Which AWS service can the company use to meet this requirement?
+
+**Options:**
+- A) AWS Glue
+- B) Amazon Athena
+- C) AWS Lambda
+- D) Amazon Kinesis
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `B`  
+**Peer Consensus:** `100%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: B (100%). Contributor Answer: B.
+
+Community Rationale & Discussion:
+Selected Answer: B
+B. Amazon Athena - serverless interactive query service that allows you to use standard SQL to query data stored in Amazon S3.
+---
+>B. Amazon Athena is an interactive query service that makes it easy to analyze data directly in Amazon Simple Storage Service (Amazon S3) using standard SQL. With a few actions in the AWS Management Console, you can point Athena at your data stored in Amazon S3 and begin using standard SQL to run ad-hoc queries and get results in seconds.
+---
+B is correct
+
+Please help with discussion on 551~562. Thanks.
+
+</details>
+
+### Scenario Practice 3: CLF-C02-ET-Q017
+**Question:**  
+A company uses Amazon RDS for a product database. The company wants to ensure the database is highly available.
+
+Which feature of Amazon RDS will meet this requirement?
+
+**Options:**
+- A) Read replicas
+- B) Blue/green deployment
+- C) Multi-AZ deployment
+- D) Reserved Instances
+
+<details>
+<summary><b>View Verified Answer & Solution Analysis</b></summary>
+
+**Correct Answer:** `C`  
+**Peer Consensus:** `100%` agreement.  
+
+**Architectural Breakdown & Distractor Analysis:**  
+Community Most Voted: C (100%). Contributor Answer: C.
+
+Community Rationale & Discussion:
+Selected Answer: C
+C. Multi-AZ deployment - key word "highly available"
+
+</details>
+
 ## 🚀 Post-Lecture Student Transition
 * Direct students to review [Storage_Services.md](file:///home/mohamed/Desktop/Work/aws/Cloud/Practitioner/CLF-C02/phase1_step06_explanations/03_Technology_and_Services/Storage_Services.md) and [Database_Services.md](file:///home/mohamed/Desktop/Work/aws/Cloud/Practitioner/CLF-C02/phase1_step06_explanations/03_Technology_and_Services/Database_Services.md).
 * Transition to hands-on practice: [Lab 07: S3 Storage Lifecycle](file:///home/mohamed/Desktop/Work/aws/Cloud/Practitioner/CLF-C02/phase2_step07_labs/lab_07_s3_storage_lifecycle.md) and [Lab 09: Managed RDS Database](file:///home/mohamed/Desktop/Work/aws/Cloud/Practitioner/CLF-C02/phase2_step07_labs/lab_09_rds_database_ha.md).
