@@ -3,7 +3,7 @@
 > **Vault Section:** `04_Tutorials/`  
 > **Topic:** Security, Multi-Account Governance & Cost Management  
 > **Source Reference:** Rajesh Daswani (*Packt, 2026*), Project Tasks 4.1–4.4; Tom Taulli (*O'Reilly, 2026*), Ch 5 & 15.  
-> **Associated Certifications:** [[CLF-C02_Master_Blueprint|CLF-C02]], SAA-C03
+> **Associated Certifications:** [CLF-C02](../phase0_step01_syllabus/CLF-C02_Master_Blueprint.md), SAA-C03
 
 ---
 

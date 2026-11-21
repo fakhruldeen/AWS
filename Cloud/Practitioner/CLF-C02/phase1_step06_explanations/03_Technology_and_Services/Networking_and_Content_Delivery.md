@@ -1,8 +1,8 @@
 # AWS Networking & Content Delivery — Map of Content (MOC)
 
 > **Domain:** 03_Services / Networking & Content Delivery  
-> **Parent MOC:** [[AWS_Brain_MOC]]  
-> **Certifications:** [[CLF-C02_Master_Blueprint|CLF-C02]], SAA-C03, Advanced Networking
+> **Parent MOC:** [AWS_Brain_MOC](../../../../../README.md)  
+> **Certifications:** [CLF-C02](../../phase0_step01_syllabus/CLF-C02_Master_Blueprint.md), SAA-C03, Advanced Networking
 
 ---
 
@@ -73,15 +73,15 @@ flowchart LR
 
 | Atomic Note | Description | Key Focus / Keywords |
 | :--- | :--- | :--- |
-| **[[Amazon_VPC]]** | Virtual Private Cloud | Subnets, Internet Gateway, NAT Gateway, Security Groups vs. NACLs. |
-| **[[AWS_Elastic_Load_Balancing_ELB]]** | Elastic Load Balancing | ALB (Layer 7 HTTP), NLB (Layer 4 static IP/ultra-low latency), GWLB. |
-| **[[Amazon_Route53]]** | Highly Available DNS Service | Latency, Geolocation, Failover, Weighted, Multivalue, Alias Records. |
-| **[[Amazon_CloudFront]]** | Content Delivery Network (CDN) | Edge Locations, Caching, Origin Access Control (OAC), DDoS protection. |
-| **[[AWS_Global_Accelerator]]** | Global Traffic Accelerator | Anycast static IPs, AWS global fiber backbone, 60% latency reduction. |
-| **[[AWS_Transit_Gateway]]** | Centralized Cloud Router | Hub-and-spoke topology, eliminates complex VPC peering meshes. |
-| **[[AWS_Site_to_Site_VPN]]** | IPsec VPN Connection | Fast, secure encrypted tunnel over the public internet. |
-| **[[AWS_Direct_Connect]]** | Dedicated Private Connection | Bypasses public internet entirely; consistent throughput, lower data egress costs. |
-| **[[AWS_Client_VPN]]** | Managed Remote Access VPN | Secure OpenVPN client for remote employees accessing VPC resources. |
+| **[Amazon_VPC](../../phase3_step09_notes/services/Networking_ContentDelivery/Amazon_VPC_and_Networking.md)** | Virtual Private Cloud | Subnets, Internet Gateway, NAT Gateway, Security Groups vs. NACLs. |
+| **[AWS_Elastic_Load_Balancing_ELB](../../phase3_step09_notes/services/Networking_ContentDelivery/Amazon_VPC_and_Networking.md)** | Elastic Load Balancing | ALB (Layer 7 HTTP), NLB (Layer 4 static IP/ultra-low latency), GWLB. |
+| **[Amazon_Route53](../../phase3_step09_notes/services/Networking_ContentDelivery/Amazon_VPC_and_Networking.md)** | Highly Available DNS Service | Latency, Geolocation, Failover, Weighted, Multivalue, Alias Records. |
+| **[Amazon_CloudFront](../../phase3_step09_notes/services/Networking_ContentDelivery/Amazon_CloudFront_and_Global_Accelerator.md)** | Content Delivery Network (CDN) | Edge Locations, Caching, Origin Access Control (OAC), DDoS protection. |
+| **[AWS_Global_Accelerator](../../phase3_step09_notes/services/Networking_ContentDelivery/Amazon_CloudFront_and_Global_Accelerator.md)** | Global Traffic Accelerator | Anycast static IPs, AWS global fiber backbone, 60% latency reduction. |
+| **[AWS_Transit_Gateway](../../phase3_step09_notes/distinctions/Hybrid_Networking_DirectConnect_vs_SiteToSiteVPN_vs_TransitGateway.md)** | Centralized Cloud Router | Hub-and-spoke topology, eliminates complex VPC peering meshes. |
+| **[AWS_Site_to_Site_VPN](../../phase3_step09_notes/distinctions/Hybrid_Networking_DirectConnect_vs_SiteToSiteVPN_vs_TransitGateway.md)** | IPsec VPN Connection | Fast, secure encrypted tunnel over the public internet. |
+| **[AWS_Direct_Connect](../../phase3_step09_notes/distinctions/Hybrid_Networking_DirectConnect_vs_SiteToSiteVPN_vs_TransitGateway.md)** | Dedicated Private Connection | Bypasses public internet entirely; consistent throughput, lower data egress costs. |
+| **[AWS_Client_VPN](../../phase3_step09_notes/distinctions/Hybrid_Networking_DirectConnect_vs_SiteToSiteVPN_vs_TransitGateway.md)** | Managed Remote Access VPN | Secure OpenVPN client for remote employees accessing VPC resources. |
 ---
 
 ## 7. Post-Topic Question Simulation & Retention Check

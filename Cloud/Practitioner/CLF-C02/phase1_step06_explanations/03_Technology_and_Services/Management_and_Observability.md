@@ -1,8 +1,8 @@
 # AWS Management & Governance — Map of Content (MOC)
 
 > **Domain:** 03_Services / Management & Governance  
-> **Parent MOC:** [[AWS_Brain_MOC]]  
-> **Certifications:** [[CLF-C02_Master_Blueprint|CLF-C02]], SysOps Administrator, Solutions Architect
+> **Parent MOC:** [AWS_Brain_MOC](../../../../../README.md)  
+> **Certifications:** [CLF-C02](../../phase0_step01_syllabus/CLF-C02_Master_Blueprint.md), SysOps Administrator, Solutions Architect
 
 ---
 
@@ -60,9 +60,9 @@ flowchart LR
 
 | Service | Primary Question Answered | Data Artifacts | Target Audience |
 | :--- | :--- | :--- | :--- |
-| **[[AWS_CloudTrail]]** | *"Who made the API call, when, and from where?"* | Event logs, user identities, source IPs, AWS KMS encryption. | Security, Auditing, Compliance |
-| **[[Amazon_CloudWatch]]** | *"How is my application performing right now?"* | Metrics, CloudWatch Logs, Alarms, Container Insights. | DevOps, SysAdmins, SREs |
-| **[[AWS_Config]]** | *"What was my resource configuration then vs. now?"* | Configuration Items (CIs), timeline history, rule evaluations. | Governance, Compliance, SecOps |
+| **[AWS_CloudTrail](../../phase3_step09_notes/distinctions/Monitoring_Governance_Trio_CloudWatch_vs_CloudTrail_vs_Config.md)** | *"Who made the API call, when, and from where?"* | Event logs, user identities, source IPs, AWS KMS encryption. | Security, Auditing, Compliance |
+| **[Amazon_CloudWatch](../../phase3_step09_notes/distinctions/Monitoring_Governance_Trio_CloudWatch_vs_CloudTrail_vs_Config.md)** | *"How is my application performing right now?"* | Metrics, CloudWatch Logs, Alarms, Container Insights. | DevOps, SysAdmins, SREs |
+| **[AWS_Config](../../phase3_step09_notes/distinctions/Monitoring_Governance_Trio_CloudWatch_vs_CloudTrail_vs_Config.md)** | *"What was my resource configuration then vs. now?"* | Configuration Items (CIs), timeline history, rule evaluations. | Governance, Compliance, SecOps |
 
 ---
 
@@ -70,15 +70,15 @@ flowchart LR
 
 | Atomic Note | Description | Key Focus / Keywords |
 | :--- | :--- | :--- |
-| **[[Amazon_CloudWatch]]** | Monitoring & Observability | Metrics (15 months retention), Alarms (EC2 action, SNS), Logs Insights. |
-| **[[AWS_CloudTrail]]** | API Governance & Auditing | Multi-region trail, Management vs. Data events, immutable S3 log storage. |
-| **[[AWS_Organizations]]** | Centralized Multi-Account Governance | Consolidated Billing, Organizational Units (OUs), Service Control Policies (SCPs). |
-| **[[AWS_Control_Tower]]** | Automated Multi-Account Landing Zone | Well-Architected multi-account baseline, Account Factory, Guardrails. |
-| **[[AWS_Config]]** | Configuration Management & Rules | Track configuration drift, point-in-time state, automatic remediation. |
-| **[[AWS_Systems_Manager]]** | Operations Hub & Node Management | Session Manager (no port 22/bastion), Patch Manager, Parameter Store. |
-| **[[AWS_Trusted_Advisor]]** | Cloud Best Practice Advisor | 5 pillars (Cost, Security, Fault Tolerance, Performance, Quotas). |
-| **[[AWS_Health_Dashboard]]** | Service Availability & Account Impact | Global service events vs. personal impact alerts on your specific resources. |
-| **[[AWS_Resource_Access_Manager_RAM]]** | Cross-Account Resource Sharing | Share VPC subnets, Transit Gateways, Route 53 rules without duplication. |
+| **[Amazon_CloudWatch](../../phase3_step09_notes/distinctions/Monitoring_Governance_Trio_CloudWatch_vs_CloudTrail_vs_Config.md)** | Monitoring & Observability | Metrics (15 months retention), Alarms (EC2 action, SNS), Logs Insights. |
+| **[AWS_CloudTrail](../../phase3_step09_notes/distinctions/Monitoring_Governance_Trio_CloudWatch_vs_CloudTrail_vs_Config.md)** | API Governance & Auditing | Multi-region trail, Management vs. Data events, immutable S3 log storage. |
+| **[AWS_Organizations](../../phase3_step09_notes/services/Management_Governance/AWS_Organizations_and_Governance.md)** | Centralized Multi-Account Governance | Consolidated Billing, Organizational Units (OUs), Service Control Policies (SCPs). |
+| **[AWS_Control_Tower](../../phase3_step09_notes/services/Management_Governance/AWS_Organizations_and_Governance.md)** | Automated Multi-Account Landing Zone | Well-Architected multi-account baseline, Account Factory, Guardrails. |
+| **[AWS_Config](../../phase3_step09_notes/distinctions/Monitoring_Governance_Trio_CloudWatch_vs_CloudTrail_vs_Config.md)** | Configuration Management & Rules | Track configuration drift, point-in-time state, automatic remediation. |
+| **[AWS_Systems_Manager](../../phase3_step09_notes/distinctions/Monitoring_Governance_Trio_CloudWatch_vs_CloudTrail_vs_Config.md)** | Operations Hub & Node Management | Session Manager (no port 22/bastion), Patch Manager, Parameter Store. |
+| **[AWS_Trusted_Advisor](../../phase3_step09_notes/distinctions/Monitoring_Governance_Trio_CloudWatch_vs_CloudTrail_vs_Config.md)** | Cloud Best Practice Advisor | 5 pillars (Cost, Security, Fault Tolerance, Performance, Quotas). |
+| **[AWS_Health_Dashboard](../../phase3_step09_notes/distinctions/AWS_Health_Dashboard_Global_vs_Account.md)** | Service Availability & Account Impact | Global service events vs. personal impact alerts on your specific resources. |
+| **[AWS_Resource_Access_Manager_RAM](../../phase3_step09_notes/services/Management_Governance/AWS_Organizations_and_Governance.md)** | Cross-Account Resource Sharing | Share VPC subnets, Transit Gateways, Route 53 rules without duplication. |
 ---
 
 ## 7. Post-Topic Question Simulation & Retention Check

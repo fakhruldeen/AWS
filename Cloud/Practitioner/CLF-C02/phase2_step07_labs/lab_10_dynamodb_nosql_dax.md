@@ -3,7 +3,7 @@
 > **Focus:** Amazon DynamoDB, Key-Value Data Modeling, Partition Keys, On-Demand Capacity, Query vs. Scan, and DynamoDB Streams  
 > **Region:** `eu-north-1` (Stockholm)  
 > **Course Domain:** Domain 3: Cloud Technology & Services  
-> **Associated Vault Notes:** [[Amazon_DynamoDB]]  
+> **Associated Vault Notes:** [Amazon_DynamoDB](../phase3_step09_notes/services/Database/AWS_Databases_Overview.md)  
 
 ---
 

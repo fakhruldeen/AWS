@@ -1,7 +1,7 @@
 # Amazon VPC & Cloud Networking Fundamentals
 
 > **Service Category:** Networking & Content Delivery  
-> **Relevant Certifications:** [[CLF-C02_Master_Blueprint|CLF-C02]], SAA-C03, SOA-C02  
+> **Relevant Certifications:** [CLF-C02](../../../phase0_step01_syllabus/CLF-C02_Master_Blueprint.md), SAA-C03, SOA-C02  
 > **Tags:** `#aws/services` `#aws/networking` `#clf-c02`
 
 ---

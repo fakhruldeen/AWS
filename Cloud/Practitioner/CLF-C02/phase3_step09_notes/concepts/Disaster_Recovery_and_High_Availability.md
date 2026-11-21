@@ -1,7 +1,7 @@
 # Disaster Recovery and High Availability
 
 > **Knowledge Area:** Cloud Concepts (Domain 1.1) & Technology (Domain 3.2, 3.6)  
-> **Relevant Certifications:** [[CLF-C02_Master_Blueprint|CLF-C02]], SAA-C03, DVA-C02  
+> **Relevant Certifications:** [CLF-C02](../../phase0_step01_syllabus/CLF-C02_Master_Blueprint.md), SAA-C03, DVA-C02  
 > **Tags:** `#aws/concepts` `#aws/resilience` `#clf-c02`
 
 ---

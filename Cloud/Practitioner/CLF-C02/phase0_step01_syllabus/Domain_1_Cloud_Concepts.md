@@ -1,6 +1,6 @@
 # Domain 1: Cloud Concepts (24% Exam Weighting)
 
-> **Certification:** [[CLF-C02_Master_Blueprint|AWS Certified Cloud Practitioner (CLF-C02)]]  
+> **Certification:** [AWS Certified Cloud Practitioner (CLF-C02)](CLF-C02_Master_Blueprint.md)  
 > **Exam Weighting:** **24%** (~16 questions)  
 > **Tags:** `#aws/certification` `#clf-c02` `#domain1`
 
@@ -27,14 +27,14 @@ graph TD
 To study for Domain 1 without redundancy, review these atomic concept notes:
 
 1. **Global Infrastructure & Value Proposition:**
-   - Review [[Global_Infrastructure]]: Regions, Availability Zones, Edge Locations, Local Zones, Wavelength, Outposts.
+   - Review [Global_Infrastructure](../phase3_step09_notes/concepts/Global_Infrastructure.md): Regions, Availability Zones, Edge Locations, Local Zones, Wavelength, Outposts.
    - Core Value: Agility (speed of experimentation), Elasticity (scale up/down with demand), High Availability (Multi-AZ fault tolerance), Global Reach in minutes.
 2. **Cloud Architecture Principles:**
-   - Review [[Well_Architected_Framework]]: The 6 Pillars (Operational Excellence, Security, Reliability, Performance Efficiency, Cost Optimization, Sustainability) and the AWS Well-Architected Tool.
+   - Review [Well_Architected_Framework](../phase3_step09_notes/concepts/Well_Architected_Framework.md): The 6 Pillars (Operational Excellence, Security, Reliability, Performance Efficiency, Cost Optimization, Sustainability) and the AWS Well-Architected Tool.
 3. **Migration & Digital Transformation:**
-   - Review [[Cloud_Adoption_Framework_CAF]]: The 6 Perspectives (Business, People, Governance, Platform, Security, Operations) and the 7 Rs of Migration (Rehost, Replatform, Refactor, Repurchase, Retain, Retire, Relocate).
+   - Review [Cloud_Adoption_Framework_CAF](../phase3_step09_notes/concepts/Cloud_Adoption_Framework_CAF.md): The 6 Perspectives (Business, People, Governance, Platform, Security, Operations) and the 7 Rs of Migration (Rehost, Replatform, Refactor, Repurchase, Retain, Retire, Relocate).
 4. **Cloud Economics & TCO:**
-   - Review [[Cloud_Economics_and_Billing_Models]]: Trading CapEx for OpEx, Total Cost of Ownership (TCO) direct and indirect cost eliminations, Economies of Scale, and Data Transfer pricing rules.
+   - Review [Cloud_Economics_and_Billing_Models](../phase3_step09_notes/concepts/Cloud_Economics_and_Billing_Models.md): Trading CapEx for OpEx, Total Cost of Ownership (TCO) direct and indirect cost eliminations, Economies of Scale, and Data Transfer pricing rules.
 
 ---
 
@@ -67,5 +67,5 @@ To study for Domain 1 without redundancy, review these atomic concept notes:
 
 ## 🎯 Master Unique Practice Questions
 
-- **Practice Set:** [[Domain_1_Cloud_Concepts_Unique_Questions|Domain 1 Unique Revision Bank]] (353 unique, deduplicated questions across 18 source providers with interactive checkboxes and explanations).
+- **Practice Set:** [Domain 1 Unique Revision Bank](../phase4_step11_revision_questions/Domain_1_Cloud_Concepts_Revision_Questions.md) (353 unique, deduplicated questions across 18 source providers with interactive checkboxes and explanations).
 

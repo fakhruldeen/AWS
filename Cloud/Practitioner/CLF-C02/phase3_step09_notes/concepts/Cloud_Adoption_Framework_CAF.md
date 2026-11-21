@@ -1,7 +1,7 @@
 # AWS Cloud Adoption Framework (AWS CAF) & Migration Strategies
 
 > **Knowledge Area:** Cloud Concepts (Domain 1.3) & Migration (Domain 3.8)  
-> **Relevant Certifications:** [[CLF-C02_Master_Blueprint|CLF-C02]], SAA-C03  
+> **Relevant Certifications:** [CLF-C02](../../phase0_step01_syllabus/CLF-C02_Master_Blueprint.md), SAA-C03  
 > **Tags:** `#aws/concepts` `#aws/migration` `#clf-c02`
 
 ---

@@ -3,7 +3,7 @@
 > **Focus:** Cloud Financial Management (FinOps), Cost Allocation Tags, AWS Cost Explorer, AWS Budgets, AWS Pricing Calculator, and AWS Compute Optimizer  
 > **Region:** Global (Billing & Cost Management)  
 > **Course Domain:** Domain 4: Billing, Pricing & Support  
-> **Associated Vault Notes:** [[AWS_Budgets]], [[AWS_Cost_Explorer]], [[AWS_Pricing_Calculator]], [[AWS_Compute_Optimizer]]  
+> **Associated Vault Notes:** [AWS_Budgets](../phase3_step09_notes/services/Billing_CostManagement/AWS_Billing_and_Pricing_Tools.md), [AWS_Cost_Explorer](../phase3_step09_notes/services/Billing_CostManagement/AWS_Billing_and_Pricing_Tools.md), [AWS_Pricing_Calculator](../phase3_step09_notes/services/Billing_CostManagement/AWS_Billing_and_Pricing_Tools.md), [AWS_Compute_Optimizer](../phase3_step09_notes/services/Billing_CostManagement/AWS_Billing_and_Pricing_Tools.md)  
 
 ---
 

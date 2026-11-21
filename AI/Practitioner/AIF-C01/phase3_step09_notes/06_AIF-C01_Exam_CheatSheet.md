@@ -1,6 +1,6 @@
 # AIF-C01 Exam Distinction & Memory Cheat Sheet
 
-> **Certification:** [[AIF-C01_Master_Blueprint|AWS Certified AI Practitioner (AIF-C01)]]  
+> **Certification:** [AWS Certified AI Practitioner (AIF-C01)](../phase0_step01_syllabus/AIF-C01_Exam_Guide_and_Blueprint.md)  
 > **Purpose:** High-yield side-by-side distinction tables to eliminate confusion on tricky exam questions.  
 > **Tags:** `#aws/certification` `#aif-c01` `#cheatsheet` `#exam-prep`
 

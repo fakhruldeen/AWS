@@ -2,7 +2,7 @@
 
 > **Service Category:** Security, Identity & Compliance (Cryptography)  
 > **Service Role:** Fully managed service that makes it easy to create and control cryptographic keys used to protect your data across 100+ AWS services and in your own applications.  
-> **Relevant Certifications:** [[01_Certifications/Cloud_Practitioner_CLF-C02/CLF-C02_Master_Blueprint|CLF-C02]], SAA-C03, SCS-C02  
+> **Relevant Certifications:** [CLF-C02](../../phase0_step01_syllabus/CLF-C02_Master_Blueprint.md), SAA-C03, SCS-C02  
 > **Tags:** `#aws/services` `#aws/security` `#kms` `#encryption` `#keys` `#clf-c02`
 
 ---
@@ -21,7 +21,7 @@
 
 **AWS Key Management Service (AWS KMS)** is a managed service that enables you to easily create, rotate, and manage cryptographic keys. AWS KMS uses Hardware Security Modules (HSMs) validated under **FIPS 140-2 Cryptographic Module Validation Program** to protect the security of your keys.
 
-AWS KMS is deeply integrated with over 100 AWS services (such as [[Amazon_S3|Amazon S3]], [[Amazon_EBS|Amazon EBS]], [[Amazon_RDS|Amazon RDS]], [[Amazon_DynamoDB|DynamoDB]]) and integrates with [[AWS_CloudTrail|AWS CloudTrail]] to provide detailed audit logs of every key usage.
+AWS KMS is deeply integrated with over 100 AWS services (such as [Amazon S3](../../phase3_step09_notes/services/Storage/Amazon_S3.md), [Amazon EBS](../../phase3_step09_notes/services/Storage/Block_and_File_Storage_EBS_EFS.md), [Amazon RDS](../../phase3_step09_notes/services/Database/AWS_Databases_Overview.md), [DynamoDB](../../phase3_step09_notes/services/Database/AWS_Databases_Overview.md)) and integrates with [AWS CloudTrail](../../phase3_step09_notes/distinctions/Monitoring_Governance_Trio_CloudWatch_vs_CloudTrail_vs_Config.md) to provide detailed audit logs of every key usage.
 
 ```mermaid
 flowchart TD
@@ -83,10 +83,10 @@ flowchart TD
 ---
 
 ## 5. Cross-Service Links
-- [[AWS_CloudHSM|AWS CloudHSM (Dedicated Hardware)]]
-- [[AWS_Security_Services|AWS Secrets Manager]]
-- [[AWS_Config_and_Systems_Manager|SSM Parameter Store]]
-- [[AWS_CloudWatch_and_CloudTrail|AWS CloudTrail Auditing]]
+- [AWS CloudHSM (Dedicated Hardware)](../../phase3_step09_notes/services/Security_Identity_Compliance/AWS_Security_Services.md)
+- [AWS Secrets Manager](../../phase3_step09_notes/services/Security_Identity_Compliance/AWS_Security_Services.md)
+- [SSM Parameter Store](../../phase3_step09_notes/distinctions/Monitoring_Governance_Trio_CloudWatch_vs_CloudTrail_vs_Config.md)
+- [AWS CloudTrail Auditing](../../phase3_step09_notes/distinctions/Monitoring_Governance_Trio_CloudWatch_vs_CloudTrail_vs_Config.md)
 ---
 
 ## 7. Post-Topic Question Simulation & Retention Check

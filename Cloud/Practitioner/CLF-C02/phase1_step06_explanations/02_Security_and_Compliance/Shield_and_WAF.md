@@ -2,7 +2,7 @@
 
 > **Service Category:** Security, Identity & Compliance  
 > **Service Role:** Web application firewall that helps protect web applications and APIs against common web exploits, bots, and vulnerabilities that may affect availability, compromise security, or consume excessive resources.  
-> **Relevant Certifications:** [[01_Certifications/Cloud_Practitioner_CLF-C02/CLF-C02_Master_Blueprint|CLF-C02]], SAA-C03, SCS-C02  
+> **Relevant Certifications:** [CLF-C02](../../phase0_step01_syllabus/CLF-C02_Master_Blueprint.md), SAA-C03, SCS-C02  
 > **Tags:** `#aws/services` `#aws/security` `#waf` `#firewall` `#layer7` `#clf-c02`
 
 ---
@@ -85,10 +85,10 @@ flowchart TD
 ---
 
 ## 5. Cross-Service Links
-- [[AWS_Shield|AWS Shield (DDoS Protection)]]
-- [[Amazon_CloudFront|Amazon CloudFront]]
-- [[Amazon_VPC_and_Networking|Security Groups & Network ACLs]]
-- [[AWS_Security_Services|Security Overview Hub]]
+- [AWS Shield (DDoS Protection)](../../phase3_step09_notes/services/Security_Identity_Compliance/AWS_Security_Services.md)
+- [Amazon CloudFront](../../phase3_step09_notes/services/Networking_ContentDelivery/Amazon_CloudFront_and_Global_Accelerator.md)
+- [Security Groups & Network ACLs](../../phase3_step09_notes/services/Networking_ContentDelivery/Amazon_VPC_and_Networking.md)
+- [Security Overview Hub](../../phase3_step09_notes/services/Security_Identity_Compliance/AWS_Security_Services.md)
 ---
 
 ## 7. Post-Topic Question Simulation & Retention Check

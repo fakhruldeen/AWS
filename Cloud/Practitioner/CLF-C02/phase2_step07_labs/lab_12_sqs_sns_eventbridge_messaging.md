@@ -3,7 +3,7 @@
 > **Focus:** Amazon Simple Notification Service (SNS), Amazon Simple Queue Service (SQS), Pub/Sub Fan-Out Architecture, and Amazon EventBridge Rules  
 > **Region:** `eu-north-1` (Stockholm)  
 > **Course Domain:** Domain 3: Cloud Technology & Services  
-> **Associated Vault Notes:** [[Amazon_SQS]], [[Amazon_SNS]], [[Amazon_EventBridge]]  
+> **Associated Vault Notes:** [Amazon_SQS](../phase3_step09_notes/services/Application_Integration/Application_Integration_Services.md), [Amazon_SNS](../phase3_step09_notes/services/Application_Integration/Application_Integration_Services.md), [Amazon_EventBridge](../phase3_step09_notes/services/Application_Integration/Application_Integration_Services.md)  
 
 ---
 

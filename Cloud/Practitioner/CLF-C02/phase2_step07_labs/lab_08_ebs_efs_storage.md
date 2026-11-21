@@ -3,7 +3,7 @@
 > **Focus:** Amazon Elastic Block Store (EBS), `gp3` Volume Tuning, EBS Snapshots, and Amazon Elastic File System (EFS) Multi-AZ Sharing  
 > **Region:** `eu-north-1` (Stockholm)  
 > **Course Domain:** Domain 3: Cloud Technology & Services  
-> **Associated Vault Notes:** [[Block_and_File_Storage_EBS_EFS]]  
+> **Associated Vault Notes:** [Block_and_File_Storage_EBS_EFS](../phase3_step09_notes/services/Storage/Block_and_File_Storage_EBS_EFS.md)  
 
 ---
 

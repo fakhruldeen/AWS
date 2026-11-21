@@ -1,7 +1,7 @@
 # AWS Databases: RDS, Aurora, DynamoDB, Redshift & In-Memory
 
 > **Service Category:** Database  
-> **Relevant Certifications:** [[CLF-C02_Master_Blueprint|CLF-C02]], SAA-C03, DVA-C02  
+> **Relevant Certifications:** [CLF-C02](../../../phase0_step01_syllabus/CLF-C02_Master_Blueprint.md), SAA-C03, DVA-C02  
 > **Tags:** `#aws/services` `#aws/database` `#clf-c02`
 
 ---

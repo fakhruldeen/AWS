@@ -1,7 +1,7 @@
 # AWS Organizations, Governance, Auditing & Monitoring
 
 > **Service Category:** Management & Governance (Domain 2.2, 3.8, 4.2)  
-> **Relevant Certifications:** [[CLF-C02_Master_Blueprint|CLF-C02]], SAA-C03, SOA-C02  
+> **Relevant Certifications:** [CLF-C02](../../../phase0_step01_syllabus/CLF-C02_Master_Blueprint.md), SAA-C03, SOA-C02  
 > **Tags:** `#aws/services` `#aws/governance` `#clf-c02`
 
 ---

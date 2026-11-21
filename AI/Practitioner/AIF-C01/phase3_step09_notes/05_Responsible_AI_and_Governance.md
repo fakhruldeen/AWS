@@ -1,7 +1,7 @@
 # Responsible AI, Bias Types & Ethical Governance
 
-> **Category:** [[02_Concepts/README|Conceptual Architecture]]  
-> **Relevant Certifications:** [[01_Certifications/AI_Practitioner_AIF-C01/AIF-C01_Master_Blueprint|AIF-C01]], AWS Machine Learning Specialty  
+> **Category:** [Conceptual Architecture](../../../../Cloud/Practitioner/CLF-C02/phase3_step09_notes/README.md)  
+> **Relevant Certifications:** [AIF-C01](../phase0_step01_syllabus/AIF-C01_Exam_Guide_and_Blueprint.md), AWS Machine Learning Specialty  
 > **Tags:** `#aws/concepts` `#aws/responsible-ai` `#governance` `#bias` `#aif-c01`
 
 ---

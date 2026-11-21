@@ -3,7 +3,7 @@
 > **Focus:** Application Load Balancers (ALB), Target Groups, Launch Templates, Auto Scaling Groups (ASG), and Automatic Self-Healing  
 > **Region:** `eu-north-1` (Stockholm)  
 > **Course Domain:** Domain 3: Cloud Technology & Services  
-> **Associated Vault Notes:** [[Amazon_EC2]]  
+> **Associated Vault Notes:** [Amazon_EC2](../phase3_step09_notes/services/Compute/Amazon_EC2.md)  
 
 ---
 

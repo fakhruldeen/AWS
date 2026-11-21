@@ -3,7 +3,7 @@
 > **Focus:** Amazon EC2, AMI Selection, Instance Types, User Data Bootstrapping, Status Checks, and Elastic IPs  
 > **Region:** `eu-north-1` (Stockholm)  
 > **Course Domain:** Domain 3: Cloud Technology & Services  
-> **Associated Vault Note:** [[Amazon_EC2]]  
+> **Associated Vault Note:** [Amazon_EC2](../phase3_step09_notes/services/Compute/Amazon_EC2.md)  
 
 ---
 

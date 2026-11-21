@@ -3,7 +3,7 @@
 > **Vault Section:** `04_Tutorials/`  
 > **Topic:** Serverless & Event-Driven Architecture  
 > **Source Reference:** Rajesh Daswani (*Packt, 2026*), Project Tasks 12.1–12.3 & 14.1; Tom Taulli (*O'Reilly, 2026*), Ch 9 & 11.  
-> **Associated Certifications:** [[CLF-C02_Master_Blueprint|CLF-C02]], [[AIF-C01_Master_Blueprint|AIF-C01]], SAA-C03
+> **Associated Certifications:** [CLF-C02](../phase0_step01_syllabus/CLF-C02_Master_Blueprint.md), [AIF-C01](../../../../AI/Practitioner/AIF-C01/phase0_step01_syllabus/AIF-C01_Exam_Guide_and_Blueprint.md), SAA-C03
 
 ---
 

@@ -1,8 +1,8 @@
 # AWS Compute Services — Map of Content (MOC)
 
 > **Domain:** 03_Services / Compute  
-> **Parent MOC:** [[AWS_Brain_MOC]]  
-> **Certifications:** [[CLF-C02_Master_Blueprint|CLF-C02]], SAA-C03, DVA-C02
+> **Parent MOC:** [AWS_Brain_MOC](../../../../../README.md)  
+> **Certifications:** [CLF-C02](../../phase0_step01_syllabus/CLF-C02_Master_Blueprint.md), SAA-C03, DVA-C02
 
 ---
 
@@ -77,14 +77,14 @@ flowchart LR
 
 | Atomic Note | Description | Key Focus / Keywords |
 | :--- | :--- | :--- |
-| **[[Amazon_EC2]]** | Elastic Compute Cloud | Instances, AMIs, Pricing Models (On-Demand, Spot, Reserved), EBS. |
-| **[[AWS_Lambda]]** | Serverless Compute Engine | Event-driven, 15-minute max execution, 0 to 10k auto-scale, pay per ms. |
-| **[[Amazon_ECS]]** | Elastic Container Service | AWS-native Docker container orchestration, Task Definitions, Services. |
-| **[[Amazon_EKS]]** | Elastic Kubernetes Service | Managed upstream Kubernetes clusters, Pods, control plane HA. |
-| **[[AWS_Fargate]]** | Serverless Container Compute | Run containers without managing EC2 instances, per-vCPU/GB pricing. |
-| **[[Amazon_ECR]]** | Elastic Container Registry | Managed private/public Docker registries, vulnerability scanning. |
-| **[[AWS_Outposts]]** | Hybrid On-Premises Compute | Physical AWS racks deployed directly into customer data centers. |
-| **[[Containers_ECS_EKS_Fargate]]** | Container Comparison Guide | Comprehensive architectural distinction matrix for containers. |
+| **[Amazon_EC2](../../phase3_step09_notes/services/Compute/Amazon_EC2.md)** | Elastic Compute Cloud | Instances, AMIs, Pricing Models (On-Demand, Spot, Reserved), EBS. |
+| **[AWS_Lambda](../../phase3_step09_notes/services/Compute/Serverless_AWS_Lambda.md)** | Serverless Compute Engine | Event-driven, 15-minute max execution, 0 to 10k auto-scale, pay per ms. |
+| **[Amazon_ECS](../../phase3_step09_notes/services/Compute/Containers_ECS_EKS_Fargate.md)** | Elastic Container Service | AWS-native Docker container orchestration, Task Definitions, Services. |
+| **[Amazon_EKS](../../phase3_step09_notes/services/Compute/Containers_ECS_EKS_Fargate.md)** | Elastic Kubernetes Service | Managed upstream Kubernetes clusters, Pods, control plane HA. |
+| **[AWS_Fargate](../../phase3_step09_notes/services/Compute/Containers_ECS_EKS_Fargate.md)** | Serverless Container Compute | Run containers without managing EC2 instances, per-vCPU/GB pricing. |
+| **[Amazon_ECR](../../phase3_step09_notes/services/Compute/Containers_ECS_EKS_Fargate.md)** | Elastic Container Registry | Managed private/public Docker registries, vulnerability scanning. |
+| **[AWS_Outposts](../../phase3_step09_notes/services/Compute/Amazon_EC2.md)** | Hybrid On-Premises Compute | Physical AWS racks deployed directly into customer data centers. |
+| **[Containers_ECS_EKS_Fargate](../../phase3_step09_notes/services/Compute/Containers_ECS_EKS_Fargate.md)** | Container Comparison Guide | Comprehensive architectural distinction matrix for containers. |
 ---
 
 ## 7. Post-Topic Question Simulation & Retention Check

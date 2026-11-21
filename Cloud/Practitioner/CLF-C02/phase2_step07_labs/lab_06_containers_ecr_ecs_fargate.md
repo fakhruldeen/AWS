@@ -3,7 +3,7 @@
 > **Focus:** Containers vs. VMs, Amazon Elastic Container Registry (ECR), Amazon Elastic Container Service (ECS), Serverless AWS Fargate, and Task Definitions  
 > **Region:** `eu-north-1` (Stockholm)  
 > **Course Domain:** Domain 3: Cloud Technology & Services  
-> **Associated Vault Notes:** [[Containers_ECS_EKS_Fargate]]  
+> **Associated Vault Notes:** [Containers_ECS_EKS_Fargate](../phase3_step09_notes/services/Compute/Containers_ECS_EKS_Fargate.md)  
 
 ---
 

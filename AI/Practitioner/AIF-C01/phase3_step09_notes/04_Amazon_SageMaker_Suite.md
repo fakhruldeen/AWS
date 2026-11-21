@@ -1,7 +1,7 @@
 # Amazon SageMaker AI Ecosystem & MLOps
 
 > **Service Category:** Machine Learning Platform (Domain 1.1, Domain 3.2)  
-> **Relevant Certifications:** [[01_Certifications/AI_Practitioner_AIF-C01/AIF-C01_Master_Blueprint|AIF-C01]], [[01_Certifications/Cloud_Practitioner_CLF-C02/CLF-C02_Master_Blueprint|CLF-C02]], AWS Machine Learning Specialty  
+> **Relevant Certifications:** [AIF-C01](../phase0_step01_syllabus/AIF-C01_Exam_Guide_and_Blueprint.md), [CLF-C02](../../../../Cloud/Practitioner/CLF-C02/phase0_step01_syllabus/CLF-C02_Master_Blueprint.md), AWS Machine Learning Specialty  
 > **Tags:** `#aws/services` `#aws/ml` `#sagemaker` `#mlops` `#aif-c01`
 
 ---

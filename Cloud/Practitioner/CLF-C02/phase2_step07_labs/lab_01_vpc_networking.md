@@ -3,7 +3,7 @@
 > **Focus:** Amazon VPC, Public & Private Subnets, Internet Gateways (IGW), Route Tables, and NAT Gateways  
 > **Region:** `eu-north-1` (Stockholm)  
 > **Course Domain:** Domain 3: Cloud Technology & Services  
-> **Associated Vault Note:** [[Amazon_VPC]]  
+> **Associated Vault Note:** [Amazon_VPC](../phase3_step09_notes/services/Networking_ContentDelivery/Amazon_VPC_and_Networking.md)  
 
 ---
 

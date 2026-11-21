@@ -3,7 +3,7 @@
 > **Focus:** Serverless Function-as-a-Service (FaaS), AWS Lambda, Amazon API Gateway, CloudWatch Execution Logs, and Sub-second Billing  
 > **Region:** `eu-north-1` (Stockholm)  
 > **Course Domain:** Domain 3: Cloud Technology & Services  
-> **Associated Vault Note:** [[AWS_Lambda]]  
+> **Associated Vault Note:** [AWS_Lambda](../phase3_step09_notes/services/Compute/Serverless_AWS_Lambda.md)  
 
 ---
 

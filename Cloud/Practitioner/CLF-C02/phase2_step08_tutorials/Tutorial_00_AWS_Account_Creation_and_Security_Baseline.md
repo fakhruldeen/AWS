@@ -5,10 +5,10 @@ This tutorial walks through the foundational process of creating a new AWS Free 
 ---
 
 ## 📌 Associated Notes & Blueprints
-- [[Shared_Responsibility_Model]]
-- [[AWS_IAM]]
-- [[Cloud_Economics_and_Billing_Models]]
-- [[CLF-C02_Master_Blueprint]]
+- [Shared_Responsibility_Model](../phase3_step09_notes/concepts/Shared_Responsibility_Model.md)
+- [AWS_IAM](../phase3_step09_notes/services/Security_Identity_Compliance/AWS_IAM_and_Identity.md)
+- [Cloud_Economics_and_Billing_Models](../phase3_step09_notes/concepts/Cloud_Economics_and_Billing_Models.md)
+- [CLF-C02_Master_Blueprint](../phase0_step01_syllabus/CLF-C02_Master_Blueprint.md)
 
 ---
 

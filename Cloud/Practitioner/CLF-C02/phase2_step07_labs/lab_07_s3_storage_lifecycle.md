@@ -3,7 +3,7 @@
 > **Focus:** Amazon S3, Storage Classes, Bucket Versioning, Delete Markers, Lifecycle Transition Rules, and Bucket Policies  
 > **Region:** Global (Data resident in `eu-north-1`)  
 > **Course Domain:** Domain 3: Cloud Technology & Services  
-> **Associated Vault Note:** [[Amazon_S3]]  
+> **Associated Vault Note:** [Amazon_S3](../phase3_step09_notes/services/Storage/Amazon_S3.md)  
 
 ---
 

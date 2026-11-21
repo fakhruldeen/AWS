@@ -1,7 +1,7 @@
 # AWS Billing, Pricing Tools & Support Plans
 
 > **Service Category:** Cloud Financial Management & Support (Domain 4.1, 4.2, 4.3)  
-> **Relevant Certifications:** [[CLF-C02_Master_Blueprint|CLF-C02]], SAA-C03  
+> **Relevant Certifications:** [CLF-C02](../../../phase0_step01_syllabus/CLF-C02_Master_Blueprint.md), SAA-C03  
 > **Tags:** `#aws/services` `#aws/billing` `#aws/support` `#clf-c02`
 
 ---

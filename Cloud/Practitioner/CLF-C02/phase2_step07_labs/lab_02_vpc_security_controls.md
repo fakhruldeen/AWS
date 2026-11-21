@@ -3,7 +3,7 @@
 > **Focus:** Stateful Security Groups, Stateless Network ACLs (NACLs), Explicit IP Deny Rules, and VPC Flow Logs  
 > **Region:** `eu-north-1` (Stockholm)  
 > **Course Domain:** Domain 2: Security & Compliance, Domain 3: Cloud Technology & Services  
-> **Associated Vault Note:** [[Security_Groups_vs_NACLs]]  
+> **Associated Vault Note:** [Security_Groups_vs_NACLs](../phase3_step09_notes/services/Networking_ContentDelivery/Amazon_VPC_and_Networking.md)  
 
 ---
 

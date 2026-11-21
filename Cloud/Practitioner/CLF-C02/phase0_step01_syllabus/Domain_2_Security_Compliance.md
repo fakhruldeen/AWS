@@ -1,6 +1,6 @@
 # Domain 2: Security and Compliance (30% Exam Weighting)
 
-> **Certification:** [[CLF-C02_Master_Blueprint|AWS Certified Cloud Practitioner (CLF-C02)]]  
+> **Certification:** [AWS Certified Cloud Practitioner (CLF-C02)](CLF-C02_Master_Blueprint.md)  
 > **Exam Weighting:** **30%** (~20 questions - **Second Highest Weighted Domain!**)  
 > **Tags:** `#aws/certification` `#clf-c02` `#domain2`
 
@@ -25,17 +25,17 @@ graph TD
 ## 📚 Linked Knowledge Base Study Notes (Single Source of Truth)
 
 1. **Shared Responsibility Model:**
-   - Review [[Shared_Responsibility_Model]]: The shifting line of responsibility across IaaS (EC2), Managed/PaaS (RDS), and Serverless (Lambda/S3).
+   - Review [Shared_Responsibility_Model](../phase3_step09_notes/concepts/Shared_Responsibility_Model.md): The shifting line of responsibility across IaaS (EC2), Managed/PaaS (RDS), and Serverless (Lambda/S3).
    - *Remember:* Customer data and IAM permissions are **ALWAYS** 100% the customer's responsibility.
 2. **Access Management & Identities:**
-   - Review [[AWS_IAM_and_Identity]]: Root user security, IAM Users, User Groups, IAM Roles, IAM Policies, Least Privilege, IAM Identity Center (Multi-account workforce SSO), Amazon Cognito (External app users), and Secrets Manager vs Systems Manager Parameter Store.
+   - Review [AWS_IAM_and_Identity](../phase3_step09_notes/services/Security_Identity_Compliance/AWS_IAM_and_Identity.md): Root user security, IAM Users, User Groups, IAM Roles, IAM Policies, Least Privilege, IAM Identity Center (Multi-account workforce SSO), Amazon Cognito (External app users), and Secrets Manager vs Systems Manager Parameter Store.
 3. **Security, Encryption & Threat Detection:**
-   - Review [[AWS_Security_Services]]:
+   - Review [AWS_Security_Services](../phase3_step09_notes/services/Security_Identity_Compliance/AWS_Security_Services.md):
      - Perimeter Defense: AWS WAF (Layer 7 web exploits) vs AWS Shield (Layer 3/4 DDoS).
      - ML Threat Detection: Amazon GuardDuty (Account/log anomalies) vs Amazon Inspector (EC2/ECR/Lambda vulnerabilities) vs Amazon Macie (S3 PII data discovery).
      - Cryptography: AWS KMS (KMS keys) vs AWS CloudHSM (Dedicated hardware).
 4. **Compliance & Auditing:**
-   - Review [[AWS_Organizations_and_Governance]]: AWS CloudTrail (API activity auditing), AWS Config (Configuration compliance), and [[AWS_Security_Services]] -> **AWS Artifact** (SOC/PCI audit reports and HIPAA BAA agreements).
+   - Review [AWS_Organizations_and_Governance](../phase3_step09_notes/services/Management_Governance/AWS_Organizations_and_Governance.md): AWS CloudTrail (API activity auditing), AWS Config (Configuration compliance), and [AWS_Security_Services](../phase3_step09_notes/services/Security_Identity_Compliance/AWS_Security_Services.md) -> **AWS Artifact** (SOC/PCI audit reports and HIPAA BAA agreements).
 
 ---
 
@@ -70,5 +70,5 @@ graph TD
 
 ## 🎯 Master Unique Practice Questions
 
-- **Practice Set:** [[Domain_2_Security_and_Compliance_Unique_Questions|Domain 2 Unique Revision Bank]] (552 unique, deduplicated questions across 18 source providers with interactive checkboxes and explanations).
+- **Practice Set:** [Domain 2 Unique Revision Bank](../phase4_step11_revision_questions/Domain_2_Security_and_Compliance_Revision_Questions.md) (552 unique, deduplicated questions across 18 source providers with interactive checkboxes and explanations).
 

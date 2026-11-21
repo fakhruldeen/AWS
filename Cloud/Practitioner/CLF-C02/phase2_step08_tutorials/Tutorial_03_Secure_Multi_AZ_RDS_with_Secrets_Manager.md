@@ -3,7 +3,7 @@
 > **Vault Section:** `04_Tutorials/`  
 > **Topic:** Relational Databases & Secret Management  
 > **Source Reference:** Rajesh Daswani (*Packt, 2026*), Project Tasks 9.1–9.3 & 10.3; Tom Taulli (*O'Reilly, 2026*), Ch 7 & 11.  
-> **Associated Certifications:** [[CLF-C02_Master_Blueprint|CLF-C02]], SAA-C03
+> **Associated Certifications:** [CLF-C02](../phase0_step01_syllabus/CLF-C02_Master_Blueprint.md), SAA-C03
 
 ---
 

@@ -1,8 +1,8 @@
 # AWS Storage Services — Map of Content (MOC)
 
 > **Domain:** 03_Services / Storage  
-> **Parent MOC:** [[AWS_Brain_MOC]]  
-> **Certifications:** [[CLF-C02_Master_Blueprint|CLF-C02]], SAA-C03, SysOps
+> **Parent MOC:** [AWS_Brain_MOC](../../../../../README.md)  
+> **Certifications:** [CLF-C02](../../phase0_step01_syllabus/CLF-C02_Master_Blueprint.md), SAA-C03, SysOps
 
 ---
 
@@ -79,15 +79,15 @@ flowchart LR
 
 | Atomic Note | Description | Key Focus / Keywords |
 | :--- | :--- | :--- |
-| **[[Amazon_S3]]** | Simple Storage Service | Buckets, Storage Classes, Lifecycle Rules, Versioning, S3 Object Lock. |
-| **[[Amazon_EBS]]** | Elastic Block Store | `gp3`, `io2`, `st1`, `sc1`, Snapshots, Multi-Attach, single AZ. |
-| **[[Amazon_EC2_Instance_Store]]** | Ephemeral Host Storage | Maximum IOPS/performance, data lost on instance stop/termination. |
-| **[[Amazon_EFS]]** | Elastic File System | Managed Linux NFS, multi-AZ, scales automatically, concurrent mount. |
-| **[[Amazon_FSx]]** | Specialized File Systems | FSx for Windows File Server (SMB), FSx for Lustre (HPC/ML). |
-| **[[AWS_Storage_Gateway]]** | Hybrid Storage Bridge | S3 File Gateway, Volume Gateway (Stored/Cached), Tape Gateway. |
-| **[[AWS_DataSync]]** | Automated Data Transfer | 10x faster online transfer between on-prem storage and S3/EFS/FSx. |
-| **[[AWS_Snow_Family]]** | Physical Data Migration Devices | Snowcone (8 TB), Snowball Edge (80 TB), Snowmobile (up to 100 PB). |
-| **[[Block_and_File_Storage_EBS_EFS]]** | Comparison Guide | Detailed architectural breakdown comparing EBS vs. EFS. |
+| **[Amazon_S3](../../phase3_step09_notes/services/Storage/Amazon_S3.md)** | Simple Storage Service | Buckets, Storage Classes, Lifecycle Rules, Versioning, S3 Object Lock. |
+| **[Amazon_EBS](../../phase3_step09_notes/services/Storage/Block_and_File_Storage_EBS_EFS.md)** | Elastic Block Store | `gp3`, `io2`, `st1`, `sc1`, Snapshots, Multi-Attach, single AZ. |
+| **[Amazon_EC2_Instance_Store](../../phase3_step09_notes/services/Storage/Block_and_File_Storage_EBS_EFS.md)** | Ephemeral Host Storage | Maximum IOPS/performance, data lost on instance stop/termination. |
+| **[Amazon_EFS](../../phase3_step09_notes/services/Storage/Block_and_File_Storage_EBS_EFS.md)** | Elastic File System | Managed Linux NFS, multi-AZ, scales automatically, concurrent mount. |
+| **[Amazon_FSx](../../phase3_step09_notes/services/Storage/Block_and_File_Storage_EBS_EFS.md)** | Specialized File Systems | FSx for Windows File Server (SMB), FSx for Lustre (HPC/ML). |
+| **[AWS_Storage_Gateway](../../phase3_step09_notes/distinctions/Storage_and_Hybrid_AWS_Backup_vs_DataSync_vs_StorageGateway.md)** | Hybrid Storage Bridge | S3 File Gateway, Volume Gateway (Stored/Cached), Tape Gateway. |
+| **[AWS_DataSync](../../phase3_step09_notes/distinctions/Storage_and_Hybrid_AWS_Backup_vs_DataSync_vs_StorageGateway.md)** | Automated Data Transfer | 10x faster online transfer between on-prem storage and S3/EFS/FSx. |
+| **[AWS_Snow_Family](../../phase3_step09_notes/distinctions/Storage_and_Hybrid_AWS_Backup_vs_DataSync_vs_StorageGateway.md)** | Physical Data Migration Devices | Snowcone (8 TB), Snowball Edge (80 TB), Snowmobile (up to 100 PB). |
+| **[Block_and_File_Storage_EBS_EFS](../../phase3_step09_notes/services/Storage/Block_and_File_Storage_EBS_EFS.md)** | Comparison Guide | Detailed architectural breakdown comparing EBS vs. EFS. |
 ---
 
 ## 7. Post-Topic Question Simulation & Retention Check

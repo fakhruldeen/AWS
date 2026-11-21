@@ -1,6 +1,6 @@
 # Domain 3: Cloud Technology and Services (34% Exam Weighting)
 
-> **Certification:** [[CLF-C02_Master_Blueprint|AWS Certified Cloud Practitioner (CLF-C02)]]  
+> **Certification:** [AWS Certified Cloud Practitioner (CLF-C02)](CLF-C02_Master_Blueprint.md)  
 > **Exam Weighting:** **34%** (~22 questions - **HIGHEST WEIGHTED DOMAIN!**)  
 > **Tags:** `#aws/certification` `#clf-c02` `#domain3`
 
@@ -31,23 +31,23 @@ graph TD
 1. **Deployment & Automation:**
    - AWS Management Console (GUI) vs AWS CLI vs Software Development Kits (SDKs) vs **AWS CloudFormation** (Declarative Infrastructure as Code - JSON/YAML templates).
 2. **Compute & Containers:**
-   - Review [[Amazon_EC2]]: Instance types (General, Compute, Memory, Storage), purchasing options (On-Demand, Reserved, Spot, Savings Plans, Dedicated Hosts), ELB (ALB vs NLB), and Auto Scaling.
-   - Review [[Containers_ECS_EKS_Fargate]]: Amazon ECS (AWS native), Amazon EKS (Kubernetes), and **AWS Fargate** (Serverless container execution).
-   - Review [[Serverless_AWS_Lambda]]: Event-driven computing, 15-minute execution limit, microservices with API Gateway.
+   - Review [Amazon_EC2](../phase3_step09_notes/services/Compute/Amazon_EC2.md): Instance types (General, Compute, Memory, Storage), purchasing options (On-Demand, Reserved, Spot, Savings Plans, Dedicated Hosts), ELB (ALB vs NLB), and Auto Scaling.
+   - Review [Containers_ECS_EKS_Fargate](../phase3_step09_notes/services/Compute/Containers_ECS_EKS_Fargate.md): Amazon ECS (AWS native), Amazon EKS (Kubernetes), and **AWS Fargate** (Serverless container execution).
+   - Review [Serverless_AWS_Lambda](../phase3_step09_notes/services/Compute/Serverless_AWS_Lambda.md): Event-driven computing, 15-minute execution limit, microservices with API Gateway.
 3. **Storage & Hybrid Systems:**
-   - Review [[Amazon_S3]]: Object storage, 11 9's durability, 8 storage tiers (Standard, Express One Zone, Intelligent-Tiering, Standard-IA, One Zone-IA, Glacier tiers), Lifecycle policies, and S3 Versioning.
-   - Review [[Block_and_File_Storage_EBS_EFS]]: EBS (AZ-locked virtual hard drives, snapshots in S3), EC2 Instance Store (Ephemeral/temporary), Amazon EFS (Multi-AZ shared NFS), Amazon FSx (Windows SMB / Lustre HPC), and AWS Storage Gateway (File, Volume, Tape).
+   - Review [Amazon_S3](../phase3_step09_notes/services/Storage/Amazon_S3.md): Object storage, 11 9's durability, 8 storage tiers (Standard, Express One Zone, Intelligent-Tiering, Standard-IA, One Zone-IA, Glacier tiers), Lifecycle policies, and S3 Versioning.
+   - Review [Block_and_File_Storage_EBS_EFS](../phase3_step09_notes/services/Storage/Block_and_File_Storage_EBS_EFS.md): EBS (AZ-locked virtual hard drives, snapshots in S3), EC2 Instance Store (Ephemeral/temporary), Amazon EFS (Multi-AZ shared NFS), Amazon FSx (Windows SMB / Lustre HPC), and AWS Storage Gateway (File, Volume, Tape).
 4. **Networking & Acceleration:**
-   - Review [[Amazon_VPC_and_Networking]]: Subnets (Public vs Private), Internet Gateway, NAT Gateway, Security Groups (Stateful) vs Network ACLs (Stateless), Transit Gateway, Direct Connect, and Site-to-Site VPN.
-   - Review [[Amazon_CloudFront_and_Global_Accelerator]]: CloudFront (HTTP/HTTPS content caching at Edge) vs Global Accelerator (Static Anycast IPs routing over private fiber backbone).
+   - Review [Amazon_VPC_and_Networking](../phase3_step09_notes/services/Networking_ContentDelivery/Amazon_VPC_and_Networking.md): Subnets (Public vs Private), Internet Gateway, NAT Gateway, Security Groups (Stateful) vs Network ACLs (Stateless), Transit Gateway, Direct Connect, and Site-to-Site VPN.
+   - Review [Amazon_CloudFront_and_Global_Accelerator](../phase3_step09_notes/services/Networking_ContentDelivery/Amazon_CloudFront_and_Global_Accelerator.md): CloudFront (HTTP/HTTPS content caching at Edge) vs Global Accelerator (Static Anycast IPs routing over private fiber backbone).
 5. **Databases:**
-   - Review [[AWS_Databases_Overview]]: Amazon RDS (6 engines, Multi-AZ HA vs Read Replicas), Amazon Aurora (Cloud-native, 6 copies across 3 AZs), Amazon DynamoDB (Serverless NoSQL, single-digit ms latency, DAX), Amazon ElastiCache (In-memory Redis/Memcached), and Amazon Redshift (Petabyte OLAP data warehouse).
+   - Review [AWS_Databases_Overview](../phase3_step09_notes/services/Database/AWS_Databases_Overview.md): Amazon RDS (6 engines, Multi-AZ HA vs Read Replicas), Amazon Aurora (Cloud-native, 6 copies across 3 AZs), Amazon DynamoDB (Serverless NoSQL, single-digit ms latency, DAX), Amazon ElastiCache (In-memory Redis/Memcached), and Amazon Redshift (Petabyte OLAP data warehouse).
 6. **Application Integration & Messaging:**
-   - Review [[Application_Integration_Services]]: Amazon SQS (Pull-based queue, Standard vs FIFO), Amazon SNS (Push-based Pub/Sub fanout), Amazon EventBridge (Serverless event bus), and AWS Step Functions (State machines).
+   - Review [Application_Integration_Services](../phase3_step09_notes/services/Application_Integration/Application_Integration_Services.md): Amazon SQS (Pull-based queue, Standard vs FIFO), Amazon SNS (Push-based Pub/Sub fanout), Amazon EventBridge (Serverless event bus), and AWS Step Functions (State machines).
 7. **AI & Analytics:**
-   - Review [[AI_and_Analytics_Services]]: Amazon Athena (Serverless SQL on S3), AWS Glue (Serverless ETL & Data Catalog), Amazon QuickSight (BI dashboards), and pre-trained AI APIs (Rekognition, Polly, Transcribe, Lex, Textract, Bedrock).
+   - Review [AI_and_Analytics_Services](../phase3_step09_notes/services/AI_Analytics/AI_and_Analytics_Services.md): Amazon Athena (Serverless SQL on S3), AWS Glue (Serverless ETL & Data Catalog), Amazon QuickSight (BI dashboards), and pre-trained AI APIs (Rekognition, Polly, Transcribe, Lex, Textract, Bedrock).
 8. **Disaster Recovery & Architecture:**
-   - Review [[Disaster_Recovery_and_High_Availability]]: RTO vs RPO, and the 4 DR strategies (Backup & Restore, Pilot Light, Warm Standby, Multi-Site Active-Active).
+   - Review [Disaster_Recovery_and_High_Availability](../phase3_step09_notes/concepts/Disaster_Recovery_and_High_Availability.md): RTO vs RPO, and the 4 DR strategies (Backup & Restore, Pilot Light, Warm Standby, Multi-Site Active-Active).
 
 ---
 
@@ -82,5 +82,5 @@ graph TD
 
 ## 🎯 Master Unique Practice Questions
 
-- **Practice Set:** [[Domain_3_Cloud_Technology_and_Services_Unique_Questions|Domain 3 Unique Revision Bank]] (909 unique, deduplicated questions across 18 source providers with interactive checkboxes and explanations).
+- **Practice Set:** [Domain 3 Unique Revision Bank](../phase4_step11_revision_questions/Domain_3_Cloud_Technology_and_Services_Revision_Questions.md) (909 unique, deduplicated questions across 18 source providers with interactive checkboxes and explanations).
 

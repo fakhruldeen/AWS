@@ -3,7 +3,7 @@
 > **Focus:** Amazon Route 53, Public Hosted Zones, Alias Records, Amazon CloudFront CDN, Origin Access Control (OAC), and AWS WAF  
 > **Region:** Global (Edge Locations worldwide)  
 > **Course Domain:** Domain 3: Cloud Technology & Services  
-> **Associated Vault Notes:** [[Amazon_Route_53]], [[Amazon_CloudFront]], [[AWS_WAF]]  
+> **Associated Vault Notes:** [Amazon_Route_53](../phase3_step09_notes/services/Networking_ContentDelivery/Amazon_VPC_and_Networking.md), [Amazon_CloudFront](../phase3_step09_notes/services/Networking_ContentDelivery/Amazon_CloudFront_and_Global_Accelerator.md), [AWS_WAF](../phase3_step09_notes/services/Security_Identity_Compliance/AWS_Security_Services.md)  
 
 ---
 

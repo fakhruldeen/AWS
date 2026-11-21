@@ -3,7 +3,7 @@
 > **Focus:** The AWS Observability Triad: Amazon CloudWatch (Performance), AWS CloudTrail (Auditing), and AWS Config (Compliance & Governance)  
 > **Region:** `eu-north-1` (Stockholm)  
 > **Course Domain:** Domain 2: Security & Compliance, Domain 3: Cloud Technology & Services  
-> **Associated Vault Notes:** [[Amazon_CloudWatch]], [[AWS_CloudTrail]], [[AWS_Config]]  
+> **Associated Vault Notes:** [Amazon_CloudWatch](../phase3_step09_notes/distinctions/Monitoring_Governance_Trio_CloudWatch_vs_CloudTrail_vs_Config.md), [AWS_CloudTrail](../phase3_step09_notes/distinctions/Monitoring_Governance_Trio_CloudWatch_vs_CloudTrail_vs_Config.md), [AWS_Config](../phase3_step09_notes/distinctions/Monitoring_Governance_Trio_CloudWatch_vs_CloudTrail_vs_Config.md)  
 
 ---
 

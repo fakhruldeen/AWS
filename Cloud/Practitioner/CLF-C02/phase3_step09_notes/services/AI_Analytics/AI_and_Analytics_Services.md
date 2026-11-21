@@ -1,7 +1,7 @@
 # AWS AI, Machine Learning & Analytics Services
 
 > **Service Category:** AI / ML & Analytics (Domain 3.7)  
-> **Relevant Certifications:** [[CLF-C02_Master_Blueprint|CLF-C02]], [[AIF-C01_Master_Blueprint|AIF-C01]], SAA-C03  
+> **Relevant Certifications:** [CLF-C02](../../../phase0_step01_syllabus/CLF-C02_Master_Blueprint.md), [AIF-C01](../../../../../../AI/Practitioner/AIF-C01/phase0_step01_syllabus/AIF-C01_Exam_Guide_and_Blueprint.md), SAA-C03  
 > **Tags:** `#aws/services` `#aws/ai` `#aws/analytics` `#clf-c02`
 
 ---

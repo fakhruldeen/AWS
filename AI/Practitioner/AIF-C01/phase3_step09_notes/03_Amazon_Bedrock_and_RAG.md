@@ -1,7 +1,7 @@
 # Amazon Bedrock Deep Dive
 
 > **Service Category:** AI / ML & Generative AI  
-> **Relevant Certifications:** [[01_Certifications/AI_Practitioner_AIF-C01/AIF-C01_Master_Blueprint|AIF-C01]], [[01_Certifications/Cloud_Practitioner_CLF-C02/CLF-C02_Master_Blueprint|CLF-C02]]  
+> **Relevant Certifications:** [AIF-C01](../phase0_step01_syllabus/AIF-C01_Exam_Guide_and_Blueprint.md), [CLF-C02](../../../../Cloud/Practitioner/CLF-C02/phase0_step01_syllabus/CLF-C02_Master_Blueprint.md)  
 > **Tags:** `#aws/services` `#aws/genai` `#bedrock` `#rag` `#aif-c01`
 
 ---

@@ -1,8 +1,8 @@
 # AWS Analytics & Big Data — Map of Content (MOC)
 
 > **Domain:** 03_Services / Analytics & Big Data  
-> **Parent MOC:** [[AWS_Brain_MOC]]  
-> **Certifications:** [[CLF-C02_Master_Blueprint|CLF-C02]], Data Analytics, Solutions Architect
+> **Parent MOC:** [AWS_Brain_MOC](../../../../../README.md)  
+> **Certifications:** [CLF-C02](../../phase0_step01_syllabus/CLF-C02_Master_Blueprint.md), Data Analytics, Solutions Architect
 
 ---
 
@@ -56,13 +56,13 @@ flowchart TD
 
 | Scenario / Need | Best AWS Service | Why |
 | :--- | :--- | :--- |
-| **Ad-hoc SQL queries on S3 files without servers** | **[[Amazon_Athena]]** | Serverless, pay per TB scanned, uses Glue schema. |
-| **Complex analytical joins across enterprise historical data** | **[[Amazon_Redshift]]** | Columnar storage, MPP architecture, OLAP engine. |
-| **Run Apache Spark, Hadoop, or Hive big data jobs** | **[[Amazon_EMR]]** | Managed distributed cluster nodes; Spot instance integration. |
-| **Collect and process real-time clickstreams / IoT** | **[[Amazon_Kinesis]]** | Sub-second latency streaming ingestion; Firehose delivery. |
-| **Discover metadata and automate serverless ETL** | **[[AWS_Glue]]** | Glue Data Catalog + automated schema inference crawlers. |
-| **Operational log search and interactive heatmaps** | **[[Amazon_OpenSearch_Service]]** | Real-time indexing, full-text search, OpenSearch Dashboards. |
-| **Executive financial dashboards with ML insights** | **[[Amazon_QuickSight]]** | In-memory SPICE calculations; natural language queries with Q. |
+| **Ad-hoc SQL queries on S3 files without servers** | **[Amazon_Athena](../../phase3_step09_notes/services/AI_Analytics/AI_and_Analytics_Services.md)** | Serverless, pay per TB scanned, uses Glue schema. |
+| **Complex analytical joins across enterprise historical data** | **[Amazon_Redshift](../../phase3_step09_notes/services/Database/AWS_Databases_Overview.md)** | Columnar storage, MPP architecture, OLAP engine. |
+| **Run Apache Spark, Hadoop, or Hive big data jobs** | **[Amazon_EMR](../../phase3_step09_notes/services/AI_Analytics/AI_and_Analytics_Services.md)** | Managed distributed cluster nodes; Spot instance integration. |
+| **Collect and process real-time clickstreams / IoT** | **[Amazon_Kinesis](../../phase3_step09_notes/services/AI_Analytics/AI_and_Analytics_Services.md)** | Sub-second latency streaming ingestion; Firehose delivery. |
+| **Discover metadata and automate serverless ETL** | **[AWS_Glue](../../phase3_step09_notes/services/AI_Analytics/AI_and_Analytics_Services.md)** | Glue Data Catalog + automated schema inference crawlers. |
+| **Operational log search and interactive heatmaps** | **[Amazon_OpenSearch_Service](../../phase3_step09_notes/services/AI_Analytics/AI_and_Analytics_Services.md)** | Real-time indexing, full-text search, OpenSearch Dashboards. |
+| **Executive financial dashboards with ML insights** | **[Amazon_QuickSight](../../phase3_step09_notes/services/AI_Analytics/AI_and_Analytics_Services.md)** | In-memory SPICE calculations; natural language queries with Q. |
 
 ---
 
@@ -70,13 +70,13 @@ flowchart TD
 
 | Atomic Note | Description | Key Focus / Keywords |
 | :--- | :--- | :--- |
-| **[[Amazon_Athena]]** | Serverless SQL Engine | Query S3 directly, pay per TB scanned, Parquet/ORC optimization. |
-| **[[Amazon_EMR]]** | Managed Big Data Platform | Apache Spark, Hadoop, Hive, Presto, Master/Core/Task nodes. |
-| **[[Amazon_Redshift]]** | Cloud Data Warehouse | OLAP, columnar storage, MPP, Redshift Spectrum, Serverless. |
-| **[[Amazon_Kinesis]]** | Real-Time Streaming Data | Kinesis Data Streams (real-time) vs. Data Firehose (near real-time). |
-| **[[AWS_Glue]]** | Serverless ETL & Metadata | Glue Data Catalog, Crawlers, Glue Studio, schema-on-read. |
-| **[[Amazon_OpenSearch_Service]]** | Search & Log Analytics | OpenSearch / Elasticsearch, log indexing, OpenSearch Dashboards. |
-| **[[Amazon_QuickSight]]** | Cloud Business Intelligence | SPICE engine, pay-per-session pricing, QuickSight Q natural language. |
+| **[Amazon_Athena](../../phase3_step09_notes/services/AI_Analytics/AI_and_Analytics_Services.md)** | Serverless SQL Engine | Query S3 directly, pay per TB scanned, Parquet/ORC optimization. |
+| **[Amazon_EMR](../../phase3_step09_notes/services/AI_Analytics/AI_and_Analytics_Services.md)** | Managed Big Data Platform | Apache Spark, Hadoop, Hive, Presto, Master/Core/Task nodes. |
+| **[Amazon_Redshift](../../phase3_step09_notes/services/Database/AWS_Databases_Overview.md)** | Cloud Data Warehouse | OLAP, columnar storage, MPP, Redshift Spectrum, Serverless. |
+| **[Amazon_Kinesis](../../phase3_step09_notes/services/AI_Analytics/AI_and_Analytics_Services.md)** | Real-Time Streaming Data | Kinesis Data Streams (real-time) vs. Data Firehose (near real-time). |
+| **[AWS_Glue](../../phase3_step09_notes/services/AI_Analytics/AI_and_Analytics_Services.md)** | Serverless ETL & Metadata | Glue Data Catalog, Crawlers, Glue Studio, schema-on-read. |
+| **[Amazon_OpenSearch_Service](../../phase3_step09_notes/services/AI_Analytics/AI_and_Analytics_Services.md)** | Search & Log Analytics | OpenSearch / Elasticsearch, log indexing, OpenSearch Dashboards. |
+| **[Amazon_QuickSight](../../phase3_step09_notes/services/AI_Analytics/AI_and_Analytics_Services.md)** | Cloud Business Intelligence | SPICE engine, pay-per-session pricing, QuickSight Q natural language. |
 ---
 
 ## 7. Post-Topic Question Simulation & Retention Check

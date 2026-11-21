@@ -3,7 +3,7 @@
 > **Focus:** Amazon Relational Database Service (RDS), DB Subnet Groups, PostgreSQL Engine, Multi-AZ High Availability, and Read Replicas  
 > **Region:** `eu-north-1` (Stockholm)  
 > **Course Domain:** Domain 3: Cloud Technology & Services  
-> **Associated Vault Notes:** [[Amazon_RDS]]  
+> **Associated Vault Notes:** [Amazon_RDS](../phase3_step09_notes/services/Database/AWS_Databases_Overview.md)  
 
 ---
 

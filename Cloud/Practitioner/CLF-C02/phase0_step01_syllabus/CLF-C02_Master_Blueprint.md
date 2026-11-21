@@ -13,10 +13,10 @@
 
 | Domain | Focus Area | Weighting | Target Question Count |
 |:---|:---|:---:|:---:|
-| [[Domain_1_Cloud_Concepts\|Domain 1]] | Cloud Concepts & Architecture Principles | **24%** | ~16 Questions |
-| [[Domain_2_Security_Compliance\|Domain 2]] | Security, Identity, Governance & Compliance | **30%** | ~20 Questions |
-| [[Domain_3_Cloud_Technology\|Domain 3]] | Cloud Technology, Services & Deployment | **34%** | ~22 Questions |
-| [[Domain_4_Billing_Pricing\|Domain 4]] | Billing, Pricing Models, Support & Economics | **12%** | ~7 Questions |
+| [Domain 1](Domain_1_Cloud_Concepts.md) | Cloud Concepts & Architecture Principles | **24%** | ~16 Questions |
+| [Domain 2](Domain_2_Security_Compliance.md) | Security, Identity, Governance & Compliance | **30%** | ~20 Questions |
+| [Domain 3](Domain_3_Cloud_Technology.md) | Cloud Technology, Services & Deployment | **34%** | ~22 Questions |
+| [Domain 4](Domain_4_Billing_Pricing.md) | Billing, Pricing Models, Support & Economics | **12%** | ~7 Questions |
 | **Total** | | **100%** | **65 Questions** |
 
 ```mermaid
@@ -59,15 +59,15 @@ graph LR
     end
 
     subgraph AtomicVault ["Shared Vault Knowledge (Zero Redundancy)"]
-        C1["[[Global_Infrastructure]]"]
-        C2["[[Well_Architected_Framework]]"]
-        C3["[[Shared_Responsibility_Model]]"]
-        C4["[[Disaster_Recovery_and_High_Availability]]"]
-        S1["[[Compute Services (EC2, Lambda, Fargate)]]"]
-        S2["[[Storage Services (S3, EBS, EFS)]]"]
-        S3["[[Networking (VPC, Route 53, CloudFront)]]"]
-        S4["[[Security (IAM, KMS, WAF, Shield)]]"]
-        S5["[[Cost Management (Budgets, Cost Explorer)]]"]
+        C1["Global Infrastructure"]
+        C2["Well-Architected Framework"]
+        C3["Shared Responsibility Model"]
+        C4["Disaster Recovery and High Availability"]
+        S1["Compute Services (EC2, Lambda, Fargate)"]
+        S2["Storage Services (S3, EBS, EFS)"]
+        S3["Networking (VPC, Route 53, CloudFront)"]
+        S4["Security (IAM, KMS, WAF, Shield)"]
+        S5["Cost Management (Budgets, Cost Explorer)"]
     end
 
     D1 --> C1
@@ -85,7 +85,7 @@ graph LR
 
 ## 🎯 High-Yield Master Cheat Sheet & Trap Matrix
 
-Before sitting the exam or teaching a review session, master the quick distinctions in [[Exam_Distinction_CheatSheet]]:
+Before sitting the exam or teaching a review session, master the quick distinctions in [Exam_Distinction_CheatSheet](../phase3_step09_notes/Rapid_Review_Cheatsheet.md):
 * **Edge vs Routing:** Amazon CloudFront (Content Caching) vs AWS Global Accelerator (Anycast IP Network Routing).
 * **Cost Estimating vs Analysis:** AWS Pricing Calculator (*Before deployment / "What-if"*) vs AWS Cost Explorer (*After deployment / Historical trends*).
 * **Identity Solutions:** IAM Users/Roles (Internal infra) vs Amazon Cognito (External end-users) vs IAM Identity Center (Multi-account workforce SSO).
@@ -112,8 +112,8 @@ Review all 10 pairwise comparison guides in `notes/distinctions/`:
 ## 🎯 Master Unique Revision Question Banks
 
 Drill with the **2,350 unique questions** deduplicated across 18 source banks in the Vault:
-- [[Domain_1_Cloud_Concepts_Unique_Questions|Domain 1: Cloud Concepts]] (353 Unique Questions)
-- [[Domain_2_Security_and_Compliance_Unique_Questions|Domain 2: Security & Compliance]] (552 Unique Questions)
-- [[Domain_3_Cloud_Technology_and_Services_Unique_Questions|Domain 3: Cloud Technology & Services]] (909 Unique Questions)
-- [[Domain_4_Billing_Pricing_and_Support_Unique_Questions|Domain 4: Billing, Pricing & Support]] (536 Unique Questions)
+- [Domain 1: Cloud Concepts](../phase4_step11_revision_questions/Domain_1_Cloud_Concepts_Revision_Questions.md) (353 Unique Questions)
+- [Domain 2: Security & Compliance](../phase4_step11_revision_questions/Domain_2_Security_and_Compliance_Revision_Questions.md) (552 Unique Questions)
+- [Domain 3: Cloud Technology & Services](../phase4_step11_revision_questions/Domain_3_Cloud_Technology_and_Services_Revision_Questions.md) (909 Unique Questions)
+- [Domain 4: Billing, Pricing & Support](../phase4_step11_revision_questions/Domain_4_Billing_and_Pricing_Revision_Questions.md) (536 Unique Questions)
 
