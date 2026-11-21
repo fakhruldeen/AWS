@@ -12,6 +12,7 @@
 
 | Document | Exam Domain | Official Weight | Focus & Key Traps |
 | :--- | :--- | :---: | :--- |
+| **[November_2026_Actual_Exam_Dump_393Q.md](./November_2026_Actual_Exam_Dump_393Q.md)** | **🔥 Nov 2026 Authentic Dump** | **All 4 Domains** | **Complete 393-question authentic candidate recall pool from November 2026 with 3-tier priority categorization** |
 | **[ExamTopics_High_Yield_Focus_Set.md](./ExamTopics_High_Yield_Focus_Set.md)** | **⭐ ExamTopics Focus** | **Top Priority** | **65 authentic ExamTopics community questions with verified consensus & distractor traps** |
 | **[Domain_1_Cloud_Concepts_Revision_Questions.md](./Domain_1_Cloud_Concepts_Revision_Questions.md)** | Domain 1: Cloud Concepts | **24%** | Cloud economics, CAF perspectives, Well-Architected 6 pillars, DR tiers |
 | **[Domain_2_Security_and_Compliance_Revision_Questions.md](./Domain_2_Security_and_Compliance_Revision_Questions.md)** | Domain 2: Security & Compliance | **30%** | IAM policies, Shared Responsibility boundaries, Shield/WAF, KMS, Artifact |
@@ -21,17 +22,17 @@
 
 ---
 
-## 💻 Interactive ExamTopics Revision Engine
+## 💻 Interactive ExamTopics & November 2026 Revision Engine
 
-Run the interactive CLI revision runner with the `--examtopics` flag to drill specifically on authentic ExamTopics community questions:
+Run the interactive CLI revision runner with the `--dump-2026` flag to drill specifically on the authentic November 2026 dump (393 questions):
 
 ```bash
-# 1. Practice 10 ExamTopics questions with trick decryption
-python3 scripts/aws_revision_runner.py --cert CLF --examtopics --mode practice -n 10 --tricks
+# 1. Practice 15 questions from the November 2026 dump with trick decryption
+python3 scripts/aws_revision_runner.py --cert CLF --dump-2026 --mode practice -n 15 --tricks
 
-# 2. Drill by specific domain using ExamTopics items
-python3 scripts/aws_revision_runner.py --cert CLF --examtopics --domain 2 --count 15
+# 2. Drill by specific domain on the November 2026 pool
+python3 scripts/aws_revision_runner.py --cert CLF --dump-2026 --domain 2 --count 20
 
-# 3. Take a full 65-question timed mock exam using the ExamTopics pool
-python3 scripts/aws_revision_runner.py --cert CLF --examtopics --mode mock
+# 3. Take a full 65-question timed mock exam using the November 2026 pool
+python3 scripts/aws_revision_runner.py --cert CLF --dump-2026 --mode mock
 ```
