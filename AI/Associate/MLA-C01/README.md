@@ -7,17 +7,22 @@
 
 ---
 
-## 📂 Suite Directory Structure
+## 📂 Pedagogical Phase Architecture (12 Steps)
 
 ```
 AI/Associate/MLA-C01/
-├── syllabus/              # Official blueprint, domain weighting, MLOps competencies
-├── notes/                 # High-yield engineering cheat sheets (Inference types, drift, PEFT)
-├── labs/                  # 100% written guided engineering labs (SageMaker, Bedrock)
-├── lectures/              # Instructor delivery lesson plans and classroom talking points
-├── diagrams/              # Standalone production MLOps & GenAI pipeline blueprints
-├── revision_questions/    # Curated scenario-based revision questions
-└── knowledge_checks/      # Rapid diagnostic retention quizzes per domain
+├── phase0_step01_syllabus/             # Official blueprint, domain weighting, MLOps competencies
+├── phase0_step02_prerequisites/          # Linear algebra, calculus, statistics, Python & PyTorch foundations
+├── phase1_step03_lectures/               # Instructor delivery lesson plans and classroom talking points
+├── phase1_step04_slides/                 # Marp slide decks for classroom delivery
+├── phase1_step05_diagrams/               # Standalone production MLOps & GenAI pipeline blueprints
+├── phase1_step06_explanations/           # In-depth architectural mechanics & trade-off breakdowns
+├── phase2_step07_labs/                   # Guided engineering labs (SageMaker, Bedrock, Clarify) with CLI runbooks
+├── phase2_step08_tutorials/              # Production multi-service MLOps build tutorials
+├── phase3_step09_notes/                  # High-yield engineering cheat sheets (Inference types, drift, PEFT)
+├── phase4_step10_knowledge_checks/       # Rapid diagnostic retention quizzes per domain
+├── phase4_step11_revision_questions/     # Curated scenario questions + 106Q Community Practice Pool
+└── phase5_step12_sources/                # Academic references, whitepapers, documentation indexes
 ```
 
 ---
@@ -41,9 +46,16 @@ pie title MLA-C01 Domain Weighting
 
 ## 🛠️ Interactive Tools
 
-- **CLI Revision Engine:** Run interactive drills and simulated exams via:
+- **CLI Revision Engine:** Run interactive drills, practice pools, and simulated exams:
   ```bash
-  python3 scripts/aws_revision_runner.py --cert AIF --mode practice
+  # Practice by domain
+  python3 scripts/aws_revision_runner.py --cert MLA --mode practice --domain 2
+
+  # Practice authentic Community Practice Pool (106 questions)
+  python3 scripts/aws_revision_runner.py --cert MLA --community --mode practice -n 15 --tricks
+
+  # Timed 65-question mock exam
+  python3 scripts/aws_revision_runner.py --cert MLA --mode mock
   ```
 - **Integrity Validation:** Run test suite across repositories:
   ```bash

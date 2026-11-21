@@ -72,14 +72,14 @@ case "${EXAM}" in
         VAULT_MD="${VAULT_BASE}/Questions_Bank/Community_Practice_Questions/AIF_C01_Community_Pool_154Q.md"
         ;;
     SAA-C03)
-        WORK_JSON="${WORK_REPO}/Cloud/Associate/SAA-C03/revision_questions/SAA_C03_Community_Practice_Pool_1019Q.json"
-        WORK_MD="${WORK_REPO}/Cloud/Associate/SAA-C03/revision_questions/SAA_C03_Community_Practice_Pool_1019Q.md"
+        WORK_JSON="${WORK_REPO}/Cloud/Associate/SAA-C03/phase4_step11_revision_questions/SAA_C03_Community_Practice_Pool_1019Q.json"
+        WORK_MD="${WORK_REPO}/Cloud/Associate/SAA-C03/phase4_step11_revision_questions/SAA_C03_Community_Practice_Pool_1019Q.md"
         VAULT_JSON="${VAULT_BASE}/Questions_Bank/Community_Practice_Questions/SAA_C03_Community_Pool_1019Q.json"
         VAULT_MD="${VAULT_BASE}/Questions_Bank/Community_Practice_Questions/SAA_C03_Community_Pool_1019Q.md"
         ;;
     MLA-C01)
-        WORK_JSON="${WORK_REPO}/AI/Associate/MLA-C01/revision_questions/MLA_C01_Community_Practice_Pool_106Q.json"
-        WORK_MD="${WORK_REPO}/AI/Associate/MLA-C01/revision_questions/MLA_C01_Community_Practice_Pool_106Q.md"
+        WORK_JSON="${WORK_REPO}/AI/Associate/MLA-C01/phase4_step11_revision_questions/MLA_C01_Community_Practice_Pool_106Q.json"
+        WORK_MD="${WORK_REPO}/AI/Associate/MLA-C01/phase4_step11_revision_questions/MLA_C01_Community_Practice_Pool_106Q.md"
         VAULT_JSON="${VAULT_BASE}/Questions_Bank/Community_Practice_Questions/MLA_C01_Community_Pool_106Q.json"
         VAULT_MD="${VAULT_BASE}/Questions_Bank/Community_Practice_Questions/MLA_C01_Community_Pool_106Q.md"
         ;;

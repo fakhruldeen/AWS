@@ -6709,7 +6709,7 @@ A - Read replicas for RDS is easy to create and also it is Asynchronous which sh
 ---
 Selected Answer: A
 You can migrate with both A&B but option A is LEAST operational overhead/
-A: https://aws.amazon.com/tutorials/move-to-managed/migrate-sql-server-to-amazon-rds/
+A: https://aws.amazon.com/phase2_step08_tutorials/move-to-managed/migrate-sql-server-to-amazon-rds/
 B: https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/migrate-a-microsoft-sql-server-database-to-aurora-mysql-by-using-aws-dms-and-aws-sct.html
 ---
 A is the correct answer since RDS supports OLAP 

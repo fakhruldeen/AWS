@@ -309,8 +309,8 @@ def locate_bank(cert: str, custom_path: Optional[str] = None, release_2026: bool
     local_clf_release = work_repo / "Cloud/Practitioner/CLF-C02/phase4_step11_revision_questions/CLF_C02_November_2026_Release_393Q.json"
     local_clf_comm = work_repo / "Cloud/Practitioner/CLF-C02/phase4_step11_revision_questions/CLF_C02_Community_Practice_Pool_718Q.json"
     local_aif_comm = work_repo / "AI/Practitioner/AIF-C01/phase4_step11_revision_questions/AIF_C01_Community_Practice_Pool_154Q.json"
-    local_saa_comm = work_repo / "Cloud/Associate/SAA-C03/revision_questions/SAA_C03_Community_Practice_Pool_1019Q.json"
-    local_mla_comm = work_repo / "AI/Associate/MLA-C01/revision_questions/MLA_C01_Community_Practice_Pool_106Q.json"
+    local_saa_comm = work_repo / "Cloud/Associate/SAA-C03/phase4_step11_revision_questions/SAA_C03_Community_Practice_Pool_1019Q.json"
+    local_mla_comm = work_repo / "AI/Associate/MLA-C01/phase4_step11_revision_questions/MLA_C01_Community_Practice_Pool_106Q.json"
 
     if community:
         if cert == "CLF" and local_clf_comm.is_file():

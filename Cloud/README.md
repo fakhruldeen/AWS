@@ -8,15 +8,15 @@
 
 ## 🗺️ Certification Tracks & Levels
 
-The AWS Cloud domain is structured hierarchically by certification level and exam code to support continuous expansion:
+The AWS Cloud domain is structured hierarchically by certification level and exam code:
 
 ```text
 Cloud/
 ├── Practitioner/
 │   └── CLF-C02/                               <-- AWS Certified Cloud Practitioner (ACTIVE)
 │
-├── Associate/                                 <-- (Planned Next Phases)
-│   ├── SAA-C03/                               (AWS Certified Solutions Architect - Associate)
+├── Associate/
+│   ├── SAA-C03/                               <-- AWS Certified Solutions Architect - Associate (ACTIVE)
 │   ├── DVA-C02/                               (AWS Certified Developer - Associate)
 │   └── SOA-C02/                               (AWS Certified SysOps Administrator - Associate)
 │
@@ -33,4 +33,5 @@ Cloud/
 
 ## 🚀 Active Exam Portals
 
-- **[Cloud / Practitioner / CLF-C02](./Practitioner/CLF-C02/README.md)** - AWS Certified Cloud Practitioner comprehensive standalone curriculum featuring 14 visual labs, 7 architectural tutorials, 19 domain guides, and 10 production Mermaid blueprints.
+- **[Cloud / Practitioner / CLF-C02](./Practitioner/CLF-C02/README.md)** - AWS Certified Cloud Practitioner comprehensive standalone curriculum featuring 14 visual labs, 7 architectural tutorials, 19 domain guides, 10 production Mermaid blueprints, and the complete 2026 practice suite.
+- **[Cloud / Associate / SAA-C03](./Associate/SAA-C03/README.md)** - AWS Certified Solutions Architect - Associate comprehensive curriculum featuring 5 multi-tier resilient architecture labs, domain revision guides, full-length timed mock exams, and a 1,019-question Community Practice Pool.

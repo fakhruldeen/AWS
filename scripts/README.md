@@ -1,0 +1,88 @@
+# 🛠️ AWS Course & Exam Engine Scripts
+
+This directory houses the automation, exam simulation, content synchronization, and curriculum orchestration utilities powering the AWS Training & Certification workspace.
+
+---
+
+## 📋 Tool Index & Capabilities
+
+| Script | Purpose | Key Flags & Execution |
+|---|---|---|
+| **`aws_revision_runner.py`** | Interactive terminal exam simulator, domain drill engine, and candidate practice runner. | `--cert {CLF,AIF,SAA,MLA}`<br>`--mode {practice,drill,mock,weakness}`<br>`--community` (use authentic community pool)<br>`--release-2026` (CLF Nov 2026 pool)<br>`--tricks` (heuristic answering tactics)<br>`--domain {1,2,3,4,5}` |
+| **`embed_questions_into_lessons.py`** | Injects authentic scenario questions directly into lectures and tutorials with collapsible solution accordions. | `python3 scripts/embed_questions_into_lessons.py` |
+| **`ingest_community_practice_pool.py`** | Parses raw question chunks into sanitized, deduplicated JSON & Markdown pools. | `python3 scripts/ingest_community_practice_pool.py` |
+| **`merge_community_into_banks.py`** | Merges newly ingested question sets into the master question banks without duplication. | `python3 scripts/merge_community_into_banks.py` |
+| **`generate_community_focus_sets.py`** | Generates curated high-yield question subsets based on community discussion consensus. | `python3 scripts/generate_community_focus_sets.py` |
+| **`sync_community_practice_pool.sh`** | End-to-end orchestration shell script that synchronizes community question pools across tracks. | `bash scripts/sync_community_practice_pool.sh` |
+| **`populate_associate_phases.py`** | Initializes and harmonizes the 12-step pedagogical phase directories across Associate tracks. | `python3 scripts/populate_associate_phases.py` |
+
+---
+
+## 🚀 Interactive Exam Runner Usage Guide
+
+The **`aws_revision_runner.py`** is a high-speed terminal test engine supporting all four certification tracks:
+
+### 1. General Practice by Domain
+Practice specific domains with instant feedback and distractor explanations:
+```bash
+# Cloud Practitioner - Domain 2 (Security) with 15 questions & answering tricks
+python3 scripts/aws_revision_runner.py --cert CLF --mode practice --domain 2 -n 15 --tricks
+
+# AI Practitioner - Domain 3 (Applications of FMs / RAG)
+python3 scripts/aws_revision_runner.py --cert AIF --mode practice --domain 3 -n 10 --tricks
+
+# Solutions Architect Associate - Domain 1 (Secure Architectures)
+python3 scripts/aws_revision_runner.py --cert SAA --mode practice --domain 1 -n 15
+
+# Machine Learning Engineer Associate - Domain 2 (Model Development)
+python3 scripts/aws_revision_runner.py --cert MLA --mode practice --domain 2 -n 10
+```
+
+### 2. Authentic Community Practice Pool Drills
+Test against hundreds of authentic candidate practice questions with community consensus:
+```bash
+# SAA-C03 1,019-question Community Practice Pool
+python3 scripts/aws_revision_runner.py --cert SAA --community --mode practice -n 20 --tricks
+
+# CLF-C02 718-question Community Practice Pool
+python3 scripts/aws_revision_runner.py --cert CLF --community --mode practice -n 20 --tricks
+
+# CLF-C02 November 2026 Release (393 questions)
+python3 scripts/aws_revision_runner.py --cert CLF --release-2026 --mode practice -n 15 --tricks
+
+# AIF-C01 154-question Community Practice Pool
+python3 scripts/aws_revision_runner.py --cert AIF --community --mode practice -n 15 --tricks
+
+# MLA-C01 106-question Community Practice Pool
+python3 scripts/aws_revision_runner.py --cert MLA --community --mode practice -n 15 --tricks
+```
+
+### 3. Full-Length Timed Examination Simulations
+Simulates real exam conditions with official question count, countdown clock, pass/fail grading, and domain score breakdown:
+```bash
+# CLF-C02: 65 questions, 90 minutes, 700 pass score
+python3 scripts/aws_revision_runner.py --cert CLF --mode mock
+
+# AIF-C01: 65 questions, 90 minutes, 700 pass score
+python3 scripts/aws_revision_runner.py --cert AIF --mode mock
+
+# SAA-C03: 65 questions, 130 minutes, 720 pass score
+python3 scripts/aws_revision_runner.py --cert SAA --mode mock
+
+# MLA-C01: 65 questions, 130 minutes, 720 pass score
+python3 scripts/aws_revision_runner.py --cert MLA --mode mock
+```
+
+### 4. Adaptive Weakness Targeted Review
+The runner tracks missed questions across runs and lets you drill exclusively on historical weak spots:
+```bash
+python3 scripts/aws_revision_runner.py --cert CLF --mode weakness
+python3 scripts/aws_revision_runner.py --cert SAA --mode weakness
+```
+
+---
+
+## 🔒 Operational & Legal Standards
+1. **Zero Third-Party Vendor Mentions:** Scripts never output or reference proprietary scraping targets or source names. All public candidate collections are designated as **Community Practice Pool** or **Candidate Practice Suite**.
+2. **Zero "Dump" Terminology:** Always referred to as practice questions, revision questions, or candidate pools.
+3. **Vault vs. Work Separation:** Work repository files generated by scripts use standard Markdown relative links without Obsidian `[[...]]` wikilinks.

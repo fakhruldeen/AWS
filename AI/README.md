@@ -15,8 +15,8 @@ AI/
 ├── Practitioner/
 │   └── AIF-C01/                               <-- AWS Certified AI Practitioner (ACTIVE)
 │
-├── Associate/                                 <-- (Planned Next Phase)
-│   └── MLA-C01/                               (AWS Certified Machine Learning Engineer - Associate)
+├── Associate/
+│   └── MLA-C01/                               <-- AWS Certified Machine Learning Engineer - Associate (ACTIVE)
 │
 └── Specialty/                                 <-- (Reference Specialization)
     └── MLS-C01/                               (AWS Certified Machine Learning - Specialty Archive)
@@ -26,4 +26,5 @@ AI/
 
 ## 🚀 Active Exam Portals
 
-- **[AI / Practitioner / AIF-C01](./Practitioner/AIF-C01/README.md)** - AWS Certified AI Practitioner curriculum featuring Bedrock playgrounds, prompt engineering, RAG knowledge bases with OpenSearch Serverless, and Bedrock Guardrails.
+- **[AI / Practitioner / AIF-C01](./Practitioner/AIF-C01/README.md)** - AWS Certified AI Practitioner curriculum featuring Bedrock playgrounds, prompt engineering, RAG knowledge bases with OpenSearch Serverless, Bedrock Guardrails, and candidate practice suites.
+- **[AI / Associate / MLA-C01](./Associate/MLA-C01/README.md)** - AWS Certified Machine Learning Engineer - Associate curriculum featuring SageMaker MLOps pipelines, Model Registry, inference endpoint comparisons, automated drift detection, PEFT/LoRA fine-tuning, and full-length exam simulations.

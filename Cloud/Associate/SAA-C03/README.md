@@ -7,17 +7,22 @@
 
 ---
 
-## 📂 Suite Directory Structure
+## 📂 Pedagogical Phase Architecture (12 Steps)
 
 ```
 Cloud/Associate/SAA-C03/
-├── syllabus/              # Official blueprint, domain weighting, study schedules
-├── notes/                 # High-yield architectural trade-off cheat sheets
-├── labs/                  # 100% written guided architectural labs (no screenshot dependencies)
-├── lectures/              # Instructor delivery lesson plans and classroom talking points
-├── diagrams/              # Standalone production Mermaid architecture blueprints
-├── revision_questions/    # Curated scenario-based revision questions
-└── knowledge_checks/      # Rapid diagnostic retention quizzes per domain
+├── phase0_step01_syllabus/             # Official blueprint, domain weighting, study schedules
+├── phase0_step02_prerequisites/          # Core networking, compute, storage, security foundations
+├── phase1_step03_lectures/               # Instructor delivery lesson plans and classroom talking points
+├── phase1_step04_slides/                 # Marp slide decks for classroom delivery
+├── phase1_step05_diagrams/               # Standalone production Mermaid architecture blueprints
+├── phase1_step06_explanations/           # In-depth architectural mechanics & trade-off breakdowns
+├── phase2_step07_labs/                   # Guided architectural hands-on labs with CLI runbooks
+├── phase2_step08_tutorials/              # Production multi-service architectural build tutorials
+├── phase3_step09_notes/                  # High-yield architectural trade-off cheat sheets
+├── phase4_step10_knowledge_checks/       # Rapid diagnostic retention quizzes per domain
+├── phase4_step11_revision_questions/     # Curated scenario questions + 1,019Q Community Practice Pool
+└── phase5_step12_sources/                # Academic references, whitepapers, documentation indexes
 ```
 
 ---
@@ -41,9 +46,16 @@ pie title SAA-C03 Domain Weighting
 
 ## 🛠️ Interactive Tools
 
-- **CLI Revision Engine:** Run interactive drills and simulated exams via:
+- **CLI Revision Engine:** Run interactive drills, practice pools, and simulated exams:
   ```bash
-  python3 scripts/aws_revision_runner.py --cert CLF --mode practice
+  # Practice by domain
+  python3 scripts/aws_revision_runner.py --cert SAA --mode practice --domain 1
+
+  # Practice authentic Community Practice Pool (1,019 questions)
+  python3 scripts/aws_revision_runner.py --cert SAA --community --mode practice -n 20 --tricks
+
+  # Timed 65-question mock exam
+  python3 scripts/aws_revision_runner.py --cert SAA --mode mock
   ```
 - **Integrity Validation:** Run test suite across repositories:
   ```bash

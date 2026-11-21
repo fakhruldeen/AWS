@@ -3,21 +3,55 @@
 > **GitHub Repository:** `fakhruldeen/AWS`  
 > **Author & Trainer:** Mohamed Fakhruldeen  
 > **Knowledge Base Sync:** Mirrored 1-to-1 with Obsidian Second Brain (`Documents/Obsidian Vault/Brain/AWS`)  
-> **Active Certification Tracks:** 
-> 1. **Cloud Foundation:** AWS Certified Cloud Practitioner (CLF-C02)
-> 2. **AI Foundation:** AWS Certified AI Practitioner (AIF-C01)
+> **Active Certification Tracks:**
+> 1. **Cloud Foundation:** AWS Certified Cloud Practitioner (`CLF-C02`)
+> 2. **Cloud Architecture Associate:** AWS Certified Solutions Architect - Associate (`SAA-C03`)
+> 3. **AI Foundation:** AWS Certified AI Practitioner (`AIF-C01`)
+> 4. **AI Engineering Associate:** AWS Certified Machine Learning Engineer - Associate (`MLA-C01`)
 
 ---
 
 ## 🎯 Dual-Track Mission
 
-This repository is built for two strategic purposes:
-1. **Personal Certification Mastery:** Concise, high-yield study notes, architectural comparison matrices ("X vs Y"), and verified question banks mapped against official exam domains.
-2. **Professional Student Delivery & Training:** Pedagogically paced lecture decks, Marp presentation slides, visual architecture diagrams, and step-by-step hands-on lab manuals for training students.
+This repository is engineered for two strategic purposes:
+1. **Personal Certification Mastery:** Concise, high-yield study notes, architectural trade-off comparison matrices ("X vs Y"), distractor analysis tricks, and verified candidate practice question pools mapped against official exam domains.
+2. **Professional Student Delivery & Training:** Pedagogically paced lecture decks, Marp presentation slides, visual architecture diagrams, step-by-step hands-on lab manuals, and end-to-end multi-service build tutorials for classroom delivery.
 
 ---
 
-## 📁 Repository Structure
+## 🧭 The Unified 12-Step Pedagogical Model
+
+Every certification curriculum is completely self-contained and follows a standardized 6-phase, 12-step pedagogical lifecycle:
+
+```text
+Phase 0: Orientation & Foundations
+  ├── phase0_step01_syllabus              Official blueprint, domain weighting, study schedules
+  └── phase0_step02_prerequisites         Underlying CS, networking, math & cloud fundamentals
+
+Phase 1: Conceptual Delivery & Architecture
+  ├── phase1_step03_lectures              Instructor delivery lesson plans with embedded exam questions
+  ├── phase1_step04_slides                Marp presentation slides for classroom delivery
+  ├── phase1_step05_diagrams              Standalone production Mermaid architecture blueprints
+  └── phase1_step06_explanations          Comprehensive domain-by-domain concept & service guides
+
+Phase 2: Practical Implementation
+  ├── phase2_step07_labs                  100% Free-Tier / cost-aware hands-on labs with CLI runbooks
+  └── phase2_step08_tutorials             End-to-end multi-service production build tutorials
+
+Phase 3: Synthesis & Retention
+  └── phase3_step09_notes                 High-yield study notes, distinction tables & cheat sheets
+
+Phase 4: Assessment & Exam Simulation
+  ├── phase4_step10_knowledge_checks      Module-by-module rapid diagnostic retention quizzes
+  └── phase4_step11_revision_questions    Curated scenario sets, community pools & timed mock exams
+
+Phase 5: Authority & Provenance
+  └── phase5_step12_sources               Reference textbooks, whitepapers & documentation indices
+```
+
+---
+
+## 📁 Repository Directory Structure
 
 ```text
 /home/mohamed/Desktop/Work/aws/
@@ -30,135 +64,223 @@ This repository is built for two strategic purposes:
 │   └── skills/                                (26 official AWS core skills: Bedrock, IAM, VPC, etc.)
 │
 ├── Cloud/                                     <-- Domain 1: Cloud Architecture & Operations
-│   ├── README.md                              (Domain roadmap and certification tiers)
-│   └── Foundation/                            <-- Foundational Tier
-│       ├── README.md                          (Foundation track syllabus & exam index)
-│       └── CLF-C02/                           <-- AWS Certified Cloud Practitioner (ACTIVE)
-│           ├── README.md                      (CLF-C02 Master Course Portal)
-│           ├── syllabus/                      (Exam Blueprint & Domain Breakdowns)
-│           ├── explanations/                  (Comprehensive guides across Domains 1-4)
-│           ├── tutorials/                     (7 End-to-end architectural tutorials)
-│           ├── diagrams/                      (10 Production Mermaid blueprints)
-│           ├── labs/                          (14 Visual student labs + assets + fast-track)
-│           ├── notes/                         (Atomic study notes & cheat sheets)
-│           ├── slides/                        (Student lecture presentation decks)
-│           ├── sources/                       (Reference literature - GitIgnored)
-│           └── questions_bank/                (4,954 Practice questions - GitIgnored)
+│   ├── README.md                              (Cloud domain roadmap and track index)
+│   ├── Practitioner/
+│   │   ├── README.md                          (Cloud Practitioner track overview)
+│   │   └── CLF-C02/                           <-- AWS Certified Cloud Practitioner (ACTIVE)
+│   │       ├── README.md                      (CLF-C02 Master Course Portal)
+│   │       ├── phase0_step01_syllabus/
+│   │       ├── phase0_step02_prerequisites/
+│   │       ├── phase1_step03_lectures/
+│   │       ├── phase1_step04_slides/
+│   │       ├── phase1_step05_diagrams/
+│   │       ├── phase1_step06_explanations/
+│   │       ├── phase2_step07_labs/
+│   │       ├── phase2_step08_tutorials/
+│   │       ├── phase3_step09_notes/
+│   │       ├── phase4_step10_knowledge_checks/
+│   │       ├── phase4_step11_revision_questions/
+│   │       └── phase5_step12_sources/
+│   │
+│   └── Associate/
+│       ├── README.md                          (Cloud Associate track overview)
+│       └── SAA-C03/                           <-- Solutions Architect - Associate (ACTIVE)
+│           ├── README.md                      (SAA-C03 Master Course Portal)
+│           ├── phase0_step01_syllabus/
+│           ├── phase0_step02_prerequisites/
+│           ├── phase1_step03_lectures/
+│           ├── phase1_step04_slides/
+│           ├── phase1_step05_diagrams/
+│           ├── phase1_step06_explanations/
+│           ├── phase2_step07_labs/
+│           ├── phase2_step08_tutorials/
+│           ├── phase3_step09_notes/
+│           ├── phase4_step10_knowledge_checks/
+│           ├── phase4_step11_revision_questions/
+│           └── phase5_step12_sources/
 │
-└── AI/                                        <-- Domain 2: Artificial Intelligence & Machine Learning
-    ├── README.md                              (AI domain roadmap and certification tiers)
-    └── Foundation/                            <-- Foundational Tier
-        ├── README.md                          (AI Foundation track syllabus & index)
-        └── AIF-C01/                           <-- AWS Certified AI Practitioner (ACTIVE)
-            ├── README.md                      (AIF-C01 Master Course Portal)
-            ├── syllabus/                      (Course syllabus & exam guide)
-            ├── notes/                         (Atomic study notes & cheat sheets)
-            ├── slides/                        (Student lecture presentation decks)
-            └── labs/                          (Bedrock playgrounds, RAG, and Guardrails labs)
+├── AI/                                        <-- Domain 2: Artificial Intelligence & Machine Learning
+│   ├── README.md                              (AI domain roadmap and track index)
+│   ├── Practitioner/
+│   │   ├── README.md                          (AI Practitioner track overview)
+│   │   └── AIF-C01/                           <-- AWS Certified AI Practitioner (ACTIVE)
+│   │       ├── README.md                      (AIF-C01 Master Course Portal)
+│   │       ├── phase0_step01_syllabus/
+│   │       ├── phase0_step02_prerequisites/
+│   │       ├── phase1_step03_lectures/
+│   │       ├── phase1_step04_slides/
+│   │       ├── phase1_step05_diagrams/
+│   │       ├── phase1_step06_explanations/
+│   │       ├── phase2_step07_labs/
+│   │       ├── phase2_step08_tutorials/
+│   │       ├── phase3_step09_notes/
+│   │       ├── phase4_step10_knowledge_checks/
+│   │       ├── phase4_step11_revision_questions/
+│   │       └── phase5_step12_sources/
+│   │
+│   └── Associate/
+│       ├── README.md                          (AI Associate track overview)
+│       └── MLA-C01/                           <-- Machine Learning Engineer - Associate (ACTIVE)
+│           ├── README.md                      (MLA-C01 Master Course Portal)
+│           ├── phase0_step01_syllabus/
+│           ├── phase0_step02_prerequisites/
+│           ├── phase1_step03_lectures/
+│           ├── phase1_step04_slides/
+│           ├── phase1_step05_diagrams/
+│           ├── phase1_step06_explanations/
+│           ├── phase2_step07_labs/
+│           ├── phase2_step08_tutorials/
+│           ├── phase3_step09_notes/
+│           ├── phase4_step10_knowledge_checks/
+│           ├── phase4_step11_revision_questions/
+│           └── phase5_step12_sources/
+│
+├── scripts/                                   <-- Automation, exam runner & synchronization tools
+│   ├── README.md                              (Tool documentation & CLI usage manual)
+│   ├── aws_revision_runner.py                 (Interactive terminal revision & simulation engine)
+│   ├── embed_questions_into_lessons.py        (Embeds scenario questions in lessons & tutorials)
+│   ├── ingest_community_practice_pool.py      (Sanitizes and ingests community pools)
+│   ├── merge_community_into_banks.py          (Merges deduplicated questions into banks)
+│   ├── generate_community_focus_sets.py       (Extracts high-consensus priority sets)
+│   ├── sync_community_practice_pool.sh        (Full-cycle synchronization orchestrator)
+│   └── populate_associate_phases.py           (Harmonizes Associate 12-step directories)
+│
+└── tests/                                     <-- Quality, secret scanning & integrity validation
+    └── verify_ecosystem_integrity.py          (Automated test suite with 148 validations)
 ```
 
 ---
 
-## 🧭 Track 1: Cloud Practitioner (CLF-C02) Blueprint
+## 🗺️ Certification Tracks & Domain Blueprints
 
-All 4,954 questions in this repository are audited and mapped against the official **CLF-C02** domains:
+### 1. ☁️ AWS Certified Cloud Practitioner (`CLF-C02`)
+* **Target Audience:** Foundational cloud practitioners, architects, and technical sales.
+* **Format:** 65 questions, 90 minutes, 700 passing score.
+* **Portal:** **[Cloud/Practitioner/CLF-C02/README.md](./Cloud/Practitioner/CLF-C02/README.md)**
 
-| Domain | Domain Title | Official Weighting | Question Pool Count | Primary Student Lab |
+| Domain | Title | Weight | Practice Questions Pool | Key Practical Lab |
 |:---:|:---|:---:|:---:|:---|
-| **Domain 1** | Cloud Concepts | **24%** | ~580 Qs | [Lab 3: Multi-AZ Web Tier](./Cloud/Practitioner/CLF-C02/phase2_step07_labs/lab_03_ec2_compute_bootstrap.md) |
-| **Domain 2** | Security and Compliance | **30%** | ~735 Qs | [Lab 1: IAM Least Privilege & MFA](./Cloud/Practitioner/CLF-C02/phase2_step07_labs/fast_track/Lab_01_AWS_IAM_Least_Privilege_and_MFA.md) |
-| **Domain 3** | Cloud Technology and Services | **34%** | ~1,140 Qs | [Lab 7: S3 Storage Lifecycle](./Cloud/Practitioner/CLF-C02/phase2_step07_labs/lab_07_s3_storage_lifecycle.md) |
+| **Domain 1** | Cloud Concepts | **24%** | ~580 Qs | [Lab 03: Multi-AZ Web Tier](./Cloud/Practitioner/CLF-C02/phase2_step07_labs/lab_03_ec2_compute_bootstrap.md) |
+| **Domain 2** | Security and Compliance | **30%** | ~735 Qs | [Lab 01: IAM Least Privilege & MFA](./Cloud/Practitioner/CLF-C02/phase2_step07_labs/fast_track/Lab_01_AWS_IAM_Least_Privilege_and_MFA.md) |
+| **Domain 3** | Cloud Technology and Services | **34%** | ~1,140 Qs | [Lab 07: S3 Storage Lifecycle](./Cloud/Practitioner/CLF-C02/phase2_step07_labs/lab_07_s3_storage_lifecycle.md) |
 | **Domain 4** | Billing, Pricing, and Support | **12%** | ~469 Qs | [Lab 14: FinOps Cost Governance](./Cloud/Practitioner/CLF-C02/phase2_step07_labs/lab_14_billing_cost_management.md) |
-| **TOTAL** | | **100%** | **4,954 Questions** | |
+| **TOTAL** | | **100%** | **2,914 Unique Questions** | **14 Visual Guided Labs** |
 
 ---
 
-## 🤖 Track 2: AI Practitioner (AIF-C01) Blueprint
+### 2. 🏛️ AWS Certified Solutions Architect - Associate (`SAA-C03`)
+* **Target Audience:** Cloud architects designing highly available, cost-effective, and secure distributed systems.
+* **Format:** 65 scenario questions, 130 minutes, 720 passing score.
+* **Portal:** **[Cloud/Associate/SAA-C03/README.md](./Cloud/Associate/SAA-C03/README.md)**
 
-The AI Foundation curriculum maps 1-to-1 to the 5 domains of the official **AIF-C01** exam:
+| Domain | Title | Weight | Practice Questions Pool | Key Practical Lab |
+|:---:|:---|:---:|:---:|:---|
+| **Domain 1** | Design Secure Architectures | **30%** | 36 Curated + 1,019 Pool | [Lab 01: Multi-Tier Resilient VPC](./Cloud/Associate/SAA-C03/phase2_step07_labs/lab_01_multi_tier_resilient_vpc_architecture.md) |
+| **Domain 2** | Design Resilient Architectures | **26%** | 32 Curated + 1,019 Pool | [Lab 02: Scalable Web Tier (ASG/ALB)](./Cloud/Associate/SAA-C03/phase2_step07_labs/lab_02_ha_scalable_web_tier_asg_alb.md) |
+| **Domain 3** | Design High-Performing Architectures | **24%** | 28 Curated + 1,019 Pool | [Lab 03: Fault-Tolerant Aurora](./Cloud/Associate/SAA-C03/phase2_step07_labs/lab_03_aurora_fault_tolerant_relational_database.md) |
+| **Domain 4** | Design Cost-Optimized Architectures | **20%** | 24 Curated + 1,019 Pool | [Lab 04: Decoupled SQS/SNS](./Cloud/Associate/SAA-C03/phase2_step07_labs/lab_04_decoupled_asynchronous_microservices_sqs_sns.md) |
+| **TOTAL** | | **100%** | **1,019Q Community Practice Pool** | **5 Guided Architecture Labs** |
 
-| Domain | Domain Title | Exam Weight | Core AWS Tooling Covered | Primary Student Lab |
+---
+
+### 3. 🤖 AWS Certified AI Practitioner (`AIF-C01`)
+* **Target Audience:** Developers, analysts, and business leaders deploying AI/ML and Generative AI on AWS.
+* **Format:** 65 questions, 90 minutes, 700 passing score.
+* **Portal:** **[AI/Practitioner/AIF-C01/README.md](./AI/Practitioner/AIF-C01/README.md)**
+
+| Domain | Title | Weight | Core AWS Tooling Covered | Key Practical Lab |
 |:---:|:---|:---:|:---|:---|
-| **Domain 1** | Fundamentals of AI and ML | **20%** | SageMaker Studio, Canvas, Data Wrangler, Ground Truth, 4 Deployment Modes | [Lab 1: Bedrock Playgrounds](./AI/Practitioner/AIF-C01/phase2_step07_labs/Lab_01_Amazon_Bedrock_Playground_and_Prompt_Engineering.md) |
-| **Domain 2** | Fundamentals of Generative AI | **24%** | Foundation Models, Tokens, Context Window, Embeddings, Inference Tuning | [Lab 1: Prompt Engineering](./AI/Practitioner/AIF-C01/phase2_step07_labs/Lab_01_Amazon_Bedrock_Playground_and_Prompt_Engineering.md) |
-| **Domain 3** | Applications of Foundation Models | **28%** | Amazon Bedrock, Knowledge Bases (RAG), Agents, Prompt Flows, Amazon Q | [Lab 2: Bedrock RAG KB](./AI/Practitioner/AIF-C01/phase2_step07_labs/Lab_02_Building_RAG_with_Bedrock_Knowledge_Bases.md) |
-| **Domain 4** | Guidelines for Responsible AI | **14%** | SageMaker Clarify (Bias & SHAP), Bedrock Guardrails, Model Cards | [Lab 3: Bedrock Guardrails](./AI/Practitioner/AIF-C01/phase2_step07_labs/Lab_03_Responsible_AI_Bedrock_Guardrails.md) |
-| **Domain 5** | Security, Compliance, and Governance | **14%** | Bedrock Data Privacy, KMS encryption, PrivateLink, CloudTrail, Invocation Logs | [Lab 3: PII Masking](./AI/Practitioner/AIF-C01/phase2_step07_labs/Lab_03_Responsible_AI_Bedrock_Guardrails.md) |
-| **TOTAL** | | **100%** | | |
+| **Domain 1** | Fundamentals of AI and ML | **20%** | SageMaker Studio, Canvas, Data Wrangler, Ground Truth | [Lab 01: Bedrock Playgrounds](./AI/Practitioner/AIF-C01/phase2_step07_labs/Lab_01_Amazon_Bedrock_Playground_and_Prompt_Engineering.md) |
+| **Domain 2** | Fundamentals of Generative AI | **24%** | Foundation Models, Tokens, Context Window, Embeddings | [Lab 01: Prompt Engineering](./AI/Practitioner/AIF-C01/phase2_step07_labs/Lab_01_Amazon_Bedrock_Playground_and_Prompt_Engineering.md) |
+| **Domain 3** | Applications of Foundation Models | **28%** | Amazon Bedrock, Knowledge Bases (RAG), Agents, Amazon Q | [Lab 02: Bedrock RAG Knowledge Base](./AI/Practitioner/AIF-C01/phase2_step07_labs/Lab_02_Building_RAG_with_Bedrock_Knowledge_Bases.md) |
+| **Domain 4** | Guidelines for Responsible AI | **14%** | SageMaker Clarify (Bias & SHAP), Bedrock Guardrails | [Lab 03: Bedrock Guardrails & PII Masking](./AI/Practitioner/AIF-C01/phase2_step07_labs/Lab_03_Responsible_AI_Bedrock_Guardrails.md) |
+| **Domain 5** | Security, Compliance, and Governance | **14%** | Bedrock Data Privacy, KMS encryption, PrivateLink | [Lab 03: Responsible AI & Safety](./AI/Practitioner/AIF-C01/phase2_step07_labs/Lab_03_Responsible_AI_Bedrock_Guardrails.md) |
+| **TOTAL** | | **100%** | **1,814 Unique Questions Bank** | **12 Visual Hands-On Labs** |
 
 ---
 
-## 🚀 Student Hands-On Learning Paths & Full Curriculum
+### 4. 🧠 AWS Certified Machine Learning Engineer - Associate (`MLA-C01`)
+* **Target Audience:** Data scientists and ML engineers building, scaling, and monitoring production ML and GenAI pipelines.
+* **Format:** 65 scenario questions, 130 minutes, 720 passing score.
+* **Portal:** **[AI/Associate/MLA-C01/README.md](./AI/Associate/MLA-C01/README.md)**
 
-The repository is completely self-contained and structured into four interconnected learning layers under each exam code:
-
-### 1. 🔬 14 Visual Student Labs (`Cloud/Practitioner/CLF-C02/phase2_step07_labs/`)
-*Master Index:* **[Cloud/Practitioner/CLF-C02/phase2_step07_labs/README.md](./Cloud/Practitioner/CLF-C02/phase2_step07_labs/README.md)**  
-Every lab features: (1) Prerequisite Concept Refresher, (2) Step-by-Step Console Walkthrough with real screenshots, (3) AWS CLI v2 production commands (`eu-north-1`), and (4) Cost-Free Cleanup Safeguards.
-* **[Lab 00: AWS Account Creation & Security Baseline Walkthrough](./Cloud/Practitioner/CLF-C02/phase2_step07_labs/00_Account_Creation_Walkthrough.md)**
-* **[Lab 01: Multi-AZ VPC Networking Infrastructure](./Cloud/Practitioner/CLF-C02/phase2_step07_labs/lab_01_vpc_networking.md)**
-* **[Lab 02: Network Security Controls: Security Groups vs NACLs & Flow Logs](./Cloud/Practitioner/CLF-C02/phase2_step07_labs/lab_02_vpc_security_controls.md)**
-* **[Lab 03: EC2 Compute, User Data Automation & Elastic IPs](./Cloud/Practitioner/CLF-C02/phase2_step07_labs/lab_03_ec2_compute_bootstrap.md)**
-* **[Lab 04: High-Availability Web Tier: ALB & Auto Scaling Groups](./Cloud/Practitioner/CLF-C02/phase2_step07_labs/lab_04_alb_autoscaling_ha.md)**
-* **[Lab 05: Serverless Backend: AWS Lambda & REST API Gateway](./Cloud/Practitioner/CLF-C02/phase2_step07_labs/lab_05_serverless_lambda_apigateway.md)**
-* **[Lab 06: Serverless Containers: Amazon ECR & ECS Fargate](./Cloud/Practitioner/CLF-C02/phase2_step07_labs/lab_06_containers_ecr_ecs_fargate.md)**
-* **[Lab 07: S3 Storage Lifecycle Tiering, Versioning & Security](./Cloud/Practitioner/CLF-C02/phase2_step07_labs/lab_07_s3_storage_lifecycle.md)**
-* **[Lab 08: Persistent Block & Shared File Storage: Amazon EBS vs EFS](./Cloud/Practitioner/CLF-C02/phase2_step07_labs/lab_08_ebs_efs_storage.md)**
-* **[Lab 09: Relational Database High Availability: Amazon RDS Multi-AZ](./Cloud/Practitioner/CLF-C02/phase2_step07_labs/lab_09_rds_database_ha.md)**
-* **[Lab 10: NoSQL Scalability & In-Memory Caching: DynamoDB & DAX](./Cloud/Practitioner/CLF-C02/phase2_step07_labs/lab_10_dynamodb_nosql_dax.md)**
-* **[Lab 11: Global Edge Acceleration & Defense: Route 53, CloudFront & WAF](./Cloud/Practitioner/CLF-C02/phase2_step07_labs/lab_11_route53_cloudfront_edge.md)**
-* **[Lab 12: Decoupled Enterprise Messaging: SNS, SQS & EventBridge](./Cloud/Practitioner/CLF-C02/phase2_step07_labs/lab_12_sqs_sns_eventbridge_messaging.md)**
-* **[Lab 13: Enterprise Observability: CloudWatch, CloudTrail & AWS Config](./Cloud/Practitioner/CLF-C02/phase2_step07_labs/lab_13_observability_cloudwatch_cloudtrail_config.md)**
-* **[Lab 14: FinOps & Cost Governance: Budgets, Cost Explorer & Calculator](./Cloud/Practitioner/CLF-C02/phase2_step07_labs/lab_14_billing_cost_management.md)**
-
-### 2. 🏛️ Architectural Multi-Service Tutorials (`Cloud/Practitioner/CLF-C02/phase2_step08_tutorials/`)
-*Master Index:* **[Cloud/Practitioner/CLF-C02/phase2_step08_tutorials/README.md](./Cloud/Practitioner/CLF-C02/phase2_step08_tutorials/README.md)**  
-End-to-end multi-service architectures showing how individual AWS components interconnect into enterprise systems:
-* **[Tutorial 00: AWS Account Creation, Root Securing & Security Baseline](./Cloud/Practitioner/CLF-C02/phase2_step08_tutorials/Tutorial_00_AWS_Account_Creation_and_Security_Baseline.md)**
-* **[Tutorial 01: Multi-Tier VPC and Bastion Host Infrastructure](./Cloud/Practitioner/CLF-C02/phase2_step08_tutorials/Tutorial_01_Multi_Tier_VPC_and_Bastion_Host.md)**
-* **[Tutorial 02: Highly Available Auto-Scaling Web Tier](./Cloud/Practitioner/CLF-C02/phase2_step08_tutorials/Tutorial_02_Highly_Available_AutoScaling_Web_Tier.md)**
-* **[Tutorial 03: Secure Multi-AZ RDS PostgreSQL with Secrets Manager](./Cloud/Practitioner/CLF-C02/phase2_step08_tutorials/Tutorial_03_Secure_Multi_AZ_RDS_with_Secrets_Manager.md)**
-* **[Tutorial 04: Serverless Event-Driven Pipeline](./Cloud/Practitioner/CLF-C02/phase2_step08_tutorials/Tutorial_04_Serverless_Event_Driven_Pipeline.md)**
-* **[Tutorial 05: Automating Infrastructure with CloudFormation](./Cloud/Practitioner/CLF-C02/phase2_step08_tutorials/Tutorial_05_Automating_Infrastructure_with_CloudFormation.md)**
-* **[Tutorial 06: Multi-Account Governance with Organizations & SCPs](./Cloud/Practitioner/CLF-C02/phase2_step08_tutorials/Tutorial_06_Enterprise_Governance_Organizations_and_SCPs.md)**
-
-### 3. 📖 Comprehensive Conceptual & Service Explanations (`Cloud/Practitioner/CLF-C02/phase1_step06_explanations/`)
-*Master Index:* **[Cloud/Practitioner/CLF-C02/phase1_step06_explanations/README.md](./Cloud/Practitioner/CLF-C02/phase1_step06_explanations/README.md)**  
-Exhaustive domain-by-domain knowledge base covering every single service, framework, and exam trap across all 4 CLF-C02 domains:
-* **[Domain 1: Cloud Concepts](./Cloud/Practitioner/CLF-C02/phase1_step06_explanations/01_Cloud_Concepts/)** - Cloud Economics & TCO, AWS CAF, Well-Architected Framework, Global Infrastructure, Shared Responsibility, and Disaster Recovery.
-* **[Domain 2: Security and Compliance](./Cloud/Practitioner/CLF-C02/phase1_step06_explanations/02_Security_and_Compliance/)** - IAM Identity, Shield & WAF, Threat Detection & Compliance (GuardDuty, Inspector, Macie), and KMS Encryption & Secrets Manager.
-* **[Domain 3: Cloud Technology and Services](./Cloud/Practitioner/CLF-C02/phase1_step06_explanations/03_Technology_and_Services/)** - Compute (EC2, ECS, EKS, Lambda), Storage (S3, EBS, EFS), Databases (RDS, DynamoDB, Aurora), Networking (VPC, Route 53, CloudFront), Management & Observability, Application Integration, and Analytics & AI.
-* **[Domain 4: Billing, Pricing, and Support](./Cloud/Practitioner/CLF-C02/phase1_step06_explanations/04_Billing_and_Pricing/)** - Pricing Models (Savings Plans, Spot, RI), Cost Allocation Tags, Budgets, Cost Explorer, Support Plans, and AWS Marketplace.
-
-### 4. 📊 Production Architecture Mermaid Blueprints (`Cloud/Practitioner/CLF-C02/phase1_step05_diagrams/`)
-*Master Index:* **[Cloud/Practitioner/CLF-C02/phase1_step05_diagrams/README.md](./Cloud/Practitioner/CLF-C02/phase1_step05_diagrams/README.md)**  
-10 standalone production blueprints rendering clear data flows, security perimeters, and service topology.
-
-### 5. 🤖 AI Foundation Labs (`AI/Practitioner/AIF-C01/phase2_step07_labs/`)
-*Master Index:* **[AI/Practitioner/AIF-C01/README.md](./AI/Practitioner/AIF-C01/README.md)**  
-1. **[Lab 1: Bedrock Playgrounds & Prompt Engineering](./AI/Practitioner/AIF-C01/phase2_step07_labs/Lab_01_Amazon_Bedrock_Playground_and_Prompt_Engineering.md)** - Master Temperature, Top-P, Zero-shot, Few-shot, and Chain-of-Thought prompting.
-2. **[Lab 2: Building a RAG Knowledge Base](./AI/Practitioner/AIF-C01/phase2_step07_labs/Lab_02_Building_RAG_with_Bedrock_Knowledge_Bases.md)** - Ingest enterprise documents from S3 into OpenSearch Serverless via Titan Embeddings and query with Claude.
-3. **[Lab 3: Responsible AI & PII Masking](./AI/Practitioner/AIF-C01/phase2_step07_labs/Lab_03_Responsible_AI_Bedrock_Guardrails.md)** - Configure Denied Topics, content filters, and PII redaction using Amazon Bedrock Guardrails.
+| Domain | Title | Weight | Core AWS Tooling Covered | Key Practical Lab |
+|:---:|:---|:---:|:---|:---|
+| **Domain 1** | Data Preparation for ML | **28%** | Glue, Kinesis, EMR, SageMaker Feature Store | [Lab 01: SageMaker Pipelines MLOps](./AI/Associate/MLA-C01/phase2_step07_labs/lab_01_sagemaker_pipelines_mlops_and_model_registry.md) |
+| **Domain 2** | ML Model Development | **26%** | PEFT/LoRA, Continued Pre-training, SageMaker HPO | [Lab 04: PEFT/LoRA Fine-Tuning](./AI/Associate/MLA-C01/phase2_step07_labs/lab_04_peft_lora_fine_tuning_foundation_models.md) |
+| **Domain 3** | Deployment & Orchestration | **22%** | Real-Time, Serverless, Async, Batch Transform | [Lab 02: SageMaker Inference Endpoints](./AI/Associate/MLA-C01/phase2_step07_labs/lab_02_sagemaker_inference_endpoints_comparison.md) |
+| **Domain 4** | ML Solution Monitoring & Maintenance | **24%** | Model Monitor, Clarify (Bias/SHAP), Model Cards | [Lab 03: Automated Drift Detection](./AI/Associate/MLA-C01/phase2_step07_labs/lab_03_automated_drift_detection_model_monitor.md) |
+| **TOTAL** | | **100%** | **542 Unique Questions Bank** | **5 Guided Engineering Labs** |
 
 ---
 
-## 📚 Course Reference Books (Sources)
+## 💻 Interactive Terminal Exam Simulation Engine
 
-For comprehensive offline study and deeper explanations, the curriculum references two core textbooks stored locally in `Cloud/Practitioner/CLF-C02/phase5_step12_sources/` (excluded from git):
+The repository includes a unified, high-performance terminal revision runner (**`scripts/aws_revision_runner.py`**) that supports all four certifications:
 
-1. **AWS Certified Cloud Practitioner (CLF-C02) Certification Guide (2nd Edition, 2026)**
-   * **Author:** Rajesh Daswani (*Packt Publishing*) — `ISBN: 978-1-83546-429-8`
-   * *Best For:* Practical exam readiness, exam-trap walkthroughs, and end-of-chapter review questions.
-2. **AWS Certified Cloud Practitioner (CLF-C02) Study Guide (1st Edition, 2026)**
-   * **Author:** Tom Taulli (*O'Reilly Media*) — `ISBN: 978-8-34164-022-2`
-   * *Best For:* Conceptual grounding, cloud economics, TCO modeling, and enterprise architecture perspectives.
+```bash
+# -------------------------------------------------------------
+# 1. PRACTICE MODE (Domain-specific drill with trick explanations)
+# -------------------------------------------------------------
+python3 scripts/aws_revision_runner.py --cert CLF --mode practice --domain 2 -n 15 --tricks
+python3 scripts/aws_revision_runner.py --cert AIF --mode practice --domain 3 -n 10 --tricks
+python3 scripts/aws_revision_runner.py --cert SAA --mode practice --domain 1 -n 15
+python3 scripts/aws_revision_runner.py --cert MLA --mode practice --domain 2 -n 10
+
+# -------------------------------------------------------------
+# 2. AUTHENTIC CANDIDATE PRACTICE SUITE DRILLS
+# -------------------------------------------------------------
+# SAA-C03: 1,019-question Community Practice Pool
+python3 scripts/aws_revision_runner.py --cert SAA --community --mode practice -n 20 --tricks
+
+# CLF-C02: 718-question Community Practice Pool
+python3 scripts/aws_revision_runner.py --cert CLF --community --mode practice -n 20 --tricks
+
+# CLF-C02: November 2026 Actual Release (393 questions)
+python3 scripts/aws_revision_runner.py --cert CLF --release-2026 --mode practice -n 15 --tricks
+
+# AIF-C01: 154-question Community Practice Pool
+python3 scripts/aws_revision_runner.py --cert AIF --community --mode practice -n 15 --tricks
+
+# MLA-C01: 106-question Community Practice Pool
+python3 scripts/aws_revision_runner.py --cert MLA --community --mode practice -n 15 --tricks
+
+# -------------------------------------------------------------
+# 3. FULL-LENGTH TIMED EXAM SIMULATION (Official Clock & Passing Scores)
+# -------------------------------------------------------------
+python3 scripts/aws_revision_runner.py --cert CLF --mode mock
+python3 scripts/aws_revision_runner.py --cert AIF --mode mock
+python3 scripts/aws_revision_runner.py --cert SAA --mode mock
+python3 scripts/aws_revision_runner.py --cert MLA --mode mock
+
+# -------------------------------------------------------------
+# 4. TARGETED WEAKNESS ADAPTIVE REVIEW
+# -------------------------------------------------------------
+python3 scripts/aws_revision_runner.py --cert CLF --mode weakness
+python3 scripts/aws_revision_runner.py --cert SAA --mode weakness
+```
 
 ---
 
-## 🛠️ Agent Toolkit for AWS (AI Assistant Layer)
+## 🛡️ Repository Integrity & Quality Assurance
 
-This repository includes official integration with the **[Agent Toolkit for AWS](https://docs.aws.amazon.com/agent-toolkit/latest/userguide/what-is-agent-toolkit.html)** to provide AI coding assistants with live AWS documentation, regional feature verification, and governed architectural runbooks:
+A dedicated integrity test suite (**`tests/verify_ecosystem_integrity.py`**) enforces zero broken links, schema validity, and secret safety:
 
-* **AWS MCP Server (`.vscode/mcp.json` / `mcp.json`):** Connects to the AWS remote MCP server via `uvx mcp-proxy-for-aws-cli@latest` with `--skip-auth`. Enables live documentation search (`aws___search_documentation`) and Markdown retrieval (`aws___read_documentation`) without requiring AWS credentials.
-* **Agent Rules (`.agents/rules/aws-agent-rules.md`):** Mandates evidence-based verification against current AWS documentation, Infrastructure as Code (CDK/CloudFormation), and Well-Architected Framework principles.
-* **Agent Skills (`.agents/skills/`):** 26 modular AWS core runbooks (Amazon Bedrock, SageMaker AI, IAM, VPC networking, CloudFormation, cost optimization) dynamically referenced during course development and maintenance.
+```bash
+python3 tests/verify_ecosystem_integrity.py
+```
+
+* **148 Automated Checks:** Validates JSON question bank schemas, unique IDs, domain coverage, lab scenario matrices, AWS CLI runbooks, and secret scanning across 767 repository files.
+* **100% Free-Tier & Cost Guardrails:** All practical labs include cleanup instructions and use cost-conscious configurations.
+* **Zero Broken Wiki-Links:** All Markdown documentation strictly utilizes relative paths.
+* **Zero Third-Party Scraping Terminology:** Candidate questions are curated and attributed professionally under community consensus rubrics.
+
+---
+
+## 🛠️ Agent Toolkit for AWS Integration
+
+This workspace natively integrates with the **[Agent Toolkit for AWS](https://docs.aws.amazon.com/agent-toolkit/latest/userguide/what-is-agent-toolkit.html)**:
+
+* **AWS MCP Server (`.vscode/mcp.json` / `mcp.json`):** Connects to the AWS MCP server to search live documentation (`aws___search_documentation`) and retrieve official guides (`aws___read_documentation`) dynamically.
+* **Agent Rules (`.agents/rules/aws-agent-rules.md`):** Strict verification against current AWS service capabilities, Well-Architected Framework guidelines, and Infrastructure as Code standards.
+* **Agent Skills (`.agents/skills/`):** 26 specialized AWS runbooks covering Bedrock, SageMaker AI, IAM, VPC, and CloudFormation.
