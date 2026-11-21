@@ -12,8 +12,26 @@
 
 | Document | Exam Domain | Official Weight | Focus & Key Traps |
 | :--- | :--- | :---: | :--- |
+| **[ExamTopics_High_Yield_Focus_Set.md](./ExamTopics_High_Yield_Focus_Set.md)** | **⭐ ExamTopics Focus** | **Top Priority** | **65 authentic ExamTopics community questions with verified consensus & distractor traps** |
 | **[Domain_1_Cloud_Concepts_Revision_Questions.md](./Domain_1_Cloud_Concepts_Revision_Questions.md)** | Domain 1: Cloud Concepts | **24%** | Cloud economics, CAF perspectives, Well-Architected 6 pillars, DR tiers |
 | **[Domain_2_Security_and_Compliance_Revision_Questions.md](./Domain_2_Security_and_Compliance_Revision_Questions.md)** | Domain 2: Security & Compliance | **30%** | IAM policies, Shared Responsibility boundaries, Shield/WAF, KMS, Artifact |
 | **[Domain_3_Cloud_Technology_and_Services_Revision_Questions.md](./Domain_3_Cloud_Technology_and_Services_Revision_Questions.md)** | Domain 3: Technology & Services | **34%** | Compute options, S3 tiers, RDS vs DynamoDB, VPC routing, SQS vs SNS |
 | **[Domain_4_Billing_and_Pricing_Revision_Questions.md](./Domain_4_Billing_and_Pricing_Revision_Questions.md)** | Domain 4: Billing & Pricing | **12%** | Savings Plans vs Spot, Support plan tiers (TAM), Budgets vs Cost Explorer |
 | **[CLF_C02_Full_Length_Mock_Revision_Exam.md](./CLF_C02_Full_Length_Mock_Revision_Exam.md)** | Comprehensive Simulation | **100%** | 65-question timed mock simulation with score rubric |
+
+---
+
+## 💻 Interactive ExamTopics Revision Engine
+
+Run the interactive CLI revision runner with the `--examtopics` flag to drill specifically on authentic ExamTopics community questions:
+
+```bash
+# 1. Practice 10 ExamTopics questions with trick decryption
+python3 scripts/aws_revision_runner.py --cert CLF --examtopics --mode practice -n 10 --tricks
+
+# 2. Drill by specific domain using ExamTopics items
+python3 scripts/aws_revision_runner.py --cert CLF --examtopics --domain 2 --count 15
+
+# 3. Take a full 65-question timed mock exam using the ExamTopics pool
+python3 scripts/aws_revision_runner.py --cert CLF --examtopics --mode mock
+```

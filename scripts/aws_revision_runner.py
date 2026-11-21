@@ -375,8 +375,15 @@ def filter_questions(
     service_query: Optional[str] = None,
     min_consensus: Optional[int] = None,
     weak_ids: Optional[Set[str]] = None,
+    examtopics_only: bool = False,
 ) -> List[Dict[str, Any]]:
     filtered = questions
+
+    if examtopics_only:
+        filtered = [
+            q for q in filtered
+            if any("examtopics" in s.lower() for s in q.get("sources", []))
+        ]
 
     if weak_ids is not None:
         filtered = [q for q in filtered if q.get("id") in weak_ids]
@@ -398,31 +405,47 @@ def filter_questions(
 
     return filtered
 
-def sample_mock_questions(cert: str, questions: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+def sample_mock_questions(
+    cert: str,
+    questions: List[Dict[str, Any]],
+    examtopics_only: bool = False
+) -> List[Dict[str, Any]]:
     dist = MOCK_DISTRIBUTION.get(cert, {})
+    pool_questions = questions
+
+    if examtopics_only:
+        et_pool = [q for q in questions if any("examtopics" in s.lower() for s in q.get("sources", []))]
+        if et_pool:
+            pool_questions = et_pool
+
     by_domain: Dict[int, List[Dict[str, Any]]] = {}
-    for q in questions:
+    for q in pool_questions:
         d = q.get("domain", 1)
         by_domain.setdefault(d, []).append(q)
 
     mock_set = []
+    target_count = 65 if not examtopics_only or len(pool_questions) >= 65 else len(pool_questions)
+
     for d, count in dist.items():
         pool = by_domain.get(d, [])
-        if len(pool) >= count:
-            mock_set.extend(random.sample(pool, count))
-        else:
-            mock_set.extend(pool)
+        # Prioritize ExamTopics questions within the domain pool
+        pool.sort(key=lambda q: (1 if any("examtopics" in s.lower() for s in q.get("sources", [])) else 0), reverse=True)
+        take_count = min(count, len(pool))
+        if take_count > 0:
+            mock_set.extend(random.sample(pool[:max(take_count * 2, take_count)], take_count))
 
-    # If count is less than 65 due to small pool, top up from remaining
-    if len(mock_set) < 65:
+    # If count is less than target due to distribution shortages, top up
+    if len(mock_set) < target_count:
         existing_ids = {q["id"] for q in mock_set}
-        remaining = [q for q in questions if q["id"] not in existing_ids]
-        needed = 65 - len(mock_set)
+        remaining = [q for q in pool_questions if q["id"] not in existing_ids]
+        needed = target_count - len(mock_set)
         if len(remaining) >= needed:
             mock_set.extend(random.sample(remaining, needed))
+        else:
+            mock_set.extend(remaining)
 
     random.shuffle(mock_set)
-    return mock_set[:65]
+    return mock_set[:target_count]
 
 def display_question(
     q: Dict[str, Any],
@@ -446,6 +469,8 @@ def display_question(
     print(f"{Colors.BOLD}[Question {idx}/{total}]  ID: {q_id}  |  {domain_str}{Colors.RESET}")
     if show_meta:
         print(f"{Colors.DIM}Verified Sources ({consensus}): {', '.join(sources[:4])}{'...' if len(sources)>4 else ''}{Colors.RESET}")
+    if any("examtopics" in str(s).lower() for s in sources):
+        print(f"{Colors.GREEN}{Colors.BOLD}⭐ AUTHENTIC EXAMTOPICS QUESTION — Verified Community Discussion Consensus{Colors.RESET}")
     if show_tricks:
         print(f"{Colors.YELLOW}{Colors.BOLD}💡 TRICKS & MNEMONIC MODE ACTIVE — Key trigger words are highlighted in gold.{Colors.RESET}")
     print(f"{Colors.CYAN}{'-'*80}{Colors.RESET}\n")
@@ -621,18 +646,23 @@ def run_practice_or_drill(
 def run_mock_exam(
     cert: str,
     questions: List[Dict[str, Any]],
-    history_file: Path
+    history_file: Path,
+    examtopics_only: bool = False,
+    show_tricks: bool = False
 ):
-    mock_set = sample_mock_questions(cert, questions)
+    mock_set = sample_mock_questions(cert, questions, examtopics_only=examtopics_only)
     total = len(mock_set)
     time_limit_mins = MOCK_TIME_LIMIT_MINUTES.get(cert, 90)
 
     print(f"\n{Colors.HEADER}{Colors.BOLD}{'='*80}{Colors.RESET}")
-    print(f"{Colors.HEADER}{Colors.BOLD}🎓 OFFICIAL AWS TIMED MOCK EXAM SIMULATION: {cert}-C0{2 if cert=='CLF' else 1}{Colors.RESET}")
+    et_tag = f" [{Colors.GREEN}EXAMTOPICS FOCUS POOL{Colors.RESET}{Colors.HEADER}{Colors.BOLD}]" if examtopics_only else ""
+    print(f"{Colors.HEADER}{Colors.BOLD}🎓 OFFICIAL AWS TIMED MOCK EXAM SIMULATION: {cert}-C0{2 if cert=='CLF' else 1}{et_tag}{Colors.RESET}")
     print(f"{Colors.HEADER}{Colors.BOLD}{'='*80}{Colors.RESET}")
     print(f"• Total Questions:   {Colors.BOLD}{total}{Colors.RESET}")
     print(f"• Allocated Time:    {Colors.BOLD}{time_limit_mins} minutes{Colors.RESET}")
     print(f"• Passing Threshold: {Colors.BOLD}700 / 1000 (Scaled Scoring ~70% raw){Colors.RESET}")
+    if examtopics_only:
+        print(f"• Question Provenance: {Colors.GREEN}{Colors.BOLD}ExamTopics Community Verified Items{Colors.RESET}")
     print(f"• Domain Balance:    Weighted exactly per official AWS Exam Blueprint")
     print(f"{Colors.DIM}Controls: Enter letters (A, B), 's' to skip, 'q' to finish and grade early.{Colors.RESET}\n")
 
@@ -656,7 +686,7 @@ def run_mock_exam(
             break
 
         print(f"\n{Colors.DIM}[Time Remaining: {rem_mins:02d}:{rem_secs:02d}]{Colors.RESET}")
-        clean_choices, expected = display_question(q, idx, total, cert, show_meta=False)
+        clean_choices, expected = display_question(q, idx, total, cert, show_meta=False, show_tricks=show_tricks)
         ans = prompt_user_answer(len(expected))
 
         if ans is None:
@@ -787,6 +817,7 @@ Examples:
     parser.add_argument("--consensus", type=int, default=None, help="Minimum source consensus count (e.g., 2, 3)")
     parser.add_argument("--count", "-n", type=int, default=None, help="Number of questions to test (default: 10 for practice/drill, 65 for mock)")
     parser.add_argument("--tricks", action="store_true", help="Enable Exam Decryption & Mnemonic Mode (highlights trigger keywords and reveals memory pegs)")
+    parser.add_argument("--examtopics", action="store_true", help="Filter and focus exclusively on authentic ExamTopics community discussion questions")
     parser.add_argument("--bank-path", default=None, help="Custom path to question bank JSON file")
     parser.add_argument("--history-file", default=str(Path.home() / ".aws_revision_history.json"), help="Path to weakness tracking history file")
     parser.add_argument("--no-color", action="store_true", help="Disable colored terminal output")
@@ -812,7 +843,7 @@ Examples:
 
         bank_file = locate_bank(args.cert, args.bank_path)
         all_q = load_questions(bank_file)
-        filtered = filter_questions(all_q, weak_ids=set(weak_cert_ids))
+        filtered = filter_questions(all_q, weak_ids=set(weak_cert_ids), examtopics_only=args.examtopics)
         print(f"\n{Colors.YELLOW}{Colors.BOLD}🔍 Found {len(filtered)} previously missed question(s) in weakness history.{Colors.RESET}")
         run_practice_or_drill(args.cert, filtered, "practice", history_path, show_tricks=args.tricks)
         return
@@ -822,7 +853,7 @@ Examples:
     all_questions = load_questions(bank_file)
 
     if args.mode == "mock":
-        run_mock_exam(args.cert, all_questions, history_path)
+        run_mock_exam(args.cert, all_questions, history_path, examtopics_only=args.examtopics, show_tricks=args.tricks)
         return
 
     # Filter questions for practice or drill
@@ -830,7 +861,8 @@ Examples:
         all_questions,
         domain=args.domain,
         service_query=args.service,
-        min_consensus=args.consensus
+        min_consensus=args.consensus,
+        examtopics_only=args.examtopics
     )
 
     if not filtered:

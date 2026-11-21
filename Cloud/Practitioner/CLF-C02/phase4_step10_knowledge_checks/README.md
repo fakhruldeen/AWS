@@ -20,9 +20,10 @@
 
 ## 🎯 Deep Practice with Master Unique Question Banks
 
-After validating retention with these rapid checks, drill with the **2,350 Master Unique Questions** in the Knowledge Vault:
-- [[Domain_1_Cloud_Concepts_Unique_Questions|Domain 1 Master Bank]] (353 Unique Questions)
-- [[Domain_2_Security_and_Compliance_Unique_Questions|Domain 2 Master Bank]] (552 Unique Questions)
-- [[Domain_3_Cloud_Technology_and_Services_Unique_Questions|Domain 3 Master Bank]] (909 Unique Questions)
-- [[Domain_4_Billing_Pricing_and_Support_Unique_Questions|Domain 4 Master Bank]] (536 Unique Questions)
+After validating retention with these rapid checks, drill with the **2,611 Master Unique Questions** in the Knowledge Vault (including all **290 authentic ExamTopics community questions**):
+- **ExamTopics Focused Drills:** `python3 scripts/aws_revision_runner.py --cert CLF --examtopics --mode practice -n 20`
+- [[Domain_1_Cloud_Concepts_Unique_Questions|Domain 1 Master Bank]] (Cloud Concepts)
+- [[Domain_2_Security_and_Compliance_Unique_Questions|Domain 2 Master Bank]] (Security & Compliance)
+- [[Domain_3_Cloud_Technology_and_Services_Unique_Questions|Domain 3 Master Bank]] (Technology & Services)
+- [[Domain_4_Billing_Pricing_and_Support_Unique_Questions|Domain 4 Master Bank]] (Billing & Pricing)
 
