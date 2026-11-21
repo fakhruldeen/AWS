@@ -298,7 +298,7 @@ def find_tricks(text: str) -> List[Dict[str, Any]]:
                 break
     return matches
 
-def locate_bank(cert: str, custom_path: Optional[str] = None, dump_2026: bool = False) -> Path:
+def locate_bank(cert: str, custom_path: Optional[str] = None, release_2026: bool = False) -> Path:
     if custom_path:
         p = Path(custom_path)
         if p.is_file():
@@ -306,11 +306,11 @@ def locate_bank(cert: str, custom_path: Optional[str] = None, dump_2026: bool = 
         raise FileNotFoundError(f"Custom question bank not found: {custom_path}")
 
     work_repo = Path(__file__).resolve().parent.parent
-    local_clf_dump = work_repo / "Cloud/Practitioner/CLF-C02/phase4_step11_revision_questions/CLF_C02_November_2026_Dump_393Q.json"
+    local_clf_release = work_repo / "Cloud/Practitioner/CLF-C02/phase4_step11_revision_questions/CLF_C02_November_2026_Release_393Q.json"
 
-    if dump_2026 and cert == "CLF":
-        if local_clf_dump.is_file():
-            return local_clf_dump
+    if release_2026 and cert == "CLF":
+        if local_clf_release.is_file():
+            return local_clf_release
 
     env_vault = os.environ.get("AWS_BRAIN_PATH")
     search_paths = [Path(env_vault)] if env_vault else []
@@ -330,8 +330,8 @@ def locate_bank(cert: str, custom_path: Optional[str] = None, dump_2026: bool = 
             return target
 
     # Local fallback for self-sufficiency
-    if cert == "CLF" and local_clf_dump.is_file():
-        return local_clf_dump
+    if cert == "CLF" and local_clf_release.is_file():
+        return local_clf_release
 
     raise FileNotFoundError(
         f"Could not locate master question bank for {cert}. "
@@ -483,7 +483,7 @@ def display_question(
     if show_meta:
         print(f"{Colors.DIM}Verified Sources ({consensus}): {', '.join(sources[:4])}{'...' if len(sources)>4 else ''}{Colors.RESET}")
     if any("2026" in str(s).lower() or "actual" in str(s).lower() or "q393" in str(s).lower() for s in sources):
-        print(f"{Colors.YELLOW}{Colors.BOLD}🔥 NOVEMBER 2026 AUTHENTIC EXAM DUMP ITEM — Candidate Recall Pool (393Q){Colors.RESET}")
+        print(f"{Colors.YELLOW}{Colors.BOLD}🔥 NOVEMBER 2026 AUTHENTIC EXAM RELEASE — Candidate Practice Pool (393Q){Colors.RESET}")
     elif any("examtopics" in str(s).lower() for s in sources):
         print(f"{Colors.GREEN}{Colors.BOLD}⭐ AUTHENTIC EXAMTOPICS QUESTION — Verified Community Discussion Consensus{Colors.RESET}")
     if show_tricks:
@@ -833,7 +833,7 @@ Examples:
     parser.add_argument("--count", "-n", type=int, default=None, help="Number of questions to test (default: 10 for practice/drill, 65 for mock)")
     parser.add_argument("--tricks", action="store_true", help="Enable Exam Decryption & Mnemonic Mode (highlights trigger keywords and reveals memory pegs)")
     parser.add_argument("--examtopics", action="store_true", help="Filter and focus exclusively on authentic ExamTopics community discussion questions")
-    parser.add_argument("--dump-2026", "--actual-dump", dest="dump_2026", action="store_true", help="Filter and focus exclusively on authentic November 2026 393-question exam dump")
+    parser.add_argument("--release-2026", "--nov-2026", dest="release_2026", action="store_true", help="Filter and focus exclusively on authentic November 2026 393-question exam practice suite")
     parser.add_argument("--bank-path", default=None, help="Custom path to question bank JSON file")
     parser.add_argument("--history-file", default=str(Path.home() / ".aws_revision_history.json"), help="Path to weakness tracking history file")
     parser.add_argument("--no-color", action="store_true", help="Disable colored terminal output")
@@ -857,7 +857,7 @@ Examples:
             print(f"{Colors.GREEN}No recorded weaknesses for {args.cert}! Try practicing other domains.{Colors.RESET}")
             return
 
-        bank_file = locate_bank(args.cert, args.bank_path, dump_2026=args.dump_2026)
+        bank_file = locate_bank(args.cert, args.bank_path, release_2026=args.release_2026)
         all_q = load_questions(bank_file)
         filtered = filter_questions(all_q, weak_ids=set(weak_cert_ids), examtopics_only=args.examtopics)
         print(f"\n{Colors.YELLOW}{Colors.BOLD}🔍 Found {len(filtered)} previously missed question(s) in weakness history.{Colors.RESET}")
@@ -865,7 +865,7 @@ Examples:
         return
 
     # Locate and load bank
-    bank_file = locate_bank(args.cert, args.bank_path, dump_2026=args.dump_2026)
+    bank_file = locate_bank(args.cert, args.bank_path, release_2026=args.release_2026)
     all_questions = load_questions(bank_file)
 
     if args.mode == "mock":
