@@ -44,6 +44,8 @@ Thumbs.db
 *.log
 downloads/
 **/downloads/
+dist/
+**/dist/
 __pycache__/
 **/__pycache__/
 

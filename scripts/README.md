@@ -15,6 +15,7 @@ This directory houses the automation, exam simulation, content synchronization, 
 | **`generate_community_focus_sets.py`** | Generates curated high-yield question subsets based on community discussion consensus. | `python3 scripts/generate_community_focus_sets.py` |
 | **`sync_community_practice_pool.sh`** | End-to-end orchestration shell script that synchronizes community question pools across tracks. | `bash scripts/sync_community_practice_pool.sh` |
 | **`populate_associate_phases.py`** | Initializes and harmonizes the 12-step pedagogical phase directories across Associate tracks. | `python3 scripts/populate_associate_phases.py` |
+| **`build_delivery_artifacts.py`** | Compiles course materials into printable PDF student handbooks, ePub e-books, and Marp slide decks (PDF & HTML). | `python3 scripts/build_delivery_artifacts.py --cert ALL` |
 
 ---
 
@@ -79,6 +80,33 @@ The runner tracks missed questions across runs and lets you drill exclusively on
 python3 scripts/aws_revision_runner.py --cert CLF --mode weakness
 python3 scripts/aws_revision_runner.py --cert SAA --mode weakness
 ```
+
+---
+
+## 📦 Static Delivery Artifacts Packaging Guide
+
+The **`build_delivery_artifacts.py`** compiles the workspace into standalone, printable, and offline-capable delivery assets under `dist/`:
+
+### 1. Compile Everything (Both Certifications, All Formats)
+```bash
+python3 scripts/build_delivery_artifacts.py --cert ALL --target all --format all
+```
+
+### 2. Compile Specific Handbooks or Slide Decks
+```bash
+# Compile only CLF-C02 Student Handbook (PDF & ePub)
+python3 scripts/build_delivery_artifacts.py --cert CLF --target handbook --format all
+
+# Compile only AIF-C01 Marp Slide Decks (Interactive HTML & PDF)
+python3 scripts/build_delivery_artifacts.py --cert AIF --target slides --format all
+```
+
+### 3. Distribution Tree & Manifest
+Artifacts are emitted to `dist/` with cryptographic SHA256 checksums in `dist/MANIFEST.txt`:
+- `dist/CLF-C02/handbook/` (PDF master textbook, ePub e-reader, HTML)
+- `dist/CLF-C02/slides/` (5 Marp slide modules in PDF & HTML)
+- `dist/AIF-C01/handbook/` (PDF master textbook, ePub e-reader, HTML)
+- `dist/AIF-C01/slides/` (5 Marp slide modules in PDF & HTML)
 
 ---
 
