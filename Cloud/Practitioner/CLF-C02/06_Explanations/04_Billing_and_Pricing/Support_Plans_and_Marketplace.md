@@ -1,179 +1,278 @@
-# AWS Support Plans
+# AWS Support Plans & AWS Marketplace
 
-> **Category:** Billing & Cost Management / Customer Support  
-> **Service Type:** Technical Assistance, SLA Response Times & Architectural Guidance  
-> **Key Certifications:** AWS Certified Cloud Practitioner (CLF-C02) — High Yield Topic!
+> **Knowledge Area:** Billing and Pricing (Domain 4.3 & 4.4)  
+> **Relevant Certifications:** [CLF-C02](../../01_Syllabus/CLF-C02_Master_Blueprint.md), SAA-C03, SOA-C02  
+> **Tags:** `#aws/billing` `#support-plans` `#marketplace` `#tam` `#trusted-advisor` `#clf-c02`
 
 ---
 
 ## 💡 The Real-World Analogy (ELI5)
 
-> **Healthcare Coverage Tiers:**
-> - **Basic Support (Free):** The emergency first-aid kit in your home cabinet. You can read the instruction manual and call billing if your card is charged wrongly, but you cannot call a nurse.
-> - **Developer Support (9/mo):** Telehealth clinic during business hours. 1 primary contact can ask general guidance questions with a 12–24 hour callback time.
-> - **Business Support (00/mo+):** 24/7 urgent care emergency room. Unlimited contacts can call or live chat anytime; doctors arrive within 1 hour if your production system is down. Full Trusted Advisor health checks.
-> - **Enterprise Support (5,000/mo+):** A personal, dedicated concierge doctor (Technical Account Manager - TAM) living on your property who reviews your architecture, participates in disaster game days, and rushes into the room in under 15 minutes if a crisis occurs.
+> **Healthcare & Medical Coverage Tiers:**
+> - **Basic Support (Free for Everyone):** The emergency first-aid kit inside your bathroom cabinet. You can read the printed instruction leaflet (AWS documentation) and call customer service if your pharmacy card was billed incorrectly, but there is no nurse or doctor available to answer medical questions.
+> - **Developer Support (\$29/month):** An online telehealth messaging clinic open strictly during normal business hours. One primary designated person can email non-urgent questions to a medical assistant with a 12-to-24 hour callback response window.
+> - **Business Support (\$100/month+):** A 24/7 emergency urgent care clinic. An unlimited number of staff members can call or live-chat with certified doctors anytime day or night. If a critical production limb is broken, doctors guarantee a response in **under 1 hour**, and you receive a comprehensive full-body health scan (all 115+ AWS Trusted Advisor checks).
+> - **Enterprise Support (\$15,000/month+):** A dedicated, personal concierge physician (Technical Account Manager - TAM) assigned exclusively to your family. The TAM reviews your diet and exercise habits (architectural reviews), participates in emergency preparedness drills, assists with high-profile event planning, and if a life-threatening crisis occurs, arrives at your bedside in **under 15 minutes**.
+> - **AWS Marketplace:** An authorized luxury medical supply catalog and digital superstore where you can purchase specialized third-party surgical tools, software licenses, and pre-built medical kits from outside vendors, with all charges consolidated directly onto your regular hospital invoice.
 
 ---
 
-## 1. Overview & Comparison Matrix
+## 1. First-Principles Computer Science & Operational Support Mechanics
 
-AWS provides four primary commercial support tiers designed to meet varying business needs, from hobbyists and experimenters to mission-critical global enterprises.
+Operational support in enterprise systems engineering is governed by the mathematical relationship between **Mean Time to Recovery (MTTR)** and financial downtime loss:
 
 ```mermaid
 flowchart LR
-    subgraph Tiers["Support Plan Tiers"]
-        Basic["Basic (Free for all accounts)"]
-        Dev["Developer ($29/mo or 3%)"]
-        Biz["Business ($100/mo or 10%)"]
-        EntOnRamp["Enterprise On-Ramp ($5,500/mo or 10%)"]
-        Ent["Enterprise ($15,000/mo or 10%)"]
-    end
+    Outage["💥 System Outage Detected"] --> Triage["1. Ticket Creation & Severity Assignment"]
+    Triage --> Response["2. Vendor Engineering Engagement (SLA Clock)"]
+    Response --> Diagnosis["3. Root-Cause Analysis & Fix Deployment"]
+    Diagnosis --> Recovery["✅ System Restored to Health"]
     
-    Basic -->|"No Tech Support Cases"| B_feat["Docs, Whitepapers, Billing Support, 7 Core TA Checks"]
-    Dev -->|"Email (Business Hours)"| D_feat["General Guidance < 24h, System Impaired < 12h"]
-    Biz -->|"24/7 Phone, Chat, Email"| BZ_feat["Prod Down < 1h, Prod Impaired < 4h, Full TA, Infrastructure Event Mgt (fee)"]
-    Ent -->|"24/7 Phone, Chat, Email + TAM"| E_feat["Business-Critical Down < 15 min, Dedicated TAM, Concierge, IEM included"]
+    Triage -.->|"SLA Window: < 15 min (Enterprise) vs < 1 hr (Business)"| Response
 ```
 
----
+### 1.1 The Economics of Outage Cost vs. Support Tier Pricing
+For an enterprise processing millions of dollars per hour in digital transactions:
+$$\text{Cost of Downtime} = \text{MTTR (Hours)} \times \text{Hourly Business Revenue Loss}$$
+* If an e-commerce platform generates $\$120{,}000/\text{hour}$ in revenue, a 1-hour delay in engaging support engineers costs $\$120{,}000$.
+* Spending $\$15{,}000/\text{month}$ on **Enterprise Support** to guarantee a **$< 15\text{-minute}$ response SLA** from a designated Technical Account Manager (TAM) who already understands your system architecture provides immediate, positive return on investment during a single major incident.
 
-## 2. Detailed Breakdown of Each Plan
-
-| Feature | Basic | Developer | Business | Enterprise On-Ramp | Enterprise |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Monthly Cost** | Free ($0) | Starting at $29/mo (or 3% of spend) | Starting at $100/mo (or sliding %: 10% to 3%) | Starting at $5,500/mo (or 10% of spend) | Starting at $15,000/mo (or sliding %: 10% to 3%) |
-| **Technical Support Access** | **None** (Customer service & billing inquiries only) | Cloud Support Associates (Business hours via email) | Cloud Support Engineers (24/7 via phone, web chat, and email) | Cloud Support Engineers (24/7 via phone, web chat, and email) | Cloud Support Engineers (24/7 via phone, web chat, and email) |
-| **Number of Case Contacts** | Unlimited billing contacts | 1 primary contact | Unlimited contacts / IAM users | Unlimited contacts | Unlimited contacts |
-| **AWS Trusted Advisor** | 7 core security & quota checks | 7 core security & quota checks | **Full checks** (500+ checks across all 5 pillars) | **Full checks** | **Full checks** |
-| **Technical Account Manager (TAM)** | None | None | None | **Pool of TAMs** | **Designated TAM** (Named individual) |
-| **Concierge Support Team** | None | None | None | **Yes** (Billing & account specialists) | **Yes** (Billing & account specialists) |
-| **Infrastructure Event Management (IEM)** | None | None | Available for additional fee | 1 event included per year | **Included** (Architecture planning for launches) |
+### 1.2 Programmatic Incident Management via AWS Support API
+* Under the **Business** and **Enterprise** support plans, engineering teams gain programmatic access to the **AWS Support API**.
+* This enables integrating AWS support case management directly into corporate ticketing workflows (e.g., automatically generating AWS support tickets when Datadog, PagerDuty, or ServiceNow alerts trigger).
 
 ---
 
-## 3. SLA Case Severity Response Times
+## 2. Historical IT Pain Points: Multi-Vendor Finger Pointing
 
-| Severity Level | Definition | Basic | Developer | Business | Enterprise On-Ramp | Enterprise |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **General Guidance** | How-to questions, service recommendations. | N/A | **< 24 hours** | **< 24 hours** | **< 24 hours** | **< 24 hours** |
-| **System Impaired** | Non-critical functions abnormal. | N/A | **< 12 hours** | **< 12 hours** | **< 12 hours** | **< 12 hours** |
-| **Production System Impaired** | Core business application partially degraded. | N/A | N/A | **< 4 hours** | **< 4 hours** | **< 4 hours** |
-| **Production System Down** | Workload completely offline for users. | N/A | N/A | **< 1 hour** | **< 1 hour** | **< 1 hour** |
-| **Business-Critical System Down** | Mission-critical operations stopped; business revenue lost. | N/A | N/A | N/A | **< 30 minutes** | **< 15 minutes** |
+Before unified cloud support and digital marketplace procurement, managing multi-vendor IT infrastructure was an operational quagmire:
 
----
-
-## 4. Specialized Roles in Support Plans
-
-### Technical Account Manager (TAM)
-- **Role:** Direct technical advisor and advocate within AWS.
-- **Activities:** Conducts architectural reviews, coordinates Well-Architected Framework reviews, oversees incident escalation, and assists with proactive operational planning.
-- **Availability:** Only included in **Enterprise Support** (Dedicated/Designated) and **Enterprise On-Ramp** (Pool of TAMs).
-
-### AWS Concierge Support
-- A specialized team of billing and account experts assigned to Enterprise and Enterprise On-Ramp customers to answer billing inquiries, consolidate invoicing, and assist with account migrations.
-
-### Infrastructure Event Management (IEM)
-- Structured program where AWS engineers and TAMs prepare your architecture for high-traffic events (e.g., Black Friday, Super Bowl, national product launches), ensuring capacity reservations and active 24/7 monitoring.
+| Traditional Support Challenge | Traditional On-Premises Reality | AWS Support & Marketplace Paradigm |
+|---|---|---|
+| **Multi-Vendor Finger Pointing** | During a database outage, the hardware vendor blamed the OS vendor, the OS vendor blamed the SAN storage vendor, and the SAN vendor blamed the database vendor. | **Single Point of Escalation**. AWS manages the physical facilities, hypervisors, and managed services; a **Technical Account Manager (TAM)** coordinates across all internal AWS engineering teams. |
+| **Bizarre Support Licensing Contracts** | Enterprises negotiated separate, rigid 3-year support maintenance contracts with 15 disparate vendors, paying 20% annual maintenance fees whether cases were opened or not. | **Flexible Monthly Billing**. AWS Support is billed monthly as a percentage of actual monthly AWS consumption; customers can upgrade or downgrade tiers as workload requirements change. |
+| **Procurement Red Tape for Third-Party Software** | Purchasing third-party security software or operating system licenses required 3-month legal procurement, credit checks, vendor onboarding, and separate invoices. | **AWS Marketplace Consolidated Billing**. Deploy third-party AMIs and SaaS products in 1 click; charges are billed directly on your monthly AWS invoice. |
+| **Surprise Traffic Collapse on Launch Day** | Companies launched major public campaigns (e.g., Super Bowl commercial or Black Friday sale) without vendor coordination, resulting in catastrophic capacity crashes. | **Infrastructure Event Management (IEM)**. AWS engineers and TAMs provide structured architecture reviews, capacity reservations, and 24/7 real-time monitoring during major events. |
 
 ---
 
-## 5. Exam Essentials (CLF-C02 Tips)
+## 3. Deep-Dive: The 5 AWS Support Plan Tiers
 
-> [!IMPORTANT]
-> - *Who provides 24/7 access to Cloud Support Engineers via phone?* **Business Support** and higher (Developer is business hours email only).
-> - *What is the response time for a Production System Down?* **< 1 hour** (Business & Enterprise).
-> - *What is the response time for Business-Critical System Down?* **< 15 minutes** (Enterprise Support only; 30 min for Enterprise On-Ramp).
-> - *Which plan includes a designated Technical Account Manager (TAM)?* **Enterprise Support**.
-> - *Can you open technical support cases on the Basic Plan?* **NO**. Only billing, account management, and service quota requests.
+AWS provides four primary commercial support plans (plus Enterprise On-Ramp) tailored to different operational maturity levels:
+
+```mermaid
+graph TD
+    subgraph SupportTiers ["AWS Support Plan Hierarchy"]
+        Basic["1. Basic Support<br/>• 100% FREE for all accounts<br/>• Zero technical cases (Billing/Account only)<br/>• 7 Core Trusted Advisor checks"]
+        
+        Dev["2. Developer Support ($29/mo or 3%)<br/>• Non-production / experimental workloads<br/>• Business-hours email support (1 primary contact)<br/>• General guidance < 24h, System impaired < 12h"]
+        
+        Biz["3. Business Support ($100/mo or 10%)<br/>• Production workloads<br/>• 24/7 phone, web chat, email (Unlimited contacts)<br/>• Production Down < 1h, Full Trusted Advisor checks"]
+        
+        EntOnRamp["4. Enterprise On-Ramp ($5,500/mo or 10%)<br/>• Business-critical workloads<br/>• Pool of TAMs; Business-critical down < 30m<br/>• 1 IEM event per year included"]
+        
+        Ent["5. Enterprise Support ($15,000/mo or 10%)<br/>• Mission-critical enterprise workloads<br/>• Designated Technical Account Manager (TAM)<br/>• Business-critical down < 15m; Concierge; IEM included"]
+    end
+```
+
+### 3.1 Basic Support (Free for All Accounts)
+* **Cost:** **\$0.00** (Included automatically with every active AWS account).
+* **Technical Case Access:** **NONE**. You cannot open technical troubleshooting tickets.
+* **Included Services:** 24/7 access to customer service and billing inquiries; access to official documentation, whitepapers, and AWS re:Post community forums; access to the **7 core AWS Trusted Advisor checks** and AWS Health Dashboard.
+
+### 3.2 Developer Support
+* **Cost:** Starts at **\$29/month** (or 3% of monthly AWS usage).
+* **Target Audience:** Developers experimenting with AWS or running non-production test/development environments.
+* **Support Channel:** Cloud Support Associates accessible **via email during local business hours**.
+* **Contact Limit:** **1 primary contact** authorized to open cases.
+* **Response SLAs:** General Guidance $< 24\text{ hours}$; System Impaired $< 12\text{ hours}$.
+
+### 3.3 Business Support
+* **Cost:** Starts at **\$100/month** (tiered sliding scale: 10% down to 3% as usage scales).
+* **Target Audience:** Organizations running **production workloads** on AWS.
+* **Support Channel:** 24/7 access to Cloud Support Engineers via **phone, live web chat, and email**.
+* **Contact Limit:** **Unlimited contacts** (any IAM user with support permissions).
+* **Key Features:**
+  - **Full AWS Trusted Advisor Checks:** Unlocks all 115+ checks across Cost, Security, Fault Tolerance, Performance, and Quotas.
+  - **Production System Down SLA:** Guaranteed response in **$< 1\text{ hour}$**.
+  - **AWS Support API:** Programmatic case management.
+  - **Infrastructure Event Management (IEM):** Available for an additional fee.
+
+### 3.4 Enterprise Support
+* **Cost:** Starts at **\$15,000/month** (tiered sliding scale based on spend).
+* **Target Audience:** Enterprises running **mission-critical business workloads**.
+* **Specialized Key Roles & Programs:**
+  1. **Designated Technical Account Manager (TAM):** A named, dedicated senior AWS engineer assigned to your account who provides proactive architectural guidance, coordinates Well-Architected reviews, and acts as your direct advocate inside AWS.
+  2. **AWS Concierge Support Team:** Dedicated billing and account specialists who assist with complex enterprise billing structures, consolidated invoice analysis, and account reorganizations.
+  3. **Infrastructure Event Management (IEM):** **Included at no extra fee**. Pre-event architectural reviews, capacity reservations, and 24/7 real-time operational bridge monitoring during high-visibility business events (e.g., Black Friday, product launches).
+  4. **Business-Critical System Down SLA:** Guaranteed rapid response in **$< 15\text{ minutes}$**.
+
 ---
 
-## 7. Post-Topic Question Simulation & Retention Check
+## 4. Case Severity Levels & SLA Response Times
 
-Test your understanding of AWS Support Plans & Marketplace with these 5 exam-style questions:
-
-## 🎯 Exam Traps & 'Clue-to-Answer' Trigger Words
-
-| Support Plan Feature | Developer | Business | Enterprise On-Ramp | Enterprise |
-| :--- | :---: | :---: | :---: | :---: |
-| **Technical Account Manager (TAM)** | No | No | Pool of TAMs | **Dedicated TAM** |
-| **Critical System Down SLA** | None | < 1 hr (Production down) | < 30 min (Business-critical) | **< 15 min** (Business-critical) |
-| **Who can open support cases?** | 1 primary contact | Unlimited contacts | Unlimited contacts | Unlimited contacts |
-| **Support Channels** | Business hours email | 24/7 phone, web, chat | 24/7 phone, web, chat | 24/7 phone, web, chat |
-| **Infrastructure Event Management (IEM)** | No | Available for fee | 1 event / year | **Included** |
-| **AWS Trusted Advisor** | 7 core checks | **Full 115+ checks** | **Full 115+ checks** | **Full 115+ checks** |
+| Severity Classification | Definition / Impact | Developer | Business | Enterprise On-Ramp | Enterprise |
+|---|---|:---:|:---:|:---:|:---:|
+| **General Guidance** | General how-to questions, service recommendations | **< 24 hours** | **< 24 hours** | **< 24 hours** | **< 24 hours** |
+| **System Impaired** | Non-critical functions abnormal; workaround exists | **< 12 hours** | **< 12 hours** | **< 12 hours** | **< 12 hours** |
+| **Production System Impaired** | Production application partially degraded | N/A | **< 4 hours** | **< 4 hours** | **< 4 hours** |
+| **Production System Down** | Production application completely offline for users | N/A | **< 1 hour** | **< 1 hour** | **< 1 hour** |
+| **Business-Critical System Down** | Mission-critical business operations stopped; catastrophic revenue loss | N/A | N/A | **< 30 minutes** | **< 15 minutes** |
 
 ---
+
+## 5. AWS Marketplace: Digital Catalog & Software Procurement
+
+```mermaid
+flowchart LR
+    Vendor["Independent Software Vendor (ISV)<br/>(e.g., Palo Alto, Fortinet, Datadog, Snowflake)"] --> List["Publish to AWS Marketplace"]
+    List --> Catalog["AWS Marketplace Digital Superstore<br/>(10,000+ Software Listings)"]
+    Catalog --> Customer["Customer Deploys via 1-Click<br/>(AMI, CloudFormation, Container, SaaS)"]
+    Customer --> Bill["Consolidated Monthly AWS Invoice<br/>(Single vendor payment)"]
+```
+
+* **What it is:** A curated digital catalog with thousands of software listings from independent software vendors (ISVs) that makes it easy to find, test, buy, and deploy software that runs on AWS.
+* **Delivery Methods:**
+  - *Amazon Machine Images (AMIs):* Pre-configured virtual machines (e.g., hardened firewalls, enterprise Linux).
+  - *Containers:* Ready-to-deploy Docker containers for Amazon ECS or EKS.
+  - *Software-as-a-Service (SaaS):* Direct SaaS subscriptions integrated via API.
+* **Key Commercial Benefits:**
+  1. **Consolidated Billing:** Software subscription and usage costs appear directly as line items on your standard monthly AWS bill, eliminating the need to onboard separate third-party vendor accounts.
+  2. **Private Marketplace:** Allows enterprise administrators to create a customized, curated catalog of approved third-party software that employees are authorized to procure, enforcing governance.
+
+---
+
+## 6. Multi-Dimensional Support Plan Comparison Matrix
+
+| Dimension | Basic Support | Developer Support | Business Support | Enterprise Support |
+|---|---|---|---|---|
+| **Monthly Starting Cost** | **Free ($0)** | **\$29/month** (or 3%) | **\$100/month** (or 10%-3%) | **\$15,000/month** (or 10%-3%) |
+| **Technical Support Hours** | **None** | Business hours only | **24/7 / 365** | **24/7 / 365** |
+| **Technical Support Channels** | Customer service / billing only | **Email only** | **Phone, Web Chat, Email** | **Phone, Web Chat, Email** |
+| **Who Can Open Cases?** | Unlimited billing contacts | **1 primary contact** | **Unlimited contacts (IAM)** | **Unlimited contacts (IAM)** |
+| **Trusted Advisor Access** | 7 core security & quota checks | 7 core security & quota checks | **Full 115+ checks (All 5 pillars)** | **Full 115+ checks (All 5 pillars)** |
+| **Fastest Response SLA** | N/A | $< 12\text{ hours}$ (System impaired) | **$< 1\text{ hour}$ (Production down)** | **$< 15\text{ minutes}$ (Critical down)** |
+| **Technical Account Manager?** | None | None | None | **Designated TAM (Named individual)**|
+| **Concierge Billing Team?** | None | None | None | **Included** |
+| **Infrastructure Event Mgt (IEM)?**| None | None | Available for extra fee | **Included at zero extra cost** |
+
+---
+
+## 7. Exam Traps & 'Clue-to-Answer' Decryption
+
+| Question Scenario Keyword | Target Support Plan / Feature | Exam Trap & Distractor Explanation |
+|---|---|---|
+| *"Lowest tier providing 24/7 technical phone, email, and chat access"* | **Business Support** | Trap: Do not choose Developer Support. Developer Support provides email access during business hours only. |
+| *"Guaranteed response time under 15 minutes for business-critical outages"* | **Enterprise Support** | Trap: Do not choose Business Support. Business Support provides a 1-hour response for production down; only Enterprise provides 15 minutes. |
+| *"Designated Technical Account Manager (TAM) to guide architecture and operations"* | **Enterprise Support** | Trap: Do not choose Business Support. A dedicated TAM is exclusive to Enterprise Support (Enterprise On-Ramp provides a pool). |
+| *"Access to all 5 categories of AWS Trusted Advisor checks at lowest cost"* | **Business Support** | Trap: Basic and Developer tiers only provide 7 core checks; Business Support is the lowest tier with full checks. |
+| *"Can you open technical troubleshooting tickets on the Basic Support plan?"* | **NO (Billing and account cases only)** | Trap: Basic Support has zero technical case support. |
+| *"Curated digital software catalog allowing purchase of third-party software on AWS bill"* | **AWS Marketplace** | Trap: Do not choose AWS Service Catalog. Service Catalog organizes internal templates; Marketplace purchases external third-party software. |
+| *"Assistance and proactive capacity planning for major business launch events"* | **Infrastructure Event Management (IEM)** | Trap: Included for free in Enterprise; available for an additional fee in Business Support. |
+
+---
+
+## 8. Post-Topic Question Simulation & Retention Check
 
 ### Question 1
-**Which AWS Support plan is the lowest-tier plan that provides 24/7 access to Cloud Support Engineers via phone, email, and chat for an unlimited number of contacts?**
+**Which AWS Support plan is the lowest-tier plan that provides 24/7 access to Cloud Support Engineers via phone, email, and live web chat for an unlimited number of contacts?**
 - A) Developer Support
 - B) Business Support
 - C) Basic Support
 - D) Enterprise On-Ramp
 
 <details>
-<summary><b>Click to View Answer & Explanation</b></summary>
+<summary><b>Click to View Answer & Detailed Distractor Analysis</b></summary>
 
-**Correct Answer:** **B) Business Support**  
-- **Why it's correct:** The Business Support plan is the entry tier for production workloads, offering 24/7 phone/chat/email technical support with 1-hour response times for production system outages and full access to all AWS Trusted Advisor checks.
-- **Distractor Analysis:**
-  - *A is incorrect:* Developer Support provides business-hours email support only for a single primary contact.
+**Correct Answer:** **B) Business Support**
+
+* **Why it's correct:** The Business Support plan is the entry-level tier for production workloads, offering 24/7 technical support access to Cloud Support Engineers via phone, email, and web chat for an unlimited number of IAM users, along with a 1-hour response SLA for production system outages and access to the full suite of AWS Trusted Advisor checks.
+* **Distractor Analysis:**
+  - *A is incorrect:* Developer Support provides technical support via email only during local business hours for a single primary contact.
+  - *C is incorrect:* Basic Support does not include any technical support case access (customer service and billing inquiries only).
+  - *D is incorrect:* Enterprise On-Ramp provides 24/7 access, but costs a minimum of $5,500/month, making Business Support ($100/month) the lowest-cost tier with this capability.
 </details>
 
+---
+
 ### Question 2
-**An enterprise running mission-critical workloads on AWS requires a designated Technical Account Manager (TAM) to provide proactive architectural guidance and operational reviews. Which support plan must they purchase?**
+**An enterprise running mission-critical workloads on AWS requires a designated Technical Account Manager (TAM) to conduct proactive architectural reviews, assist with operational planning, and coordinate expert resources. Which support plan must they purchase?**
 - A) Business Support
 - B) Enterprise Support
 - C) Developer Support
 - D) Basic Support
 
 <details>
-<summary><b>Click to View Answer & Explanation</b></summary>
+<summary><b>Click to View Answer & Detailed Distractor Analysis</b></summary>
 
-**Correct Answer:** **B) Enterprise Support**  
-- **Why it's correct:** The Enterprise Support plan includes a dedicated Technical Account Manager (TAM), consultative architectural reviews, Infrastructure Event Management (IEM), and a 15-minute response SLA for business-critical outages.
+**Correct Answer:** **B) Enterprise Support**
+
+* **Why it's correct:** The Enterprise Support plan includes a dedicated, designated Technical Account Manager (TAM) who serves as the customer's primary technical advisor, conducts Well-Architected reviews, oversees incident escalations, and assists with proactive operational planning.
+* **Distractor Analysis:**
+  - *A is incorrect:* Business Support does not provide a Technical Account Manager (TAM).
+  - *C is incorrect:* Developer Support does not provide a Technical Account Manager (TAM).
+  - *D is incorrect:* Basic Support is the free tier and provides zero technical advisory services.
 </details>
 
+---
+
 ### Question 3
-**What response time SLA does the AWS Enterprise Support plan guarantee for a "Business-Critical System Down" support case?**
+**What response time SLA does the AWS Enterprise Support plan guarantee for a declared "Business-Critical System Down" support case?**
 - A) Under 15 minutes
 - B) Under 1 hour
 - C) Under 4 hours
 - D) Under 24 hours
 
 <details>
-<summary><b>Click to View Answer & Explanation</b></summary>
+<summary><b>Click to View Answer & Detailed Distractor Analysis</b></summary>
 
-**Correct Answer:** **A) Under 15 minutes**  
-- **Why it's correct:** Enterprise Support provides a guaranteed response time of less than 15 minutes for business-critical outages (Enterprise On-Ramp guarantees < 30 minutes).
+**Correct Answer:** **A) Under 15 minutes**
+
+* **Why it's correct:** Under the AWS Enterprise Support plan, when a customer opens a ticket classified as "Business-Critical System Down" (mission-critical business operations stopped), AWS guarantees a response from a senior engineer in **less than 15 minutes**, 24 hours a day, 7 days a week.
+* **Distractor Analysis:**
+  - *B is incorrect:* Under 1 hour is the response SLA for "Production System Down" under the Business Support plan.
+  - *C is incorrect:* Under 4 hours is the response SLA for "Production System Impaired" under Business and Enterprise plans.
+  - *D is incorrect:* Under 24 hours is the response SLA for "General Guidance" across Developer, Business, and Enterprise plans.
 </details>
+
+---
 
 ### Question 4
-**What is AWS Marketplace?**
-- A) A physical hardware store for purchasing AWS Snowball devices
-- B) A digital catalog featuring thousands of software listings from third-party independent software vendors (ISVs) that run on AWS with integrated billing
-- C) A retail website for purchasing Amazon consumer electronics
-- D) A forum for hiring freelance cloud consultants
+**What is the primary function of AWS Marketplace?**
+- A) A physical hardware store for purchasing and renting AWS Snowball appliances
+- B) A curated digital software catalog that allows customers to find, test, buy, and deploy thousands of third-party software products with integrated billing on their AWS invoice
+- C) An e-commerce website for purchasing Amazon consumer retail electronics
+- D) A freelance directory for hiring independent cloud certified consultants
 
 <details>
-<summary><b>Click to View Answer & Explanation</b></summary>
+<summary><b>Click to View Answer & Detailed Distractor Analysis</b></summary>
 
-**Correct Answer:** **B) A digital catalog featuring thousands of software listings from third-party independent software vendors (ISVs) that run on AWS with integrated billing**  
-- **Why it's correct:** AWS Marketplace is an online store where customers can find, test, buy, and deploy third-party software, AMIs, containers, and SaaS solutions with charges appearing directly on their AWS invoice.
+**Correct Answer:** **B) A curated digital software catalog that allows customers to find, test, buy, and deploy thousands of third-party software products with integrated billing on their AWS invoice**
+
+* **Why it's correct:** AWS Marketplace is an online digital software store that enables customers to find, buy, and immediately deploy third-party software (such as Cisco virtual appliances, Datadog agents, Snowflake data platforms, and WordPress AMIs) that run on AWS, with all software subscription charges consolidated directly onto the customer's regular monthly AWS bill.
+* **Distractor Analysis:**
+  - *A is incorrect:* AWS Snowball appliances are ordered directly through the AWS Snow Family console, not via AWS Marketplace.
+  - *C is incorrect:* AWS Marketplace is strictly for enterprise cloud software, not consumer electronics.
+  - *D is incorrect:* Hiring certified cloud professionals is coordinated through AWS IQ or the AWS Partner Network (APN), not AWS Marketplace.
 </details>
 
+---
+
 ### Question 5
-**Which AWS support tier includes full access to all 5 categories of AWS Trusted Advisor best-practice checks at the lowest cost?**
+**Which AWS Support tier includes full access to all 5 categories of AWS Trusted Advisor best-practice recommendations at the lowest financial cost?**
 - A) Developer Support
 - B) Business Support
 - C) Basic Support
 - D) AWS Free Tier
 
 <details>
-<summary><b>Click to View Answer & Explanation</b></summary>
+<summary><b>Click to View Answer & Detailed Distractor Analysis</b></summary>
 
-**Correct Answer:** **B) Business Support**  
-- **Why it's correct:** While Basic and Developer plans only include the 7 core security and service quota checks, Business Support unlocks the full library of all Trusted Advisor checks across Cost Optimization, Security, Fault Tolerance, Performance, and Service Quotas.
+**Correct Answer:** **B) Business Support**
+
+* **Why it's correct:** While the Basic and Developer Support tiers only include access to the 7 core security and service quota checks, the **Business Support** plan (starting at $100/month) is the lowest-tier plan that unlocks the full library of 115+ automated AWS Trusted Advisor checks across all five pillars: Cost Optimization, Security, Fault Tolerance, Performance, and Service Quotas.
+* **Distractor Analysis:**
+  - *A is incorrect:* Developer Support only includes the 7 core security and service quota checks.
+  - *C is incorrect:* Basic Support only includes the 7 core security and service quota checks.
+  - *D is incorrect:* The AWS Free Tier provides limited free usage of AWS services, but does not alter the 7 core check limitation of Basic Support.
 </details>

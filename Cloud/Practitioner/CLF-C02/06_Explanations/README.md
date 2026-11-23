@@ -8,7 +8,7 @@
 ---
 
 ## 🗺️ Domain 1: Cloud Concepts (24% Exam Weight)
-*Master Practice Bank:* [**353 Unique Questions**](../../../Documents/Obsidian%20Vault/Brain/AWS/Questions_Bank/Unique_Revision_Banks/Cloud_Practitioner_CLF-C02/Domain_1_Cloud_Concepts_Unique_Questions.md)
+*Practice Bank:* [**Domain 1 Revision Questions**](../11_Practice_Exams/Domain_1_Cloud_Concepts_Revision_Questions.md)
 - [Cloud Economics & TCO](01_Cloud_Concepts/Cloud_Economics_and_TCO.md): CapEx vs OpEx, economies of scale, total cost of ownership.
 - [AWS Cloud Adoption Framework (CAF)](01_Cloud_Concepts/Cloud_Adoption_Framework_CAF.md): 6 perspectives (Business, People, Governance, Platform, Security, Operations).
 - [AWS Well-Architected Framework](01_Cloud_Concepts/Well_Architected_Framework.md): 6 pillars and architectural design principles.
@@ -19,7 +19,7 @@
 ---
 
 ## 🛡️ Domain 2: Security and Compliance (30% Exam Weight)
-*Master Practice Bank:* [**552 Unique Questions**](../../../Documents/Obsidian%20Vault/Brain/AWS/Questions_Bank/Unique_Revision_Banks/Cloud_Practitioner_CLF-C02/Domain_2_Security_and_Compliance_Unique_Questions.md)
+*Practice Bank:* [**Domain 2 Revision Questions**](../11_Practice_Exams/Domain_2_Security_and_Compliance_Revision_Questions.md)
 - [AWS IAM & Identity Governance](02_Security_and_Compliance/AWS_IAM_and_Identity.md): Users, Groups, Roles, Policies, Identity Center (SSO), MFA, Least Privilege.
 - [AWS WAF & AWS Shield](02_Security_and_Compliance/Shield_and_WAF.md): Layer 7 web filtering vs Layer 3/4 DDoS protection.
 - [Threat Detection & Compliance Services](02_Security_and_Compliance/Threat_Detection_and_Compliance.md): GuardDuty, Inspector, Macie, Security Hub, Detective, Artifact.
@@ -28,7 +28,7 @@
 ---
 
 ## ⚙️ Domain 3: Cloud Technology and Services (34% Exam Weight)
-*Master Practice Bank:* [**909 Unique Questions**](../../../Documents/Obsidian%20Vault/Brain/AWS/Questions_Bank/Unique_Revision_Banks/Cloud_Practitioner_CLF-C02/Domain_3_Cloud_Technology_and_Services_Unique_Questions.md)
+*Practice Bank:* [**Domain 3 Revision Questions**](../11_Practice_Exams/Domain_3_Cloud_Technology_and_Services_Revision_Questions.md)
 - [Compute Services](03_Technology_and_Services/Compute_Services.md): EC2 instance families and pricing models, AWS Lambda, ECS, EKS, Fargate.
 - [Storage Services](03_Technology_and_Services/Storage_Services.md): Amazon S3 storage classes & lifecycle, EBS volume types, Amazon EFS, Storage Gateway, Snow Family.
 - [Database Services](03_Technology_and_Services/Database_Services.md): Amazon RDS & Aurora (Multi-AZ vs Read Replicas), DynamoDB (NoSQL & DAX), ElastiCache, Specialty databases (Redshift, Neptune, DocumentDB, Timestream, QLDB).
@@ -40,7 +40,7 @@
 ---
 
 ## 💰 Domain 4: Billing, Pricing and Support (12% Exam Weight)
-*Master Practice Bank:* [**536 Unique Questions**](../../../Documents/Obsidian%20Vault/Brain/AWS/Questions_Bank/Unique_Revision_Banks/Cloud_Practitioner_CLF-C02/Domain_4_Billing_Pricing_and_Support_Unique_Questions.md)
+*Practice Bank:* [**Domain 4 Revision Questions**](../11_Practice_Exams/Domain_4_Billing_and_Pricing_Revision_Questions.md)
 - [Pricing Models & Cost Management Tools](04_Billing_and_Pricing/Pricing_Models_and_Billing_Tools.md): Pricing Calculator, AWS Budgets, Cost Explorer, Cost & Usage Reports (CUR), Cost Allocation Tags, Compute Optimizer.
 - [Support Plans & Software Procurement](04_Billing_and_Pricing/Support_Plans_and_Marketplace.md): Basic, Developer, Business, Enterprise Support plans, Technical Account Manager (TAM), AWS Marketplace.
 
