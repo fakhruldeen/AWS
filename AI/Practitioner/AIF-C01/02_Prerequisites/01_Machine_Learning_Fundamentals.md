@@ -239,7 +239,7 @@ flowchart TD
 | Metric | Full Name | Mathematical Formula | Key Characteristics & Exam Sweet Spot |
 | :--- | :--- | :---: | :--- |
 | **MAE** | Mean Absolute Error | $\frac{1}{n} \sum_{i=1}^n \|y_i - \hat{y}_i\|$ | Direct linear average error in natural units (e.g., dollars). Robust to extreme outliers. |
-| **MSE** | Mean Squared Error | $\frac{1}{n} \sum_{i=1}^n (y_i - \hat{y}_i)^2$ | Penalizes large errors heavily due to squaring. In squared units ($\$^{2}$). |
+| **MSE** | Mean Squared Error | $\frac{1}{n} \sum_{i=1}^n (y_i - \hat{y}_i)^2$ | Penalizes large errors heavily due to squaring. In squared units ($\text{units}^2$, e.g. dollars$^2$). |
 | **RMSE** | Root Mean Squared Error | $\sqrt{\frac{1}{n} \sum_{i=1}^n (y_i - \hat{y}_i)^2}$ | Returns squared error penalty back to natural units. Highly sensitive to outliers; default loss for regression. |
 | **$R^2$** | Coefficient of Determination | $1 - \frac{\sum (y_i - \hat{y}_i)^2}{\sum (y_i - \bar{y})^2}$ | Explains proportion of variance in $y$ captured by the model ($0 \le R^2 \le 1.0$). 1.0 = perfect prediction. |
 

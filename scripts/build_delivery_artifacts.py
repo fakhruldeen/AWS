@@ -364,9 +364,18 @@ AIF_MANIFEST = {
     ]
 }
 
+VENDOR_DIR = WORK_DIR / "scripts/vendor"
+
 def clean_markdown_for_compilation(text: str) -> str:
     """Pre-processes markdown to handle alerts, math, and custom layout tags."""
-    # Convert GitHub Alerts: > [!NOTE] etc.
+    # 1. Convert ```mermaid ... ``` to <pre class="mermaid">...</pre>
+    mermaid_pattern = re.compile(r"```mermaid\s*\n(.*?)\n```", re.DOTALL)
+    def repl_mermaid(m):
+        diagram = m.group(1).strip()
+        return f"\n\n<pre class=\"mermaid\">\n{diagram}\n</pre>\n\n"
+    text = mermaid_pattern.sub(repl_mermaid, text)
+
+    # 2. Convert GitHub Alerts: > [!NOTE] etc.
     alert_types = ["NOTE", "TIP", "IMPORTANT", "WARNING", "CAUTION"]
     for atype in alert_types:
         pattern = re.compile(rf'>\s*\[!{atype}\](.*?)(?=(\n\n|\Z))', re.DOTALL | re.IGNORECASE)
@@ -375,7 +384,7 @@ def clean_markdown_for_compilation(text: str) -> str:
             return f'<div class="callout callout-{atype.lower()}"><div class="callout-title">{atype}</div>\n\n{body}\n\n</div>'
         text = pattern.sub(replace_alert, text)
 
-    # Clean Obsidian wiki-links: [[TargetNote|Display Text]] -> Display Text, [[TargetNote]] -> TargetNote
+    # 3. Clean Obsidian wiki-links: [[TargetNote|Display Text]] -> Display Text, [[TargetNote]] -> TargetNote
     text = re.sub(r'\[\[(?:[^|\]]*\|)?([^\]]+)\]\]', r'**\1**', text)
 
     return text
@@ -439,27 +448,91 @@ def compile_handbook(manifest: Dict, format_choice: str):
 
         combined_html_parts.append(f'<div class="page-break"></div>\n{rendered_html}')
 
+    # Read vendor libraries for inlined offline rendering
+    katex_css = VENDOR_DIR.joinpath("katex.min.css").read_text(encoding="utf-8") if VENDOR_DIR.joinpath("katex.min.css").exists() else ""
+    katex_js = VENDOR_DIR.joinpath("katex.min.js").read_text(encoding="utf-8") if VENDOR_DIR.joinpath("katex.min.js").exists() else ""
+    auto_render_js = VENDOR_DIR.joinpath("auto-render.min.js").read_text(encoding="utf-8") if VENDOR_DIR.joinpath("auto-render.min.js").exists() else ""
+    mermaid_js = VENDOR_DIR.joinpath("mermaid.min.js").read_text(encoding="utf-8") if VENDOR_DIR.joinpath("mermaid.min.js").exists() else ""
+
     master_html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <title>{title}</title>
     <style>
+        {katex_css}
         {HANDBOOK_CSS}
+        .mermaid {{ display: flex; justify-content: center; margin: 25px 0; background: #ffffff; page-break-inside: avoid; break-inside: avoid; }}
+        .mermaid svg {{ max-width: 100%; height: auto; }}
+        .katex-display {{ margin: 16px 0; overflow-x: auto; page-break-inside: avoid; break-inside: avoid; }}
+        .katex {{ font-size: 1.05em; text-rendering: auto; }}
     </style>
+    <script>
+        {katex_js}
+    </script>
+    <script>
+        {auto_render_js}
+    </script>
+    <script>
+        {mermaid_js}
+    </script>
 </head>
 <body>
     {''.join(combined_html_parts)}
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {{
+        if (typeof renderMathInElement === 'function') {{
+            renderMathInElement(document.body, {{
+                delimiters: [
+                    {{left: "$$", right: "$$", display: true}},
+                    {{left: "$", right: "$", display: false}},
+                    {{left: "\\\\(", right: "\\\\)", display: false}},
+                    {{left: "\\\\[", right: "\\\\]", display: true}}
+                ],
+                ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code"],
+                throwOnError: false
+            }});
+        }}
+        if (typeof mermaid === 'object') {{
+            mermaid.initialize({{
+                startOnLoad: true,
+                theme: "neutral",
+                flowchart: {{ useMaxWidth: true, htmlLabels: true, curve: "basis" }}
+            }});
+        }}
+    }});
+    </script>
 </body>
 </html>
 """
 
     html_file = out_dir / f"{title.replace(' ', '_').replace('(', '').replace(')', '')}.html"
+    raw_html_file = out_dir / f"{title.replace(' ', '_').replace('(', '').replace(')', '')}_raw.html"
     pdf_file = out_dir / f"{title.replace(' ', '_').replace('(', '').replace(')', '')}.pdf"
     epub_file = out_dir / f"{title.replace(' ', '_').replace('(', '').replace(')', '')}.epub"
 
-    html_file.write_text(master_html, encoding="utf-8")
-    print(f"  ✔ Generated Master HTML: {html_file.name} ({len(master_html)//1024} KB)")
+    raw_html_file.write_text(master_html, encoding="utf-8")
+
+    # Pass 1: Pre-render DOM with Headless Chrome (evaluates KaTeX and Mermaid to vector SVGs/HTML)
+    print(f"  -> Pre-rendering Mermaid diagrams and KaTeX formulas via Headless Chrome...")
+    dump_cmd = [
+        "google-chrome",
+        "--headless",
+        "--disable-gpu",
+        "--no-sandbox",
+        "--virtual-time-budget=15000",
+        "--run-all-compositor-stages-before-draw",
+        "--dump-dom",
+        f"file://{raw_html_file.resolve()}"
+    ]
+    res_dump = subprocess.run(dump_cmd, capture_output=True, text=True)
+    if res_dump.returncode == 0 and "<svg" in res_dump.stdout:
+        html_file.write_text(res_dump.stdout, encoding="utf-8")
+        print(f"  ✔ Fully Pre-Rendered DOM with Vector SVGs & Math: {html_file.name} ({len(res_dump.stdout)//1024} KB)")
+    else:
+        print(f"  [WARN] DOM pre-rendering warning: {res_dump.stderr[:300]}, using raw HTML")
+        html_file.write_text(master_html, encoding="utf-8")
 
     # 1. Compile PDF via Headless Chrome
     if format_choice in ["pdf", "all"]:
@@ -483,9 +556,12 @@ def compile_handbook(manifest: Dict, format_choice: str):
     # 2. Compile ePub via Calibre
     if format_choice in ["epub", "all"]:
         print(f"  -> Compiling Reflowable ePub via Calibre...")
+        epub_clean_html = out_dir / "epub_clean.html"
+        clean_html_content = re.sub(r'<script.*?</script>', '', html_file.read_text(encoding="utf-8"), flags=re.DOTALL)
+        epub_clean_html.write_text(clean_html_content, encoding="utf-8")
         epub_cmd = [
             "ebook-convert",
-            str(html_file),
+            str(epub_clean_html),
             str(epub_file),
             "--title", title,
             "--authors", "Mohamed Fakhruldeen",
@@ -494,6 +570,8 @@ def compile_handbook(manifest: Dict, format_choice: str):
             "--insert-metadata"
         ]
         res = subprocess.run(epub_cmd, capture_output=True, text=True)
+        if epub_clean_html.exists():
+            epub_clean_html.unlink()
         if res.returncode == 0 and epub_file.exists():
             epub_size_kb = epub_file.stat().st_size / 1024
             print(f"  \033[92m✔ SUCCESS\033[0m: Generated ePub -> {epub_file.name} ({epub_size_kb:.1f} KB)")
