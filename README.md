@@ -164,7 +164,7 @@ Phase 5: Authority & Provenance
 | **Domain 2** | Security and Compliance | **30%** | ~735 Qs | [Lab 01: IAM Least Privilege & MFA](./Cloud/Practitioner/CLF-C02/phase2_step07_labs/fast_track/Lab_01_AWS_IAM_Least_Privilege_and_MFA.md) |
 | **Domain 3** | Cloud Technology and Services | **34%** | ~1,140 Qs | [Lab 07: S3 Storage Lifecycle](./Cloud/Practitioner/CLF-C02/phase2_step07_labs/lab_07_s3_storage_lifecycle.md) |
 | **Domain 4** | Billing, Pricing, and Support | **12%** | ~469 Qs | [Lab 14: FinOps Cost Governance](./Cloud/Practitioner/CLF-C02/phase2_step07_labs/lab_14_billing_cost_management.md) |
-| **TOTAL** | | **100%** | **2,914 Unique Questions** | **14 Visual Guided Labs** |
+| **TOTAL** | | **100%** | **2,716 Unique Questions** | **14 Visual Guided Labs** |
 
 ---
 

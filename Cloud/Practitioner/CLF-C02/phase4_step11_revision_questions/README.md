@@ -3,7 +3,7 @@
 > **Module:** Targeted Exam Revision Questions with Detailed Rationale & Trap Breakdowns  
 > **Target Certification:** AWS Certified Cloud Practitioner (`CLF-C02`)  
 > **Structure:** Mapped 1-to-1 against the 4 official exam domains + Full-Length Mock Exam.  
-> **Master Knowledge Brain Link:** For the complete offline repository of **2,914 unique deduplicated practice questions** across all 4 domains (with redundancy eliminated from across industry practice pools), see the Knowledge Vault at `Brain/AWS/Questions_Bank/Unique_Revision_Banks/Cloud_Practitioner_CLF-C02/`.
+> **Master Knowledge Brain Link:** For the complete offline repository of **2,716 unique deduplicated practice questions** across all 4 domains (with redundancy eliminated from across industry practice pools), see the Knowledge Vault at `Brain/AWS/Questions_Bank/Unique_Revision_Banks/Cloud_Practitioner_CLF-C02/`.
 
 ---
 
