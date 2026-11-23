@@ -215,25 +215,11 @@ Which solution meets these requirements?
 **Correct Answer:** `C`  
 **Peer Consensus:** `57%` agreement.  
 
-**Architectural Breakdown & Distractor Analysis:**  
-Community Most Voted: C (57%). Contributor Answer: C.
-
-Community Rationale & Discussion:
-Selected Answer: D
-Explicação:
-A força do prompt (prompt strength) se refere ao grau de influência que o texto fornecido tem sobre a imagem gerada.
-
-Quando a força do prompt é baixa, o modelo (como o Stable Diffusion) pode gerar imagens mais abstratas ou genéricas.
-
-Ao aumentar a força do prompt, você orienta o modelo a seguir mais fielmente os detalhes fornecidos no texto, gerando imagens mais específicas e controladas — o que é justamente o que a empresa deseja.
----
-Selected Answer: D
-In Retrieval Augmented Generation (RAG) with Stable Diffusion, the prompt strength determines how closely the generated image aligns with the given text description. By increasing prompt strength, the model places more emphasis on the input prompt, making the output more specific and detailed, which directly addresses the company's concern about random and lacking specific details in generated images.
----
-Selected Answer: C
-Classifier-Free Guidance (CFG) is a technique used in generative models, especially in image generation tasks, that helps guide the generation process toward more specific or desired outputs. By increasing the CFG scale, the model's generated image becomes more closely aligned with the given text prompt, improving the specificity and control over the details in the generated image.
-
-A higher CFG scale ensures that the model generates images that are more faithful to the prompt by reducing randomness and making the generation more deterministic. This technique allows for more control over the image generation process, making it suitable for use cases like generating product images from text descriptions, where specific details are important.
+**Architectural Breakdown & Distractor Analysis:**
+- **Option A is INCORRECT:** Increasing generation steps (e.g., 30 to 50 iterations) allows the diffusion model more denoising cycles to resolve fine textures, but it does not compel the model to align more strictly with prompt specifics.
+- **Option B is INCORRECT:** The `MASK_IMAGE_BLACK` option is an inpainting/outpainting mask parameter used to specify which spatial regions of an image to preserve or replace. It does not govern global text specificity.
+- **Option C is CORRECT:** Classifier-Free Guidance (CFG) scale is the core diffusion hyperparameter that balances fidelity to the conditioning prompt against creative freedom. Increasing the CFG scale forces the model to adhere much more aggressively and deterministically to the specific details in the text prompt, reducing random artistic departures.
+- **Option D is INCORRECT:** Prompt strength is predominantly applied in image-to-image (img2img) transformations to dictate how much the source image is altered by the new prompt. In text-to-image synthesis, CFG scale is the canonical parameter for controlling prompt fidelity.
 
 </details>
 
@@ -255,18 +241,11 @@ Which prompt engineering strategy meets these requirements?
 **Correct Answer:** `A`  
 **Peer Consensus:** `100%` agreement.  
 
-**Architectural Breakdown & Distractor Analysis:**  
-Community Most Voted: A (100%). Contributor Answer: A.
-
-Community Rationale & Discussion:
-Selected Answer: A
-This approach is known as few-shot prompting, where you include a few labeled examples to guide the model on how to classify sentiment.
----
-Selected Answer: A
-Provide examples of text passages with corresponding positive or negative labels in the prompt followed by the new text passage to be classified: This approach uses few-shot learning, where you give the model clear examples of text passages labeled with sentiment (positive or negative). By providing these examples in the prompt, the model is better able to understand the task and generalize it to classify the new text passage correctly. This is a common and effective strategy for tasks like sentiment analysis.
----
-Selected Answer: A
-Set the proper label with a few examples to the prompts
+**Architectural Breakdown & Distractor Analysis:**
+- **Option A is CORRECT:** Providing input-output demonstration pairs within the prompt context is the exact definition of **Few-Shot Prompting**. By showing explicit examples of text passages mapped to `"positive"` and `"negative"` sentiment labels before providing the query passage, the model learns the exact semantic rules and formatting desired without fine-tuning.
+- **Option B is INCORRECT:** Adding high-level theoretical explanations of sentiment analysis and LLM inner mechanics wastes valuable context tokens without providing explicit input-to-output behavioral demonstrations.
+- **Option C is INCORRECT:** Providing only the raw passage without instructions or context represents zero-shot prompting, which provides no guidance on formatting or domain nuance.
+- **Option D is INCORRECT:** Including examples from unrelated domains (summarization, QA) injects semantic distraction into the attention heads, degrading sentiment classification accuracy.
 
 </details>
 
@@ -287,17 +266,10 @@ Which action will reduce these risks?
 **Correct Answer:** `A`  
 **Peer Consensus:** `88%` agreement.  
 
-**Architectural Breakdown & Distractor Analysis:**  
-Community Most Voted: A (88%). Contributor Answer: A.
-
-Community Rationale & Discussion:
-Selected Answer: U
-Explicação: A criação de cuidadosamente projetados,ados com técnicas de segurança como validação de entrada,agem de conteúdo e detecção padrões de engenharia de prompt (prompt injection), é prática fundamental para reduzir os riscos de manipulação de LLM. Essa abordagem ensina modelo a reconhecer e resistir tentativas maliciosas, como comandos disfarçados exploração de brechas prompt.
----
-Selected Answer: A
-Create a prompt template that teaches the LLM to detect attack patterns: By creating a prompt template that is specifically designed to identify and mitigate common attack patterns (e.g., prompt injections or malicious requests), you can make the LLM more robust to manipulation. This can help the LLM recognize when it's being manipulated into performing undesirable actions or exposing sensitive data, and take preventive measures accordingly.
----
-Selected Answer: A
-Ask model to use Prompt template to avoid the various types of prompt injection attacks.
+**Architectural Breakdown & Distractor Analysis:**
+- **Option A is CORRECT:** Creating defensive prompt templates that establish strict system boundaries, define clear operational constraints, delimit user input, and explicitly instruct the model to recognize and reject prompt injection patterns is a foundational defensive engineering measure to prevent jailbreaking.
+- **Option B is INCORRECT:** Increasing temperature elevates output randomness and entropy, making model responses more unpredictable and significantly more vulnerable to jailbreaking.
+- **Option C is INCORRECT:** Model catalog placement (SageMaker vs. Bedrock) has no bearing on adversarial prompt susceptibility; any LLM can be manipulated if application-level safety guardrails are omitted.
+- **Option D is INCORRECT:** Restricting input token length impairs legitimate queries and context windows without preventing concise adversarial prompt injections (e.g., "Ignore previous instructions").
 
 </details>

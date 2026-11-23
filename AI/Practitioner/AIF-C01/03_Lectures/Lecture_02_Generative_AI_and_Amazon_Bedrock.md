@@ -202,31 +202,31 @@ flowchart TD
 ### Scenario Practice 1: AIF-C01-ET-Q017
 **Question:**  
 A company wants to improve the accuracy of the responses from a generative AI application. The application uses a foundation model (FM) on Amazon Bedrock.
-
 Which solution meets these requirements MOST cost-effectively?
 
 **Options:**
-- A) Fine-tune the FM.
-- B) Retrain the FM.
-- C) Train a new FM.
-- D) Use prompt engineering.
+- A) Fine-tune the FM
+- B) Retrain the FM
+- C) Train a new FM
+- D) Use prompt engineering
 
 <details>
 <summary><b>View Verified Answer & Solution Analysis</b></summary>
 
-**Correct Answer:** `D`  
-**Peer Consensus:** `100%` agreement.  
+**Correct Answer:** **D) Use prompt engineering**  
+**Peer Consensus:** `100%` agreement.
 
-**Architectural Breakdown & Distractor Analysis:**  
-Community Most Voted: D (100%). Contributor Answer: D.
+**Architectural Rationale:**
+- **Why [D] is Correct:** Prompt engineering (e.g., adding few-shot examples, chain-of-thought instructions, or contextual framing) improves response relevance and accuracy without any training compute costs, dataset annotation expenses, or specialized infrastructure provisioning, making it the most cost-effective first step in model optimization.
 
-Community Rationale & Discussion:
-Selected Answer: D
-A solução mais econômica é D. Use engenharia rápida.
-
-A técnica de engenharia rápida permite melhorar a precisão das respostas sem a necessidade de ajustar ou treinar novamente o modelo, o que pode ser bastante custoso em termos de tempo e recursos computacionais. A engenharia rápida envolve a criação de prompts mais eficazes e direcionados, otimizando os resultados gerados pelo modelo com investimentos mínimos.
+**Distractor Analysis:**
+- **Why [A] is Wrong:** Fine-tuning requires preparing curated labeled datasets and paying for training compute and custom model hosting, incurring significantly higher costs than prompt adjustments.
+- **Why [B] is Wrong:** Retraining an existing FM requires massive GPU clusters and weeks of computational runtime, costing hundreds of thousands of dollars.
+- **Why [C] is Wrong:** Training a foundation model from scratch requires millions of dollars in compute and petabytes of data, representing the most expensive possible approach.
 
 </details>
+
+---
 
 ### Scenario Practice 2: AIF-C01-ET-Q031
 **Question:**  
@@ -242,29 +242,20 @@ Which consideration will inform the company's decision?
 <details>
 <summary><b>View Verified Answer & Solution Analysis</b></summary>
 
-**Correct Answer:** `B`  
-**Peer Consensus:** `100%` agreement.  
+**Correct Answer:** **B) Context window**  
+**Peer Consensus:** `100%` agreement.
 
-**Architectural Breakdown & Distractor Analysis:**  
-Community Most Voted: B (100%). Contributor Answer: B.
+**Architectural Rationale:**
+- **Why [B] is Correct:** The **context window** defines the maximum number of tokens a foundation model can accept as input (prompt) and generate as output (completion) in a single invocation. Models with larger context windows (e.g., 128k to 200k tokens in Amazon Nova and Claude 3.5 Sonnet) can process entire books, codebases, or complex multi-document inputs in a single prompt.
 
-Community Rationale & Discussion:
-Selected Answer: B
-A company needs to know the maximum input size for a single prompt when choosing a Foundation Model (FM) in Amazon Bedrock.
-
-A. Temperature: This controls the randomness of the output, not the input prompt length. Temperature affects creativity, not input size.
-B. Context window: This defines the maximum length of the input prompt the model can process. It directly limits how much information can be included.
-C. Batch size: This is the number of prompts processed at once, affecting throughput, not individual prompt length. It's about processing multiple prompts efficiently.
-D. Model size: This relates to the model's overall capacity and complexity, not directly to the input prompt length. Size impacts performance, not input limits.
-Therefore, B. Context window is the correct answer.
----
-Selected Answer: B
-Context window: The context window refers to the amount of text (or tokens) that a model can process at once. This is crucial when working with foundation models (FMs) like those available in Amazon Bedrock, as it defines the maximum input size for the prompt. The context window determines how much of the prompt the model can "remember" and use to generate responses. If the prompt exceeds the context window, the model will only process the portion of the prompt that fits within this limit, potentially missing important details.
----
-Selected Answer: B
-The context-window is the input prompt for the model generation.
+**Distractor Analysis:**
+- **Why [A] is Wrong:** Temperature controls the randomness and diversity of next-token generation; it has zero relationship to input prompt capacity.
+- **Why [C] is Wrong:** Batch size determines how many separate requests or samples are processed in parallel during training or offline batch inference, not the token capacity of an individual prompt.
+- **Why [D] is Wrong:** Model size refers to total parameter count (e.g., 7B vs 70B parameters), which affects reasoning depth and computational overhead, but does not define the architectural prompt token input limit.
 
 </details>
+
+---
 
 ### Scenario Practice 3: AIF-C01-ET-Q102
 **Question:**  
@@ -280,24 +271,15 @@ Which factor will drive the inference costs?
 <details>
 <summary><b>View Verified Answer & Solution Analysis</b></summary>
 
-**Correct Answer:** `A`  
-**Peer Consensus:** `100%` agreement.  
+**Correct Answer:** **A) Number of tokens consumed**  
+**Peer Consensus:** `100%` agreement.
 
-**Architectural Breakdown & Distractor Analysis:**  
-Community Most Voted: A (100%). Contributor Answer: A.
+**Architectural Rationale:**
+- **Why [A] is Correct:** On Amazon Bedrock, On-Demand inference pricing is calculated strictly based on the volume of **input tokens** submitted in prompts and **output tokens** generated in completions (billed per 1,000 or per 1,000,000 tokens). Token consumption is the direct cost driver for serverless LLM inference.
 
-Community Rationale & Discussion:
-Selected Answer: A
-In the context of using Amazon Bedrock and generative AI models, inference costs are typically driven by the number of tokens consumed during the input and output processing.
-
-Number of tokens consumed refers to how many tokens (words, subwords, characters) the model processes during inference (both input and output). More tokens mean higher processing and hence higher costs.
----
-Selected Answer: A
-A. Number of tokens consumed. More tokens used = higher cost. 
-
-All other affects training costs, not inference costs. Correct answer is A
----
-Selected Answer: A
-No. of tokens consumed while processing. Tokens are the basic units of input and output that a generative AI model operates on, representing words, subwords, or other linguistic units.
+**Distractor Analysis:**
+- **Why [B] is Wrong:** Temperature is an inference configuration hyperparameter governing randomness; changing temperature incurs zero additional financial charges.
+- **Why [C] is Wrong:** The volume of data used to pre-train the base foundation model is an upfront R&D expense absorbed by the model provider (AWS, Anthropic, Meta), not billed to the inference consumer.
+- **Why [D] is Wrong:** Total training time relates to model creation costs, not per-request inference consumption costs in Amazon Bedrock.
 
 </details>

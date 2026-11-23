@@ -193,7 +193,12 @@ Test your mastery of Domain 2 with these 10 exam-style practice questions:
 <summary><b>Click to View Answer & Explanation</b></summary>
 
 **Correct Answer:** **B) Discriminative AI learns decision boundaries to classify or predict labels ($P(Y|X)$), whereas Generative AI models data distributions to synthesize new, original content ($P(X)$ or $P(X, Y)$).**  
-- **Why it's correct:** Discriminative models separate data into classes (e.g. spam/ham), while generative models learn the underlying probability distribution of training data to generate plausible new samples.
+- **Why it's correct:** Discriminative models separate data points into categories or predict numeric targets given inputs (e.g. classification/regression), whereas generative models learn the underlying probability distribution of training data to create brand new, synthetic data instances.
+- **Distractor Analysis:**
+  - *Option A is INCORRECT:* Reverses reality; Generative AI creates novel images and media, while discriminative models process tabular and numeric classification.
+  - *Option B is CORRECT:* Captures the precise mathematical and functional boundary between conditional classification and generative distribution modeling.
+  - *Option C is INCORRECT:* Both generative AI and discriminative deep learning require high-performance GPU acceleration for training and inference.
+  - *Option D is INCORRECT:* Modern generative AI (Transformers, Diffusion models) represents the cutting edge of deep learning.
 </details>
 
 ### Question 2
@@ -207,7 +212,12 @@ Test your mastery of Domain 2 with these 10 exam-style practice questions:
 <summary><b>Click to View Answer & Explanation</b></summary>
 
 **Correct Answer:** **B) Self-Attention**  
-- **Why it's correct:** Introduced in *"Attention Is All You Need"* (2017), the Multi-Head Self-Attention mechanism allows every token in an input to attend to all other tokens simultaneously using Query, Key, and Value matrices.
+- **Why it's correct:** The Multi-Head Self-Attention mechanism allows every token in an input sequence to attend to every other token simultaneously using Query ($Q$), Key ($K$), and Value ($V$) projections, resolving long-range semantic dependencies without sequential bottlenecks.
+- **Distractor Analysis:**
+  - *Option A is INCORRECT:* Convolutional pooling is used in Computer Vision (CNNs) to downsample spatial feature maps.
+  - *Option B is CORRECT:* Self-attention is the signature breakthrough of the Transformer architecture (Vaswani et al., 2017).
+  - *Option C is INCORRECT:* Recurrent hidden state looping is the sequential mechanism of legacy RNNs and LSTMs that suffered from vanishing gradients and prevented GPU parallelization.
+  - *Option D is INCORRECT:* Bag of Words is a primitive text representation that counts word frequencies and completely discards syntax and word order.
 </details>
 
 ### Question 3
@@ -221,7 +231,12 @@ Test your mastery of Domain 2 with these 10 exam-style practice questions:
 <summary><b>Click to View Answer & Explanation</b></summary>
 
 **Correct Answer:** **B) Decrease Temperature to 0.0 or 0.2**  
-- **Why it's correct:** Lower temperature reduces randomness in token selection, forcing the model to greedily choose the highest-probability, most factual tokens, which minimizes creative embellishments and hallucinations.
+- **Why it's correct:** Temperature controls the randomness of token selection. A low temperature ($0.0 - 0.2$) sharpens the probability distribution, compelling the model to select the highest-probability, most deterministic tokens, which reduces hallucinations in technical support.
+- **Distractor Analysis:**
+  - *Option A is INCORRECT:* Increasing temperature to 1.5 flattens the probability curve, introducing high randomness and severe hallucination risks.
+  - *Option B is CORRECT:* Low temperature enforces factual, repeatable, and deterministic responses.
+  - *Option C is INCORRECT:* Increasing Top-K to 500 expands the candidate pool of next tokens, increasing diversity and variance rather than determinism.
+  - *Option D is INCORRECT:* Limiting output length to 10 tokens artificially truncates answers into unreadable sentence fragments.
 </details>
 
 ### Question 4
@@ -235,7 +250,12 @@ Test your mastery of Domain 2 with these 10 exam-style practice questions:
 <summary><b>Click to View Answer & Explanation</b></summary>
 
 **Correct Answer:** **B) The cumulative probability threshold that dynamically limits the pool of candidate next tokens**  
-- **Why it's correct:** Top-P pools the top candidate tokens whose cumulative softmax probability sums to $P$ (e.g. 0.90), dynamically expanding or contracting the candidate pool depending on model confidence.
+- **Why it's correct:** Top-P (Nucleus Sampling) dynamically pools the smallest set of candidate tokens whose cumulative probability exceeds threshold $P$ (e.g., 0.90), filtering out the long tail of improbable tokens while adapting dynamically to the model's confidence.
+- **Distractor Analysis:**
+  - *Option A is INCORRECT:* The maximum number of tokens generated is controlled by `max_tokens` or `max_new_tokens`.
+  - *Option B is CORRECT:* Top-P defines the cumulative probability cutoff for nucleus sampling.
+  - *Option C is INCORRECT:* Token billing is determined by AWS pricing tiers per 1,000 input/output tokens, not inference sampling parameters.
+  - *Option D is INCORRECT:* Learning rate is a training hyperparameter, whereas Top-P is an inference decoding parameter.
 </details>
 
 ### Question 5
@@ -249,7 +269,12 @@ Test your mastery of Domain 2 with these 10 exam-style practice questions:
 <summary><b>Click to View Answer & Explanation</b></summary>
 
 **Correct Answer:** **B) Few-Shot Prompting**  
-- **Why it's correct:** Few-shot prompting provides 2 to 5 exemplary demonstration pairs (input -> output) in-context, teaching the model desired formatting, style, and task constraints without modifying model weights.
+- **Why it's correct:** Few-shot prompting incorporates demonstration exemplars (e.g., 2 to 5 pairs of input and expected output) within the context window to condition the model's in-context attention on desired formatting and reasoning patterns.
+- **Distractor Analysis:**
+  - *Option A is INCORRECT:* Zero-shot prompting provides only the task instructions and query without any prior input-output examples.
+  - *Option B is CORRECT:* Few-shot prompting provides explicit demonstration examples in-context.
+  - *Option C is INCORRECT:* Chain-of-Thought prompting directs the model to output intermediate step-by-step reasoning steps.
+  - *Option D is INCORRECT:* Prompt injection is an adversarial cyberattack seeking to bypass guardrails.
 </details>
 
 ### Question 6
@@ -263,7 +288,12 @@ Test your mastery of Domain 2 with these 10 exam-style practice questions:
 <summary><b>Click to View Answer & Explanation</b></summary>
 
 **Correct Answer:** **B) Chain-of-Thought (CoT) Prompting**  
-- **Why it's correct:** Chain-of-Thought prompting encourages the model to break complex reasoning, mathematical, or multi-step deduction problems into intermediate logical steps before generating the final answer.
+- **Why it's correct:** Chain-of-Thought (CoT) prompting prompts the model to generate intermediate logical reasoning steps before arriving at a final deduction or calculation, dramatically reducing reasoning errors.
+- **Distractor Analysis:**
+  - *Option A is INCORRECT:* Directional stimulus prompting provides hints or keywords to steer output style.
+  - *Option B is CORRECT:* Prompting the model to "think step by step" is the classical trigger for Chain-of-Thought reasoning.
+  - *Option C is INCORRECT:* Least-to-most prompting decomposes a problem into a sequence of smaller sub-prompts sequentially.
+  - *Option D is INCORRECT:* Fine-tuning involves retraining model weights via backpropagation on custom datasets.
 </details>
 
 ### Question 7
@@ -277,7 +307,12 @@ Test your mastery of Domain 2 with these 10 exam-style practice questions:
 <summary><b>Click to View Answer & Explanation</b></summary>
 
 **Correct Answer:** **B) A capability (such as multi-step arithmetic, reasoning, or code debugging) that appears spontaneously as model scale crosses certain parameter and compute thresholds**  
-- **Why it's correct:** Emergent capabilities are abilities that do not exist in small models but materialize sharply in foundation models once scale (parameters, dataset size, training compute) exceeds a critical threshold.
+- **Why it's correct:** Emergent capabilities are abilities that cannot be observed in smaller-scale models but suddenly manifest when models reach a critical threshold of parameter scale, training data volume, and compute.
+- **Distractor Analysis:**
+  - *Option A is INCORRECT:* Foundation models are not hardcoded with explicit rule engines; their abilities emerge statistically.
+  - *Option B is CORRECT:* Emergence refers to non-linear qualitative capability jumps unlocked purely by scale.
+  - *Option C is INCORRECT:* Foundation models cannot browse the live web without tool-use or API integrations.
+  - *Option D is INCORRECT:* Compressing models into 8-bit precision is quantization, not an emergent capability.
 </details>
 
 ### Question 8
@@ -291,7 +326,12 @@ Test your mastery of Domain 2 with these 10 exam-style practice questions:
 <summary><b>Click to View Answer & Explanation</b></summary>
 
 **Correct Answer:** **B) ROUGE**  
-- **Why it's correct:** ROUGE (Recall-Oriented Understudy for Gisting Evaluation) is the standard metric for evaluating summarization quality by measuring how many words/phrases from reference human summaries appear in the model summary.
+- **Why it's correct:** **ROUGE** (Recall-Oriented Understudy for Gisting Evaluation) evaluates text summarization by measuring n-gram overlap with a focus on recall (how much reference content was captured by the generated summary).
+- **Distractor Analysis:**
+  - *Option A is INCORRECT:* BLEU (Bilingual Evaluation Understudy) focuses on n-gram precision for evaluating machine translation.
+  - *Option B is CORRECT:* ROUGE is the industry-standard recall-oriented metric for document summarization.
+  - *Option C is INCORRECT:* Perplexity measures how well a language model predicts a sample of text (exponentiated cross-entropy loss).
+  - *Option D is INCORRECT:* Mean Absolute Error is a regression error metric for continuous numbers.
 </details>
 
 ### Question 9
@@ -305,7 +345,12 @@ Test your mastery of Domain 2 with these 10 exam-style practice questions:
 <summary><b>Click to View Answer & Explanation</b></summary>
 
 **Correct Answer:** **B) BLEU**  
-- **Why it's correct:** BLEU (Bilingual Evaluation Understudy) evaluates machine translation by measuring n-gram precision against reference translations.
+- **Why it's correct:** **BLEU** (Bilingual Evaluation Understudy) evaluates machine translation systems by calculating the precision of matching n-grams against reference human translations, penalizing candidate sentences that are too short via a brevity penalty.
+- **Distractor Analysis:**
+  - *Option A is INCORRECT:* ROUGE is recall-focused and used for summarization.
+  - *Option B is CORRECT:* BLEU is precision-focused with a brevity penalty, designed specifically for machine translation.
+  - *Option C is INCORRECT:* F1-score is used in classification tasks.
+  - *Option D is INCORRECT:* Perplexity evaluates model uncertainty during language modeling.
 </details>
 
 ### Question 10
@@ -319,5 +364,129 @@ Test your mastery of Domain 2 with these 10 exam-style practice questions:
 <summary><b>Click to View Answer & Explanation</b></summary>
 
 **Correct Answer:** **B) AWS PartyRock**  
-- **Why it's correct:** AWS PartyRock (partyrock.aws) is a no-code generative AI app-building playground powered by Amazon Bedrock that requires no AWS account or credit card.
+- **Why it's correct:** **AWS PartyRock** (`partyrock.aws`) is an Amazon Bedrock-powered playground that allows anyone to experiment with generative AI apps, prompt engineering, and foundation models in an intuitive UI without an AWS account or credit card.
+- **Distractor Analysis:**
+  - *Option A is INCORRECT:* SageMaker Studio Lab is a free Jupyter notebook service for coding ML in Python; it is not a no-code GenAI app builder.
+  - *Option B is CORRECT:* AWS PartyRock is the dedicated account-free generative AI app playground.
+  - *Option C is INCORRECT:* Amazon Q Developer is an AI coding assistant integrated into IDEs and the AWS Console.
+  - *Option D is INCORRECT:* Amazon Bedrock Console requires an active AWS account, IAM permissions, and credit card/billing configuration.
 </details>
+
+---
+
+## 🎓 Master MCQ Solving Blueprint: Domain 2 (Fundamentals of Generative AI)
+
+> Mined directly from the 534-question Domain 2 bank in the master repository. Use this systematic 4-layer methodology to solve foundation model and prompt engineering questions instantly.
+
+### Layer 1: "Clue-to-Service" Linguistic Decryption Matrix
+
+| If Scenario Text States... | Target Concept / Service | Why (The Core Mechanism) | Decoy Trap to Avoid |
+| :--- | :--- | :--- | :--- |
+| **"Parallel training across GPUs / Self-attention"** | **Transformer Architecture** | Self-attention processes all sequence tokens concurrently using Query, Key, and Value matrices. | RNN/LSTM (which processed tokens sequentially, creating bottlenecks). |
+| **"Synthesize high-fidelity images by reversing noise"** | **Diffusion Model** | Inverts a Gaussian noise schedule (e.g., Stable Diffusion, Titan Image Generator). | Large Language Models (autoregressive token predictors). |
+| **"Make model responses deterministic and factual"** | **Low Temperature ($\approx 0.0 - 0.2$)** | Concentrates probability distribution on greedy, high-probability tokens. | High Temperature (which flattens distribution, increasing creative hallucinations). |
+| **"Generate creative, novel, varied marketing copy"** | **High Temperature ($\approx 0.7 - 1.0$)** | Flattens token probability distribution, allowing diverse lexical selection. | Low Temperature (which produces repetitive, dry, deterministic outputs). |
+| **"Dynamically limit pool to tokens totaling cumulative probability"** | **Top-P (Nucleus Sampling)** | Dynamically scales the selection pool based on cumulative softmax mass. | Top-K (which limits to a rigid, fixed integer number of tokens). |
+| **"Limit candidate pool to a fixed integer number of top tokens"** | **Top-K Sampling** | Hard integer cutoff (e.g. top 50 tokens) regardless of probability mass. | Top-P (which is a dynamic probability percentage threshold). |
+| **"Provide 2 to 5 exemplary input-output pairs in prompt"** | **Few-Shot Prompting** | In-context conditioning that guides output format and logic without weight updates. | Zero-shot prompting (no examples provided). |
+| **"Direct model to break problem into step-by-step intermediate logic"** | **Chain-of-Thought (CoT)** | Generates reasoning tokens before providing the final answer. | Fine-tuning (which retrains neural weights). |
+| **"Evaluate summarization quality by measuring n-gram recall"** | **ROUGE Metric** | Recall-Oriented Understudy for Gisting Evaluation. | BLEU (which measures translation precision). |
+| **"Evaluate machine translation quality with brevity penalty"** | **BLEU Metric** | Bilingual Evaluation Understudy computing n-gram precision against human references. | ROUGE (which evaluates summarization recall). |
+| **"Ultra-low latency, sub-second text-only routing / classification"** | **Amazon Nova Micro** | Text-only, lowest cost, optimized for fast throughput and routing. | Amazon Nova Pro (heavy multimodal reasoning model). |
+| **"Fast, cost-effective multimodal (images, video, text) processing"** | **Amazon Nova Lite** | Balanced multimodal processing for high-volume documents and media. | Nova Micro (text-only; cannot process images or video). |
+| **"Complex reasoning, agentic planning, and advanced coding"** | **Amazon Nova Pro / Premier** | Frontier multimodal intelligence for demanding enterprise tasks. | Nova Micro / Lite (optimized for speed/cost rather than frontier reasoning). |
+| **"Free web playground to build generative AI apps with no AWS account"** | **AWS PartyRock** | Managed web sandbox powered by Amazon Bedrock for rapid no-code experimentation. | Bedrock Console (requires active AWS account and billing). |
+
+---
+
+### Layer 2: 3-Step Rapid Elimination Heuristic
+
+```mermaid
+flowchart TD
+    Q["Read Question Scenario"] --> S1{"Step 1: Identify Task Domain"}
+    S1 -->|"Inference Parameters"| P["Temperature, Top-P, Top-K, Max Tokens"]
+    S1 -->|"Prompt Engineering"| Pr["Zero-Shot, Few-Shot, Chain-of-Thought"]
+    S1 -->|"Evaluation Metrics"| M["ROUGE (Summarization) vs BLEU (Translation)"]
+    S1 -->|"Amazon Nova Family"| N["Micro (Text/Speed), Lite (Fast Multimodal), Pro (Deep Reasoning)"]
+    
+    P --> S2A{"Factual or Creative?"}
+    S2A -->|"Factual / Deterministic"| LowT["Lock: Temp 0.0-0.2, Top-P 0.9\nEliminate: High Temp"]
+    S2A -->|"Creative / Diverse"| HighT["Lock: Temp 0.8-1.0\nEliminate: Low Temp"]
+    
+    Pr --> S2B{"Does prompt contain examples?"}
+    S2B -->|"Yes: Input/Output Pairs"| FS["Lock: Few-Shot\nEliminate: Zero-Shot"]
+    S2B -->|"No: Step-by-Step Logic"| CoT["Lock: Chain-of-Thought\nEliminate: Few-Shot"]
+    
+    M --> S2C{"Summarization or Translation?"}
+    S2C -->|"Summarization Recall"| ROUGE["Lock: ROUGE\nEliminate: BLEU"]
+    S2C -->|"Translation Precision"| BLEU["Lock: BLEU\nEliminate: ROUGE"]
+    
+    N --> S2D{"Input Modality & Latency Goal?"}
+    S2D -->|"Text Only / Lowest Cost"| Micro["Lock: Nova Micro"]
+    S2D -->|"Image/Video / High Volume"| Lite["Lock: Nova Lite"]
+    S2D -->|"Complex Multimodal Reasoning"| Pro["Lock: Nova Pro"]
+```
+
+1. **Step 1: Categorize the Question's Operational Domain:**
+   - Is it tuning randomness? (Parameters)
+   - Is it structuring context? (Prompt Engineering)
+   - Is it measuring model accuracy? (Evaluation Metrics)
+   - Is it picking an Amazon model? (Nova family)
+2. **Step 2: Apply the Mathematical Polarities:**
+   - *Factual/Legal/Medical:* Temperature $\to 0.0$.
+   - *Marketing/Storytelling:* Temperature $\to 0.9$.
+   - *Summarization:* ROUGE.
+   - *Translation:* BLEU.
+3. **Step 3: Eliminate Unnecessary Cost & Compute:**
+   - If the task is simple text classification or routing, picking **Nova Pro** is a cost-inefficient trap. Pick **Nova Micro**.
+   - If the task includes images or video, picking **Nova Micro** is an impossible trap (Micro is text-only). Pick **Nova Lite** or **Nova Pro**.
+
+---
+
+### Layer 3: High-Frequency Decoy Autopsy
+
+#### Decoy Trap 1: Top-P (Nucleus) vs Top-K Sampling
+* **The Exam Trap:** The scenario asks how to cut off improbable tokens while adjusting dynamically to the model's confidence across diverse prompts.
+* **The Decoy:** Setting Top-K.
+* **The Fatal Flaw:** Top-K forces a static, rigid integer count (e.g. always pick from exactly 50 tokens). If the model is 99% certain of one word, Top-K still forces 49 unlikely words into consideration. If the model is uncertain across 200 plausible words, Top-K truncates 150 valid options.
+* **The Correct Choice:** **Top-P** dynamically expands and contracts the candidate pool based on cumulative probability mass ($\sum P \ge 0.90$).
+
+#### Decoy Trap 2: BLEU vs ROUGE Confusion
+* **The Exam Trap:** The question asks for an automated metric to evaluate a system that condenses 20-page legal contracts into 1-page summaries.
+* **The Decoy:** Option A offers **BLEU**.
+* **The Fatal Flaw:** BLEU measures *precision* in machine translation. A summary could achieve 100% BLEU precision by copying a single 5-word sentence verbatim, while completely omitting 95% of the vital contract facts.
+* **The Correct Choice:** **ROUGE** measures *recall* for summarization, verifying that key concepts from reference summaries were preserved.
+
+#### Decoy Trap 3: Amazon Nova Micro vs Nova Lite Modality Trap
+* **The Exam Trap:** A company wants the lowest-cost, fastest model to analyze customer uploaded images of receipts and categorize them.
+* **The Decoy:** Amazon Nova Micro (promoted as the cheapest, fastest Nova model).
+* **The Fatal Flaw:** Amazon Nova Micro is **text-only**. It cannot accept images, video, or multimodal inputs.
+* **The Correct Choice:** **Amazon Nova Lite** is the lowest-cost *multimodal* model in the Nova family.
+
+---
+
+### Layer 4: 10-Second Visual Decision Flowchart
+
+```mermaid
+flowchart TD
+    Start["Read Generative AI Scenario"] --> Scope{"What is being evaluated?"}
+    
+    Scope -->|"Model Family Selection"| Modality{"Modality & Requirement?"}
+    Modality -->|"Text Only / Sub-second latency"| NovaM["Amazon Nova Micro"]
+    Modality -->|"Images / Video / Cost-effective"| NovaL["Amazon Nova Lite"]
+    Modality -->|"Complex Reasoning / Code / Math"| NovaP["Amazon Nova Pro"]
+    Modality -->|"No AWS Account Playground"| PartyRock["AWS PartyRock"]
+    
+    Scope -->|"Inference Decoding"| OutputStyle{"Output Style Needed?"}
+    OutputStyle -->|"Deterministic / Factual / Exact"| Low["Low Temperature (0.0 - 0.2)\nTop-P 0.9"]
+    OutputStyle -->|"Creative / Diverse / Brainstorming"| High["High Temperature (0.7 - 1.0)\nHigh Top-K / Top-P"]
+    
+    Scope -->|"Prompt Strategy"| PromptGoal{"Prompt Objective?"}
+    PromptGoal -->|"Show expected format via examples"| FewShot["Few-Shot Prompting"]
+    PromptGoal -->|"Solve math / complex logic"| CoT["Chain-of-Thought (CoT)"]
+    PromptGoal -->|"Direct instructions, no examples"| ZeroShot["Zero-Shot Prompting"]
+    
+    Scope -->|"Performance Evaluation"| MetricType{"Task Being Evaluated?"}
+    MetricType -->|"Text Summarization"| ROUGE["ROUGE (Recall-oriented)"]
+    MetricType -->|"Machine Translation"| BLEU["BLEU (Precision with brevity penalty)"]
+```

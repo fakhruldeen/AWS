@@ -14,7 +14,6 @@
 ## 🎯 Learning Architecture: 10 Comprehensive Curriculum Layers
 
 ```mermaid
-```mermaid
 flowchart TD
     Syllabus["Phase 0, Step 1: Official Blueprint & Syllabus\n(01_Syllabus/)"] --> Prereqs["Phase 0, Step 2: Foundational Prerequisites & MCP\n(02_Prerequisites/)"]
     Prereqs --> Lectures["Phase 1, Step 3: Instructor Delivery Manuals\n(03_Lectures/)"]

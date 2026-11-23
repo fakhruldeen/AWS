@@ -178,24 +178,11 @@ Which data governance strategy will ensure compliance and protect patient privac
 **Correct Answer:** `A`  
 **Peer Consensus:** `100%` agreement.  
 
-**Architectural Breakdown & Distractor Analysis:**  
-Community Most Voted: A (100%). Contributor Answer: A.
-
-Community Rationale & Discussion:
-Selected Answer: A
-Ensures that sensitive data remains within the geographic boundaries of a specific country or region, helping to comply with data sovereignty and privacy regulations (such as HIPAA or GDPR).
----
-Selected Answer: A
-Data residency (residencia de datos) es una estrategia de gobernanza de datos que:
-
-✔ Asegura que los datos permanezcan en una ubicación geográfica específica, según las regulaciones del país.
-✔ Cumple con normativas de privacidad y seguridad como GDPR en Europa o HIPAA en EE.UU.
-✔ Restringe el almacenamiento y procesamiento de datos fuera del país, evitando transferencias no permitidas.
-
-En este caso, un hospital que maneja datos sensibles de pacientes debe asegurarse de que la información médica no se almacene ni procese fuera del país, lo que hace que Data residency sea la mejor estrategia.
----
-Selected Answer: A
-Only A talking about the data how to store
+**Architectural Breakdown & Distractor Analysis:**
+- **Option A is CORRECT:** **Data residency** (or data sovereignty) is the governance practice of ensuring that digital assets remain confined to specific geographical borders to comply with sovereign legal mandates and patient privacy laws.
+- **Option B is INCORRECT:** Data quality addresses the accuracy, completeness, and consistency of datasets, rather than geographic physical storage boundaries.
+- **Option C is INCORRECT:** Data discoverability involves cataloging metadata so users can locate relevant assets (e.g., using AWS Glue or Amazon DataZone), but does not enforce location constraints.
+- **Option D is INCORRECT:** Data enrichment supplements raw records with additional external attributes to improve model accuracy; it does not address sovereignty compliance.
 
 </details>
 
@@ -215,21 +202,15 @@ Which AWS services will help the company assess compliance requirements? (Choose
 <details>
 <summary><b>View Verified Answer & Solution Analysis</b></summary>
 
-**Correct Answer:** `B`  
+**Correct Answer:** `A` and `B`  
 **Peer Consensus:** `100%` agreement.  
-> [!WARNING] Answer Distinction  
-> Initial contributor marked `UB`, but community verified `B` with 100% consensus.  
 
-**Architectural Breakdown & Distractor Analysis:**  
-Community Most Voted: B (100%). Contributor Answer: UB.
-
-Community Rationale & Discussion:
-Selected Answer: UB
-Os dois serviços da AWS que ajudarão a empresa a avaliar os requisitos de conformidade são:
-
-A. Gerenciador de Auditoria da AWS: Ele auxilia no gerenciamento contínuo de auditorias ao automatizar a coleta de evidências relacionadas à conformidade com as políticas da empresa e regulamentos do setor.
-
-B. Configuração da AWS: Este serviço permite monitorar e avaliar configurações de recursos continuamente para garantir que estejam em conformidade com as políticas e regulamentos definidos.
+**Architectural Breakdown & Distractor Analysis:**
+- **Option A is CORRECT:** **AWS Audit Manager** automates continuous evidence collection and assessment against regulatory frameworks (PCI-DSS, HIPAA, GDPR, AI governance frameworks) to evaluate compliance.
+- **Option B is CORRECT:** **AWS Config** continuously tracks, evaluates, and audits resource configurations against defined compliance baselines and operational governance rules.
+- **Option C is INCORRECT:** Amazon Inspector scans container images, EC2 instances, and Lambda code for known CVE software vulnerabilities rather than evaluating multi-service policy compliance frameworks.
+- **Option D is INCORRECT:** Amazon CloudWatch monitors application metrics, operational logs, and alarms; it does not evaluate regulatory compliance baselines.
+- **Option E is INCORRECT:** AWS CloudTrail captures and records user API call activity; while critical for forensics, it records history rather than mapping resource configurations directly to regulatory compliance benchmarks.
 
 </details>
 
@@ -250,26 +231,10 @@ Which AWS service can the company use to meet this requirement?
 **Correct Answer:** `B`  
 **Peer Consensus:** `67%` agreement.  
 
-**Architectural Breakdown & Distractor Analysis:**  
-Community Most Voted: B (67%). Contributor Answer: B.
-
-Community Rationale & Discussion:
-Selected Answer: B
-AWS Artifacts has email notifications that notify you when a report is available.
-
----
-Selected Answer: B
-Portal that provides customers with on-demand access to AWS
-compliance documentation and AWS agreements
-• Artifact Reports - Allows you to download AWS security and compliance
-documents from third-party auditors, like AWS ISO certifications, Payment
-Card Industry (PCI), and System and Organization Control (SOC) reports
-• Artifact Agreements - Allows you to review, accept, and track the status of
-AWS agreements such as the Business Associate Addendum (BAA) or the
-Health Insurance Portability and Accountability Act (HIPAA) for an individual
-account or in your organization
----
-Selected Answer: D
-However, AWS Artifact is not designed for receiving notifications about third-party compliance reports from ISVs (Independent Software Vendors). Instead, it focuses on AWS's own compliance documentation, which makes it different from services like AWS Data Exchange that facilitate access to third-party data products and notifications about new data availability.
+**Architectural Breakdown & Distractor Analysis:**
+- **Option B is CORRECT:** **AWS Artifact** is the dedicated portal that provides on-demand access to AWS compliance documentation, SOC reports, ISO certifications, and third-party Independent Software Vendor (ISV) compliance reports, supporting notifications when new reports are published.
+- **Option A is INCORRECT:** AWS Audit Manager maps internal evidence against compliance controls; it is not the external publishing and distribution clearinghouse for third-party audit reports.
+- **Option C is INCORRECT:** AWS Trusted Advisor evaluates your AWS account against architecture best practices (cost, security, fault tolerance, quotas), not publishing vendor compliance documents.
+- **Option D is INCORRECT:** AWS Data Exchange allows organizations to discover, license, and ingest third-party commercial datasets, not audit compliance packages.
 
 </details>

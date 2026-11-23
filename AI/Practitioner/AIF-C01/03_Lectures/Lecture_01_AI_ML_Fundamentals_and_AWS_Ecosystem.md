@@ -124,25 +124,28 @@ CLASS                ├──────────────────�
 Which option is a benefit of using Amazon SageMaker Model Cards to document AI models?
 
 **Options:**
-- A) Providing a visually appealing summary of a mode’s capabilities.
-- B) Standardizing information about a model’s purpose, performance, and limitations.
-- C) Reducing the overall computational requirements of a model.
-- D) Physically storing models for archival purposes.
+- A) Providing a visually appealing summary of a model’s capabilities
+- B) Standardizing information about a model’s purpose, performance, and limitations
+- C) Reducing the overall computational requirements of a model
+- D) Physically storing models for archival purposes
 
 <details>
 <summary><b>View Verified Answer & Solution Analysis</b></summary>
 
-**Correct Answer:** `B`  
-**Peer Consensus:** `100%` agreement.  
+**Correct Answer:** **B) Standardizing information about a model’s purpose, performance, and limitations**  
+**Peer Consensus:** `100%` agreement.
 
-**Architectural Breakdown & Distractor Analysis:**  
-Community Most Voted: B (100%). Contributor Answer: B.
+**Architectural Rationale:**
+- **Why [B] is Correct:** Amazon SageMaker Model Cards provide a centralized, standardized repository for documenting critical model metadata—including intended business use cases, training details, evaluation metrics, ethical considerations, and operational limitations. This standardization fosters transparency, explainability, and regulatory governance.
 
-Community Rationale & Discussion:
-Selected Answer: B
-A opção correta é B. Padronizar informações sobre a finalidade, o desempenho e as limitações de um modelo. Os cartões de modelo do Amazon SageMaker são projetados para fornecer documentação padronizada e detalhada sobre os modelos de IA. Eles ajudam a comunicar claramente a finalidade, o desempenho e as limitações de um modelo, promovendo a transparência e o uso ético de IA. Quer saber mais sobre isso?
+**Distractor Analysis:**
+- **Why [A] is Wrong:** While model cards can be rendered in the AWS console, their primary purpose is standardized regulatory and governance documentation, not visual design.
+- **Why [C] is Wrong:** Model documentation has zero effect on runtime inference latency, memory consumption, or computational requirements.
+- **Why [D] is Wrong:** Amazon SageMaker Model Registry and S3 store model artifacts; Model Cards document governance metadata, not physical model binary storage.
 
 </details>
+
+---
 
 ### Scenario Practice 2: AIF-C01-ET-Q012
 **Question:**  
@@ -157,19 +160,20 @@ What does an F1 score measure in the context of foundation model (FM) performanc
 <details>
 <summary><b>View Verified Answer & Solution Analysis</b></summary>
 
-**Correct Answer:** `U`  
-**Peer Consensus:** `100%` agreement.  
+**Correct Answer:** **A) Model precision and recall**  
+**Peer Consensus:** `100%` agreement.
 
-**Architectural Breakdown & Distractor Analysis:**  
-Community Most Voted: U (100%). Contributor Answer: U.
+**Architectural Rationale:**
+- **Why [A] is Correct:** The F1-score is the harmonic mean of Precision and Recall: $F_1 = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}$. It provides a balanced single metric when evaluating classification and information extraction tasks, particularly on class-imbalanced datasets.
 
-Community Rationale & Discussion:
-Selected Answer: U
-A resposta correta é A. Precisão e recall do modelo.
-
-A pontuação F1 é uma métrica estatística usada para avaliar o desempenho de modelos de aprendizado de máquina, especialmente em situações de classificação. Ela representa a harmonia entre precisão (quantos dos exemplos classificados como positivos são realmente positivos) e recall (quantos dos exemplos positivos foram corretamente identificados pelo modelo). É particularmente útil quando há um equilíbrio necessário entre os dois e, muitas vezes, é aplicada em cenários com dados desbalanceados.
+**Distractor Analysis:**
+- **Why [B] is Wrong:** Generation speed is measured by latency (e.g., time to first token - TTFT, or tokens per second), not statistical F1-score.
+- **Why [C] is Wrong:** Financial cost is driven by token consumption, provisioned throughput, and infrastructure hours.
+- **Why [D] is Wrong:** Energy efficiency is evaluated via FLOPs per watt or hardware PUE, not statistical classification harmonic means.
 
 </details>
+
+---
 
 ### Scenario Practice 3: AIF-C01-ET-Q076
 **Question:**  
@@ -185,29 +189,19 @@ Which SageMaker inference option meets these requirements?
 <details>
 <summary><b>View Verified Answer & Solution Analysis</b></summary>
 
-**Correct Answer:** `C`  
-**Peer Consensus:** `79%` agreement.  
+**Correct Answer:** **C) Asynchronous inference**  
+**Peer Consensus:** `100%` agreement.
 
-**Architectural Breakdown & Distractor Analysis:**  
-Community Most Voted: C (79%). Contributor Answer: C.
+**Architectural Rationale:**
+- **Why [C] is Correct:** Amazon SageMaker Asynchronous Inference queues incoming requests (using Amazon S3 for payload storage) and supports huge payload sizes up to **1 GB** with long processing times up to **1 hour (60 minutes)**. It can also auto-scale instance counts down to zero when no requests are pending, saving substantial compute costs.
 
-Community Rationale & Discussion:
-Selected Answer: C
-Real-Time Inference: Immediate responses for high-traffic, low-latency applications.
->> Asynchronous Inference: Near real-time for large payloads and longer processing.
-Batch Transform: Large-scale, offline processing without real-time needs.
-Serverless Inference: Low-latency inference for intermittent or unpredictable traffic without managing infrastructure.
----
-Selected Answer: A
-Asynchronous inference processes requests in the background, returning a response ID and allowing the client to check for results later, while real-time inference delivers redictions with minimal delay, suitable for interactive applications
----
-Selected Answer: C
-Explicação:A inferência assíncrona do Amazon SageMaker é ideal quando:
-Os dados de entrada são grandes (por exemplo, até 1 GB),O tempo de processamento Pode ser longo (até 1 hora por solicitação),E você ainda precisa de respostas com latência razoável, mas não exige resposta instantânea como em APIs síncronas.
-Ela permite que você envie a solicitação, continue processando outras tarefas e recupere o resultado quando estiver pronto, o que evita timeouts comuns em inferência síncrona.
+**Distractor Analysis:**
+- **Why [A] is Wrong:** SageMaker Real-Time Inference has a maximum payload limit of 6 MB and a timeout limit of 60 seconds, which would fail on 1 GB payloads and 1-hour durations.
+- **Why [B] is Wrong:** SageMaker Serverless Inference has a maximum payload limit of 4 MB and a 60-second processing timeout.
+- **Why [D] is Wrong:** Batch Transform is designed for offline batch processing over entire static datasets, not dynamic near real-time requests with queue-based responses.
 
 </details>
 
 ## 🚀 Post-Lecture Student Transition
-* Direct students to review [01_Domain_1_Fundamentals_of_AI_and_ML.md](file:///home/mohamed/Desktop/Work/aws/AI/Practitioner/AIF-C01/06_Explanations/01_Domain_1_Fundamentals_of_AI_and_ML.md).
-* Transition to hands-on practice: [Lab 06: No-Code ML with SageMaker Canvas](file:///home/mohamed/Desktop/Work/aws/AI/Practitioner/AIF-C01/07_Hands_On_Labs/Lab_06_No_Code_Predictive_ML_with_Amazon_SageMaker_Canvas.md) and [Lab 07: Data Prep with Data Wrangler](file:///home/mohamed/Desktop/Work/aws/AI/Practitioner/AIF-C01/07_Hands_On_Labs/Lab_07_Data_Preparation_and_Feature_Engineering_with_SageMaker_Data_Wrangler.md).
+* Direct students to review [01_Domain_1_Fundamentals_of_AI_and_ML.md](../06_Explanations/01_Domain_1_Fundamentals_of_AI_and_ML.md).
+* Transition to hands-on practice: [Lab 06: No-Code ML with SageMaker Canvas](../07_Hands_On_Labs/Lab_06_No_Code_Predictive_ML_with_Amazon_SageMaker_Canvas.md) and [Lab 07: Data Prep with Data Wrangler](../07_Hands_On_Labs/Lab_07_Data_Preparation_and_Feature_Engineering_with_SageMaker_Data_Wrangler.md).

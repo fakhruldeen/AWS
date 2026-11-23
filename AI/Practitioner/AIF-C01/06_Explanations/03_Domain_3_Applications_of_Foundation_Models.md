@@ -198,7 +198,12 @@ Test your mastery of Domain 3 with these 10 exam-style practice questions:
 <summary><b>Click to View Answer & Explanation</b></summary>
 
 **Correct Answer:** **B) Amazon Bedrock**  
-- **Why it's correct:** Amazon Bedrock is the serverless foundation model hub on AWS, giving developers seamless API access to models like Claude 3.5 Sonnet, Llama 3, and Titan Text.
+- **Why it's correct:** **Amazon Bedrock** is AWS's fully managed, serverless platform providing a unified API (`InvokeModel`, `Converse`) to access high-performing foundation models from top AI labs and Amazon with zero infrastructure provisioning.
+- **Distractor Analysis:**
+  - *Option A is INCORRECT:* SageMaker Canvas is a visual, no-code AutoML workspace for building tabular machine learning models.
+  - *Option B is CORRECT:* Bedrock is the premier serverless foundation model API gateway on AWS.
+  - *Option C is INCORRECT:* AWS Lambda is a serverless compute service for running general event-driven functions, not a managed FM provider.
+  - *Option D is INCORRECT:* Amazon Rekognition is a specialized computer vision service for image and video analysis.
 </details>
 
 ### Question 2
@@ -212,7 +217,12 @@ Test your mastery of Domain 3 with these 10 exam-style practice questions:
 <summary><b>Click to View Answer & Explanation</b></summary>
 
 **Correct Answer:** **B) Retrieval Augmented Generation (RAG) using Amazon Bedrock Knowledge Bases**  
-- **Why it's correct:** RAG dynamically retrieves authoritative context from external vector knowledge stores (S3 PDFs converted to embeddings) at query time, grounding LLM generation in factual corporate data and providing source citations without retraining.
+- **Why it's correct:** **Retrieval-Augmented Generation (RAG)** dynamically queries external vector knowledge repositories at inference time, injecting relevant document excerpts directly into the prompt to ground model responses in verified facts and generate verifiable citations without retraining.
+- **Distractor Analysis:**
+  - *Option A is INCORRECT:* Pre-training costs millions of dollars, takes months of compute, and permanently bakes facts into weights, failing to support constantly updating clinical guidelines.
+  - *Option B is CORRECT:* Bedrock Knowledge Bases automates document ingestion, chunking, embedding, vector retrieval, and citation-backed generation for dynamic documents.
+  - *Option C is INCORRECT:* Fine-tuning alters model tone and domain vocabulary, but cannot reliably cite specific source page numbers and requires retraining whenever guidelines update.
+  - *Option D is INCORRECT:* Regex pattern matching is rigid and incapable of semantic comprehension across unstructured medical texts.
 </details>
 
 ### Question 3
@@ -226,7 +236,12 @@ Test your mastery of Domain 3 with these 10 exam-style practice questions:
 <summary><b>Click to View Answer & Explanation</b></summary>
 
 **Correct Answer:** **B) LoRA freezes the original pre-trained model weights and trains a small set of low-rank adapter matrices (< 1% of parameters), reducing GPU memory and preventing catastrophic forgetting.**  
-- **Why it's correct:** LoRA updates $W = W_0 + B 	imes A$, training only low-rank matrices $A$ and $B$, which drastically slashes VRAM requirements and compute costs while preserving generalized reasoning.
+- **Why it's correct:** LoRA decomposes parameter weight updates into two smaller low-rank matrices ($W = W_0 + B \times A$), freezing the original weights $W_0$. This slashes required GPU memory and training time by over 70% while safeguarding the base model against catastrophic forgetting.
+- **Distractor Analysis:**
+  - *Option A is INCORRECT:* Training all weights from scratch is pre-training, which requires massive computational resources.
+  - *Option B is CORRECT:* LoRA freezes base weights and trains lightweight adapter matrices.
+  - *Option C is INCORRECT:* LoRA is a parameter adaptation technique applicable to both text and vision models, not a modality converter.
+  - *Option D is INCORRECT:* LoRA is an active model training algorithm, not an offline data ETL step.
 </details>
 
 ### Question 4
@@ -240,7 +255,12 @@ Test your mastery of Domain 3 with these 10 exam-style practice questions:
 <summary><b>Click to View Answer & Explanation</b></summary>
 
 **Correct Answer:** **B) Amazon Bedrock Knowledge Bases**  
-- **Why it's correct:** Bedrock Knowledge Bases provides turnkey managed RAG, integrating directly with S3 and vector stores to execute chunking, embedding, vector search, and augmented generation.
+- **Why it's correct:** **Amazon Bedrock Knowledge Bases** is the fully managed turnkey RAG service that handles document ingestion from S3, automated chunking, vector generation via Amazon Titan, indexing into vector databases (OpenSearch Serverless, Aurora pgvector, Pinecone), and semantic retrieval with attribution.
+- **Distractor Analysis:**
+  - *Option A is INCORRECT:* Bedrock Agents orchestrates autonomous multi-step reasoning and API actions via Action Groups and Lambda.
+  - *Option B is CORRECT:* Knowledge Bases is the purpose-built turnkey RAG service on Bedrock.
+  - *Option C is INCORRECT:* Bedrock Guardrails implements safety filters, toxic content blocking, and PII masking.
+  - *Option D is INCORRECT:* Bedrock Model Evaluation provides automated and human benchmarks to compare model performance.
 </details>
 
 ### Question 5
@@ -254,7 +274,12 @@ Test your mastery of Domain 3 with these 10 exam-style practice questions:
 <summary><b>Click to View Answer & Explanation</b></summary>
 
 **Correct Answer:** **A) Amazon Bedrock Agents**  
-- **Why it's correct:** Amazon Bedrock Agents utilizes the ReAct framework to break user requests into logical steps, dynamically invoking Action Groups (OpenAPI schemas executed via AWS Lambda) and referencing Knowledge Bases.
+- **Why it's correct:** **Amazon Bedrock Agents** automates multi-step workflows using the ReAct (Reasoning + Acting) framework. It analyzes user requests, formulates a logical execution plan, invokes Action Groups (connected to AWS Lambda functions and external APIs via OpenAPI schemas), and references Knowledge Bases to complete complex business tasks.
+- **Distractor Analysis:**
+  - *Option A is CORRECT:* Bedrock Agents coordinates reasoning, planning, and tool-use execution through Lambda.
+  - *Option B is INCORRECT:* Amazon Polly converts text into lifelike speech.
+  - *Option C is INCORRECT:* AWS Glue is a serverless data integration and ETL service.
+  - *Option D is INCORRECT:* Amazon Comprehend extracts sentiment and entities from text, lacking reasoning or tool invocation abilities.
 </details>
 
 ### Question 6
@@ -268,7 +293,12 @@ Test your mastery of Domain 3 with these 10 exam-style practice questions:
 <summary><b>Click to View Answer & Explanation</b></summary>
 
 **Correct Answer:** **B) Provisioned Throughput (committed model units)**  
-- **Why it's correct:** Custom fine-tuned models on Amazon Bedrock require Provisioned Throughput to dedicate dedicated model units (purchased in 1-month or 6-month commitments) to guarantee consistent low-latency capacity.
+- **Why it's correct:** Custom fine-tuned models on Amazon Bedrock cannot be invoked via the multi-tenant On-Demand pricing pool; they require **Provisioned Throughput**, which provisions dedicated Model Units (MUs) under 1-month or 6-month commitments to guarantee capacity and performance.
+- **Distractor Analysis:**
+  - *Option A is INCORRECT:* On-Demand pricing is available only for base foundation models shared across multi-tenant infrastructure.
+  - *Option B is CORRECT:* Custom models and strict SLA guarantees on Bedrock mandate Provisioned Throughput.
+  - *Option C is INCORRECT:* Spot instances are an Amazon EC2 spare-capacity pricing model, not available on Amazon Bedrock.
+  - *Option D is INCORRECT:* Custom model hosting is not included in the AWS Free Tier.
 </details>
 
 ### Question 7
@@ -282,7 +312,12 @@ Test your mastery of Domain 3 with these 10 exam-style practice questions:
 <summary><b>Click to View Answer & Explanation</b></summary>
 
 **Correct Answer:** **B) Batch Inference**  
-- **Why it's correct:** Bedrock Batch Inference processes bulk inputs asynchronously from S3, writing results back to S3 at half the price of standard On-Demand API invocations.
+- **Why it's correct:** **Amazon Bedrock Batch Inference** allows customers to submit bulk requests stored in JSONL format on Amazon S3, processing them asynchronously within 24 hours at a 50% discount compared to real-time On-Demand pricing.
+- **Distractor Analysis:**
+  - *Option A is INCORRECT:* Spot inference is not a supported purchasing tier on Amazon Bedrock.
+  - *Option B is CORRECT:* Batch inference processes large, non-interactive workloads asynchronously at a 50% cost savings.
+  - *Option C is INCORRECT:* Provisioned Throughput provides dedicated, real-time throughput under fixed term commitments.
+  - *Option D is INCORRECT:* AWS Savings Plans apply to EC2, Fargate, and Lambda, not Bedrock model tokens.
 </details>
 
 ### Question 8
@@ -296,7 +331,12 @@ Test your mastery of Domain 3 with these 10 exam-style practice questions:
 <summary><b>Click to View Answer & Explanation</b></summary>
 
 **Correct Answer:** **B) Amazon Q Business**  
-- **Why it's correct:** Amazon Q Business is an enterprise GenAI assistant that integrates with corporate identity providers via IAM Identity Center, strictly adhering to source document Access Control Lists (ACLs).
+- **Why it's correct:** **Amazon Q Business** is a generative AI enterprise assistant that indexes enterprise content across 40+ pre-built connectors and integrates with corporate IAM Identity Center to ensure employees only receive answers based on files they have permission to access.
+- **Distractor Analysis:**
+  - *Option A is INCORRECT:* Amazon Q Developer is an AI assistant tailored specifically for software development, coding, and DevOps.
+  - *Option B is CORRECT:* Amazon Q Business is the enterprise knowledge assistant with enterprise permission/ACL enforcement.
+  - *Option C is INCORRECT:* Amazon Kendra is an intelligent enterprise search engine returning keyword/semantic document links rather than generative synthesis.
+  - *Option D is INCORRECT:* AWS PartyRock is an educational generative AI playground.
 </details>
 
 ### Question 9
@@ -310,7 +350,12 @@ Test your mastery of Domain 3 with these 10 exam-style practice questions:
 <summary><b>Click to View Answer & Explanation</b></summary>
 
 **Correct Answer:** **B) Amazon Q Developer**  
-- **Why it's correct:** Amazon Q Developer (formerly CodeWhisperer) is a generative AI assistant for software development in IDEs and the AWS Console, offering code generation, security remediation, and code transformation.
+- **Why it's correct:** **Amazon Q Developer** is a generative AI assistant for software development that integrates into IDEs (VS Code, IntelliJ) and the AWS Console, generating code, reviewing PRs, scanning security vulnerabilities, and performing code transformations (e.g. migrating Java 8 to Java 17).
+- **Distractor Analysis:**
+  - *Option A is INCORRECT:* Amazon Q Business assists business employees with corporate documentation search, not IDE software engineering.
+  - *Option B is CORRECT:* Amazon Q Developer is the dedicated coding and software engineering assistant.
+  - *Option C is INCORRECT:* Amazon Bedrock Agents is an orchestration framework for custom multi-step LLM workflows.
+  - *Option D is INCORRECT:* AWS Cloud9 is a cloud-based integrated development environment (IDE), not an AI coding assistant.
 </details>
 
 ### Question 10
@@ -324,5 +369,111 @@ Test your mastery of Domain 3 with these 10 exam-style practice questions:
 <summary><b>Click to View Answer & Explanation</b></summary>
 
 **Correct Answer:** **B) Catastrophic Forgetting**  
-- **Why it's correct:** Catastrophic Forgetting occurs when fine-tuning drastically alters base model weights, causing the model to lose its general linguistic knowledge, common sense reasoning, or language abilities.
+- **Why it's correct:** **Catastrophic Forgetting** occurs when fine-tuning over-optimizes model weights to a narrow target dataset, overwriting previously learned representations and destroying the model's generalized reasoning, language, and common-sense capabilities.
+- **Distractor Analysis:**
+  - *Option A is INCORRECT:* Vanishing gradients affect deep recurrent networks or poorly normalized activations during early training.
+  - *Option B is CORRECT:* Catastrophic forgetting is the primary failure mode of unregularized full fine-tuning.
+  - *Option C is INCORRECT:* "Inverted embeddings" is a fabricated distractor.
+  - *Option D is INCORRECT:* Model inversion is a privacy cyberattack attempting to reconstruct training images from model confidence scores.
 </details>
+
+---
+
+## 🎓 Master MCQ Solving Blueprint: Domain 3 (Applications of Foundation Models)
+
+> Mined directly from the 510-question Domain 3 bank in the master repository (the highest-weighted exam domain at 28%). Use this systematic 4-layer methodology to resolve any foundation model application question.
+
+### Layer 1: "Clue-to-Service" Linguistic Decryption Matrix
+
+| If Scenario Text States... | Target Concept / Service | Why (The Core Mechanism) | Decoy Trap to Avoid |
+| :--- | :--- | :--- | :--- |
+| **"Unified serverless API to invoke Claude, Llama, Titan"** | **Amazon Bedrock** | Multi-vendor serverless foundation model hub with uniform `InvokeModel` API. | SageMaker JumpStart (requires deploying to dedicated EC2 compute instances). |
+| **"Dynamic proprietary data / constantly updating docs / citations"** | **RAG (Bedrock Knowledge Bases)** | Grounding via semantic vector retrieval; zero retraining required; citations included. | Fine-tuning (static weights; cannot provide page citations; outdated instantly). |
+| **"Convert text into dense numerical semantic vectors"** | **Amazon Titan Text Embeddings v2** | Generates 1,536-dimensional embeddings for vector similarity search. | Comprehend (extracts entities, not high-dimensional dense vectors). |
+| **"Serverless vector store tightly integrated with Bedrock RAG"** | **Amazon OpenSearch Serverless** | Serverless vector database managing k-NN search without infrastructure ops. | Amazon DynamoDB (NoSQL key-value store; not optimized for dense vector cosine search). |
+| **"Adapt model style / vocabulary cheaply without retraining all weights"** | **PEFT / LoRA** | Parameter-Efficient Fine-Tuning trains low-rank adapter matrices (< 1% weights). | Full Fine-Tuning (expensive, GPU-heavy, risks catastrophic forgetting). |
+| **"Autonomous multi-step actions / API calls / Lambda execution"** | **Amazon Bedrock Agents** | ReAct framework decomposing user goals into Action Groups and Lambda calls. | Bedrock Knowledge Bases (retrieves documents; does not execute actions or APIs). |
+| **"Open standard protocol connecting agents to tools/data over JSON-RPC"** | **Model Context Protocol (MCP)** | Standardized protocol allowing LLMs to discover tools, resources, and prompts. | Proprietary custom API wrappers for every individual tool ($M \times N$ complexity). |
+| **"Deploy a custom fine-tuned model on Amazon Bedrock"** | **Provisioned Throughput** | Custom models require dedicated Model Units under 1- or 6-month commitments. | On-Demand pay-per-token (only available for shared base foundation models). |
+| **"Non-real-time bulk summarization of S3 files at 50% discount"** | **Bedrock Batch Inference** | Asynchronous processing of bulk JSONL prompts from S3 within 24 hours. | Provisioned Throughput (committed real-time capacity). |
+| **"Enterprise employee assistant adhering to document ACL permissions"** | **Amazon Q Business** | 40+ connectors indexing SharePoint/Drive with strict user-level access controls. | Amazon Q Developer (developer coding tool for IDEs and CLI). |
+| **"AI coding assistant in IDE / code generation / unit tests / upgrade Java"** | **Amazon Q Developer** | Generative coding tool integrated into VS Code, IntelliJ, and AWS Console. | Amazon Q Business (knowledge assistant for business documents). |
+| **"Loss of generalized reasoning after fine-tuning on narrow data"** | **Catastrophic Forgetting** | Base weights overwritten by narrow domain optimization. | Data Drift (shift in production input distributions). |
+
+---
+
+### Layer 2: 3-Step Rapid Elimination Heuristic
+
+```mermaid
+flowchart TD
+    Q["Read Scenario Scenario"] --> S1{"Step 1: Check Customization Depth"}
+    S1 -->|"Dynamic private data + citations needed"| RAG["Lock: RAG (Bedrock Knowledge Bases)\nEliminate: Fine-Tuning, Pre-training"]
+    S1 -->|"Domain vocabulary / writing style adaptation"| FT["Lock: PEFT / LoRA\nEliminate: RAG, Prompt Engineering"]
+    S1 -->|"Multi-step planning + API actions"| Agent["Lock: Bedrock Agents + Action Groups"]
+    
+    RAG & FT & Agent --> S2{"Step 2: Check Hosting & Pricing Model"}
+    S2 -->|"Bedrock Custom Fine-Tuned Model"| PT["Lock: Provisioned Throughput\nEliminate: On-Demand Pay-per-token"]
+    S2 -->|"Bulk Offline Processing from S3"| Batch["Lock: Batch Inference (50% discount)"]
+    S2 -->|"Standard Foundation Model API"| OD["Lock: On-Demand Pricing"]
+    
+    PT & Batch & OD --> S3{"Step 3: Check Enterprise Q Persona"}
+    S3 -->|"Business Employee (SharePoint, ACLs)"| QB["Lock: Amazon Q Business"]
+    S3 -->|"Software Engineer (IDE, Code, Java)"| QD["Lock: Amazon Q Developer"]
+```
+
+1. **Step 1: Determine the Adaptation Strategy:**
+   - Need to incorporate new external documents that change frequently? $\to$ **RAG (Bedrock Knowledge Bases)**.
+   - Need to teach the model a specific tone, jargon, or output schema where facts don't change? $\to$ **PEFT (LoRA)**.
+   - Need the model to execute transactions (cancel flight, query database)? $\to$ **Bedrock Agents**.
+2. **Step 2: Check Bedrock Pricing Constraints:**
+   - Did the company fine-tune a model? $\to$ It **CANNOT** use On-Demand. It MUST purchase **Provisioned Throughput**.
+   - Is it processing millions of backlogged documents overnight? $\to$ Look for **Batch Inference** (50% cheaper).
+3. **Step 3: Disambiguate Amazon Q:**
+   - Mentions developer, code completion, unit testing, git, or IDE? $\to$ **Amazon Q Developer**.
+   - Mentions business users, Jira, Salesforce, SharePoint, HR policies, or access control lists (ACLs)? $\to$ **Amazon Q Business**.
+
+---
+
+### Layer 3: High-Frequency Decoy Autopsy
+
+#### Decoy Trap 1: RAG vs Fine-Tuning
+* **The Exam Trap:** A company has 10,000 internal policy documents that update weekly. They want a generative model to answer employee questions with citations.
+* **The Decoy:** "Fine-tune an Amazon Titan model on the company documents using SageMaker."
+* **The Fatal Flaw:** Fine-tuning does not provide factual citation links to source documents. Furthermore, every time a policy updates next week, the company would have to retrain the model at immense expense.
+* **The Correct Choice:** **Retrieval-Augmented Generation (RAG)** via **Bedrock Knowledge Bases**. Documents in S3 are automatically re-indexed into vector storage, providing immediate real-time updates and exact citations.
+
+#### Decoy Trap 2: Amazon Q Business vs Amazon Q Developer
+* **The Exam Trap:** The question asks for an AI assistant to help employees search enterprise data across Salesforce, Confluence, and ServiceNow while respecting identity permissions.
+* **The Decoy:** Amazon Q Developer.
+* **The Fatal Flaw:** Amazon Q Developer is an IDE coding assistant designed for software engineers. It cannot crawl or enforce ACLs across corporate intranet document stores.
+* **The Correct Choice:** **Amazon Q Business**.
+
+#### Decoy Trap 3: Bedrock On-Demand vs Provisioned Throughput for Custom Models
+* **The Exam Trap:** A company fine-tunes a model on Bedrock and wants to invoke it using the pay-per-token On-Demand pricing tier to minimize costs.
+* **The Decoy:** Option A: "Select the On-Demand pricing tier for the custom model."
+* **The Fatal Flaw:** Custom models on Amazon Bedrock do not support On-Demand pricing. They require **Provisioned Throughput**.
+* **The Correct Choice:** Purchase **Provisioned Throughput** with dedicated Model Units.
+
+---
+
+### Layer 4: 10-Second Visual Decision Flowchart
+
+```mermaid
+flowchart TD
+    Start["Read Foundation Model Scenario"] --> Req{"What is the Core Need?"}
+    
+    Req -->|"Grounding on Private Documents"| RAGFlow["RAG Architecture\n(Amazon Bedrock Knowledge Bases)"]
+    RAGFlow --> Storage["Store raw files in S3\nEmbed via Titan Embeddings v2\nIndex in OpenSearch Serverless"]
+    
+    Req -->|"Multi-Step Autonomous Actions"| AgentFlow["Amazon Bedrock Agents"]
+    AgentFlow --> Actions["Action Groups execute OpenAPI schemas\nvia AWS Lambda functions"]
+    
+    Req -->|"Model Customization"| CustomFlow{"What needs custom training?"}
+    CustomFlow -->|"Tone, style, specialized domain language"| LoRA["PEFT / LoRA\n(Freezes base weights; trains adapters)"]
+    CustomFlow -->|"New base language / massive corpus"| PreTrain["Pre-Training from scratch\n(Extreme cost/compute)"]
+    LoRA --> Hosting["Deploy custom model via\nBedrock Provisioned Throughput"]
+    
+    Req -->|"Enterprise GenAI Assistants"| QAssist{"Who is the user?"}
+    QAssist -->|"Software Developers in IDE"| QD["Amazon Q Developer"]
+    QAssist -->|"Business Staff querying company files"| QB["Amazon Q Business"]
+```

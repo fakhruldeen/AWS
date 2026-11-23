@@ -44,4 +44,4 @@ For resolving close "distractor" choices on the exam, consult our 10 focused pai
 
 1. **Phase 1: Deep Dive Review:** Read files `01` through `05` after watching the lectures or reviewing the slide decks.
 2. **Phase 2: Distinction Mastery:** Use `06_AIF-C01_Exam_CheatSheet.md` to memorize subtle service boundaries (e.g., when to choose Asynchronous Inference vs. Batch Transform, or ROUGE vs. BLEU).
-3. **Phase 3: Targeted Practice:** Drill with the [Master Unique Revision Banks](../../../Documents/Obsidian%20Vault/Brain/AWS/Questions_Bank/Unique_Revision_Banks/AI_Practitioner_AIF-C01/README.md) and take the [65-Question Full-Length Mock Exam](../11_Practice_Exams/AIF_C01_Full_Length_Mock_Exam.md).
+3. **Phase 3: Targeted Practice:** Drill with the [AIF-C01 Practice Exams & Revision Sets](../11_Practice_Exams/README.md) and take the [65-Question Full-Length Mock Exam](../11_Practice_Exams/AIF_C01_Full_Length_Mock_Exam.md).

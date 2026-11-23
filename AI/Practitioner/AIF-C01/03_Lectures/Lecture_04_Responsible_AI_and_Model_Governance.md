@@ -200,18 +200,11 @@ Which solution will meet these requirements?
 **Correct Answer:** `A`  
 **Peer Consensus:** `100%` agreement.  
 
-**Architectural Breakdown & Distractor Analysis:**  
-Community Most Voted: A (100%). Contributor Answer: A.
-
-Community Rationale & Discussion:
-Selected Answer: A
-The solution that meets the requirements of detecting bias and explaining model predictions in a loan approval scenario is A. Amazon SageMaker Clarify
----
-Selected Answer: A
-The correct answer is A. SageMaker Clarify provides both bias detection and model explainability features.
----
-Selected Answer: A
-Amazon SageMaker Clarify provides both bias detection and model explainability features, making it the most suitable choice for detecting bias in a loan approval model and explaining its predictions.
+**Architectural Breakdown & Distractor Analysis:**
+- **Option A is CORRECT:** **Amazon SageMaker Clarify** is the dedicated AWS service that provides automated bias detection across pre-training datasets and post-training model inferences, and computes SHAP (Shapley Additive exPlanations) feature attributions to explain individual predictions (e.g., why a loan was approved or denied).
+- **Option B is INCORRECT:** Amazon SageMaker Data Wrangler is a visual ETL and feature preparation tool for cleaning, transforming, and engineering tabular/multimodal data; it does not compute post-training explainability metrics.
+- **Option C is INCORRECT:** SageMaker Model Cards are governance documentation artifacts that record model purpose, training parameters, and manual evaluation findings, but do not compute algorithmic bias or SHAP explanations directly.
+- **Option D is INCORRECT:** AWS AI Service Cards are public transparency documents published by AWS detailing the capabilities and limitations of AWS managed services (e.g., Rekognition, Textract), not customer-trained ML models.
 
 </details>
 
@@ -230,17 +223,14 @@ Which core dimension of responsible AI does this scenario present?
 <details>
 <summary><b>View Verified Answer & Solution Analysis</b></summary>
 
-**Correct Answer:** `U`  
+**Correct Answer:** `A`  
 **Peer Consensus:** `100%` agreement.  
 
-**Architectural Breakdown & Distractor Analysis:**  
-Community Most Voted: U (100%). Contributor Answer: U.
-
-Community Rationale & Discussion:
-Selected Answer: U
-A dimensão central apresentada nesse cenário é A. Justiça.
-
-O sistema de triagem de currículos enfrenta desafios relacionados à justiça, pois foi treinado com dados que não são representativos de todos os grupos demográficos. Isso pode introduzir vieses no modelo, prejudicando certos grupos enquanto favorece outros. Em sistemas de IA responsáveis, é essencial abordar esses vieses, garantindo que os dados de treinamento sejam equilibrados e inclusivos para promover resultados justos.
+**Architectural Breakdown & Distractor Analysis:**
+- **Option A is CORRECT:** **Fairness** is the responsible AI dimension concerned with preventing algorithmic discrimination and disparate impact against specific demographic groups. Training a hiring model on historically skewed resumes leads to selection bias and unfair treatment of underrepresented groups.
+- **Option B is INCORRECT:** Explainability refers to the ability for humans to understand and interpret the reasons behind a model's specific output or prediction.
+- **Option C is INCORRECT:** Privacy and security focus on safeguarding confidential applicant data, preventing data leakage, and adhering to compliance regulations (e.g., GDPR).
+- **Option D is INCORRECT:** Transparency focuses on open communication, model documentation, and stakeholder disclosure regarding how an AI system is structured and intended to be used.
 
 </details>
 
@@ -261,19 +251,10 @@ Which technique will solve the problem?
 **Correct Answer:** `A`  
 **Peer Consensus:** `100%` agreement.  
 
-**Architectural Breakdown & Distractor Analysis:**  
-Community Most Voted: A (100%). Contributor Answer: A.
-
-Community Rationale & Discussion:
-Selected Answer: A
-Data augmentation for imbalanced classes: If the input data is biased and leads to undesirable attributes in the generated images (such as certain professions being overrepresented by specific attributes like gender or race), data augmentation can help balance the dataset. Data augmentation involves creating new training samples by applying transformations like cropping, rotating, or altering color schemes to existing data. This can help create a more diverse, balanced dataset and reduce bias by ensuring the model sees a more representative set of examples.
----
-Selected Answer: A
-Data augmentation for imbalanced classes
-
-Data augmentation techniques can help mitigate bias in image generation models by artificially increasing the diversity of the training data. By applying transformations like rotations, flips, and color jittering to existing images, you can create new, synthetic images that are similar to the original ones. This can help balance the dataset and reduce the impact of biases present in the original data.
----
-Selected Answer: A
-A. Data augmentation for imbalanced classes is the most effective technique to mitigate bias in the input data by ensuring a more balanced representation of classes and attributes in the training set, leading to fairer and more accurate image generation.
+**Architectural Breakdown & Distractor Analysis:**
+- **Option A is CORRECT:** **Data augmentation** generates synthetic variations (crops, rotations, color adjustments, demographic rebalancing) to enrich underrepresented classes, directly mitigating the training data imbalance that induces stereotypic bias in generative models.
+- **Option B is INCORRECT:** Model monitoring tracks real-time inference drift in production, but does not rectify or remediate underlying training distribution deficiencies.
+- **Option C is INCORRECT:** Retrieval Augmented Generation (RAG) grounds text-based language models against dynamic knowledge repositories; it does not balance image training corpora.
+- **Option D is INCORRECT:** Watermark detection identifies synthetic provenance markers or copyright stamps on media, having zero impact on training dataset diversity or demographic fairness.
 
 </details>
