@@ -3,8 +3,8 @@
 generate_community_consensus_focus_sets.py
 
 Generates dedicated Community Consensus Pool High-Yield Focus Sets in:
-- Cloud/Practitioner/CLF-C02/phase4_step11_revision_questions/Community Consensus Pool_High_Yield_Focus_Set.md
-- AI/Practitioner/AIF-C01/phase4_step11_revision_questions/Community Consensus Pool_High_Yield_Focus_Set.md
+- Cloud/Practitioner/CLF-C02/11_Practice_Exams/Community Consensus Pool_High_Yield_Focus_Set.md
+- AI/Practitioner/AIF-C01/11_Practice_Exams/Community Consensus Pool_High_Yield_Focus_Set.md
 """
 
 import json
@@ -74,7 +74,7 @@ def generate_clf_set():
         lines.append("---")
         lines.append("")
 
-    out_file = WORK_REPO / "Cloud/Practitioner/CLF-C02/phase4_step11_revision_questions/Community Consensus Pool_High_Yield_Focus_Set.md"
+    out_file = WORK_REPO / "Cloud/Practitioner/CLF-C02/11_Practice_Exams/Community Consensus Pool_High_Yield_Focus_Set.md"
     out_file.write_text("\n".join(lines), encoding="utf-8")
     print(f"Generated CLF-C02 Community Consensus Pool set ({len(selected)} questions) at {out_file}")
 
@@ -127,7 +127,7 @@ def generate_aif_set():
         lines.append("---")
         lines.append("")
 
-    out_file = WORK_REPO / "AI/Practitioner/AIF-C01/phase4_step11_revision_questions/Community Consensus Pool_High_Yield_Focus_Set.md"
+    out_file = WORK_REPO / "AI/Practitioner/AIF-C01/11_Practice_Exams/Community Consensus Pool_High_Yield_Focus_Set.md"
     out_file.write_text("\n".join(lines), encoding="utf-8")
     print(f"Generated AIF-C01 Community Consensus Pool set ({len(data)} questions) at {out_file}")
 

@@ -17,8 +17,8 @@ WORK_DIR = Path("/home/mohamed/Desktop/Work/aws")
 VAULT_DIR = Path("/home/mohamed/Documents/Obsidian Vault/Brain/AWS")
 STEP_OUTPUTS = Path("/home/mohamed/.gemini/antigravity/brain/4cd9fb95-23a8-4e83-89b6-b53aad4fedb2/browser_sandbox/outputs")
 
-AIF_WORK_POOL = WORK_DIR / "AI/Practitioner/AIF-C01/phase4_step11_revision_questions/AIF_C01_Community_Practice_Pool_233Q.json"
-AIF_WORK_MD = WORK_DIR / "AI/Practitioner/AIF-C01/phase4_step11_revision_questions/AIF_C01_Community_Practice_Pool_233Q.md"
+AIF_WORK_POOL = WORK_DIR / "AI/Practitioner/AIF-C01/11_Practice_Exams/AIF_C01_Community_Practice_Pool_233Q.json"
+AIF_WORK_MD = WORK_DIR / "AI/Practitioner/AIF-C01/11_Practice_Exams/AIF_C01_Community_Practice_Pool_233Q.md"
 AIF_VAULT_POOL = VAULT_DIR / "Questions_Bank/Community_Practice_Questions/AIF_C01_Community_Pool_233Q.json"
 AIF_VAULT_MD = VAULT_DIR / "Questions_Bank/Community_Practice_Questions/AIF_C01_Community_Pool_233Q.md"
 AIF_MASTER_VAULT = VAULT_DIR / "Questions_Bank/Unique_Revision_Banks/AI_Practitioner_AIF-C01/AIF_C01_Master_Unique_Questions.json"

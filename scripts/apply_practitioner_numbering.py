@@ -4,18 +4,18 @@ apply_practitioner_numbering.py
 
 Renames the study folders inside Cloud/Practitioner/CLF-C02 and AI/Practitioner/AIF-C01
 to follow the pedagogical chronological naming scheme:
-  phase0_step01_syllabus
-  phase0_step02_prerequisites
-  phase1_step03_lectures
-  phase1_step04_slides
-  phase1_step05_diagrams
-  phase1_step06_explanations
-  phase2_step07_labs
-  phase2_step08_tutorials
-  phase3_step09_notes
-  phase4_step10_knowledge_checks
-  phase4_step11_revision_questions
-  phase5_step12_sources
+  01_Syllabus
+  02_Prerequisites
+  03_Lectures
+  04_Slides
+  05_Diagrams
+  06_Explanations
+  07_Hands_On_Labs
+  08_Tutorials
+  09_Notes_and_Cheatsheets
+  10_Knowledge_Checks
+  11_Practice_Exams
+  12_Sources
 
 Also updates all relative links and text references across the repository and Obsidian vault.
 """
@@ -28,18 +28,18 @@ WORK_REPO = Path("/home/mohamed/Desktop/Work/aws")
 VAULT_REPO = Path("/home/mohamed/Documents/Obsidian Vault/Brain/AWS")
 
 FOLDER_MAPPING = [
-    ("syllabus", "phase0_step01_syllabus"),
-    ("prerequisites", "phase0_step02_prerequisites"),
-    ("lectures", "phase1_step03_lectures"),
-    ("slides", "phase1_step04_slides"),
-    ("diagrams", "phase1_step05_diagrams"),
-    ("explanations", "phase1_step06_explanations"),
-    ("labs", "phase2_step07_labs"),
-    ("tutorials", "phase2_step08_tutorials"),
-    ("notes", "phase3_step09_notes"),
-    ("knowledge_checks", "phase4_step10_knowledge_checks"),
-    ("revision_questions", "phase4_step11_revision_questions"),
-    ("sources", "phase5_step12_sources"),
+    ("syllabus", "01_Syllabus"),
+    ("prerequisites", "02_Prerequisites"),
+    ("lectures", "03_Lectures"),
+    ("slides", "04_Slides"),
+    ("diagrams", "05_Diagrams"),
+    ("explanations", "06_Explanations"),
+    ("labs", "07_Hands_On_Labs"),
+    ("tutorials", "08_Tutorials"),
+    ("notes", "09_Notes_and_Cheatsheets"),
+    ("knowledge_checks", "10_Knowledge_Checks"),
+    ("revision_questions", "11_Practice_Exams"),
+    ("sources", "12_Sources"),
 ]
 
 PRACTITIONER_DIRS = [
@@ -87,7 +87,7 @@ def update_references():
             replacements.append((f"({old_name}/", f"({new_name}/"))
 
     # Also update relative links within practitioner directories
-    # e.g. (../phase2_step07_labs/ -> (../phase2_step07_labs/
+    # e.g. (../07_Hands_On_Labs/ -> (../07_Hands_On_Labs/
 
     # Scan work repo files
     files_to_update = []

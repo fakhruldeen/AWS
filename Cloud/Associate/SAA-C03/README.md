@@ -3,7 +3,9 @@
 > **Exam Code:** `SAA-C03`  
 > **Level:** Associate (Cloud Architecture)  
 > **Passing Score:** `720 / 1000` (Scaled scoring)  
-> **Questions:** 65 scenario-based questions, 130 minutes.
+> **Questions:** 65 scenario-based questions, 130 minutes.  
+>
+> 🚀 **New to SAA-C03? Start Here:** [**Student Study Dashboard & Architecture Roadmap**](./00_START_HERE.md)
 
 ---
 
@@ -11,18 +13,18 @@
 
 ```
 Cloud/Associate/SAA-C03/
-├── phase0_step01_syllabus/             # Official blueprint, domain weighting, study schedules
-├── phase0_step02_prerequisites/          # Core networking, compute, storage, security foundations
-├── phase1_step03_lectures/               # Instructor delivery lesson plans and classroom talking points
-├── phase1_step04_slides/                 # Marp slide decks for classroom delivery
-├── phase1_step05_diagrams/               # Standalone production Mermaid architecture blueprints
-├── phase1_step06_explanations/           # In-depth architectural mechanics & trade-off breakdowns
-├── phase2_step07_labs/                   # Guided architectural hands-on labs with CLI runbooks
-├── phase2_step08_tutorials/              # Production multi-service architectural build tutorials
-├── phase3_step09_notes/                  # High-yield architectural trade-off cheat sheets
-├── phase4_step10_knowledge_checks/       # Rapid diagnostic retention quizzes per domain
-├── phase4_step11_revision_questions/     # Curated scenario questions + 1,019Q Community Practice Pool
-└── phase5_step12_sources/                # Academic references, whitepapers, documentation indexes
+├── 01_Syllabus/             # Official blueprint, domain weighting, study schedules
+├── 02_Prerequisites/          # Core networking, compute, storage, security foundations
+├── 03_Lectures/               # Instructor delivery lesson plans and classroom talking points
+├── 04_Slides/                 # Marp slide decks for classroom delivery
+├── 05_Diagrams/               # Standalone production Mermaid architecture blueprints
+├── 06_Explanations/           # In-depth architectural mechanics & trade-off breakdowns
+├── 07_Hands_On_Labs/                   # Guided architectural hands-on labs with CLI runbooks
+├── 08_Tutorials/              # Production multi-service architectural build tutorials
+├── 09_Notes_and_Cheatsheets/                  # High-yield architectural trade-off cheat sheets
+├── 10_Knowledge_Checks/       # Rapid diagnostic retention quizzes per domain
+├── 11_Practice_Exams/     # Curated scenario questions + 1,019Q Community Practice Pool
+└── 12_Sources/                # Academic references, whitepapers, documentation indexes
 ```
 
 ---
@@ -37,10 +39,10 @@ pie title SAA-C03 Domain Weighting
     "Domain 4: Design Cost-Optimized Architectures" : 20
 ```
 
-1. **[Domain 1: Design Secure Architectures (30%)](phase0_step01_syllabus/SAA-C03_Official_Blueprint.md#domain-1-design-secure-architectures-30):** Secure access to AWS resources, secure workload/applications, data security (KMS, Secrets Manager).
-2. **[Domain 2: Design Resilient Architectures (26%)](phase0_step01_syllabus/SAA-C03_Official_Blueprint.md#domain-2-design-resilient-architectures-26):** Scalable, loosely coupled architectures (SQS, EventBridge), high-availability / fault-tolerant multi-AZ architectures (ALB, Auto Scaling, Aurora).
-3. **[Domain 3: Design High-Performing Architectures (24%)](phase0_step01_syllabus/SAA-C03_Official_Blueprint.md#domain-3-design-high-performing-architectures-24):** High-performing compute, storage (EFS, FSx, EBS io2), databases (DynamoDB DAX, ElastiCache), and networks (CloudFront, Global Accelerator).
-4. **[Domain 4: Design Cost-Optimized Architectures (20%)](phase0_step01_syllabus/SAA-C03_Official_Blueprint.md#domain-4-design-cost-optimized-architectures-20):** Cost-effective storage (S3 tiers), compute (Savings Plans, Spot, Serverless), and database licensing.
+1. **[Domain 1: Design Secure Architectures (30%)](01_Syllabus/SAA-C03_Official_Blueprint.md#domain-1-design-secure-architectures-30):** Secure access to AWS resources, secure workload/applications, data security (KMS, Secrets Manager).
+2. **[Domain 2: Design Resilient Architectures (26%)](01_Syllabus/SAA-C03_Official_Blueprint.md#domain-2-design-resilient-architectures-26):** Scalable, loosely coupled architectures (SQS, EventBridge), high-availability / fault-tolerant multi-AZ architectures (ALB, Auto Scaling, Aurora).
+3. **[Domain 3: Design High-Performing Architectures (24%)](01_Syllabus/SAA-C03_Official_Blueprint.md#domain-3-design-high-performing-architectures-24):** High-performing compute, storage (EFS, FSx, EBS io2), databases (DynamoDB DAX, ElastiCache), and networks (CloudFront, Global Accelerator).
+4. **[Domain 4: Design Cost-Optimized Architectures (20%)](01_Syllabus/SAA-C03_Official_Blueprint.md#domain-4-design-cost-optimized-architectures-20):** Cost-effective storage (S3 tiers), compute (Savings Plans, Spot, Serverless), and database licensing.
 
 ---
 

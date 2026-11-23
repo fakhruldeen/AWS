@@ -33,5 +33,5 @@ Cloud/
 
 ## 🚀 Active Exam Portals
 
-- **[Cloud / Practitioner / CLF-C02](./Practitioner/CLF-C02/README.md)** - AWS Certified Cloud Practitioner comprehensive standalone curriculum featuring 14 visual labs, 7 architectural tutorials, 19 domain guides, 10 production Mermaid blueprints, and the complete 2026 practice suite.
-- **[Cloud / Associate / SAA-C03](./Associate/SAA-C03/README.md)** - AWS Certified Solutions Architect - Associate comprehensive curriculum featuring 5 multi-tier resilient architecture labs, domain revision guides, full-length timed mock exams, and a 1,019-question Community Practice Pool.
+- **[Cloud / Practitioner / CLF-C02](./Practitioner/CLF-C02/00_START_HERE.md)** - AWS Certified Cloud Practitioner comprehensive standalone curriculum featuring 14 visual labs, 7 architectural tutorials, 19 domain guides, 10 production Mermaid blueprints, and the complete 2026 practice suite ([Full Portal](./Practitioner/CLF-C02/README.md)).
+- **[Cloud / Associate / SAA-C03](./Associate/SAA-C03/00_START_HERE.md)** - AWS Certified Solutions Architect - Associate comprehensive curriculum featuring 5 multi-tier resilient architecture labs, domain revision guides, full-length timed mock exams, and a 1,019-question Community Practice Pool ([Full Portal](./Associate/SAA-C03/README.md)).

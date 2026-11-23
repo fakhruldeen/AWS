@@ -9,8 +9,10 @@ Cloud/Practitioner/CLF-C02/questions_bank/
 # 2. Reference Books & Sources (Copyrighted literature - Never publish online)
 sources/
 **/sources/
+12_Sources/
 phase5_step12_sources/
-**/phase5_step12_sources/
+**/12_Sources/
+phase5_step12_sources/
 *.epub
 *.pdf
 

@@ -15,7 +15,7 @@ MLA_DIR = WORK_REPO / "AI/Associate/MLA-C01"
 
 # 1. SAA-C03 Files
 SAA_FILES = {
-    SAA_DIR / "phase0_step02_prerequisites/README.md": """# 🧱 Solutions Architect Associate (SAA-C03) Prerequisites
+    SAA_DIR / "02_Prerequisites/README.md": """# 🧱 Solutions Architect Associate (SAA-C03) Prerequisites
 
 > **Module:** Core Architectural Prerequisites & Foundations  
 > **Course:** AWS Certified Solutions Architect - Associate (`SAA-C03`)  
@@ -39,7 +39,7 @@ SAA_FILES = {
    - Distributed NoSQL partitioning, primary keys, sort keys, and global secondary indexes (GSI).
 """,
 
-    SAA_DIR / "phase1_step04_slides/README.md": """# 🖥️ SAA-C03 Student Lecture Decks & Slides Portal
+    SAA_DIR / "04_Slides/README.md": """# 🖥️ SAA-C03 Student Lecture Decks & Slides Portal
 
 > **Module:** Classroom Visual Slides in Marp Markdown Format  
 > **Target Certification:** AWS Certified Solutions Architect - Associate (`SAA-C03`)  
@@ -57,7 +57,7 @@ SAA_FILES = {
 > Use the VS Code Marp extension to preview or render these decks as interactive presentations or PDF slides.
 """,
 
-    SAA_DIR / "phase1_step05_diagrams/README.md": """# 📐 SAA-C03 Production Architecture Blueprints (Mermaid)
+    SAA_DIR / "05_Diagrams/README.md": """# 📐 SAA-C03 Production Architecture Blueprints (Mermaid)
 
 > **Module:** Standalone Architectural Diagrams & Blueprints  
 > **Target Certification:** AWS Certified Solutions Architect - Associate (`SAA-C03`)  
@@ -73,7 +73,7 @@ SAA_FILES = {
 5. **Hybrid Connectivity Blueprint:** Direct Connect Gateway and Transit Gateway hub-and-spoke interconnecting multiple VPCs.
 """,
 
-    SAA_DIR / "phase1_step06_explanations/README.md": """# 📖 SAA-C03 High-Yield Architectural Explanations
+    SAA_DIR / "06_Explanations/README.md": """# 📖 SAA-C03 High-Yield Architectural Explanations
 
 > **Module:** Comprehensive Service Mechanics & Architectural Decision Matrices  
 > **Target Certification:** AWS Certified Solutions Architect - Associate (`SAA-C03`)  
@@ -88,7 +88,7 @@ SAA_FILES = {
 4. **Disaster Recovery Architectures:** Backup & Restore vs Pilot Light vs Warm Standby vs Multi-Region Active-Active.
 """,
 
-    SAA_DIR / "phase2_step08_tutorials/README.md": """# 🛠️ SAA-C03 Production-Grade Architectural Tutorials
+    SAA_DIR / "08_Tutorials/README.md": """# 🛠️ SAA-C03 Production-Grade Architectural Tutorials
 
 > **Module:** Multi-Service Enterprise Build Guides  
 > **Target Certification:** AWS Certified Solutions Architect - Associate (`SAA-C03`)  
@@ -104,7 +104,7 @@ SAA_FILES = {
 5. **Tutorial 05:** Hybrid Inter-VPC Transit Gateway Peering and Centralized Egress Filtering.
 """,
 
-    SAA_DIR / "phase5_step12_sources/README.md": """# 📚 SAA-C03 Reference Sources & Literature
+    SAA_DIR / "12_Sources/README.md": """# 📚 SAA-C03 Reference Sources & Literature
 
 > **Module:** Authoritative Reference Literature & Technical Whitepapers  
 > **Target Certification:** AWS Certified Solutions Architect - Associate (`SAA-C03`)  
@@ -121,7 +121,7 @@ SAA_FILES = {
 
 # 2. MLA-C01 Files
 MLA_FILES = {
-    MLA_DIR / "phase0_step02_prerequisites/README.md": """# 🧱 Machine Learning Engineer Associate (MLA-C01) Prerequisites
+    MLA_DIR / "02_Prerequisites/README.md": """# 🧱 Machine Learning Engineer Associate (MLA-C01) Prerequisites
 
 > **Module:** Machine Learning & Systems Engineering Prerequisites  
 > **Course:** AWS Certified Machine Learning Engineer - Associate (`MLA-C01`)  
@@ -142,7 +142,7 @@ MLA_FILES = {
    - IAM role delegation, VPC private subnets, security groups for ML compute clusters.
 """,
 
-    MLA_DIR / "phase1_step04_slides/README.md": """# 🖥️ MLA-C01 Student Lecture Decks & Slides Portal
+    MLA_DIR / "04_Slides/README.md": """# 🖥️ MLA-C01 Student Lecture Decks & Slides Portal
 
 > **Module:** Classroom Visual Slides in Marp Markdown Format  
 > **Target Certification:** AWS Certified Machine Learning Engineer - Associate (`MLA-C01`)  
@@ -157,7 +157,7 @@ MLA_FILES = {
 4. **Lecture Deck 04:** Monitoring, Explainability & Model Governance (Model Monitor, Clarify, Model Cards).
 """,
 
-    MLA_DIR / "phase1_step05_diagrams/README.md": """# 📐 MLA-C01 Production MLOps Blueprints (Mermaid)
+    MLA_DIR / "05_Diagrams/README.md": """# 📐 MLA-C01 Production MLOps Blueprints (Mermaid)
 
 > **Module:** Standalone Architectural Diagrams & Machine Learning Pipelines  
 > **Target Certification:** AWS Certified Machine Learning Engineer - Associate (`MLA-C01`)  
@@ -172,7 +172,7 @@ MLA_FILES = {
 4. **Fine-Tuning Foundation Models with PEFT/LoRA:** Pretrained Weights + Low-Rank Adaptor Matrix training flow.
 """,
 
-    MLA_DIR / "phase1_step06_explanations/README.md": """# 📖 MLA-C01 MLOps & Machine Learning Explanations
+    MLA_DIR / "06_Explanations/README.md": """# 📖 MLA-C01 MLOps & Machine Learning Explanations
 
 > **Module:** Detailed Theoretical Concepts & Engineering Decision Guides  
 > **Target Certification:** AWS Certified Machine Learning Engineer - Associate (`MLA-C01`)  
@@ -187,7 +187,7 @@ MLA_FILES = {
 4. **Model Explainability & Fairness:** Feature attribution using SHAP values and demographic parity checks via SageMaker Clarify.
 """,
 
-    MLA_DIR / "phase2_step08_tutorials/README.md": """# 🛠️ MLA-C01 Production MLOps & Machine Learning Tutorials
+    MLA_DIR / "08_Tutorials/README.md": """# 🛠️ MLA-C01 Production MLOps & Machine Learning Tutorials
 
 > **Module:** End-to-End Production Engineering Build Guides  
 > **Target Certification:** AWS Certified Machine Learning Engineer - Associate (`MLA-C01`)  
@@ -203,7 +203,7 @@ MLA_FILES = {
 5. **Tutorial 05:** Complete Responsible AI Audit: Bias Detection and SHAP Value Explainability Reports.
 """,
 
-    MLA_DIR / "phase5_step12_sources/README.md": """# 📚 MLA-C01 Reference Sources & Literature
+    MLA_DIR / "12_Sources/README.md": """# 📚 MLA-C01 Reference Sources & Literature
 
 > **Module:** Authoritative Reference Literature & Technical Whitepapers  
 > **Target Certification:** AWS Certified Machine Learning Engineer - Associate (`MLA-C01`)  

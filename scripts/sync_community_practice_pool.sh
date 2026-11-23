@@ -60,26 +60,26 @@ echo "==========================================================================
 
 case "${EXAM}" in
     CLF-C02)
-        WORK_JSON="${WORK_REPO}/Cloud/Practitioner/CLF-C02/phase4_step11_revision_questions/CLF_C02_Community_Practice_Pool_718Q.json"
-        WORK_MD="${WORK_REPO}/Cloud/Practitioner/CLF-C02/phase4_step11_revision_questions/CLF_C02_Community_Practice_Pool_718Q.md"
+        WORK_JSON="${WORK_REPO}/Cloud/Practitioner/CLF-C02/11_Practice_Exams/CLF_C02_Community_Practice_Pool_718Q.json"
+        WORK_MD="${WORK_REPO}/Cloud/Practitioner/CLF-C02/11_Practice_Exams/CLF_C02_Community_Practice_Pool_718Q.md"
         VAULT_JSON="${VAULT_BASE}/Questions_Bank/Community_Practice_Questions/CLF_C02_Community_Pool_718Q.json"
         VAULT_MD="${VAULT_BASE}/Questions_Bank/Community_Practice_Questions/CLF_C02_Community_Pool_718Q.md"
         ;;
     AIF-C01)
-        WORK_JSON="${WORK_REPO}/AI/Practitioner/AIF-C01/phase4_step11_revision_questions/AIF_C01_Community_Practice_Pool_233Q.json"
-        WORK_MD="${WORK_REPO}/AI/Practitioner/AIF-C01/phase4_step11_revision_questions/AIF_C01_Community_Practice_Pool_233Q.md"
+        WORK_JSON="${WORK_REPO}/AI/Practitioner/AIF-C01/11_Practice_Exams/AIF_C01_Community_Practice_Pool_233Q.json"
+        WORK_MD="${WORK_REPO}/AI/Practitioner/AIF-C01/11_Practice_Exams/AIF_C01_Community_Practice_Pool_233Q.md"
         VAULT_JSON="${VAULT_BASE}/Questions_Bank/Community_Practice_Questions/AIF_C01_Community_Pool_233Q.json"
         VAULT_MD="${VAULT_BASE}/Questions_Bank/Community_Practice_Questions/AIF_C01_Community_Pool_233Q.md"
         ;;
     SAA-C03)
-        WORK_JSON="${WORK_REPO}/Cloud/Associate/SAA-C03/phase4_step11_revision_questions/SAA_C03_Community_Practice_Pool_1019Q.json"
-        WORK_MD="${WORK_REPO}/Cloud/Associate/SAA-C03/phase4_step11_revision_questions/SAA_C03_Community_Practice_Pool_1019Q.md"
+        WORK_JSON="${WORK_REPO}/Cloud/Associate/SAA-C03/11_Practice_Exams/SAA_C03_Community_Practice_Pool_1019Q.json"
+        WORK_MD="${WORK_REPO}/Cloud/Associate/SAA-C03/11_Practice_Exams/SAA_C03_Community_Practice_Pool_1019Q.md"
         VAULT_JSON="${VAULT_BASE}/Questions_Bank/Community_Practice_Questions/SAA_C03_Community_Pool_1019Q.json"
         VAULT_MD="${VAULT_BASE}/Questions_Bank/Community_Practice_Questions/SAA_C03_Community_Pool_1019Q.md"
         ;;
     MLA-C01)
-        WORK_JSON="${WORK_REPO}/AI/Associate/MLA-C01/phase4_step11_revision_questions/MLA_C01_Community_Practice_Pool_106Q.json"
-        WORK_MD="${WORK_REPO}/AI/Associate/MLA-C01/phase4_step11_revision_questions/MLA_C01_Community_Practice_Pool_106Q.md"
+        WORK_JSON="${WORK_REPO}/AI/Associate/MLA-C01/11_Practice_Exams/MLA_C01_Community_Practice_Pool_106Q.json"
+        WORK_MD="${WORK_REPO}/AI/Associate/MLA-C01/11_Practice_Exams/MLA_C01_Community_Practice_Pool_106Q.md"
         VAULT_JSON="${VAULT_BASE}/Questions_Bank/Community_Practice_Questions/MLA_C01_Community_Pool_106Q.json"
         VAULT_MD="${VAULT_BASE}/Questions_Bank/Community_Practice_Questions/MLA_C01_Community_Pool_106Q.md"
         ;;

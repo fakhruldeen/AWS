@@ -13,8 +13,8 @@ import json
 from typing import Dict, List, Any
 
 WORK_DIR = "/home/mohamed/Desktop/Work/aws"
-CLF_JSON_PATH = os.path.join(WORK_DIR, "Cloud/Practitioner/CLF-C02/phase4_step11_revision_questions/CLF_C02_Community_Practice_Pool_718Q.json")
-AIF_JSON_PATH = os.path.join(WORK_DIR, "AI/Practitioner/AIF-C01/phase4_step11_revision_questions/AIF_C01_Community_Practice_Pool_233Q.json")
+CLF_JSON_PATH = os.path.join(WORK_DIR, "Cloud/Practitioner/CLF-C02/11_Practice_Exams/CLF_C02_Community_Practice_Pool_718Q.json")
+AIF_JSON_PATH = os.path.join(WORK_DIR, "AI/Practitioner/AIF-C01/11_Practice_Exams/AIF_C01_Community_Practice_Pool_233Q.json")
 
 CLF_LECTURE_MAP = {
     "Lecture_01_Introduction_to_Cloud_and_Global_Infra.md": {
@@ -234,28 +234,28 @@ def main():
     used_aif = set()
     
     # 1. CLF Lectures
-    clf_lectures_dir = os.path.join(WORK_DIR, "Cloud/Practitioner/CLF-C02/phase1_step03_lectures")
+    clf_lectures_dir = os.path.join(WORK_DIR, "Cloud/Practitioner/CLF-C02/03_Lectures")
     for fname, cfg in CLF_LECTURE_MAP.items():
         fpath = os.path.join(clf_lectures_dir, fname)
         qs = select_best_questions(clf_pool, cfg["domain"], cfg["keywords"], count=3, used_ids=used_clf)
         inject_into_file(fpath, qs, is_tutorial=False)
         
     # 2. CLF Tutorials
-    clf_tutorials_dir = os.path.join(WORK_DIR, "Cloud/Practitioner/CLF-C02/phase2_step08_tutorials")
+    clf_tutorials_dir = os.path.join(WORK_DIR, "Cloud/Practitioner/CLF-C02/08_Tutorials")
     for fname, cfg in CLF_TUTORIAL_MAP.items():
         fpath = os.path.join(clf_tutorials_dir, fname)
         qs = select_best_questions(clf_pool, cfg["domain"], cfg["keywords"], count=2, used_ids=used_clf)
         inject_into_file(fpath, qs, is_tutorial=True)
         
     # 3. AIF Lectures
-    aif_lectures_dir = os.path.join(WORK_DIR, "AI/Practitioner/AIF-C01/phase1_step03_lectures")
+    aif_lectures_dir = os.path.join(WORK_DIR, "AI/Practitioner/AIF-C01/03_Lectures")
     for fname, cfg in AIF_LECTURE_MAP.items():
         fpath = os.path.join(aif_lectures_dir, fname)
         qs = select_best_questions(aif_pool, cfg["domain"], cfg["keywords"], count=3, used_ids=used_aif)
         inject_into_file(fpath, qs, is_tutorial=False)
         
     # 4. AIF Tutorials
-    aif_tutorials_dir = os.path.join(WORK_DIR, "AI/Practitioner/AIF-C01/phase2_step08_tutorials")
+    aif_tutorials_dir = os.path.join(WORK_DIR, "AI/Practitioner/AIF-C01/08_Tutorials")
     for fname, cfg in AIF_TUTORIAL_MAP.items():
         fpath = os.path.join(aif_tutorials_dir, fname)
         qs = select_best_questions(aif_pool, cfg["domain"], cfg["keywords"], count=2, used_ids=used_aif)

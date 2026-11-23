@@ -3,7 +3,9 @@
 > **Exam Code:** `MLA-C01`  
 > **Level:** Associate (Machine Learning Engineering & Generative AI)  
 > **Passing Score:** `720 / 1000` (Scaled scoring)  
-> **Questions:** 65 scenario-based questions, 130 minutes.
+> **Questions:** 65 scenario-based questions, 130 minutes.  
+>
+> 🚀 **New to MLA-C01? Start Here:** [**Student Study Dashboard & MLOps Roadmap**](./00_START_HERE.md)
 
 ---
 
@@ -11,18 +13,18 @@
 
 ```
 AI/Associate/MLA-C01/
-├── phase0_step01_syllabus/             # Official blueprint, domain weighting, MLOps competencies
-├── phase0_step02_prerequisites/          # Linear algebra, calculus, statistics, Python & PyTorch foundations
-├── phase1_step03_lectures/               # Instructor delivery lesson plans and classroom talking points
-├── phase1_step04_slides/                 # Marp slide decks for classroom delivery
-├── phase1_step05_diagrams/               # Standalone production MLOps & GenAI pipeline blueprints
-├── phase1_step06_explanations/           # In-depth architectural mechanics & trade-off breakdowns
-├── phase2_step07_labs/                   # Guided engineering labs (SageMaker, Bedrock, Clarify) with CLI runbooks
-├── phase2_step08_tutorials/              # Production multi-service MLOps build tutorials
-├── phase3_step09_notes/                  # High-yield engineering cheat sheets (Inference types, drift, PEFT)
-├── phase4_step10_knowledge_checks/       # Rapid diagnostic retention quizzes per domain
-├── phase4_step11_revision_questions/     # Curated scenario questions + 106Q Community Practice Pool
-└── phase5_step12_sources/                # Academic references, whitepapers, documentation indexes
+├── 01_Syllabus/             # Official blueprint, domain weighting, MLOps competencies
+├── 02_Prerequisites/          # Linear algebra, calculus, statistics, Python & PyTorch foundations
+├── 03_Lectures/               # Instructor delivery lesson plans and classroom talking points
+├── 04_Slides/                 # Marp slide decks for classroom delivery
+├── 05_Diagrams/               # Standalone production MLOps & GenAI pipeline blueprints
+├── 06_Explanations/           # In-depth architectural mechanics & trade-off breakdowns
+├── 07_Hands_On_Labs/                   # Guided engineering labs (SageMaker, Bedrock, Clarify) with CLI runbooks
+├── 08_Tutorials/              # Production multi-service MLOps build tutorials
+├── 09_Notes_and_Cheatsheets/                  # High-yield engineering cheat sheets (Inference types, drift, PEFT)
+├── 10_Knowledge_Checks/       # Rapid diagnostic retention quizzes per domain
+├── 11_Practice_Exams/     # Curated scenario questions + 106Q Community Practice Pool
+└── 12_Sources/                # Academic references, whitepapers, documentation indexes
 ```
 
 ---
@@ -37,10 +39,10 @@ pie title MLA-C01 Domain Weighting
     "Domain 3: Deployment and Orchestration of ML Workflows" : 22
 ```
 
-1. **[Domain 1: Data Preparation for Machine Learning (28%)](phase0_step01_syllabus/MLA-C01_Official_Blueprint.md#domain-1-data-preparation-for-machine-learning-28):** Ingestion pipelines (Glue, Kinesis, EMR), feature engineering, handling data imbalances, chunking & vector embeddings.
-2. **[Domain 2: ML Model Development (26%)](phase0_step01_syllabus/MLA-C01_Official_Blueprint.md#domain-2-ml-model-development-26):** Algorithm selection (tabular, CV, NLP), foundation model adaptation (PEFT/LoRA, Continued Pre-training), hyperparameter tuning (HPO), model evaluation.
-3. **[Domain 3: Deployment and Orchestration of ML Workflows (22%)](phase0_step01_syllabus/MLA-C01_Official_Blueprint.md#domain-3-deployment-and-orchestration-of-ml-workflows-22):** SageMaker 4 inference deployment types (Real-Time, Serverless, Async, Batch Transform), SageMaker Pipelines CI/CD, container packaging.
-4. **[Domain 4: ML Solution Monitoring and Maintenance (24%)](phase0_step01_syllabus/MLA-C01_Official_Blueprint.md#domain-4-ml-solution-monitoring-and-maintenance-24):** Detecting data & concept drift (Model Monitor), bias detection and explainability (Clarify / SHAP), model cards, safety guardrails, cost management.
+1. **[Domain 1: Data Preparation for Machine Learning (28%)](01_Syllabus/MLA-C01_Official_Blueprint.md#domain-1-data-preparation-for-machine-learning-28):** Ingestion pipelines (Glue, Kinesis, EMR), feature engineering, handling data imbalances, chunking & vector embeddings.
+2. **[Domain 2: ML Model Development (26%)](01_Syllabus/MLA-C01_Official_Blueprint.md#domain-2-ml-model-development-26):** Algorithm selection (tabular, CV, NLP), foundation model adaptation (PEFT/LoRA, Continued Pre-training), hyperparameter tuning (HPO), model evaluation.
+3. **[Domain 3: Deployment and Orchestration of ML Workflows (22%)](01_Syllabus/MLA-C01_Official_Blueprint.md#domain-3-deployment-and-orchestration-of-ml-workflows-22):** SageMaker 4 inference deployment types (Real-Time, Serverless, Async, Batch Transform), SageMaker Pipelines CI/CD, container packaging.
+4. **[Domain 4: ML Solution Monitoring and Maintenance (24%)](01_Syllabus/MLA-C01_Official_Blueprint.md#domain-4-ml-solution-monitoring-and-maintenance-24):** Detecting data & concept drift (Model Monitor), bias detection and explainability (Clarify / SHAP), model cards, safety guardrails, cost management.
 
 ---
 

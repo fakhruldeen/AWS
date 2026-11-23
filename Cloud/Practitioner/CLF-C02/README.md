@@ -4,7 +4,9 @@
 > **Exam Code:** `CLF-C02` (AWS Certified Cloud Practitioner)  
 > **Course Author & Lead Trainer:** Mohamed Fakhruldeen  
 > **Repository Path:** `Cloud/Practitioner/CLF-C02/`  
-> **Version:** 2.5.0 (Full Standalone Visual Curriculum)
+> **Version:** 2.5.0 (Full Standalone Visual Curriculum)  
+>
+> 🚀 **New to CLF-C02? Start Here:** [**Student Study Dashboard & 7-Day Fast-Track Plan**](./00_START_HERE.md)
 
 ---
 
@@ -14,17 +16,17 @@ The Cloud Foundation (CLF-C02) curriculum delivers an end-to-end, evidence-based
 
 ```mermaid
 flowchart TD
-    Syllabus["Phase 0, Step 1: Official Blueprint & Preparation Framework\n(phase0_step01_syllabus/)"] --> Prereqs["Phase 0, Step 2: Computer Science & Cloud Foundations\n(phase0_step02_prerequisites/)"]
-    Prereqs --> Lectures["Phase 1, Step 3: Instructor Delivery Plans & Lesson Guides\n(phase1_step03_lectures/)"]
-    Lectures --> Slides["Phase 1, Step 4: Presentation Slide Decks\n(phase1_step04_slides/)"]
-    Slides --> Diagrams["Phase 1, Step 5: Architectural Mermaid Blueprints\n(phase1_step05_diagrams/)"]
-    Diagrams --> Explanations["Phase 1, Step 6: In-Depth Service Explanations\n(phase1_step06_explanations/)"]
-    Explanations --> Labs["Phase 2, Step 7: 14 Visual Guided Student Labs\n(phase2_step07_labs/)"]
-    Labs --> Tutorials["Phase 2, Step 8: Multi-Service Architecture Tutorials\n(phase2_step08_tutorials/)"]
-    Tutorials --> Notes["Phase 3, Step 9: High-Yield Notes & Mnemonics\n(phase3_step09_notes/)"]
-    Notes --> KChecks["Phase 4, Step 10: Diagnostic Knowledge Checks\n(phase4_step10_knowledge_checks/)"]
-    KChecks --> Revision["Phase 4, Step 11: Timed Revision & Mock Exams\n(phase4_step11_revision_questions/)"]
-    Revision --> Sources["Phase 5, Step 12: Reference Textbooks & Literature\n(phase5_step12_sources/)"]
+    Syllabus["Phase 0, Step 1: Official Blueprint & Preparation Framework\n(01_Syllabus/)"] --> Prereqs["Phase 0, Step 2: Computer Science & Cloud Foundations\n(02_Prerequisites/)"]
+    Prereqs --> Lectures["Phase 1, Step 3: Instructor Delivery Plans & Lesson Guides\n(03_Lectures/)"]
+    Lectures --> Slides["Phase 1, Step 4: Presentation Slide Decks\n(04_Slides/)"]
+    Slides --> Diagrams["Phase 1, Step 5: Architectural Mermaid Blueprints\n(05_Diagrams/)"]
+    Diagrams --> Explanations["Phase 1, Step 6: In-Depth Service Explanations\n(06_Explanations/)"]
+    Explanations --> Labs["Phase 2, Step 7: 14 Visual Guided Student Labs\n(07_Hands_On_Labs/)"]
+    Labs --> Tutorials["Phase 2, Step 8: Multi-Service Architecture Tutorials\n(08_Tutorials/)"]
+    Tutorials --> Notes["Phase 3, Step 9: High-Yield Notes & Mnemonics\n(09_Notes_and_Cheatsheets/)"]
+    Notes --> KChecks["Phase 4, Step 10: Diagnostic Knowledge Checks\n(10_Knowledge_Checks/)"]
+    KChecks --> Revision["Phase 4, Step 11: Timed Revision & Mock Exams\n(11_Practice_Exams/)"]
+    Revision --> Sources["Phase 5, Step 12: Reference Textbooks & Literature\n(12_Sources/)"]
 ```
 
 ---
@@ -35,7 +37,7 @@ flowchart TD
 Cloud/Practitioner/CLF-C02/
 ├── README.md                                             <-- Master Course Portal (This File)
 │
-├── phase0_step01_syllabus/                              <-- Official Exam Blueprints & Preparation Plans
+├── 01_Syllabus/                              <-- Official Exam Blueprints & Preparation Plans
 │   ├── CLF-C02_Master_Blueprint.md
 │   ├── SkillBuilder_Prep_Plan.md                         (AWS Official 4-Step Prep Framework)
 │   ├── Domain_1_Cloud_Concepts.md
@@ -44,7 +46,7 @@ Cloud/Practitioner/CLF-C02/
 │   ├── Domain_4_Billing_Pricing.md
 │   └── Exam_Distinction_CheatSheet.md
 │
-├── phase0_step02_prerequisites/                         <-- Computer Science & Cloud Foundations
+├── 02_Prerequisites/                         <-- Computer Science & Cloud Foundations
 │   ├── README.md                                         (Prerequisite modules roadmap)
 │   ├── 01_Operating_Systems_and_Virtualization.md        (Hypervisors, VMs vs Containers, Nitro)
 │   ├── 02_Networking_and_OSI_Model.md                    (OSI 7 layers, TCP/IP, CIDR math, Subnetting)
@@ -52,7 +54,7 @@ Cloud/Practitioner/CLF-C02/
 │   ├── 04_Security_and_Cryptography.md                   (Symmetric/Asymmetric, TLS, Envelope Encryption)
 │   └── 05_Cloud_Economics_and_FinOps.md                  (CapEx vs OpEx, TCO, Elasticity, Economies of Scale)
 │
-├── phase1_step03_lectures/                              <-- Instructor Delivery Guides & Lesson Plans
+├── 03_Lectures/                              <-- Instructor Delivery Guides & Lesson Plans
 │   ├── README.md                                         (Lecture delivery catalog)
 │   ├── Lecture_01_Introduction_to_Cloud_and_Global_Infra.md
 │   ├── Lecture_02_Compute_Virtualization_and_Containers.md
@@ -61,14 +63,14 @@ Cloud/Practitioner/CLF-C02/
 │   ├── Lecture_05_Observability_Auditing_and_Governance.md
 │   └── Lecture_06_Billing_FinOps_and_Exam_Strategy.md
 │
-├── phase1_step04_slides/                                <-- Student Presentation Slide Decks (Marp Format)
+├── 04_Slides/                                <-- Student Presentation Slide Decks (Marp Format)
 │   ├── Module_01_Cloud_Concepts_and_Architecture_Slides.md
 │   ├── Module_02_Compute_Storage_and_Databases_Slides.md
 │   ├── Module_03_Networking_Security_and_Identity_Slides.md
 │   ├── Module_04_Monitoring_Governance_and_DevOps_Slides.md
 │   └── Module_05_Billing_Pricing_and_Support_Slides.md
 │
-├── phase1_step05_diagrams/                              <-- 10 Standalone Production Mermaid Blueprints
+├── 05_Diagrams/                              <-- 10 Standalone Production Mermaid Blueprints
 │   ├── README.md                                         (Master diagram index & visual specs)
 │   ├── Diagram_01_Global_Infrastructure_Map.md
 │   ├── Diagram_02_Shared_Responsibility_Matrix.md
@@ -81,14 +83,14 @@ Cloud/Practitioner/CLF-C02/
 │   ├── Diagram_09_Cloud_Adoption_Framework_CAF.md
 │   └── Diagram_10_Enterprise_Billing_and_Governance_Hierarchy.md
 │
-├── phase1_step06_explanations/                          <-- Comprehensive Conceptual & Service Guides
+├── 06_Explanations/                          <-- Comprehensive Conceptual & Service Guides
 │   ├── README.md                                         (CLF-C02 4-domain reference portal)
 │   ├── 01_Cloud_Concepts/                                (Economics, TCO, CAF, Well-Architected, Global Infra, DR)
 │   ├── 02_Security_and_Compliance/                       (IAM, WAF/Shield, Threat Detection, KMS & Secrets)
 │   ├── 03_Technology_and_Services/                       (Compute, Storage, Database, Networking, Ops, Integration)
 │   └── 04_Billing_and_Pricing/                           (Pricing Models, Billing Tools, Support Plans, Marketplace)
 │
-├── phase2_step07_labs/                                  <-- Visual Student Labs & Console Screenshots
+├── 07_Hands_On_Labs/                                  <-- Visual Student Labs & Console Screenshots
 │   ├── README.md                                         (Complete 14-lab directory & concept syllabus)
 │   ├── 00_Account_Creation_Walkthrough.md                (Safe account setup, root MFA, free-tier guardrails)
 │   ├── lab_01_vpc_networking.md                          (Multi-AZ VPC, subnets, route tables, IGW, NAT GW)
@@ -108,7 +110,7 @@ Cloud/Practitioner/CLF-C02/
 │   ├── assets/                                           (70+ real console screenshots & terminal outputs)
 │   └── fast_track/                                       (Accelerated 8-lab module)
 │
-├── phase2_step08_tutorials/                             <-- Architectural Multi-Service Tutorials
+├── 08_Tutorials/                             <-- Architectural Multi-Service Tutorials
 │   ├── README.md                                         (Curriculum roadmap & learning paths)
 │   ├── Tutorial_00_AWS_Account_Creation_and_Security_Baseline.md
 │   ├── Tutorial_01_Multi_Tier_VPC_and_Bastion_Host.md
@@ -118,14 +120,14 @@ Cloud/Practitioner/CLF-C02/
 │   ├── Tutorial_05_Automating_Infrastructure_with_CloudFormation.md
 │   └── Tutorial_06_Enterprise_Governance_Organizations_and_SCPs.md
 │
-├── phase3_step09_notes/                                 <-- High-Yield Study Notes, Distinction Tables & Mnemonics
+├── 09_Notes_and_Cheatsheets/                                 <-- High-Yield Study Notes, Distinction Tables & Mnemonics
 │   ├── Exam_Decryption_Playbook_and_Mnemonics.md         (Keyword triggers, memory pegs, distractor traps)
 │   ├── Rapid_Review_Cheatsheet.md                        (Ultra-dense quick reference sheet)
 │   ├── concepts/                                         (Global Infra, Well-Architected, Shared Responsibility, CAF)
 │   ├── services/                                         (Compute, Storage, Database, Networking, Security, Billing)
 │   └── distinctions/                                     (Pairwise "X vs Y" Comparison Cheat Sheets)
 │
-├── phase4_step10_knowledge_checks/                      <-- End-of-Module Diagnostic Quizzes
+├── 10_Knowledge_Checks/                      <-- End-of-Module Diagnostic Quizzes
 │   ├── README.md                                         (Knowledge checks catalog)
 │   ├── Module_01_Cloud_Foundations_Knowledge_Check.md
 │   ├── Module_02_Compute_and_Networking_Knowledge_Check.md
@@ -133,7 +135,7 @@ Cloud/Practitioner/CLF-C02/
 │   ├── Module_04_Security_and_IAM_Knowledge_Check.md
 │   └── Module_05_Billing_and_Support_Knowledge_Check.md
 │
-├── phase4_step11_revision_questions/                    <-- Curated Student Revision Sets & Timed Mock Exam
+├── 11_Practice_Exams/                    <-- Curated Student Revision Sets & Timed Mock Exam
 │   ├── README.md                                         (Revision library index)
 │   ├── Domain_1_Cloud_Concepts_Revision_Questions.md
 │   ├── Domain_2_Security_and_Compliance_Revision_Questions.md
@@ -141,7 +143,7 @@ Cloud/Practitioner/CLF-C02/
 │   ├── Domain_4_Billing_and_Pricing_Revision_Questions.md
 │   └── CLF_C02_Full_Length_Mock_Revision_Exam.md         (65-question timed simulation)
 │
-└── phase5_step12_sources/                               <-- Deep-Dive Reference Textbooks (Offline Literature)
+└── 12_Sources/                               <-- Deep-Dive Reference Textbooks (Offline Literature)
     ├── README.md                                         (Literature citation index & reading guides)
     └── [Authoritative EPUBs & PDFs]                      (Daswani, Taulli, Kankaria)
 ```
@@ -153,11 +155,11 @@ Cloud/Practitioner/CLF-C02/
 
 All labs are designed to run within the **AWS Free Tier** with zero infrastructure cost when torn down properly:
 
-1. **[Lab 1: IAM Least Privilege & MFA Enforcement](./phase2_step07_labs/Lab_01_AWS_IAM_Least_Privilege_and_MFA.md)** - Setting up administrative users, custom policies, and virtual MFA devices.
-2. **[Lab 2: Static S3 & CloudFront Distribution](./phase2_step07_labs/Lab_02_Static_Website_S3_and_CloudFront.md)** - Global HTTPS content delivery using CloudFront Origin Access Control (OAC).
-3. **[Lab 3: Fault-Tolerant Multi-AZ EC2 Tier](./phase2_step07_labs/Lab_03_Resilient_MultiAZ_Web_Tier_EC2.md)** - Deploying dual Availability Zone Apache instances behind an Application Load Balancer.
-4. **[Lab 4: Proactive Budget Alerts with AWS Budgets](./phase2_step07_labs/Lab_04_Proactive_Budget_Alerts_AWS_Budgets.md)** - Setting automated actual and forecasted spending thresholds.
-5. **[Lab 5: Decoupled Messaging with SNS & SQS](./phase2_step07_labs/Lab_05_Decoupled_Messaging_SNS_and_SQS.md)** - Fan-out pub/sub messaging and asynchronous worker queue buffering.
-6. **[Lab 6: Serverless Event-Driven Processing with S3 & Lambda](./phase2_step07_labs/Lab_06_Serverless_Thumbnail_Generator_S3_Lambda.md)** - Automating serverless Python execution on object creation events.
-7. **[Lab 7: Monitoring with CloudWatch Alarms & Dashboards](./phase2_step07_labs/Lab_07_CloudWatch_Alarms_and_Monitoring_Dashboard.md)** - Setting metric thresholds, SNS email alerts, and executive telemetry dashboards.
-8. **[Lab 8: Infrastructure as Code with AWS CloudFormation](./phase2_step07_labs/Lab_08_Infrastructure_as_Code_AWS_CloudFormation.md)** - Declarative YAML template provisioning and Change Set preview verification.
+1. **[Lab 1: IAM Least Privilege & MFA Enforcement](./07_Hands_On_Labs/Lab_01_AWS_IAM_Least_Privilege_and_MFA.md)** - Setting up administrative users, custom policies, and virtual MFA devices.
+2. **[Lab 2: Static S3 & CloudFront Distribution](./07_Hands_On_Labs/Lab_02_Static_Website_S3_and_CloudFront.md)** - Global HTTPS content delivery using CloudFront Origin Access Control (OAC).
+3. **[Lab 3: Fault-Tolerant Multi-AZ EC2 Tier](./07_Hands_On_Labs/Lab_03_Resilient_MultiAZ_Web_Tier_EC2.md)** - Deploying dual Availability Zone Apache instances behind an Application Load Balancer.
+4. **[Lab 4: Proactive Budget Alerts with AWS Budgets](./07_Hands_On_Labs/Lab_04_Proactive_Budget_Alerts_AWS_Budgets.md)** - Setting automated actual and forecasted spending thresholds.
+5. **[Lab 5: Decoupled Messaging with SNS & SQS](./07_Hands_On_Labs/Lab_05_Decoupled_Messaging_SNS_and_SQS.md)** - Fan-out pub/sub messaging and asynchronous worker queue buffering.
+6. **[Lab 6: Serverless Event-Driven Processing with S3 & Lambda](./07_Hands_On_Labs/Lab_06_Serverless_Thumbnail_Generator_S3_Lambda.md)** - Automating serverless Python execution on object creation events.
+7. **[Lab 7: Monitoring with CloudWatch Alarms & Dashboards](./07_Hands_On_Labs/Lab_07_CloudWatch_Alarms_and_Monitoring_Dashboard.md)** - Setting metric thresholds, SNS email alerts, and executive telemetry dashboards.
+8. **[Lab 8: Infrastructure as Code with AWS CloudFormation](./07_Hands_On_Labs/Lab_08_Infrastructure_as_Code_AWS_CloudFormation.md)** - Declarative YAML template provisioning and Change Set preview verification.

@@ -19,10 +19,10 @@ VAULT_DIR = Path("/home/mohamed/Documents/Obsidian Vault/Brain/AWS")
 
 MASTER_BANK_PATH = VAULT_DIR / "Questions_Bank/Unique_Revision_Banks/Cloud_Practitioner_CLF-C02/CLF_C02_Master_Unique_Questions.json"
 EDURELY_MD_PATH = VAULT_DIR / "Questions_Bank/Edurely_Questions/Edurely_CLF-C02_115_Questions.md"
-NOV2026_PATH = WORK_DIR / "Cloud/Practitioner/CLF-C02/phase4_step11_revision_questions/CLF_C02_November_2026_Release_393Q.json"
-COMM_718_PATH = WORK_DIR / "Cloud/Practitioner/CLF-C02/phase4_step11_revision_questions/CLF_C02_Community_Practice_Pool_718Q.json"
+NOV2026_PATH = WORK_DIR / "Cloud/Practitioner/CLF-C02/11_Practice_Exams/CLF_C02_November_2026_Release_393Q.json"
+COMM_718_PATH = WORK_DIR / "Cloud/Practitioner/CLF-C02/11_Practice_Exams/CLF_C02_Community_Practice_Pool_718Q.json"
 
-WORK_REVISION_DIR = WORK_DIR / "Cloud/Practitioner/CLF-C02/phase4_step11_revision_questions"
+WORK_REVISION_DIR = WORK_DIR / "Cloud/Practitioner/CLF-C02/11_Practice_Exams"
 REPORT_PATH = WORK_DIR / "Cloud/Practitioner/CLF-C02/CLF_C02_TOPIC_TAXONOMY_AND_DEDUPLICATION_REPORT.md"
 VAULT_REPORT_PATH = VAULT_DIR / "Questions_Bank/Unique_Revision_Banks/Cloud_Practitioner_CLF-C02/CLF_C02_TOPIC_TAXONOMY_REPORT.md"
 

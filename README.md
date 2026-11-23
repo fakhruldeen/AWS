@@ -25,28 +25,28 @@ Every certification curriculum is completely self-contained and follows a standa
 
 ```text
 Phase 0: Orientation & Foundations
-  ├── phase0_step01_syllabus              Official blueprint, domain weighting, study schedules
-  └── phase0_step02_prerequisites         Underlying CS, networking, math & cloud fundamentals
+  ├── 01_Syllabus              Official blueprint, domain weighting, study schedules
+  └── 02_Prerequisites         Underlying CS, networking, math & cloud fundamentals
 
 Phase 1: Conceptual Delivery & Architecture
-  ├── phase1_step03_lectures              Instructor delivery lesson plans with embedded exam questions
-  ├── phase1_step04_slides                Marp presentation slides for classroom delivery
-  ├── phase1_step05_diagrams              Standalone production Mermaid architecture blueprints
-  └── phase1_step06_explanations          Comprehensive domain-by-domain concept & service guides
+  ├── 03_Lectures              Instructor delivery lesson plans with embedded exam questions
+  ├── 04_Slides                Marp presentation slides for classroom delivery
+  ├── 05_Diagrams              Standalone production Mermaid architecture blueprints
+  └── 06_Explanations          Comprehensive domain-by-domain concept & service guides
 
 Phase 2: Practical Implementation
-  ├── phase2_step07_labs                  100% Free-Tier / cost-aware hands-on labs with CLI runbooks
-  └── phase2_step08_tutorials             End-to-end multi-service production build tutorials
+  ├── 07_Hands_On_Labs                  100% Free-Tier / cost-aware hands-on labs with CLI runbooks
+  └── 08_Tutorials             End-to-end multi-service production build tutorials
 
 Phase 3: Synthesis & Retention
-  └── phase3_step09_notes                 High-yield study notes, distinction tables & cheat sheets
+  └── 09_Notes_and_Cheatsheets                 High-yield study notes, distinction tables & cheat sheets
 
 Phase 4: Assessment & Exam Simulation
-  ├── phase4_step10_knowledge_checks      Module-by-module rapid diagnostic retention quizzes
-  └── phase4_step11_revision_questions    Curated scenario sets, community pools & timed mock exams
+  ├── 10_Knowledge_Checks      Module-by-module rapid diagnostic retention quizzes
+  └── 11_Practice_Exams    Curated scenario sets, community pools & timed mock exams
 
 Phase 5: Authority & Provenance
-  └── phase5_step12_sources               Reference textbooks, whitepapers & documentation indices
+  └── 12_Sources               Reference textbooks, whitepapers & documentation indices
 ```
 
 ---
@@ -68,72 +68,76 @@ Phase 5: Authority & Provenance
 │   ├── Practitioner/
 │   │   ├── README.md                          (Cloud Practitioner track overview)
 │   │   └── CLF-C02/                           <-- AWS Certified Cloud Practitioner (ACTIVE)
+│   │       ├── 00_START_HERE.md               (🚀 Student Study Dashboard & 7-Day Fast-Track Plan)
 │   │       ├── README.md                      (CLF-C02 Master Course Portal)
-│   │       ├── phase0_step01_syllabus/
-│   │       ├── phase0_step02_prerequisites/
-│   │       ├── phase1_step03_lectures/
-│   │       ├── phase1_step04_slides/
-│   │       ├── phase1_step05_diagrams/
-│   │       ├── phase1_step06_explanations/
-│   │       ├── phase2_step07_labs/
-│   │       ├── phase2_step08_tutorials/
-│   │       ├── phase3_step09_notes/
-│   │       ├── phase4_step10_knowledge_checks/
-│   │       ├── phase4_step11_revision_questions/
-│   │       └── phase5_step12_sources/
+│   │       ├── 01_Syllabus/
+│   │       ├── 02_Prerequisites/
+│   │       ├── 03_Lectures/
+│   │       ├── 04_Slides/
+│   │       ├── 05_Diagrams/
+│   │       ├── 06_Explanations/
+│   │       ├── 07_Hands_On_Labs/
+│   │       ├── 08_Tutorials/
+│   │       ├── 09_Notes_and_Cheatsheets/
+│   │       ├── 10_Knowledge_Checks/
+│   │       ├── 11_Practice_Exams/
+│   │       └── 12_Sources/
 │   │
 │   └── Associate/
 │       ├── README.md                          (Cloud Associate track overview)
 │       └── SAA-C03/                           <-- Solutions Architect - Associate (ACTIVE)
+│           ├── 00_START_HERE.md               (🚀 Student Study Dashboard & Associate Roadmap)
 │           ├── README.md                      (SAA-C03 Master Course Portal)
-│           ├── phase0_step01_syllabus/
-│           ├── phase0_step02_prerequisites/
-│           ├── phase1_step03_lectures/
-│           ├── phase1_step04_slides/
-│           ├── phase1_step05_diagrams/
-│           ├── phase1_step06_explanations/
-│           ├── phase2_step07_labs/
-│           ├── phase2_step08_tutorials/
-│           ├── phase3_step09_notes/
-│           ├── phase4_step10_knowledge_checks/
-│           ├── phase4_step11_revision_questions/
-│           └── phase5_step12_sources/
+│           ├── 01_Syllabus/
+│           ├── 02_Prerequisites/
+│           ├── 03_Lectures/
+│           ├── 04_Slides/
+│           ├── 05_Diagrams/
+│           ├── 06_Explanations/
+│           ├── 07_Hands_On_Labs/
+│           ├── 08_Tutorials/
+│           ├── 09_Notes_and_Cheatsheets/
+│           ├── 10_Knowledge_Checks/
+│           ├── 11_Practice_Exams/
+│           └── 12_Sources/
 │
 ├── AI/                                        <-- Domain 2: Artificial Intelligence & Machine Learning
 │   ├── README.md                              (AI domain roadmap and track index)
 │   ├── Practitioner/
 │   │   ├── README.md                          (AI Practitioner track overview)
 │   │   └── AIF-C01/                           <-- AWS Certified AI Practitioner (ACTIVE)
+│   │       ├── 00_START_HERE.md               (🚀 Student Study Dashboard & 7-Day Fast-Track Plan)
 │   │       ├── README.md                      (AIF-C01 Master Course Portal)
-│   │       ├── phase0_step01_syllabus/
-│   │       ├── phase0_step02_prerequisites/
-│   │       ├── phase1_step03_lectures/
-│   │       ├── phase1_step04_slides/
-│   │       ├── phase1_step05_diagrams/
-│   │       ├── phase1_step06_explanations/
-│   │       ├── phase2_step07_labs/
-│   │       ├── phase2_step08_tutorials/
-│   │       ├── phase3_step09_notes/
-│   │       ├── phase4_step10_knowledge_checks/
-│   │       ├── phase4_step11_revision_questions/
-│   │       └── phase5_step12_sources/
+│   │       ├── 01_Syllabus/
+│   │       ├── 02_Prerequisites/
+│   │       ├── 03_Lectures/
+│   │       ├── 04_Slides/
+│   │       ├── 05_Diagrams/
+│   │       ├── 06_Explanations/
+│   │       ├── 07_Hands_On_Labs/
+│   │       ├── 08_Tutorials/
+│   │       ├── 09_Notes_and_Cheatsheets/
+│   │       ├── 10_Knowledge_Checks/
+│   │       ├── 11_Practice_Exams/
+│   │       └── 12_Sources/
 │   │
 │   └── Associate/
 │       ├── README.md                          (AI Associate track overview)
 │       └── MLA-C01/                           <-- Machine Learning Engineer - Associate (ACTIVE)
+│           ├── 00_START_HERE.md               (🚀 Student Study Dashboard & Associate Roadmap)
 │           ├── README.md                      (MLA-C01 Master Course Portal)
-│           ├── phase0_step01_syllabus/
-│           ├── phase0_step02_prerequisites/
-│           ├── phase1_step03_lectures/
-│           ├── phase1_step04_slides/
-│           ├── phase1_step05_diagrams/
-│           ├── phase1_step06_explanations/
-│           ├── phase2_step07_labs/
-│           ├── phase2_step08_tutorials/
-│           ├── phase3_step09_notes/
-│           ├── phase4_step10_knowledge_checks/
-│           ├── phase4_step11_revision_questions/
-│           └── phase5_step12_sources/
+│           ├── 01_Syllabus/
+│           ├── 02_Prerequisites/
+│           ├── 03_Lectures/
+│           ├── 04_Slides/
+│           ├── 05_Diagrams/
+│           ├── 06_Explanations/
+│           ├── 07_Hands_On_Labs/
+│           ├── 08_Tutorials/
+│           ├── 09_Notes_and_Cheatsheets/
+│           ├── 10_Knowledge_Checks/
+│           ├── 11_Practice_Exams/
+│           └── 12_Sources/
 │
 ├── scripts/                                   <-- Automation, exam runner & synchronization tools
 │   ├── README.md                              (Tool documentation & CLI usage manual)
@@ -160,10 +164,10 @@ Phase 5: Authority & Provenance
 
 | Domain | Title | Weight | Practice Questions Pool | Key Practical Lab |
 |:---:|:---|:---:|:---:|:---|
-| **Domain 1** | Cloud Concepts | **24%** | ~580 Qs | [Lab 03: Multi-AZ Web Tier](./Cloud/Practitioner/CLF-C02/phase2_step07_labs/lab_03_ec2_compute_bootstrap.md) |
-| **Domain 2** | Security and Compliance | **30%** | ~735 Qs | [Lab 01: IAM Least Privilege & MFA](./Cloud/Practitioner/CLF-C02/phase2_step07_labs/fast_track/Lab_01_AWS_IAM_Least_Privilege_and_MFA.md) |
-| **Domain 3** | Cloud Technology and Services | **34%** | ~1,140 Qs | [Lab 07: S3 Storage Lifecycle](./Cloud/Practitioner/CLF-C02/phase2_step07_labs/lab_07_s3_storage_lifecycle.md) |
-| **Domain 4** | Billing, Pricing, and Support | **12%** | ~469 Qs | [Lab 14: FinOps Cost Governance](./Cloud/Practitioner/CLF-C02/phase2_step07_labs/lab_14_billing_cost_management.md) |
+| **Domain 1** | Cloud Concepts | **24%** | ~580 Qs | [Lab 03: Multi-AZ Web Tier](./Cloud/Practitioner/CLF-C02/07_Hands_On_Labs/lab_03_ec2_compute_bootstrap.md) |
+| **Domain 2** | Security and Compliance | **30%** | ~735 Qs | [Lab 01: IAM Least Privilege & MFA](./Cloud/Practitioner/CLF-C02/07_Hands_On_Labs/fast_track/Lab_01_AWS_IAM_Least_Privilege_and_MFA.md) |
+| **Domain 3** | Cloud Technology and Services | **34%** | ~1,140 Qs | [Lab 07: S3 Storage Lifecycle](./Cloud/Practitioner/CLF-C02/07_Hands_On_Labs/lab_07_s3_storage_lifecycle.md) |
+| **Domain 4** | Billing, Pricing, and Support | **12%** | ~469 Qs | [Lab 14: FinOps Cost Governance](./Cloud/Practitioner/CLF-C02/07_Hands_On_Labs/lab_14_billing_cost_management.md) |
 | **TOTAL** | | **100%** | **2,716 Unique Questions** | **14 Visual Guided Labs** |
 
 ---
@@ -175,10 +179,10 @@ Phase 5: Authority & Provenance
 
 | Domain | Title | Weight | Practice Questions Pool | Key Practical Lab |
 |:---:|:---|:---:|:---:|:---|
-| **Domain 1** | Design Secure Architectures | **30%** | 36 Curated + 1,019 Pool | [Lab 01: Multi-Tier Resilient VPC](./Cloud/Associate/SAA-C03/phase2_step07_labs/lab_01_multi_tier_resilient_vpc_architecture.md) |
-| **Domain 2** | Design Resilient Architectures | **26%** | 32 Curated + 1,019 Pool | [Lab 02: Scalable Web Tier (ASG/ALB)](./Cloud/Associate/SAA-C03/phase2_step07_labs/lab_02_ha_scalable_web_tier_asg_alb.md) |
-| **Domain 3** | Design High-Performing Architectures | **24%** | 28 Curated + 1,019 Pool | [Lab 03: Fault-Tolerant Aurora](./Cloud/Associate/SAA-C03/phase2_step07_labs/lab_03_aurora_fault_tolerant_relational_database.md) |
-| **Domain 4** | Design Cost-Optimized Architectures | **20%** | 24 Curated + 1,019 Pool | [Lab 04: Decoupled SQS/SNS](./Cloud/Associate/SAA-C03/phase2_step07_labs/lab_04_decoupled_asynchronous_microservices_sqs_sns.md) |
+| **Domain 1** | Design Secure Architectures | **30%** | 36 Curated + 1,019 Pool | [Lab 01: Multi-Tier Resilient VPC](./Cloud/Associate/SAA-C03/07_Hands_On_Labs/lab_01_multi_tier_resilient_vpc_architecture.md) |
+| **Domain 2** | Design Resilient Architectures | **26%** | 32 Curated + 1,019 Pool | [Lab 02: Scalable Web Tier (ASG/ALB)](./Cloud/Associate/SAA-C03/07_Hands_On_Labs/lab_02_ha_scalable_web_tier_asg_alb.md) |
+| **Domain 3** | Design High-Performing Architectures | **24%** | 28 Curated + 1,019 Pool | [Lab 03: Fault-Tolerant Aurora](./Cloud/Associate/SAA-C03/07_Hands_On_Labs/lab_03_aurora_fault_tolerant_relational_database.md) |
+| **Domain 4** | Design Cost-Optimized Architectures | **20%** | 24 Curated + 1,019 Pool | [Lab 04: Decoupled SQS/SNS](./Cloud/Associate/SAA-C03/07_Hands_On_Labs/lab_04_decoupled_asynchronous_microservices_sqs_sns.md) |
 | **TOTAL** | | **100%** | **1,019Q Community Practice Pool** | **5 Guided Architecture Labs** |
 
 ---
@@ -190,11 +194,11 @@ Phase 5: Authority & Provenance
 
 | Domain | Title | Weight | Core AWS Tooling Covered | Key Practical Lab |
 |:---:|:---|:---:|:---|:---|
-| **Domain 1** | Fundamentals of AI and ML | **20%** | SageMaker Studio, Canvas, Data Wrangler, Ground Truth | [Lab 01: Bedrock Playgrounds](./AI/Practitioner/AIF-C01/phase2_step07_labs/Lab_01_Amazon_Bedrock_Playground_and_Prompt_Engineering.md) |
-| **Domain 2** | Fundamentals of Generative AI | **24%** | Foundation Models, Tokens, Context Window, Embeddings | [Lab 01: Prompt Engineering](./AI/Practitioner/AIF-C01/phase2_step07_labs/Lab_01_Amazon_Bedrock_Playground_and_Prompt_Engineering.md) |
-| **Domain 3** | Applications of Foundation Models | **28%** | Amazon Bedrock, Knowledge Bases (RAG), Agents, Amazon Q | [Lab 02: Bedrock RAG Knowledge Base](./AI/Practitioner/AIF-C01/phase2_step07_labs/Lab_02_Building_RAG_with_Bedrock_Knowledge_Bases.md) |
-| **Domain 4** | Guidelines for Responsible AI | **14%** | SageMaker Clarify (Bias & SHAP), Bedrock Guardrails | [Lab 03: Bedrock Guardrails & PII Masking](./AI/Practitioner/AIF-C01/phase2_step07_labs/Lab_03_Responsible_AI_Bedrock_Guardrails.md) |
-| **Domain 5** | Security, Compliance, and Governance | **14%** | Bedrock Data Privacy, KMS encryption, PrivateLink | [Lab 03: Responsible AI & Safety](./AI/Practitioner/AIF-C01/phase2_step07_labs/Lab_03_Responsible_AI_Bedrock_Guardrails.md) |
+| **Domain 1** | Fundamentals of AI and ML | **20%** | SageMaker Studio, Canvas, Data Wrangler, Ground Truth | [Lab 01: Bedrock Playgrounds](./AI/Practitioner/AIF-C01/07_Hands_On_Labs/Lab_01_Amazon_Bedrock_Playground_and_Prompt_Engineering.md) |
+| **Domain 2** | Fundamentals of Generative AI | **24%** | Foundation Models, Tokens, Context Window, Embeddings | [Lab 01: Prompt Engineering](./AI/Practitioner/AIF-C01/07_Hands_On_Labs/Lab_01_Amazon_Bedrock_Playground_and_Prompt_Engineering.md) |
+| **Domain 3** | Applications of Foundation Models | **28%** | Amazon Bedrock, Knowledge Bases (RAG), Agents, Amazon Q | [Lab 02: Bedrock RAG Knowledge Base](./AI/Practitioner/AIF-C01/07_Hands_On_Labs/Lab_02_Building_RAG_with_Bedrock_Knowledge_Bases.md) |
+| **Domain 4** | Guidelines for Responsible AI | **14%** | SageMaker Clarify (Bias & SHAP), Bedrock Guardrails | [Lab 03: Bedrock Guardrails & PII Masking](./AI/Practitioner/AIF-C01/07_Hands_On_Labs/Lab_03_Responsible_AI_Bedrock_Guardrails.md) |
+| **Domain 5** | Security, Compliance, and Governance | **14%** | Bedrock Data Privacy, KMS encryption, PrivateLink | [Lab 03: Responsible AI & Safety](./AI/Practitioner/AIF-C01/07_Hands_On_Labs/Lab_03_Responsible_AI_Bedrock_Guardrails.md) |
 | **TOTAL** | | **100%** | **1,825 Unique Questions Bank** | **12 Visual Hands-On Labs** |
 
 ---
@@ -206,10 +210,10 @@ Phase 5: Authority & Provenance
 
 | Domain | Title | Weight | Core AWS Tooling Covered | Key Practical Lab |
 |:---:|:---|:---:|:---|:---|
-| **Domain 1** | Data Preparation for ML | **28%** | Glue, Kinesis, EMR, SageMaker Feature Store | [Lab 01: SageMaker Pipelines MLOps](./AI/Associate/MLA-C01/phase2_step07_labs/lab_01_sagemaker_pipelines_mlops_and_model_registry.md) |
-| **Domain 2** | ML Model Development | **26%** | PEFT/LoRA, Continued Pre-training, SageMaker HPO | [Lab 04: PEFT/LoRA Fine-Tuning](./AI/Associate/MLA-C01/phase2_step07_labs/lab_04_peft_lora_fine_tuning_foundation_models.md) |
-| **Domain 3** | Deployment & Orchestration | **22%** | Real-Time, Serverless, Async, Batch Transform | [Lab 02: SageMaker Inference Endpoints](./AI/Associate/MLA-C01/phase2_step07_labs/lab_02_sagemaker_inference_endpoints_comparison.md) |
-| **Domain 4** | ML Solution Monitoring & Maintenance | **24%** | Model Monitor, Clarify (Bias/SHAP), Model Cards | [Lab 03: Automated Drift Detection](./AI/Associate/MLA-C01/phase2_step07_labs/lab_03_automated_drift_detection_model_monitor.md) |
+| **Domain 1** | Data Preparation for ML | **28%** | Glue, Kinesis, EMR, SageMaker Feature Store | [Lab 01: SageMaker Pipelines MLOps](./AI/Associate/MLA-C01/07_Hands_On_Labs/lab_01_sagemaker_pipelines_mlops_and_model_registry.md) |
+| **Domain 2** | ML Model Development | **26%** | PEFT/LoRA, Continued Pre-training, SageMaker HPO | [Lab 04: PEFT/LoRA Fine-Tuning](./AI/Associate/MLA-C01/07_Hands_On_Labs/lab_04_peft_lora_fine_tuning_foundation_models.md) |
+| **Domain 3** | Deployment & Orchestration | **22%** | Real-Time, Serverless, Async, Batch Transform | [Lab 02: SageMaker Inference Endpoints](./AI/Associate/MLA-C01/07_Hands_On_Labs/lab_02_sagemaker_inference_endpoints_comparison.md) |
+| **Domain 4** | ML Solution Monitoring & Maintenance | **24%** | Model Monitor, Clarify (Bias/SHAP), Model Cards | [Lab 03: Automated Drift Detection](./AI/Associate/MLA-C01/07_Hands_On_Labs/lab_03_automated_drift_detection_model_monitor.md) |
 | **TOTAL** | | **100%** | **542 Unique Questions Bank** | **5 Guided Engineering Labs** |
 
 ---
