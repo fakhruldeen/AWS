@@ -6265,5 +6265,1681 @@
       "Community_Consensus_Pool",
       "AIF-C01_Authentic_Recall"
     ]
+  },
+  {
+    "id": "AIF-C01-EP-Q018",
+    "question_number": 155,
+    "domain": 1,
+    "domain_name": "Fundamentals of AI and ML",
+    "prompt": "HOTSPOT\n-\n\nA company wants to build an ML application.\n\nSelect and order the correct steps from the following list to develop a well-architected ML workload. Each step should be selected one time.\n\n//IMG//",
+    "options": {},
+    "choices": [],
+    "answer": "A",
+    "contributor_answer": "A",
+    "community_consensus": {
+      "contributor_answer": "A",
+      "most_voted_answer": "A",
+      "vote_percentage": "A (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "A": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "LonghornFan (+3): Step 1: Define business goal and frame ML problem.\nStep 2: Develop model\nStep 3: Deploy model\nStep 4: Monitor model"
+      ]
+    },
+    "explanation": "Community Consensus: A (100%).\n\nDiscussion & Rationale:\nLonghornFan (+3): Step 1: Define business goal and frame ML problem.\nStep 2: Develop model\nStep 3: Deploy model\nStep 4: Monitor model",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q030",
+    "question_number": 156,
+    "domain": 2,
+    "domain_name": "Fundamentals of Generative AI",
+    "prompt": "HOTSPOT\n-\n\nA company has developed a large language model (LLM) and wants to make the LLM available to multiple internal teams. The company needs to select the appropriate inference mode for each team.\n\nSelect the correct inference mode from the following list for each use case. Each inference mode should be selected one or more times.\n\n//IMG//",
+    "options": {},
+    "choices": [],
+    "answer": "A",
+    "contributor_answer": "A",
+    "community_consensus": {
+      "contributor_answer": "A",
+      "most_voted_answer": "A",
+      "vote_percentage": "A (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "A": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "LonghornFan (+2): Scenario 1: The company\u2019s chatbot needs predictions from the LLM to understand users\u2019 intent with minimal latency. Answer: Real-time inference\nScenario 2: A data processing job needs to query the LLM to"
+      ]
+    },
+    "explanation": "Community Consensus: A (100%).\n\nDiscussion & Rationale:\nLonghornFan (+2): Scenario 1: The company\u2019s chatbot needs predictions from the LLM to understand users\u2019 intent with minimal latency. Answer: Real-time inference\nScenario 2: A data processing job needs to query the LLM to",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q041",
+    "question_number": 157,
+    "domain": 1,
+    "domain_name": "Fundamentals of AI and ML",
+    "prompt": "HOTSPOT\n-\n\nA company wants to develop ML applications to improve business operations and efficiency.\n\nSelect the correct ML paradigm from the following list for each use case. Each ML paradigm should be selected one or more times.\n\n//IMG//",
+    "options": {},
+    "choices": [],
+    "answer": "A",
+    "contributor_answer": "A",
+    "community_consensus": {
+      "contributor_answer": "A",
+      "most_voted_answer": "A",
+      "vote_percentage": "A (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "A": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "Jessiii (+4): Binary classification\nSupervised learning\n(Binary classification involves predicting one of two classes, and it requires labeled data for training.)\nMulti-class classification\nSupervised learning\n(Multi-cla"
+      ]
+    },
+    "explanation": "Community Consensus: A (100%).\n\nDiscussion & Rationale:\nJessiii (+4): Binary classification\nSupervised learning\n(Binary classification involves predicting one of two classes, and it requires labeled data for training.)\nMulti-class classification\nSupervised learning\n(Multi-cla",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q050",
+    "question_number": 158,
+    "domain": 2,
+    "domain_name": "Fundamentals of Generative AI",
+    "prompt": "HOTSPOT\n-\n\nA company is training its employees on how to structure prompts for foundation models.\n\nSelect the correct prompt engineering technique from the following list for each prompt template. Each prompt engineering technique should be selected one time.\n\n//IMG//",
+    "options": {},
+    "choices": [],
+    "answer": "A",
+    "contributor_answer": "A",
+    "community_consensus": {
+      "contributor_answer": "A",
+      "most_voted_answer": "A",
+      "vote_percentage": "A (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "A": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "koffeebrown (+4): Providing a set of examples before asking a question: Few-shot prompting\nAsking the model a question without providing examples: Zero-shot prompting\nBreaking down complex problems into logical steps: Ch"
+      ]
+    },
+    "explanation": "Community Consensus: A (100%).\n\nDiscussion & Rationale:\nkoffeebrown (+4): Providing a set of examples before asking a question: Few-shot prompting\nAsking the model a question without providing examples: Zero-shot prompting\nBreaking down complex problems into logical steps: Ch",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q051",
+    "question_number": 159,
+    "domain": 1,
+    "domain_name": "Fundamentals of AI and ML",
+    "prompt": "HOTSPOT\n-\n\nA company is using a generative AI model to develop a digital assistant. The model\u2019s responses occasionally include undesirable and potentially harmful content.\n\nSelect the correct Amazon Bedrock filter policy from the following list for each mitigation action. Each filter policy should be selected one time.\n\n//IMG//",
+    "options": {},
+    "choices": [],
+    "answer": "A",
+    "contributor_answer": "A",
+    "community_consensus": {
+      "contributor_answer": "A",
+      "most_voted_answer": "A",
+      "vote_percentage": "A (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "A": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "65703c1 (+1): Below is the correct answer:\n\nContent filters\nDenied topics\nWord filters\nContextual grounding check"
+      ]
+    },
+    "explanation": "Community Consensus: A (100%).\n\nDiscussion & Rationale:\n65703c1 (+1): Below is the correct answer:\n\nContent filters\nDenied topics\nWord filters\nContextual grounding check",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q063",
+    "question_number": 160,
+    "domain": 2,
+    "domain_name": "Fundamentals of Generative AI",
+    "prompt": "HOTSPOT\n-\n\nA company wants more customized responses to its generative AI models\u2019 prompts.\n\nSelect the correct customization methodology from the following list for each use case. Each use case should be selected one time.\n\n//IMG//",
+    "options": {},
+    "choices": [],
+    "answer": "A",
+    "contributor_answer": "A",
+    "community_consensus": {
+      "contributor_answer": "A",
+      "most_voted_answer": "A",
+      "vote_percentage": "A (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "A": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "65703c1 (+1): Below is the correct answer:\n\nModel fine tuning\nData augmentation\nContinued pre-training"
+      ]
+    },
+    "explanation": "Community Consensus: A (100%).\n\nDiscussion & Rationale:\n65703c1 (+1): Below is the correct answer:\n\nModel fine tuning\nData augmentation\nContinued pre-training",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q064",
+    "question_number": 161,
+    "domain": 4,
+    "domain_name": "Guidelines for Responsible AI",
+    "prompt": "Which AWS feature records details about ML instance data for governance and reporting?",
+    "options": {
+      "A": "Amazon SageMaker Model Cards",
+      "B": "Amazon SageMaker Debugger",
+      "C": "Amazon SageMaker Model Monitor",
+      "D": "Amazon SageMaker JumpStart"
+    },
+    "choices": [
+      "A) Amazon SageMaker Model Cards",
+      "B) Amazon SageMaker Debugger",
+      "C) Amazon SageMaker Model Monitor",
+      "D) Amazon SageMaker JumpStart"
+    ],
+    "answer": "A",
+    "contributor_answer": "A",
+    "community_consensus": {
+      "contributor_answer": "A",
+      "most_voted_answer": "A",
+      "vote_percentage": "A (80%), U (20%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "A": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "certifiedlegend (+2): Selected Answer: A\nAmazon SageMaker Model Cards help you document and share key information about your machine learning models for governance, compliance, and reporting purposes."
+      ]
+    },
+    "explanation": "Community Consensus: A (80%), U (20%).\n\nDiscussion & Rationale:\ncertifiedlegend (+2): Selected Answer: A\nAmazon SageMaker Model Cards help you document and share key information about your machine learning models for governance, compliance, and reporting purposes.",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q065",
+    "question_number": 162,
+    "domain": 2,
+    "domain_name": "Fundamentals of Generative AI",
+    "prompt": "A financial company is using ML to help with some of the company\u2019s tasks.\n\nWhich option is a use of generative AI models?",
+    "options": {
+      "A": "Summarizing customer complaints",
+      "B": "Classifying customers based on product usage",
+      "C": "Segmenting customers based on type of investments",
+      "D": "Forecasting revenue for certain products"
+    },
+    "choices": [
+      "A) Summarizing customer complaints",
+      "B) Classifying customers based on product usage",
+      "C) Segmenting customers based on type of investments",
+      "D) Forecasting revenue for certain products"
+    ],
+    "answer": "A",
+    "contributor_answer": "A",
+    "community_consensus": {
+      "contributor_answer": "A",
+      "most_voted_answer": "A",
+      "vote_percentage": "A (71%), U (29%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "A": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "certifiedlegend (+3): Selected Answer: A\nGenerative AI models are designed to generate new content, such as text, images, audio, or code, based on patterns learned from data.\n\nSummarizing customer complaints involves tex"
+      ]
+    },
+    "explanation": "Community Consensus: A (71%), U (29%).\n\nDiscussion & Rationale:\ncertifiedlegend (+3): Selected Answer: A\nGenerative AI models are designed to generate new content, such as text, images, audio, or code, based on patterns learned from data.\n\nSummarizing customer complaints involves tex",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q066",
+    "question_number": 163,
+    "domain": 1,
+    "domain_name": "Fundamentals of AI and ML",
+    "prompt": "A medical company wants to develop an AI application that can access structured patient records, extract relevant information, and generate concise summaries.\n\nWhich solution will meet these requirements?",
+    "options": {
+      "A": "Use Amazon Comprehend Medical to extract relevant medical entities and relationships. Apply rule-based logic to structure and format summaries.",
+      "B": "Use Amazon Personalize to analyze patient engagement patterns. Integrate the output with a general purpose text summarization tool.",
+      "C": "Use Amazon Textract to convert scanned documents into digital text. Design a keyword extraction system to generate summaries.",
+      "D": "Implement Amazon Kendra to provide a searchable index for medical records. Use a template-based system to format summaries."
+    },
+    "choices": [
+      "A) Use Amazon Comprehend Medical to extract relevant medical entities and relationships. Apply rule-based logic to structure and format summaries.",
+      "B) Use Amazon Personalize to analyze patient engagement patterns. Integrate the output with a general purpose text summarization tool.",
+      "C) Use Amazon Textract to convert scanned documents into digital text. Design a keyword extraction system to generate summaries.",
+      "D) Implement Amazon Kendra to provide a searchable index for medical records. Use a template-based system to format summaries."
+    ],
+    "answer": "U",
+    "contributor_answer": "U",
+    "community_consensus": {
+      "contributor_answer": "U",
+      "most_voted_answer": "U",
+      "vote_percentage": "U (67%), A (33%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "U": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+2): Selected Answer: U\nAmazon Comprehend Medical \u00e9 um servi\u00e7o de processamento de linguagem natural (NLP) treinado especificamente para o dom\u00ednio m\u00e9dico. Ele permite:\n\nExtrair entidades cl\u00ednicas como cond"
+      ]
+    },
+    "explanation": "Community Consensus: U (67%), A (33%).\n\nDiscussion & Rationale:\nanon (+2): Selected Answer: U\nAmazon Comprehend Medical \u00e9 um servi\u00e7o de processamento de linguagem natural (NLP) treinado especificamente para o dom\u00ednio m\u00e9dico. Ele permite:\n\nExtrair entidades cl\u00ednicas como cond",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q067",
+    "question_number": 164,
+    "domain": 5,
+    "domain_name": "Security, Compliance, and Governance",
+    "prompt": "Which option describes embeddings in the context of AI?",
+    "options": {
+      "A": "A method for compressing large datasets",
+      "B": "An encryption method for securing sensitive data",
+      "C": "A method for visualizing high-dimensional data",
+      "D": "A numerical method for data representation in a reduced dimensionality space"
+    },
+    "choices": [
+      "A) A method for compressing large datasets",
+      "B) An encryption method for securing sensitive data",
+      "C) A method for visualizing high-dimensional data",
+      "D) A numerical method for data representation in a reduced dimensionality space"
+    ],
+    "answer": "D",
+    "contributor_answer": "D",
+    "community_consensus": {
+      "contributor_answer": "D",
+      "most_voted_answer": "D",
+      "vote_percentage": "D (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "D": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: D\nD is the correct answer"
+      ]
+    },
+    "explanation": "Community Consensus: D (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: D\nD is the correct answer",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q069",
+    "question_number": 165,
+    "domain": 2,
+    "domain_name": "Fundamentals of Generative AI",
+    "prompt": "A company is building an AI application to summarize books of varying lengths. During testing, the application fails to summarize some books.\n\nWhy does the application fail to summarize some books?",
+    "options": {
+      "A": "The temperature is set too high.",
+      "B": "The selected model does not support fine-tuning.",
+      "C": "The Top P value is too high.",
+      "D": "The input tokens exceed the model\u2019s context size."
+    },
+    "choices": [
+      "A) The temperature is set too high.",
+      "B) The selected model does not support fine-tuning.",
+      "C) The Top P value is too high.",
+      "D) The input tokens exceed the model\u2019s context size."
+    ],
+    "answer": "D",
+    "contributor_answer": "D",
+    "community_consensus": {
+      "contributor_answer": "D",
+      "most_voted_answer": "D",
+      "vote_percentage": "D (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "D": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+3): Selected Answer: D\nModelos de linguagem como GPT, Claude, ou outros LLMs t\u00eam um limite m\u00e1ximo de tokens que podem ser processados por vez \u2014 isso \u00e9 chamado de tamanho do contexto (context window).\n\nUm"
+      ]
+    },
+    "explanation": "Community Consensus: D (100%).\n\nDiscussion & Rationale:\nanon (+3): Selected Answer: D\nModelos de linguagem como GPT, Claude, ou outros LLMs t\u00eam um limite m\u00e1ximo de tokens que podem ser processados por vez \u2014 isso \u00e9 chamado de tamanho do contexto (context window).\n\nUm",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q070",
+    "question_number": 166,
+    "domain": 3,
+    "domain_name": "Applications of Foundation Models",
+    "prompt": "An airline company wants to build a conversational AI assistant to answer customer questions about flight schedules, booking, and payments. The company wants to use large language models (LLMs) and a knowledge base to create a text-based chatbot interface.\n\nWhich solution will meet these requirements with the LEAST development effort?",
+    "options": {
+      "A": "Train models on Amazon SageMaker Autopilot.",
+      "B": "Develop a Retrieval Augmented Generation (RAG) agent by using Amazon Bedrock.",
+      "C": "Create a Python application by using Amazon Q Developer.",
+      "D": "Fine-tune models on Amazon SageMaker Jumpstart."
+    },
+    "choices": [
+      "A) Train models on Amazon SageMaker Autopilot.",
+      "B) Develop a Retrieval Augmented Generation (RAG) agent by using Amazon Bedrock.",
+      "C) Create a Python application by using Amazon Q Developer.",
+      "D) Fine-tune models on Amazon SageMaker Jumpstart."
+    ],
+    "answer": "B",
+    "contributor_answer": "B",
+    "community_consensus": {
+      "contributor_answer": "B",
+      "most_voted_answer": "B",
+      "vote_percentage": "B (83%), U (17%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "B": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+2): Selected Answer: B\nAmazon Bedrock is a fully managed service that offers a choice of high-performing Foundation Models (FMs) and provides capabilities to build generative AI applications with security"
+      ]
+    },
+    "explanation": "Community Consensus: B (83%), U (17%).\n\nDiscussion & Rationale:\nanon (+2): Selected Answer: B\nAmazon Bedrock is a fully managed service that offers a choice of high-performing Foundation Models (FMs) and provides capabilities to build generative AI applications with security",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q071",
+    "question_number": 167,
+    "domain": 1,
+    "domain_name": "Fundamentals of AI and ML",
+    "prompt": "What is tokenization used for in natural language processing (NLP)?",
+    "options": {
+      "A": "To encrypt text data",
+      "B": "To compress text files",
+      "C": "To break text into smaller units for processing",
+      "D": "To translate text between languages"
+    },
+    "choices": [
+      "A) To encrypt text data",
+      "B) To compress text files",
+      "C) To break text into smaller units for processing",
+      "D) To translate text between languages"
+    ],
+    "answer": "C",
+    "contributor_answer": "C",
+    "community_consensus": {
+      "contributor_answer": "C",
+      "most_voted_answer": "C",
+      "vote_percentage": "C (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "C": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+2): Selected Answer: C\nTokeniza\u00e7\u00e3o \u00e9 uma etapa fundamental no processamento de linguagem natural (NLP). Ela consiste em dividir o texto em partes menores chamadas tokens, que podem ser:\n\nPalavras\n\nS\u00edlabas"
+      ]
+    },
+    "explanation": "Community Consensus: C (100%).\n\nDiscussion & Rationale:\nanon (+2): Selected Answer: C\nTokeniza\u00e7\u00e3o \u00e9 uma etapa fundamental no processamento de linguagem natural (NLP). Ela consiste em dividir o texto em partes menores chamadas tokens, que podem ser:\n\nPalavras\n\nS\u00edlabas",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q072",
+    "question_number": 168,
+    "domain": 1,
+    "domain_name": "Fundamentals of AI and ML",
+    "prompt": "Which option is a characteristic of transformer-based language models?",
+    "options": {
+      "A": "Transformer-based language models use convolutional layers to apply filters across an input to capture local patterns through filtered views.",
+      "B": "Transformer-based language models can process only text data.",
+      "C": "Transformer-based language models use self-attention mechanisms to capture contextual relationships.",
+      "D": "Transformer-based language models process data sequences one element at a time in cyclic iterations."
+    },
+    "choices": [
+      "A) Transformer-based language models use convolutional layers to apply filters across an input to capture local patterns through filtered views.",
+      "B) Transformer-based language models can process only text data.",
+      "C) Transformer-based language models use self-attention mechanisms to capture contextual relationships.",
+      "D) Transformer-based language models process data sequences one element at a time in cyclic iterations."
+    ],
+    "answer": "C",
+    "contributor_answer": "C",
+    "community_consensus": {
+      "contributor_answer": "C",
+      "most_voted_answer": "C",
+      "vote_percentage": "C (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "C": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+3): Selected Answer: C\nC. Transformer-based language models use self-attention mechanisms to capture contextual relationships. Explanation:Self-attention: This is a key feature of transformers that allows"
+      ]
+    },
+    "explanation": "Community Consensus: C (100%).\n\nDiscussion & Rationale:\nanon (+3): Selected Answer: C\nC. Transformer-based language models use self-attention mechanisms to capture contextual relationships. Explanation:Self-attention: This is a key feature of transformers that allows",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q073",
+    "question_number": 169,
+    "domain": 1,
+    "domain_name": "Fundamentals of AI and ML",
+    "prompt": "A financial company is using AI systems to obtain customer credit scores as part of the loan application process. The company wants to expand to a new market in a different geographic area. The company must ensure that it can operate in that geographic area.\n\nWhich compliance laws should the company review?",
+    "options": {
+      "A": "Local health data protection laws",
+      "B": "Local payment card data protection laws",
+      "C": "Local education privacy laws",
+      "D": "Local algorithm accountability laws"
+    },
+    "choices": [
+      "A) Local health data protection laws",
+      "B) Local payment card data protection laws",
+      "C) Local education privacy laws",
+      "D) Local algorithm accountability laws"
+    ],
+    "answer": "D",
+    "contributor_answer": "D",
+    "community_consensus": {
+      "contributor_answer": "D",
+      "most_voted_answer": "D",
+      "vote_percentage": "D (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "D": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+4): Selected Answer: D\nQuando uma empresa financeira usa IA para pontua\u00e7\u00e3o de cr\u00e9dito, especialmente ao entrar em um novo mercado geogr\u00e1fico, ela precisa garantir que os modelos algor\u00edtmicos estejam em co"
+      ]
+    },
+    "explanation": "Community Consensus: D (100%).\n\nDiscussion & Rationale:\nanon (+4): Selected Answer: D\nQuando uma empresa financeira usa IA para pontua\u00e7\u00e3o de cr\u00e9dito, especialmente ao entrar em um novo mercado geogr\u00e1fico, ela precisa garantir que os modelos algor\u00edtmicos estejam em co",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q074",
+    "question_number": 170,
+    "domain": 3,
+    "domain_name": "Applications of Foundation Models",
+    "prompt": "A company uses Amazon Bedrock for its generative AI application. The company wants to use Amazon Bedrock Guardrails to detect and filter harmful user inputs and model-generated outputs.\n\nWhich content categories can the guardrails filter? (Choose two.)",
+    "options": {
+      "A": "Hate",
+      "B": "Politics",
+      "C": "Violence",
+      "D": "Gambling",
+      "E": "Religion"
+    },
+    "choices": [
+      "A) Hate",
+      "B) Politics",
+      "C) Violence",
+      "D) Gambling",
+      "E) Religion"
+    ],
+    "answer": "AC",
+    "contributor_answer": "AC",
+    "community_consensus": {
+      "contributor_answer": "AC",
+      "most_voted_answer": "AC",
+      "vote_percentage": "AC (60%), UC (40%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "AC": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+2): Selected Answer: AC\nThe two correct answers are:\n\nA. Hate\nC. Violence"
+      ]
+    },
+    "explanation": "Community Consensus: AC (60%), UC (40%).\n\nDiscussion & Rationale:\nanon (+2): Selected Answer: AC\nThe two correct answers are:\n\nA. Hate\nC. Violence",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q075",
+    "question_number": 171,
+    "domain": 2,
+    "domain_name": "Fundamentals of Generative AI",
+    "prompt": "Which scenario describes a potential risk and limitation of prompt engineering in the context of a generative AI model?",
+    "options": {
+      "A": "Prompt engineering does not ensure that the model always produces consistent and deterministic outputs, eliminating the need for validation.",
+      "B": "Prompt engineering could expose the model to vulnerabilities such as prompt injection attacks.",
+      "C": "Properly designed prompts reduce but do not eliminate the risk of data poisoning or model hijacking.",
+      "D": "Prompt engineering does not ensure that the model will consistently generate highly reliable outputs when working with real-world data."
+    },
+    "choices": [
+      "A) Prompt engineering does not ensure that the model always produces consistent and deterministic outputs, eliminating the need for validation.",
+      "B) Prompt engineering could expose the model to vulnerabilities such as prompt injection attacks.",
+      "C) Properly designed prompts reduce but do not eliminate the risk of data poisoning or model hijacking.",
+      "D) Prompt engineering does not ensure that the model will consistently generate highly reliable outputs when working with real-world data."
+    ],
+    "answer": "B",
+    "contributor_answer": "B",
+    "community_consensus": {
+      "contributor_answer": "B",
+      "most_voted_answer": "B",
+      "vote_percentage": "B (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "B": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+2): Selected Answer: B\nEngenharia de prompt (ou engenharia imediata) \u00e9 o processo de projetar instru\u00e7\u00f5es (prompts) para orientar a sa\u00edda de um modelo de IA generativa. No entanto, isso pode introduzir ris"
+      ]
+    },
+    "explanation": "Community Consensus: B (100%).\n\nDiscussion & Rationale:\nanon (+2): Selected Answer: B\nEngenharia de prompt (ou engenharia imediata) \u00e9 o processo de projetar instru\u00e7\u00f5es (prompts) para orientar a sa\u00edda de um modelo de IA generativa. No entanto, isso pode introduzir ris",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q076",
+    "question_number": 172,
+    "domain": 1,
+    "domain_name": "Fundamentals of AI and ML",
+    "prompt": "A publishing company built a Retrieval Augmented Generation (RAG) based solution to give its users the ability to interact with published content. New content is published daily. The company wants to provide a near real-time experience to users.\n\nWhich steps in the RAG pipeline should the company implement by using offline batch processing to meet these requirements? (Choose two.)",
+    "options": {
+      "A": "Generation of content embeddings",
+      "B": "Generation of embeddings for user queries",
+      "C": "Creation of the search index",
+      "D": "Retrieval of relevant content",
+      "E": "Response generation for the user"
+    },
+    "choices": [
+      "A) Generation of content embeddings",
+      "B) Generation of embeddings for user queries",
+      "C) Creation of the search index",
+      "D) Retrieval of relevant content",
+      "E) Response generation for the user"
+    ],
+    "answer": "A",
+    "contributor_answer": "A",
+    "community_consensus": {
+      "contributor_answer": "A",
+      "most_voted_answer": "A",
+      "vote_percentage": "A (88%), 13%",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "A": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+2): Selected Answer: A\nA C * A. Generation of content embeddings: Creating embeddings for all the published content is a computationally intensive process that does"
+      ]
+    },
+    "explanation": "Community Consensus: A (88%), 13%.\n\nDiscussion & Rationale:\nanon (+2): Selected Answer: A\nA C * A. Generation of content embeddings: Creating embeddings for all the published content is a computationally intensive process that does",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q077",
+    "question_number": 173,
+    "domain": 2,
+    "domain_name": "Fundamentals of Generative AI",
+    "prompt": "Which technique breaks a complex task into smaller subtasks that are sent sequentially to a large language model (LLM)?",
+    "options": {
+      "A": "One-shot prompting",
+      "B": "Prompt chaining",
+      "C": "Tree of thoughts",
+      "D": "Retrieval Augmented Generation (RAG)"
+    },
+    "choices": [
+      "A) One-shot prompting",
+      "B) Prompt chaining",
+      "C) Tree of thoughts",
+      "D) Retrieval Augmented Generation (RAG)"
+    ],
+    "answer": "B",
+    "contributor_answer": "B",
+    "community_consensus": {
+      "contributor_answer": "B",
+      "most_voted_answer": "B",
+      "vote_percentage": "B (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "B": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+4): Selected Answer: B\nPrompt chaining is a technique where a complex task is broken down into smaller subtasks, and each subtask is processed sequentially by a lar"
+      ]
+    },
+    "explanation": "Community Consensus: B (100%).\n\nDiscussion & Rationale:\nanon (+4): Selected Answer: B\nPrompt chaining is a technique where a complex task is broken down into smaller subtasks, and each subtask is processed sequentially by a lar",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q078",
+    "question_number": 174,
+    "domain": 3,
+    "domain_name": "Applications of Foundation Models",
+    "prompt": "An AI practitioner needs to improve the accuracy of a natural language generation model. The model uses rapidly changing inventory data.\n\nWhich technique will improve the model's accuracy?",
+    "options": {
+      "A": "Transfer learning",
+      "B": "Federated learning",
+      "C": "Retrieval Augmented Generation (RAG)",
+      "D": "One-shot prompting"
+    },
+    "choices": [
+      "A) Transfer learning",
+      "B) Federated learning",
+      "C) Retrieval Augmented Generation (RAG)",
+      "D) One-shot prompting"
+    ],
+    "answer": "C",
+    "contributor_answer": "C",
+    "community_consensus": {
+      "contributor_answer": "C",
+      "most_voted_answer": "C",
+      "vote_percentage": "C (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "C": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: C\nC is the correct answer"
+      ]
+    },
+    "explanation": "Community Consensus: C (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: C\nC is the correct answer",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q080",
+    "question_number": 175,
+    "domain": 4,
+    "domain_name": "Guidelines for Responsible AI",
+    "prompt": "A company wants to collaborate with several research institutes to develop an AI model. The company needs standardized documentation of model version tracking and a record of model development.\n\nWhich solution meets these requirements?",
+    "options": {
+      "A": "Track the model changes by using Git.",
+      "B": "Track the model changes by using Amazon Fraud Detector.",
+      "C": "Track the model changes by using Amazon SageMaker Model Cards.",
+      "D": "Track the model changes by using Amazon Comprehend."
+    },
+    "choices": [
+      "A) Track the model changes by using Git.",
+      "B) Track the model changes by using Amazon Fraud Detector.",
+      "C) Track the model changes by using Amazon SageMaker Model Cards.",
+      "D) Track the model changes by using Amazon Comprehend."
+    ],
+    "answer": "C",
+    "contributor_answer": "C",
+    "community_consensus": {
+      "contributor_answer": "C",
+      "most_voted_answer": "C",
+      "vote_percentage": "C (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "C": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: C\nC is the correct answer"
+      ]
+    },
+    "explanation": "Community Consensus: C (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: C\nC is the correct answer",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q081",
+    "question_number": 176,
+    "domain": 1,
+    "domain_name": "Fundamentals of AI and ML",
+    "prompt": "A company that uses multiple ML models wants to identify changes in original model quality so that the company can resolve any issues.\n\nWhich AWS service or feature meets these requirements?",
+    "options": {
+      "A": "Amazon SageMaker JumpStart",
+      "B": "Amazon SageMaker HyperPod",
+      "C": "Amazon SageMaker Data Wrangler",
+      "D": "Amazon SageMaker Model Monitor"
+    },
+    "choices": [
+      "A) Amazon SageMaker JumpStart",
+      "B) Amazon SageMaker HyperPod",
+      "C) Amazon SageMaker Data Wrangler",
+      "D) Amazon SageMaker Model Monitor"
+    ],
+    "answer": "D",
+    "contributor_answer": "D",
+    "community_consensus": {
+      "contributor_answer": "D",
+      "most_voted_answer": "D",
+      "vote_percentage": "D (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "D": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: D\nAmazon SageMaker Model Monitor:\n\nSpecifically designed to monitor model quality and performance in production\nDetects data drift and model dr"
+      ]
+    },
+    "explanation": "Community Consensus: D (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: D\nAmazon SageMaker Model Monitor:\n\nSpecifically designed to monitor model quality and performance in production\nDetects data drift and model dr",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q082",
+    "question_number": 177,
+    "domain": 2,
+    "domain_name": "Fundamentals of Generative AI",
+    "prompt": "What is the purpose of chunking in Retrieval Augmented Generation (RAG)?",
+    "options": {
+      "A": "To avoid database storage limitations for large text documents by storing parts or chunks of the text",
+      "B": "To improve efficiency by avoiding the need to convert large text into vector embeddings",
+      "C": "To improve the contextual relevancy of results retrieved from the vector index",
+      "D": "To decrease the cost of storage by storing parts or chunks of the text"
+    },
+    "choices": [
+      "A) To avoid database storage limitations for large text documents by storing parts or chunks of the text",
+      "B) To improve efficiency by avoiding the need to convert large text into vector embeddings",
+      "C) To improve the contextual relevancy of results retrieved from the vector index",
+      "D) To decrease the cost of storage by storing parts or chunks of the text"
+    ],
+    "answer": "C",
+    "contributor_answer": "C",
+    "community_consensus": {
+      "contributor_answer": "C",
+      "most_voted_answer": "C",
+      "vote_percentage": "C (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "C": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: C\nRetrieval Augmented Generation (RAG) systems enhance Large Language Model (LLM) responses by providing relevant external knowledge. A fundame"
+      ]
+    },
+    "explanation": "Community Consensus: C (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: C\nRetrieval Augmented Generation (RAG) systems enhance Large Language Model (LLM) responses by providing relevant external knowledge. A fundame",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q083",
+    "question_number": 178,
+    "domain": 1,
+    "domain_name": "Fundamentals of AI and ML",
+    "prompt": "A company is developing an editorial assistant application that uses generative AI. During the pilot phase, usage is low and application performance is not a concern. The company cannot predict application usage after the application is fully deployed and wants to minimize application costs.\n\nWhich solution will meet these requirements?",
+    "options": {
+      "A": "Use GPU-powered Amazon EC2 instances.",
+      "B": "Use Amazon Bedrock with Provisioned Throughput.",
+      "C": "Use Amazon Bedrock with On-Demand Throughput.",
+      "D": "Use Amazon SageMaker JumpStart."
+    },
+    "choices": [
+      "A) Use GPU-powered Amazon EC2 instances.",
+      "B) Use Amazon Bedrock with Provisioned Throughput.",
+      "C) Use Amazon Bedrock with On-Demand Throughput.",
+      "D) Use Amazon SageMaker JumpStart."
+    ],
+    "answer": "C",
+    "contributor_answer": "C",
+    "community_consensus": {
+      "contributor_answer": "C",
+      "most_voted_answer": "C",
+      "vote_percentage": "C (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "C": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: C\nThe company \"cannot predict application usage\""
+      ]
+    },
+    "explanation": "Community Consensus: C (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: C\nThe company \"cannot predict application usage\"",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q084",
+    "question_number": 179,
+    "domain": 3,
+    "domain_name": "Applications of Foundation Models",
+    "prompt": "A company deployed a Retrieval Augmented Generation (RAG) application on Amazon Bedrock that gathers financial news to distribute in daily newsletters. Users have recently reported politically influenced ideas in the newsletters.\n\nWhich Amazon Bedrock guardrail can identify and filter this content?",
+    "options": {
+      "A": "Word filters",
+      "B": "Denied topics",
+      "C": "Sensitive information filters",
+      "D": "Content filters"
+    },
+    "choices": [
+      "A) Word filters",
+      "B) Denied topics",
+      "C) Sensitive information filters",
+      "D) Content filters"
+    ],
+    "answer": "B",
+    "contributor_answer": "B",
+    "community_consensus": {
+      "contributor_answer": "B",
+      "most_voted_answer": "B",
+      "vote_percentage": "B (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "B": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: B\nB. Denied topics allow you to explicitly define and block specific subjects, such as politics, by setting custom topic restrictions within yo"
+      ]
+    },
+    "explanation": "Community Consensus: B (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: B\nB. Denied topics allow you to explicitly define and block specific subjects, such as politics, by setting custom topic restrictions within yo",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q085",
+    "question_number": 180,
+    "domain": 1,
+    "domain_name": "Fundamentals of AI and ML",
+    "prompt": "A financial company is developing a fraud detection system that flags potential fraud cases in credit card transactions. Employees will evaluate the flagged fraud cases. The company wants to minimize the amount of time the employees spend reviewing flagged fraud cases that are not actually fraudulent.\n\nWhich evaluation metric meets these requirements?",
+    "options": {
+      "A": "Recall",
+      "B": "Accuracy",
+      "C": "Precision",
+      "D": "Lift chart"
+    },
+    "choices": [
+      "A) Recall",
+      "B) Accuracy",
+      "C) Precision",
+      "D) Lift chart"
+    ],
+    "answer": "C",
+    "contributor_answer": "C",
+    "community_consensus": {
+      "contributor_answer": "C",
+      "most_voted_answer": "C",
+      "vote_percentage": "C (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "C": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: C\nC. The company wants to minimize the time spent on reviewing false positives (cases flagged as fraud that are not really fraud). A high preci"
+      ]
+    },
+    "explanation": "Community Consensus: C (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: C\nC. The company wants to minimize the time spent on reviewing false positives (cases flagged as fraud that are not really fraud). A high preci",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q086",
+    "question_number": 181,
+    "domain": 1,
+    "domain_name": "Fundamentals of AI and ML",
+    "prompt": "A company designed an AI-powered agent to answer customer inquiries based on product manuals.\n\nWhich strategy can improve customer confidence levels in the AI-powered agent's responses?",
+    "options": {
+      "A": "Writing the confidence level in the response",
+      "B": "Including referenced product manual links in the response",
+      "C": "Designing an agent avatar that looks like a computer",
+      "D": "Training the agent to respond in the company's language style"
+    },
+    "choices": [
+      "A) Writing the confidence level in the response",
+      "B) Including referenced product manual links in the response",
+      "C) Designing an agent avatar that looks like a computer",
+      "D) Training the agent to respond in the company's language style"
+    ],
+    "answer": "B",
+    "contributor_answer": "B",
+    "community_consensus": {
+      "contributor_answer": "B",
+      "most_voted_answer": "B",
+      "vote_percentage": "B (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "B": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: B\nB. Including referenced product manual links in the response\n\nIncluding referenced product manual links provides transparency and allows cust"
+      ]
+    },
+    "explanation": "Community Consensus: B (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: B\nB. Including referenced product manual links in the response\n\nIncluding referenced product manual links provides transparency and allows cust",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q087",
+    "question_number": 182,
+    "domain": 4,
+    "domain_name": "Guidelines for Responsible AI",
+    "prompt": "A hospital developed an AI system to provide personalized treatment recommendations for patients. The AI system must provide the rationale behind the recommendations and make the insights accessible to doctors and patients.\n\nWhich human-centered design principle does this scenario present?",
+    "options": {
+      "A": "Explainability",
+      "B": "Privacy and security",
+      "C": "Fairness",
+      "D": "Data governance"
+    },
+    "choices": [
+      "A) Explainability",
+      "B) Privacy and security",
+      "C) Fairness",
+      "D) Data governance"
+    ],
+    "answer": "A",
+    "contributor_answer": "A",
+    "community_consensus": {
+      "contributor_answer": "A",
+      "most_voted_answer": "A",
+      "vote_percentage": "A (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "A": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: A\nWhen an AI system is required to provide the rationale behind its recommendations and make those insights understandable to both doctors and"
+      ]
+    },
+    "explanation": "Community Consensus: A (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: A\nWhen an AI system is required to provide the rationale behind its recommendations and make those insights understandable to both doctors and",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q088",
+    "question_number": 183,
+    "domain": 1,
+    "domain_name": "Fundamentals of AI and ML",
+    "prompt": "Which statement presents an advantage of using Retrieval Augmented Generation (RAG) for natural language processing (NLP) tasks?",
+    "options": {
+      "A": "RAG can use external knowledge sources to generate more accurate and informative responses.",
+      "B": "RAG is designed to improve the speed of language model training.",
+      "C": "RAG is primarily used for speech recognition tasks.",
+      "D": "RAG is a technique for data augmentation in computer vision tasks."
+    },
+    "choices": [
+      "A) RAG can use external knowledge sources to generate more accurate and informative responses.",
+      "B) RAG is designed to improve the speed of language model training.",
+      "C) RAG is primarily used for speech recognition tasks.",
+      "D) RAG is a technique for data augmentation in computer vision tasks."
+    ],
+    "answer": "A",
+    "contributor_answer": "A",
+    "community_consensus": {
+      "contributor_answer": "A",
+      "most_voted_answer": "A",
+      "vote_percentage": "A (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "A": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: A\nA. Retrieval Augmented Generation (RAG) enhances natural language processing tasks by allowing language models to retrieve relevant informati"
+      ]
+    },
+    "explanation": "Community Consensus: A (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: A\nA. Retrieval Augmented Generation (RAG) enhances natural language processing tasks by allowing language models to retrieve relevant informati",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q089",
+    "question_number": 184,
+    "domain": 3,
+    "domain_name": "Applications of Foundation Models",
+    "prompt": "A company has created a custom model by fine-tuning an existing large language model (LLM) from Amazon Bedrock. The company wants to deploy the model to production and use the model to handle a steady rate of requests each minute.\n\nWhich solution meets these requirements MOST cost-effectively?",
+    "options": {
+      "A": "Deploy the model by using an Amazon EC2 compute optimized instance.",
+      "B": "Use the model with on-demand throughput on Amazon Bedrock.",
+      "C": "Store the model in Amazon S3 and host the model by using AWS Lambda.",
+      "D": "Purchase Provisioned Throughput for the model on Amazon Bedrock."
+    },
+    "choices": [
+      "A) Deploy the model by using an Amazon EC2 compute optimized instance.",
+      "B) Use the model with on-demand throughput on Amazon Bedrock.",
+      "C) Store the model in Amazon S3 and host the model by using AWS Lambda.",
+      "D) Purchase Provisioned Throughput for the model on Amazon Bedrock."
+    ],
+    "answer": "D",
+    "contributor_answer": "D",
+    "community_consensus": {
+      "contributor_answer": "D",
+      "most_voted_answer": "D",
+      "vote_percentage": "D (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "D": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: D\nD. For custom (fine-tuned) models on Amazon Bedrock, deploying to production requires purchasing Provisioned Throughput; on-demand mode is no"
+      ]
+    },
+    "explanation": "Community Consensus: D (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: D\nD. For custom (fine-tuned) models on Amazon Bedrock, deploying to production requires purchasing Provisioned Throughput; on-demand mode is no",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q091",
+    "question_number": 185,
+    "domain": 1,
+    "domain_name": "Fundamentals of AI and ML",
+    "prompt": "Which technique involves training AI models on labeled datasets to adapt the models to specific industry terminology and requirements?",
+    "options": {
+      "A": "Data augmentation",
+      "B": "Fine-tuning",
+      "C": "Model quantization",
+      "D": "Continuous pre-training"
+    },
+    "choices": [
+      "A) Data augmentation",
+      "B) Fine-tuning",
+      "C) Model quantization",
+      "D) Continuous pre-training"
+    ],
+    "answer": "B",
+    "contributor_answer": "B",
+    "community_consensus": {
+      "contributor_answer": "B",
+      "most_voted_answer": "B",
+      "vote_percentage": "B (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "B": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: B\nFine-tuning:\n\nInvolves taking a pre-trained model and training it further on a labeled dataset specific to your domain\nAdapts the model to un"
+      ]
+    },
+    "explanation": "Community Consensus: B (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: B\nFine-tuning:\n\nInvolves taking a pre-trained model and training it further on a labeled dataset specific to your domain\nAdapts the model to un",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q092",
+    "question_number": 186,
+    "domain": 1,
+    "domain_name": "Fundamentals of AI and ML",
+    "prompt": "A company is creating an agent for its application by using Amazon Bedrock Agents. The agent is performing well, but the company wants to improve the agent\u2019s accuracy by providing some specific examples.\n\nWhich solution meets these requirements?",
+    "options": {
+      "A": "Modify the advanced prompts for the agent to include the examples.",
+      "B": "Create a guardrail for the agent that includes the examples.",
+      "C": "Use Amazon SageMaker Ground Truth to label the examples.",
+      "D": "Run a script in AWS Lambda that adds the examples to the training dataset."
+    },
+    "choices": [
+      "A) Modify the advanced prompts for the agent to include the examples.",
+      "B) Create a guardrail for the agent that includes the examples.",
+      "C) Use Amazon SageMaker Ground Truth to label the examples.",
+      "D) Run a script in AWS Lambda that adds the examples to the training dataset."
+    ],
+    "answer": "A",
+    "contributor_answer": "A",
+    "community_consensus": {
+      "contributor_answer": "A",
+      "most_voted_answer": "A",
+      "vote_percentage": "A (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "A": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: A\nAdvanced Prompts in Amazon Bedrock Agents:\n\nAllow you to customize the system prompts that guide the agent's behavior\nPerfect for including s"
+      ]
+    },
+    "explanation": "Community Consensus: A (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: A\nAdvanced Prompts in Amazon Bedrock Agents:\n\nAllow you to customize the system prompts that guide the agent's behavior\nPerfect for including s",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q093",
+    "question_number": 187,
+    "domain": 1,
+    "domain_name": "Fundamentals of AI and ML",
+    "prompt": "Which option is a benefit of using infrastructure as code (IaC) in machine learning operations (MLOps)?",
+    "options": {
+      "A": "IaC eliminates the need for hyperparameter tuning.",
+      "B": "IaC always provisions powerful compute instances, contributing to the training of more accurate models.",
+      "C": "IaC streamlines the deployment of scalable and consistent ML workloads in cloud environments.",
+      "D": "IaC minimizes overall expenses by deploying only low-cost instances."
+    },
+    "choices": [
+      "A) IaC eliminates the need for hyperparameter tuning.",
+      "B) IaC always provisions powerful compute instances, contributing to the training of more accurate models.",
+      "C) IaC streamlines the deployment of scalable and consistent ML workloads in cloud environments.",
+      "D) IaC minimizes overall expenses by deploying only low-cost instances."
+    ],
+    "answer": "C",
+    "contributor_answer": "C",
+    "community_consensus": {
+      "contributor_answer": "C",
+      "most_voted_answer": "C",
+      "vote_percentage": "C (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "C": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: C\nInfrastructure as Code (IaC) allows you to define and manage infrastructure using code templates, which makes it easy to:\n\nAutomate the provi"
+      ]
+    },
+    "explanation": "Community Consensus: C (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: C\nInfrastructure as Code (IaC) allows you to define and manage infrastructure using code templates, which makes it easy to:\n\nAutomate the provi",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q094",
+    "question_number": 188,
+    "domain": 2,
+    "domain_name": "Fundamentals of Generative AI",
+    "prompt": "A company wants to fine-tune a foundation model (FM) to answer questions for a specific domain. The company wants to use instruction-based fine-tuning.\n\nHow should the company prepare the training data?",
+    "options": {
+      "A": "Gather company internal documents and industry-specific materials. Merge the documents and materials into a single file.",
+      "B": "Collect external company reviews from various online sources. Manually label each review as either positive or negative.",
+      "C": "Create pairs of questions and answers that specifically address topics related to the company's industry domain.",
+      "D": "Create few-shot prompts to instruct the model to answer only domain knowledge."
+    },
+    "choices": [
+      "A) Gather company internal documents and industry-specific materials. Merge the documents and materials into a single file.",
+      "B) Collect external company reviews from various online sources. Manually label each review as either positive or negative.",
+      "C) Create pairs of questions and answers that specifically address topics related to the company's industry domain.",
+      "D) Create few-shot prompts to instruct the model to answer only domain knowledge."
+    ],
+    "answer": "C",
+    "contributor_answer": "C",
+    "community_consensus": {
+      "contributor_answer": "C",
+      "most_voted_answer": "C",
+      "vote_percentage": "C (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "C": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: C\nSince the company wants to use instruction-based fine-tuning, the training data must be structured as input-output pairs that teach the model"
+      ]
+    },
+    "explanation": "Community Consensus: C (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: C\nSince the company wants to use instruction-based fine-tuning, the training data must be structured as input-output pairs that teach the model",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q095",
+    "question_number": 189,
+    "domain": 1,
+    "domain_name": "Fundamentals of AI and ML",
+    "prompt": "Which ML technique ensures data compliance and privacy when training AI models on AWS?",
+    "options": {
+      "A": "Reinforcement learning",
+      "B": "Transfer learning",
+      "C": "Federated learning",
+      "D": "Unsupervised learning"
+    },
+    "choices": [
+      "A) Reinforcement learning",
+      "B) Transfer learning",
+      "C) Federated learning",
+      "D) Unsupervised learning"
+    ],
+    "answer": "C",
+    "contributor_answer": "C",
+    "community_consensus": {
+      "contributor_answer": "C",
+      "most_voted_answer": "C",
+      "vote_percentage": "C (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "C": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: C\nFederated learning is a machine learning technique that:\n\nTrains models across multiple decentralized devices or servers holding local data s"
+      ]
+    },
+    "explanation": "Community Consensus: C (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: C\nFederated learning is a machine learning technique that:\n\nTrains models across multiple decentralized devices or servers holding local data s",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q096",
+    "question_number": 190,
+    "domain": 1,
+    "domain_name": "Fundamentals of AI and ML",
+    "prompt": "HOTSPOT\n-\n\nA company needs to customize a base model that is hosted on Amazon Bedrock.\n\nSelect the correct model customization method from the following list of company requirements. Each model customization method should be selected one or more times.\n\n//IMG//",
+    "options": {},
+    "choices": [],
+    "answer": "A",
+    "contributor_answer": "A",
+    "community_consensus": {
+      "contributor_answer": "A",
+      "most_voted_answer": "A",
+      "vote_percentage": "A (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "A": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): The company wants to improve the model's performance on specific tasks and examples.\n\u2705 Fine-tuning\n(Fine-tuning adapts a pretrained model to perform better on a"
+      ]
+    },
+    "explanation": "Community Consensus: A (100%).\n\nDiscussion & Rationale:\nanon (+1): The company wants to improve the model's performance on specific tasks and examples.\n\u2705 Fine-tuning\n(Fine-tuning adapts a pretrained model to perform better on a",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q097",
+    "question_number": 191,
+    "domain": 1,
+    "domain_name": "Fundamentals of AI and ML",
+    "prompt": "A manufacturing company has an application that ingests consumer complaints from publicly available sources. The application uses complex hard-coded logic to process the complaints. The company wants to scale this logic across markets and product lines.\n\nWhich advantage do generative AI models offer for this scenario?",
+    "options": {
+      "A": "Predictability of outputs",
+      "B": "Adaptability",
+      "C": "Less sensitivity to changes in inputs",
+      "D": "Explainability"
+    },
+    "choices": [
+      "A) Predictability of outputs",
+      "B) Adaptability",
+      "C) Less sensitivity to changes in inputs",
+      "D) Explainability"
+    ],
+    "answer": "B",
+    "contributor_answer": "B",
+    "community_consensus": {
+      "contributor_answer": "B",
+      "most_voted_answer": "B",
+      "vote_percentage": "B (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "B": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: B\nIn this scenario, the company wants to scale and generalize its logic for processing consumer complaints across different markets and product"
+      ]
+    },
+    "explanation": "Community Consensus: B (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: B\nIn this scenario, the company wants to scale and generalize its logic for processing consumer complaints across different markets and product",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q098",
+    "question_number": 192,
+    "domain": 1,
+    "domain_name": "Fundamentals of AI and ML",
+    "prompt": "A financial company wants to flag all credit card activity as possibly fraudulent or non-fraudulent based on transaction data.\n\nWhich type of ML model meets these requirements?",
+    "options": {
+      "A": "Regression",
+      "B": "Diffusion",
+      "C": "Binary classification",
+      "D": "Multi-class classification"
+    },
+    "choices": [
+      "A) Regression",
+      "B) Diffusion",
+      "C) Binary classification",
+      "D) Multi-class classification"
+    ],
+    "answer": "C",
+    "contributor_answer": "C",
+    "community_consensus": {
+      "contributor_answer": "C",
+      "most_voted_answer": "C",
+      "vote_percentage": "C (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "C": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+2): Selected Answer: C\njust 2 classification. so Binary."
+      ]
+    },
+    "explanation": "Community Consensus: C (100%).\n\nDiscussion & Rationale:\nanon (+2): Selected Answer: C\njust 2 classification. so Binary.",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q099",
+    "question_number": 193,
+    "domain": 2,
+    "domain_name": "Fundamentals of Generative AI",
+    "prompt": "HOTSPOT\n-\n\nA company is designing a customer service chatbot by using a fine-tuned large language model (LLM). The company wants to ensure that the chatbot uses responsible AI characteristics.\n\nSelect the correct responsible AI characteristic from the following list for each application design action. Each responsible AI characteristic should be selected one time or not at all.\n\n//IMG//",
+    "options": {},
+    "choices": [],
+    "answer": "A",
+    "contributor_answer": "A",
+    "community_consensus": {
+      "contributor_answer": "A",
+      "most_voted_answer": "A",
+      "vote_percentage": "A (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "A": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Q1: Privacy and security\n\nQ2: Transparency\n\nQ3: Safety"
+      ]
+    },
+    "explanation": "Community Consensus: A (100%).\n\nDiscussion & Rationale:\nanon (+1): Q1: Privacy and security\n\nQ2: Transparency\n\nQ3: Safety",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q100",
+    "question_number": 194,
+    "domain": 2,
+    "domain_name": "Fundamentals of Generative AI",
+    "prompt": "A hospital wants to use a generative AI solution with speech-to-text functionality to help improve employee skills in dictating clinical notes.\n\nWhich AWS service meets these requirements?",
+    "options": {
+      "A": "Amazon Q Developer",
+      "B": "Amazon Polly",
+      "C": "Amazon Rekognition",
+      "D": "AWS HealthScribe"
+    },
+    "choices": [
+      "A) Amazon Q Developer",
+      "B) Amazon Polly",
+      "C) Amazon Rekognition",
+      "D) AWS HealthScribe"
+    ],
+    "answer": "D",
+    "contributor_answer": "D",
+    "community_consensus": {
+      "contributor_answer": "D",
+      "most_voted_answer": "D",
+      "vote_percentage": "D (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "D": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: D\nAWS HealthScribe is designed specifically for healthcare applications and offers:\n\nSpeech-to-text functionality tailored for clinical convers"
+      ]
+    },
+    "explanation": "Community Consensus: D (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: D\nAWS HealthScribe is designed specifically for healthcare applications and offers:\n\nSpeech-to-text functionality tailored for clinical convers",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q102",
+    "question_number": 195,
+    "domain": 2,
+    "domain_name": "Fundamentals of Generative AI",
+    "prompt": "Which type of AI model makes numeric predictions?",
+    "options": {
+      "A": "Diffusion",
+      "B": "Regression",
+      "C": "Transformer",
+      "D": "Multi-modal"
+    },
+    "choices": [
+      "A) Diffusion",
+      "B) Regression",
+      "C) Transformer",
+      "D) Multi-modal"
+    ],
+    "answer": "B",
+    "contributor_answer": "B",
+    "community_consensus": {
+      "contributor_answer": "B",
+      "most_voted_answer": "B",
+      "vote_percentage": "B (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "B": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: B\nIt is B"
+      ]
+    },
+    "explanation": "Community Consensus: B (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: B\nIt is B",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q103",
+    "question_number": 196,
+    "domain": 1,
+    "domain_name": "Fundamentals of AI and ML",
+    "prompt": "HOTSPOT\n-\n\nA company wants to use Amazon SageMaker features for various use cases.\n\nSelect the correct SageMaker feature from the following list for each use case. Each SageMaker feature should be selected one time or not at all.\n\n//IMG//",
+    "options": {},
+    "choices": [],
+    "answer": "A",
+    "contributor_answer": "A",
+    "community_consensus": {
+      "contributor_answer": "A",
+      "most_voted_answer": "A",
+      "vote_percentage": "A (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "A": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Q1: SageMaker Canvas\n\nQ2: SageMaker JumpStart\n\nQ3: SageMaker Ground Truth"
+      ]
+    },
+    "explanation": "Community Consensus: A (100%).\n\nDiscussion & Rationale:\nanon (+1): Q1: SageMaker Canvas\n\nQ2: SageMaker JumpStart\n\nQ3: SageMaker Ground Truth",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q104",
+    "question_number": 197,
+    "domain": 2,
+    "domain_name": "Fundamentals of Generative AI",
+    "prompt": "What is the purpose of vector embeddings in a large language model (LLM)?",
+    "options": {
+      "A": "Splitting text into manageable pieces of data",
+      "B": "Grouping a set of characters to be treated as a single unit",
+      "C": "Providing the ability to mathematically compare texts",
+      "D": "Providing the count of every word in the input"
+    },
+    "choices": [
+      "A) Splitting text into manageable pieces of data",
+      "B) Grouping a set of characters to be treated as a single unit",
+      "C) Providing the ability to mathematically compare texts",
+      "D) Providing the count of every word in the input"
+    ],
+    "answer": "C",
+    "contributor_answer": "C",
+    "community_consensus": {
+      "contributor_answer": "C",
+      "most_voted_answer": "C",
+      "vote_percentage": "C (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "C": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: C\nC. Providing the ability to mathematically compare texts\n\nThe other options are incorrect because:\nA. Splitting text into manageable pieces i"
+      ]
+    },
+    "explanation": "Community Consensus: C (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: C\nC. Providing the ability to mathematically compare texts\n\nThe other options are incorrect because:\nA. Splitting text into manageable pieces i",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q105",
+    "question_number": 198,
+    "domain": 2,
+    "domain_name": "Fundamentals of Generative AI",
+    "prompt": "A company wants to fine-tune a foundation model (FM) by using AWS services. The company needs to ensure that its data stays private, safe, and secure in the source AWS Region where the data is stored.\n\nWhich combination of steps will meet these requirements MOST cost-effectively? (Choose two.)",
+    "options": {
+      "A": "Host the model on premises by using AWS Outposts.",
+      "B": "Use the Amazon Bedrock API.",
+      "C": "Use AWS PrivateLink and a VPC.",
+      "D": "Host the Amazon Bedrock API on premises.",
+      "E": "Use Amazon CloudWatch logs and metrics."
+    },
+    "choices": [
+      "A) Host the model on premises by using AWS Outposts.",
+      "B) Use the Amazon Bedrock API.",
+      "C) Use AWS PrivateLink and a VPC.",
+      "D) Host the Amazon Bedrock API on premises.",
+      "E) Use Amazon CloudWatch logs and metrics."
+    ],
+    "answer": "BC",
+    "contributor_answer": "BC",
+    "community_consensus": {
+      "contributor_answer": "BC",
+      "most_voted_answer": "BC",
+      "vote_percentage": "BC (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "BC": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: BC\nB. Use the Amazon Bedrock API\nAmazon Bedrock allows you to customize (fine-tune) foundation models securely without managing infrastructure."
+      ]
+    },
+    "explanation": "Community Consensus: BC (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: BC\nB. Use the Amazon Bedrock API\nAmazon Bedrock allows you to customize (fine-tune) foundation models securely without managing infrastructure.",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
   }
 ]
