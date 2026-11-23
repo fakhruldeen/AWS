@@ -276,3 +276,64 @@ flowchart LR
   - *C is incorrect:* Basic Support only includes the 7 core security and service quota checks.
   - *D is incorrect:* The AWS Free Tier provides limited free usage of AWS services, but does not alter the 7 core check limitation of Basic Support.
 </details>
+
+---
+
+## 🧠 Master MCQ Solving Blueprint: Pattern Decryption & Elimination Tricks
+
+> *This blueprint distills recurring patterns, keyword triggers, and trap options extracted from over 350 questions on AWS Support Plans (Basic, Developer, Business, Enterprise) and AWS Marketplace across the official CLF-C02 question bank.*
+
+### 1. The "Clue-to-Service" Linguistic Decryption Matrix
+When reading a question scenario, search for these exact phrasing triggers:
+
+| If You See This Trigger Phrase in the Question Stem... | The Correct Support Plan / Service Is... | Trap Distractor to Immediately Discard |
+|---|---|---|
+| *"Dedicated Technical Account Manager (TAM) assigned to account; < 15-minute response for business-critical down"* | **AWS Enterprise Support** | *AWS Business Support* (Business does NOT provide a dedicated TAM!) |
+| *"Production system down < 1-hour response SLA; 24/7 phone/chat/email; full Trusted Advisor checks; Support API"* | **AWS Business Support** | *AWS Developer Support* (Developer is business hours email only) |
+| *"Experimental or non-production workloads; business hours email-only access; 1 primary contact; < 12-24 hr response"* | **AWS Developer Support** | *AWS Basic Support* (Basic allows zero technical support cases) |
+| *"Billing and account questions only; access to documentation and 7 core Trusted Advisor checks; $0 cost"* | **AWS Basic Support** | *AWS Developer Support* |
+| *"Curated digital catalog to find, test, buy, and deploy third-party software with charges on AWS monthly bill"* | **AWS Marketplace** | *AWS Snowball* or *AWS Systems Manager* |
+| *"Architectural review and operational support for planned high-traffic marketing events or flash sales"* | **AWS Infrastructure Event Management (IEM)** | *AWS Trusted Advisor* (IEM is a human engagement; included in Enterprise) |
+| *"Dedicated billing and account specialist team for enterprise customers"* | **AWS Concierge Support Team** | *AWS TAM* (TAM is technical; Concierge is for billing/accounts) |
+| *"Lowest cost support tier providing full access to all 115+ AWS Trusted Advisor checks"* | **AWS Business Support** | *AWS Developer Support* (Developer has only 7 core checks!) |
+
+### 2. The 3-Step Rapid Elimination Heuristic
+When evaluating an AWS Support Plan question:
+1. **Step 1: Check for "Dedicated Human Roles":**
+   - Mentions a **dedicated Technical Account Manager (TAM)** $\to$ **Enterprise Support** (Instant answer!).
+   - Mentions a **dedicated Concierge billing team** $\to$ **Enterprise Support**.
+   - Mentions **AWS Infrastructure Event Management (IEM)** included for free $\to$ **Enterprise Support**.
+2. **Step 2: Check Incident Response SLA Speed:**
+   - **< 15 minutes** (Business-critical system down) $\to$ **Enterprise Support**.
+   - **< 1 hour** (Production system down) $\to$ **Business Support**.
+   - **< 12 to 24 hours** (General guidance / non-production system impaired) $\to$ **Developer Support**.
+   - **Zero technical cases** (Billing and account questions only) $\to$ **Basic Support**.
+3. **Step 3: Check Channels & Contacts:**
+   - **24/7 phone, live chat, and web tickets** with **unlimited contacts** $\to$ **Business** or **Enterprise**.
+   - **Business hours email only** with **1 primary contact** $\to$ **Developer Support**.
+
+### 3. High-Frequency Decoy Autopsy: Why AWS Tries to Trick You
+* **Decoy #1: "Business Support" vs. "Enterprise Support" (The TAM Trap)**
+  - *The Trap:* A scenario says: "A company needs 24/7 technical support by phone and chat, and wants a dedicated individual to help design their architecture."
+  - *The Autopsy:* While Business Support gives you 24/7 phone/chat, it connects you to a **general pool** of AWS cloud support engineers. Only **Enterprise Support** assigns a **designated Technical Account Manager (TAM)** dedicated to your organization.
+* **Decoy #2: "Developer Support" vs. "Business Support" (Trusted Advisor Checks)**
+  - *The Trap:* Which is the lowest-tier support plan that unlocks all AWS Trusted Advisor best practice checks?
+  - *The Autopsy:* Candidates frequently pick Developer Support because it's the cheapest paid plan (\$29/mo). But Developer Support **only includes the 7 core checks**. You must upgrade to **Business Support** (\$100/mo) to unlock the full suite of checks.
+* **Decoy #3: "AWS Marketplace" vs. "AWS Partner Network (APN)"**
+  - *The Trap:* A company wants to purchase a third-party firewall appliance or SaaS software and pay through AWS.
+  - *The Autopsy:* **AWS Marketplace** is the digital software store to purchase third-party software products. The **AWS Partner Network (APN)** is a global community of consulting and technology partners you hire for professional services.
+
+### 4. 10-Second Visual Decision Flowchart
+
+```mermaid
+flowchart TD
+    Start["What support or procurement need is described?"] --> Need{"Support Tier or Marketplace?"}
+    
+    Need -->|"Buy 3rd-party software with AWS consolidated billing"| Mkt["✅ AWS Marketplace"]
+    
+    Need -->|"Technical Support Tier"| Tier{"What are the key requirements?"}
+    Tier -->|"Dedicated TAM, < 15 min response, Concierge, IEM included"| Ent["✅ AWS Enterprise Support ($15k/mo)"]
+    Tier -->|"24/7 phone/chat, < 1 hr production down, full Trusted Advisor"| Bus["✅ AWS Business Support ($100/mo)"]
+    Tier -->|"Business hours email only, 1 contact, dev workloads"| Dev["✅ AWS Developer Support ($29/mo)"]
+    Tier -->|"Billing & account questions only; 7 core checks; $0"| Basic["✅ AWS Basic Support ($0)"]
+```

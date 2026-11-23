@@ -276,3 +276,74 @@ graph TD
   - *C is incorrect:* Replatform involves modifying the platform layer (e.g., adopting managed databases or containers) while keeping the custom code.
   - *D is incorrect:* Relocate involves moving virtual machines at the hypervisor level (e.g., VMware Cloud on AWS) without changing code or OS configs.
 </details>
+
+---
+
+## 🧠 Master MCQ Solving Blueprint: Pattern Decryption & Elimination Tricks
+
+> *This blueprint distills recurring patterns, keyword triggers, and trap options extracted from over 300 questions on AWS CAF and the 7 Rs Migration Strategies across the official CLF-C02 question bank.*
+
+### 1. The "Clue-to-Service" Linguistic Decryption Matrix
+When reading a question scenario, search for these exact phrasing triggers:
+
+| If You See This Trigger Phrase in the Question Stem... | The Correct CAF Perspective / Strategy Is... | Trap Distractor to Immediately Discard |
+|---|---|---|
+| *"Workforce transformation, staff training, upskilling, and cultural change"* | **People Perspective** | *Governance Perspective* |
+| *"Aligning cloud investments with business strategy, measuring ROI and business value"* | **Business Perspective** | *Platform Perspective* |
+| *"Cloud financial management (FinOps), project portfolio management, and program governance"* | **Governance Perspective** | *Business Perspective* |
+| *"Designing landing zones, cloud infrastructure patterns, and data platforms"* | **Platform Perspective** | *Operations Perspective* |
+| *"Incident response, observability, SLA delivery, and day-to-day runbooks"* | **Operations Perspective** | *Platform Perspective* |
+| *"Migrate to EC2 with ZERO code changes ('Lift and Shift')"* | **Rehost** | *Replatform* or *Refactor* |
+| *"Move to managed services (e.g., self-hosted DB to Amazon RDS) with minor adjustments ('Lift, Tinker, Shift')"* | **Replatform** | *Refactor* (No core rewrite!) |
+| *"Completely rewrite application code using cloud-native microservices or serverless ('Rearchitect')"* | **Refactor** | *Replatform* |
+| *"Replace an in-house application with a commercial third-party SaaS solution ('Drop and Shop')"* | **Repurchase** | *Rehost* |
+| *"Move hypervisor VMs (VMware Cloud on AWS) without converting formats"* | **Relocate** | *Rehost* |
+| *"Keep application on-premises because migration is not currently justified"* | **Retain** | *Retire* (Retain keeps it alive!) |
+| *"Decommission and permanently shut down redundant, obsolete applications"* | **Retire** | *Retain* |
+
+### 2. The 3-Step Rapid Elimination Heuristic
+When evaluating a CAF or Migration question:
+1. **Step 1: Classify the CAF Perspective Domain:**
+   - **Business Capabilities:** Business (ROI/Value), People (Training/HR/Culture), Governance (FinOps/Portfolios).
+   - **Technical Capabilities:** Platform (Landing Zones/Architecture), Security (IAM/Compliance), Operations (Daily runbooks/SLA monitoring).
+2. **Step 2: Trace the Migration Effort & Code Modification:**
+   - **Zero code changes, move raw VMs:** $\to$ **Rehost** (Lift and Shift).
+   - **Hypervisor lift (VMware to VMware):** $\to$ **Relocate**.
+   - **Swap underlying infrastructure to managed PaaS (e.g., DB to RDS):** $\to$ **Replatform**.
+   - **Full code rewrite to Serverless / Microservices:** $\to$ **Refactor** (Highest effort, highest agility).
+   - **Scrap code, buy third-party SaaS:** $\to$ **Repurchase**.
+3. **Step 3: Keep vs. Kill (Retain vs. Retire):**
+   - If the business **continues running the app on-premises** $\to$ **Retain**.
+   - If the business **turns off the server and deletes the software** $\to$ **Retire**.
+
+### 3. High-Frequency Decoy Autopsy: Why AWS Tries to Trick You
+* **Decoy #1: "People Perspective" vs. "Governance Perspective"**
+  - *The Trap:* A scenario discusses setting up a Cloud Center of Excellence (CCoE) training program or organizational change management.
+  - *The Autopsy:* Candidates frequently confuse Governance with People. Training, skills development, and organizational career transitions belong strictly to the **People Perspective**. Financial accountability (FinOps) and project prioritization belong to **Governance**.
+* **Decoy #2: "Rehost" vs. "Replatform" vs. "Refactor"**
+  - *The Trap:* Moving an app to AWS and moving the database to Amazon RDS. Is it Rehost or Replatform?
+  - *The Autopsy:* If the database is migrated to **Amazon RDS (a managed service)**, that is **Replatform** (*Lift, Tinker, and Shift*). If the database was moved as-is onto an EC2 virtual machine without touching the engine, that is **Rehost**.
+* **Decoy #3: "AWS Application Migration Service (MGN)" vs. "AWS Database Migration Service (DMS)"**
+  - *The Trap:* Asking which service migrates physical or virtual servers to Amazon EC2.
+  - *The Autopsy:* **AWS MGN** lifts and shifts block-level server disks (EC2 instances). **AWS DMS** migrates database data and schema between database engines.
+
+### 4. 10-Second Visual Decision Flowchart
+
+```mermaid
+flowchart TD
+    Start["What is the migration scenario testing?"] --> Type{"CAF Perspective or Migration Strategy?"}
+    
+    Type -->|"AWS CAF Perspectives"| CAF{"What is the organizational focus?"}
+    CAF -->|"Staff training, upskilling, culture"| People["✅ People Perspective"]
+    CAF -->|"FinOps, portfolio oversight, guardrails"| Gov["✅ Governance Perspective"]
+    CAF -->|"Landing zones, networking, architecture"| Plat["✅ Platform Perspective"]
+    CAF -->|"Day-to-day operations, monitoring, SLAs"| Ops["✅ Operations Perspective"]
+    
+    Type -->|"7 Rs Migration Strategies"| Strategy{"How is the application handled?"}
+    Strategy -->|"Lift and shift VM to EC2 with zero changes"| Rehost["✅ Rehost"]
+    Strategy -->|"Move DB to RDS / adopt containers (minor tweak)"| Replat["✅ Replatform"]
+    Strategy -->|"Full code rewrite to serverless/microservices"| Refact["✅ Refactor"]
+    Strategy -->|"Buy third-party SaaS product"| Repurch["✅ Repurchase"]
+    Strategy -->|"Move VMware VMs directly without conversion"| Reloc["✅ Relocate"]
+    Strategy -->|"Keep on-premises / decommission"| Ret["✅ Retain (Keep) / Retire (Kill)"]
+```

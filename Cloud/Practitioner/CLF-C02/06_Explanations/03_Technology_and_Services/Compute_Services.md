@@ -261,3 +261,73 @@ flowchart LR
 2. *Why would an organization choose AWS Fargate over running containers on EC2 worker nodes?*
 3. *What are the three core pieces of an EC2 instance launch configuration?*
 4. *If a batch processing script takes 25 minutes to execute, can it run on AWS Lambda? What service should be used instead?*
+
+---
+
+## 🧠 Master MCQ Solving Blueprint: Pattern Decryption & Elimination Tricks
+
+> *This blueprint distills recurring patterns, keyword triggers, and trap options extracted from over 500 questions on AWS Compute (EC2, Lambda, ECS, EKS, Fargate, Elastic Beanstalk) across the official CLF-C02 question bank.*
+
+### 1. The "Clue-to-Service" Linguistic Decryption Matrix
+When reading a question scenario, search for these exact phrasing triggers:
+
+| If You See This Trigger Phrase in the Question Stem... | The Correct Compute Service / Model Is... | Trap Distractor to Immediately Discard |
+|---|---|---|
+| *"Run code without managing servers; pay per millisecond; event-driven; short execution"* | **AWS Lambda** | *Amazon EC2* (EC2 requires OS management) |
+| *"Deploy Docker containers without provisioning or managing underlying EC2 servers"* | **AWS Fargate** | *Amazon ECS with EC2 launch type* (EC2 launch type requires server management) |
+| *"Orchestrate container workloads using open-source Kubernetes"* | **Amazon EKS** | *Amazon ECS* (ECS is AWS proprietary, not Kubernetes) |
+| *"Quickly deploy and scale web applications by uploading code; AWS handles provisioning, load balancing, auto-scaling"* | **AWS Elastic Beanstalk** | *AWS CloudFormation* (CloudFormation is IaC; Beanstalk is PaaS) |
+| *"Fault-tolerant, interruptible workloads (rendering, batch processing) seeking up to 90% discount"* | **EC2 Spot Instances** | *On-Demand Instances* or *Reserved Instances* |
+| *"Steady-state, predictable compute usage for 1 or 3 years seeking maximum cost reduction"* | **Savings Plans / Reserved Instances** | *Spot Instances* (Spot is for interruptible, not steady-state) |
+| *"Bring Your Own License (BYOL) requiring visibility into physical CPU sockets and cores"* | **EC2 Dedicated Hosts** | *Dedicated Instances* (Dedicated Instances do not provide socket visibility!) |
+| *"Workload execution time exceeds 15 minutes"* | **AWS Fargate / Amazon EC2** | *AWS Lambda* (Lambda has a hard 15-minute maximum timeout!) |
+| *"Private Docker container image registry"* | **Amazon ECR (Elastic Container Registry)** | *Amazon S3* (S3 can store files, but ECR is the container image registry) |
+
+### 2. The 3-Step Rapid Elimination Heuristic
+When evaluating a Compute question:
+1. **Step 1: Check the Operational Abstraction Layer:**
+   - Full OS control, root access, long-running processes $\to$ **Amazon EC2**.
+   - Platform as a Service (PaaS): Upload code, let AWS handle servers $\to$ **AWS Elastic Beanstalk**.
+   - Containerized workloads $\to$ **ECS / EKS** (with **Fargate** if serverless).
+   - Serverless functions, event-driven, $\le 15$ minutes $\to$ **AWS Lambda**.
+2. **Step 2: Check EC2 Purchasing Model:**
+   - Short-term, unpredictable, development, cannot be terminated unexpectedly $\to$ **On-Demand**.
+   - Fault-tolerant, stateless batch, background data jobs, can tolerate 2-minute shutdown notice $\to$ **Spot**.
+   - Steady 24/7 production server running for 1 or 3 years $\to$ **Savings Plans / Reserved Instances**.
+   - Strict physical hardware isolation for regulatory compliance $\to$ **Dedicated Instances**.
+   - Dedicated physical server + per-core software licensing (BYOL) $\to$ **Dedicated Hosts**.
+3. **Step 3: Check Duration Limits:**
+   - Does the batch task take **more than 15 minutes** (e.g., 30 minutes, 2 hours)?
+   - **INSTANTLY ELIMINATE AWS Lambda**. Lambda will crash at minute 15. Choose **AWS Fargate**, **EC2**, or **AWS Batch**.
+
+### 3. High-Frequency Decoy Autopsy: Why AWS Tries to Trick You
+* **Decoy #1: "Dedicated Hosts" vs. "Dedicated Instances"**
+  - *The Trap:* A company has existing Windows Server licenses tied to physical CPU sockets.
+  - *The Autopsy:* Both run on single-tenant hardware. But **Dedicated Instances** give you no control over which physical server is used and no visibility into physical sockets/cores. **Dedicated Hosts** give you a dedicated physical server box with socket/core mapping required for BYOL compliance.
+* **Decoy #2: "AWS Lambda" vs. "AWS Fargate"**
+  - *The Trap:* The scenario asks for "serverless compute" for a job that processes video files taking 45 minutes.
+  - *The Autopsy:* Candidates see "serverless" and choose Lambda. But Lambda has a **15-minute execution limit**. For serverless containerized tasks that run longer than 15 minutes, the correct answer is **AWS Fargate**.
+* **Decoy #3: "AWS Elastic Beanstalk" vs. "AWS CloudFormation"**
+  - *The Trap:* Deploying an application environment automatically.
+  - *The Autopsy:* **Elastic Beanstalk** is a Platform-as-a-Service (PaaS) for developers who just want to upload application code (`.zip`, `.war`, Dockerfile). **CloudFormation** is Infrastructure as Code (IaC) using JSON/YAML templates to provision any AWS resource across the entire cloud catalog.
+
+### 4. 10-Second Visual Decision Flowchart
+
+```mermaid
+flowchart TD
+    Start["What is the compute workload?"] --> Model{"What level of management is needed?"}
+    
+    Model -->|"Event-driven, stateless, runs < 15 min"| Lambda["✅ AWS Lambda (Serverless FaaS)"]
+    Model -->|"Containers: Docker / Kubernetes"| Cont{"Server management or serverless?"}
+    Cont -->|"Serverless container execution"| Fargate["✅ AWS Fargate"]
+    Cont -->|"Kubernetes open-source orchestration"| EKS["✅ Amazon EKS"]
+    Cont -->|"AWS native container orchestration"| ECS["✅ Amazon ECS"]
+    
+    Model -->|"PaaS: Upload web code, AWS manages OS"| Beanstalk["✅ AWS Elastic Beanstalk"]
+    
+    Model -->|"Virtual Machines with full OS root control"| EC2{"What is the pricing & tenancy requirement?"}
+    EC2 -->|"Interruptible batch job, up to 90% discount"| Spot["✅ EC2 Spot Instances"]
+    EC2 -->|"Steady 24/7 baseline for 1-3 years"| Savings["✅ Savings Plans / Reserved Instances"]
+    EC2 -->|"Short-term, unpredictable, no commitment"| OnDemand["✅ On-Demand Instances"]
+    EC2 -->|"Physical sockets/cores for BYOL licenses"| DedHost["✅ EC2 Dedicated Hosts"]
+```
