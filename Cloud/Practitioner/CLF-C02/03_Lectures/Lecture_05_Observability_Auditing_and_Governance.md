@@ -3,13 +3,13 @@
 > **Course Track:** AWS Certified Cloud Practitioner (`CLF-C02`)  
 > **Target Exam Domains:** Domain 2: Security & Compliance (30%) & Domain 3: Technology (DevOps)  
 > **Estimated Delivery Duration:** 90 Minutes  
-> **Associated Slide Deck:** `slides/Module_04_Monitoring_Governance_and_DevOps_Slides.md`  
-> **Target Hands-On Labs:** `labs/lab_12_sqs_sns_eventbridge_messaging.md` & `labs/lab_13_observability_cloudwatch_cloudtrail_config.md`  
-> **Student Explanations:** `explanations/02_Security_and_Compliance/Threat_Detection_and_Compliance.md` & `03_Technology_and_Services/Management_and_Observability.md`
+> **Associated Slide Deck:** [`04_Slides/Module_04_Monitoring_Governance_and_DevOps_Slides.md`](../04_Slides/Module_04_Monitoring_Governance_and_DevOps_Slides.md)  
+> **Target Hands-On Labs:** [`07_Hands_On_Labs/lab_12_sqs_sns_eventbridge_messaging.md`](../07_Hands_On_Labs/lab_12_sqs_sns_eventbridge_messaging.md) & [`07_Hands_On_Labs/lab_13_observability_cloudwatch_cloudtrail_config.md`](../07_Hands_On_Labs/lab_13_observability_cloudwatch_cloudtrail_config.md)  
+> **Student Explanations:** [`06_Explanations/02_Security_and_Compliance/Threat_Detection_and_Compliance.md`](../06_Explanations/02_Security_and_Compliance/Threat_Detection_and_Compliance.md) & [`06_Explanations/03_Technology_and_Services/Management_and_Observability.md`](../06_Explanations/03_Technology_and_Services/Management_and_Observability.md)
 
 ---
 
-## 📚 Prescribed Textbook Reading & Literature Grounding
+## 📚 Prescribed Literature Grounding & Reading Assignments
 
 Before delivering or attending this lecture, review the assigned chapters:
 * **Tom Taulli (*O'Reilly 2026, 1st Ed.*):**
@@ -32,7 +32,7 @@ Before delivering or attending this lecture, review the assigned chapters:
 
 ## ⏱️ Detailed 90-Minute Delivery Schedule & Pacing
 
-```
+```text
 00:00 - 00:20 | The Observability Triad: Amazon CloudWatch vs AWS CloudTrail vs AWS Config
 00:20 - 00:40 | Intelligent Threat Detection: GuardDuty vs Inspector vs Macie vs Security Hub
 00:40 - 00:55 | Multi-Account Enterprise Governance: AWS Organizations, OUs, and Service Control Policies (SCPs)
@@ -47,6 +47,15 @@ Before delivering or attending this lecture, review the assigned chapters:
 
 ### 1. The Observability Triad: "Metrics vs. CCTV vs. Building Inspector"
 Students constantly confuse CloudWatch, CloudTrail, and Config. Drill this mental anchor into the room:
+
+```mermaid
+flowchart TD
+    subgraph ObservabilityTriad["The Observability Triad"]
+        CW["Amazon CloudWatch (The Performance Monitor & Siren)\nMonitors metrics, CPU, memory, operational logs, and alarms\nTriggers Auto Scaling or EC2 automated recovery"]
+        CT["AWS CloudTrail (The Security CCTV Camera)\nRecords API activity, user governance, and forensic audit trails\nWho made what API call, when, and from what IP address?"]
+        CFG["AWS Config (The Municipal Building Inspector)\nTracks resource inventory and configuration compliance over time\nFlags unencrypted S3 buckets or open security groups against rules"]
+    end
+```
 
 * **Amazon CloudWatch (The Performance Monitor & Smoke Alarm):**
   * *Role:* Monitors **performance metrics, operational logs, and alarms**.
@@ -64,9 +73,9 @@ Students constantly confuse CloudWatch, CloudTrail, and Config. Drill this menta
 
 | Security Service | What It Detects / Evaluates | Primary Data Sources Analyzed | Real-World Exam Keyword |
 | :--- | :--- | :--- | :--- |
-| **Amazon GuardDuty** | **Intelligent threat detection** (compromised accounts, crypto-mining, reconnaissance) | Analyzes AWS CloudTrail events, VPC Flow Logs, and DNS logs using machine learning | *"Compromised EC2 instances communicating with known malicious IP addresses"* |
-| **Amazon Inspector** | **Vulnerability assessment** (known software CVEs, exposed network ports) | Scans Amazon EC2 instance operating systems, container images in Amazon ECR, and Lambda functions | *"Software package vulnerabilities and unintended network exposure"* |
-| **Amazon Macie** | **Sensitive data discovery & PII protection** (credit cards, passport numbers, SSNs) | Scans Amazon S3 object storage using pattern-matching and machine learning | *"Discover Personally Identifiable Information (PII) stored in S3 buckets"* |
+| **Amazon GuardDuty** | **Intelligent threat detection** (compromised accounts, crypto-mining, reconnaissance) | Analyzes AWS CloudTrail events, VPC Flow Logs, and DNS logs using machine learning | *"Compromised EC2 instances communicating with known malicious IP addresses"*, *"Intelligent threat detection"* |
+| **Amazon Inspector** | **Vulnerability assessment** (known software CVEs, exposed network ports) | Scans Amazon EC2 instance operating systems, container images in Amazon ECR, and Lambda functions | *"Software package vulnerabilities and unintended network exposure"*, *"CVE scanning"* |
+| **Amazon Macie** | **Sensitive data discovery & PII protection** (credit cards, passport numbers, SSNs) | Scans Amazon S3 object storage using pattern-matching and machine learning | *"Discover Personally Identifiable Information (PII) stored in S3 buckets"*, *"GDPR compliance"* |
 | **AWS Security Hub** | **Central security posture dashboard & compliance scoring** | Ingests findings from GuardDuty, Inspector, Macie, IAM Access Analyzer, and partner tools | *"Single-pane-of-glass dashboard for CIS AWS Foundations Benchmark compliance"* |
 
 ---
@@ -105,103 +114,97 @@ Students constantly confuse CloudWatch, CloudTrail, and Config. Drill this menta
 
 ---
 
-
----
-
 ## 🎯 Authentic Exam Practice & Case Scenarios
+
 > High-yield scenario questions from the authentic candidate practice pool reinforcing the core competencies of this lecture.
 
 ### Scenario Practice 1: CLF-C02-ET-Q297
 **Question:**  
-A company needs to centrally configure and manage Amazon VPC security groups across multiple AWS accounts within an organization in AWS Organizations.
-
+A company needs to centrally configure and manage Amazon VPC security groups across multiple AWS accounts within an organization in AWS Organizations.  
 Which AWS service should the company use to meet these requirements?
 
 **Options:**
-- A) AWS Firewall Manager
-- B) Amazon GuardDuty
-- C) Amazon Detective
-- D) AWS WAF
+- [A] AWS Firewall Manager
+- [B] Amazon GuardDuty
+- [C] Amazon Detective
+- [D] AWS WAF
 
 <details>
-<summary><b>View Verified Answer & Solution Analysis</b></summary>
+<summary><b>View Verified Answer & Complete Distractor Analysis</b></summary>
 
 **Correct Answer:** `A`  
-**Peer Consensus:** `100%` agreement.  
+**Peer Consensus:** `100%` agreement.
 
-**Architectural Breakdown & Distractor Analysis:**  
-Community Most Voted: A (100%). Contributor Answer: A.
+**Architectural Rationale:**
+- **Why [A] is Correct:** **AWS Firewall Manager** is a centralized security management service that enables administrators to centrally configure, manage, and enforce firewall rules across all accounts and applications in an organization created in **AWS Organizations**. It can automatically audit and enforce VPC Security Groups, AWS WAF rules, AWS Shield Advanced protections, and Amazon Route 53 Resolver DNS Firewall rules across member accounts.
 
-Community Rationale & Discussion:
-Selected Answer: A
-AWS Firewall Manager is a security management service that allows you to centrally configure and manage firewall rules across your accounts and applications
----
-Selected Answer: A
-
----
-Selected Answer: A
-A is correct
+**Distractor Analysis (Why other options are wrong):**
+- **Why [B] is Wrong:** Amazon GuardDuty is an intelligent threat detection service that monitors logs for malicious behavior; it does not configure or manage VPC security groups.
+- **Why [C] is Wrong:** Amazon Detective is an automated root-cause analysis and investigation tool that helps security analysts isolate the scope of security incidents using graph models; it does not deploy firewall rules.
+- **Why [D] is Wrong:** AWS WAF is a Layer 7 web application firewall used to inspect HTTP/HTTPS payloads for exploits; while Firewall Manager can deploy WAF rules, WAF itself does not manage VPC Layer 4 Security Groups across multiple accounts.
 
 </details>
+
+---
 
 ### Scenario Practice 2: CLF-C02-ET-Q026
 **Question:**  
-A company is using Amazon DynamoDB.
+A company is using Amazon DynamoDB.  
 Which task is the company’s responsibility, according to the AWS shared responsibility model?
 
 **Options:**
-- A) Patch the operating system.
-- B) Provision hosts.
-- C) Manage database access permissions.
-- D) Secure the operating system.
+- [A] Patch the operating system.
+- [B] Provision hosts.
+- [C] Manage database access permissions.
+- [D] Secure the operating system.
 
 <details>
-<summary><b>View Verified Answer & Solution Analysis</b></summary>
+<summary><b>View Verified Answer & Complete Distractor Analysis</b></summary>
 
 **Correct Answer:** `C`  
-**Peer Consensus:** `100%` agreement.  
+**Peer Consensus:** `100%` agreement.
 
-**Architectural Breakdown & Distractor Analysis:**  
-Community Most Voted: C (100%). Contributor Answer: C.
+**Architectural Rationale:**
+- **Why [C] is Correct:** Amazon DynamoDB is a fully managed serverless NoSQL database service. Under the **AWS Shared Responsibility Model**, AWS manages the underlying physical hosts, the operating system, database software patching, high availability, and hardware maintenance (Security "OF" the Cloud). The customer is strictly responsible for their data and access governance—specifically **managing database access permissions** via IAM policies and securing their application data (Security "IN" the Cloud).
 
-Community Rationale & Discussion:
-Selected Answer: C
-ccording to the AWS shared responsibility model, AWS manages the security of the cloud (e.g., physical infrastructure, hardware, and network), while the customer is responsible for security in the cloud (e.g., managing access, configuring services, and securing data).
----
-Selected Answer: C
-But the questions ask for the company's responsibility
----
-Selected Answer: C
-Manage database access permissions: This is the customer's responsibility. Customers are responsible for defining and managing access permissions to their DynamoDB tables, specifying who can perform various operations on the tables.
+**Distractor Analysis (Why other options are wrong):**
+- **Why [A] is Wrong:** In a fully managed serverless service like DynamoDB, customers do not have access to the underlying operating system. AWS automatically patches and maintains the OS.
+- **Why [B] is Wrong:** Host provisioning, capacity allocation, and server hardware lifecycle management for DynamoDB are handled entirely by AWS.
+- **Why [D] is Wrong:** Operating system security hardening is the sole responsibility of AWS for managed database services.
 
 </details>
 
-### Scenario Practice 3: CLF-C02-ET-Q051
+---
+
+### Scenario Practice 3: CLF-C02-ET-Q318
 **Question:**  
-Which of the following actions are controlled with AWS Identity and Access Management (IAM)? (Choose two.)
+A company needs to continuously record and log all account activity and API operations across its AWS infrastructure for security auditing and compliance review.  
+Which AWS service should the company use to fulfill this requirement?
 
 **Options:**
-- A) Control access to AWS service APIs and to other specific resources.
-- B) Provide intelligent threat detection and continuous monitoring.
-- C) Protect the AWS environment using multi-factor authentication (MFA).
-- D) Grant users access to AWS data centers.
-- E) Provide firewall protection for applications from common web attacks.
+- [A] Amazon CloudWatch
+- [B] AWS CloudTrail
+- [C] AWS Config
+- [D] AWS Trusted Advisor
 
 <details>
-<summary><b>View Verified Answer & Solution Analysis</b></summary>
+<summary><b>View Verified Answer & Complete Distractor Analysis</b></summary>
 
-**Correct Answer:** `AC`  
-**Peer Consensus:** `100%` agreement.  
+**Correct Answer:** `B`  
+**Peer Consensus:** `100%` agreement.
 
-**Architectural Breakdown & Distractor Analysis:**  
-Community Most Voted: AC (100%). Contributor Answer: AC.
+**Architectural Rationale:**
+- **Why [B] is Correct:** **AWS CloudTrail** is an auditing, compliance monitoring, and governance service that continuously records and retains an event history of actions taken by a user, role, or an AWS service. CloudTrail captures actions taken through the AWS Management Console, AWS SDKs, and command line tools, logging the identity of the caller, the time of the event, the source IP address, and request/response elements.
 
-Community Rationale & Discussion:
-Selected Answer: AC
-My choices are A & C
+**Distractor Analysis (Why other options are wrong):**
+- **Why [A] is Wrong:** Amazon CloudWatch monitors performance metrics (CPU, disk I/O, network), application logs, and generates operational alarms; it does not record user API management activity for governance.
+- **Why [C] is Wrong:** AWS Config evaluates whether resources comply with specific configuration rules and tracks resource state changes over time; it does not record the full historical audit trail of API calls made by users.
+- **Why [D] is Wrong:** AWS Trusted Advisor is an automated optimization tool that scans your account against best practices in cost optimization, performance, security, fault tolerance, and service quotas; it does not record API activity logs.
 
 </details>
 
+---
+
 ## 🚀 Post-Lecture Student Transition
-* Direct students to review [Threat_Detection_and_Compliance.md](file:///home/mohamed/Desktop/Work/aws/Cloud/Practitioner/CLF-C02/06_Explanations/02_Security_and_Compliance/Threat_Detection_and_Compliance.md) and [Management_and_Observability.md](file:///home/mohamed/Desktop/Work/aws/Cloud/Practitioner/CLF-C02/06_Explanations/03_Technology_and_Services/Management_and_Observability.md).
-* Transition to hands-on practice: [Lab 12: Decoupling with SQS & SNS](file:///home/mohamed/Desktop/Work/aws/Cloud/Practitioner/CLF-C02/07_Hands_On_Labs/lab_12_sqs_sns_eventbridge_messaging.md) and [Lab 13: Observability with CloudWatch & CloudTrail](file:///home/mohamed/Desktop/Work/aws/Cloud/Practitioner/CLF-C02/07_Hands_On_Labs/lab_13_observability_cloudwatch_cloudtrail_config.md).
+* Direct students to review [`06_Explanations/02_Security_and_Compliance/Threat_Detection_and_Compliance.md`](../06_Explanations/02_Security_and_Compliance/Threat_Detection_and_Compliance.md) and [`06_Explanations/03_Technology_and_Services/Management_and_Observability.md`](../06_Explanations/03_Technology_and_Services/Management_and_Observability.md).
+* Transition to hands-on practice: [`07_Hands_On_Labs/lab_12_sqs_sns_eventbridge_messaging.md`](../07_Hands_On_Labs/lab_12_sqs_sns_eventbridge_messaging.md) and [`07_Hands_On_Labs/lab_13_observability_cloudwatch_cloudtrail_config.md`](../07_Hands_On_Labs/lab_13_observability_cloudwatch_cloudtrail_config.md).
