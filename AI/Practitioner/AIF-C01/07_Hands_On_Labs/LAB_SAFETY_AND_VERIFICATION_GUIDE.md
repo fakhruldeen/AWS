@@ -148,3 +148,16 @@ done
 
 echo "✅ UNIVERSAL AI TEARDOWN COMPLETE! All billable AI endpoints removed."
 ```
+
+---
+
+## 🎯 Exam Practice: Scenarios & Traps
+
+| Scenario / Exam Question Prompt | Correct Architecture / Answer Pattern | Decoy / Exam Trap | Trap Mechanism & Rationale |
+| :--- | :--- | :--- | :--- |
+| **SageMaker Real-Time Endpoint cost accumulation** | Delete SageMaker Real-Time endpoints when not actively serving inference, or use Serverless Inference for sporadic/bursty workloads. | Leave SageMaker endpoints running because no user traffic is being sent; assume billing is pay-per-request. | **Dedicated Provisioned Compute:** Real-Time endpoints bill 24/7 for the underlying EC2 compute instances (e.g., `ml.m5.xlarge`) regardless of whether requests are received. |
+| **Amazon OpenSearch Serverless (AOSS) minimum charges** | Understand that OpenSearch Serverless charges a minimum baseline of 2 to 4 OpenSearch Compute Units (OCUs) per collection family (indexing + search). | Expect OpenSearch Serverless to scale down to \$0.00 when zero search queries are executed. | **OCU Minimum Baseline:** Unlike DynamoDB On-Demand or S3, OpenSearch Serverless enforces minimum active OCUs (~\$0.24/OCU/hr), incurring ~$175+/month if left running continuously. |
+| **Amazon Bedrock On-Demand pricing** | Pay-as-you-go per thousand input and output tokens consumed; zero idle cost when no prompts are processed. | Provisioned Throughput commitment with monthly model unit commitments for exploratory testing. | **Provisioned Throughput Overhead:** Provisioned Throughput guarantees fixed throughput and capacity but requires 1-month or 6-month commitments costing thousands of dollars. |
+| **SageMaker Studio / Canvas idle app instances** | Shut down kernel apps, notebook instances, and Canvas workspace apps when training or data wrangling concludes. | Close the browser tab running SageMaker Studio without shutting down the underlying running app. | **Browser vs Cloud Decoupling:** Closing the web browser tab does NOT terminate the EC2-backed kernel gateway application; AWS continues billing compute hours until explicitly stopped. |
+| **Bedrock Guardrails latency and cost trade-off** | Evaluate text using Bedrock Guardrails synchronously on user input and model output; budget for minor added latency and guardrail evaluation fees per text unit. | Build custom regular expressions in client-side code to replace enterprise PII masking and safety policies. | **Operational Overhead & Compliance:** Custom client regex fails to catch contextual toxicity, prompt injections, or complex PII patterns that AWS managed guardrails detect natively. |
+

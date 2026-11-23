@@ -155,8 +155,8 @@ def check_guided_labs(report: TestReport):
             continue
 
         lab_files = sorted(lab_dir.glob("*.md"))
-        # Exclude README.md
-        lab_files = [f for f in lab_files if f.name != "README.md"]
+        # Exclude administrative files and prompts
+        lab_files = [f for f in lab_files if f.name not in {"README.md", "BROWSER_AGENT_CAPTURE_PROMPT.md"}]
 
         report.log_pass(f"{cert_name} Found {len(lab_files)} guided lab documents")
 

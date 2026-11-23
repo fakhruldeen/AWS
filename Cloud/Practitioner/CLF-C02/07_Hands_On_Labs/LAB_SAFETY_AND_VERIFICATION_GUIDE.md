@@ -235,3 +235,16 @@ Every student must complete **Lab 14 (Cloud Financial Governance & Budgets)** on
 1. **Billing Preferences:** Navigate to **Billing and Cost Management** -> **Billing Preferences** -> Check **Receive Free Tier Usage Alerts** and enter your primary email address.
 2. **\$1 Zero-Spend Budget:** In **AWS Budgets**, confirm that a budget named `Zero-Spend-Budget` exists with a \$1.00 monthly threshold configured to email you when actual or forecasted spend exceeds \$0.01.
 3. **Weekly Cost Audit Habit:** Every Friday, open **AWS Cost Explorer** to verify that your Daily Unblended Costs chart reflects \$0.00 spend.
+
+---
+
+## 🎯 Exam Practice: Scenarios & Traps
+
+| Scenario / Exam Question Prompt | Correct Architecture / Answer Pattern | Decoy / Exam Trap | Trap Mechanism & Rationale |
+| :--- | :--- | :--- | :--- |
+| **Unexpected charges on stopped EC2 instances** | EBS volumes attached to stopped EC2 instances continue to incur provisioned storage fees (e.g. gp3/gp2 GB-month). | Stopping an EC2 instance completely halts all AWS charges associated with that workload. | **Compute vs Storage Decoupling:** EC2 hourly compute stops billing when the instance is stopped, but the persistent EBS volume retains data and is billed until deleted. |
+| **Orphaned Elastic IP addresses (EIP)** | Release unused Elastic IP addresses immediately; AWS bills an hourly fee for allocated Elastic IPs that are NOT associated with a running instance. | Allocate multiple static Elastic IPs and leave them unassociated to save them for future use. | **IPv4 Scarcity Fee:** AWS charges for unassociated Elastic IPs (and all public IPv4 addresses) to discourage IPv4 address hoarding. |
+| **NAT Gateway billing surprises in lab VPCs** | Delete NAT Gateways immediately after completing outbound private internet tests; NAT Gateways incur fixed hourly charges plus data processing fees. | Rely on Free Tier to absorb 24/7 NAT Gateway costs indefinitely. | **Non-Free Tier Service:** NAT Gateways have **no** Free Tier tier; running one continuously costs ~$32–$35/month regardless of traffic. |
+| **Multi-AZ database deployment cost** | Use Single-AZ `db.t3.micro` for Free Tier training; Multi-AZ doubles instance hours and storage and is not fully covered by 750 Free Tier hours. | Deploy Multi-AZ RDS for sandbox experimentation assuming it falls under the standard 750 free hours. | **Free Tier Instance-Hour Limit:** 750 free hours per month covers ONE Single-AZ instance running 24/7; Multi-AZ runs two instances simultaneously (1,500 hours/month), resulting in 750 billable overage hours. |
+| **Surprise charges from S3 versioning** | Empty and delete buckets or configure lifecycle expiration for non-current versions; overwritten or "deleted" files with versioning enabled retain hidden prior versions that bill at standard rates. | Assume deleting a file in a version-enabled S3 bucket stops storage charges. | **S3 Delete Marker Trap:** In a versioned bucket, a standard delete merely places a "delete marker"; the underlying object version remains stored and billable until permanently purged. |
+

@@ -214,53 +214,100 @@ What are the key benefits of using Amazon Bedrock agents that could help this re
 **Correct Answer:** `B`  
 **Peer Consensus:** `86%` agreement.  
 
-**Architectural Breakdown & Distractor Analysis:**  
-Community Most Voted: B (86%). Contributor Answer: B.
-
-Community Rationale & Discussion:
-Selected Answer: B
-B. Main advantage of using Amazon Bedrock Agent is the automation of repetitive tasks and the orchestration of complex workflows. Customer support inquiries are often patterned and repetitive. By using Amazon Bedrock Agent, you can automate the initial response to such routine inquiries and information gathering. In addition, even in cases where the workflow is somewhat complex and the response required varies depending on the inquiry content, Amazon Bedrock can flexibly respond by combining multiple AI models. This will enable quick and accurate customer support while optimally utilizing human resources. It will lead to efficient processing of large volumes of inquiries, which will lead to improved customer satisfaction.
----
-Selected Answer: B
-Amazon Bedrock agents are designed to help automate and manage complex workflows, such as orchestrating multiple tasks and interacting with other systems, making them particularly suitable for automating repetitive tasks. In the case of the retailer, this would help in efficiently processing customer support inquiries and responding to them quickly.
----
-Selected Answer: B
-Amazon Bedrock agents are specifically designed to automate tasks and orchestrate workflows
-They can handle repetitive customer support inquiries efficiently
-They can break down complex customer requests into smaller steps and execute them in sequence
-This directly addresses the retailer's need to process thousands of inquiries quickly
+**Architectural Breakdown & Distractor Analysis:**
+- **Option A is INCORRECT:** Foundation models are pre-trained base models accessed via Bedrock; Bedrock Agents do not "generate custom foundation models" to predict customer needs.
+- **Option B is CORRECT:** **Amazon Bedrock Agents** automate repetitive enterprise tasks and orchestrate complex multi-step workflows by utilizing the ReAct (Reasoning + Acting) loop to decompose customer requests into logical sub-tasks, query knowledge bases, and invoke APIs.
+- **Option C is INCORRECT:** While routing patterns exist in advanced frameworks, Bedrock Agents is not primarily a multi-model aggregator; it is an orchestration engine that pairs a foundation model with Action Groups.
+- **Option D is INCORRECT:** Model evaluation and selection is handled by Bedrock Model Evaluation, not autonomous runtime agents.
 
 </details>
 
-### Scenario Practice 2: AIF-C01-ET-Q005
+### Scenario Practice 2: AIF-C01-U1075
 **Question:**  
-A company has developed a generative text summarization model by using Amazon Bedrock. The company will use Amazon Bedrock automatic model evaluation capabilities.
+A company uses Amazon Bedrock Agents to automate order processing. The agent needs to call an internal database to check inventory availability during customer conversations.
 
-Which metric should the company use to evaluate the accuracy of the model?
+Which component should the company configure to integrate the database query with the agent?
 
 **Options:**
-- A) Area Under the ROC Curve (AUC) score
-- B) F1 score
-- C) BERTScore
-- D) Real world knowledge (RWK) score
+- A) Amazon Bedrock Knowledge Bases
+- B) An Action Group connected to an AWS Lambda function
+- C) Amazon Bedrock Guardrails
+- D) AWS Systems Manager Parameter Store
 
 <details>
 <summary><b>View Verified Answer & Solution Analysis</b></summary>
 
-**Correct Answer:** `C`  
+**Correct Answer:** `B`  
 **Peer Consensus:** `100%` agreement.  
 
-**Architectural Breakdown & Distractor Analysis:**  
-Community Most Voted: C (100%). Contributor Answer: C.
-
-Community Rationale & Discussion:
-Selected Answer: C
-BERTScore: This metric leverages the capabilities of a pre-trained BERT model to assess the semantic similarity between the generated summaries and the reference text, providing a more accurate evaluation of the model's ability to capture the key points of the original text, which is crucial for text summarization.
----
-Selected Answer: C
-The correct answer is C. BERTScore is specifically designed for evaluating text generation quality.
----
-Selected Answer: C
-BERTScore is the most appropriate metric for evaluating the accuracy of a generative text summarization model because it compares semantic similarity in a manner that aligns well with the goal of text summarization.
+**Architectural Breakdown & Distractor Analysis:**
+- **Option A is INCORRECT:** Knowledge Bases provide read-only semantic vector search over static or dynamic unstructured documents (RAG); they do not execute live transactional database queries or mutate business state.
+- **Option B is CORRECT:** **Action Groups** define the actions and external tool integrations an agent can take. Each Action Group specifies an OpenAPI schema defining available functions and connects directly to an **AWS Lambda function** that executes the database query and returns the live inventory count to the agent.
+- **Option C is INCORRECT:** Amazon Bedrock Guardrails filters toxic language, blocks prompt injections, and masks PII; it does not execute API actions or query external systems.
+- **Option D is INCORRECT:** Systems Manager Parameter Store stores configuration parameters and passwords, not dynamic database query integrations for AI agents.
 
 </details>
+
+---
+
+## 🎓 Master Architecture MCQ Blueprint: Autonomous Agents, Action Groups & MCP
+
+> Pattern recognition rules mined from the master question bank to solve Bedrock Agents, Action Groups, ReAct loops, and Model Context Protocol (MCP) questions in under 15 seconds.
+
+### Layer 1: "Clue-to-Service" Linguistic Decryption Matrix
+
+| If Scenario Text Mentions... | Target Architecture / Service | Why (The Core Mechanism) | Decoy Trap to Avoid |
+| :--- | :--- | :--- | :--- |
+| **"Autonomous multi-step actions / Break tasks into steps"** | **Amazon Bedrock Agents (ReAct Loop)** | Analyzes natural language intent, determines logical execution sequence, invokes tools. | Bedrock Knowledge Bases (retrieves text; does not plan or execute API actions). |
+| **"Connect Bedrock Agent to an external API or database"** | **Action Groups + AWS Lambda** | Defines tool capabilities via OpenAPI schema; executes business logic in Lambda. | Hardcoding database connection strings into the prompt. |
+| **"Standardized open protocol connecting LLMs to tools via JSON-RPC"** | **Model Context Protocol (MCP)** | Standardized protocol allowing foundation models to discover tools, resources, and prompts. | Custom one-off REST API wrappers for each individual tool ($M \times N$ complexity). |
+| **"Give an agent factual corporate guidelines during conversations"** | **Associate a Knowledge Base with the Agent** | Turnkey RAG integration: Agent automatically queries the KB when questions require policy facts. | Embedding 1,000 pages of text directly into the agent system prompt. |
+| **"Safety boundaries on autonomous agent outputs"** | **Amazon Bedrock Guardrails** | Intercepts agent reasoning traces and user inputs to prevent unauthorized topic exploration. | Hoping the LLM obeys natural language constraints without guardrails. |
+
+---
+
+### Layer 2: 3-Step Rapid Elimination Heuristic
+
+```mermaid
+flowchart TD
+    Q["Read Agent Scenario Question"] --> S1{"What is the required capability?"}
+    S1 -->|"Retrieve Document Information"| KB["Lock: Knowledge Bases (RAG)"]
+    S1 -->|"Perform Actions (Book hotel, query DB, send email)"| Act["Lock: Action Groups + AWS Lambda"]
+    S1 -->|"Multi-Step Autonomous Planning"| Agent["Lock: Amazon Bedrock Agents"]
+    
+    Act & Agent --> S2{"How is the tool defined?"}
+    S2 -->|"OpenAPI 3.0 Schema + Lambda ARN"| OG["Lock: Bedrock Action Group"]
+    S2 -->|"Open Standard Protocol over JSON-RPC"| MCP["Lock: Model Context Protocol (MCP)"]
+```
+
+1. **Step 1: Action vs. Retrieval Triage:**
+   - Reading documents, searching policies, answering FAQs? $\to$ **Knowledge Bases**.
+   - Writing to database, executing transactions, calling REST endpoints? $\to$ **Action Groups + Lambda**.
+2. **Step 2: Check Planning Requirement:**
+   - Multi-turn conversation that requires reasoning, step-by-step tool invocation, and decision making? $\to$ **Amazon Bedrock Agents**.
+3. **Step 3: Protocol Identification:**
+   - Open standard protocol for agent-tool connectivity? $\to$ **Model Context Protocol (MCP)**.
+
+---
+
+### Layer 3: High-Frequency Decoy Autopsy
+
+#### Decoy Trap: Bedrock Knowledge Base vs. Action Group
+* **The Exam Trap:** A company wants an AI assistant that can both check flight schedules from static travel brochures AND book flight reservations in an airline ticketing database.
+* **The Decoy:** Option A: "Use Bedrock Knowledge Bases to both search schedules and execute ticket bookings."
+* **The Fatal Flaw:** Knowledge Bases are **read-only semantic search stores**. They cannot make transactional API calls, run SQL update statements, or trigger external state mutations.
+* **The Correct Choice:** Use an **Amazon Bedrock Agent** configured with a **Knowledge Base** for schedule lookups AND an **Action Group** connected to an **AWS Lambda function** to execute booking transactions.
+
+---
+
+### Layer 4: 10-Second Visual Decision Flowchart
+
+```mermaid
+flowchart TD
+    Start["Read Autonomous Agent Scenario"] --> Q1{"What does the system need to do?"}
+    
+    Q1 -->|"Perform Actions & Execute Code"| ActionFlow["Bedrock Action Groups\n(OpenAPI 3.0 Schema + AWS Lambda Function)"]
+    Q1 -->|"Search Proprietary Documents"| RAGFlow["Bedrock Knowledge Bases\n(Vector embeddings in OpenSearch Serverless)"]
+    Q1 -->|"End-to-End Orchestration"| AgentFlow["Amazon Bedrock Agents\n(ReAct reasoning loop combining Action Groups + KBs)"]
+    Q1 -->|"Standardize Tool Integration"| MCPFlow["Model Context Protocol (MCP)\n(Client-Host-Server architecture over JSON-RPC)"]
+```

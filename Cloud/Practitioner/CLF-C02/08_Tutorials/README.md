@@ -17,6 +17,7 @@
 | **Tutorial 04** | [Serverless Event-Driven Pipeline](Tutorial_04_Serverless_Event_Driven_Pipeline.md) | Amazon S3, AWS Lambda (Python), Amazon SNS | Asynchronous event processing without managing servers |
 | **Tutorial 05** | [Infrastructure as Code with CloudFormation](Tutorial_05_Automating_Infrastructure_with_CloudFormation.md) | AWS CloudFormation, YAML Stacks, Change Sets | Declarative, repeatable multi-environment infrastructure |
 | **Tutorial 06** | [Multi-Account Governance with SCPs](Tutorial_06_Enterprise_Governance_Organizations_and_SCPs.md) | AWS Organizations, Service Control Policies, Control Tower | Multi-account guardrails, region restrictions, consolidated billing |
+| **Tutorial 07** | [Global Content Delivery with CloudFront & S3 OAC](Tutorial_07_Global_Content_Delivery_CloudFront_Route53_S3.md) | CloudFront, Route 53, S3, Origin Access Control, ACM | Low-latency global edge caching & private S3 origin protection |
 
 ---
 

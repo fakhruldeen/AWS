@@ -155,18 +155,11 @@ Which task is the company’s responsibility, according to the AWS shared respon
 **Correct Answer:** `C`  
 **Peer Consensus:** `100%` agreement.  
 
-**Architectural Breakdown & Distractor Analysis:**  
-Community Most Voted: C (100%). Contributor Answer: C.
-
-Community Rationale & Discussion:
-Selected Answer: C
-ccording to the AWS shared responsibility model, AWS manages the security of the cloud (e.g., physical infrastructure, hardware, and network), while the customer is responsible for security in the cloud (e.g., managing access, configuring services, and securing data).
----
-Selected Answer: C
-But the questions ask for the company's responsibility
----
-Selected Answer: C
-Manage database access permissions: This is the customer's responsibility. Customers are responsible for defining and managing access permissions to their DynamoDB tables, specifying who can perform various operations on the tables.
+**Architectural Breakdown & Distractor Analysis:**
+- **Option A is INCORRECT:** Amazon DynamoDB is a fully managed serverless NoSQL database service; AWS handles 100% of the underlying operating system maintenance and patching.
+- **Option B is INCORRECT:** Hardware provisioning, server rack installation, and hypervisor scaling are managed entirely by AWS.
+- **Option C is CORRECT:** Under the Shared Responsibility Model, data security "IN the cloud" remains the customer's responsibility. The customer must configure IAM access policies, resource-based policies, and table access controls.
+- **Option D is INCORRECT:** Securing and hardening the host operating system of managed services belongs strictly to AWS.
 
 </details>
 
@@ -184,14 +177,88 @@ Which of the following actions are controlled with AWS Identity and Access Manag
 <details>
 <summary><b>View Verified Answer & Solution Analysis</b></summary>
 
-**Correct Answer:** `AC`  
+**Correct Answer:** `A` and `C`  
 **Peer Consensus:** `100%` agreement.  
 
-**Architectural Breakdown & Distractor Analysis:**  
-Community Most Voted: AC (100%). Contributor Answer: AC.
-
-Community Rationale & Discussion:
-Selected Answer: AC
-My choices are A & C
+**Architectural Breakdown & Distractor Analysis:**
+- **Option A is CORRECT:** IAM policies define fine-grained authorization rules that govern which principals can invoke specific AWS service APIs against designated resource ARNs.
+- **Option B is INCORRECT:** Automated threat detection and anomalous behavioral monitoring are delivered by Amazon GuardDuty.
+- **Option C is CORRECT:** IAM natively provides and enforces Multi-Factor Authentication (MFA) configuration for root and IAM users.
+- **Option D is INCORRECT:** Physical security and access to AWS biometric-controlled data centers is strictly restricted to authorized AWS infrastructure personnel. Customers are never granted data center access.
+- **Option E is INCORRECT:** Web application firewall inspection against Layer 7 exploits (SQL injection, XSS) is provided by AWS WAF.
 
 </details>
+
+---
+
+## 🎓 Master Architecture MCQ Blueprint: Multi-Tier VPC & Bastion Host Architectures
+
+> Pattern recognition rules mined from the master question bank to solve network segmentation, bastion hosts, and security control questions in under 15 seconds.
+
+### Layer 1: "Clue-to-Service" Linguistic Decryption Matrix
+
+| If Scenario Text Mentions... | Target Architecture / Service | Why (The Core Mechanism) | Decoy Trap to Avoid |
+| :--- | :--- | :--- | :--- |
+| **"Securely administer private EC2 instances without internet exposure"** | **Bastion Host / EC2 Instance Connect / SSM Session Manager** | Hardened jump box in public subnet proxying SSH/RDP into private subnets. | Opening SSH (port 22) to `0.0.0.0/0` on private instances. |
+| **"Private subnet database needs outbound patches only"** | **NAT Gateway in Public Subnet** | Allows one-way outbound internet traffic while blocking inbound connections. | Internet Gateway attached to private subnet (exposes instances to inbound attacks). |
+| **"Stateless packet filtering at the subnet boundary"** | **Network Access Control Lists (NACLs)** | Evaluates inbound/outbound rules by number order; requires explicit return rules. | Security Groups (which are stateful at the ENI instance level). |
+| **"Stateful firewall operating at the instance virtual network interface (ENI)"** | **Security Groups** | Return traffic is automatically allowed regardless of inbound rules. | NACLs (which are stateless at the subnet level). |
+| **"Connect on-premises data center to AWS VPC over public internet with encryption"** | **AWS Site-to-Site VPN** | IPsec encrypted tunnel terminating on Virtual Private Gateway (VGW) or Transit Gateway. | AWS Direct Connect (dedicated private physical fiber, not internet-based). |
+
+---
+
+### Layer 2: 3-Step Rapid Elimination Heuristic
+
+```mermaid
+flowchart TD
+    Q["Read Network Scenario Question"] --> S1{"Where is the target resource located?"}
+    S1 -->|"Private Subnet (No Public IP)"| Priv["Instances need Bastion / SSM or NAT Gateway for internet"]
+    S1 -->|"Public Subnet (Has Public IP + IGW)"| Pub["Direct internet access allowed via Route Table"]
+    
+    Priv & Pub --> S2{"What layer of security is being filtered?"}
+    S2 -->|"Subnet Boundary / Stateless"| NACL["Lock: Network ACLs (Numbered rules, explicit return)"]
+    S2 -->|"Instance ENI Boundary / Stateful"| SG["Lock: Security Groups (Return traffic auto-allowed)"]
+    
+    NACL & SG --> S3{"What is the connection origin?"}
+    S3 -->|"Inbound Administrator Access"| Bastion["Lock: Bastion Host / SSM Session Manager"]
+    S3 -->|"Outbound Patching / Updates"| NAT["Lock: NAT Gateway in Public Subnet"]
+```
+
+1. **Step 1: Check Resource Subnet Tier:**
+   - Database / Backend application? MUST be in private subnet.
+   - Load Balancer / NAT Gateway / Bastion? MUST be in public subnet.
+2. **Step 2: Check Stateful vs. Stateless:**
+   - Mentions "stateful" or "instance level"? $\to$ **Security Group**.
+   - Mentions "stateless", "subnet level", or "explicit ephemeral port return rules"? $\to$ **Network ACL**.
+3. **Step 3: Check Directionality:**
+   - Outbound-only from private instances? $\to$ **NAT Gateway** (never IGW).
+   - Inbound management? $\to$ **Bastion Host** or **AWS Systems Manager Session Manager**.
+
+---
+
+### Layer 3: High-Frequency Decoy Autopsy
+
+#### Decoy Trap: Security Group vs. NACL Return Traffic
+* **The Exam Trap:** A security engineer configures an inbound HTTP rule allowing port 80 traffic into an EC2 instance, but forgets to configure an outbound return rule. The question asks whether the client receives the web page response.
+* **The Decoy:** "The client request times out because outbound port 80 traffic is not allowed."
+* **The Fatal Flaw:** **Security Groups are stateful.** If traffic is permitted inbound, the return connection is tracked and automatically allowed outbound, regardless of outbound rules.
+* **The Correct Choice:** The response succeeds because Security Groups automatically allow response traffic for established sessions.
+
+---
+
+### Layer 4: 10-Second Visual Decision Flowchart
+
+```mermaid
+flowchart TD
+    Start["Read Network Scenario"] --> Q1{"What is the traffic flow requirement?"}
+    
+    Q1 -->|"Outbound internet for private instances"| NAT["Deploy NAT Gateway in Public Subnet\nUpdate Private Route Table (0.0.0.0/0 -> nat-id)"]
+    
+    Q1 -->|"Inbound administrative SSH/RDP into private subnet"| Admin{"Access Tool?"}
+    Admin -->|"Modern Agent-based (No open ports)"| SSM["AWS Systems Manager Session Manager"]
+    Admin -->|"Traditional Jump Box"| Bastion["Bastion Host in Public Subnet with restricted SG"]
+    
+    Q1 -->|"Network Traffic Filtering"| Filter{"Boundary Level?"}
+    Filter -->|"Instance ENI (Stateful)"| SG["Security Groups (Default Deny inbound)"]
+    Filter -->|"Subnet Boundary (Stateless)"| NACL["Network ACLs (Numbered Allow/Deny)"]
+```

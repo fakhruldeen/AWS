@@ -142,6 +142,7 @@ flowchart TD
   - [ ] [`07_Hands_On_Labs/lab_02_vpc_security_controls.md`](./07_Hands_On_Labs/lab_02_vpc_security_controls.md) (Stateful Security Groups vs Stateless NACLs)
   - [ ] [`07_Hands_On_Labs/lab_11_route53_cloudfront_edge.md`](./07_Hands_On_Labs/lab_11_route53_cloudfront_edge.md) (CloudFront OAC + Route 53 Latency Routing)
   - [ ] [`08_Tutorials/Tutorial_01_Multi_Tier_VPC_and_Bastion_Host.md`](./08_Tutorials/Tutorial_01_Multi_Tier_VPC_and_Bastion_Host.md)
+  - [ ] [`08_Tutorials/Tutorial_07_Global_Content_Delivery_CloudFront_Route53_S3.md`](./08_Tutorials/Tutorial_07_Global_Content_Delivery_CloudFront_Route53_S3.md) (Global Edge Caching & OAC)
 - [ ] **Step 7 (Distinction Tables):**
   - [ ] [`09_Notes_and_Cheatsheets/distinctions/Hybrid_Networking_DirectConnect_vs_SiteToSiteVPN_vs_TransitGateway.md`](./09_Notes_and_Cheatsheets/distinctions/Hybrid_Networking_DirectConnect_vs_SiteToSiteVPN_vs_TransitGateway.md)
   - [ ] [`09_Notes_and_Cheatsheets/distinctions/VPC_Endpoints_Gateway_vs_Interface_vs_PrivateLink.md`](./09_Notes_and_Cheatsheets/distinctions/VPC_Endpoints_Gateway_vs_Interface_vs_PrivateLink.md)
@@ -277,7 +278,7 @@ Track your completion by checking off each module as you study:
 | **[`05_Diagrams/`](./05_Diagrams/)** | Standalone production Mermaid architecture blueprints | Visual architecture mental models |
 | **[`06_Explanations/`](./06_Explanations/)** | In-depth service and framework guides across all domains | Deep reference & concept clarification |
 | **[`07_Hands_On_Labs/`](./07_Hands_On_Labs/)** | 14 Guided Free-Tier labs with real console screenshots & CLI runbooks | Building practical muscle memory |
-| **[`08_Tutorials/`](./08_Tutorials/)** | 7 End-to-end multi-service production architectural builds | Understanding how services connect |
+| **[`08_Tutorials/`](./08_Tutorials/)** | 8 End-to-end multi-service production architectural builds | Understanding how services connect |
 | **[`09_Notes_and_Cheatsheets/`](./09_Notes_and_Cheatsheets/)** | High-yield distinction tables ("X vs Y"), mnemonics & exam traps | Quick review & cramming |
 | **[`10_Knowledge_Checks/`](./10_Knowledge_Checks/)** | Rapid diagnostic retention quizzes per domain | Checking retention after each lecture |
 | **[`11_Practice_Exams/`](./11_Practice_Exams/)** | 2,716 Canonical Questions, 718Q Community Pool, 393Q Nov 2026 Release | Final exam drills & full simulations |

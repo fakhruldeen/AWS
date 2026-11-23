@@ -154,21 +154,11 @@ Which feature of Amazon OpenSearch Service gives companies the ability to build 
 **Correct Answer:** `C`  
 **Peer Consensus:** `100%` agreement.  
 
-**Architectural Breakdown & Distractor Analysis:**  
-Community Most Voted: C (100%). Contributor Answer: C.
-
-Community Rationale & Discussion:
-Selected Answer: C
-Scalable index management and nearest neighbor search capability: Amazon OpenSearch Service provides built-in support for vector search, which allows for efficient nearest neighbor search (such as k-nearest neighbors or k-NN) in large datasets. This is essential for vector databases, which store high-dimensional data (such as embeddings from machine learning models) and support fast similarity search. The scalable index management ensures that these searches can be performed efficiently even with large datasets.
----
-Selected Answer: C
-Scalable index management and k-NN algorithms which support to build and handle the recommendation systems, semantic search and anomalies detection.
----
-Selected Answer: C
-C: Scalable index management and nearest neighbor search capability
-
-Explanation:
-The Amazon OpenSearch Service supports building vector database applications by enabling nearest neighbor search capability. This feature allows the service to efficiently perform similarity searches, which is crucial for applications that rely on vector embeddings (e.g., recommendation systems, image or text similarity searches). Combined with scalable index management, this makes OpenSearch an excellent choice for vector database applications.
+**Architectural Breakdown & Distractor Analysis:**
+- **Option A is INCORRECT:** While OpenSearch can take snapshots to Amazon S3, S3 integration alone does not enable high-dimensional vector search or semantic similarity calculations.
+- **Option B is INCORRECT:** Geospatial indexing supports latitude/longitude queries, which is unrelated to embedding vector spaces.
+- **Option C is CORRECT:** **Amazon OpenSearch Service** (and OpenSearch Serverless) includes native $k$-nearest neighbors ($k$-NN) search and scalable index management, allowing applications to index dense vector embeddings and execute fast vector similarity queries (Cosine, Euclidean, Dot Product) for RAG.
+- **Option D is INCORRECT:** Real-time streaming analytics is performed by OpenSearch Ingestion or Amazon Managed Service for Apache Flink, not the core vector search engine capability.
 
 </details>
 
@@ -190,17 +180,79 @@ Which metric should the company use to evaluate the accuracy of the model?
 **Correct Answer:** `C`  
 **Peer Consensus:** `100%` agreement.  
 
-**Architectural Breakdown & Distractor Analysis:**  
-Community Most Voted: C (100%). Contributor Answer: C.
-
-Community Rationale & Discussion:
-Selected Answer: C
-BERTScore: This metric leverages the capabilities of a pre-trained BERT model to assess the semantic similarity between the generated summaries and the reference text, providing a more accurate evaluation of the model's ability to capture the key points of the original text, which is crucial for text summarization.
----
-Selected Answer: C
-The correct answer is C. BERTScore is specifically designed for evaluating text generation quality.
----
-Selected Answer: C
-BERTScore is the most appropriate metric for evaluating the accuracy of a generative text summarization model because it compares semantic similarity in a manner that aligns well with the goal of text summarization.
+**Architectural Breakdown & Distractor Analysis:**
+- **Option A is INCORRECT:** AUC (Area Under the ROC Curve) is an evaluation metric for binary classification models, not generative natural language summarization.
+- **Option B is INCORRECT:** Standard F1-Score evaluates token-level classification or named entity recognition, failing to evaluate abstractive semantic summary quality.
+- **Option C is CORRECT:** **BERTScore** evaluates generative text quality by calculating semantic similarity between contextual embeddings of the generated text and human reference text using a pre-trained BERT model, making it ideal for automatic summarization evaluation in Amazon Bedrock.
+- **Option D is INCORRECT:** "Real world knowledge (RWK) score" is a fabricated distractor.
 
 </details>
+
+---
+
+## 🎓 Master Architecture MCQ Blueprint: Enterprise RAG & Vector Databases
+
+> Pattern recognition rules mined from the master question bank to solve RAG, Bedrock Knowledge Bases, and Vector Store questions in under 15 seconds.
+
+### Layer 1: "Clue-to-Service" Linguistic Decryption Matrix
+
+| If Scenario Text Mentions... | Target Architecture / Service | Why (The Core Mechanism) | Decoy Trap to Avoid |
+| :--- | :--- | :--- | :--- |
+| **"Ground model answers on dynamic corporate documents with citations"** | **Amazon Bedrock Knowledge Bases (RAG)** | Automated document sync, chunking, embedding generation, vector search, and citation generation. | Fine-tuning (static weights; cannot provide source page citations). |
+| **"Dense numerical vector similarity search ($k$-NN)"** | **Amazon OpenSearch Serverless (Vector Collection)** | Serverless vector index executing cosine/dot-product distance queries without managing clusters. | DynamoDB (key-value store; not built for dense vector indexing). |
+| **"Convert enterprise text into semantic vector embeddings"** | **Amazon Titan Text Embeddings v2** | Generates 1,536-dimensional embeddings with flexible output dimensions (256, 512, 1024). | Amazon Comprehend (extracts entities, not dense vector embeddings). |
+| **"Split long documents into semantically coherent fragments"** | **Document Chunking Strategy** | Fixed-size (300 tokens + overlap), hierarchical (child-parent), or semantic chunking. | Feeding 500-page raw PDF directly into prompt without chunking. |
+| **"Verify generated response is substantiated by retrieved chunks"** | **Contextual Grounding Checks (Bedrock Guardrails)** | Evaluates grounding and relevance scores to detect and block ungrounded hallucinations. | Lowering temperature alone (reduces randomness but cannot verify factual grounding). |
+
+---
+
+### Layer 2: 3-Step Rapid Elimination Heuristic
+
+```mermaid
+flowchart TD
+    Q["Read RAG Scenario Question"] --> S1{"What stage of the RAG pipeline is tested?"}
+    S1 -->|"Document Ingestion & Chunking"| Ingest["Lock: Bedrock Knowledge Base S3 Data Source"]
+    S1 -->|"Vector Storage & Similarity Search"| Vector["Lock: OpenSearch Serverless / Aurora pgvector ($k$-NN)"]
+    S1 -->|"Augmented Generation & Citations"| Gen["Lock: RetrieveAndGenerate API (Titan / Nova / Claude)"]
+    
+    Ingest & Vector & Gen --> S2{"Are Citations or Hallucination Checks Required?"}
+    S2 -->|"Exact Source Page Attribution"| Cite["Lock: Bedrock Knowledge Bases (Built-in source attribution)"]
+    S2 -->|"Filter Ungrounded Claims"| Guard["Lock: Contextual Grounding Checks in Guardrails"]
+```
+
+1. **Step 1: Check Dynamic vs. Static Data:**
+   - Needs daily/weekly document updates? $\to$ **RAG (Bedrock Knowledge Bases)**.
+   - Needs domain vocabulary or tone changes? $\to$ **Fine-Tuning (PEFT/LoRA)**.
+2. **Step 2: Check Vector Storage Architecture:**
+   - Serverless vector search for Bedrock? $\to$ **Amazon OpenSearch Serverless**.
+   - Relational database with vector extension? $\to$ **Amazon Aurora PostgreSQL (`pgvector`)**.
+3. **Step 3: Check Verification & Citations:**
+   - Must show the user where the answer came from? $\to$ RAG provides **grounding citations**.
+
+---
+
+### Layer 3: High-Frequency Decoy Autopsy
+
+#### Decoy Trap: Fine-Tuning vs. Retrieval-Augmented Generation (RAG)
+* **The Exam Trap:** A multinational bank wants an AI system that answers customer questions regarding fluctuating interest rates and newly published loan policies updated daily, citing exact document sources.
+* **The Decoy:** Option B: "Fine-tune an Amazon Titan foundation model daily on newly uploaded policy documents."
+* **The Fatal Flaw:** Fine-tuning is static, computationally expensive to run daily, and **cannot provide verifiable citation links** to the source documents.
+* **The Correct Choice:** Use **Retrieval-Augmented Generation (RAG)** via **Amazon Bedrock Knowledge Bases**. Newly uploaded S3 documents are automatically vectorized, and queries retrieve current excerpts with direct source attribution.
+
+---
+
+### Layer 4: 10-Second Visual Decision Flowchart
+
+```mermaid
+flowchart TD
+    Start["Read RAG Scenario"] --> Req{"What is the primary architectural need?"}
+    
+    Req -->|"Automated End-to-End Managed RAG"| KB["Amazon Bedrock Knowledge Bases\n(Syncs S3, embeds, indexes, retrieves with citations)"]
+    
+    Req -->|"Vector Search Engine Selection"| VecStore{"Vector Store Type?"}
+    VecStore -->|"Serverless / No Cluster Ops"| AOSS["Amazon OpenSearch Serverless (Vector Collection)"]
+    VecStore -->|"Relational + Vector SQL"| Aurora["Amazon Aurora with pgvector"]
+    VecStore -->|"Graph + Vector"| Neptune["Amazon Neptune Analytics"]
+    
+    Req -->|"Semantic Text Similarity Metric"| Metric["BERTScore (Contextual embedding similarity)\nor ROUGE (Summarization n-gram recall)"]
+```

@@ -136,3 +136,16 @@ aws sts get-caller-identity --profile aws-notes
 # Verify region configuration
 aws configure get region --profile aws-notes
 ```
+
+---
+
+## 🎯 Exam Practice: Scenarios & Traps
+
+| Scenario / Exam Question Prompt | Correct Architecture / Answer Pattern | Decoy / Exam Trap | Trap Mechanism & Rationale |
+| :--- | :--- | :--- | :--- |
+| **New AWS account administrative access** | Create an IAM user/role in IAM Identity Center with administrative policies for daily tasks; lock root credentials. | Use the AWS root user account with access keys for daily engineering administration. | **Root User Compromise:** AWS Well-Architected Framework strictly forbids routine root usage. Root user has unconditional, unrestricted permissions that cannot be constrained by IAM policies. |
+| **First-line root account protection** | Enable Multi-Factor Authentication (MFA) immediately on the root user using a virtual or hardware token. | Set a strong password only; assume password complexity alone suffices without MFA. | **Credential Stuffing Vulnerability:** Without MFA, stolen credentials grant absolute access to billing, resource deletion, and account closure. |
+| **Monitoring initial free tier usage** | Configure billing alerts in Amazon CloudWatch and enable AWS Free Tier Usage Alerts in Billing Preferences. | Manually log into the Billing Console daily to check current month-to-date charges. | **Reactive vs Proactive Monitoring:** Free Tier alerts proactively notify via email when usage exceeds 85% of Free Tier limits before incurring surprise costs. |
+| **Emergency root-only tasks** | Change AWS Support Plan, change account email/password, close the AWS account, or restore IAM permissions. | Any everyday tasks like provisioning EC2 instances, creating S3 buckets, or querying databases. | **Principle of Least Privilege:** Daily resource operations belong to delegated IAM identities. Only a handful of administrative actions legally require root. |
+| **Initial access key creation for Root** | Do NOT create root access keys. Delete them if automatically generated during account setup. | Generate permanent root access keys and embed them in local CLI configuration (`~/.aws/credentials`). | **Severe Blast Radius:** Root access keys provide permanent API access with bypass capabilities that cannot be scoped down. |
+

@@ -143,22 +143,11 @@ What should the AI practitioner include in the report to meet the transparency a
 **Correct Answer:** `B`  
 **Peer Consensus:** `100%` agreement.  
 
-**Architectural Breakdown & Distractor Analysis:**  
-Community Most Voted: B (100%). Contributor Answer: B.
-
-Community Rationale & Discussion:
-Selected Answer: B
-B. Partial Dependence Plots (PDPs)
-
-Explanation:
-Partial Dependence Plots (PDPs) are useful tools for understanding the relationship between specific features and the model's predictions, making it easier to see how changes in input variables affect the forecast. PDPs are particularly helpful for stakeholders because they visually show the impact of individual features on predictions without requiring a deep understanding of the model's inner workings.
----
-Selected Answer: B
-B is the answer Thanks to
----
-Selected Answer: B
-Explicação:Gráficos de dependência parcial (Partial Dependence Plots - PDPs) são usados para mostrar como uma variável de entrada afeta a previsão do modelo, mantendo as outras variáveis constantes.São ferramentas poderosas de explicabilidade e transparência, especialmente para partes interessadas não técnicas. Eles ajudam a visualizar a relação entre características importantes e as previsões do modelo, respondendo perguntas como:
-"Se aumentarmos o orçamento em marketing, o que acontece com a demanda prevista?"
+**Architectural Breakdown & Distractor Analysis:**
+- **Option A is INCORRECT:** Raw Python or PyTorch training scripts provide implementation code, but do not provide visual, intuitive explainability to business stakeholders.
+- **Option B is CORRECT:** **Partial Dependence Plots (PDPs)** graphically illustrate the marginal effect of one or two predictive features on the predicted target outcome, holding all other features constant, providing intuitive interpretability for stakeholders.
+- **Option C is INCORRECT:** Raw data samples show example rows, but do not explain how the trained mathematical model weights interpret feature signals.
+- **Option D is INCORRECT:** Convergence loss tables evaluate optimization mathematical efficiency during backpropagation, not operational feature explainability.
 
 </details>
 
@@ -179,22 +168,80 @@ Which solution will meet these requirements?
 **Correct Answer:** `A`  
 **Peer Consensus:** `92%` agreement.  
 
-**Architectural Breakdown & Distractor Analysis:**  
-Community Most Voted: A (92%). Contributor Answer: A.
-
-Community Rationale & Discussion:
-Selected Answer: U
-Quando o objetivo é inferência com a menor latência possível, a melhor abordagem é executar o modelo diretamente no dispositivo de borda (edge).
-SLMs (Small Language Models) são projetados para serem leves, rápidos e eficientes, o que os torna ideais para: Dispositivos com recursos limitados
-Tempo de resposta imediato . Execução offline ou com pouca conectividade
----
-Selected Answer: A
-Optimized small language models (SLMs) are specifically designed to run efficiently on edge devices with limited resources (such as memory and processing power). Deploying smaller, optimized models directly on the edge devices allows for near-instantaneous inference with minimal latency, as the data doesn't need to travel to a central server for processing.
----
-Selected Answer: A
-A: Deploy optimized small language models (SLMs) on edge devices.
-
-Explanation:
-Deploying optimized small language models (SLMs) on edge devices ensures low latency because the inference happens directly on the device without relying on cloud communication. Small language models are lightweight and designed to run efficiently on devices with limited resources, making them ideal for edge computing.
+**Architectural Breakdown & Distractor Analysis:**
+- **Option A is CORRECT:** **Small Language Models (SLMs)** (quantized and distilled to 1B–3B parameters) can execute directly on edge hardware (smartphones, robotics, edge controllers) with minimal RAM/compute footprint, delivering sub-second response times with zero network latency.
+- **Option B is INCORRECT:** Full Large Language Models (LLMs) require massive multi-GPU memory bandwidth and tens of gigabytes of VRAM, making them physically impossible to run on edge mobile or embedded hardware.
+- **Option C is INCORRECT:** Centralized cloud APIs require network round-trips over the internet, incurring variable latency and failing when internet connectivity drops.
+- **Option D is INCORRECT:** Centralized cloud LLMs maximize latency compared to on-device localized edge inference.
 
 </details>
+
+---
+
+## 🎓 Master Architecture MCQ Blueprint: End-to-End MLOps & Model Hosting
+
+> Pattern recognition rules mined from the master question bank to solve SageMaker training, inference endpoints, drift monitoring, and edge deployment questions in under 15 seconds.
+
+### Layer 1: "Clue-to-Service" Linguistic Decryption Matrix
+
+| If Scenario Text Mentions... | Target Architecture / Service | Why (The Core Mechanism) | Decoy Trap to Avoid |
+| :--- | :--- | :--- | :--- |
+| **"Sub-second real-time inference on edge devices with no internet"** | **Small Language Models (SLMs) on Edge** | Compact, quantized models execute locally on CPU/NPU without cloud latency. | Centralized cloud LLM APIs (incurs network round-trips). |
+| **"Visual plots showing feature impact on predictions for stakeholders"** | **Partial Dependence Plots (PDPs) / SHAP** | Illustrates the marginal effect of varying a feature while holding others constant. | Raw Python training code (syntax; not explainability). |
+| **"Track model accuracy decay and data drift over time in production"** | **Amazon SageMaker Model Monitor** | Automatically compares live inference baselines against training data to detect drift. | CloudWatch alone (monitors CPU/memory, not statistical distribution drift). |
+| **"Automate multi-step data prep, training, and registry workflow"** | **Amazon SageMaker Pipelines** | CI/CD workflow orchestration for machine learning with dependency DAGs. | AWS Step Functions alone (requires writing custom SageMaker API integrations). |
+| **"Host a model with unpredictable, intermittent traffic at zero idle cost"** | **SageMaker Serverless Inference** | Automatically scales compute from 0; charges only for invocation compute time. | Real-Time Endpoints (charges 24/7 for dedicated EC2 instances). |
+
+---
+
+### Layer 2: 3-Step Rapid Elimination Heuristic
+
+```mermaid
+flowchart TD
+    Q["Read MLOps / Hosting Scenario Question"] --> S1{"Where is the Model Deployed?"}
+    S1 -->|"Edge Devices (Offline / Low Latency)"| Edge["Lock: Small Language Models (SLMs) on Edge\nEliminate: Cloud LLM APIs"]
+    S1 -->|"Cloud AWS Endpoint"| Cloud{"Traffic Pattern?"}
+    
+    Cloud -->|"Sustained / Low Latency / Dedicated"| RT["Lock: SageMaker Real-Time Endpoint"]
+    Cloud -->|"Intermittent / Spiky / Zero Idle Cost"| Serv["Lock: SageMaker Serverless Inference"]
+    Cloud -->|"Massive non-real-time batch datasets"| Batch["Lock: SageMaker Batch Transform"]
+```
+
+1. **Step 1: Check Deployment Location:**
+   - On-device, vehicle, mobile, offline? $\to$ **Small Language Models (SLMs) on Edge**.
+   - Cloud API? $\to$ Evaluate SageMaker endpoint types.
+2. **Step 2: Check Inference Traffic Pattern:**
+   - 24/7 steady traffic $\to$ **Real-Time Endpoints**.
+   - Spiky/idle traffic $\to$ **Serverless Inference**.
+   - Large daily offline files $\to$ **Batch Transform**.
+3. **Step 3: Check Governance & Drift:**
+   - Statistical distribution shift $\to$ **SageMaker Model Monitor**.
+   - Visualizing feature influence $\to$ **PDPs / SHAP**.
+
+---
+
+### Layer 3: High-Frequency Decoy Autopsy
+
+#### Decoy Trap: Real-Time vs. Serverless Inference
+* **The Exam Trap:** A startup deploys an ML model that receives inference requests only during business hours (9 AM–5 PM), remaining completely idle at night and on weekends. Management mandates minimizing idle infrastructure costs.
+* **The Decoy:** Option A: "Deploy to a SageMaker Real-Time Inference endpoint on a `c5.xlarge` instance."
+* **The Fatal Flaw:** Real-Time endpoints run dedicated EC2 instances 24/7, billing continuously whether requests arrive or not.
+* **The Correct Choice:** Deploy to **Amazon SageMaker Serverless Inference**, which provisions compute on demand and scales to zero when traffic stops, incurring zero cost during idle periods.
+
+---
+
+### Layer 4: 10-Second Visual Decision Flowchart
+
+```mermaid
+flowchart TD
+    Start["Read MLOps Scenario"] --> Req{"What is the Core Need?"}
+    
+    Req -->|"Hosting Architecture"| HostType{"Traffic Pattern?"}
+    HostType -->|"Steady 24/7 / Ultra-low latency"| RT["SageMaker Real-Time Inference"]
+    HostType -->|"Intermittent / Scale-to-Zero"| Serv["SageMaker Serverless Inference"]
+    HostType -->|"Offline Bulk Predictions"| Batch["SageMaker Batch Transform"]
+    HostType -->|"Edge / On-Device"| SLM["Small Language Models (SLMs) on Edge"]
+    
+    Req -->|"Production Monitoring"| Mon["Amazon SageMaker Model Monitor\n(Data Drift, Concept Drift, Model Quality)"]
+    Req -->|"ML Pipeline Orchestration"| Pipe["Amazon SageMaker Pipelines (CI/CD DAGs)"]
+```

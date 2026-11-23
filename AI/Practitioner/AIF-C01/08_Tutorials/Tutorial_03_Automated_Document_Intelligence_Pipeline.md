@@ -159,36 +159,27 @@ aws events put-targets \
 ## 4. 🎯 Authentic Architecture Exam Practice
 > Practice real-world scenarios tested on official AWS examinations that directly apply the architectural patterns built in this tutorial.
 
-### Scenario Practice 1: AIF-C01-ET-Q005
+### Scenario Practice 1: AIF-C01-U1326
 **Question:**  
-A company has developed a generative text summarization model by using Amazon Bedrock. The company will use Amazon Bedrock automatic model evaluation capabilities.
-
-Which metric should the company use to evaluate the accuracy of the model?
+How does Amazon Textract assist in automated document processing workflows?
 
 **Options:**
-- A) Area Under the ROC Curve (AUC) score
-- B) F1 score
-- C) BERTScore
-- D) Real world knowledge (RWK) score
+- A) By translating text between different human languages
+- B) By detecting emotional sentiment and tone in customer text
+- C) By converting written text into lifelike spoken speech
+- D) By extracting printed text, form key-value pairs, and structured tables from scanned documents and PDFs
 
 <details>
 <summary><b>View Verified Answer & Solution Analysis</b></summary>
 
-**Correct Answer:** `C`  
+**Correct Answer:** `D`  
 **Peer Consensus:** `100%` agreement.  
 
-**Architectural Breakdown & Distractor Analysis:**  
-Community Most Voted: C (100%). Contributor Answer: C.
-
-Community Rationale & Discussion:
-Selected Answer: C
-BERTScore: This metric leverages the capabilities of a pre-trained BERT model to assess the semantic similarity between the generated summaries and the reference text, providing a more accurate evaluation of the model's ability to capture the key points of the original text, which is crucial for text summarization.
----
-Selected Answer: C
-The correct answer is C. BERTScore is specifically designed for evaluating text generation quality.
----
-Selected Answer: C
-BERTScore is the most appropriate metric for evaluating the accuracy of a generative text summarization model because it compares semantic similarity in a manner that aligns well with the goal of text summarization.
+**Architectural Breakdown & Distractor Analysis:**
+- **Option A is INCORRECT:** Text translation across natural human languages is handled by Amazon Translate.
+- **Option B is INCORRECT:** Sentiment analysis, tone detection, and named entity recognition in text are handled by Amazon Comprehend.
+- **Option C is INCORRECT:** Text-to-speech synthesis converting written text into lifelike audio is handled by Amazon Polly.
+- **Option D is CORRECT:** **Amazon Textract** is a machine learning service that goes beyond simple optical character recognition (OCR) by understanding document layout, extracting printed and handwritten text, identifying key-value form fields, and parsing tabular rows and columns without manual configuration.
 
 </details>
 
@@ -210,16 +201,81 @@ Which AWS service meets these requirements?
 **Correct Answer:** `C`  
 **Peer Consensus:** `100%` agreement.  
 
-**Architectural Breakdown & Distractor Analysis:**  
-Community Most Voted: C (100%). Contributor Answer: C.
-
-Community Rationale & Discussion:
-Selected Answer: C
-Amazon Bedrock
-
-Amazon Bedrock is a fully managed service that provides access to a variety of foundation models (FMs) from leading AI companies. It allows you to build and scale generative AI applications, such as automating product recommendations and descriptions, by leveraging the capabilities of these models.
----
-Selected Answer: C
-C. Amazon Bedrock
+**Architectural Breakdown & Distractor Analysis:**
+- **Option A is INCORRECT:** Amazon Macie is a data security service that uses pattern matching and ML to discover and protect sensitive PII in Amazon S3 buckets.
+- **Option B is INCORRECT:** Amazon Transcribe converts spoken audio into written text transcripts; it does not synthesize new text descriptions or recommendations.
+- **Option C is CORRECT:** **Amazon Bedrock** is the managed foundation model service that provides API access to leading generative AI models (Amazon Nova, Anthropic Claude) to generate context-aware product descriptions and personalized recommendations.
+- **Option D is INCORRECT:** Amazon Textract extracts text, forms, and tables from scanned documents; it cannot generate creative or personalized recommendations.
 
 </details>
+
+---
+
+## 🎓 Master Architecture MCQ Blueprint: Intelligent Document Processing (IDP)
+
+> Pattern recognition rules mined from the master question bank to solve Textract, Comprehend, Rekognition, and Bedrock document intelligence questions in under 15 seconds.
+
+### Layer 1: "Clue-to-Service" Linguistic Decryption Matrix
+
+| If Scenario Text Mentions... | Target Architecture / Service | Why (The Core Mechanism) | Decoy Trap to Avoid |
+| :--- | :--- | :--- | :--- |
+| **"Extract tables and key-value forms from scanned PDF receipts"** | **Amazon Textract** | Layout-aware document OCR extracting forms, tables, queries, and signatures. | Amazon Rekognition (computer vision for images/videos; no document layout awareness). |
+| **"Analyze customer sentiment, syntax, and extract entities from text"** | **Amazon Comprehend** | Managed NLP analyzing sentiment (Positive/Negative), key phrases, and PII in text. | Amazon Lex (conversational chatbot dialog engine). |
+| **"Convert spoken audio (MP3/WAV) call recordings into text"** | **Amazon Transcribe** | Automatic Speech Recognition (ASR) converting speech audio to text with speaker labels. | Amazon Polly (converts written text into spoken audio). |
+| **"Summarize 50-page financial prospectus into executive briefing"** | **Amazon Bedrock (Nova / Claude)** | Generative foundation models performing abstractive text summarization. | Amazon Textract alone (extracts raw text; cannot summarize or synthesize). |
+| **"Human review for low-confidence document extractions"** | **Amazon Augmented AI (A2I)** | Routes low-confidence Textract or Rekognition predictions to human review workteams. | AWS Step Functions alone (requires building custom review UIs). |
+
+---
+
+### Layer 2: 3-Step Rapid Elimination Heuristic
+
+```mermaid
+flowchart TD
+    Q["Read Document Processing Question"] --> S1{"What is the Input Modality?"}
+    S1 -->|"Scanned PDF, Form, Table, Receipt"| Txt["Lock: Amazon Textract\nEliminate: Rekognition, Comprehend"]
+    S1 -->|"Raw Text String (Emails, Reviews)"| Comp["Lock: Amazon Comprehend\nExtract sentiment, entities, language"]
+    S1 -->|"Spoken Voice Audio Stream"| Trans["Lock: Amazon Transcribe\nSpeech-to-text"]
+    
+    Txt & Comp & Trans --> S2{"What Transformation is Required?"}
+    S2 -->|"Extract Raw Form Fields"| TxtOnly["Amazon Textract Forms API"]
+    S2 -->|"Summarize or Rephrase Content"| GenAI["Route extracted text to Amazon Bedrock"]
+    S2 -->|"Human Verification on Ambiguity"| A2I["Amazon Augmented AI (A2I)"]
+```
+
+1. **Step 1: Check Input Modality:**
+   - Scanned image/PDF with tables? $\to$ **Amazon Textract**.
+   - Text strings needing sentiment/entity analysis? $\to$ **Amazon Comprehend**.
+   - Spoken audio files? $\to$ **Amazon Transcribe**.
+2. **Step 2: Check Processing Goal:**
+   - Extraction of existing facts? $\to$ **Textract**.
+   - Synthesis of new summaries or answers? $\to$ **Bedrock**.
+3. **Step 3: Human Oversight Trigger:**
+   - Mentions low-confidence predictions or compliance audit? $\to$ **Amazon A2I**.
+
+---
+
+### Layer 3: High-Frequency Decoy Autopsy
+
+#### Decoy Trap: Amazon Textract vs. Amazon Rekognition
+* **The Exam Trap:** A logistics company wants an automated system to extract shipping line items, quantities, and totals arranged in tabular columns from scanned bills of lading.
+* **The Decoy:** Option A: "Use Amazon Rekognition to detect text in the document images."
+* **The Fatal Flaw:** Amazon Rekognition detects text (`DetectText`) as isolated, disconnected bounding boxes. It has **zero awareness of tabular geometry**, cannot associate column headers with row cells, and cannot extract key-value relationships.
+* **The Correct Choice:** **Amazon Textract** is specifically trained on document typography to extract structured tables (`TABLES` feature) and form key-value pairs (`FORMS` feature).
+
+---
+
+### Layer 4: 10-Second Visual Decision Flowchart
+
+```mermaid
+flowchart TD
+    Start["Read Document Pipeline Scenario"] --> Input{"What is the primary input?"}
+    
+    Input -->|"Scanned PDF / Image Invoice"| Txt["Amazon Textract\n(Extracts Tables, Forms, Text)"]
+    Txt --> Next{"Downstream Need?"}
+    Next -->|"Understand Sentiment & Entities"| Comp["Amazon Comprehend"]
+    Next -->|"Summarize / Query with GenAI"| Bedrock["Amazon Bedrock (Nova / Claude)"]
+    Next -->|"Low Confidence Fallback"| A2I["Amazon Augmented AI (A2I)"]
+    
+    Input -->|"Spoken Customer Audio"| Trans["Amazon Transcribe (Speech-to-Text)"]
+    Input -->|"Raw Text Feedback"| CompDirect["Amazon Comprehend (NLP Sentiment)"]
+```

@@ -110,6 +110,7 @@ flowchart TD
   - [ ] [`07_Hands_On_Labs/Lab_08_Pre_Trained_Foundation_Model_Deployment_with_SageMaker_JumpStart.md`](./07_Hands_On_Labs/Lab_08_Pre_Trained_Foundation_Model_Deployment_with_SageMaker_JumpStart.md)
   - [ ] [`08_Tutorials/Tutorial_01_Enterprise_RAG_Knowledge_Base_Architecture.md`](./08_Tutorials/Tutorial_01_Enterprise_RAG_Knowledge_Base_Architecture.md)
   - [ ] [`08_Tutorials/Tutorial_02_Multi_Agent_Autonomous_System_with_Bedrock_AgentCore_and_MCP.md`](./08_Tutorials/Tutorial_02_Multi_Agent_Autonomous_System_with_Bedrock_AgentCore_and_MCP.md)
+  - [ ] [`08_Tutorials/Tutorial_06_Serverless_Generative_AI_App_Bedrock_APIGateway_Lambda.md`](./08_Tutorials/Tutorial_06_Serverless_Generative_AI_App_Bedrock_APIGateway_Lambda.md)
 - [ ] **Step 7 (Distinction Tables & Cheatsheets):**
   - [ ] [`09_Notes_and_Cheatsheets/distinctions/01_Model_Adaptation_Prompting_vs_RAG_vs_FineTuning_vs_Pretraining.md`](./09_Notes_and_Cheatsheets/distinctions/01_Model_Adaptation_Prompting_vs_RAG_vs_FineTuning_vs_Pretraining.md)
   - [ ] [`09_Notes_and_Cheatsheets/distinctions/08_Vector_Databases_OpenSearch_Serverless_vs_Aurora_pgvector_vs_Neptune.md`](./09_Notes_and_Cheatsheets/distinctions/08_Vector_Databases_OpenSearch_Serverless_vs_Aurora_pgvector_vs_Neptune.md)

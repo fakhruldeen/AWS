@@ -179,28 +179,11 @@ Which functionality does Amazon SageMaker Clarify provide?
 **Correct Answer:** `D`  
 **Peer Consensus:** `100%` agreement.  
 
-**Architectural Breakdown & Distractor Analysis:**  
-Community Most Voted: D (100%). Contributor Answer: D.
-
-Community Rationale & Discussion:
-Selected Answer: D
-Amazon SageMaker Clarify provides functionality to detect and identify potential bias in data both before and after training, helping teams uncover imbalances in datasets that might lead to biased model predictions. This is essential for ensuring fairness and compliance, especially in sensitive applications.
-
-Why Not the Other Options?
-A. Integrates a Retrieval Augmented Generation (RAG) workflow: RAG workflows are used for combining retrieved documents with model outputs, typically in language models, but this is not a function of SageMaker Clarify.
-B. Monitors the quality of ML models in production: Monitoring model quality in production is handled by SageMaker Model Monitor, not SageMaker Clarify.
-C. Documents critical details about ML models: This functionality is part of Amazon SageMaker Model Cards, which documents model details for transparency and compliance.
----
-Selected Answer: D
-Explicação:
-O Amazon SageMaker Clarify é uma ferramenta que auxilia na detecção de vieses e na explicabilidade de modelos de machine learning (ML). Ele oferece funcionalidades como:
-
-Detecção de vieses: Ajuda a identificar possíveis vieses nos dados durante a preparação e também nos modelos após o treinamento. 
-
-Explicabilidade de modelos: Fornece insights sobre como os modelos de ML fazem previsões, aumentando a transparência
----
-Selected Answer: D
-Identifies potential bias during data preparation: This is the core functionality of Amazon SageMaker Clarify. It helps data scientists and AI practitioners detect bias in training data, providing insights into how the data might introduce bi
+**Architectural Breakdown & Distractor Analysis:**
+- **Option A is INCORRECT:** Retrieval Augmented Generation (RAG) is orchestrated through Amazon Bedrock Knowledge Bases and vector stores, not SageMaker Clarify.
+- **Option B is INCORRECT:** Monitoring production models for data drift, concept drift, and model quality degradation over time is performed by **Amazon SageMaker Model Monitor**.
+- **Option C is INCORRECT:** Documenting model intended uses, risk ratings, and evaluation benchmarks is the primary function of **Amazon SageMaker Model Cards**.
+- **Option D is CORRECT:** **Amazon SageMaker Clarify** calculates pre-training statistical bias metrics (such as Class Imbalance and Difference in Positive Proportions in Labels) during the data preparation phase to detect sampling disparities before model training.
 
 </details>
 
@@ -222,17 +205,81 @@ Which solution will meet these requirements?
 **Correct Answer:** `A`  
 **Peer Consensus:** `100%` agreement.  
 
-**Architectural Breakdown & Distractor Analysis:**  
-Community Most Voted: A (100%). Contributor Answer: A.
-
-Community Rationale & Discussion:
-Selected Answer: A
-The solution that meets the requirements of detecting bias and explaining model predictions in a loan approval scenario is A. Amazon SageMaker Clarify
----
-Selected Answer: A
-The correct answer is A. SageMaker Clarify provides both bias detection and model explainability features.
----
-Selected Answer: A
-Amazon SageMaker Clarify provides both bias detection and model explainability features, making it the most suitable choice for detecting bias in a loan approval model and explaining its predictions.
+**Architectural Breakdown & Distractor Analysis:**
+- **Option A is CORRECT:** **Amazon SageMaker Clarify** provides both pre/post-training demographic bias detection and model explainability by calculating SHAP (Shapley Additive exPlanations) values to quantify individual feature contributions to loan predictions.
+- **Option B is INCORRECT:** SageMaker Data Wrangler cleans, visualizes, and transforms raw tabular and image datasets; it does not compute post-training explainability (SHAP).
+- **Option C is INCORRECT:** SageMaker Model Cards record metadata, audit evaluations, and governance notes, but do not compute algorithmic bias metrics or generate live SHAP explanations.
+- **Option D is INCORRECT:** AWS AI Service Cards are public documentation sheets published by AWS for their off-the-shelf managed AI services, not customer-trained machine learning models.
 
 </details>
+
+---
+
+## 🎓 Master Architecture MCQ Blueprint: Responsible AI, Guardrails & Governance
+
+> Pattern recognition rules mined from the master question bank to solve Clarify, Bedrock Guardrails, Model Cards, and PII masking questions in under 15 seconds.
+
+### Layer 1: "Clue-to-Service" Linguistic Decryption Matrix
+
+| If Scenario Text Mentions... | Target Architecture / Service | Why (The Core Mechanism) | Decoy Trap to Avoid |
+| :--- | :--- | :--- | :--- |
+| **"Detect dataset bias and explain individual loan/medical decisions"** | **Amazon SageMaker Clarify** | Evaluates pre/post-training demographic bias; computes KernelSHAP feature attributions. | SageMaker Canvas (builds models; does not provide standalone bias governance). |
+| **"Real-time safety filter, prompt injection defense, PII masking"** | **Amazon Bedrock Guardrails** | Multi-layer content filters, denied topics, PII redaction, and grounding checks. | AWS WAF (inspects HTTP headers; unaware of semantic LLM prompts). |
+| **"Verify LLM response is factually grounded in reference documents"** | **Contextual Grounding Checks (Guardrails)** | Measures mathematical grounding and relevance scores to block hallucinations. | Adjusting temperature alone (reduces randomness but cannot verify grounding). |
+| **"Document customer-trained model purpose, risks, and training data"** | **Amazon SageMaker Model Cards** | Standardized governance fact sheets capturing model lineage and evaluation metrics. | AWS AI Service Cards (published by AWS for AWS managed services). |
+| **"Public AWS documentation on capabilities/limits of Rekognition/Textract"** | **AWS AI Service Cards** | AWS-published transparency documentation for off-the-shelf managed AI services. | SageMaker Model Cards (created by customers for their own models). |
+| **"Human review for low-confidence model predictions"** | **Amazon Augmented AI (A2I)** | Built-in human review routing for Textract, Rekognition, and SageMaker. | AWS Step Functions alone (requires custom UI engineering). |
+
+---
+
+### Layer 2: 3-Step Rapid Elimination Heuristic
+
+```mermaid
+flowchart TD
+    Q["Read Governance Scenario Question"] --> S1{"Where in the Lifecycle does the Control Apply?"}
+    S1 -->|"Offline Data Prep & Model Training"| Clarify["Lock: SageMaker Clarify (Bias & SHAP)"]
+    S1 -->|"Live Runtime Inference Streaming"| Guard["Lock: Amazon Bedrock Guardrails (Filters & PII)"]
+    S1 -->|"Governance Documentation & Audit"| Docs{"Customer or AWS Managed?"}
+    
+    Docs -->|"Customer-Trained ML Model"| MC["Lock: SageMaker Model Cards"]
+    Docs -->|"AWS Off-the-Shelf Service"| SC["Lock: AWS AI Service Cards"]
+```
+
+1. **Step 1: Check Lifecycle Placement:**
+   - Training dataset audit or feature importance? $\to$ **SageMaker Clarify**.
+   - Real-time conversation filtering, toxic blocking, PII masking? $\to$ **Amazon Bedrock Guardrails**.
+   - Model lineage and documentation for compliance auditors? $\to$ **SageMaker Model Cards**.
+2. **Step 2: Check Customer vs. AWS Ownership:**
+   - Documenting a company's in-house model? $\to$ **Model Cards**.
+   - Reviewing AWS's commercial terms for Rekognition? $\to$ **AI Service Cards**.
+3. **Step 3: Check Human Oversight:**
+   - Need human review on uncertain predictions? $\to$ **Amazon A2I**.
+
+---
+
+### Layer 3: High-Frequency Decoy Autopsy
+
+#### Decoy Trap: SageMaker Clarify vs. Amazon Bedrock Guardrails
+* **The Exam Trap:** An application needs to prevent customer service chatbots from responding to toxic prompts and ensure customer phone numbers are masked in real-time chat transcripts.
+* **The Decoy:** Option A: "Configure Amazon SageMaker Clarify to monitor the chatbot."
+* **The Fatal Flaw:** SageMaker Clarify is an offline bias auditing and explainability tool used during model training and evaluation. It **cannot intercept real-time streaming inference** to block profanity or redact regex PII patterns.
+* **The Correct Choice:** **Amazon Bedrock Guardrails** provides real-time, bi-directional input/output content filtering and automated PII masking.
+
+---
+
+### Layer 4: 10-Second Visual Decision Flowchart
+
+```mermaid
+flowchart TD
+    Start["Read Responsible AI Scenario"] --> Req{"What is the Core Need?"}
+    
+    Req -->|"Detect Bias in Data or Inferences"| ClarifyFlow["SageMaker Clarify\n(Class Imbalance, Disparate Impact, SHAP)"]
+    
+    Req -->|"Real-Time GenAI Safety Filters & PII"| GuardFlow["Amazon Bedrock Guardrails\n(Denied Topics, Content Filters, Sensitive Info PII)"]
+    
+    Req -->|"Document Model for Regulators"| DocFlow{"Model Origin?"}
+    DocFlow -->|"Customer Built Model"| MC["SageMaker Model Cards"]
+    DocFlow -->|"AWS Managed Service"| SC["AWS AI Service Cards"]
+    
+    Req -->|"Human-in-the-Loop Review"| A2IFlow["Amazon Augmented AI (A2I)"]
+```

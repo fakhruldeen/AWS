@@ -190,15 +190,11 @@ Which AWS service provides serverless compute for use with containers?
 **Correct Answer:** `B`  
 **Peer Consensus:** `100%` agreement.  
 
-**Architectural Breakdown & Distractor Analysis:**  
-Community Most Voted: B (100%). Contributor Answer: B.
-
-Community Rationale & Discussion:
-Selected Answer: B
-AWS Fargate is a serverless compute engine for containers that allows you to run containers without managing servers
----
-Selected Answer: B
-B. AWS Fargate
+**Architectural Breakdown & Distractor Analysis:**
+- **Option A is INCORRECT:** Amazon Simple Queue Service (SQS) is a fully managed message queuing service for decoupling application components, not a container compute engine.
+- **Option B is CORRECT:** **AWS Fargate** is a purpose-built serverless compute engine for containers that integrates with Amazon Elastic Container Service (ECS) and Amazon Elastic Kubernetes Service (EKS), executing container tasks without managing EC2 virtual servers.
+- **Option C is INCORRECT:** AWS Elastic Beanstalk is an application deployment service (PaaS) that provisions and configures underlying EC2 virtual machine clusters.
+- **Option D is INCORRECT:** Amazon SageMaker is a machine learning platform for authoring, training, and deploying predictive and generative AI models.
 
 </details>
 
@@ -216,18 +212,84 @@ Which AWS services are serverless? (Choose two.)
 <details>
 <summary><b>View Verified Answer & Solution Analysis</b></summary>
 
-**Correct Answer:** `AD`  
+**Correct Answer:** `A` and `D`  
 **Peer Consensus:** `100%` agreement.  
 
-**Architectural Breakdown & Distractor Analysis:**  
-Community Most Voted: AD (100%). Contributor Answer: AD.
-
-Community Rationale & Discussion:
-Selected Answer: AD
-A& D. Fargate and S3 are serverless.
----
-S3 or Simple Storage Service is classified as a cloud storage service which forms a functional base for all serverless solutions without having to configure any OS or management of any underlying infrastructure.
----
-A. AWS Fargate and D. Amazon S3.
+**Architectural Breakdown & Distractor Analysis:**
+- **Option A is CORRECT:** **AWS Fargate** provides serverless execution for container workloads without requiring customers to configure, patch, or scale virtual machine hosts.
+- **Option B is INCORRECT:** Standard Amazon MSK provisions dedicated broker instances and requires capacity planning for clusters.
+- **Option C is INCORRECT:** Amazon EMR provisions clusters of EC2 instances to execute Hadoop and Spark jobs.
+- **Option D is CORRECT:** **Amazon S3** is the quintessential serverless object storage service: storage capacity scales automatically, high availability is built-in across 3+ AZs, and customers pay strictly for storage used and requests processed with zero server administration.
+- **Option E is INCORRECT:** Amazon EC2 is an Infrastructure-as-a-Service (IaaS) offering requiring explicit selection and management of virtual machine instances and guest operating systems.
 
 </details>
+
+---
+
+## 🎓 Master Architecture MCQ Blueprint: Serverless & Event-Driven Architectures
+
+> Pattern recognition rules mined from the master question bank to solve Lambda, SQS, SNS, EventBridge, and Fargate questions in under 15 seconds.
+
+### Layer 1: "Clue-to-Service" Linguistic Decryption Matrix
+
+| If Scenario Text Mentions... | Target Architecture / Service | Why (The Core Mechanism) | Decoy Trap to Avoid |
+| :--- | :--- | :--- | :--- |
+| **"Run code in response to events without managing servers"** | **AWS Lambda** | Event-driven serverless compute; scales from 0 to thousands of concurrent executions; pay per millisecond. | Amazon EC2 (requires managing servers, patching OS, paying when idle). |
+| **"Decouple microservices using a message queue buffer"** | **Amazon SQS** | Pull-based asynchronous queue buffering spikes and preventing consumer overload. | Amazon SNS (push-based publish/subscribe topic; does not buffer messages). |
+| **"Publish a message to multiple heterogeneous subscribers (fan-out)"** | **Amazon SNS** | Push-based pub/sub topic broadcasting events to SQS queues, Lambda functions, emails, and SMS. | Amazon SQS alone (one message consumed by one worker). |
+| **"Serverless event bus routing events between AWS services & SaaS apps"** | **Amazon EventBridge** | Schema-driven event bus filtering and routing JSON events with declarative rules. | Amazon SQS (point-to-point message queue). |
+| **"Run Docker containers serverlessly without EC2 hosts"** | **AWS Fargate** | Managed container compute runtime for Amazon ECS and EKS. | Amazon EC2 launch type (requires provisioning and patching EC2 host instances). |
+
+---
+
+### Layer 2: 3-Step Rapid Elimination Heuristic
+
+```mermaid
+flowchart TD
+    Q["Read Serverless Scenario Question"] --> S1{"Compute or Messaging?"}
+    S1 -->|"Compute Execution"| Comp{"Container or Function?"}
+    Comp -->|"Short-lived functions (< 15 min)"| Lambda["Lock: AWS Lambda\nPay per ms; zero idle cost"]
+    Comp -->|"Docker Containerized Tasks"| Fargate["Lock: AWS Fargate\nServerless container engine"]
+    
+    S1 -->|"Messaging & Decoupling"| Msg{"Communication Pattern?"}
+    Msg -->|"1-to-1 Asynchronous Queue Buffer"| SQS["Lock: Amazon SQS (Pull-based queue)"]
+    Msg -->|"1-to-Many Fan-out Broadcast"| SNS["Lock: Amazon SNS (Push-based topic)"]
+    Msg -->|"Enterprise Event Bus with SaaS rules"| EB["Lock: Amazon EventBridge"]
+```
+
+1. **Step 1: Check Compute vs. Messaging:**
+   - Need to run custom application code without servers? $\to$ **AWS Lambda**.
+   - Need to run Docker images without servers? $\to$ **AWS Fargate**.
+2. **Step 2: Check Messaging Pattern:**
+   - Buffer traffic to protect a database/worker? $\to$ **Amazon SQS** (Pull).
+   - Send one notification to multiple destinations (email, mobile, queue)? $\to$ **Amazon SNS** (Push / Fan-out).
+   - Route third-party SaaS events (Shopify, Datadog) into AWS? $\to$ **Amazon EventBridge**.
+3. **Step 3: Check Cost & Serverless Attribute:**
+   - Serverless = Zero idle charge + automatic scaling + no OS patching + built-in high availability.
+
+---
+
+### Layer 3: High-Frequency Decoy Autopsy
+
+#### Decoy Trap: Amazon SQS vs. Amazon SNS
+* **The Exam Trap:** An application needs to notify 5 different downstream services simultaneously whenever a customer places an order.
+* **The Decoy:** Option A: "Place the order into an Amazon SQS queue."
+* **The Fatal Flaw:** SQS is a point-to-point queue. When one consumer pulls and deletes a message from the queue, that message is gone; other consumers cannot receive it.
+* **The Correct Choice:** Publish the order event to an **Amazon SNS topic**, which uses the **SNS Fan-out pattern** to broadcast copies of the message to multiple SQS queues simultaneously.
+
+---
+
+### Layer 4: 10-Second Visual Decision Flowchart
+
+```mermaid
+flowchart TD
+    Start["Read Serverless Scenario"] --> Q1{"What is the Core Need?"}
+    
+    Q1 -->|"Run Event-Driven Code"| Lambda["AWS Lambda\n(Max 15 min runtime; zero charge when idle)"]
+    Q1 -->|"Run Containers without Hosts"| Fargate["AWS Fargate\n(Integrates with ECS & EKS)"]
+    
+    Q1 -->|"Decouple Components"| Q2{"Messaging Topology?"}
+    Q2 -->|"Buffer Spikes / Pull Queue"| SQS["Amazon SQS (Standard or FIFO)"]
+    Q2 -->|"Fan-Out Broadcast / Push"| SNS["Amazon SNS (Publish/Subscribe)"]
+    Q2 -->|"Event Bus / SaaS Connectors"| EB["Amazon EventBridge"]
+```
