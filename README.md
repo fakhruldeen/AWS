@@ -195,7 +195,7 @@ Phase 5: Authority & Provenance
 | **Domain 3** | Applications of Foundation Models | **28%** | Amazon Bedrock, Knowledge Bases (RAG), Agents, Amazon Q | [Lab 02: Bedrock RAG Knowledge Base](./AI/Practitioner/AIF-C01/phase2_step07_labs/Lab_02_Building_RAG_with_Bedrock_Knowledge_Bases.md) |
 | **Domain 4** | Guidelines for Responsible AI | **14%** | SageMaker Clarify (Bias & SHAP), Bedrock Guardrails | [Lab 03: Bedrock Guardrails & PII Masking](./AI/Practitioner/AIF-C01/phase2_step07_labs/Lab_03_Responsible_AI_Bedrock_Guardrails.md) |
 | **Domain 5** | Security, Compliance, and Governance | **14%** | Bedrock Data Privacy, KMS encryption, PrivateLink | [Lab 03: Responsible AI & Safety](./AI/Practitioner/AIF-C01/phase2_step07_labs/Lab_03_Responsible_AI_Bedrock_Guardrails.md) |
-| **TOTAL** | | **100%** | **1,814 Unique Questions Bank** | **12 Visual Hands-On Labs** |
+| **TOTAL** | | **100%** | **1,825 Unique Questions Bank** | **12 Visual Hands-On Labs** |
 
 ---
 
@@ -239,7 +239,7 @@ python3 scripts/aws_revision_runner.py --cert CLF --community --mode practice -n
 # CLF-C02: November 2026 Actual Release (393 questions)
 python3 scripts/aws_revision_runner.py --cert CLF --release-2026 --mode practice -n 15 --tricks
 
-# AIF-C01: 154-question Community Practice Pool
+# AIF-C01: 233-question Community Practice Pool
 python3 scripts/aws_revision_runner.py --cert AIF --community --mode practice -n 15 --tricks
 
 # MLA-C01: 106-question Community Practice Pool

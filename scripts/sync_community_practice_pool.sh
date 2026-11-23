@@ -66,10 +66,10 @@ case "${EXAM}" in
         VAULT_MD="${VAULT_BASE}/Questions_Bank/Community_Practice_Questions/CLF_C02_Community_Pool_718Q.md"
         ;;
     AIF-C01)
-        WORK_JSON="${WORK_REPO}/AI/Practitioner/AIF-C01/phase4_step11_revision_questions/AIF_C01_Community_Practice_Pool_154Q.json"
-        WORK_MD="${WORK_REPO}/AI/Practitioner/AIF-C01/phase4_step11_revision_questions/AIF_C01_Community_Practice_Pool_154Q.md"
-        VAULT_JSON="${VAULT_BASE}/Questions_Bank/Community_Practice_Questions/AIF_C01_Community_Pool_154Q.json"
-        VAULT_MD="${VAULT_BASE}/Questions_Bank/Community_Practice_Questions/AIF_C01_Community_Pool_154Q.md"
+        WORK_JSON="${WORK_REPO}/AI/Practitioner/AIF-C01/phase4_step11_revision_questions/AIF_C01_Community_Practice_Pool_233Q.json"
+        WORK_MD="${WORK_REPO}/AI/Practitioner/AIF-C01/phase4_step11_revision_questions/AIF_C01_Community_Practice_Pool_233Q.md"
+        VAULT_JSON="${VAULT_BASE}/Questions_Bank/Community_Practice_Questions/AIF_C01_Community_Pool_233Q.json"
+        VAULT_MD="${VAULT_BASE}/Questions_Bank/Community_Practice_Questions/AIF_C01_Community_Pool_233Q.md"
         ;;
     SAA-C03)
         WORK_JSON="${WORK_REPO}/Cloud/Associate/SAA-C03/phase4_step11_revision_questions/SAA_C03_Community_Practice_Pool_1019Q.json"

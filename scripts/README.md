@@ -50,7 +50,7 @@ python3 scripts/aws_revision_runner.py --cert CLF --community --mode practice -n
 # CLF-C02 November 2026 Release (393 questions)
 python3 scripts/aws_revision_runner.py --cert CLF --release-2026 --mode practice -n 15 --tricks
 
-# AIF-C01 154-question Community Practice Pool
+# AIF-C01 233-question Community Practice Pool
 python3 scripts/aws_revision_runner.py --cert AIF --community --mode practice -n 15 --tricks
 
 # MLA-C01 106-question Community Practice Pool

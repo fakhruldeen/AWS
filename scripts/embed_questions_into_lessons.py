@@ -14,7 +14,7 @@ from typing import Dict, List, Any
 
 WORK_DIR = "/home/mohamed/Desktop/Work/aws"
 CLF_JSON_PATH = os.path.join(WORK_DIR, "Cloud/Practitioner/CLF-C02/phase4_step11_revision_questions/CLF_C02_Community_Practice_Pool_718Q.json")
-AIF_JSON_PATH = os.path.join(WORK_DIR, "AI/Practitioner/AIF-C01/phase4_step11_revision_questions/AIF_C01_Community_Practice_Pool_154Q.json")
+AIF_JSON_PATH = os.path.join(WORK_DIR, "AI/Practitioner/AIF-C01/phase4_step11_revision_questions/AIF_C01_Community_Practice_Pool_233Q.json")
 
 CLF_LECTURE_MAP = {
     "Lecture_01_Introduction_to_Cloud_and_Global_Infra.md": {

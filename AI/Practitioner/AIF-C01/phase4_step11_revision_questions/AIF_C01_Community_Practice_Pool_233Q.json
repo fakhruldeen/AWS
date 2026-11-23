@@ -7941,5 +7941,1517 @@
       "Community_Consensus_Pool",
       "Candidate_Practice_Suite"
     ]
+  },
+  {
+    "id": "AIF-C01-EP-Q106",
+    "question_number": 199,
+    "domain": 2,
+    "domain_name": "Fundamentals of Generative AI",
+    "prompt": "A financial company uses AWS to host its generative AI models. The company must generate reports to show adherence to international regulations for handling sensitive customer data.\n\nWhich AWS service meets these requirements?",
+    "options": {
+      "A": "Amazon Macie",
+      "B": "AWS Artifact",
+      "C": "AWS Secrets Manager",
+      "D": "AWS Config"
+    },
+    "choices": [
+      "A) Amazon Macie",
+      "B) AWS Artifact",
+      "C) AWS Secrets Manager",
+      "D) AWS Config"
+    ],
+    "answer": "B",
+    "contributor_answer": "B",
+    "community_consensus": {
+      "contributor_answer": "B",
+      "most_voted_answer": "B",
+      "vote_percentage": "B (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "B": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: B\nB. AWS Artifact is specifically designed to provide customers with on-demand access to compliance reports and security documentation, includi"
+      ]
+    },
+    "explanation": "Community Consensus: B (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: B\nB. AWS Artifact is specifically designed to provide customers with on-demand access to compliance reports and security documentation, includi",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q107",
+    "question_number": 200,
+    "domain": 3,
+    "domain_name": "Applications of Foundation Models",
+    "prompt": "A medical company wants to modernize its onsite information processing application. The company wants to use generative AI to respond to medical questions from patients.\n\nWhich AWS service should the company use to ensure responsible AI for the application?",
+    "options": {
+      "A": "Guardrails for Amazon Bedrock",
+      "B": "Amazon Inspector",
+      "C": "Amazon Rekognition",
+      "D": "AWS Trusted Advisor"
+    },
+    "choices": [
+      "A) Guardrails for Amazon Bedrock",
+      "B) Amazon Inspector",
+      "C) Amazon Rekognition",
+      "D) AWS Trusted Advisor"
+    ],
+    "answer": "A",
+    "contributor_answer": "A",
+    "community_consensus": {
+      "contributor_answer": "A",
+      "most_voted_answer": "A",
+      "vote_percentage": "A (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "A": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: A\nGuardrails for Amazon Bedrock is specifically designed to help organizations build responsible generative AI applications. It allows the comp"
+      ]
+    },
+    "explanation": "Community Consensus: A (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: A\nGuardrails for Amazon Bedrock is specifically designed to help organizations build responsible generative AI applications. It allows the comp",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q108",
+    "question_number": 201,
+    "domain": 2,
+    "domain_name": "Fundamentals of Generative AI",
+    "prompt": "Which metric is used to evaluate the performance of foundation models (FMs) for text summarization tasks?",
+    "options": {
+      "A": "F1 score",
+      "B": "Bilingual Evaluation Understudy (BLEU) score",
+      "C": "Accuracy",
+      "D": "Mean squared error (MSE)"
+    },
+    "choices": [
+      "A) F1 score",
+      "B) Bilingual Evaluation Understudy (BLEU) score",
+      "C) Accuracy",
+      "D) Mean squared error (MSE)"
+    ],
+    "answer": "B",
+    "contributor_answer": "B",
+    "community_consensus": {
+      "contributor_answer": "B",
+      "most_voted_answer": "B",
+      "vote_percentage": "B (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "B": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: B\nFor text summarization tasks, the goal is to evaluate how closely the model-generated summary matches a human-written summary. The BLEU score"
+      ]
+    },
+    "explanation": "Community Consensus: B (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: B\nFor text summarization tasks, the goal is to evaluate how closely the model-generated summary matches a human-written summary. The BLEU score",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q109",
+    "question_number": 202,
+    "domain": 2,
+    "domain_name": "Fundamentals of Generative AI",
+    "prompt": "What is the benefit of fine-tuning a foundation model (FM)?",
+    "options": {
+      "A": "Fine-tuning reduces the FM's size and complexity and enables slower inference.",
+      "B": "Fine-tuning uses specific training data to retrain the FM from scratch to adapt to a specific use case.",
+      "C": "Fine-tuning keeps the FM's knowledge up to date by pre-training the FM on more recent data.",
+      "D": "Fine-tuning improves the performance of the FM on a specific task by further training the FM on new labeled data."
+    },
+    "choices": [
+      "A) Fine-tuning reduces the FM's size and complexity and enables slower inference.",
+      "B) Fine-tuning uses specific training data to retrain the FM from scratch to adapt to a specific use case.",
+      "C) Fine-tuning keeps the FM's knowledge up to date by pre-training the FM on more recent data.",
+      "D) Fine-tuning improves the performance of the FM on a specific task by further training the FM on new labeled data."
+    ],
+    "answer": "D",
+    "contributor_answer": "D",
+    "community_consensus": {
+      "contributor_answer": "D",
+      "most_voted_answer": "D",
+      "vote_percentage": "D (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "D": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: D\nFine-tuning is the process of taking a pretrained foundation model and continuing to train it on a smaller, task-specific dataset (usually la"
+      ]
+    },
+    "explanation": "Community Consensus: D (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: D\nFine-tuning is the process of taking a pretrained foundation model and continuing to train it on a smaller, task-specific dataset (usually la",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q110",
+    "question_number": 203,
+    "domain": 1,
+    "domain_name": "Fundamentals of AI and ML",
+    "prompt": "A company wants to improve its chatbot's responses to match the company's desired tone. The company has 100 examples of high-quality conversations between customer service agents and customers. The company wants to use this data to incorporate company tone into the chatbot's responses.\n\nWhich solution meets these requirements?",
+    "options": {
+      "A": "Use Amazon Personalize to generate responses.",
+      "B": "Create an Amazon SageMaker HyperPod pre-training job.",
+      "C": "Host the model by using Amazon SageMaker. Use TensorRT for large language model (LLM) deployment.",
+      "D": "Create an Amazon Bedrock fine-tuning job."
+    },
+    "choices": [
+      "A) Use Amazon Personalize to generate responses.",
+      "B) Create an Amazon SageMaker HyperPod pre-training job.",
+      "C) Host the model by using Amazon SageMaker. Use TensorRT for large language model (LLM) deployment.",
+      "D) Create an Amazon Bedrock fine-tuning job."
+    ],
+    "answer": "D",
+    "contributor_answer": "D",
+    "community_consensus": {
+      "contributor_answer": "D",
+      "most_voted_answer": "D",
+      "vote_percentage": "D (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "D": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: D\nTo incorporate the company's desired tone into the chatbot\u2019s responses using examples of high-quality conversations, the best solution is to:"
+      ]
+    },
+    "explanation": "Community Consensus: D (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: D\nTo incorporate the company's desired tone into the chatbot\u2019s responses using examples of high-quality conversations, the best solution is to:",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q111",
+    "question_number": 204,
+    "domain": 2,
+    "domain_name": "Fundamentals of Generative AI",
+    "prompt": "An ecommerce company is using a chatbot to automate the customer order submission process. The chatbot is powered by AI and is available to customers directly from the company's website 24 hours a day, 7 days a week.\n\nWhich option is an AI system input vulnerability that the company needs to resolve before the chatbot is made available?",
+    "options": {
+      "A": "Data leakage",
+      "B": "Prompt injection",
+      "C": "Large language model (LLM) hallucinations",
+      "D": "Concept drift"
+    },
+    "choices": [
+      "A) Data leakage",
+      "B) Prompt injection",
+      "C) Large language model (LLM) hallucinations",
+      "D) Concept drift"
+    ],
+    "answer": "B",
+    "contributor_answer": "B",
+    "community_consensus": {
+      "contributor_answer": "B",
+      "most_voted_answer": "B",
+      "vote_percentage": "B (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "B": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: B\nPrompt injection is an AI system input vulnerability where a malicious user crafts inputs designed to manipulate or subvert the behavior of a"
+      ]
+    },
+    "explanation": "Community Consensus: B (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: B\nPrompt injection is an AI system input vulnerability where a malicious user crafts inputs designed to manipulate or subvert the behavior of a",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q114",
+    "question_number": 205,
+    "domain": 1,
+    "domain_name": "Fundamentals of AI and ML",
+    "prompt": "A social media company wants to prevent users from posting discriminatory content on the company's application. The company wants to use Amazon Bedrock as part of the solution.\n\nHow can the company use Amazon Bedrock to meet these requirements?",
+    "options": {
+      "A": "Give users the ability to interact based on user preferences.",
+      "B": "Block interactions related to predefined topics.",
+      "C": "Restrict user conversations to predefined topics.",
+      "D": "Provide a variety of responses to select from for user engagement."
+    },
+    "choices": [
+      "A) Give users the ability to interact based on user preferences.",
+      "B) Block interactions related to predefined topics.",
+      "C) Restrict user conversations to predefined topics.",
+      "D) Provide a variety of responses to select from for user engagement."
+    ],
+    "answer": "B",
+    "contributor_answer": "B",
+    "community_consensus": {
+      "contributor_answer": "B",
+      "most_voted_answer": "B",
+      "vote_percentage": "B (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "B": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: B\nTo prevent users from posting discriminatory content, the company can use Amazon Bedrock Guardrails, which allow you to:\n\nDefine denied topic"
+      ]
+    },
+    "explanation": "Community Consensus: B (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: B\nTo prevent users from posting discriminatory content, the company can use Amazon Bedrock Guardrails, which allow you to:\n\nDefine denied topic",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q115",
+    "question_number": 206,
+    "domain": 2,
+    "domain_name": "Fundamentals of Generative AI",
+    "prompt": "An education company waftion. The application will give users the ability to enter text or provide a picture of a question. The application will respond with a written answer and an explanation of the written answer.\n\nWhich model type meets these requirements?",
+    "options": {
+      "A": "Computer vision model",
+      "B": "Large multi-modal language model",
+      "C": "Diffusion model",
+      "D": "Text-to-speech model"
+    },
+    "choices": [
+      "A) Computer vision model",
+      "B) Large multi-modal language model",
+      "C) Diffusion model",
+      "D) Text-to-speech model"
+    ],
+    "answer": "B",
+    "contributor_answer": "B",
+    "community_consensus": {
+      "contributor_answer": "B",
+      "most_voted_answer": "B",
+      "vote_percentage": "B (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "B": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: B\nThe application needs to:\n\nAccept text or image input (e.g., a photo of a question)\n\nGenerate a written answer and explanation\n\nThis requires"
+      ]
+    },
+    "explanation": "Community Consensus: B (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: B\nThe application needs to:\n\nAccept text or image input (e.g., a photo of a question)\n\nGenerate a written answer and explanation\n\nThis requires",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q116",
+    "question_number": 207,
+    "domain": 1,
+    "domain_name": "Fundamentals of AI and ML",
+    "prompt": "In which stage of the generative AI model lifecycle are tests performed to examine the model's accuracy?",
+    "options": {
+      "A": "Deployment",
+      "B": "Data selection",
+      "C": "Fine-tuning",
+      "D": "Evaluation"
+    },
+    "choices": [
+      "A) Deployment",
+      "B) Data selection",
+      "C) Fine-tuning",
+      "D) Evaluation"
+    ],
+    "answer": "D",
+    "contributor_answer": "D",
+    "community_consensus": {
+      "contributor_answer": "D",
+      "most_voted_answer": "D",
+      "vote_percentage": "D (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "D": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: D\nThe Evaluation stage of the generative AI model lifecycle is where you:\n\nTest the model's accuracy\n\nMeasure per"
+      ]
+    },
+    "explanation": "Community Consensus: D (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: D\nThe Evaluation stage of the generative AI model lifecycle is where you:\n\nTest the model's accuracy\n\nMeasure per",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q117",
+    "question_number": 208,
+    "domain": 2,
+    "domain_name": "Fundamentals of Generative AI",
+    "prompt": "Which statement correctly describes embeddings in generative AI?",
+    "options": {
+      "A": "Embeddings represent data as high-dimensional vectors that capture semantic relationships.",
+      "B": "Embeddings is a technique that searches data to find the most helpful information to answer natural language questions.",
+      "C": "Embeddings reduce the hardware requirements of a model by using a less precise data type for the weights and activations.",
+      "D": "Embeddings provide the ability to store and retrieve data for generative AI applications."
+    },
+    "choices": [
+      "A) Embeddings represent data as high-dimensional vectors that capture semantic relationships.",
+      "B) Embeddings is a technique that searches data to find the most helpful information to answer natural language questions.",
+      "C) Embeddings reduce the hardware requirements of a model by using a less precise data type for the weights and activations.",
+      "D) Embeddings provide the ability to store and retrieve data for generative AI applications."
+    ],
+    "answer": "A",
+    "contributor_answer": "A",
+    "community_consensus": {
+      "contributor_answer": "A",
+      "most_voted_answer": "A",
+      "vote_percentage": "A (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "A": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: A\nIn generative AI, embeddings are used to:\n\nRepresent text, images, or other data types as numeric vectors in a"
+      ]
+    },
+    "explanation": "Community Consensus: A (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: A\nIn generative AI, embeddings are used to:\n\nRepresent text, images, or other data types as numeric vectors in a",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q118",
+    "question_number": 209,
+    "domain": 2,
+    "domain_name": "Fundamentals of Generative AI",
+    "prompt": "A company wants to add generative AI functionality to its application by integrating a large language model (LLM). The responses from the LLM must be as deterministic and as stable as possible.\n\nWhich solution meets these requirements?",
+    "options": {
+      "A": "Configure the application to automatically set the temperature parameter to 0 when submitting the prompt to the LLM.",
+      "B": "Configure the application to automatically add \"make your response deterministic\" at the end of the prompt before submitting the prompt to the LLM.",
+      "C": "Configure the application to automatically add \"make your response deterministic\" at the beginning of the prompt before submitting the prompt to the LLM.",
+      "D": "Configure the application to automatically set the temperature parameter to 1 when submitting the prompt to the LLM."
+    },
+    "choices": [
+      "A) Configure the application to automatically set the temperature parameter to 0 when submitting the prompt to the LLM.",
+      "B) Configure the application to automatically add \"make your response deterministic\" at the end of the prompt before submitting the prompt to the LLM.",
+      "C) Configure the application to automatically add \"make your response deterministic\" at the beginning of the prompt before submitting the prompt to the LLM.",
+      "D) Configure the application to automatically set the temperature parameter to 1 when submitting the prompt to the LLM."
+    ],
+    "answer": "A",
+    "contributor_answer": "A",
+    "community_consensus": {
+      "contributor_answer": "A",
+      "most_voted_answer": "A",
+      "vote_percentage": "A (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "A": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: A\nThe temperature parameter in large language models (LLMs) controls the randomness of the output:\n\nLower tempera"
+      ]
+    },
+    "explanation": "Community Consensus: A (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: A\nThe temperature parameter in large language models (LLMs) controls the randomness of the output:\n\nLower tempera",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q119",
+    "question_number": 210,
+    "domain": 1,
+    "domain_name": "Fundamentals of AI and ML",
+    "prompt": "A company needs to select a generative AI model to build an application. The application must provide responses to users in real time.\n\nWhich model characteristic should the company consider to meet these requirements?",
+    "options": {
+      "A": "Model complexity",
+      "B": "Innovation speed",
+      "C": "Inference speed",
+      "D": "Training time"
+    },
+    "choices": [
+      "A) Model complexity",
+      "B) Innovation speed",
+      "C) Inference speed",
+      "D) Training time"
+    ],
+    "answer": "C",
+    "contributor_answer": "C",
+    "community_consensus": {
+      "contributor_answer": "C",
+      "most_voted_answer": "C",
+      "vote_percentage": "C (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "C": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: C\nTo deliver real-time responses in a generative AI application, the key model characteristic is:\n\n\u2705 Inference sp"
+      ]
+    },
+    "explanation": "Community Consensus: C (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: C\nTo deliver real-time responses in a generative AI application, the key model characteristic is:\n\n\u2705 Inference sp",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q120",
+    "question_number": 211,
+    "domain": 2,
+    "domain_name": "Fundamentals of Generative AI",
+    "prompt": "Which term refers to the instructions given to foundation models (FMs) so that the FMs provide a more accurate response to a question?",
+    "options": {
+      "A": "Prompt",
+      "B": "Direction",
+      "C": "Dialog",
+      "D": "Translation"
+    },
+    "choices": [
+      "A) Prompt",
+      "B) Direction",
+      "C) Dialog",
+      "D) Translation"
+    ],
+    "answer": "A",
+    "contributor_answer": "A",
+    "community_consensus": {
+      "contributor_answer": "A",
+      "most_voted_answer": "A",
+      "vote_percentage": "A (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "A": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: A\nIn the context of generative AI and foundation models (FMs), a prompt is:\n\nThe input or instruction you give to"
+      ]
+    },
+    "explanation": "Community Consensus: A (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: A\nIn the context of generative AI and foundation models (FMs), a prompt is:\n\nThe input or instruction you give to",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q121",
+    "question_number": 212,
+    "domain": 4,
+    "domain_name": "Guidelines for Responsible AI",
+    "prompt": "A retail company wants to build an ML model to recommend products to customers. The company wants to build the model based on responsible practices.\n\nWhich practice should the company apply when collecting data to decrease model bias?",
+    "options": {
+      "A": "Use data from only customers who match the demographics of the company's overall customer base.",
+      "B": "Collect data from customers who have a past purchase history.",
+      "C": "Ensure that the data is balanced and collected from a diverse group.",
+      "D": "Ensure that the data is from a publicly available dataset."
+    },
+    "choices": [
+      "A) Use data from only customers who match the demographics of the company's overall customer base.",
+      "B) Collect data from customers who have a past purchase history.",
+      "C) Ensure that the data is balanced and collected from a diverse group.",
+      "D) Ensure that the data is from a publicly available dataset."
+    ],
+    "answer": "C",
+    "contributor_answer": "C",
+    "community_consensus": {
+      "contributor_answer": "C",
+      "most_voted_answer": "C",
+      "vote_percentage": "C (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "C": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: C\nTo build a responsible ML model and reduce bias, the company should:\n\nCollect data from a diverse and represent"
+      ]
+    },
+    "explanation": "Community Consensus: C (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: C\nTo build a responsible ML model and reduce bias, the company should:\n\nCollect data from a diverse and represent",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q123",
+    "question_number": 213,
+    "domain": 1,
+    "domain_name": "Fundamentals of AI and ML",
+    "prompt": "An AI practitioner is evaluating the performance of an Amazon SageMaker model. The AI practitioner must choose a performance metric. The metric must show the ratio of the number of correctly classified items to the total number of correctly and incorrectly classified items.\n\nWhich metric meets these requirements?",
+    "options": {
+      "A": "Accuracy",
+      "B": "Precision",
+      "C": "F1 score",
+      "D": "Recall"
+    },
+    "choices": [
+      "A) Accuracy",
+      "B) Precision",
+      "C) F1 score",
+      "D) Recall"
+    ],
+    "answer": "A",
+    "contributor_answer": "A",
+    "community_consensus": {
+      "contributor_answer": "A",
+      "most_voted_answer": "A",
+      "vote_percentage": "A (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "A": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: A\nAccuracy measures the proportion of correct predictions (both true positives and true negatives) out of all pre"
+      ]
+    },
+    "explanation": "Community Consensus: A (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: A\nAccuracy measures the proportion of correct predictions (both true positives and true negatives) out of all pre",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q125",
+    "question_number": 214,
+    "domain": 1,
+    "domain_name": "Fundamentals of AI and ML",
+    "prompt": "An ecommerce company receives multiple gigabytes of customer data daily. The company uses the data to train an ML model to forecast future product demand. The company needs a solution to perform inferences once each day.\n\nWhich inference type meets these requirements?",
+    "options": {
+      "A": "Batch inference",
+      "B": "Asynchronous inference",
+      "C": "Real-time inference",
+      "D": "Serverless inference"
+    },
+    "choices": [
+      "A) Batch inference",
+      "B) Asynchronous inference",
+      "C) Real-time inference",
+      "D) Serverless inference"
+    ],
+    "answer": "A",
+    "contributor_answer": "A",
+    "community_consensus": {
+      "contributor_answer": "A",
+      "most_voted_answer": "A",
+      "vote_percentage": "A (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "A": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: A\nBatch inference is the best choice when:\n\nYou process large volumes of data at once\n\nLow latency is not require"
+      ]
+    },
+    "explanation": "Community Consensus: A (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: A\nBatch inference is the best choice when:\n\nYou process large volumes of data at once\n\nLow latency is not require",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q126",
+    "question_number": 215,
+    "domain": 4,
+    "domain_name": "Guidelines for Responsible AI",
+    "prompt": "A company has developed a generative AI model for customer segmentation. The model has been deployed in the company's production environment for a long time. The company recently noticed some inconsistency in the model's responses. The company wants to evaluate model bias and drift.\n\nWhich AWS service or feature meets these requirements?",
+    "options": {
+      "A": "Amazon SageMaker Model Monitor",
+      "B": "Amazon SageMaker Clarify",
+      "C": "Amazon SageMaker Model Cards",
+      "D": "Amazon SageMaker Feature Store"
+    },
+    "choices": [
+      "A) Amazon SageMaker Model Monitor",
+      "B) Amazon SageMaker Clarify",
+      "C) Amazon SageMaker Model Cards",
+      "D) Amazon SageMaker Feature Store"
+    ],
+    "answer": "A",
+    "contributor_answer": "A",
+    "community_consensus": {
+      "contributor_answer": "A",
+      "most_voted_answer": "A",
+      "vote_percentage": "A (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "A": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: A\nAmazon SageMaker Model Monitor is designed to:\n\nContinuously monitor models in production\n\nDetect data drift, m"
+      ]
+    },
+    "explanation": "Community Consensus: A (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: A\nAmazon SageMaker Model Monitor is designed to:\n\nContinuously monitor models in production\n\nDetect data drift, m",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q127",
+    "question_number": 216,
+    "domain": 5,
+    "domain_name": "Security, Compliance, and Governance",
+    "prompt": "A company has signed up for Amazon Bedrock access to build applications. The company wants to restrict employee access to specific models available on Amazon Bedrock.\n\nWhich solution meets these requirements?",
+    "options": {
+      "A": "Use AWS Identity and Access Management (IAM) policies to restrict model access.",
+      "B": "Use AWS Security Token Service (AWS STS) to generate temporary credentials for model use.",
+      "C": "Use AWS Identity and Access Management (IAM) service roles to restrict model subscription.",
+      "D": "Use Amazon Inspector to monitor model access."
+    },
+    "choices": [
+      "A) Use AWS Identity and Access Management (IAM) policies to restrict model access.",
+      "B) Use AWS Security Token Service (AWS STS) to generate temporary credentials for model use.",
+      "C) Use AWS Identity and Access Management (IAM) service roles to restrict model subscription.",
+      "D) Use Amazon Inspector to monitor model access."
+    ],
+    "answer": "A",
+    "contributor_answer": "A",
+    "community_consensus": {
+      "contributor_answer": "A",
+      "most_voted_answer": "A",
+      "vote_percentage": "A (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "A": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: A\nTo control access to specific foundation models (FMs) in Amazon Bedrock, the correct and supported approach is"
+      ]
+    },
+    "explanation": "Community Consensus: A (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: A\nTo control access to specific foundation models (FMs) in Amazon Bedrock, the correct and supported approach is",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q128",
+    "question_number": 217,
+    "domain": 1,
+    "domain_name": "Fundamentals of AI and ML",
+    "prompt": "Which ML technique uses training data that is labeled with the correct output values?",
+    "options": {
+      "A": "Supervised learning",
+      "B": "Unsupervised learning",
+      "C": "Reinforcement learning",
+      "D": "Transfer learning"
+    },
+    "choices": [
+      "A) Supervised learning",
+      "B) Unsupervised learning",
+      "C) Reinforcement learning",
+      "D) Transfer learning"
+    ],
+    "answer": "A",
+    "contributor_answer": "A",
+    "community_consensus": {
+      "contributor_answer": "A",
+      "most_voted_answer": "A",
+      "vote_percentage": "A (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "A": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: A\nSupervised learning is a machine learning technique that:\n\nUses labeled training data, meaning each input examp"
+      ]
+    },
+    "explanation": "Community Consensus: A (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: A\nSupervised learning is a machine learning technique that:\n\nUses labeled training data, meaning each input examp",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q129",
+    "question_number": 218,
+    "domain": 2,
+    "domain_name": "Fundamentals of Generative AI",
+    "prompt": "Which large language model (LLM) parameter controls the number of possible next words or tokens considered at each step of the text generation process?",
+    "options": {
+      "A": "Maximum tokens",
+      "B": "Top K",
+      "C": "Temperature",
+      "D": "Batch size"
+    },
+    "choices": [
+      "A) Maximum tokens",
+      "B) Top K",
+      "C) Temperature",
+      "D) Batch size"
+    ],
+    "answer": "B",
+    "contributor_answer": "B",
+    "community_consensus": {
+      "contributor_answer": "B",
+      "most_voted_answer": "B",
+      "vote_percentage": "B (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "B": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: B\nTop K is a decoding parameter used during text generation by large language models (LLMs) that:\n\nLimits the num"
+      ]
+    },
+    "explanation": "Community Consensus: B (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: B\nTop K is a decoding parameter used during text generation by large language models (LLMs) that:\n\nLimits the num",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q130",
+    "question_number": 219,
+    "domain": 2,
+    "domain_name": "Fundamentals of Generative AI",
+    "prompt": "A company is making a chatbot. The chatbot uses Amazon Lex and Amazon OpenSearch Service. The chatbot uses the company's private data to answer questions. The company needs to convert the data into a vector representation before storing the data in a database.\n\nWhich type of foundation model (FM) meets these requirements?",
+    "options": {
+      "A": "Text completion model",
+      "B": "Instruction following model",
+      "C": "Text embeddings model",
+      "D": "Image generation model"
+    },
+    "choices": [
+      "A) Text completion model",
+      "B) Instruction following model",
+      "C) Text embeddings model",
+      "D) Image generation model"
+    ],
+    "answer": "C",
+    "contributor_answer": "C",
+    "community_consensus": {
+      "contributor_answer": "C",
+      "most_voted_answer": "C",
+      "vote_percentage": "C (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "C": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: C\nTo convert text data into a vector representation (a necessary step for enabling semantic search or retrieval i"
+      ]
+    },
+    "explanation": "Community Consensus: C (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: C\nTo convert text data into a vector representation (a necessary step for enabling semantic search or retrieval i",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q132",
+    "question_number": 220,
+    "domain": 3,
+    "domain_name": "Applications of Foundation Models",
+    "prompt": "A bank is fine-tuning a large language model (LLM) on Amazon Bedrock to assist customers with questions about their loans. The bank wants to ensure that the model does not reveal any private customer data.\n\nWhich solution meets these requirements?",
+    "options": {
+      "A": "Use Amazon Bedrock Guardrails.",
+      "B": "Remove personally identifiable information (PII) from the customer data before fine-tuning the LLM.",
+      "C": "Increase the Top-K parameter of the LLM.",
+      "D": "Store customer data in Amazon S3. Encrypt the data before fine-tuning the LLM."
+    },
+    "choices": [
+      "A) Use Amazon Bedrock Guardrails.",
+      "B) Remove personally identifiable information (PII) from the customer data before fine-tuning the LLM.",
+      "C) Increase the Top-K parameter of the LLM.",
+      "D) Store customer data in Amazon S3. Encrypt the data before fine-tuning the LLM."
+    ],
+    "answer": "B",
+    "contributor_answer": "B",
+    "community_consensus": {
+      "contributor_answer": "B",
+      "most_voted_answer": "B",
+      "vote_percentage": "B (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "B": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: B\nWhen fine-tuning a large language model (LLM) with customer data, it is essential to ensure data privacy and co"
+      ]
+    },
+    "explanation": "Community Consensus: B (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: B\nWhen fine-tuning a large language model (LLM) with customer data, it is essential to ensure data privacy and co",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q133",
+    "question_number": 221,
+    "domain": 2,
+    "domain_name": "Fundamentals of Generative AI",
+    "prompt": "A grocery store wants to create a chatbot to help customers find products in the store. The chatbot must check the inventory in real time and provide the product location in the store.\n\nWhich prompt engineering technique should the store use to build the chatbot?",
+    "options": {
+      "A": "Zero-shot prompting",
+      "B": "Few-shot prompting",
+      "C": "Least-to-most prompting",
+      "D": "Reasoning and acting (ReAct) prompting"
+    },
+    "choices": [
+      "A) Zero-shot prompting",
+      "B) Few-shot prompting",
+      "C) Least-to-most prompting",
+      "D) Reasoning and acting (ReAct) prompting"
+    ],
+    "answer": "D",
+    "contributor_answer": "D",
+    "community_consensus": {
+      "contributor_answer": "D",
+      "most_voted_answer": "D",
+      "vote_percentage": "D (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "D": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: D\neAct prompting (Reasoning and Acting) is a prompt engineering technique that:\n\nCombines step-by-step reasoning"
+      ]
+    },
+    "explanation": "Community Consensus: D (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: D\neAct prompting (Reasoning and Acting) is a prompt engineering technique that:\n\nCombines step-by-step reasoning",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q134",
+    "question_number": 222,
+    "domain": 1,
+    "domain_name": "Fundamentals of AI and ML",
+    "prompt": "A company uses a third-party model on Amazon Bedrock to analyze confidential documents. The company is concerned about data privacy.\n\nWhich statement describes how Amazon Bedrock protects data privacy?",
+    "options": {
+      "A": "User inputs and model outputs are anonymized and shared with third-party model providers.",
+      "B": "User inputs and model outputs are not shared with any third-party model providers.",
+      "C": "User inputs are kept confidential, but model outputs are shared with third-party model providers.",
+      "D": "User inputs and model outputs are redacted before the inputs and outputs are shared with third-party model providers."
+    },
+    "choices": [
+      "A) User inputs and model outputs are anonymized and shared with third-party model providers.",
+      "B) User inputs and model outputs are not shared with any third-party model providers.",
+      "C) User inputs are kept confidential, but model outputs are shared with third-party model providers.",
+      "D) User inputs and model outputs are redacted before the inputs and outputs are shared with third-party model providers."
+    ],
+    "answer": "B",
+    "contributor_answer": "B",
+    "community_consensus": {
+      "contributor_answer": "B",
+      "most_voted_answer": "B",
+      "vote_percentage": "B (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "B": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: B\nWhen you use Amazon Bedrock, your data privacy is protected as follows:\n\nInputs (your prompts or documents) and"
+      ]
+    },
+    "explanation": "Community Consensus: B (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: B\nWhen you use Amazon Bedrock, your data privacy is protected as follows:\n\nInputs (your prompts or documents) and",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q136",
+    "question_number": 223,
+    "domain": 1,
+    "domain_name": "Fundamentals of AI and ML",
+    "prompt": "An animation company wants to provide subtitles for its content.\n\nWhich AWS service meets this requirement?",
+    "options": {
+      "A": "Amazon Comprehend",
+      "B": "Amazon Polly",
+      "C": "Amazon Transcribe",
+      "D": "Amazon Translate"
+    },
+    "choices": [
+      "A) Amazon Comprehend",
+      "B) Amazon Polly",
+      "C) Amazon Transcribe",
+      "D) Amazon Translate"
+    ],
+    "answer": "C",
+    "contributor_answer": "C",
+    "community_consensus": {
+      "contributor_answer": "C",
+      "most_voted_answer": "C",
+      "vote_percentage": "C (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "C": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: C\nAmazon Transcribe is an AWS service that:\n\nConverts speech to text\n\nIs ideal for generating subtitles or captio"
+      ]
+    },
+    "explanation": "Community Consensus: C (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: C\nAmazon Transcribe is an AWS service that:\n\nConverts speech to text\n\nIs ideal for generating subtitles or captio",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q137",
+    "question_number": 224,
+    "domain": 1,
+    "domain_name": "Fundamentals of AI and ML",
+    "prompt": "An ecommerce company wants to group customers based on their purchase history and preferences to personalize the user experience of the company's application.\n\nWhich ML technique should the company use?",
+    "options": {
+      "A": "Classification",
+      "B": "Clustering",
+      "C": "Regression",
+      "D": "Content generation"
+    },
+    "choices": [
+      "A) Classification",
+      "B) Clustering",
+      "C) Regression",
+      "D) Content generation"
+    ],
+    "answer": "B",
+    "contributor_answer": "B",
+    "community_consensus": {
+      "contributor_answer": "B",
+      "most_voted_answer": "B",
+      "vote_percentage": "B (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "B": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: B\nClustering is an unsupervised machine learning technique used to:\n\nGroup similar items (in this case, customers"
+      ]
+    },
+    "explanation": "Community Consensus: B (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: B\nClustering is an unsupervised machine learning technique used to:\n\nGroup similar items (in this case, customers",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q138",
+    "question_number": 225,
+    "domain": 2,
+    "domain_name": "Fundamentals of Generative AI",
+    "prompt": "A company wants to control employee access to publicly available foundation models (FMs).\n\nWhich solution meets these requirements?",
+    "options": {
+      "A": "Analyze cost and usage reports in AWS Cost Explorer.",
+      "B": "Download AWS security and compliance documents from AWS Artifact.",
+      "C": "Configure Amazon SageMaker JumpStart to restrict discoverable FMs.",
+      "D": "Build a hybrid search solution by using Amazon OpenSearch Service."
+    },
+    "choices": [
+      "A) Analyze cost and usage reports in AWS Cost Explorer.",
+      "B) Download AWS security and compliance documents from AWS Artifact.",
+      "C) Configure Amazon SageMaker JumpStart to restrict discoverable FMs.",
+      "D) Build a hybrid search solution by using Amazon OpenSearch Service."
+    ],
+    "answer": "C",
+    "contributor_answer": "C",
+    "community_consensus": {
+      "contributor_answer": "C",
+      "most_voted_answer": "C",
+      "vote_percentage": "C (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "C": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: C\nAmazon SageMaker JumpStart provides access to a variety of pre-trained foundation models (FMs). To control empl"
+      ]
+    },
+    "explanation": "Community Consensus: C (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: C\nAmazon SageMaker JumpStart provides access to a variety of pre-trained foundation models (FMs). To control empl",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q139",
+    "question_number": 226,
+    "domain": 1,
+    "domain_name": "Fundamentals of AI and ML",
+    "prompt": "A company has set up a translation tool to help its customer service team handle issues from customers around the world. The company wants to evaluate the performance of the translation tool. The company sets up a parallel data process that compares the responses from the tool to responses from actual humans. Both sets of responses are generated on the same set of documents.\n\nWhich strategy should the company use to evaluate the translation tool?",
+    "options": {
+      "A": "Use the Bilingual Evaluation Understudy (BLEU) score to estimate the absolute translation quality of the two methods.",
+      "B": "Use the Bilingual Evaluation Understudy (BLEU) score to estimate the relative translation quality of the two methods.",
+      "C": "Use the BERTScore to estimate the absolute translation quality of the two methods.",
+      "D": "Use the BERTScore to estimate the relative translation quality of the two methods."
+    },
+    "choices": [
+      "A) Use the Bilingual Evaluation Understudy (BLEU) score to estimate the absolute translation quality of the two methods.",
+      "B) Use the Bilingual Evaluation Understudy (BLEU) score to estimate the relative translation quality of the two methods.",
+      "C) Use the BERTScore to estimate the absolute translation quality of the two methods.",
+      "D) Use the BERTScore to estimate the relative translation quality of the two methods."
+    ],
+    "answer": "B",
+    "contributor_answer": "B",
+    "community_consensus": {
+      "contributor_answer": "B",
+      "most_voted_answer": "B",
+      "vote_percentage": "B (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "B": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: B\nThe BLEU score (Bilingual Evaluation Understudy) is a widely used automatic metric for evaluating the quality o"
+      ]
+    },
+    "explanation": "Community Consensus: B (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: B\nThe BLEU score (Bilingual Evaluation Understudy) is a widely used automatic metric for evaluating the quality o",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q140",
+    "question_number": 227,
+    "domain": 2,
+    "domain_name": "Fundamentals of Generative AI",
+    "prompt": "An AI practitioner wants to generate more diverse and more creative outputs from a large language model (LLM).\n\nHow should the AI practitioner adjust the inference parameter?",
+    "options": {
+      "A": "Increase the temperature value.",
+      "B": "Decrease the Top K value.",
+      "C": "Increase the response length.",
+      "D": "Decrease the prompt length."
+    },
+    "choices": [
+      "A) Increase the temperature value.",
+      "B) Decrease the Top K value.",
+      "C) Increase the response length.",
+      "D) Decrease the prompt length."
+    ],
+    "answer": "A",
+    "contributor_answer": "A",
+    "community_consensus": {
+      "contributor_answer": "A",
+      "most_voted_answer": "A",
+      "vote_percentage": "A (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "A": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: A\nIn large language models (LLMs), the temperature parameter controls the randomness of the output:\n\nHigher tempe"
+      ]
+    },
+    "explanation": "Community Consensus: A (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: A\nIn large language models (LLMs), the temperature parameter controls the randomness of the output:\n\nHigher tempe",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q141",
+    "question_number": 228,
+    "domain": 1,
+    "domain_name": "Fundamentals of AI and ML",
+    "prompt": "A company has developed custom computer vision models. The company needs a user-friendly interface for data labeling to minimize model mistakes on new real-world data.\n\nWhich AWS service, feature, or tool meets these requirements?",
+    "options": {
+      "A": "Amazon SageMaker Ground Truth",
+      "B": "Amazon SageMaker Canvas",
+      "C": "Amazon Bedrock playground",
+      "D": "Amazon Bedrock Agents"
+    },
+    "choices": [
+      "A) Amazon SageMaker Ground Truth",
+      "B) Amazon SageMaker Canvas",
+      "C) Amazon Bedrock playground",
+      "D) Amazon Bedrock Agents"
+    ],
+    "answer": "A",
+    "contributor_answer": "A",
+    "community_consensus": {
+      "contributor_answer": "A",
+      "most_voted_answer": "A",
+      "vote_percentage": "A (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "A": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: A\nAmazon SageMaker Ground Truth is designed specifically for:\n\nData labeling at scale (including for computer vis"
+      ]
+    },
+    "explanation": "Community Consensus: A (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: A\nAmazon SageMaker Ground Truth is designed specifically for:\n\nData labeling at scale (including for computer vis",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q142",
+    "question_number": 229,
+    "domain": 4,
+    "domain_name": "Guidelines for Responsible AI",
+    "prompt": "A company is integrating AI into its employee recruitment and hiring solution. The company wants to mitigate bias risks and ensure responsible AI practices while prioritizing equitable hiring decisions.\n\nWhich core dimensions of responsible AI should the company consider? (Choose two.)",
+    "options": {
+      "A": "Fairness",
+      "B": "Tolerance",
+      "C": "Flexibility",
+      "D": "Open source",
+      "E": "Transparency"
+    },
+    "choices": [
+      "A) Fairness",
+      "B) Tolerance",
+      "C) Flexibility",
+      "D) Open source",
+      "E) Transparency"
+    ],
+    "answer": "AE",
+    "contributor_answer": "AE",
+    "community_consensus": {
+      "contributor_answer": "AE",
+      "most_voted_answer": "AE",
+      "vote_percentage": "AE (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "AE": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: AE\n\u2705 Fairness\nEnsures the model does not discriminate based on gender, race, age, or other protected attributes."
+      ]
+    },
+    "explanation": "Community Consensus: AE (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: AE\n\u2705 Fairness\nEnsures the model does not discriminate based on gender, race, age, or other protected attributes.",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q143",
+    "question_number": 230,
+    "domain": 1,
+    "domain_name": "Fundamentals of AI and ML",
+    "prompt": "A financial company has deployed an ML model to predict customer churn. The model has been running in production for 1 week. The company wants to evaluate how accurately the model predicts churn compared to actual customer behavior.\n\nWhich metric meets these requirements?",
+    "options": {
+      "A": "Root mean squared error (RMSE)",
+      "B": "Return on investment (ROI)",
+      "C": "F1 score",
+      "D": "Bilingual Evaluation Understudy (BLEU) score"
+    },
+    "choices": [
+      "A) Root mean squared error (RMSE)",
+      "B) Return on investment (ROI)",
+      "C) F1 score",
+      "D) Bilingual Evaluation Understudy (BLEU) score"
+    ],
+    "answer": "C",
+    "contributor_answer": "C",
+    "community_consensus": {
+      "contributor_answer": "C",
+      "most_voted_answer": "C",
+      "vote_percentage": "C (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "C": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: C\nThe F1 score is the most appropriate metric when evaluating a binary classification model like churn prediction"
+      ]
+    },
+    "explanation": "Community Consensus: C (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: C\nThe F1 score is the most appropriate metric when evaluating a binary classification model like churn prediction",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q144",
+    "question_number": 231,
+    "domain": 2,
+    "domain_name": "Fundamentals of Generative AI",
+    "prompt": "A company has a generative AI application that uses a pre-trained foundation model (FM) on Amazon Bedrock. The company wants the FM to include more context by using company information.\n\nWhich solution meets these requirements MOST cost-effectively?",
+    "options": {
+      "A": "Use Amazon Bedrock Knowledge Bases.",
+      "B": "Choose a different FM on Amazon Bedrock.",
+      "C": "Use Amazon Bedrock Agents.",
+      "D": "Deploy a custom model on Amazon Bedrock."
+    },
+    "choices": [
+      "A) Use Amazon Bedrock Knowledge Bases.",
+      "B) Choose a different FM on Amazon Bedrock.",
+      "C) Use Amazon Bedrock Agents.",
+      "D) Deploy a custom model on Amazon Bedrock."
+    ],
+    "answer": "A",
+    "contributor_answer": "A",
+    "community_consensus": {
+      "contributor_answer": "A",
+      "most_voted_answer": "A",
+      "vote_percentage": "A (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "A": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: A\nAmazon Bedrock Knowledge Bases is the most cost-effective way to add company-specific context to a pre-trained"
+      ]
+    },
+    "explanation": "Community Consensus: A (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: A\nAmazon Bedrock Knowledge Bases is the most cost-effective way to add company-specific context to a pre-trained",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q145",
+    "question_number": 232,
+    "domain": 1,
+    "domain_name": "Fundamentals of AI and ML",
+    "prompt": "HOTSPOT\n-\n\nA company is using Amazon SageMaker to develop AI models.\n\nSelect the correct SageMaker feature or resource from the following list for each step in the AI model lifecycle workflow. Each SageMaker feature or resource should be selected one time or not at all.\n\n//IMG//",
+    "options": {},
+    "choices": [],
+    "answer": "A",
+    "contributor_answer": "A",
+    "community_consensus": {
+      "contributor_answer": "A",
+      "most_voted_answer": "A",
+      "vote_percentage": "A (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "A": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Managing different versions of the model: SageMaker Model Registry\nUsing the current model to make predictions: SageMaker Serverle"
+      ]
+    },
+    "explanation": "Community Consensus: A (100%).\n\nDiscussion & Rationale:\nanon (+1): Managing different versions of the model: SageMaker Model Registry\nUsing the current model to make predictions: SageMaker Serverle",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q147",
+    "question_number": 233,
+    "domain": 4,
+    "domain_name": "Guidelines for Responsible AI",
+    "prompt": "A food service company wants to collect a dataset to predict customer food preferences. The company wants to ensure that the food preferences of all demographics are included in the data.\n\nWhich dataset characteristic does this scenario present?",
+    "options": {
+      "A": "Accuracy",
+      "B": "Diversity",
+      "C": "Recency bias",
+      "D": "Reliability"
+    },
+    "choices": [
+      "A) Accuracy",
+      "B) Diversity",
+      "C) Recency bias",
+      "D) Reliability"
+    ],
+    "answer": "B",
+    "contributor_answer": "B",
+    "community_consensus": {
+      "contributor_answer": "B",
+      "most_voted_answer": "B",
+      "vote_percentage": "B (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "B": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: B\nDiversity refers to ensuring that the dataset represents a w"
+      ]
+    },
+    "explanation": "Community Consensus: B (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: B\nDiversity refers to ensuring that the dataset represents a w",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q148",
+    "question_number": 234,
+    "domain": 2,
+    "domain_name": "Fundamentals of Generative AI",
+    "prompt": "A company wants to create a chatbot that answers questions about human resources policies. The company is using a large language model (LLM) and has a large digital documentation base.\n\nWhich technique should the company use to optimize the generated responses?",
+    "options": {
+      "A": "Use Retrieval Augmented Generation (RAG).",
+      "B": "Use few-shot prompting.",
+      "C": "Set the temperature to 1.",
+      "D": "Decrease the token size."
+    },
+    "choices": [
+      "A) Use Retrieval Augmented Generation (RAG).",
+      "B) Use few-shot prompting.",
+      "C) Set the temperature to 1.",
+      "D) Decrease the token size."
+    ],
+    "answer": "A",
+    "contributor_answer": "A",
+    "community_consensus": {
+      "contributor_answer": "A",
+      "most_voted_answer": "A",
+      "vote_percentage": "A (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "A": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: A\nRetrieval Augmented Generation (RAG) is a technique that enh"
+      ]
+    },
+    "explanation": "Community Consensus: A (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: A\nRetrieval Augmented Generation (RAG) is a technique that enh",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q149",
+    "question_number": 235,
+    "domain": 1,
+    "domain_name": "Fundamentals of AI and ML",
+    "prompt": "An education company is building a chatbot whose target audience is teenagers. The company is training a custom large language model (LLM). The company wants the chatbot to speak in the target audience's language style by using creative spelling and shortened words.\n\nWhich metric will assess the LLM's performance?",
+    "options": {
+      "A": "F1 score",
+      "B": "BERTScore",
+      "C": "Recall-Oriented Understudy for Gisting Evaluation (ROUGE)",
+      "D": "Bilingual Evaluation Understudy (BLEU) score"
+    },
+    "choices": [
+      "A) F1 score",
+      "B) BERTScore",
+      "C) Recall-Oriented Understudy for Gisting Evaluation (ROUGE)",
+      "D) Bilingual Evaluation Understudy (BLEU) score"
+    ],
+    "answer": "D",
+    "contributor_answer": "D",
+    "community_consensus": {
+      "contributor_answer": "D",
+      "most_voted_answer": "D",
+      "vote_percentage": "D (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "D": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: D\nThe BLEU score is a commonly used metric for evaluating the"
+      ]
+    },
+    "explanation": "Community Consensus: D (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: D\nThe BLEU score is a commonly used metric for evaluating the",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
+  },
+  {
+    "id": "AIF-C01-EP-Q150",
+    "question_number": 236,
+    "domain": 1,
+    "domain_name": "Fundamentals of AI and ML",
+    "prompt": "A customer service team is developing an application to analyze customer feedback and automatically classify the feedback into different categories. The categories include product quality, customer service, and delivery experience.\n\nWhich A1 concept does this scenario present?",
+    "options": {
+      "A": "Computer vision",
+      "B": "Natural language processing (NLP)",
+      "C": "Recommendation systems",
+      "D": "Fraud detection"
+    },
+    "choices": [
+      "A) Computer vision",
+      "B) Natural language processing (NLP)",
+      "C) Recommendation systems",
+      "D) Fraud detection"
+    ],
+    "answer": "B",
+    "contributor_answer": "B",
+    "community_consensus": {
+      "contributor_answer": "B",
+      "most_voted_answer": "B",
+      "vote_percentage": "B (100%)",
+      "total_votes_recorded": 5,
+      "vote_distribution": {
+        "B": 5
+      },
+      "has_controversy": false,
+      "discussions": [
+        "anon (+1): Selected Answer: B\nThis scenario involves analyzing and classifying text-based"
+      ]
+    },
+    "explanation": "Community Consensus: B (100%).\n\nDiscussion & Rationale:\nanon (+1): Selected Answer: B\nThis scenario involves analyzing and classifying text-based",
+    "question_link": "",
+    "sources": [
+      "Community_Consensus_Pool",
+      "Candidate_Practice_Suite"
+    ]
   }
 ]
