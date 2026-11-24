@@ -54,6 +54,12 @@
 * **`AWS Device Farm`:** خدمة اختبار تطبيقات الهواتف الذكية (`Android` / `iOS`) وتطبيقات الويب على **مئات الهواتف الحقيقية والمتصفحات الفعلية (`Real Physical Devices & Browsers`)** المستضافة في سحابة AWS، وذلك لاكتشاف أعطال الأداء والتوافق قبل إطلاق التطبيق للمستخدمين.
 * **`AWS AppSync`:** خدمة مُدارة و `Serverless` لإنشاء واجهات برمجة تطبيقات من نوع **`GraphQL APIs`**، تُمكّن التطبيقات من جلب البيانات بدقة من مصادر متعددة (`DynamoDB`, `Lambda`, `Aurora`) مع دعم **التحديثات اللحظية (`Real-time Subscriptions`)** و**مزامنة البيانات عند انقطاع الإنترنت (`Offline Data Sync`)**.
 
+### 5. حوسبة المستخدم النهائي وتطبيقات الأعمال (`End-User Computing & Business Applications`)
+* **`Amazon AppStream 2.0`:** خدمة مُدارة بالكامل **لبث تطبيقات سطح المكتب (`Application Streaming`)** بشكل آمن وفوري إلى أي جهاز عبر **متصفح الويب (`HTML5 Browser`)** دون الحاجة لإعادة كتابة التطبيق أو تثبيته على أجهزة المستخدمين. مثالية لتقديم برامج التصميم والهندسة الثقيلة (`CAD / 3D`) أو التطبيقات المؤسسية لفرق العمل عن بُعد.
+* **`Amazon WorkSpaces`:** خدمة مُدارة بالكامل لتوفير **أجهزة سطح مكتب افتراضية دائمة (`Persistent Cloud Virtual Desktops — DaaS`)** بنظام `Windows` أو `Linux` للموظفين عن بُعد، بحيث يحصل كل موظف على بيئة سطح مكتب كاملة وملفات محفوظة عبر الإنترنت.
+* **`Amazon Connect`:** خدمة **مركز اتصال سحابي (`Omnichannel Cloud Contact Center`)** مُدارة بالكامل وتعمل بنظام الدفع حسب الاستخدام (`Pay-as-you-go`) لإدارة مكالمات العملاء والدردشة مع دعم الذكاء الاصطناعي (`Amazon Lex`).
+* **`Amazon SES` (Simple Email Service) vs `Amazon Pinpoint`:** تُستخدم **`Amazon SES`** لإرسال واستقبال رسائل البريد الإلكتروني التجارية والتنبيهات بكثافة عالية وتكلفة منخفضة، بينما تُستخدم **`Amazon Pinpoint`** لإدارة الحملات التسويقية متعددة القنوات (`Email`, `SMS`, `Push`, `Voice`) وتتبع تفاعل العملاء (`Two-way Marketing Engagement`).
+
 ---
 
 ## ثالثاً: نقل البيانات والانتقال إلى السحابة (`Migration & Transfer`)
@@ -127,6 +133,9 @@
 | **Build and host full-stack web and mobile apps quickly with built-in CI/CD** | **`AWS Amplify`** |
 | **Test mobile and web apps across real physical Android/iOS devices in the cloud** | **`AWS Device Farm`** |
 | **Build serverless GraphQL APIs with real-time updates and offline sync** | **`AWS AppSync`** |
+| **Stream desktop applications securely to any web browser without rewriting** | **`Amazon AppStream 2.0`** |
+| **Provide persistent cloud-based virtual desktops (Windows/Linux) for remote employees** | **`Amazon WorkSpaces`** |
+| **Deploy a scalable, pay-as-you-go cloud contact center for customer support** | **`Amazon Connect`** |
 
 ---
 

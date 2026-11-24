@@ -45,6 +45,7 @@
 | **`Amazon SQS` vs `Amazon SNS`** | **`Amazon SQS`:** **طابور رسائل (`Message Queue — Pull`)** لفصل المكونات (`Decoupling`) ومنع فقدان الطلبات. | **`Amazon SNS`:** **خدمة نشر واشتراك (`Pub/Sub — Push`)** لإرسال الإشعارات (`Email`, `SMS`) لعدة مشتركين في وقت واحد. |
 | **`Gateway` vs `Interface VPC Endpoint`** | **`Gateway Endpoint`:** مجاني عبر `Route Table`، يدعم **`S3` و `DynamoDB` فقط**. | **`Interface Endpoint` (`PrivateLink`):** عبر `ENI` بـ `Private IP`، يدعم معظم خدمات AWS الأخرى. |
 | **`Amplify` vs `Device Farm` vs `AppSync`** | **`AWS Amplify`:** بناء واستضافة تطبيقات الويب والموبايل `Full-Stack`. | **`AWS Device Farm`:** اختبار التطبيقات على هواتف فعلية حقيقية.<br>**`AWS AppSync`:** واجهات **`GraphQL APIs`** لحظية و `Offline Sync`. |
+| **`AppStream 2.0` vs `WorkSpaces`** | **`Amazon AppStream 2.0`:** **بث تطبيقات سطح المكتب (`Application Streaming`)** عبر متصفح الويب فقط دون نظام تشغيل دائم للمستخدم. | **`Amazon WorkSpaces`:** **سطح مكتب افتراضي كامل ودائم (`Persistent Virtual Desktop — DaaS`)** بنظام `Windows` أو `Linux` للموظفين عن بُعد. |
 | **`AWS Budgets` vs `AWS Cost Explorer`** | **`AWS Budgets`:** وضع حدود مالية وإرسال **إنذارات تلقائية (`Alerts`)** عند تجاوز الميزانية. | **`AWS Cost Explorer`:** **الرسوم البيانية وتحليل الإنفاق التاريخي والتنبؤ المستقبلي (`Forecasting`)**. |
 | **`Health: Service` vs `Account Health`** | **`Service Health`:** الحالة العامة لجميع خدمات AWS عالمياً (متاح للجميع). | **`Account Health`:** تنبيهات مخصصة لحسابك حول الأعطال أو الصيانات التي تؤثر على مواردك. |
 

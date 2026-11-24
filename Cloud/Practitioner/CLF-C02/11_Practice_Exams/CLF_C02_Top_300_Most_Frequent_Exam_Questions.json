@@ -4849,50 +4849,6 @@
     "frequency": 3
   },
   {
-    "id": "CLF-U0161",
-    "prompt": "The owner of an E-Commerce application notices that the compute capacity requirements vary heavily from time to time. What makes AWS more economical than traditional data centers for this type of application?",
-    "choices": [
-      "A) AWS allows customers to launch powerful EC2 instances to handle spikes in load.",
-      "B) AWS allows customers to pay upfront to get bigger discounts.",
-      "C) AWS allows customers to launch and terminate EC2 instances based on demand.",
-      "D) AWS allows customers to choose cheaper types of EC2 instances that best fit their needs."
-    ],
-    "answer": "C",
-    "explanation": "AWS allows customers to launch and terminate EC2 instances based on real-time demand, so during low-traffic periods they stop paying for unused capacity, unlike traditional data centers where hardware sits idle regardless of utilization.\nLaunching powerful instances to handle spikes in load describes vertical scaling, which still results in over-provisioned and idle capacity during low-traffic periods and does not address the core economic inefficiency of traditional data centers. Paying upfront to get bigger discounts describes Reserved Instance pricing, which is a commitment-based model that reduces per-unit cost but does not eliminate the problem of paying for capacity during periods of low demand. Choosing cheaper instance types reduces the unit cost of compute but does not eliminate idle capacity costs, as the instances would still run and incur charges regardless of whether they are actively being used.",
-    "domain": 3,
-    "domain_name": "Cloud Technology and Services",
-    "topic": "Topic 3.1: Compute Services (EC2, Lambda, Elastic Beanstalk)",
-    "point_tested": "point:general_cloud_concept",
-    "sources": [
-      "CloudCertPrep_Questions",
-      "AwsCcpTrainer_Questions",
-      "DevOpsKing_Questions"
-    ],
-    "frequency": 3
-  },
-  {
-    "id": "CLF-U0166",
-    "prompt": "Your application requirements for CPU and RAM are changing in an unpredictable way. Which service can be used to dynamically adjust these resources based on load?",
-    "choices": [
-      "A) Auto Scaling.",
-      "B) ELB.",
-      "C) Amazon Route53.",
-      "D) Amazon Elastic Container Service."
-    ],
-    "answer": "A",
-    "explanation": "AWS Auto Scaling dynamically adjusts the number of EC2 instances based on real-time demand metrics such as CPU and memory utilization, automatically adding or removing capacity as workload requirements change.\nElastic Load Balancing distributes incoming traffic across multiple targets to improve availability and prevent any single instance from being overwhelmed, but it does not add or remove compute resources in response to changing CPU and RAM requirements. Amazon Route 53 is a DNS and traffic routing service that resolves domain names and directs users to application endpoints, and has no capability to provision or adjust compute resources. Amazon Elastic Container Service is a container orchestration service for running and managing containerised applications, and while it can scale tasks, it is not the purpose-built solution for dynamically adjusting EC2 compute resources based on unpredictable load.",
-    "domain": 3,
-    "domain_name": "Cloud Technology and Services",
-    "topic": "Topic 3.1: Compute Services (EC2, Lambda, Elastic Beanstalk)",
-    "point_tested": "point:general_cloud_concept",
-    "sources": [
-      "CloudCertPrep_Questions",
-      "AwsCcpTrainer_Questions",
-      "DevOpsKing_Questions"
-    ],
-    "frequency": 3
-  },
-  {
     "id": "CLF-U0186",
     "prompt": "Engineers are wasting a lot of time and effort managing batch computing software in traditional data centers. Which of the following AWS services allows them to easily run thousands of batch computing jobs?",
     "choices": [
@@ -5228,29 +5184,6 @@
     "frequency": 3
   },
   {
-    "id": "CLF-U0247",
-    "prompt": "Which of the following AWS services can be used to serve large amounts of online video content with the lowest possible latency? (Select TWO)",
-    "choices": [
-      "A) appGateway.",
-      "B) Amazon S3.",
-      "C) Amazon Elastic File System (EFS).",
-      "D) Amazon Glacier.",
-      "E) Amazom CloudFront."
-    ],
-    "answer": "B, E",
-    "explanation": "Amazon S3 stores video content with high durability and scalability, and Amazon CloudFront caches and delivers that content from edge locations worldwide with low latency, making them the purpose-built combination for serving large-scale online video efficiently.\nAWS Storage Gateway connects on-premises environments to AWS cloud storage for hybrid storage integration, and is not designed for serving or distributing online video content to end users. Amazon Elastic File System is a managed shared network file system for use with AWS compute services, and is not optimized for delivering large volumes of video content at low latency to a distributed audience. Amazon S3 Glacier is an archival storage service designed for data that is rarely accessed and can tolerate retrieval times of minutes to hours, making it entirely unsuitable for serving online video content that requires immediate low-latency delivery.",
-    "domain": 3,
-    "domain_name": "Cloud Technology and Services",
-    "topic": "Topic 3.3: Storage Services (S3, EBS, EFS, Storage Gateway)",
-    "point_tested": "point:storage_efs_shared_posix",
-    "sources": [
-      "CloudCertPrep_Questions",
-      "AwsCcpTrainer_Questions",
-      "DevOpsKing_Questions"
-    ],
-    "frequency": 3
-  },
-  {
     "id": "CLF-U0769",
     "prompt": "What does the Amazon S3 Intelligent-Tiering storage class offer?",
     "choices": [
@@ -5269,28 +5202,6 @@
       "Community Consensus Pool_Questions",
       "CloudCertPrep_Questions",
       "AwsCcpTrainer_Questions"
-    ],
-    "frequency": 3
-  },
-  {
-    "id": "CLF-U1459",
-    "prompt": "A company wants to store its files in the AWS Cloud. Users need to be able to download these files \ndirectly using a public URL. \nWhich AWS service or feature will meet this requirement?",
-    "choices": [
-      "A) Amazon Redshift",
-      "B) Amazon Elastic Block Store (Amazon EBS)",
-      "C) Amazon Elastic File System (Amazon EFS)",
-      "D) Amazon S3"
-    ],
-    "answer": "D",
-    "explanation": "Amazon S3 (Simple Storage Service)is a scalable object storage service that allows users\nto store and retrieve any amount of data at any time from anywhere on the web. S3\nprovides the ability to make objects (files) publicly accessible via a public URL, which\nallows users to download files directly. S3 is highly durable, scalable, and secure, making it\nan ideal service for storing files that need to be accessed publicly.\nWhy other options are not suitable:\nA . Amazon Redshift: A data warehouse service designed for complex queries and\nanalytics, not for storing and publicly sharing files.\nB . Amazon Elastic Block Store (Amazon EBS): Provides block storage for use with EC2\ninstances, but does not support public URLs or direct file access from the web.\nC . Amazon Elastic File System (Amazon EFS): A managed file storage service for use\nwith EC2 instances, not designed for public access via URLs.\nReference:\nAmazon S3 Documentation",
-    "domain": 3,
-    "domain_name": "Cloud Technology and Services",
-    "topic": "Topic 3.3: Storage Services (S3, EBS, EFS, Storage Gateway)",
-    "point_tested": "point:storage_efs_shared_posix",
-    "sources": [
-      "Edurely_Questions",
-      "Amazon_CLF_C02_Nov2026_Recall_393Q",
-      "Consensus_Aligned"
     ],
     "frequency": 3
   },
@@ -5784,6 +5695,28 @@
     "frequency": 3
   },
   {
+    "id": "CLF-U0155",
+    "prompt": "You are facing a lot of problems with your current contact center. Which service provides a cloud-based contact center that can deliver a better service for your customers?",
+    "choices": [
+      "A) Amazon Lightsail.",
+      "B) Amazon Connect.",
+      "C) AWS Direct Connect.",
+      "D) AWS Elastic Beanstalk."
+    ],
+    "answer": "B",
+    "explanation": "Amazon Connect is a cloud-based contact center service that lets you set up a customer service center in minutes with pay-per-use pricing and no infrastructure to manage, making it the purpose-built solution for replacing a traditional contact center.\nAmazon Lightsail is a simplified cloud platform for deploying small applications and websites with predictable pricing, and has no contact center or customer communication functionality. AWS Direct Connect establishes a dedicated private network connection between on-premises infrastructure and AWS, and is a networking service entirely unrelated to contact center operations. AWS Elastic Beanstalk is a PaaS service for deploying and managing web applications, not a contact center or customer service platform.",
+    "domain": 3,
+    "domain_name": "Security and Compliance",
+    "topic": "Topic 3.6: Management, Monitoring & Application Integration",
+    "point_tested": "point:compute_elastic_beanstalk_paas",
+    "sources": [
+      "CloudCertPrep_Questions",
+      "AwsCcpTrainer_Questions",
+      "DevOpsKing_Questions"
+    ],
+    "frequency": 3
+  },
+  {
     "id": "CLF-U0181",
     "prompt": "You are working as a site reliability engineer (SRE) in an AWS environment, which of the following services helps monitor your applications?",
     "choices": [
@@ -6004,6 +5937,69 @@
       "Edurely_Questions"
     ],
     "frequency": 3
+  },
+  {
+    "id": "CLF-U1444",
+    "prompt": "Which AWS service should be used when a company needs to provide its remote employees with \nvirtual desktops?",
+    "choices": [
+      "A) Amazon Identity and Access Management (IAM)",
+      "B) AWS Directory Service",
+      "C) AWS IAM Identity Center (AWS IAM Identity Center (formerly AWS Single Sign-On))",
+      "D) Amazon Workspaces"
+    ],
+    "answer": "D",
+    "explanation": "The AWS service that should be used when a company needs to provide its remote\nemployees with virtual desktops is Amazon WorkSpaces. Amazon WorkSpaces is a fully\nmanaged, secure desktop-as-a-service (DaaS) solution that runs on AWS. Amazon\nWorkSpaces allows users to provision cloud-based virtual desktops and provide their end\nusers access to the documents, applications, and resources they need from any supported\ndevice, including Windows and Mac computers, Chromebooks, iPads, Fire tablets, and\nAndroid tablets4. Amazon Identity and Access Management (IAM), AWS Directory Service,\nand AWS IAM Identity Center (AWS Single Sign-On) are other AWS services related to\nidentity and access management, but they do not provide virtual desktops.",
+    "domain": 3,
+    "domain_name": "Security and Compliance",
+    "topic": "Topic 3.6: Management, Monitoring & Application Integration",
+    "point_tested": "point:iam_identity_center_sso",
+    "sources": [
+      "Edurely_Questions",
+      "Amazon_CLF_C02_Nov2026_Recall_393Q",
+      "Consensus_Aligned"
+    ],
+    "frequency": 3
+  },
+  {
+    "id": "ACTUAL-393-Q169",
+    "prompt": "Which AWS service can provide users with instant access to their desktop applications\nfrom anywhere?",
+    "choices": [
+      "A) Amazon AppStream 2.0",
+      "B) Amazon Lightsail",
+      "C) AWS Resource Access Manager (AWS RAM)",
+      "D) AWS Client VPN"
+    ],
+    "answer": "A",
+    "explanation": "Amazon AppStream 2.0 is the former exam name for the service currently documented as\nAmazon WorkSpaces Applications. It is a fully managed application-streaming service that\nallows organizations to centrally host desktop applications and stream them to users.\nUsers can access applications through supported clients or an HTML5-capable web\nbrowser without installing the complete application locally. This provides the instant,\nlocation-independent application access described in the question, making option A\ncorrect. Amazon Lightsail is a simplified service for virtual private servers, containers,\ndatabases, networking, and web application hosting. AWS Resource Access Manager\nallows supported AWS resources to be shared across accounts or within AWS\nOrganizations. AWS Client VPN provides managed remote network connectivity to AWS\nand connected networks, but it does not host and stream desktop applications by itself.\nWorkSpaces Applications can maintain centrally managed application images,",
+    "domain": 3,
+    "domain_name": "Cloud Technology and Services",
+    "topic": "Topic 3.6: Management, Monitoring & Application Integration",
+    "point_tested": "point:general_cloud_concept",
+    "sources": [
+      "Consensus_Aligned",
+      "Amazon_CLF_C02_Nov2026_Recall_393Q"
+    ],
+    "frequency": 2
+  },
+  {
+    "id": "CLF-U1271",
+    "prompt": "A software company wants to deliver its desktop application to customers through a web browser without requiring customers to download or install anything locally. The application should run on AWS infrastructure and stream its interface to the browser. Which AWS service should the company use?",
+    "choices": [
+      "A) Amazon WorkSpaces",
+      "B) Amazon WorkSpaces Web",
+      "C) Amazon AppStream 2.0",
+      "D) AWS Amplify"
+    ],
+    "answer": "C",
+    "explanation": "Amazon AppStream 2.0 is a fully managed application streaming service that runs desktop applications on AWS infrastructure and streams the application interface to users' web browsers, allowing customers to use the software without downloading, installing, or managing it on their local devices.\nAmazon WorkSpaces is a fully managed virtual desktop service that provides each user with a complete persistent cloud desktop environment, which is more infrastructure than required to deliver a single application through a browser and involves per-user desktop provisioning rather than application-level streaming. Amazon WorkSpaces Web is a low-cost managed service for providing browser-based access to internal websites and SaaS applications from unmanaged devices, and is designed for web content access rather than for streaming full desktop applications running on AWS compute. AWS Amplify is a development framework and hosting service for building and deploying full-stack web and mobile applications, and is a developer toolset rather than an application streaming or virtual desktop delivery service.",
+    "domain": 3,
+    "domain_name": "Cloud Concepts",
+    "topic": "Topic 3.6: Management, Monitoring & Application Integration",
+    "point_tested": "point:general_cloud_concept",
+    "sources": [
+      "CloudCertPrep_Questions"
+    ],
+    "frequency": 1
   },
   {
     "id": "CLF-U0050",
