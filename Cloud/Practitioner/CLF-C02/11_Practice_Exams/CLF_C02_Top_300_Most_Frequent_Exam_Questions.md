@@ -1,4 +1,4 @@
-# 🔥 AWS Certified Cloud Practitioner (`CLF-C02`) — Top 200 Most Frequent Repeated Exam Questions
+# 🔥 AWS Certified Cloud Practitioner (`CLF-C02`) — Top 300 Most Frequent Repeated Exam Questions
 
 > **Selection Methodology:** Extracted from the canonical 2,716-question Master Bank by selecting exclusively **multi-source repeated questions** (each appearing across **3 to 5 independent exam pools/releases**), stratified proportionally to the official **CLF-C02 Exam Blueprint** across all 4 Domains and all 20 sub-topics.
 
@@ -8,15 +8,15 @@
 
 | Domain | Official Weight | Questions Selected | Frequency Distribution (Exam Sources) | Topics Covered |
 | :--- | :---: | :---: | :--- | :---: |
-| **Domain 1: Cloud Concepts** | 24% | **48** | **5x**: 1 Qs, **4x**: 25 Qs, **3x**: 22 Qs | 5 Topics |
-| **Domain 2: Security and Compliance** | 30% | **60** | **4x**: 43 Qs, **3x**: 17 Qs | 5 Topics |
-| **Domain 3: Cloud Technology and Services** | 34% | **68** | **5x**: 1 Qs, **4x**: 47 Qs, **3x**: 20 Qs | 6 Topics |
-| **Domain 4: Billing, Pricing, and Support** | 12% | **24** | **4x**: 17 Qs, **3x**: 7 Qs | 4 Topics |
-| **TOTAL** | **100%** | **200** | **100% Repeated in 3–5 Exam Sources** | **20 / 20 Topics** |
+| **Domain 1: Cloud Concepts** | 24% | **72** | **5x**: 1 Qs, **4x**: 34 Qs, **3x**: 37 Qs | 5 Topics |
+| **Domain 2: Security and Compliance** | 30% | **90** | **4x**: 52 Qs, **3x**: 38 Qs | 5 Topics |
+| **Domain 3: Cloud Technology and Services** | 34% | **102** | **5x**: 1 Qs, **4x**: 48 Qs, **3x**: 53 Qs | 6 Topics |
+| **Domain 4: Billing, Pricing, and Support** | 12% | **36** | **4x**: 17 Qs, **3x**: 19 Qs | 4 Topics |
+| **TOTAL** | **100%** | **300** | **100% Repeated in 3–5 Exam Sources** | **20 / 20 Topics** |
 
 ---
 
-## 🎯 Domain 1: Cloud Concepts (24% — 48 Questions)
+## 🎯 Domain 1: Cloud Concepts (24% — 72 Questions)
 
 ### Question 1 — `CLF-U0495` | 🔁 Repeated in 5 Exam Sources
 *Topic: Topic 1.3: AWS Well-Architected Framework*
@@ -324,7 +324,38 @@ Multiple Availability Zones is an infrastructure concept and a deployment strate
 
 ---
 
-### Question 11 — `CLF-U0019` | 🔁 Repeated in 4 Exam Sources
+### Question 11 — `CLF-U0011` | 🔁 Repeated in 4 Exam Sources
+*Topic: Topic 1.4: AWS Global Infrastructure*
+
+**Which service provides DNS in the AWS cloud?**
+
+- A) Route 53.
+- B) AWS Config.
+- C) Amazon CloudFront.
+- D) Amazon EMR.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 11)</strong></summary>
+
+**Correct Answer:** `A`
+
+**Correct answer: Route 53**
+
+Route 53 is AWS's scalable and highly available Domain Name System (DNS) web service. It translates human-readable domain names (like example.com) into the IP addresses that computers use to connect to each other. Route 53 connects user requests to infrastructure running in AWS, such as EC2 instances, Elastic Load Balancers, or S3 buckets, and can also be used to route users to infrastructure outside of AWS. It offers features like health checking to ensure traffic is routed only to healthy endpoints, and traffic flow policies to manage complex routing configurations.
+
+**Incorrect:**
+
+**B. AWS Config** - AWS Config is a service that enables you to assess, audit, and evaluate the configurations of your AWS resources. It continuously monitors and records your AWS resource configurations and allows you to automate the evaluation of recorded configurations against desired configurations. It is not related to DNS.
+
+**C. Amazon CloudFront** - Amazon CloudFront is a content delivery network (CDN) service. While CloudFront can work with Route 53 to route users to the nearest edge location for faster content delivery, CloudFront itself does not provide DNS services. It caches content and delivers it to users from edge locations around the world.
+
+**D. Amazon EMR** - Amazon EMR (Elastic MapReduce) is a managed cluster platform that lets you run big data frameworks like Apache Hadoop and Apache Spark to process and analyze vast amounts of data. It is not related to DNS services.
+
+</details>
+
+---
+
+### Question 12 — `CLF-U0019` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 1.4: AWS Global Infrastructure*
 
 **A company is planning to host an educational website on AWS. Their video courses will be streamed all around the world. Which of the following AWS services will help achieve high transfer speeds?**
@@ -335,7 +366,7 @@ Multiple Availability Zones is an infrastructure concept and a deployment strate
 - D) Amazon CloudFront.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 11)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 12)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -355,7 +386,38 @@ Amazon CloudFront is a content delivery network (CDN) service that accelerates t
 
 ---
 
-### Question 12 — `CLF-U0043` | 🔁 Repeated in 4 Exam Sources
+### Question 13 — `CLF-U0036` | 🔁 Repeated in 4 Exam Sources
+*Topic: Topic 1.4: AWS Global Infrastructure*
+
+**Which AWS Service can be used to establish a dedicated, private network connection between AWS and your datacenter?**
+
+- A) AWS Direct Connect.
+- B) Amazon CloudFront.
+- C) AWS Snowball.
+- D) Amazon Route 53.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 13)</strong></summary>
+
+**Correct Answer:** `A`
+
+**Correct answer: AWS Direct Connect**
+
+AWS Direct Connect enables you to establish a dedicated network connection from your premises to AWS. This connection is private, offering more consistent network performance and often lower network costs than using the public internet. It's ideal for workloads requiring high bandwidth, low latency, and secure data transfer between your on-premises infrastructure and AWS.
+
+**Incorrect:**
+
+**A. Amazon Route 53** - Amazon Route 53 is a highly available and scalable Domain Name System (DNS) web service. While it's crucial for directing internet traffic to your AWS resources, it doesn't establish a dedicated network connection between your datacenter and AWS.
+
+**B. Amazon CloudFront** - Amazon CloudFront is a content delivery network (CDN) service. It caches and distributes content from AWS edge locations to users globally, improving performance and reducing latency. It doesn't create a dedicated network connection between your datacenter and AWS.
+
+**C. AWS Snowball** - AWS Snowball (now part of AWS Snow Family) is a data transport solution that uses physical storage devices to transfer large amounts of data into and out of AWS. It's used for migrating data, not for establishing a continuous, dedicated network connection.
+
+</details>
+
+---
+
+### Question 14 — `CLF-U0043` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 1.4: AWS Global Infrastructure*
 
 **Which of the following procedures will help reduce your Amazon S3 costs?**
@@ -366,7 +428,7 @@ Amazon CloudFront is a content delivery network (CDN) service that accelerates t
 - D) Move all the data stored in S3 standard to EBS.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 12)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 14)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -386,7 +448,7 @@ Amazon S3 offers various storage classes optimized for different access patterns
 
 ---
 
-### Question 13 — `CLF-U0044` | 🔁 Repeated in 4 Exam Sources
+### Question 15 — `CLF-U0044` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 1.4: AWS Global Infrastructure*
 
 **Which of the following activities may help reduce your AWS monthly costs?**
@@ -397,7 +459,7 @@ Amazon S3 offers various storage classes optimized for different access patterns
 - D) Deploying your AWS resources across multiple Availability Zones.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 13)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 15)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -421,7 +483,7 @@ Lifecycle policies automate the movement of data to more cost-effective storage 
 
 ---
 
-### Question 14 — `CLF-U0045` | 🔁 Repeated in 4 Exam Sources
+### Question 16 — `CLF-U0045` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 1.4: AWS Global Infrastructure*
 
 **Which AWS services can be used to improve the performance of a global application and reduce latency for its users? (Choose TWO)**
@@ -433,7 +495,7 @@ Lifecycle policies automate the movement of data to more cost-effective storage 
 - E) Amazon CloudFront.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 14)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 16)</strong></summary>
 
 **Correct Answer:** `B, E`
 
@@ -457,7 +519,7 @@ Amazon CloudFront is a content delivery network (CDN) service that caches conten
 
 ---
 
-### Question 15 — `CLF-U0055` | 🔁 Repeated in 4 Exam Sources
+### Question 17 — `CLF-U0055` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 1.4: AWS Global Infrastructure*
 
 **What are the Amazon RDS features that can be used to improve the availability of your database? (Choose TWO)**
@@ -469,7 +531,7 @@ Amazon CloudFront is a content delivery network (CDN) service that caches conten
 - E) Edge Locations.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 15)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 17)</strong></summary>
 
 **Correct Answer:** `B, D`
 
@@ -493,7 +555,43 @@ Multi-AZ deployments provide enhanced availability and durability for database i
 
 ---
 
-### Question 16 — `CLF-U0060` | 🔁 Repeated in 4 Exam Sources
+### Question 18 — `CLF-U0059` | 🔁 Repeated in 4 Exam Sources
+*Topic: Topic 1.4: AWS Global Infrastructure*
+
+**Savings Plans are available for which of the following AWS compute services? (Choose TWO)**
+
+- A) AWS Batch.
+- B) AWS Outposts.
+- C) Amazon Lightsail.
+- D) Amazon EC2.
+- E) AWS Lambda.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 18)</strong></summary>
+
+**Correct Answer:** `D, E`
+
+**Correct answer: AWS Lambda**
+
+Savings Plans provide a flexible pricing model that offers lower prices on AWS compute usage in exchange for a commitment to a consistent amount of usage (measured in $/hour) for a 1- or 3-year term. Compute Savings Plans apply to AWS Lambda usage. This means you can reduce your Lambda costs by committing to a certain amount of compute power over a period of time.
+
+**Correct answer: Amazon EC2**
+
+Savings Plans are indeed applicable to Amazon EC2 instances. There are two types of Savings Plans for EC2: Compute Savings Plans and EC2 Instance Savings Plans. Compute Savings Plans provide the most flexibility and automatically apply to EC2 instance usage regardless of instance family, size, AZ, Region, OS, or tenancy. EC2 Instance Savings Plans provide the lowest prices and offer savings in exchange for commitment to usage of individual instance families in a Region.
+
+**Incorrect:**
+
+**B. AWS Outposts** - Savings Plans do not directly apply to AWS Outposts. AWS Outposts has its own pricing structure, which typically involves an upfront fee for the Outpost rack and ongoing charges for services consumed on the Outpost.
+
+**D. AWS Batch** - AWS Batch itself doesn't directly have Savings Plans. However, AWS Batch jobs often run on Amazon EC2 instances. If the Batch jobs are running on EC2, then Savings Plans for EC2 can help reduce the cost of the underlying EC2 instances used by AWS Batch.
+
+**E. Amazon Lightsail** - Savings Plans are not available for Amazon Lightsail. Lightsail offers simple, bundled pricing plans that include compute, storage, and data transfer. The pricing is fixed and does not integrate with Savings Plans.
+
+</details>
+
+---
+
+### Question 19 — `CLF-U0060` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 1.4: AWS Global Infrastructure*
 
 **A company has business critical workloads hosted on AWS and they are unwilling to accept any downtime. Which of the following is a recommended best practice to protect their workloads in the event of an unexpected natural disaster?**
@@ -504,7 +602,7 @@ Multi-AZ deployments provide enhanced availability and durability for database i
 - D) Deploy AWS resources to another AWS Region and implement an Active-Active disaster recovery strategy.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 16)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 19)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -524,7 +622,74 @@ An Active-Active disaster recovery strategy involves running workloads simultane
 
 ---
 
-### Question 17 — `CLF-U0398` | 🔁 Repeated in 4 Exam Sources
+### Question 20 — `CLF-U0083` | 🔁 Repeated in 4 Exam Sources
+*Topic: Topic 1.4: AWS Global Infrastructure*
+
+**Which of the following are use cases for Amazon S3? (Choose TWO)**
+
+- A) Hosting static websites.
+- B) Hosting websites that require sustained high CPU utilization.
+- C) Cost-effective database and log storage.
+- D) A media store for the CloudFront service.
+- E) Processing data streams at any scale.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 20)</strong></summary>
+
+**Correct Answer:** `A, D`
+
+**Correct answer: A media store for the CloudFront service**
+
+Amazon S3 is often used as the origin store for Amazon CloudFront, a content delivery network (CDN). CloudFront caches content from S3 (or other origins) and distributes it to edge locations globally, providing faster access for users. S3 provides durable and scalable storage for the media files that CloudFront distributes.
+
+**Correct answer: Hosting static websites**
+
+Amazon S3 can host static websites. This means websites that consist of HTML, CSS, JavaScript, images, and other static files. S3 provides the storage and retrieval of these files, and you can configure S3 buckets for website hosting. This is a cost-effective and scalable way to host static websites.
+
+**Incorrect:**
+
+**A. Hosting websites that require sustained high CPU utilization** - Amazon S3 is an object storage service, not a compute service. Websites requiring sustained high CPU utilization are better suited for services like Amazon EC2, AWS Elastic Beanstalk, or AWS Lambda.
+
+**C. Processing data streams at any scale** - While S3 can store data streams, it's not designed for real-time processing. Services like Amazon Kinesis Data Streams or Amazon Managed Streaming for Apache Kafka (MSK) are better suited for processing data streams at any scale.
+
+**E. Cost-effective database and log storage** - While S3 can be used for log storage, it's not a database service. For database storage, services like Amazon RDS, Amazon DynamoDB, or Amazon Aurora are more appropriate. While S3 can be cost-effective for storing large volumes of data, other services may be more suitable for database storage depending on the specific requirements.
+
+</details>
+
+---
+
+### Question 21 — `CLF-U0393` | 🔁 Repeated in 4 Exam Sources
+*Topic: Topic 1.4: AWS Global Infrastructure*
+
+**AWS has created a large number of Edge Locations as part of its Global Infrastructure. Which of the following is NOT a benefit of using Edge Locations?**
+
+- A) Edge locations are used by CloudFront to cache the most recent responses.
+- B) Edge locations are used by CloudFront to improve your end users’ experience when uploading files.
+- C) Edge locations are used by CloudFront to distribute traffic across multiple instances to reduce latency.
+- D) Edge locations are used by CloudFront to distribute content to global users with low latency.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 21)</strong></summary>
+
+**Correct Answer:** `C`
+
+**Correct answer: Edge locations are used by CloudFront to distribute traffic across multiple instances to reduce latency**
+
+This statement is NOT a benefit of using Edge Locations. Edge locations are primarily used for caching content closer to the end-users to reduce latency. They do not distribute traffic across multiple instances. The distribution of traffic across multiple instances is typically handled by services like Elastic Load Balancing (ELB) in conjunction with Auto Scaling Groups within the AWS region, not at the Edge Location. CloudFront uses edge locations to cache content and deliver it to users with low latency.
+
+**Incorrect:**
+
+**B. Edge locations are used by CloudFront to cache the most recent responses** - This is a core function of Edge Locations. CloudFront caches content at these locations to serve requests faster.
+
+**C. Edge locations are used by CloudFront to improve your end users’ experience when uploading files** - CloudFront can be used to accelerate uploads using its PUT/POST capabilities, improving the user experience.
+
+**D. Edge locations are used by CloudFront to distribute content to global users with low latency** - This is a primary benefit. By caching content closer to users globally, latency is significantly reduced.
+
+</details>
+
+---
+
+### Question 22 — `CLF-U0398` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 1.4: AWS Global Infrastructure*
 
 **Sarah has deployed an application in the Northern California (us-west-1) region. After examining the application’s traffic, she notices that about 30% of the traffic is coming from Asia. What can she do to reduce latency for the users in Asia?**
@@ -535,7 +700,7 @@ An Active-Active disaster recovery strategy involves running workloads simultane
 - D) Create a CDN using CloudFront, so that content is cached at Edge Locations close to and in Asia.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 17)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 22)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -555,7 +720,7 @@ CloudFront is AWS's Content Delivery Network (CDN) service. A CDN caches content
 
 ---
 
-### Question 18 — `CLF-U0402` | 🔁 Repeated in 4 Exam Sources
+### Question 23 — `CLF-U0402` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 1.4: AWS Global Infrastructure*
 
 **Which of the following will impact the price paid for an EC2 instance? (Choose TWO)**
@@ -567,7 +732,7 @@ CloudFront is AWS's Content Delivery Network (CDN) service. A CDN caches content
 - E) Number of private IPs.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 18)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 23)</strong></summary>
 
 **Correct Answer:** `A, B`
 
@@ -591,7 +756,7 @@ While less common, the Availability Zone (AZ) can impact EC2 pricing. AWS occasi
 
 ---
 
-### Question 19 — `CLF-U0403` | 🔁 Repeated in 4 Exam Sources
+### Question 24 — `CLF-U0403` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 1.4: AWS Global Infrastructure*
 
 **Which of the following statements describes the AWS Cloud’s agility?**
@@ -602,7 +767,7 @@ While less common, the Availability Zone (AZ) can impact EC2 pricing. AWS occasi
 - D) AWS allows you to pay upfront to reduce costs.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 19)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 24)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -622,7 +787,7 @@ Agility in the context of cloud computing, and specifically AWS, refers to the a
 
 ---
 
-### Question 20 — `CLF-U0405` | 🔁 Repeated in 4 Exam Sources
+### Question 25 — `CLF-U0405` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 1.4: AWS Global Infrastructure*
 
 **Which of the following is a benefit of running an application in multiple Availability Zones?**
@@ -633,7 +798,7 @@ Agility in the context of cloud computing, and specifically AWS, refers to the a
 - D) Increases the availability of your application.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 20)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 25)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -653,7 +818,38 @@ Running an application in multiple Availability Zones (AZs) is a key strategy fo
 
 ---
 
-### Question 21 — `CLF-U0410` | 🔁 Repeated in 4 Exam Sources
+### Question 26 — `CLF-U0406` | 🔁 Repeated in 4 Exam Sources
+*Topic: Topic 1.4: AWS Global Infrastructure*
+
+**How do ELBs improve the reliability of your application?**
+
+- A) By distributing traffic across multiple S3 buckets.
+- B) By replicating data to multiple availability zones.
+- C) By creating database Read Replicas.
+- D) By ensuring that only healthy targets receive traffic.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 26)</strong></summary>
+
+**Correct Answer:** `D`
+
+**Correct answer: By ensuring that only healthy targets receive traffic**
+
+Elastic Load Balancers (ELBs) improve application reliability by continuously monitoring the health of registered targets (e.g., EC2 instances, containers, IP addresses). If a target fails a health check, the ELB automatically stops sending traffic to it and redirects traffic to healthy targets. This ensures that users experience minimal disruption and that the application remains available even if some components fail. This automated failover mechanism is a key aspect of high availability and fault tolerance.
+
+**Incorrect:**
+
+**A. By replicating data to multiple availability zones** - ELBs do not replicate data. Data replication is typically handled by other services like databases (e.g., RDS with Multi-AZ deployments) or object storage (e.g., S3 with its inherent redundancy). ELBs distribute traffic, not data.
+
+**B. By creating database Read Replicas** - ELBs do not create or manage database read replicas. Read replicas are a database feature used to offload read traffic from the primary database, improving performance. While read replicas contribute to application availability, they are not directly managed or created by ELBs.
+
+**D. By distributing traffic across multiple S3 buckets** - ELBs distribute traffic to compute resources like EC2 instances, containers, or IP addresses. They do not distribute traffic across S3 buckets. S3 is an object storage service, and traffic to S3 is typically direct, not routed through a load balancer.
+
+</details>
+
+---
+
+### Question 27 — `CLF-U0410` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 1.4: AWS Global Infrastructure*
 
 **Which statement best describes the concept of an AWS region?**
@@ -664,7 +860,7 @@ Running an application in multiple Availability Zones (AZs) is a key strategy fo
 - D) An AWS Region represents the country where the AWS infrastructure exist.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 21)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 27)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -684,7 +880,7 @@ An AWS Region is a fundamental concept in AWS. It represents a distinct geograph
 
 ---
 
-### Question 22 — `CLF-U0414` | 🔁 Repeated in 4 Exam Sources
+### Question 28 — `CLF-U0414` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 1.4: AWS Global Infrastructure*
 
 **Why do many startup companies prefer AWS over traditional on-premises solutions? (Choose TWO)**
@@ -696,7 +892,7 @@ An AWS Region is a fundamental concept in AWS. It represents a distinct geograph
 - E) Using AWS allows companies to replace large capital expenditure with low variable costs.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 22)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 28)</strong></summary>
 
 **Correct Answer:** `C, E`
 
@@ -720,7 +916,7 @@ AWS's pay-as-you-go pricing model is a significant advantage for startups. Inste
 
 ---
 
-### Question 23 — `CLF-U0417` | 🔁 Repeated in 4 Exam Sources
+### Question 29 — `CLF-U0417` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 1.4: AWS Global Infrastructure*
 
 **Which of the below options is a best practice for making your application on AWS highly available?**
@@ -731,7 +927,7 @@ AWS's pay-as-you-go pricing model is a significant advantage for startups. Inste
 - D) Rewrite the application code to handle all incoming requests.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 23)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 29)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -751,7 +947,74 @@ High availability in AWS means ensuring your application remains accessible even
 
 ---
 
-### Question 24 — `CLF-U0817` | 🔁 Repeated in 4 Exam Sources
+### Question 30 — `CLF-U0420` | 🔁 Repeated in 4 Exam Sources
+*Topic: Topic 1.4: AWS Global Infrastructure*
+
+**Which of the following is true regarding the AWS availability zones and edge locations?**
+
+- A) Edge locations are located in separate Availability Zones worldwide to serve global customers.
+- B) An availability zone exists within an edge location to distribute content globally with low latency.
+- C) An Availability Zone is a geographic location where AWS provides multiple, physically separated and isolated edge locations.
+- D) An AWS Availability Zone is an isolated location within an AWS Region, however edge locations are located in multiple cities worldwide.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 30)</strong></summary>
+
+**Correct Answer:** `D`
+
+**Correct answer: An AWS Availability Zone is an isolated location within an AWS Region, however edge locations are located in multiple cities worldwide**
+
+This statement accurately describes the relationship between Availability Zones and Edge Locations. An Availability Zone (AZ) is a physically isolated location within an AWS Region. Each Region contains multiple AZs. Edge locations, on the other hand, are CDN (Content Delivery Network) endpoints for services like CloudFront. They are strategically located in numerous cities globally to provide low-latency access to cached content for users worldwide. They are not tied to specific regions in the same way AZs are.
+
+**Incorrect:**
+
+**B. An Availability Zone is a geographic location where AWS provides multiple, physically separated and isolated edge locations** - This is incorrect because Availability Zones are isolated locations within a Region, not the other way around. Edge locations are not contained within Availability Zones.
+
+**C. An availability zone exists within an edge location to distribute content globally with low latency** - This is incorrect. Edge locations are used to distribute content globally with low latency, and they are separate from Availability Zones. Availability Zones are for compute, storage, and database services.
+
+**D. Edge locations are located in separate Availability Zones worldwide to serve global customers** - This is incorrect. Edge locations are globally distributed and independent of Availability Zones. They are used for caching and content delivery, while Availability Zones are for running applications and storing data within a specific AWS Region.
+
+</details>
+
+---
+
+### Question 31 — `CLF-U0796` | 🔁 Repeated in 4 Exam Sources
+*Topic: Topic 1.4: AWS Global Infrastructure*
+
+**According to the AWS Shared responsibility model, which of the following are the responsibility of the customer? (Choose TWO)**
+
+- A) Managing environmental events of AWS data centers.
+- B) Protecting the confidentiality of data in transit in Amazon S3.
+- C) Controlling physical access to AWS Regions.
+- D) Ensuring that the underlying EC2 host is configured properly.
+- E) Patching applications installed on Amazon EC2.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 31)</strong></summary>
+
+**Correct Answer:** `B, E`
+
+**Correct answer: Protecting the confidentiality of data in transit in Amazon S3**
+
+According to the AWS Shared Responsibility Model, AWS is responsible for the security *of* the cloud, while the customer is responsible for security *in* the cloud. Protecting the confidentiality of data in transit, such as encrypting data before it is uploaded to Amazon S3 using services like AWS Key Management Service (KMS) or client-side encryption, falls under the customer's responsibility. AWS provides the tools and services, but the customer must configure and utilize them correctly to ensure data confidentiality.
+
+**Correct answer: Patching applications installed on Amazon EC2**
+
+Customers are responsible for managing the operating system, patching, and security of the applications they install on Amazon EC2 instances. AWS manages the underlying infrastructure, but the customer is responsible for everything within the EC2 instance itself, including application security.
+
+**Incorrect:**
+
+**A. Controlling physical access to AWS Regions** - AWS is responsible for the physical security of its data centers and Regions. This includes controlling physical access to the facilities.
+
+**C. Managing environmental events of AWS data centers** - AWS is responsible for managing the environmental controls (e.g., power, cooling, and physical security) of its data centers. This is part of AWS's responsibility for the security *of* the cloud.
+
+**D. Ensuring that the underlying EC2 host is configured properly** - AWS is responsible for the security and configuration of the underlying EC2 host. The customer is responsible for the guest operating system and applications installed on the EC2 instance.
+
+</details>
+
+---
+
+### Question 32 — `CLF-U0817` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 1.4: AWS Global Infrastructure*
 
 **When running a workload in AWS, the customer is NOT responsible for: (Select TWO)**
@@ -763,7 +1026,7 @@ High availability in AWS means ensuring your application remains accessible even
 - E) Infrastructure security.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 24)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 32)</strong></summary>
 
 **Correct Answer:** `C, E`
 
@@ -787,7 +1050,7 @@ AWS is responsible for the security *of* the cloud. This includes protecting the
 
 ---
 
-### Question 25 — `CLF-U0825` | 🔁 Repeated in 4 Exam Sources
+### Question 33 — `CLF-U0825` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 1.4: AWS Global Infrastructure*
 
 **Which of the following factors should be considered when determining the region in which AWS Resources will be deployed? (Choose TWO)**
@@ -799,7 +1062,7 @@ AWS is responsible for the security *of* the cloud. This includes protecting the
 - E) Geographic proximity to the company's location.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 25)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 33)</strong></summary>
 
 **Correct Answer:** `B, C`
 
@@ -823,7 +1086,38 @@ Cost is a significant factor when determining the AWS Region for deployment. AWS
 
 ---
 
-### Question 26 — `CLF-U0415` | 🔁 Repeated in 4 Exam Sources
+### Question 34 — `CLF-U0828` | 🔁 Repeated in 4 Exam Sources
+*Topic: Topic 1.4: AWS Global Infrastructure*
+
+**An external auditor is requesting a log of all accesses to the AWS resources in the company’s account. Which of the following services will provide the auditor with the requested information?**
+
+- A) AWS CloudTrail.
+- B) Amazon CloudFront.
+- C) AWS CloudFormation.
+- D) Amazon CloudWatch.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 34)</strong></summary>
+
+**Correct Answer:** `A`
+
+**Correct answer: AWS CloudTrail**
+
+AWS CloudTrail is a service that enables governance, compliance, operational auditing, and risk auditing of your AWS account. CloudTrail logs API calls made to AWS services, capturing information such as the identity of the caller, the time of the API call, the source IP address, the request parameters, and the response elements returned by the AWS service. This detailed log of activity is exactly what an external auditor would need to review access to AWS resources within the company's account.
+
+**Incorrect:**
+
+**A. AWS CloudFormation** - AWS CloudFormation is a service that allows you to model and provision AWS infrastructure as code. While it helps manage resources, it doesn't directly provide logs of access to those resources. It's used for infrastructure deployment and management, not auditing access.
+
+**B. Amazon CloudFront** - Amazon CloudFront is a content delivery network (CDN) service. While CloudFront does generate access logs related to content requests served through the CDN, these logs are specific to CloudFront activity and do not provide a comprehensive log of all accesses to all AWS resources in the account. It's focused on content delivery, not general AWS resource access auditing.
+
+**D. Amazon CloudWatch** - Amazon CloudWatch is a monitoring and observability service. It collects metrics and logs, and can be used to set alarms and visualize data. While CloudWatch can collect logs from various AWS services, it doesn't, by default, log all API calls made to AWS resources. CloudTrail is the service specifically designed for that purpose, and CloudWatch would typically be used to monitor the logs generated by CloudTrail, not replace it.
+
+</details>
+
+---
+
+### Question 35 — `CLF-U0415` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 1.5: High Availability, Fault Tolerance & Disaster Recovery*
 
 **A company is using EC2 Instances to run their e-commerce site on the AWS platform. If the site becomes unavailable, the company will lose a significant amount of money for each minute the site is unavailable. Which design principle should the company use to minimize the risk of an outage?**
@@ -834,7 +1128,7 @@ Cost is a significant factor when determining the AWS Region for deployment. AWS
 - D) Multi-threading.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 26)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 35)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -854,7 +1148,7 @@ Fault tolerance is the ability of a system to continue operating properly in the
 
 ---
 
-### Question 27 — `CLF-U0004` | 🔁 Repeated in 3 Exam Sources
+### Question 36 — `CLF-U0004` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.1: Cloud Economics & Benefits*
 
 **What does AWS Snowball provide? (Choose TWO)**
@@ -866,7 +1160,7 @@ Fault tolerance is the ability of a system to continue operating properly in the
 - E) Secure transfer of large amounts of data into and out of the AWS.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 27)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 36)</strong></summary>
 
 **Correct Answer:** `A, E`
 
@@ -890,7 +1184,7 @@ AWS Snowball is designed for securely transferring large datasets into and out o
 
 ---
 
-### Question 28 — `CLF-U0179` | 🔁 Repeated in 3 Exam Sources
+### Question 37 — `CLF-U0179` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.1: Cloud Economics & Benefits*
 
 **A company is running a large web application that needs to always be available. The application tends to slow down when CPU usage is greater than 60%. How can they track when CPU usage goes above 60% for any of the EC2 Instances in their account?**
@@ -901,7 +1195,7 @@ AWS Snowball is designed for securely transferring large datasets into and out o
 - D) Use SNS to monitor the utilization of the server.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 28)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 37)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -912,7 +1206,52 @@ Amazon CloudFront is a content delivery network that caches and distributes cont
 
 ---
 
-### Question 29 — `CLF-U0386` | 🔁 Repeated in 3 Exam Sources
+### Question 38 — `CLF-U0383` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 1.1: Cloud Economics & Benefits*
+
+**Adjusting compute capacity dynamically to reduce cost is an implementation of which AWS cloud best practice?**
+
+- A) Build security in every layer.
+- B) Parallelize tasks.
+- C) Implement elasticity.
+- D) Adopt monolithic architecture.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 38)</strong></summary>
+
+**Correct Answer:** `C`
+
+Elasticity is the cloud best practice of dynamically adjusting compute capacity up or down in response to demand, avoiding over-provisioning during low-traffic periods and under-provisioning during peaks, which directly reduces cost.
+Build security in every layer is the Defense in Depth principle from the Security pillar of the Well-Architected Framework, which addresses threat protection rather than capacity management. Parallelizing tasks is a performance design principle that distributes workloads across multiple smaller components to increase throughput, not a mechanism for dynamically adjusting capacity to control costs. Adopting monolithic architecture consolidates all application components into a single tightly coupled unit, which is the opposite of a cloud best practice and does not support dynamic scaling.
+
+</details>
+
+---
+
+### Question 39 — `CLF-U0384` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 1.1: Cloud Economics & Benefits*
+
+**What are the benefits of having infrastructure hosted in AWS? (Choose TWO)**
+
+- A) Increasing speed and agility.
+- B) There is no need to worry about security.
+- C) Gaining complete control over the physical infrastructure.
+- D) Operating applications on behalf of customers.
+- E) All of the physical security and most of the data/network security are taken care of for you.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 39)</strong></summary>
+
+**Correct Answer:** `A, E`
+
+AWS increases speed and agility by allowing customers to provision resources in minutes rather than weeks, and handles physical security along with most data and network security so customers can focus on building applications rather than managing infrastructure.
+Unlimited free storage is not an AWS benefit, as storage services such as Amazon S3 and EBS are billed based on the amount of data stored and retrieved. Complete control over physical infrastructure is not available to AWS customers, as AWS owns and manages all physical hardware, data centers, and networking equipment on the customer's behalf. Operating applications on behalf of customers is not an AWS benefit, as customers remain responsible for building, deploying, and managing their own applications under the shared responsibility model.
+
+</details>
+
+---
+
+### Question 40 — `CLF-U0386` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.1: Cloud Economics & Benefits*
 
 **One of the most important AWS best-practices to follow is the cloud architecture principle of elasticity. How does this principle improve your architecture’s design?**
@@ -923,7 +1262,7 @@ Amazon CloudFront is a content delivery network that caches and distributes cont
 - D) By automatically provisioning the required AWS resources based on changes in demand.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 29)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 40)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -934,7 +1273,96 @@ Automatically scaling on-premises resources is not what elasticity describes in 
 
 ---
 
-### Question 30 — `CLF-U0444` | 🔁 Repeated in 3 Exam Sources
+### Question 41 — `CLF-U0421` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 1.1: Cloud Economics & Benefits*
+
+**Which of the following are advantages of using AWS as a cloud computing provider? (Choose TWO)**
+
+- A) Eliminates the need to monitor servers and applications.
+- B) Manages all the compliance and auditing tasks.
+- C) Provides custom hardware to meet any specification.
+- D) Eliminates the need to guess on infrastructure capacity needs.
+- E) Enables customers to trade their capital expenses for operational expenses.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 41)</strong></summary>
+
+**Correct Answer:** `D, E`
+
+AWS eliminates the need to guess infrastructure capacity through on-demand scaling, and enables customers to trade large upfront capital expenses for smaller variable operational expenses based on actual usage.
+Customers remain responsible for monitoring their own servers and applications, as AWS provides the tools but does not perform monitoring on the customer's behalf. Compliance and auditing responsibilities are shared, with customers accountable for their own data, access controls, and application-level compliance regardless of using AWS. AWS does not provide custom hardware to individual customer specifications, as customers select from standardized instance types and managed services within the shared infrastructure.
+
+</details>
+
+---
+
+### Question 42 — `CLF-U0424` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 1.1: Cloud Economics & Benefits*
+
+**What does the term “Economies of scale” mean?**
+
+- A) It means that you save more when you consume more.
+- B) It means as more time passes using AWS, you pay more for its services.
+- C) It means that AWS will continuously lower costs as it grows.
+- D) It means that you have the ability to pay as you go.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 42)</strong></summary>
+
+**Correct Answer:** `C`
+
+Economies of scale means that as AWS grows and aggregates more customer usage, it achieves lower per-unit costs and continuously passes those savings on to customers through regular price reductions.
+Saving more when you consume more describes volume-based discounts such as Reserved Instances or tiered pricing, which is a separate pricing concept rather than the definition of economies of scale. Paying more over time as usage increases describes the opposite of what economies of scale delivers, as AWS prices have consistently decreased over time rather than increased. The ability to pay as you go describes the pay-as-you-go billing model, which is a separate cloud adoption benefit unrelated to the cost reductions driven by aggregated purchasing power.
+
+</details>
+
+---
+
+### Question 43 — `CLF-U0425` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 1.1: Cloud Economics & Benefits*
+
+**Which statement best describes the AWS Pay-As-You-Go pricing model?**
+
+- A) With AWS, you replace low upfront expenses with large variable payments.
+- B) With AWS, you replace low upfront expenses with large fixed payments.
+- C) With AWS, you replace large upfront expenses with low fixed payments.
+- D) With AWS, you replace large capital expenses with low variable payments.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 43)</strong></summary>
+
+**Correct Answer:** `D`
+
+The Pay-As-You-Go model replaces large upfront capital expenses with low variable payments based on actual consumption, so you only pay for the resources you use.
+Replacing low upfront expenses with large variable payments inverts the AWS pricing model, which specifically eliminates large upfront capital costs rather than introducing new large variable costs. Replacing low upfront expenses with large fixed payments describes neither the on-premises nor the AWS model accurately. On-premises typically has large upfront expenses, and AWS replaces those with low variable costs rather than fixed ones. Replacing large upfront expenses with low fixed payments partially captures the idea of reducing upfront costs, but AWS pricing is variable rather than fixed, scaling directly with actual resource consumption.
+
+</details>
+
+---
+
+### Question 44 — `CLF-U0442` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 1.1: Cloud Economics & Benefits*
+
+**The AWS Cloud’s multiple Regions are an example of:**
+
+- A) Agility.
+- B) Global infrastructure.
+- C) Elasticity.
+- D) Pay-as-you-go pricing.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 44)</strong></summary>
+
+**Correct Answer:** `B`
+
+AWS Regions spread across the globe are part of the AWS global infrastructure, which includes Regions, Availability Zones, and edge locations designed to deliver services worldwide.
+Agility refers to the speed at which customers can provision resources and iterate on new functionality, which is a cloud adoption benefit rather than a characteristic of physical infrastructure placement. Elasticity refers to dynamically scaling resources up or down in response to demand, which is a compute and capacity concept unrelated to the geographic distribution of Regions. Pay-as-you-go pricing is a billing model where customers pay only for what they consume, which is a commercial benefit rather than an infrastructure concept.
+
+</details>
+
+---
+
+### Question 45 — `CLF-U0444` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.1: Cloud Economics & Benefits*
 
 **Which AWS characteristics make AWS cost effective for a workload with dynamic user demand? (Select TWO)**
@@ -946,7 +1374,7 @@ Automatically scaling on-premises resources is not what elasticity describes in 
 - E) Reliability.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 30)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 45)</strong></summary>
 
 **Correct Answer:** `C, D`
 
@@ -957,7 +1385,73 @@ High availability ensures that applications remain accessible despite failures b
 
 ---
 
-### Question 31 — `CLF-U0466` | 🔁 Repeated in 3 Exam Sources
+### Question 46 — `CLF-U0450` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 1.1: Cloud Economics & Benefits*
+
+**When architecting cloud applications, which of the following are a key design principle?**
+
+- A) Use the largest instance possible.
+- B) Provision capacity for peak load.
+- C) Use the Scrum development process.
+- D) Implement elasticity.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 46)</strong></summary>
+
+**Correct Answer:** `D`
+
+Elasticity is a key cloud design principle that means automatically scaling compute resources up or down based on actual demand, avoiding over-provisioning and reducing costs compared to traditional fixed-capacity infrastructure.
+Using the largest instance possible is the opposite of good cloud design, as it leads to over-provisioning and unnecessary cost rather than matching capacity to actual demand. Provisioning capacity for peak load is a traditional on-premises approach that results in idle resources during normal periods, which cloud elasticity is specifically designed to replace. Using the Scrum development process is a software delivery methodology unrelated to cloud architecture design principles.
+
+</details>
+
+---
+
+### Question 47 — `CLF-U0451` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 1.1: Cloud Economics & Benefits*
+
+**Which AWS feature will reduce the customer’s total cost of ownership (TCO)?**
+
+- A) Shared responsibility security model.
+- B) Single tenancy.
+- C) Elastic computing.
+- D) Encryption.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 47)</strong></summary>
+
+**Correct Answer:** `C`
+
+Elastic computing lets customers match resource capacity to actual demand, scaling up during peaks and down during lulls, eliminating payment for idle infrastructure and directly reducing total cost of ownership.
+The Shared Responsibility Model defines the division of security duties between AWS and the customer, but does not itself reduce infrastructure costs or TCO. Single tenancy dedicates hardware to a single customer, which typically increases cost compared to the shared multi-tenant model that underpins AWS's economies of scale. Encryption is a security control that protects data at rest and in transit, and has no direct impact on infrastructure costs or TCO.
+
+</details>
+
+---
+
+### Question 48 — `CLF-U0464` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 1.1: Cloud Economics & Benefits*
+
+**A company's web application currently has tight dependencies on underlying components, so when one component fails the entire web application fails. Applying which AWS Cloud design principle will address the current design issue?**
+
+- A) Implementing elasticity enabling the application to scale up or scale down as demand changes.
+- B) Enabling several EC2 instances to run in parallel to achieve better performance.
+- C) Focusing on decoupling components by isolating them and ensuring individual components can function when other components.
+- D) Doubling EC2 computing resources to increase system fault tolerance.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 48)</strong></summary>
+
+**Correct Answer:** `C`
+
+Decoupling components means isolating them so each can function independently, communicating through asynchronous interfaces rather than direct calls, so a failure in one component does not bring down the entire application.
+Implementing elasticity addresses scaling resources up and down in response to demand, but does not resolve the tight dependency problem that causes cascading failures. Enabling EC2 instances to run in parallel improves performance and throughput but does not isolate components from each other's failures. Doubling EC2 computing resources adds capacity but does not change the tightly coupled architecture, meaning a component failure would still take down the whole application.
+
+</details>
+
+---
+
+### Question 49 — `CLF-U0466` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.1: Cloud Economics & Benefits*
 
 **How can a company reduce its Total Cost of Ownership (TCO) using AWS?**
@@ -968,7 +1462,7 @@ High availability ensures that applications remain accessible despite failures b
 - D) By having AWS manage applications.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 31)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 49)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -979,7 +1473,7 @@ Having no responsibility for third-party license costs is not a general AWS bene
 
 ---
 
-### Question 32 — `CLF-U0471` | 🔁 Repeated in 3 Exam Sources
+### Question 50 — `CLF-U0471` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.1: Cloud Economics & Benefits*
 
 **A company will be moving from an on-premises data center to the AWS Cloud. What would be one financial difference after the move?**
@@ -990,7 +1484,7 @@ Having no responsibility for third-party license costs is not a general AWS bene
 - D) Elimination of upfront capital expense (capex) and elimination of variable operational expense ( opex ).
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 32)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 50)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -1001,7 +1495,96 @@ Moving from variable operational expense (opex) to upfront capital expense (cape
 
 ---
 
-### Question 33 — `CLF-U0633` | 🔁 Repeated in 3 Exam Sources
+### Question 51 — `CLF-U0480` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 1.1: Cloud Economics & Benefits*
+
+**A solution that is able to support growth in users, traffic, or data size with no drop in performance aligns with which cloud architecture principle?**
+
+- A) Think parallel.
+- B) Implement elasticity.
+- C) Decouple your components.
+- D) Design for failure.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 51)</strong></summary>
+
+**Correct Answer:** `B`
+
+Elasticity is the ability to scale resources up or down automatically to handle increases in users, traffic, or data size without any degradation in performance, making it the principle that directly addresses growth support.
+Think parallel refers to the principle of designing systems to handle tasks simultaneously across multiple resources to improve throughput and speed, not specifically to handle growth in users or data size without performance loss. Decouple your components refers to reducing dependencies between application components so failures do not cascade, which improves resilience rather than addressing performance under growth. Design for failure refers to building systems that anticipate and recover from component failures automatically, which addresses resilience and availability rather than scaling to support growth.
+
+</details>
+
+---
+
+### Question 52 — `CLF-U0481` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 1.1: Cloud Economics & Benefits*
+
+**Which AWS Cloud benefit eliminates the need for users to try estimating future infrastructure usage?**
+
+- A) Easy and fast deployment of applications in multiple Regions around the world.
+- B) Security of the AWS Cloud.
+- C) Elasticity of the AWS Cloud.
+- D) Lower variable costs due to massive economies of scale.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 52)</strong></summary>
+
+**Correct Answer:** `C`
+
+Cloud elasticity allows resources to scale up or down on demand, eliminating the need to predict and provision for peak future capacity in advance.
+Easy and fast deployment of applications in multiple Regions is a benefit of AWS's global infrastructure, enabling speed and reach, but does not remove the need to estimate future infrastructure usage. Security of the AWS Cloud refers to the protections AWS provides for its infrastructure under the shared responsibility model, which is unrelated to capacity planning or infrastructure estimation. Lower variable costs due to massive economies of scale means AWS can offer reduced pricing as its customer base grows, but lower costs do not eliminate the underlying need to estimate how much infrastructure will be required.
+
+</details>
+
+---
+
+### Question 53 — `CLF-U0485` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 1.1: Cloud Economics & Benefits*
+
+**What is an example of agility in the AWS Cloud?**
+
+- A) Access to multiple instance types.
+- B) Access to managed services.
+- C) Using Consolidated Billing to produce one bill.
+- D) Decreased acquisition time for new compute resources.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 53)</strong></summary>
+
+**Correct Answer:** `D`
+
+Agility in the AWS Cloud is best illustrated by the dramatically reduced time to acquire and provision new compute resources, from weeks on-premises to minutes in the cloud, enabling teams to experiment and iterate faster.
+Access to multiple instance types is a flexibility benefit that allows customers to match compute to workload requirements, but does not directly describe the speed of acquiring new resources. Access to managed services reduces operational overhead by offloading infrastructure management to AWS, but is an example of reduced complexity rather than agility. Consolidated Billing is a cost management feature that combines charges from multiple accounts into a single bill, which is a billing convenience and unrelated to the speed of resource acquisition.
+
+</details>
+
+---
+
+### Question 54 — `CLF-U0599` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 1.1: Cloud Economics & Benefits*
+
+**Which of the following should be taken into account when performing a TCO analysis regarding the costs of running an application on AWS VS on-premises? (Choose TWO)**
+
+- A) Labor and IT costs.
+- B) Cooling and power consumption.
+- C) Amazon EBS computing power.
+- D) Software architecture.
+- E) Software compatibility.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 54)</strong></summary>
+
+**Correct Answer:** `A, B`
+
+A TCO analysis compares on-premises costs including labor, IT staff, cooling, and power consumption against AWS costs, where these physical infrastructure expenses are eliminated.
+Amazon EBS computing power is an AWS service cost rather than an on-premises infrastructure expense, so it does not belong in a TCO comparison of what customers stop paying for when they migrate. Software architecture refers to how an application is designed and structured, which is a technical consideration rather than an infrastructure cost factored into a TCO analysis. Software compatibility refers to whether applications can run in a new environment, which is a migration planning concern rather than a cost category included in a TCO comparison.
+
+</details>
+
+---
+
+### Question 55 — `CLF-U0633` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.1: Cloud Economics & Benefits*
 
 **The financial benefits of using AWS are: (Select TWO)**
@@ -1013,7 +1596,7 @@ Moving from variable operational expense (opex) to upfront capital expense (cape
 - E) Business credit lines for startups.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 33)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 55)</strong></summary>
 
 **Correct Answer:** `A, C`
 
@@ -1024,7 +1607,7 @@ Increased capital expenditure describes the opposite of an AWS financial benefit
 
 ---
 
-### Question 34 — `CLF-U0802` | 🔁 Repeated in 3 Exam Sources
+### Question 56 — `CLF-U0802` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.1: Cloud Economics & Benefits*
 
 **Which of the following services will help businesses ensure compliance in AWS?**
@@ -1035,7 +1618,7 @@ Increased capital expenditure describes the opposite of an AWS financial benefit
 - D) CloudTrail.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 34)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 56)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -1046,7 +1629,7 @@ Amazon CloudFront is a global content delivery network that caches and distribut
 
 ---
 
-### Question 35 — `CLF-U1445` | 🔁 Repeated in 3 Exam Sources
+### Question 57 — `CLF-U1445` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.1: Cloud Economics & Benefits*
 
 **Which AWS Cloud benefit is shown by an architecture’s ability to withstand failures with minimal downtime?**
@@ -1057,7 +1640,7 @@ Amazon CloudFront is a global content delivery network that caches and distribut
 - D) High availability
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 35)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 57)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -1083,7 +1666,7 @@ AWS Well-Archit
 
 ---
 
-### Question 36 — `CLF-U1465` | 🔁 Repeated in 3 Exam Sources
+### Question 58 — `CLF-U1465` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.2: AWS Cloud Adoption Framework (CAF 3.0)*
 
 **Which option is a perspective that includes foundational capabilities of the AWS Cloud Adoption Framework (AWS CAF)?**
@@ -1094,7 +1677,7 @@ AWS Well-Archit
 - D) Reliability
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 36)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 58)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -1114,7 +1697,7 @@ solution. Reliability is not a perspective of the AWS CAF, but
 
 ---
 
-### Question 37 — `CLF-U0207` | 🔁 Repeated in 3 Exam Sources
+### Question 59 — `CLF-U0207` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.3: AWS Well-Architected Framework*
 
 **Which of the following is a cloud architectural design principle?**
@@ -1125,7 +1708,7 @@ solution. Reliability is not a perspective of the AWS CAF, but
 - D) Use commercial database software.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 37)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 59)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -1136,7 +1719,7 @@ Scaling up not out describes vertical scaling, which is an on-premises approach 
 
 ---
 
-### Question 38 — `CLF-U0439` | 🔁 Repeated in 3 Exam Sources
+### Question 60 — `CLF-U0439` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.3: AWS Well-Architected Framework*
 
 **Which pillar of the AWS Well-Architected Framework provides recommendations to help customers select the right compute resources based on workload requirements?**
@@ -1147,7 +1730,7 @@ Scaling up not out describes vertical scaling, which is an on-premises approach 
 - D) Reliability.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 38)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 60)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -1158,7 +1741,7 @@ Operational Excellence focuses on running and monitoring systems to deliver busi
 
 ---
 
-### Question 39 — `CLF-U0445` | 🔁 Repeated in 3 Exam Sources
+### Question 61 — `CLF-U0445` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.3: AWS Well-Architected Framework*
 
 **An administrator needs to rapidly deploy a popular IT solution and start using it immediately. Where can the administrator find assistance?**
@@ -1169,7 +1752,7 @@ Operational Excellence focuses on running and monitoring systems to deliver busi
 - D) AWS Quick Start reference deployments.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 39)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 61)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -1180,7 +1763,7 @@ AWS Well-Architected Framework documentation provides architectural guidance and
 
 ---
 
-### Question 40 — `CLF-U0449` | 🔁 Repeated in 3 Exam Sources
+### Question 62 — `CLF-U0449` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.3: AWS Well-Architected Framework*
 
 **Which design principles for cloud architecture are recommended when re-architecting a large monolithic application? (Select TWO)**
@@ -1192,7 +1775,7 @@ AWS Well-Architected Framework documentation provides architectural guidance and
 - E) Design for scalability.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 40)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 62)</strong></summary>
 
 **Correct Answer:** `C, E`
 
@@ -1203,7 +1786,7 @@ Manual monitoring relies on human observation rather than automated alerting and
 
 ---
 
-### Question 41 — `CLF-U0459` | 🔁 Repeated in 3 Exam Sources
+### Question 63 — `CLF-U0459` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.3: AWS Well-Architected Framework*
 
 **Which of the following is an important architectural design principle when designing cloud applications?**
@@ -1214,7 +1797,7 @@ Manual monitoring relies on human observation rather than automated alerting and
 - D) Provision extra capacity.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 41)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 63)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -1225,7 +1808,7 @@ Using tightly coupled components is an anti-pattern in cloud architecture, as ti
 
 ---
 
-### Question 42 — `CLF-U0470` | 🔁 Repeated in 3 Exam Sources
+### Question 64 — `CLF-U0470` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.3: AWS Well-Architected Framework*
 
 **Which of the following is an AWS Cloud architecture design principle?**
@@ -1236,7 +1819,7 @@ Using tightly coupled components is an anti-pattern in cloud architecture, as ti
 - D) Implement vertical scaling.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 42)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 64)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -1247,7 +1830,7 @@ Implementing single points of failure is an anti-pattern that directly contradic
 
 ---
 
-### Question 43 — `CLF-U1305` | 🔁 Repeated in 3 Exam Sources
+### Question 65 — `CLF-U1305` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.3: AWS Well-Architected Framework*
 
 **Which pillar of the AWS Well-Architected Framework focuses on running workloads effectively, gaining operational insights, and continuously improving processes?**
@@ -1258,7 +1841,7 @@ Implementing single points of failure is an anti-pattern that directly contradic
 - D) Operational Excellence
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 43)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 65)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -1269,7 +1852,7 @@ Security focuses on protecting data, systems, and assets through access controls
 
 ---
 
-### Question 44 — `CLF-U1309` | 🔁 Repeated in 3 Exam Sources
+### Question 66 — `CLF-U1309` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.3: AWS Well-Architected Framework*
 
 **Which pillar of the AWS Well-Architected Framework focuses on the ability to run workloads effectively, gain insight into operations, and continuously improve supporting processes and procedures?**
@@ -1280,7 +1863,7 @@ Security focuses on protecting data, systems, and assets through access controls
 - D) Performance Efficiency
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 44)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 66)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -1291,7 +1874,7 @@ Operational Excellence focuses on running workloads effectively, monitoring oper
 
 ---
 
-### Question 45 — `CLF-U2529` | 🔁 Repeated in 3 Exam Sources
+### Question 67 — `CLF-U2529` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.3: AWS Well-Architected Framework*
 
 **A company wants to protect its AWS Cloud information, systems, and assets while performing risk assessment and mitigation tasks. Which pillar of the AWS Well-Architected Framework is supported by these goals?**
@@ -1302,7 +1885,7 @@ Operational Excellence focuses on running workloads effectively, monitoring oper
 - D) Performance efficiency
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 45)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 67)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -1321,7 +1904,61 @@ This question (# 194) is directly sourced from authentic **Community Consensus P
 
 ---
 
-### Question 46 — `CLF-U0249` | 🔁 Repeated in 3 Exam Sources
+### Question 68 — `CLF-U0114` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 1.4: AWS Global Infrastructure*
+
+**An organization has a legacy application designed using monolithic-based architecture. Which AWS Service can be used to decouple the components of the application?**
+
+- A) Amazon SQS.
+- B) Virtual Private Gateway.
+- C) AWS Artifact.
+- D) Amazon CloudFront.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 68)</strong></summary>
+
+**Correct Answer:** `A`
+
+Amazon SQS is a fully managed message queuing service that decouples application components by allowing each component to send and receive messages independently, enabling a monolithic application to be broken into loosely coupled parts that communicate asynchronously.
+Amazon SNS is a publish/subscribe messaging service that broadcasts messages to multiple subscribers simultaneously, which is useful for fan-out notification patterns but is not the primary service for decoupling monolithic application components through asynchronous message queuing. Amazon EventBridge is a serverless event bus that routes events between AWS services, SaaS applications, and custom applications based on event patterns; while it supports decoupled architectures, it is event-driven routing rather than a message queue for decoupling component dependencies in a monolithic application. AWS Step Functions is a serverless workflow orchestration service that coordinates multiple AWS services into structured workflows, which handles workflow state management rather than providing the message queuing mechanism needed to decouple monolithic application components.
+
+</details>
+
+---
+
+### Question 69 — `CLF-U2481` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 1.4: AWS Global Infrastructure*
+
+**What does the concept of agility mean in AWS Cloud computing? (Choose two.)**
+
+- A) The speed at which AWS resources are implemented
+- B) The speed at which AWS creates new AWS Regions
+- C) The ability to experiment quickly
+- D) The elimination of wasted capacity
+- E) The low cost of entry into cloud computing
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 69)</strong></summary>
+
+**Correct Answer:** `AC`
+
+**Correct Answer: AC (The speed at which AWS resources are implemented, The ability to experiment quickly)**
+
+This question (# 136) is directly sourced from authentic **Community Consensus Pool** community discussions.
+**Why this is correct:** The scenario specifically tests AWS best practices. 'The speed at which AWS resources are implemented, The ability to experiment quickly' directly satisfies the architectural requirement defined in the prompt.
+
+**Key Option Breakdown:**
+- **Option A (The speed at which AWS resources are implemented)** [CORRECT]: Satisfies the prompt requirements directly.
+- **Option B (The speed at which AWS creates new AWS Regions)** [INCORRECT]: Does not meet the scenario requirements or introduces suboptimal design for this specific workload.
+- **Option C (The ability to experiment quickly)** [CORRECT]: Satisfies the prompt requirements directly.
+- **Option D (The elimination of wasted capacity)** [INCORRECT]: Does not meet the scenario requirements or introduces suboptimal design for this specific workload.
+- **Option E (The low cost of entry into cloud computing)** [INCORRECT]: Does not meet the scenario requirements or introduces suboptimal design for this specific workload.
+
+</details>
+
+---
+
+### Question 70 — `CLF-U0249` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.5: High Availability, Fault Tolerance & Disaster Recovery*
 
 **Which disaster recovery scenario offers the lowest probability of down time?**
@@ -1332,7 +1969,7 @@ This question (# 194) is directly sourced from authentic **Community Consensus P
 - D) Multi-site active-active.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 46)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 70)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -1343,7 +1980,7 @@ Backup and restore has the highest recovery time of all DR strategies. Data is r
 
 ---
 
-### Question 47 — `CLF-U0477` | 🔁 Repeated in 3 Exam Sources
+### Question 71 — `CLF-U0477` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.5: High Availability, Fault Tolerance & Disaster Recovery*
 
 **Which feature of the AWS Cloud will support an international company’s requirement for low latency to all of its customers?**
@@ -1354,7 +1991,7 @@ Backup and restore has the highest recovery time of all DR strategies. Data is r
 - D) High availability.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 47)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 71)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -1365,7 +2002,7 @@ Fault tolerance refers to a system's ability to continue operating despite compo
 
 ---
 
-### Question 48 — `CLF-U0478` | 🔁 Repeated in 3 Exam Sources
+### Question 72 — `CLF-U0478` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.5: High Availability, Fault Tolerance & Disaster Recovery*
 
 **What are the benefits of developing and running a new application in the AWS Cloud compared to on-premises? (Select TWO)**
@@ -1377,7 +2014,7 @@ Fault tolerance refers to a system's ability to continue operating despite compo
 - E) AWS takes care of application security patching.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 48)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 72)</strong></summary>
 
 **Correct Answer:** `C, D`
 
@@ -1388,9 +2025,9 @@ AWS does not automatically distribute all data globally by default, as data resi
 
 ---
 
-## 🎯 Domain 2: Security and Compliance (30% — 60 Questions)
+## 🎯 Domain 2: Security and Compliance (30% — 90 Questions)
 
-### Question 49 — `CLF-U0013` | 🔁 Repeated in 4 Exam Sources
+### Question 73 — `CLF-U0013` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 2.1: AWS Shared Responsibility Model*
 
 **You are working on a project that involves creating thumbnails of millions of images. Consistent uptime is not an issue, and continuous processing is not required. Which EC2 buying option would be the most cost-effective?**
@@ -1401,7 +2038,7 @@ AWS does not automatically distribute all data globally by default, as data resi
 - D) Spot Instances.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 49)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 73)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -1421,7 +2058,74 @@ Spot Instances offer significant cost savings compared to On-Demand or Reserved 
 
 ---
 
-### Question 50 — `CLF-U0063` | 🔁 Repeated in 4 Exam Sources
+### Question 74 — `CLF-U0032` | 🔁 Repeated in 4 Exam Sources
+*Topic: Topic 2.1: AWS Shared Responsibility Model*
+
+**Which of the following AWS services can be used as a compute resource? (Choose TWO)**
+
+- A) Amazon VPC.
+- B) Amazon CloudWatch.
+- C) Amazon S3.
+- D) Amazon EC2.
+- E) AWS Lambda.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 74)</strong></summary>
+
+**Correct Answer:** `D, E`
+
+**Correct answer: AWS Lambda**
+
+AWS Lambda is a serverless compute service that lets you run code without provisioning or managing servers. You upload your code as a "Lambda function," and AWS Lambda runs your code in response to events, automatically managing the underlying compute resources. This makes it a compute resource.
+
+**Correct answer: Amazon EC2**
+
+Amazon Elastic Compute Cloud (EC2) provides virtual servers in the cloud. You have full control over the operating system, applications, and security settings of your EC2 instances. EC2 is a fundamental compute service in AWS, allowing you to run a wide variety of workloads.
+
+**Incorrect:**
+
+**A. Amazon S3** - Amazon S3 (Simple Storage Service) is an object storage service. While you can host static websites on S3, it's primarily designed for storing and retrieving data, not for running code or performing computations. It is not a compute resource.
+
+**B. Amazon CloudWatch** - Amazon CloudWatch is a monitoring and observability service. It collects and tracks metrics, collects and monitors log files, and sets alarms. While it processes data, it doesn't execute code in the same way as compute services like EC2 or Lambda. It is not a compute resource.
+
+**C. Amazon VPC** - Amazon Virtual Private Cloud (VPC) lets you provision a logically isolated section of the AWS Cloud where you can launch AWS resources in a virtual network that you define. It provides networking capabilities, not compute. It is not a compute resource.
+
+</details>
+
+---
+
+### Question 75 — `CLF-U0057` | 🔁 Repeated in 4 Exam Sources
+*Topic: Topic 2.1: AWS Shared Responsibility Model*
+
+**What does Amazon Elastic Beanstalk provide?**
+
+- A) A PaaS solution to automate application deployment.
+- B) A compute engine for Amazon ECS.
+- C) A scalable file storage solution for use with AWS and on-premises servers.
+- D) A NoSQL database service.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 75)</strong></summary>
+
+**Correct Answer:** `A`
+
+**Correct answer: A PaaS solution to automate application deployment**
+
+Amazon Elastic Beanstalk is a Platform as a Service (PaaS) that simplifies the deployment and management of web applications and services. It allows developers to upload their code, and Elastic Beanstalk automatically handles the infrastructure provisioning, operating system management, application deployment, and health monitoring. This reduces the operational burden on developers, enabling them to focus on writing code rather than managing infrastructure. Elastic Beanstalk supports various programming languages and platforms like Java, .NET, PHP, Node.js, Python, Ruby, Go, and Docker.
+
+**Incorrect:**
+
+**B. A compute engine for Amazon ECS** - Amazon ECS (Elastic Container Service) is a container orchestration service. While Elastic Beanstalk can deploy applications packaged as Docker containers, it is not a compute engine *for* ECS. ECS has its own compute engine options, such as EC2 instances or AWS Fargate.
+
+**C. A scalable file storage solution for use with AWS and on-premises servers** - This describes Amazon S3 (Simple Storage Service) or AWS Storage Gateway, not Elastic Beanstalk. S3 provides object storage, while Storage Gateway connects on-premises environments to AWS storage services.
+
+**D. A NoSQL database service** - This describes services like Amazon DynamoDB. Elastic Beanstalk can *deploy* applications that use NoSQL databases, but it is not a database service itself.
+
+</details>
+
+---
+
+### Question 76 — `CLF-U0063` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 2.1: AWS Shared Responsibility Model*
 
 **A company has deployed a new web application on multiple Amazon EC2 instances. Which of the following should they use to ensure that the incoming HTTP traffic is distributed evenly across the instances?**
@@ -1432,7 +2136,7 @@ Spot Instances offer significant cost savings compared to On-Demand or Reserved 
 - D) AWS Application Load Balancer.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 50)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 76)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -1452,7 +2156,7 @@ An Application Load Balancer (ALB) is designed for HTTP and HTTPS traffic. It op
 
 ---
 
-### Question 51 — `CLF-U0078` | 🔁 Repeated in 4 Exam Sources
+### Question 77 — `CLF-U0078` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 2.1: AWS Shared Responsibility Model*
 
 **Which of the following AWS services scale automatically without your intervention? (Choose TWO)**
@@ -1464,7 +2168,7 @@ An Application Load Balancer (ALB) is designed for HTTP and HTTPS traffic. It op
 - E) Amazon EBS.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 51)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 77)</strong></summary>
 
 **Correct Answer:** `B, C`
 
@@ -1488,7 +2192,7 @@ AWS Lambda automatically scales your function execution by running your code in 
 
 ---
 
-### Question 52 — `CLF-U0080` | 🔁 Repeated in 4 Exam Sources
+### Question 78 — `CLF-U0080` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 2.1: AWS Shared Responsibility Model*
 
 **A company needs to migrate their website from on-premises to AWS. Security is a major concern for them, so they need to host their website on hardware that is NOT shared with other AWS customers. Which of the following EC2 instance options meets this requirement?**
@@ -1499,7 +2203,7 @@ AWS Lambda automatically scales your function execution by running your code in 
 - D) Reserved instances.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 52)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 78)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -1519,7 +2223,38 @@ Dedicated Instances are Amazon EC2 instances that run in a virtual private cloud
 
 ---
 
-### Question 53 — `CLF-U0104` | 🔁 Repeated in 4 Exam Sources
+### Question 79 — `CLF-U0089` | 🔁 Repeated in 4 Exam Sources
+*Topic: Topic 2.1: AWS Shared Responsibility Model*
+
+**Which of the following is NOT a characteristic of Amazon Elastic Compute Cloud (Amazon EC2)?**
+
+- A) Amazon EC2 is considered a Serverless Web Service.
+- B) Amazon EC2 eliminates the need to invest in hardware upfront.
+- C) Amazon EC2 can launch as many or as few virtual servers as needed.
+- D) Amazon EC2 offers scalable computing.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 79)</strong></summary>
+
+**Correct Answer:** `A`
+
+**Correct answer: Amazon EC2 is considered a Serverless Web Service**
+
+Amazon EC2 (Elastic Compute Cloud) provides virtual servers in the cloud, giving users control over the operating system, applications, and other configurations. EC2 instances require you to manage the underlying infrastructure, including patching, scaling, and server maintenance. Serverless computing, on the other hand, abstracts away the underlying infrastructure, allowing developers to focus solely on writing and deploying code without managing servers. Services like AWS Lambda are examples of serverless offerings. Therefore, EC2 is not a serverless service.
+
+**Incorrect:**
+
+**A. Amazon EC2 offers scalable computing** - Amazon EC2 provides scalable computing capacity. You can easily increase or decrease the number of EC2 instances based on your application's needs, making it a scalable solution. This is a core characteristic of EC2.
+
+**B. Amazon EC2 eliminates the need to invest in hardware upfront** - One of the key benefits of Amazon EC2 is that it eliminates the need for upfront investment in physical hardware. You pay only for the compute capacity you use, reducing capital expenditure. This is a fundamental advantage of cloud computing and EC2.
+
+**D. Amazon EC2 can launch as many or as few virtual servers as needed** - Amazon EC2 allows you to launch as many or as few virtual servers (instances) as needed, providing flexibility and control over your computing resources. This dynamic provisioning is a defining characteristic of EC2 and cloud computing in general.
+
+</details>
+
+---
+
+### Question 80 — `CLF-U0104` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 2.1: AWS Shared Responsibility Model*
 
 **A company is seeking to deploy an existing .NET application onto AWS as quickly as possible. Which AWS Service should the customer use to achieve this goal?**
@@ -1530,7 +2265,7 @@ Dedicated Instances are Amazon EC2 instances that run in a virtual private cloud
 - D) AWS Trusted Advisor.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 53)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 80)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -1550,7 +2285,38 @@ AWS Elastic Beanstalk is a Platform as a Service (PaaS) that makes it easy for d
 
 ---
 
-### Question 54 — `CLF-U0391` | 🔁 Repeated in 4 Exam Sources
+### Question 81 — `CLF-U0387` | 🔁 Repeated in 4 Exam Sources
+*Topic: Topic 2.1: AWS Shared Responsibility Model*
+
+**Which of the following does NOT belong to the AWS Cloud Computing models?**
+
+- A) Platform as a Service (PaaS).
+- B) Infrastructure as a Service (IaaS).
+- C) Software as a Service (SaaS).
+- D) Networking as a Service (NaaS).
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 81)</strong></summary>
+
+**Correct Answer:** `D`
+
+**Correct answer: Networking as a Service (NaaS)**
+
+Networking as a Service (NaaS) is not one of the core cloud computing models recognized by AWS. The fundamental cloud computing models are Infrastructure as a Service (IaaS), Platform as a Service (PaaS), and Software as a Service (SaaS). While networking is a critical component of cloud services, it's typically delivered as part of IaaS or PaaS offerings, rather than being a standalone cloud computing model in the same vein as IaaS, PaaS, and SaaS.
+
+**Incorrect:**
+
+**B. Software as a Service (SaaS)** - SaaS is a cloud computing model where users access software applications over the internet. Examples include Salesforce, Gmail, and Microsoft Office 365. This is a valid cloud computing model.
+
+**C. Platform as a Service (PaaS)** - PaaS provides a platform allowing customers to develop, run, and manage applications without the complexity of managing the underlying infrastructure. AWS Elastic Beanstalk and AWS Lambda are examples of PaaS offerings. This is a valid cloud computing model.
+
+**D. Infrastructure as a Service (IaaS)** - IaaS provides access to fundamental computing resources – virtual machines, storage, networks – over the internet. AWS EC2, S3, and VPC are examples of IaaS. This is a valid cloud computing model.
+
+</details>
+
+---
+
+### Question 82 — `CLF-U0391` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 2.1: AWS Shared Responsibility Model*
 
 **What are two advantages of using Cloud Computing over using traditional data centers? (Choose TWO)**
@@ -1562,7 +2328,7 @@ AWS Elastic Beanstalk is a Platform as a Service (PaaS) that makes it easy for d
 - E) Dedicated hosting.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 54)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 82)</strong></summary>
 
 **Correct Answer:** `B, C`
 
@@ -1586,7 +2352,7 @@ Cloud computing provides a distributed infrastructure, meaning resources are spr
 
 ---
 
-### Question 55 — `CLF-U0394` | 🔁 Repeated in 4 Exam Sources
+### Question 83 — `CLF-U0394` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 2.1: AWS Shared Responsibility Model*
 
 **What are the AWS services/features that can help you maintain a highly available and fault-tolerant architecture in AWS? (Choose TWO)**
@@ -1598,7 +2364,7 @@ Cloud computing provides a distributed infrastructure, meaning resources are spr
 - E) Network ACLs.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 55)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 83)</strong></summary>
 
 **Correct Answer:** `B, C`
 
@@ -1622,7 +2388,69 @@ Amazon EC2 Auto Scaling helps you maintain application availability and allows y
 
 ---
 
-### Question 56 — `CLF-U0412` | 🔁 Repeated in 4 Exam Sources
+### Question 84 — `CLF-U0396` | 🔁 Repeated in 4 Exam Sources
+*Topic: Topic 2.1: AWS Shared Responsibility Model*
+
+**What is the AWS serverless service that allows you to run your applications without any administrative burden?**
+
+- A) Amazon LightSail.
+- B) AWS Lambda.
+- C) Amazon RDS instances.
+- D) Amazon EC2 instances.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 84)</strong></summary>
+
+**Correct Answer:** `B`
+
+**Correct answer: AWS Lambda**
+
+AWS Lambda is a serverless compute service that lets you run code without provisioning or managing servers. You only pay for the compute time you consume, making it a cost-effective solution for many types of applications. Lambda handles all the underlying infrastructure, including server and operating system maintenance, capacity provisioning and automatic scaling, and code monitoring and logging. This allows developers to focus on writing code without the administrative burden of managing servers.
+
+**Incorrect:**
+
+**A. Amazon EC2 instances** - Amazon EC2 instances are virtual servers in the cloud. While EC2 provides flexibility and control, it requires you to manage the operating system, patching, and scaling, which introduces administrative overhead. This is the opposite of a serverless service.
+
+**B. Amazon LightSail** - Amazon Lightsail is designed to be easy to use and offers virtual servers, containers, databases, and more at a predictable monthly price. While it simplifies server management compared to EC2, it still requires you to manage the underlying infrastructure, making it not a serverless solution.
+
+**D. Amazon RDS instances** - Amazon RDS (Relational Database Service) instances are managed database services. While RDS simplifies database administration tasks like patching and backups, you are still responsible for managing the database instance, including sizing, scaling, and performance tuning. This is not a serverless compute service.
+
+</details>
+
+---
+
+### Question 85 — `CLF-U0411` | 🔁 Repeated in 4 Exam Sources
+*Topic: Topic 2.1: AWS Shared Responsibility Model*
+
+**What are AWS shared controls?**
+
+- A) Controls that are solely the responsibility of the customer based on the application they are deploying within AWS services.
+- B) Controls that a customer inherits from AWS.
+- C) Controls that apply to both the infrastructure layer and customer layers.
+- D) Controls that the customer and AWS collaborate together upon to secure the infrastructure.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 85)</strong></summary>
+
+**Correct Answer:** `D`
+
+**Correct answer: Controls that apply to both the infrastructure layer and customer layers**
+
+AWS shared controls are security controls that are the responsibility of both AWS and the customer. This means that AWS is responsible for the underlying infrastructure and the customer is responsible for configuring and using the services securely. For example, patch management is a shared control. AWS is responsible for patching the underlying infrastructure, while the customer is responsible for patching their operating systems and applications running on EC2 instances. Another example is awareness and training; AWS trains its employees, and customers are responsible for training their own employees. This shared responsibility model is a core concept in AWS security.
+
+**Incorrect:**
+
+**A. Controls that the customer and AWS collaborate together upon to secure the infrastructure** - While collaboration is implied in the shared responsibility model, this option is too vague. Shared controls are specifically those that *apply* to both layers, not just any area where collaboration might occur.
+
+**C. Controls that are solely the responsibility of the customer based on the application they are deploying within AWS services** - These are customer-specific controls, not shared controls. Shared controls, by definition, involve responsibilities for both AWS and the customer.
+
+**D. Controls that a customer inherits from AWS** - These are inherited controls. Inherited controls are controls that the customer fully inherits from AWS. For example, physical security of the data centers is an inherited control.
+
+</details>
+
+---
+
+### Question 86 — `CLF-U0412` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 2.1: AWS Shared Responsibility Model*
 
 **Which design principles relate to performance efficiency in AWS? (Choose TWO)**
@@ -1634,7 +2462,7 @@ Amazon EC2 Auto Scaling helps you maintain application availability and allows y
 - E) Enable audit logging.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 56)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 86)</strong></summary>
 
 **Correct Answer:** `A, D`
 
@@ -1658,7 +2486,7 @@ Building multi-region architectures improves performance efficiency by reducing 
 
 ---
 
-### Question 57 — `CLF-U0576` | 🔁 Repeated in 4 Exam Sources
+### Question 87 — `CLF-U0576` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 2.1: AWS Shared Responsibility Model*
 
 **Which of the following EC2 instance purchasing options supports the Bring Your Own License (BYOL) model for almost every BYOL scenario?**
@@ -1669,7 +2497,7 @@ Building multi-region architectures improves performance efficiency by reducing 
 - D) Reserved Instances.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 57)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 87)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -1689,7 +2517,7 @@ Dedicated Hosts are physical servers with EC2 instance capacity dedicated for yo
 
 ---
 
-### Question 58 — `CLF-U0788` | 🔁 Repeated in 4 Exam Sources
+### Question 88 — `CLF-U0788` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 2.1: AWS Shared Responsibility Model*
 
 **Which statement is true regarding the AWS Shared Responsibility Model?**
@@ -1700,7 +2528,7 @@ Dedicated Hosts are physical servers with EC2 instance capacity dedicated for yo
 - D) Security of the managed services is the responsibility of the customer.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 58)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 88)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -1720,7 +2548,7 @@ The AWS Shared Responsibility Model defines the security responsibilities betwee
 
 ---
 
-### Question 59 — `CLF-U0794` | 🔁 Repeated in 4 Exam Sources
+### Question 89 — `CLF-U0794` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 2.1: AWS Shared Responsibility Model*
 
 **In the AWS Shared responsibility Model, which of the following are the responsibility of the customer? (Choose TWO)**
@@ -1732,7 +2560,7 @@ The AWS Shared Responsibility Model defines the security responsibilities betwee
 - E) Configuring network access rules.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 59)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 89)</strong></summary>
 
 **Correct Answer:** `D, E`
 
@@ -1756,7 +2584,7 @@ Setting password complexity rules is a customer responsibility. This includes de
 
 ---
 
-### Question 60 — `CLF-U0800` | 🔁 Repeated in 4 Exam Sources
+### Question 90 — `CLF-U0800` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 2.1: AWS Shared Responsibility Model*
 
 **Which of the following aspects of security are managed by AWS? (Choose TWO)**
@@ -1768,7 +2596,7 @@ Setting password complexity rules is a customer responsibility. This includes de
 - E) Securing global physical infrastructure.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 60)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 90)</strong></summary>
 
 **Correct Answer:** `D, E`
 
@@ -1792,7 +2620,7 @@ AWS manages the underlying hardware and infrastructure. This includes patching a
 
 ---
 
-### Question 61 — `CLF-U0806` | 🔁 Repeated in 4 Exam Sources
+### Question 91 — `CLF-U0806` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 2.1: AWS Shared Responsibility Model*
 
 **Under the Shared Responsibility Model, which of the following controls do customers fully inherit from AWS? (Choose TWO)**
@@ -1804,7 +2632,7 @@ AWS manages the underlying hardware and infrastructure. This includes patching a
 - E) Physical controls.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 61)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 91)</strong></summary>
 
 **Correct Answer:** `D, E`
 
@@ -1828,7 +2656,106 @@ AWS is responsible for the physical security of its data centers, including meas
 
 ---
 
-### Question 62 — `CLF-U0040` | 🔁 Repeated in 4 Exam Sources
+### Question 92 — `CLF-U0826` | 🔁 Repeated in 4 Exam Sources
+*Topic: Topic 2.1: AWS Shared Responsibility Model*
+
+**Which of the following are examples of the customer’s responsibility to implement “security IN the cloud”? (Choose TWO)**
+
+- A) Building a schema for an application.
+- B) Replacing physical hardware.
+- C) Creating a new hypervisor.
+- D) Patch management of the underlying infrastructure.
+- E) File system encryption.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 92)</strong></summary>
+
+**Correct Answer:** `A, E`
+
+**Correct answer: File system encryption**
+
+File system encryption is a customer responsibility under the shared responsibility model. The customer is responsible for encrypting their data at rest within the file system of their EC2 instances or other storage services. AWS provides tools and services to facilitate encryption, but the customer is responsible for implementing and managing it.
+
+**Correct answer: Building a schema for an application**
+
+Building a schema for an application is a customer responsibility. The customer is responsible for the design, security, and management of their applications and data, including the schema that defines the structure of the data. AWS provides database services, but the customer defines how those services are used.
+
+**Incorrect:**
+
+**A. Replacing physical hardware** - Replacing physical hardware is an AWS responsibility. AWS manages the underlying infrastructure, including replacing faulty hardware. This is part of "security OF the cloud."
+
+**B. Creating a new hypervisor** - Creating and maintaining the hypervisor is an AWS responsibility. The hypervisor is part of the underlying infrastructure that AWS manages. This is part of "security OF the cloud."
+
+**D. Patch management of the underlying infrastructure** - Patch management of the underlying infrastructure is an AWS responsibility. AWS is responsible for patching and maintaining the operating systems and software on the infrastructure that supports its services. This is part of "security OF the cloud."
+
+</details>
+
+---
+
+### Question 93 — `CLF-U1460` | 🔁 Repeated in 4 Exam Sources
+*Topic: Topic 2.1: AWS Shared Responsibility Model*
+
+**A company needs to host a highly available application in the AWS Cloud. The application runs infrequently for short periods of time. > Which AWS service will meet these requirements with the **LEAST** amount of operational overhead? #### Options - **A.** AWS Lambda **[CORRECT]** - **B.** AWS Fargate - **C.** Amazon Aurora - **D.** Amazon EC2**
+
+- A) Amazon EC2
+- B) AWS Fargate
+- C) AWS Lambda
+- D) Amazon Aurora
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 93)</strong></summary>
+
+**Correct Answer:** `C`
+
+The AWS service that will meet the requirements of the company that needs to host a
+highly available application in the AWS Cloud that runs infrequently for short periods of
+time with the least amount of operational overhead is AWS Lambda. AWS Lambda is a
+serverless compute service that allows customers to run code without provisioning or
+managing servers. The company can use AWS Lambda to create and deploy their
+application as functions that are triggered by events, such as API calls, messages, or
+schedules. AWS Lambda automatically scales the compute resources based on the
+demand, and customers only pay for the compute time they consume. AWS Lambda also
+simplifies the management and maintenance of the application, as customers do not need
+to worry about the underlying infrastructure, security, or availability. Amazon EC2, AWS
+Fargate, and Amazon Aurora are not the best services to use for this purpose. Amazon
+EC2 is a service that provides scalable compute capacity in t
+
+</details>
+
+---
+
+### Question 94 — `CLF-U0017` | 🔁 Repeated in 4 Exam Sources
+*Topic: Topic 2.2: IAM, Identity & Access Governance*
+
+**Which of the following must an IAM user provide to interact with AWS services using the AWS Command Line Interface (AWS CLI)?**
+
+- A) Access keys.
+- B) Secret token.
+- C) UserID.
+- D) User name and password.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 94)</strong></summary>
+
+**Correct Answer:** `A`
+
+**Correct answer: Access keys**
+
+To interact with AWS services using the AWS Command Line Interface (AWS CLI), an IAM user must configure the AWS CLI with their access key ID and secret access key. These access keys are used to digitally sign requests to AWS, allowing the AWS services to verify the identity of the user and ensure that they have the necessary permissions to perform the requested actions. Access keys are long-term credentials for an IAM user or the AWS account root user. It is a security best practice to use IAM users instead of the root user, and to rotate access keys periodically.
+
+**Incorrect:**
+
+**B. User ID** - While a User ID is a unique identifier for an IAM user, it is not used for authentication with the AWS CLI. Access keys (Access Key ID and Secret Access Key) are required for authentication.
+
+**C. User name and password** - User names and passwords are used for logging into the AWS Management Console, not for authenticating with the AWS CLI. The AWS CLI uses access keys for authentication.
+
+**D. Secret token** - Secret tokens are used in conjunction with temporary security credentials, such as those obtained through AWS STS (Security Token Service) when assuming an IAM role. While access keys are used directly for IAM users, a secret token is used when assuming a role and is not a direct credential for an IAM user.
+
+</details>
+
+---
+
+### Question 95 — `CLF-U0040` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 2.2: IAM, Identity & Access Governance*
 
 **What are the default security credentials that are required to access the AWS management console for an IAM user account?**
@@ -1839,7 +2766,7 @@ AWS is responsible for the physical security of its data centers, including meas
 - D) Access keys.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 62)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 95)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -1859,7 +2786,7 @@ To access the AWS Management Console using an IAM user account, you typically ne
 
 ---
 
-### Question 63 — `CLF-U0072` | 🔁 Repeated in 4 Exam Sources
+### Question 96 — `CLF-U0072` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 2.2: IAM, Identity & Access Governance*
 
 **App development companies move their business to AWS to reduce time-to-market and improve customer satisfaction, what are the AWS automation tools that help them deploy their applications faster? (Choose TWO)**
@@ -1871,7 +2798,7 @@ To access the AWS Management Console using an IAM user account, you typically ne
 - E) Amazon Macie.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 63)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 96)</strong></summary>
 
 **Correct Answer:** `A, D`
 
@@ -1895,7 +2822,7 @@ AWS CloudFormation is an Infrastructure-as-Code (IaC) service that allows you to
 
 ---
 
-### Question 64 — `CLF-U0115` | 🔁 Repeated in 4 Exam Sources
+### Question 97 — `CLF-U0115` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 2.2: IAM, Identity & Access Governance*
 
 **Which of the following can be used to enable the Virtual Multi-Factor Authentication? (Choose TWO)**
@@ -1907,7 +2834,7 @@ AWS CloudFormation is an Infrastructure-as-Code (IaC) service that allows you to
 - E) Amazon Virtual Private Cloud.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 64)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 97)</strong></summary>
 
 **Correct Answer:** `B, C`
 
@@ -1931,7 +2858,7 @@ AWS Identity and Access Management (IAM) is the AWS service that allows you to m
 
 ---
 
-### Question 65 — `CLF-U0575` | 🔁 Repeated in 4 Exam Sources
+### Question 98 — `CLF-U0575` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 2.2: IAM, Identity & Access Governance*
 
 **What is the AWS service that enables you to manage all of your AWS accounts from a single master account?**
@@ -1942,7 +2869,7 @@ AWS Identity and Access Management (IAM) is the AWS service that allows you to m
 - D) Amazon Config.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 65)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 98)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -1962,7 +2889,7 @@ AWS Organizations is an AWS service that allows you to centrally manage and gove
 
 ---
 
-### Question 66 — `CLF-U0591` | 🔁 Repeated in 4 Exam Sources
+### Question 99 — `CLF-U0591` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 2.2: IAM, Identity & Access Governance*
 
 **AWS recommends some practices to help organizations avoid unexpected charges on their bill. Which of the following is NOT one of these practices?**
@@ -1973,7 +2900,7 @@ AWS Organizations is an AWS service that allows you to centrally manage and gove
 - D) Releasing unused Elastic IPs after terminating an EC2instance.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 66)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 99)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -1993,7 +2920,7 @@ Deleting unused Auto Scaling launch configurations is a good practice for organi
 
 ---
 
-### Question 67 — `CLF-U0789` | 🔁 Repeated in 4 Exam Sources
+### Question 100 — `CLF-U0789` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 2.2: IAM, Identity & Access Governance*
 
 **An organization has a large number of technical employees who operate their AWS Cloud infrastructure. What does AWS provide to help organize them into teams and then assign the appropriate permissions for each team?**
@@ -2004,7 +2931,7 @@ Deleting unused Auto Scaling launch configurations is a good practice for organi
 - D) AWS Organizations.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 67)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 100)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -2024,7 +2951,7 @@ IAM user groups are a way to manage multiple IAM users. You can assign permissio
 
 ---
 
-### Question 68 — `CLF-U0797` | 🔁 Repeated in 4 Exam Sources
+### Question 101 — `CLF-U0797` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 2.2: IAM, Identity & Access Governance*
 
 **Which of the following is equivalent to a user name and password and is used to authenticate your programmatic access to AWS services and APIs?**
@@ -2035,7 +2962,7 @@ IAM user groups are a way to manage multiple IAM users. You can assign permissio
 - D) MFA.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 68)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 101)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -2055,7 +2982,7 @@ Access keys, consisting of an access key ID and a secret access key, are used to
 
 ---
 
-### Question 69 — `CLF-U0798` | 🔁 Repeated in 4 Exam Sources
+### Question 102 — `CLF-U0798` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 2.2: IAM, Identity & Access Governance*
 
 **Which of the following services can help protect your web applications from SQL injection and other vulnerabilities in your application code?**
@@ -2066,7 +2993,7 @@ Access keys, consisting of an access key ID and a secret access key, are used to
 - D) AWS WAF.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 69)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 102)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -2086,7 +3013,7 @@ AWS WAF (Web Application Firewall) is a service that helps protect your web appl
 
 ---
 
-### Question 70 — `CLF-U0803` | 🔁 Repeated in 4 Exam Sources
+### Question 103 — `CLF-U0803` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 2.2: IAM, Identity & Access Governance*
 
 **Which of the following AWS security features is associated with an EC2 instance and functions to filter incoming traffic requests?**
@@ -2097,7 +3024,7 @@ AWS WAF (Web Application Firewall) is a service that helps protect your web appl
 - D) VPC Flow logs.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 70)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 103)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -2117,7 +3044,7 @@ Security Groups act as a virtual firewall for your EC2 instances to control inbo
 
 ---
 
-### Question 71 — `CLF-U0808` | 🔁 Repeated in 4 Exam Sources
+### Question 104 — `CLF-U0808` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 2.2: IAM, Identity & Access Governance*
 
 **A company uses AWS Organizations to manage all of its AWS accounts. Which of the following allows the company to restrict what services and actions are allowed in each individual account?**
@@ -2128,7 +3055,7 @@ Security Groups act as a virtual firewall for your EC2 instances to control inbo
 - D) AWS Fargate.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 71)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 104)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -2148,7 +3075,7 @@ AWS Service Control Policies (SCPs) are a feature of AWS Organizations that allo
 
 ---
 
-### Question 72 — `CLF-U0821` | 🔁 Repeated in 4 Exam Sources
+### Question 105 — `CLF-U0821` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 2.2: IAM, Identity & Access Governance*
 
 **Which of the following are types of AWS Identity and Access Management (IAM) identities? (Choose TWO)**
@@ -2160,7 +3087,7 @@ AWS Service Control Policies (SCPs) are a feature of AWS Organizations that allo
 - E) AWS Organizations.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 72)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 105)</strong></summary>
 
 **Correct Answer:** `C, D`
 
@@ -2184,7 +3111,7 @@ IAM Users are an IAM identity that represents a person or service that uses AWS.
 
 ---
 
-### Question 73 — `CLF-U0824` | 🔁 Repeated in 4 Exam Sources
+### Question 106 — `CLF-U0824` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 2.2: IAM, Identity & Access Governance*
 
 **A company is seeking to better secure its AWS account from unauthorized access. Which of the below options can the customer use to achieve this goal?**
@@ -2195,7 +3122,7 @@ IAM Users are an IAM identity that represents a person or service that uses AWS.
 - D) Set up two login passwords.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 73)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 106)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -2215,7 +3142,7 @@ Requiring Multi-Factor Authentication (MFA) for all IAM users is a security best
 
 ---
 
-### Question 74 — `CLF-U0831` | 🔁 Repeated in 4 Exam Sources
+### Question 107 — `CLF-U0831` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 2.2: IAM, Identity & Access Governance*
 
 **When granting permissions to applications running on Amazon EC2 instances, which of the following is considered best practice?**
@@ -2226,7 +3153,7 @@ Requiring Multi-Factor Authentication (MFA) for all IAM users is a security best
 - D) Do nothing; Applications that run on Amazon EC2 instances do not need permission to interact with other AWS services or resources.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 74)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 107)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -2246,7 +3173,7 @@ Using IAM roles to grant permissions to applications running on EC2 instances is
 
 ---
 
-### Question 75 — `CLF-U0053` | 🔁 Repeated in 4 Exam Sources
+### Question 108 — `CLF-U0053` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 2.3: Perimeter Defense, Threat Detection & Firewalls*
 
 **A company is developing a new application using a microservices framework. The new application is having performance and latency issues. Which AWS Service should be used to troubleshoot these issues?**
@@ -2257,7 +3184,7 @@ Using IAM roles to grant permissions to applications running on EC2 instances is
 - D) AWS CloudTrail.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 75)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 108)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -2277,7 +3204,7 @@ AWS X-Ray helps developers analyze and debug distributed applications, such as t
 
 ---
 
-### Question 76 — `CLF-U0058` | 🔁 Repeated in 4 Exam Sources
+### Question 109 — `CLF-U0058` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 2.3: Perimeter Defense, Threat Detection & Firewalls*
 
 **What is the AWS service that performs automated network assessments of Amazon EC2 instances to check for vulnerabilities?**
@@ -2288,7 +3215,7 @@ AWS X-Ray helps developers analyze and debug distributed applications, such as t
 - D) AWS Network Access Control Lists.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 76)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 109)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -2308,7 +3235,7 @@ Amazon Inspector is an automated security assessment service that helps improve 
 
 ---
 
-### Question 77 — `CLF-U0816` | 🔁 Repeated in 4 Exam Sources
+### Question 110 — `CLF-U0816` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 2.3: Perimeter Defense, Threat Detection & Firewalls*
 
 **Which of the following AWS services can help you perform security analysis and regulatory compliance auditing? (Choose TWO)**
@@ -2320,7 +3247,7 @@ Amazon Inspector is an automated security assessment service that helps improve 
 - E) AWS Config.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 77)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 110)</strong></summary>
 
 **Correct Answer:** `A, E`
 
@@ -2344,7 +3271,7 @@ Amazon Inspector is an automated security assessment service that helps improve 
 
 ---
 
-### Question 78 — `CLF-U0867` | 🔁 Repeated in 4 Exam Sources
+### Question 111 — `CLF-U0867` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 2.3: Perimeter Defense, Threat Detection & Firewalls*
 
 **Which security service automatically recognizes and classifies sensitive data or intellectual property on AWS?**
@@ -2355,7 +3282,7 @@ Amazon Inspector is an automated security assessment service that helps improve 
 - D) AWS Shield.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 78)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 111)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -2366,7 +3293,7 @@ Amazon GuardDuty is a threat detection service that continuously monitors AWS ac
 
 ---
 
-### Question 79 — `CLF-U0884` | 🔁 Repeated in 4 Exam Sources
+### Question 112 — `CLF-U0884` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 2.3: Perimeter Defense, Threat Detection & Firewalls*
 
 **Which AWS service is used to track record, and audit configuration changes made to AWS resources?**
@@ -2377,7 +3304,7 @@ Amazon GuardDuty is a threat detection service that continuously monitors AWS ac
 - D) Amazon Inspector.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 79)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 112)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -2388,7 +3315,7 @@ AWS Shield is a managed DDoS protection service that safeguards AWS applications
 
 ---
 
-### Question 80 — `CLF-U0890` | 🔁 Repeated in 4 Exam Sources
+### Question 113 — `CLF-U0890` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 2.3: Perimeter Defense, Threat Detection & Firewalls*
 
 **Which AWS security service protects applications from distributed denial of service attacks with always-on detection and automatic inline mitigations?**
@@ -2399,7 +3326,7 @@ AWS Shield is a managed DDoS protection service that safeguards AWS applications
 - D) AWS Shield.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 80)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 113)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -2410,7 +3337,7 @@ AWS WAF is a web application firewall that filters application-layer HTTP and HT
 
 ---
 
-### Question 81 — `CLF-U0071` | 🔁 Repeated in 4 Exam Sources
+### Question 114 — `CLF-U0071` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 2.4: Data Protection, Cryptography & Secrets*
 
 **Which AWS Service can be used to register a new domain name?**
@@ -2421,7 +3348,7 @@ AWS WAF is a web application firewall that filters application-layer HTTP and HT
 - D) AWS Config.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 81)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 114)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -2441,7 +3368,7 @@ Amazon Route 53 is a scalable and highly available Domain Name System (DNS) web 
 
 ---
 
-### Question 82 — `CLF-U0822` | 🔁 Repeated in 4 Exam Sources
+### Question 115 — `CLF-U0822` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 2.4: Data Protection, Cryptography & Secrets*
 
 **How does AWS notify customers about security and privacy events pertaining to AWS services?**
@@ -2452,7 +3379,7 @@ Amazon Route 53 is a scalable and highly available Domain Name System (DNS) web 
 - D) Using Compliance Resources.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 82)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 115)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -2472,7 +3399,7 @@ AWS uses Security Bulletins to notify customers about security and privacy event
 
 ---
 
-### Question 83 — `CLF-U0022` | 🔁 Repeated in 4 Exam Sources
+### Question 116 — `CLF-U0022` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 2.5: Compliance, Auditing & Artifact*
 
 **You have deployed your application on multiple Amazon EC2 instances. Your customers complain that sometimes they can’t reach your application. Which AWS service allows you to monitor the performance of your EC2 instances to assist in troubleshooting these issues?**
@@ -2483,7 +3410,7 @@ AWS uses Security Bulletins to notify customers about security and privacy event
 - D) AWS CloudTrail.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 83)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 116)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -2503,7 +3430,7 @@ Amazon CloudWatch is a monitoring and observability service that provides data a
 
 ---
 
-### Question 84 — `CLF-U0067` | 🔁 Repeated in 4 Exam Sources
+### Question 117 — `CLF-U0067` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 2.5: Compliance, Auditing & Artifact*
 
 **A customer spent a lot of time configuring a newly deployed Amazon EC2 instance. After the workload increases, the customer decides to provision another EC2 instance with an identical configuration. How can the customer achieve this?**
@@ -2514,7 +3441,7 @@ Amazon CloudWatch is a monitoring and observability service that provides data a
 - D) By creating an AMI from the old instance and launching a new instance from it.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 84)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 117)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -2534,7 +3461,7 @@ An Amazon Machine Image (AMI) provides the information required to launch an ins
 
 ---
 
-### Question 85 — `CLF-U0203` | 🔁 Repeated in 4 Exam Sources
+### Question 118 — `CLF-U0203` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 2.5: Compliance, Auditing & Artifact*
 
 **Which mechanism allows developers to access AWS services from application code?**
@@ -2545,7 +3472,7 @@ An Amazon Machine Image (AMI) provides the information required to launch an ins
 - D) AWS Config.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 85)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 118)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -2570,7 +3497,7 @@ Watch out for distractors testing similar AWS service boundaries. When the quest
 
 ---
 
-### Question 86 — `CLF-U0585` | 🔁 Repeated in 4 Exam Sources
+### Question 119 — `CLF-U0585` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 2.5: Compliance, Auditing & Artifact*
 
 **How can AWS customers track and avoid over-spending on underutilized reserved instances?**
@@ -2581,7 +3508,7 @@ Watch out for distractors testing similar AWS service boundaries. When the quest
 - D) Customers can use Amazon CloudTrail to automatically check for unused reservations and get recommendations to reduce their bill.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 86)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 119)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -2601,7 +3528,7 @@ AWS Budgets allows you to set custom budgets that track your AWS usage, includin
 
 ---
 
-### Question 87 — `CLF-U0590` | 🔁 Repeated in 4 Exam Sources
+### Question 120 — `CLF-U0590` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 2.5: Compliance, Auditing & Artifact*
 
 **As part of the AWS Migration Acceleration Program (MAP), what does AWS provide to accelerate Enterprise adoption of AWS? (Choose TWO)**
@@ -2613,7 +3540,7 @@ AWS Budgets allows you to set custom budgets that track your AWS usage, includin
 - E) Amazon PinPoint.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 87)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 120)</strong></summary>
 
 **Correct Answer:** `A, C`
 
@@ -2637,7 +3564,7 @@ AWS Professional Services is a team of AWS experts that works directly with ente
 
 ---
 
-### Question 88 — `CLF-U0801` | 🔁 Repeated in 4 Exam Sources
+### Question 121 — `CLF-U0801` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 2.5: Compliance, Auditing & Artifact*
 
 **What are the change management tools that helps AWS customers audit and monitor all resource changes in their AWS environment? (Choose TWO)**
@@ -2649,7 +3576,7 @@ AWS Professional Services is a team of AWS experts that works directly with ente
 - E) AWS Config.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 88)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 121)</strong></summary>
 
 **Correct Answer:** `A, E`
 
@@ -2673,7 +3600,7 @@ AWS CloudTrail is a service that enables governance, compliance, operational aud
 
 ---
 
-### Question 89 — `CLF-U0811` | 🔁 Repeated in 4 Exam Sources
+### Question 122 — `CLF-U0811` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 2.5: Compliance, Auditing & Artifact*
 
 **A company needs to track resource changes using the API call history. Which AWS service can help the company achieve this goal?**
@@ -2684,7 +3611,7 @@ AWS CloudTrail is a service that enables governance, compliance, operational aud
 - D) AWS CloudFormation.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 89)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 122)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -2704,7 +3631,7 @@ AWS CloudTrail is a service that enables governance, compliance, operational aud
 
 ---
 
-### Question 90 — `CLF-U0814` | 🔁 Repeated in 4 Exam Sources
+### Question 123 — `CLF-U0814` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 2.5: Compliance, Auditing & Artifact*
 
 **A company has discovered that multiple S3 buckets were deleted, but it is unclear who deleted the buckets. Which of the following can the company use to determine the identity that deleted the buckets?**
@@ -2715,7 +3642,7 @@ AWS CloudTrail is a service that enables governance, compliance, operational aud
 - D) CloudTrail logs.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 90)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 123)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -2735,7 +3662,7 @@ CloudTrail is an AWS service that enables governance, compliance, operational au
 
 ---
 
-### Question 91 — `CLF-U0962` | 🔁 Repeated in 4 Exam Sources
+### Question 124 — `CLF-U0962` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 2.5: Compliance, Auditing & Artifact*
 
 **Which AWS service gives users on-demand, self-service access to AWS compliance control reports?**
@@ -2746,7 +3673,7 @@ CloudTrail is an AWS service that enables governance, compliance, operational au
 - D) AWS Artifact
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 91)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 124)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -2757,7 +3684,208 @@ AWS Config tracks the configuration state of resources and audits how those conf
 
 ---
 
-### Question 92 — `CLF-U0188` | 🔁 Repeated in 3 Exam Sources
+### Question 125 — `CLF-U0151` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 2.2: IAM, Identity & Access Governance*
+
+**Which of the following can help secure your sensitive data in Amazon S3? (Choose TWO)**
+
+- A) Delete the encryption keys once your data is encrypted.
+- B) With AWS you do not need to worry about encryption.
+- C) Enable S3 Encryption.
+- D) Encrypt the data prior to uploading it.
+- E) Delete all IAM users that have access to S3.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 125)</strong></summary>
+
+**Correct Answer:** `C, D`
+
+Enabling S3 encryption through server-side encryption with S3-managed keys, KMS keys, or customer-provided keys protects object confidentiality at rest, and encrypting data before uploading it provides client-side encryption that ensures data is protected before it ever leaves the client. Both are valid approaches to securing sensitive data in Amazon S3.
+Deleting encryption keys once data is encrypted would permanently prevent decryption of the stored data, making it impossible to read or use the data again; encryption keys must be retained and managed carefully to ensure continued access to encrypted data. AWS does not automatically handle all security concerns by default; customers are responsible for configuring appropriate encryption, access controls, and bucket policies to protect their data, as the shared responsibility model requires active customer participation in data security. Deleting all IAM users with access to S3 would prevent all legitimate users from accessing the data and disrupt normal operations; proper access control involves granting least privilege permissions to the appropriate users rather than eliminating all access.
+
+</details>
+
+---
+
+### Question 126 — `CLF-U0834` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 2.2: IAM, Identity & Access Governance*
+
+**Which of the following strategies helps protect your AWS root account?**
+
+- A) Delete root user access keys if you do not need them.
+- B) Apply MFA for the root account and use it for all of your work.
+- C) Access the root account only from your personal Mobile Phone.
+- D) Only share your AWS account password or access keys with trusted persons.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 126)</strong></summary>
+
+**Correct Answer:** `A`
+
+Deleting root user access keys removes a persistent attack vector, since the root account has unrestricted access to all AWS services and resources, and AWS best practice recommends using IAM users for daily tasks and eliminating root access keys entirely to protect the account.
+Applying MFA for the root account is correct but the second part of the option is wrong; AWS recommends enabling MFA on the root account but using it as infrequently as possible and relying on IAM users for day-to-day work, not using the root account for all tasks. Accessing the root account only from a personal mobile phone does not constitute a recognized security control; MFA using an authenticator app on a mobile device is recommended, but restricting access to a specific physical device is not an AWS security best practice and introduces its own risks. Sharing your AWS account password or access keys with trusted persons violates fundamental security principles; credentials should never be shared as this removes individual accountability and increases the risk of credential exposure.
+
+</details>
+
+---
+
+### Question 127 — `CLF-U0835` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 2.2: IAM, Identity & Access Governance*
+
+**You have just set up your AWS environment and have created six IAM user accounts for the DevOps team. What is the AWS recommendation when granting permissions to these IAM accounts?**
+
+- A) Attach a separate IAM policy for each individual account.
+- B) Apply the Principle of Least Privilege.
+- C) For security purposes, you should not grant any permission to the DevOps team.
+- D) Create six different IAM passwords.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 127)</strong></summary>
+
+**Correct Answer:** `B`
+
+The Principle of Least Privilege means granting each IAM user only the minimum permissions necessary to perform their assigned job functions, reducing the impact of any accidental or malicious use of credentials.
+Attaching a separate IAM policy to each individual account is a valid approach for highly differentiated permissions but is operationally complex; using IAM groups to assign shared policies to all DevOps team members with similar roles is the recommended approach for teams rather than managing policies per user individually. For security purposes, you should not withhold all permissions from the DevOps team; the team needs appropriate permissions to perform their infrastructure management tasks, and the goal is to define those permissions carefully rather than provide none at all. Creating six different IAM passwords involves setting distinct password requirements per user, but password variation does not address the core security concern of permission scope; applying least privilege principles to what each user is allowed to do is the AWS recommendation.
+
+</details>
+
+---
+
+### Question 128 — `CLF-U0883` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 2.2: IAM, Identity & Access Governance*
+
+**How can a customer increase security to AWS account logons? (Select TWO)**
+
+- A) Configure AWS Certificate Manager
+- B) Enable Multi-Factor Authentication (MFA)
+- C) Use Amazon Cognito to manage access
+- D) Configure a strong password policy
+- E) Enable AWS Organizations
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 128)</strong></summary>
+
+**Correct Answer:** `B, D`
+
+Correct answer: Enable Multi-Factor Authentication (MFA); Configure a strong password policy. Multi-factor authentication — requires a second factor in addition to the password, and is the single highest-value control to apply to the root user. - Your root account should always be protected by Multi-Factor Authentication (MFA). - This additional layer of security helps protect against unauthorized logins to your account by requiring two factors: something you know (a password) and something you have (for example, an MFA device). - AWS supports virtual and hardware MFA devices and U2F security keys. - Cognito can be used as an Identity Provider (IdP), where it stores and maintains users and credentials securely for your applications, or it can be integrated with OpenID Connect, SAML, and other popular web identity providers like Amazon.com. - Using Amazon Cognito, you can generate temporary access credentials for your clients to access AWS services, eliminating the need to store long-term credentials in client applications. This item belongs to the Security and Compliance domain, under Identity and access.
+
+</details>
+
+---
+
+### Question 129 — `CLF-U1394` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 2.2: IAM, Identity & Access Governance*
+
+**Which AWS service or tool can be used to consolidate payments for a company with multiple AWS accounts?**
+
+- A) AWS Cost and Usage Report
+- B) AWS Organizations
+- C) AWS Cost Explorer
+- D) AWS Budgets
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 129)</strong></summary>
+
+**Correct Answer:** `B`
+
+**Correct Answer: B** (**B** (AWS Organizations))
+
+> **Domain Focus:** Security and Compliance | **Blueprint Area:** Topic 2.2: IAM, Identity & Access Governance
+
+### 💡 Architectural Rationale & Why It Is Correct:
+Under AWS Well-Architected principles and official CLF-C02 specifications for `point:orgs_service_control_policies`: **B** (AWS Organizations) directly satisfies the requirements stated in the scenario.
+In production AWS environments, this architectural pattern ensures compliance, maximum operational efficiency, and least-privilege alignment.
+
+### 🔍 Detailed Option Breakdown & Distractor Analysis:
+- **Option A (AWS Cost and Usage Report)** ❌ **[INCORRECT]**: Suboptimal or introduces architectural anti-patterns for this specific requirement (either refers to an unrelated service, violates security boundaries, or increases operational overhead).
+- **Option B (AWS Organizations)** ✅ **[CORRECT]**: Directly addresses the operational and governance goals of this scenario under the AWS Shared Responsibility and service boundary model.
+- **Option C (AWS Cost Explorer)** ❌ **[INCORRECT]**: Suboptimal or introduces architectural anti-patterns for this specific requirement (either refers to an unrelated service, violates security boundaries, or increases operational overhead).
+- **Option D (AWS Budgets)** ❌ **[INCORRECT]**: Suboptimal or introduces architectural anti-patterns for this specific requirement (either refers to an unrelated service, violates security boundaries, or increases operational overhead).
+
+### ⚠️ Exam Trap & Heuristic Decryption:
+Watch out for distractors testing similar AWS service boundaries. When the question asks for `IAM, Identity & Access Governance`, prioritize native managed AWS services over manual or third-party administration.
+
+</details>
+
+---
+
+### Question 130 — `CLF-U2486` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 2.2: IAM, Identity & Access Governance*
+
+**Which actions are best practices for an AWS account root user? (Choose two.)**
+
+- A) Share root user credentials with team members.
+- B) Create multiple root users for the account, separated by environment.
+- C) Enable multi-factor authentication (MFA) on the root user.
+- D) Create an IAM user with administrator privileges for daily administrative tasks, instead of using the root user.
+- E) Use programmatic access instead of the root user and password.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 130)</strong></summary>
+
+**Correct Answer:** `CD`
+
+**Correct Answer: CD (Enable multi-factor authentication (MFA) on the root user., Create an IAM user with administrator privileges for daily administrative tasks, instead of using the root user.)**
+
+This question (# 148) is directly sourced from authentic **Community Consensus Pool** community discussions.
+**Why this is correct:** The scenario specifically tests AWS best practices. 'Enable multi-factor authentication (MFA) on the root user., Create an IAM user with administrator privileges for daily administrative tasks, instead of using the root user.' directly satisfies the architectural requirement defined in the prompt.
+
+**Key Option Breakdown:**
+- **Option A (Share root user credentials with team members.)** [INCORRECT]: Does not meet the scenario requirements or introduces suboptimal design for this specific workload.
+- **Option B (Create multiple root users for the account, separated by environment.)** [INCORRECT]: Does not meet the scenario requirements or introduces suboptimal design for this specific workload.
+- **Option C (Enable multi-factor authentication (MFA) on the root user.)** [CORRECT]: Satisfies the prompt requirements directly.
+- **Option D (Create an IAM user with administrator privileges for daily administrative tasks, instead of using the root user.)** [CORRECT]: Satisfies the prompt requirements directly.
+- **Option E (Use programmatic access instead of the root user and password.)** [INCORRECT]: Does not meet the scenario requirements or introduces suboptimal design for this specific workload.
+
+</details>
+
+---
+
+### Question 131 — `CLF-U0158` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 2.3: Perimeter Defense, Threat Detection & Firewalls*
+
+**Your web application currently faces performance issues and suffers from long load times. Which of the following AWS services could help fix these issues and improve performance?**
+
+- A) Amazon Detective.
+- B) AWS X-Ray.
+- C) AWS Security Hub.
+- D) AWS Shield.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 131)</strong></summary>
+
+**Correct Answer:** `B`
+
+AWS X-Ray traces requests as they travel through your application, identifying performance bottlenecks and helping you pinpoint the root cause of long load times and latency issues.
+Amazon Detective is a security investigation service that analyzes and visualises data from AWS logs to help identify the root cause of security findings and suspicious activity, and has no capability to diagnose application performance issues or load times. AWS Security Hub aggregates and prioritizes security findings from multiple AWS services and third-party tools into a centralized dashboard, and is a security posture management tool rather than an application performance diagnostics service. AWS Shield is a managed DDoS protection service that safeguards applications against distributed denial-of-service attacks, and does not address application performance bottlenecks or load time issues.
+
+</details>
+
+---
+
+### Question 132 — `CLF-U0165` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 2.3: Perimeter Defense, Threat Detection & Firewalls*
+
+**Which of the following services allows you to install and run custom relational database software?**
+
+- A) Amazon EC2.
+- B) Amazon Cognito.
+- C) Amazon RDS.
+- D) Amazon Inspector.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 132)</strong></summary>
+
+**Correct Answer:** `A`
+
+Amazon EC2 provides virtual servers with full operating system-level access, allowing you to install and run any custom database software of your choice on the underlying instance.
+Amazon Cognito is a user identity and authentication service for web and mobile applications that manages user sign-up, sign-in, and access control, and has no capability to host or run database software. Amazon RDS is a managed relational database service that supports specific pre-configured database engines such as MySQL, PostgreSQL, and SQL Server, and does not allow you to install or run custom database software outside of those supported engines. Amazon Inspector is an automated security assessment service that scans AWS workloads for software vulnerabilities and unintended network exposure, and has no role in hosting or running database software.
+
+</details>
+
+---
+
+### Question 133 — `CLF-U0188` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.3: Perimeter Defense, Threat Detection & Firewalls*
 
 **Which of the following AWS services integrates with AWS Shield and AWS Web Application Firewall (AWS WAF) to protect against network and application layer DDoS attacks?**
@@ -2768,7 +3896,7 @@ AWS Config tracks the configuration state of resources and audits how those conf
 - D) Amazon CloudFront.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 92)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 133)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -2779,7 +3907,7 @@ Amazon EFS is a fully managed elastic file system for providing shared file stor
 
 ---
 
-### Question 93 — `CLF-U0194` | 🔁 Repeated in 3 Exam Sources
+### Question 134 — `CLF-U0194` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.3: Perimeter Defense, Threat Detection & Firewalls*
 
 **Which of the following steps should be taken by a customer when conducting penetration testing on AWS?**
@@ -2790,7 +3918,7 @@ Amazon EFS is a fully managed elastic file system for providing shared file stor
 - D) Request and wait for approval from AWS support, and then conduct testing.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 93)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 134)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -2801,7 +3929,29 @@ Amazon Inspector is an automated vulnerability assessment service that scans for
 
 ---
 
-### Question 94 — `CLF-U0572` | 🔁 Repeated in 3 Exam Sources
+### Question 135 — `CLF-U0204` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 2.3: Perimeter Defense, Threat Detection & Firewalls*
+
+**What is Amazon CloudWatch?**
+
+- A) A code repository with customizable build and team commit features.
+- B) A metrics repository with customizable notification thresholds and channels.
+- C) A security configuration repository with threat analytics.
+- D) A rule repository of a web application firewall with automated vulnerability prevention features.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 135)</strong></summary>
+
+**Correct Answer:** `B`
+
+Amazon CloudWatch is a monitoring service that acts as a metrics repository, collecting performance and operational data from AWS resources and allowing you to set customizable notification thresholds and alarm channels.
+AWS CloudTrail records all API calls and account activity across an AWS environment and produces audit logs for governance and compliance purposes, but does not collect resource performance metrics or send operational alarms. AWS X-Ray traces requests as they travel through distributed application components to identify performance bottlenecks and errors, but is an application debugging tool rather than an infrastructure-wide metrics and alerting service. Amazon Kinesis captures and processes real-time data streams from applications and infrastructure at scale, but is a data streaming and ingestion service rather than a monitoring and observability platform.
+
+</details>
+
+---
+
+### Question 136 — `CLF-U0572` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.3: Perimeter Defense, Threat Detection & Firewalls*
 
 **A company has moved to AWS recently. Which of the following AWS Services will help ensure that they have the proper security settings? (Choose TWO)**
@@ -2813,7 +3963,7 @@ Amazon Inspector is an automated vulnerability assessment service that scans for
 - E) Concierge Support Team.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 94)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 136)</strong></summary>
 
 **Correct Answer:** `A, B`
 
@@ -2824,7 +3974,7 @@ Amazon SNS is a fully managed publish/subscribe messaging service for sending no
 
 ---
 
-### Question 95 — `CLF-U0611` | 🔁 Repeated in 3 Exam Sources
+### Question 137 — `CLF-U0611` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.3: Perimeter Defense, Threat Detection & Firewalls*
 
 **Which of the following strategies help analyze costs in AWS?**
@@ -2835,7 +3985,7 @@ Amazon SNS is a fully managed publish/subscribe messaging service for sending no
 - D) Configuring Amazon Inspector to automatically analyze costs and email reports.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 95)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 137)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -2846,7 +3996,7 @@ Using AWS CloudFormation to automate the deployment of resources improves operat
 
 ---
 
-### Question 96 — `CLF-U0630` | 🔁 Repeated in 3 Exam Sources
+### Question 138 — `CLF-U0630` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.3: Perimeter Defense, Threat Detection & Firewalls*
 
 **Which AWS service identifies security groups that allow unrestricted access to a user’s AWS resources?**
@@ -2857,7 +4007,7 @@ Using AWS CloudFormation to automate the deployment of resources improves operat
 - D) AWS CloudTrail.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 96)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 138)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -2868,7 +4018,51 @@ Amazon Inspector is an automated vulnerability assessment service that scans EC2
 
 ---
 
-### Question 97 — `CLF-U0852` | 🔁 Repeated in 3 Exam Sources
+### Question 139 — `CLF-U0787` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 2.3: Perimeter Defense, Threat Detection & Firewalls*
+
+**You have noticed that several critical Amazon EC2 instances have been terminated. Which of the following AWS services would help you determine who took this action?**
+
+- A) Amazon Inspector.
+- B) AWS CloudTrail.
+- C) AWS Trusted Advisor.
+- D) EC2 Instance Usage Report.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 139)</strong></summary>
+
+**Correct Answer:** `B`
+
+AWS CloudTrail records all API calls and account activity across an AWS environment, capturing who performed each action, from which IP address, and at what time, making it the definitive source for identifying who terminated EC2 instances.
+Amazon Inspector is an automated security assessment service that scans EC2 instances and container images for software vulnerabilities and unintended network exposure, and does not record who performed API actions or management events. AWS Trusted Advisor inspects your AWS environment and provides recommendations across security, cost, performance, and fault tolerance, and is an advisory tool rather than an audit log of account activity. EC2 Instance Usage Report provides billing and usage data about EC2 instances and does not contain API call logs or identity information about who terminated instances.
+
+</details>
+
+---
+
+### Question 140 — `CLF-U0842` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 2.3: Perimeter Defense, Threat Detection & Firewalls*
+
+**Which of the following services enables you to easily generate and use your own encryption keys in the AWS Cloud?**
+
+- A) AWS Shield.
+- B) AWS Certificate Manager.
+- C) AWS CloudHSM.
+- D) AWS WAF.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 140)</strong></summary>
+
+**Correct Answer:** `C`
+
+AWS CloudHSM provides dedicated, single-tenant hardware security modules in the AWS Cloud, giving you full control over encryption key generation and management with FIPS 140-2 Level 3 validated hardware for customers requiring hardware-based key control.
+AWS Shield provides managed DDoS protection at the network and transport layers, and is a traffic protection service with no capability to generate or manage encryption keys. AWS Certificate Manager provisions and manages SSL/TLS certificates for use with AWS services to encrypt data in transit, and is a certificate management service rather than a general-purpose encryption key generation service. AWS WAF is a web application firewall that filters HTTP and HTTPS traffic based on defined rules to block web exploits, and is a traffic filtering service with no capability to generate or manage customer encryption keys.
+
+</details>
+
+---
+
+### Question 141 — `CLF-U0852` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.3: Perimeter Defense, Threat Detection & Firewalls*
 
 **What does Amazon GuardDuty do to protect AWS accounts and workloads?**
@@ -2879,7 +4073,7 @@ Amazon Inspector is an automated vulnerability assessment service that scans EC2
 - D) Checks security groups for rules that allow unrestricted access to AWS. resources.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 97)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 141)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -2890,7 +4084,29 @@ Notifying customers about abuse events once they are reported is the function of
 
 ---
 
-### Question 98 — `CLF-U0876` | 🔁 Repeated in 3 Exam Sources
+### Question 142 — `CLF-U0854` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 2.3: Perimeter Defense, Threat Detection & Firewalls*
+
+**Which of the following services is used when encrypting EBS volumes?**
+
+- A) AWS WAF.
+- B) AWS KMS.
+- C) Amazon Macie.
+- D) Amazon GuardDuty.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 142)</strong></summary>
+
+**Correct Answer:** `B`
+
+AWS KMS manages the encryption keys used for EBS volume encryption, handling key creation, storage, rotation, and access control, integrating transparently with EBS to encrypt data at rest.
+AWS WAF is a web application firewall that filters HTTP and HTTPS traffic to block common web exploits such as SQL injection and cross-site scripting, and is a traffic filtering service with no role in managing encryption keys for EBS volumes. Amazon Macie uses machine learning to discover and classify sensitive data stored in Amazon S3, and is a data classification service for S3 rather than a key management service for EBS encryption. Amazon GuardDuty is a threat detection service that monitors AWS accounts and workloads for malicious activity using machine learning and threat intelligence, and is a security monitoring service rather than a key management service for encrypting EBS volumes.
+
+</details>
+
+---
+
+### Question 143 — `CLF-U0876` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.3: Perimeter Defense, Threat Detection & Firewalls*
 
 **If a customer needs to audit the change management of AWS resources, which of the following AWS services should the customer use?**
@@ -2901,7 +4117,7 @@ Notifying customers about abuse events once they are reported is the function of
 - D) Amazon Inspector.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 98)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 143)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -2912,7 +4128,29 @@ AWS Trusted Advisor inspects your AWS environment and provides recommendations a
 
 ---
 
-### Question 99 — `CLF-U0667` | 🔁 Repeated in 3 Exam Sources
+### Question 144 — `CLF-U0953` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 2.3: Perimeter Defense, Threat Detection & Firewalls*
+
+**Which AWS service allows users to download security and compliance reports about the AWS infrastructure on demand?**
+
+- A) Amazon GuardDuty
+- B) AWS Security Hub
+- C) AWS Artifact
+- D) AWS Shield
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 144)</strong></summary>
+
+**Correct Answer:** `C`
+
+AWS Artifact provides on-demand access to AWS security and compliance reports including SOC, PCI DSS, ISO, and HIPAA documentation, available for download directly from the AWS Management Console without contacting AWS.
+Amazon CloudWatch monitors operational metrics and logs for AWS resources and applications, and is an observability and alerting service rather than a repository of AWS security and compliance reports. AWS CloudTrail records all API calls and management events across an AWS account for auditing purposes, and produces customer-specific activity logs rather than AWS security certification and compliance documentation. Amazon GuardDuty is a threat detection service that continuously monitors accounts and workloads for malicious activity, and is a real-time security monitoring service rather than a source of downloadable compliance reports.
+
+</details>
+
+---
+
+### Question 145 — `CLF-U0667` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.4: Data Protection, Cryptography & Secrets*
 
 **What can assist in evaluating an application for migration to the cloud? (Select TWO)**
@@ -2924,7 +4162,7 @@ AWS Trusted Advisor inspects your AWS environment and provides recommendations a
 - E) AWS Secrets Manager.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 99)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 145)</strong></summary>
 
 **Correct Answer:** `B, D`
 
@@ -2935,7 +4173,7 @@ AWS Trusted Advisor scans existing AWS environments for best practice recommenda
 
 ---
 
-### Question 100 — `CLF-U0830` | 🔁 Repeated in 3 Exam Sources
+### Question 146 — `CLF-U0830` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.4: Data Protection, Cryptography & Secrets*
 
 **Which AWS service enables you to quickly purchase and deploy SSL/TLS certificates?**
@@ -2946,7 +4184,7 @@ AWS Trusted Advisor scans existing AWS environments for best practice recommenda
 - D) AWS WAF.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 100)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 146)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -2957,7 +4195,7 @@ Amazon GuardDuty is a threat detection service that continuously monitors AWS ac
 
 ---
 
-### Question 101 — `CLF-U0839` | 🔁 Repeated in 3 Exam Sources
+### Question 147 — `CLF-U0839` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.4: Data Protection, Cryptography & Secrets*
 
 **Which of the following would you use to manage your encryption keys in the AWS Cloud? (Choose TWO)**
@@ -2969,7 +4207,7 @@ Amazon GuardDuty is a threat detection service that continuously monitors AWS ac
 - E) CloudHSM.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 101)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 147)</strong></summary>
 
 **Correct Answer:** `A, E`
 
@@ -2980,7 +4218,7 @@ AWS Certificate Manager provisions and manages SSL/TLS certificates for encrypti
 
 ---
 
-### Question 102 — `CLF-U0848` | 🔁 Repeated in 3 Exam Sources
+### Question 148 — `CLF-U0848` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.4: Data Protection, Cryptography & Secrets*
 
 **What is the main benefit of attaching security groups to an Amazon RDS instance?**
@@ -2991,7 +4229,7 @@ AWS Certificate Manager provisions and manages SSL/TLS certificates for encrypti
 - D) Distributes incoming traffic across multiple targets.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 102)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 148)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -3002,7 +4240,7 @@ Managing user access and encryption keys describes AWS IAM and AWS KMS respectiv
 
 ---
 
-### Question 103 — `CLF-U0862` | 🔁 Repeated in 3 Exam Sources
+### Question 149 — `CLF-U0862` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.4: Data Protection, Cryptography & Secrets*
 
 **Where can AWS compliance and certification reports be downloaded?**
@@ -3013,7 +4251,7 @@ Managing user access and encryption keys describes AWS IAM and AWS KMS respectiv
 - D) AWS Trusted Advisor.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 103)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 149)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -3024,7 +4262,7 @@ AWS Concierge is a dedicated support resource for Enterprise support plan custom
 
 ---
 
-### Question 104 — `CLF-U0966` | 🔁 Repeated in 3 Exam Sources
+### Question 150 — `CLF-U0966` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.4: Data Protection, Cryptography & Secrets*
 
 **Which AWS service can be used to retrieve compliance reports on demand?**
@@ -3035,7 +4273,7 @@ AWS Concierge is a dedicated support resource for Enterprise support plan custom
 - D) AWS Certificate Manager
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 104)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 150)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -3046,7 +4284,7 @@ AWS Secrets Manager stores, rotates, and manages access to secrets such as datab
 
 ---
 
-### Question 105 — `CLF-U1397` | 🔁 Repeated in 3 Exam Sources
+### Question 151 — `CLF-U1397` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.4: Data Protection, Cryptography & Secrets*
 
 **A user has been granted permission to change their own IAM user password. Which AWS services can the user use to change the password? (Select TWO.)**
@@ -3058,7 +4296,7 @@ AWS Secrets Manager stores, rotates, and manages access to secrets such as datab
 - E) AWS Secrets Manager
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 105)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 151)</strong></summary>
 
 **Correct Answer:** `AC`
 
@@ -3081,7 +4319,7 @@ AWS IAM User Guide - Changing Your Own Password
 
 ---
 
-### Question 106 — `CLF-U0199` | 🔁 Repeated in 3 Exam Sources
+### Question 152 — `CLF-U0199` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.5: Compliance, Auditing & Artifact*
 
 **Which AWS service or feature can be used to monitor CPU usage?**
@@ -3092,7 +4330,7 @@ AWS IAM User Guide - Changing Your Own Password
 - D) AWS Config.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 106)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 152)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -3117,7 +4355,74 @@ Watch out for distractors testing similar AWS service boundaries. When the quest
 
 ---
 
-### Question 107 — `CLF-U0837` | 🔁 Repeated in 3 Exam Sources
+### Question 153 — `CLF-U0233` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 2.5: Compliance, Auditing & Artifact*
+
+**Which AWS service can be used to automatically scale an application up and down without making capacity planning decisions?**
+
+- A) Amazon AutoScaling.
+- B) Amazon Redshift.
+- C) AWS CloudTrail.
+- D) AWS Lambda.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 153)</strong></summary>
+
+**Correct Answer:** `A`
+
+AWS Auto Scaling automatically adjusts the number of EC2 instances based on defined policies, eliminating the need for manual capacity planning decisions and ensuring the application always has the right amount of compute capacity.
+Amazon Redshift is a fully managed data warehouse service designed for running analytical queries across large datasets, and has no capability to automatically scale application infrastructure. AWS CloudTrail is a logging and auditing service that records API calls and account activity across an AWS environment, and does not manage or adjust application capacity. AWS Lambda is a serverless compute service that runs code in response to events without provisioning servers, but it is an event-driven execution environment rather than a service that scales existing application infrastructure up and down.
+
+</details>
+
+---
+
+### Question 154 — `CLF-U0819` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 2.5: Compliance, Auditing & Artifact*
+
+**Which AWS Service allows customers to download AWS SOC & PCI reports?**
+
+- A) AWS Well-Architected Tool.
+- B) AWS Artifact.
+- C) AWS Glue.
+- D) Amazon Chime.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 154)</strong></summary>
+
+**Correct Answer:** `B`
+
+AWS Artifact is a self-service portal for on-demand access to AWS compliance reports including SOC and PCI reports, and agreement documents such as Business Associate Addenda, making it the correct service for downloading AWS SOC and PCI compliance reports.
+AWS Well-Architected Tool is a service that helps you review the state of your workloads and compare them against AWS architectural best practices across the six pillars, and is a workload review and guidance tool rather than a compliance report repository. AWS Glue is a fully managed extract, transform, and load service for preparing and transforming data for analytics, and is a data integration service with no connection to compliance documentation. Amazon Chime is a unified communications service for online meetings, video conferencing, and chat, and has no relationship to compliance reports or AWS certification documents.
+
+</details>
+
+---
+
+### Question 155 — `CLF-U0836` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 2.5: Compliance, Auditing & Artifact*
+
+**Which of the following services provide real-time auditing for compliance and vulnerabilities? (Choose TWO)**
+
+- A) AWS Config.
+- B) Amazon Redshift.
+- C) Amazon MQ.
+- D) AWS Trusted Advisor.
+- E) Amazon Cognito.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 155)</strong></summary>
+
+**Correct Answer:** `A, D`
+
+AWS Config continuously monitors and records resource configurations to evaluate compliance against desired rules, and AWS Trusted Advisor provides real-time checks across security, performance, cost, and fault tolerance categories. Both provide real-time auditing capabilities.
+Amazon Redshift is a fully managed cloud data warehouse service for running analytical queries on large datasets, and is a data analytics service rather than a real-time auditing tool for compliance or vulnerability assessment. Amazon MQ is a managed message broker service for Apache ActiveMQ and RabbitMQ that enables application messaging and decoupling, and is a messaging infrastructure service with no auditing or compliance checking capability. Amazon Cognito is a user identity and authentication service for web and mobile applications that handles sign-up, sign-in, and access control, and is an identity service rather than a compliance auditing or vulnerability assessment tool.
+
+</details>
+
+---
+
+### Question 156 — `CLF-U0837` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.5: Compliance, Auditing & Artifact*
 
 **Which of the following services gives you access to all AWS auditor-issued reports and certifications?**
@@ -3128,7 +4433,7 @@ Watch out for distractors testing similar AWS service boundaries. When the quest
 - D) AWS CloudTrail.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 107)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 156)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -3139,7 +4444,7 @@ AWS Config continuously monitors and records resource configurations against com
 
 ---
 
-### Question 108 — `CLF-U0856` | 🔁 Repeated in 3 Exam Sources
+### Question 157 — `CLF-U0856` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.5: Compliance, Auditing & Artifact*
 
 **A financial services company decides to migrate one of its applications to AWS. The application deals with sensitive data, such as credit card information, and must run on a PCI-compliant environment. Which of the following is the company’s responsibility when building a PCI-compliant environment in AWS? (Choose TWO)**
@@ -3151,7 +4456,7 @@ AWS Config continuously monitors and records resource configurations against com
 - E) Ensure that all PCI DSS physical security requirements are met.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 108)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 157)</strong></summary>
 
 **Correct Answer:** `B, C`
 
@@ -3162,9 +4467,130 @@ Not all AWS services are PCI DSS compliant by default; only specific AWS service
 
 ---
 
-## 🎯 Domain 3: Cloud Technology and Services (34% — 68 Questions)
+### Question 158 — `CLF-U0861` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 2.5: Compliance, Auditing & Artifact*
 
-### Question 109 — `CLF-U0242` | 🔁 Repeated in 5 Exam Sources
+**Which service enables risk auditing by continuously monitoring and logging account activity, including user actions in the AWS Management Console and AWS SDKs?**
+
+- A) Amazon CloudWatch.
+- B) AWS CloudTrail.
+- C) AWS Config.
+- D) AWS Health.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 158)</strong></summary>
+
+**Correct Answer:** `B`
+
+AWS CloudTrail continuously logs all account activity and API calls across AWS infrastructure, providing a complete audit trail that supports risk auditing, compliance monitoring, and security analysis.
+Amazon CloudWatch collects metrics, logs, and event data from AWS services and resources to provide operational visibility into performance and health, and while it can monitor logs, it does not record API calls or user actions for risk auditing and compliance purposes. AWS Config continuously tracks and records the configuration state of AWS resources to assess compliance against desired settings, and focuses on resource configuration changes rather than logging user actions and API calls for risk auditing. AWS Health provides personalized alerts and remediation guidance when AWS is experiencing events that may affect your resources, and is a service health notification tool rather than an account activity logging or risk auditing service.
+
+</details>
+
+---
+
+### Question 159 — `CLF-U0864` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 2.5: Compliance, Auditing & Artifact*
+
+**Which AWS service would you use to obtain compliance reports and certificates?**
+
+- A) AWS Artifact.
+- B) AWS Lambda.
+- C) Amazon Inspector.
+- D) AWS Certificate Manager.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 159)</strong></summary>
+
+**Correct Answer:** `A`
+
+AWS Artifact provides on-demand access to AWS compliance reports and certifications including SOC, PCI DSS, ISO, and HIPAA documents, available directly from the AWS Management Console without needing to engage AWS support.
+AWS Lambda is a serverless compute service that runs code in response to events without requiring server provisioning or management, and is a compute service with no connection to compliance reports or certification documentation. Amazon Inspector is an automated security assessment service that scans EC2 instances and container images for software vulnerabilities and network misconfigurations, and produces customer-specific vulnerability findings rather than AWS compliance certifications. AWS Certificate Manager provisions and manages SSL/TLS certificates for use with AWS services, and is a certificate management service rather than a repository of compliance reports or regulatory certifications.
+
+</details>
+
+---
+
+### Question 160 — `CLF-U0888` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 2.5: Compliance, Auditing & Artifact*
+
+**Where are AWS compliance documents, such as an SOC 1 report, located?**
+
+- A) Amazon Inspector.
+- B) AWS CloudTrail.
+- C) AWS Artifact.
+- D) AWS Certificate Manager.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 160)</strong></summary>
+
+**Correct Answer:** `C`
+
+AWS Artifact is the dedicated self-service portal for accessing AWS compliance documentation, including SOC 1, SOC 2, ISO 27001, and PCI DSS reports, allowing customers to download these documents for their own audit and compliance purposes.
+Amazon Inspector is an automated security assessment service that scans EC2 instances and container images for software vulnerabilities and network exposure risks, and does not provide or store AWS compliance certifications or SOC reports. AWS CloudTrail logs all API calls and management events in an AWS account for auditing purposes, and produces customer-specific activity logs rather than AWS compliance certifications or third-party audit reports. AWS Certificate Manager provisions and manages SSL/TLS certificates for use with AWS services to encrypt data in transit, and is a certificate management service rather than a repository of compliance reports.
+
+</details>
+
+---
+
+### Question 161 — `CLF-U0964` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 2.5: Compliance, Auditing & Artifact*
+
+**A company has a compliance requirement to record and evaluate configuration changes, as well as perform remediation actions on AWS resources. Which AWS service should the company use?**
+
+- A) AWS Config
+- B) AWS Secrets Manager
+- C) AWS CloudTrail
+- D) AWS Trusted Advisor
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 161)</strong></summary>
+
+**Correct Answer:** `A`
+
+AWS Config records configuration changes, evaluates them against compliance rules, and can trigger automated remediation actions when resources become non-compliant, meeting all three requirements of recording, evaluating, and remediating.
+AWS Secrets Manager stores, rotates, and manages access to secrets such as database credentials and API keys, and is a credentials management service with no capability to record configuration changes or trigger compliance remediation. AWS CloudTrail logs all API calls and account activity for auditing purposes, and while it records who made changes and when, it does not evaluate resources against compliance rules or trigger remediation actions. AWS Trusted Advisor inspects your AWS environment and provides recommendations across security, cost, performance, and fault tolerance, and offers advisory guidance rather than automated compliance rule evaluation or remediation capability.
+
+</details>
+
+---
+
+### Question 162 — `CLF-U1469` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 2.5: Compliance, Auditing & Artifact*
+
+**A company plans to migrate its custom marketing application and order-processing application to AWS. The company needs to deploy the applications on different types of instances with various configurations of CPU, memory, storage, and networking capacity. Which AWS service should the company use to meet these requirements?**
+
+- A) AWS Lambda
+- B) Amazon Cognito
+- C) Amazon Athena
+- D) Amazon EC2
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 162)</strong></summary>
+
+**Correct Answer:** `D`
+
+Amazon EC2 (Elastic Compute Cloud)provides scalable computing capacity in the AWS
+Cloud, allowing customers to run virtual servers (instances) with different configurations of
+CPU, memory, storage, and networking capacity. This flexibility is ideal for applications
+that require specific infrastructure configurations, such as custom marketing and orderprocessing applications.
+A . AWS Lambda: Incorrect, as it is a serverless compute service that automatically
+manages the computing resources needed to run code but does not offer the flexibility of
+choosing different instance types.
+B . Amazon Cognito: Incorrect, as it is used for user authentication and authorization, not
+for deploying applications.
+C . Amazon Athena: Incorrect, as it is an interactive query service for analyzing data in
+Amazon S3 using standard SQL.
+AWS Cloud Reference:
+Amazon EC2
+
+</details>
+
+---
+
+## 🎯 Domain 3: Cloud Technology and Services (34% — 102 Questions)
+
+### Question 163 — `CLF-U0242` | 🔁 Repeated in 5 Exam Sources
 *Topic: Topic 3.3: Storage Services (S3, EBS, EFS, Storage Gateway)*
 
 **Which type of AWS storage is ephemeral and is deleted when an Amazon EC2 instance is stopped or terminated?**
@@ -3175,7 +4601,7 @@ Not all AWS services are PCI DSS compliant by default; only specific AWS service
 - D) Amazon S3.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 109)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 163)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -3194,7 +4620,7 @@ This question (# 98) is directly sourced from authentic **Community Consensus Po
 
 ---
 
-### Question 110 — `CLF-U0001` | 🔁 Repeated in 4 Exam Sources
+### Question 164 — `CLF-U0001` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.1: Compute Services (EC2, Lambda, Elastic Beanstalk)*
 
 **AWS allows users to manage their resources using a web based user interface. What is the name of this interface?**
@@ -3205,7 +4631,7 @@ This question (# 98) is directly sourced from authentic **Community Consensus Po
 - D) AWS Management Console.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 110)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 164)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -3225,7 +4651,7 @@ The AWS Management Console is a web-based interface that allows users to access 
 
 ---
 
-### Question 111 — `CLF-U0002` | 🔁 Repeated in 4 Exam Sources
+### Question 165 — `CLF-U0002` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.1: Compute Services (EC2, Lambda, Elastic Beanstalk)*
 
 **Which of the following is an example of horizontal scaling in the AWS Cloud?**
@@ -3236,7 +4662,7 @@ The AWS Management Console is a web-based interface that allows users to access 
 - D) Adding more EC2 instances of the same size to handle an increase in traffic.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 111)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 165)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -3256,7 +4682,7 @@ Horizontal scaling (also known as scaling out) involves increasing the number of
 
 ---
 
-### Question 112 — `CLF-U0020` | 🔁 Repeated in 4 Exam Sources
+### Question 166 — `CLF-U0020` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.1: Compute Services (EC2, Lambda, Elastic Beanstalk)*
 
 **A developer is planning to build a two-tier web application that has a MySQL database layer. Which of the following AWS database services would provide automated backups for the application?**
@@ -3267,7 +4693,7 @@ Horizontal scaling (also known as scaling out) involves increasing the number of
 - D) Amazon Neptune.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 112)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 166)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -3287,7 +4713,7 @@ Amazon Aurora is a MySQL and PostgreSQL-compatible relational database service t
 
 ---
 
-### Question 113 — `CLF-U0042` | 🔁 Repeated in 4 Exam Sources
+### Question 167 — `CLF-U0042` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.1: Compute Services (EC2, Lambda, Elastic Beanstalk)*
 
 **Which of the following services allows you to run containerized applications on a cluster of EC2 instances?**
@@ -3298,7 +4724,7 @@ Amazon Aurora is a MySQL and PostgreSQL-compatible relational database service t
 - D) AWS Health Dashboard (formerly AWS AWS Health Dashboard (Your Account Health)).
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 113)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 167)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -3322,7 +4748,7 @@ Amazon Elastic Kubernetes Service (EKS) is a managed Kubernetes service that mak
 
 ---
 
-### Question 114 — `CLF-U0051` | 🔁 Repeated in 4 Exam Sources
+### Question 168 — `CLF-U0051` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.1: Compute Services (EC2, Lambda, Elastic Beanstalk)*
 
 **A company is migrating its on-premises database to Amazon RDS. What should the company do to ensure Amazon RDS costs are kept to a minimum?**
@@ -3333,7 +4759,7 @@ Amazon Elastic Kubernetes Service (EKS) is a managed Kubernetes service that mak
 - D) Use a Multi-Region Active-Active architecture.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 114)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 168)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -3353,7 +4779,7 @@ Right-sizing your Amazon RDS instance involves selecting the appropriate instanc
 
 ---
 
-### Question 115 — `CLF-U0062` | 🔁 Repeated in 4 Exam Sources
+### Question 169 — `CLF-U0062` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.1: Compute Services (EC2, Lambda, Elastic Beanstalk)*
 
 **What is the AWS tool that enables you to use scripts to manage all AWS services and resources?**
@@ -3364,7 +4790,7 @@ Right-sizing your Amazon RDS instance involves selecting the appropriate instanc
 - D) AWS CLI.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 115)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 169)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -3384,7 +4810,7 @@ The AWS Command Line Interface (CLI) is a unified tool to manage your AWS servic
 
 ---
 
-### Question 116 — `CLF-U0066` | 🔁 Repeated in 4 Exam Sources
+### Question 170 — `CLF-U0066` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.1: Compute Services (EC2, Lambda, Elastic Beanstalk)*
 
 **How are AWS customers billed for Linux-based Amazon EC2 usage?**
@@ -3395,7 +4821,7 @@ The AWS Command Line Interface (CLI) is a unified tool to manage your AWS servic
 - D) EC2 instances will be billed on one day increments, with a minimum of one month.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 116)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 170)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -3415,7 +4841,7 @@ AWS bills for Linux-based Amazon EC2 instances on a per-second basis, with a min
 
 ---
 
-### Question 117 — `CLF-U0068` | 🔁 Repeated in 4 Exam Sources
+### Question 171 — `CLF-U0068` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.1: Compute Services (EC2, Lambda, Elastic Beanstalk)*
 
 **What are the benefits of using the Amazon Relational Database Service? (Choose TWO)**
@@ -3427,7 +4853,7 @@ AWS bills for Linux-based Amazon EC2 instances on a per-second basis, with a min
 - E) Supports the document and key-value data structure.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 117)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 171)</strong></summary>
 
 **Correct Answer:** `A, C`
 
@@ -3451,7 +4877,7 @@ Amazon RDS automates many of the administrative tasks associated with managing a
 
 ---
 
-### Question 118 — `CLF-U0091` | 🔁 Repeated in 4 Exam Sources
+### Question 172 — `CLF-U0091` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.1: Compute Services (EC2, Lambda, Elastic Beanstalk)*
 
 **Both AWS and traditional IT distributors provide a wide range of virtual servers to meet their customers’ requirements. What is the name of these virtual servers in AWS?**
@@ -3462,7 +4888,7 @@ Amazon RDS automates many of the administrative tasks associated with managing a
 - D) Amazon EC2 Instances.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 118)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 172)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -3482,7 +4908,7 @@ Amazon Elastic Compute Cloud (EC2) instances are virtual servers in AWS. They pr
 
 ---
 
-### Question 119 — `CLF-U0385` | 🔁 Repeated in 4 Exam Sources
+### Question 173 — `CLF-U0385` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.1: Compute Services (EC2, Lambda, Elastic Beanstalk)*
 
 **What is the advantage of the AWS-recommended practice of "decoupling" applications?**
@@ -3493,7 +4919,7 @@ Amazon Elastic Compute Cloud (EC2) instances are virtual servers in AWS. They pr
 - D) Allows tracking of any API call made to any AWS service.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 119)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 173)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -3513,7 +4939,7 @@ Decoupling in application architecture is a design principle that aims to minimi
 
 ---
 
-### Question 120 — `CLF-U0397` | 🔁 Repeated in 4 Exam Sources
+### Question 174 — `CLF-U0397` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.1: Compute Services (EC2, Lambda, Elastic Beanstalk)*
 
 **Jessica is managing an e-commerce web application in AWS. The application is hosted on six EC2 instances. One day, three of the instances crashed; but none of her customers were affected. What has Jessica done correctly in this scenario?**
@@ -3524,7 +4950,7 @@ Decoupling in application architecture is a design principle that aims to minimi
 - D) She has properly built a scalable system.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 120)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 174)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -3544,7 +4970,7 @@ Fault tolerance is the ability of a system to continue operating properly in the
 
 ---
 
-### Question 121 — `CLF-U0408` | 🔁 Repeated in 4 Exam Sources
+### Question 175 — `CLF-U0408` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.1: Compute Services (EC2, Lambda, Elastic Beanstalk)*
 
 **What is the benefit of using an API to access AWS Services?**
@@ -3555,7 +4981,7 @@ Fault tolerance is the ability of a system to continue operating properly in the
 - D) It allows for programmatic management of AWS resources.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 121)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 175)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -3575,7 +5001,7 @@ Using APIs (Application Programming Interfaces) to access AWS services enables p
 
 ---
 
-### Question 122 — `CLF-U0418` | 🔁 Repeated in 4 Exam Sources
+### Question 176 — `CLF-U0418` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.1: Compute Services (EC2, Lambda, Elastic Beanstalk)*
 
 **A key practice when designing solutions on AWS is to minimize dependencies between components so that the failure of a single component does not impact other components. What is this practice called?**
@@ -3586,7 +5012,7 @@ Using APIs (Application Programming Interfaces) to access AWS services enables p
 - D) Tightly coupling.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 122)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 176)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -3606,7 +5032,7 @@ Loosely coupling is a design principle in which components of a system are desig
 
 ---
 
-### Question 123 — `CLF-U0799` | 🔁 Repeated in 4 Exam Sources
+### Question 177 — `CLF-U0799` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.1: Compute Services (EC2, Lambda, Elastic Beanstalk)*
 
 **Based on the AWS Shared Responsibility Model, which of the following are the sole responsibility of AWS? (Choose TWO)**
@@ -3618,7 +5044,7 @@ Loosely coupling is a design principle in which components of a system are desig
 - E) Hardware maintenance.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 123)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 177)</strong></summary>
 
 **Correct Answer:** `C, E`
 
@@ -3642,7 +5068,7 @@ AWS is responsible for creating and maintaining the hypervisors that enable virt
 
 ---
 
-### Question 124 — `CLF-U0810` | 🔁 Repeated in 4 Exam Sources
+### Question 178 — `CLF-U0810` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.2: Container Technologies (ECS, EKS, Fargate, ECR)*
 
 **Which AWS Service is used to manage user permissions?**
@@ -3653,7 +5079,7 @@ AWS is responsible for creating and maintaining the hypervisors that enable virt
 - D) AWS Support.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 124)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 178)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -3673,7 +5099,7 @@ AWS Identity and Access Management (IAM) is the AWS service used to manage user 
 
 ---
 
-### Question 125 — `CLF-U0007` | 🔁 Repeated in 4 Exam Sources
+### Question 179 — `CLF-U0007` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.3: Storage Services (S3, EBS, EFS, Storage Gateway)*
 
 **What should you do in order to keep the data on EBS volumes safe? (Choose TWO)**
@@ -3685,7 +5111,7 @@ AWS Identity and Access Management (IAM) is the AWS service used to manage user 
 - E) Prevent any unauthorized access to AWS data centers.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 125)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 179)</strong></summary>
 
 **Correct Answer:** `B, C`
 
@@ -3709,7 +5135,7 @@ Encrypting EBS volumes at rest protects the data stored on them from unauthorize
 
 ---
 
-### Question 126 — `CLF-U0012` | 🔁 Repeated in 4 Exam Sources
+### Question 180 — `CLF-U0012` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.3: Storage Services (S3, EBS, EFS, Storage Gateway)*
 
 **A company is deploying a new two-tier web application in AWS. Where should the most frequently accessed data be stored so that the application’s response time is optimal?**
@@ -3720,7 +5146,7 @@ Encrypting EBS volumes at rest protects the data stored on them from unauthorize
 - D) Amazon ElastiCache.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 126)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 180)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -3740,7 +5166,7 @@ Amazon ElastiCache is a fully managed, in-memory data store and caching service 
 
 ---
 
-### Question 127 — `CLF-U0023` | 🔁 Repeated in 4 Exam Sources
+### Question 181 — `CLF-U0023` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.3: Storage Services (S3, EBS, EFS, Storage Gateway)*
 
 **Which of the following is not a benefit of Amazon S3? (Choose TWO)**
@@ -3752,7 +5178,7 @@ Amazon ElastiCache is a fully managed, in-memory data store and caching service 
 - E) Amazon S3 provides 99.999999999% (11 9’s) of data durability.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 127)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 181)</strong></summary>
 
 **Correct Answer:** `B, D`
 
@@ -3776,7 +5202,7 @@ Amazon S3 is designed to automatically scale to handle virtually any amount of d
 
 ---
 
-### Question 128 — `CLF-U0033` | 🔁 Repeated in 4 Exam Sources
+### Question 182 — `CLF-U0033` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.3: Storage Services (S3, EBS, EFS, Storage Gateway)*
 
 **Your company is designing a new application that will store and retrieve photos and videos. Which of the following services should you recommend as the underlying storage mechanism?**
@@ -3787,7 +5213,7 @@ Amazon S3 is designed to automatically scale to handle virtually any amount of d
 - D) Amazon Instance store.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 128)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 182)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -3807,7 +5233,38 @@ Amazon S3 (Simple Storage Service) is object storage built for storing and retri
 
 ---
 
-### Question 129 — `CLF-U0048` | 🔁 Repeated in 4 Exam Sources
+### Question 183 — `CLF-U0041` | 🔁 Repeated in 4 Exam Sources
+*Topic: Topic 3.3: Storage Services (S3, EBS, EFS, Storage Gateway)*
+
+**In your on-premises environment, you can create as many virtual servers as you need from a single template. What can you use to perform the same in AWS?**
+
+- A) IAM.
+- B) An internet gateway.
+- C) EBS Snapshot.
+- D) AMI.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 183)</strong></summary>
+
+**Correct Answer:** `D`
+
+**Correct answer: AMI**
+
+An Amazon Machine Image (AMI) provides the information required to launch an instance, which is a virtual server in the cloud. You can think of it as a template for your virtual server. AMIs include the operating system, application server, and applications required to launch your instance. You can use AWS-provided AMIs, community AMIs, or create your own custom AMIs. Creating multiple instances from a single AMI is a fundamental way to quickly provision and scale your applications in AWS.
+
+**Incorrect:**
+
+**B. An internet gateway** - An internet gateway allows your VPC to connect to the internet. It's not related to creating virtual servers from a template.
+
+**C. IAM** - IAM (Identity and Access Management) controls access to AWS services and resources. While important for security, it doesn't serve as a template for creating virtual servers.
+
+**D. EBS Snapshot** - An EBS snapshot is a point-in-time copy of an EBS volume. While you can create a volume from a snapshot, and then create an AMI from that volume, the EBS snapshot itself is not the direct equivalent of a server template. The AMI is the correct answer because it contains the OS and software configuration.
+
+</details>
+
+---
+
+### Question 184 — `CLF-U0048` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.3: Storage Services (S3, EBS, EFS, Storage Gateway)*
 
 **Where can you store files in AWS? (Choose TWO)**
@@ -3819,7 +5276,7 @@ Amazon S3 (Simple Storage Service) is object storage built for storing and retri
 - E) Amazon EMR.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 129)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 184)</strong></summary>
 
 **Correct Answer:** `A, C`
 
@@ -3843,7 +5300,7 @@ Amazon Elastic Block Storage (EBS) provides block-level storage volumes for use 
 
 ---
 
-### Question 130 — `CLF-U0049` | 🔁 Repeated in 4 Exam Sources
+### Question 185 — `CLF-U0049` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.3: Storage Services (S3, EBS, EFS, Storage Gateway)*
 
 **Which AWS service can be used to store and reliably deliver messages across distributed systems?**
@@ -3854,7 +5311,7 @@ Amazon Elastic Block Storage (EBS) provides block-level storage volumes for use 
 - D) Amazon Simple Storage Service.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 130)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 185)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -3874,7 +5331,7 @@ Amazon Simple Queue Service (SQS) is a fully managed message queuing service tha
 
 ---
 
-### Question 131 — `CLF-U0052` | 🔁 Repeated in 4 Exam Sources
+### Question 186 — `CLF-U0052` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.3: Storage Services (S3, EBS, EFS, Storage Gateway)*
 
 **What is the primary storage service used by Amazon RDS database instances?**
@@ -3885,7 +5342,7 @@ Amazon Simple Queue Service (SQS) is a fully managed message queuing service tha
 - D) Amazon S3.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 131)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 186)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -3905,7 +5362,7 @@ Amazon RDS (Relational Database Service) primarily uses Amazon EBS (Elastic Bloc
 
 ---
 
-### Question 132 — `CLF-U0054` | 🔁 Repeated in 4 Exam Sources
+### Question 187 — `CLF-U0054` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.3: Storage Services (S3, EBS, EFS, Storage Gateway)*
 
 **Which of the following AWS services is designed with native Multi-AZ fault tolerance in mind? (Choose TWO)**
@@ -3917,7 +5374,7 @@ Amazon RDS (Relational Database Service) primarily uses Amazon EBS (Elastic Bloc
 - E) Amazon DynamoDB.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 132)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 187)</strong></summary>
 
 **Correct Answer:** `C, E`
 
@@ -3941,7 +5398,7 @@ Amazon S3 (Simple Storage Service) is an object storage service offering industr
 
 ---
 
-### Question 133 — `CLF-U0077` | 🔁 Repeated in 4 Exam Sources
+### Question 188 — `CLF-U0077` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.3: Storage Services (S3, EBS, EFS, Storage Gateway)*
 
 **A developer needs to set up an SSL security certificate for a client's eCommerce website in order to use the HTTPS protocol. Which of the following AWS services can be used to deploy the required SSL server certificates? (Choose TWO)**
@@ -3953,7 +5410,7 @@ Amazon S3 (Simple Storage Service) is an object storage service offering industr
 - E) AWS Data Pipeline.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 133)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 188)</strong></summary>
 
 **Correct Answer:** `A, B`
 
@@ -3977,7 +5434,7 @@ AWS Certificate Manager (ACM) is the preferred AWS service for provisioning, man
 
 ---
 
-### Question 134 — `CLF-U0084` | 🔁 Repeated in 4 Exam Sources
+### Question 189 — `CLF-U0084` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.3: Storage Services (S3, EBS, EFS, Storage Gateway)*
 
 **A company is planning to migrate a database with high read/write activity to AWS. What is the best storage option to use?**
@@ -3988,7 +5445,7 @@ AWS Certificate Manager (ACM) is the preferred AWS service for provisioning, man
 - D) Amazon Glacier.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 134)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 189)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -4008,7 +5465,7 @@ Amazon Elastic Block Storage (EBS) provides block-level storage volumes for use 
 
 ---
 
-### Question 135 — `CLF-U0106` | 🔁 Repeated in 4 Exam Sources
+### Question 190 — `CLF-U0106` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.3: Storage Services (S3, EBS, EFS, Storage Gateway)*
 
 **Which AWS Service helps enterprises extend their on-premises storage to AWS in a cost-effective manner?**
@@ -4019,7 +5476,7 @@ Amazon Elastic Block Storage (EBS) provides block-level storage volumes for use 
 - D) Amazon EFS.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 135)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 190)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -4039,7 +5496,7 @@ AWS Storage Gateway is a hybrid cloud storage service that allows on-premises ap
 
 ---
 
-### Question 136 — `CLF-U0111` | 🔁 Repeated in 4 Exam Sources
+### Question 191 — `CLF-U0111` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.3: Storage Services (S3, EBS, EFS, Storage Gateway)*
 
 **A customer is seeking to store objects in their AWS environment and to make those objects downloadable over the internet. Which AWS Service can be used to accomplish this?**
@@ -4050,7 +5507,7 @@ AWS Storage Gateway is a hybrid cloud storage service that allows on-premises ap
 - D) Amazon Instance Store.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 136)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 191)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -4070,7 +5527,7 @@ Amazon S3 (Simple Storage Service) is an object storage service that offers scal
 
 ---
 
-### Question 137 — `CLF-U0570` | 🔁 Repeated in 4 Exam Sources
+### Question 192 — `CLF-U0570` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.3: Storage Services (S3, EBS, EFS, Storage Gateway)*
 
 **Which S3 storage class is best for data with unpredictable access patterns?**
@@ -4081,7 +5538,7 @@ Amazon S3 (Simple Storage Service) is an object storage service that offers scal
 - D) Amazon S3 Standard-Infrequent Access.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 137)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 192)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -4101,7 +5558,7 @@ Amazon S3 Intelligent-Tiering is designed to optimize storage costs automaticall
 
 ---
 
-### Question 138 — `CLF-U0006` | 🔁 Repeated in 4 Exam Sources
+### Question 193 — `CLF-U0006` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.4: Database & In-Memory Caching Services*
 
 **A company has decided to migrate its Oracle database to AWS. Which AWS service can help achieve this without negatively impacting the functionality of the source database?**
@@ -4112,7 +5569,7 @@ Amazon S3 Intelligent-Tiering is designed to optimize storage costs automaticall
 - D) AWS Application Discovery Service.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 138)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 193)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -4132,7 +5589,7 @@ AWS Database Migration Service (DMS) is a cloud service that enables you to migr
 
 ---
 
-### Question 139 — `CLF-U0016` | 🔁 Repeated in 4 Exam Sources
+### Question 194 — `CLF-U0016` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.4: Database & In-Memory Caching Services*
 
 **Your company has a data store application that requires access to a NoSQL database. Which AWS database offering would meet this requirement?**
@@ -4143,7 +5600,7 @@ AWS Database Migration Service (DMS) is a cloud service that enables you to migr
 - D) Amazon Redshift.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 139)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 194)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -4163,7 +5620,7 @@ Amazon DynamoDB is a fully managed NoSQL database service that provides fast and
 
 ---
 
-### Question 140 — `CLF-U0027` | 🔁 Repeated in 4 Exam Sources
+### Question 195 — `CLF-U0027` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.4: Database & In-Memory Caching Services*
 
 **What is the AWS database service that allows you to upload data structured in key-value format?**
@@ -4174,7 +5631,7 @@ Amazon DynamoDB is a fully managed NoSQL database service that provides fast and
 - D) Amazon RDS.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 140)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 195)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -4194,7 +5651,7 @@ Amazon DynamoDB is a fully managed NoSQL database service that supports key-valu
 
 ---
 
-### Question 141 — `CLF-U0028` | 🔁 Repeated in 4 Exam Sources
+### Question 196 — `CLF-U0028` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.4: Database & In-Memory Caching Services*
 
 **You work as an on-premises MySQL DBA. The work of database configuration, backups, patching, and DR can be time-consuming and repetitive. Your company has decided to migrate to the AWS Cloud. Which of the following can help save time on database maintenance so you can focus on data architecture and performance?**
@@ -4205,7 +5662,7 @@ Amazon DynamoDB is a fully managed NoSQL database service that supports key-valu
 - D) Amazon CloudWatch.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 141)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 196)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -4225,7 +5682,7 @@ Amazon Relational Database Service (RDS) is a managed database service that simp
 
 ---
 
-### Question 142 — `CLF-U0034` | 🔁 Repeated in 4 Exam Sources
+### Question 197 — `CLF-U0034` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.4: Database & In-Memory Caching Services*
 
 **What does Amazon ElastiCache provide?**
@@ -4236,7 +5693,7 @@ Amazon Relational Database Service (RDS) is a managed database service that simp
 - D) A domain name system in the cloud.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 142)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 197)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -4256,7 +5713,7 @@ Amazon ElastiCache is a fully managed, in-memory data store and caching service 
 
 ---
 
-### Question 143 — `CLF-U0039` | 🔁 Repeated in 4 Exam Sources
+### Question 198 — `CLF-U0039` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.4: Database & In-Memory Caching Services*
 
 **What is the AWS service that provides you the highest level of control over the underlying virtual infrastructure?**
@@ -4267,7 +5724,7 @@ Amazon ElastiCache is a fully managed, in-memory data store and caching service 
 - D) Amazon RDS.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 143)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 198)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -4287,7 +5744,7 @@ Amazon EC2 (Elastic Compute Cloud) provides the most control over the underlying
 
 ---
 
-### Question 144 — `CLF-U0046` | 🔁 Repeated in 4 Exam Sources
+### Question 199 — `CLF-U0046` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.4: Database & In-Memory Caching Services*
 
 **Using Amazon RDS falls under the shared responsibility model. Which of the following are customer responsibilities? (Choose TWO)**
@@ -4299,7 +5756,7 @@ Amazon EC2 (Elastic Compute Cloud) provides the most control over the underlying
 - E) Installing the database software.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 144)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 199)</strong></summary>
 
 **Correct Answer:** `A, C`
 
@@ -4323,7 +5780,7 @@ While AWS manages the underlying infrastructure, the customer is responsible for
 
 ---
 
-### Question 145 — `CLF-U0047` | 🔁 Repeated in 4 Exam Sources
+### Question 200 — `CLF-U0047` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.4: Database & In-Memory Caching Services*
 
 **A company has a large amount of structured data stored in their on-premises data center. They are planning to migrate all the data to AWS, what is the most appropriate AWS database option?**
@@ -4334,7 +5791,7 @@ While AWS manages the underlying infrastructure, the customer is responsible for
 - D) Amazon ElastiCache.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 145)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 200)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -4354,7 +5811,7 @@ Amazon Relational Database Service (RDS) is the most appropriate choice for migr
 
 ---
 
-### Question 146 — `CLF-U0065` | 🔁 Repeated in 4 Exam Sources
+### Question 201 — `CLF-U0065` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.4: Database & In-Memory Caching Services*
 
 **What is the AWS data warehouse service that supports a high level of query performance on large amounts of datasets?**
@@ -4365,7 +5822,7 @@ Amazon Relational Database Service (RDS) is the most appropriate choice for migr
 - D) Amazon RDS.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 146)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 201)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -4385,7 +5842,7 @@ Amazon Redshift is a fully managed, petabyte-scale data warehouse service in the
 
 ---
 
-### Question 147 — `CLF-U0087` | 🔁 Repeated in 4 Exam Sources
+### Question 202 — `CLF-U0087` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.4: Database & In-Memory Caching Services*
 
 **For managed services like Amazon DynamoDB, which of the below is AWS responsible for? (Choose TWO)**
@@ -4397,7 +5854,7 @@ Amazon Redshift is a fully managed, petabyte-scale data warehouse service in the
 - E) Creating access policies.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 147)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 202)</strong></summary>
 
 **Correct Answer:** `C, D`
 
@@ -4421,7 +5878,7 @@ Operating system maintenance, including patching and updates, is the responsibil
 
 ---
 
-### Question 148 — `CLF-U0093` | 🔁 Repeated in 4 Exam Sources
+### Question 203 — `CLF-U0093` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.4: Database & In-Memory Caching Services*
 
 **What are the benefits of using DynamoDB? (Choose TWO)**
@@ -4433,7 +5890,7 @@ Operating system maintenance, including patching and updates, is the responsibil
 - E) Supports the most popular NoSQL database engines such as CouchDB and MongoDB.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 148)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 203)</strong></summary>
 
 **Correct Answer:** `A, D`
 
@@ -4457,7 +5914,7 @@ DynamoDB is designed to automatically scale its throughput capacity based on the
 
 ---
 
-### Question 149 — `CLF-U0804` | 🔁 Repeated in 4 Exam Sources
+### Question 204 — `CLF-U0804` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.4: Database & In-Memory Caching Services*
 
 **An organization runs many systems and uses many AWS products. Which of the following services enables them to control how each developer interacts with these products?**
@@ -4468,7 +5925,7 @@ DynamoDB is designed to automatically scale its throughput capacity based on the
 - D) Amazon EMR.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 149)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 204)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -4488,7 +5945,7 @@ AWS Identity and Access Management (IAM) is the AWS service that enables you to 
 
 ---
 
-### Question 150 — `CLF-U0030` | 🔁 Repeated in 4 Exam Sources
+### Question 205 — `CLF-U0030` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.5: Networking & Content Delivery (VPC, Route 53, CloudFront)*
 
 **Which service is used to ensure that messages between software components are not lost if one or more components fail?**
@@ -4499,7 +5956,7 @@ AWS Identity and Access Management (IAM) is the AWS service that enables you to 
 - D) Amazon Connect.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 150)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 205)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -4519,7 +5976,7 @@ Amazon Simple Queue Service (SQS) is a fully managed message queuing service tha
 
 ---
 
-### Question 151 — `CLF-U0098` | 🔁 Repeated in 4 Exam Sources
+### Question 206 — `CLF-U0098` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.5: Networking & Content Delivery (VPC, Route 53, CloudFront)*
 
 **Which methods can be used by customers to interact with AWS Identity and Access Management (IAM)? (Choose TWO)**
@@ -4531,7 +5988,7 @@ Amazon Simple Queue Service (SQS) is a fully managed message queuing service tha
 - E) AWS CodeCommit.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 151)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 206)</strong></summary>
 
 **Correct Answer:** `A, C`
 
@@ -4555,7 +6012,7 @@ The AWS Command Line Interface (CLI) is a unified tool to manage your AWS servic
 
 ---
 
-### Question 152 — `CLF-U0353` | 🔁 Repeated in 4 Exam Sources
+### Question 207 — `CLF-U0353` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.5: Networking & Content Delivery (VPC, Route 53, CloudFront)*
 
 **What is the purpose of having an internet gateway within a VPC?**
@@ -4566,7 +6023,7 @@ The AWS Command Line Interface (CLI) is a unified tool to manage your AWS servic
 - D) To load balance traffic from the Internet across Amazon EC2 instances
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 152)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 207)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -4577,7 +6034,7 @@ Creating a VPN connection to the VPC is the function of a Virtual Private Gatewa
 
 ---
 
-### Question 153 — `CLF-U0038` | 🔁 Repeated in 4 Exam Sources
+### Question 208 — `CLF-U0038` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.6: Management, Monitoring & Application Integration*
 
 **An organization needs to analyze and process a large number of data sets. Which AWS service should they use?**
@@ -4588,7 +6045,7 @@ Creating a VPN connection to the VPC is the function of a Virtual Private Gatewa
 - D) Amazon SQS.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 153)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 208)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -4608,7 +6065,7 @@ Amazon EMR (Elastic MapReduce) is a managed cluster platform that simplifies run
 
 ---
 
-### Question 154 — `CLF-U0086` | 🔁 Repeated in 4 Exam Sources
+### Question 209 — `CLF-U0086` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.6: Management, Monitoring & Application Integration*
 
 **What does AWS Service Catalog provide?**
@@ -4619,7 +6076,7 @@ Amazon EMR (Elastic MapReduce) is a managed cluster platform that simplifies run
 - D) It allows developers to deploy infrastructure on AWS using familiar programming languages.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 154)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 209)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -4639,7 +6096,7 @@ AWS Service Catalog allows organizations to create and manage catalogs of IT ser
 
 ---
 
-### Question 155 — `CLF-U0095` | 🔁 Repeated in 4 Exam Sources
+### Question 210 — `CLF-U0095` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.6: Management, Monitoring & Application Integration*
 
 **Which AWS service can be used to send promotional text messages (SMS) to more than 200 countries worldwide?**
@@ -4650,7 +6107,7 @@ AWS Service Catalog allows organizations to create and manage catalogs of IT ser
 - D) Amazon Simple Queue Service (Amazon SQS).
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 155)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 210)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -4670,7 +6127,7 @@ Amazon Simple Notification Service (SNS) is a fully managed messaging service th
 
 ---
 
-### Question 156 — `CLF-U0244` | 🔁 Repeated in 4 Exam Sources
+### Question 211 — `CLF-U0244` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 3.6: Management, Monitoring & Application Integration*
 
 **Which AWS service provides the ability to manage infrastructure as code?**
@@ -4681,7 +6138,7 @@ Amazon Simple Notification Service (SNS) is a fully managed messaging service th
 - D) AWS CloudFormation.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 156)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 211)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -4692,7 +6149,238 @@ AWS CodePipeline automates the stages of a software release pipeline including s
 
 ---
 
-### Question 157 — `CLF-U0141` | 🔁 Repeated in 3 Exam Sources
+### Question 212 — `CLF-U0029` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 3.1: Compute Services (EC2, Lambda, Elastic Beanstalk)*
+
+**According to the AWS Acceptable Use Policy, which of the following statements is true regarding penetration testing of EC2 instances?**
+
+- A) Penetration testing is not allowed in AWS.
+- B) Penetration testing is performed automatically by AWS to determine vulnerabilities in your AWS infrastructure.
+- C) Penetration testing can be performed by the customer on their own instances without prior authorization from AWS.
+- D) The AWS customers are only allowed to perform penetration testing on services managed by AWS.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 212)</strong></summary>
+
+**Correct Answer:** `C`
+
+AWS's Acceptable Use Policy allows customers to perform penetration testing on their own EC2 instances and certain other permitted services without prior authorisation from AWS, provided the testing complies with the AUP conditions.
+Penetration testing is not prohibited in AWS; the Acceptable Use Policy explicitly permits customers to conduct penetration testing on their own resources within defined guidelines, making the claim that it is not allowed incorrect. AWS does not perform automated penetration testing on behalf of customers; Amazon Inspector performs automated security assessments for vulnerabilities and network exposure, but this is not the same as penetration testing, and AWS does not conduct adversarial testing of customer infrastructure. AWS customers are permitted to perform penetration testing on their own services and resources, not only on services managed by AWS; the restriction is that testing must target the customer's own resources rather than AWS shared infrastructure.
+
+</details>
+
+---
+
+### Question 213 — `CLF-U0161` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 3.1: Compute Services (EC2, Lambda, Elastic Beanstalk)*
+
+**The owner of an E-Commerce application notices that the compute capacity requirements vary heavily from time to time. What makes AWS more economical than traditional data centers for this type of application?**
+
+- A) AWS allows customers to launch powerful EC2 instances to handle spikes in load.
+- B) AWS allows customers to pay upfront to get bigger discounts.
+- C) AWS allows customers to launch and terminate EC2 instances based on demand.
+- D) AWS allows customers to choose cheaper types of EC2 instances that best fit their needs.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 213)</strong></summary>
+
+**Correct Answer:** `C`
+
+AWS allows customers to launch and terminate EC2 instances based on real-time demand, so during low-traffic periods they stop paying for unused capacity, unlike traditional data centers where hardware sits idle regardless of utilization.
+Launching powerful instances to handle spikes in load describes vertical scaling, which still results in over-provisioned and idle capacity during low-traffic periods and does not address the core economic inefficiency of traditional data centers. Paying upfront to get bigger discounts describes Reserved Instance pricing, which is a commitment-based model that reduces per-unit cost but does not eliminate the problem of paying for capacity during periods of low demand. Choosing cheaper instance types reduces the unit cost of compute but does not eliminate idle capacity costs, as the instances would still run and incur charges regardless of whether they are actively being used.
+
+</details>
+
+---
+
+### Question 214 — `CLF-U0166` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 3.1: Compute Services (EC2, Lambda, Elastic Beanstalk)*
+
+**Your application requirements for CPU and RAM are changing in an unpredictable way. Which service can be used to dynamically adjust these resources based on load?**
+
+- A) Auto Scaling.
+- B) ELB.
+- C) Amazon Route53.
+- D) Amazon Elastic Container Service.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 214)</strong></summary>
+
+**Correct Answer:** `A`
+
+AWS Auto Scaling dynamically adjusts the number of EC2 instances based on real-time demand metrics such as CPU and memory utilization, automatically adding or removing capacity as workload requirements change.
+Elastic Load Balancing distributes incoming traffic across multiple targets to improve availability and prevent any single instance from being overwhelmed, but it does not add or remove compute resources in response to changing CPU and RAM requirements. Amazon Route 53 is a DNS and traffic routing service that resolves domain names and directs users to application endpoints, and has no capability to provision or adjust compute resources. Amazon Elastic Container Service is a container orchestration service for running and managing containerised applications, and while it can scale tasks, it is not the purpose-built solution for dynamically adjusting EC2 compute resources based on unpredictable load.
+
+</details>
+
+---
+
+### Question 215 — `CLF-U0186` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 3.1: Compute Services (EC2, Lambda, Elastic Beanstalk)*
+
+**Engineers are wasting a lot of time and effort managing batch computing software in traditional data centers. Which of the following AWS services allows them to easily run thousands of batch computing jobs?**
+
+- A) Amazon EC2.
+- B) AWS Batch.
+- C) Lambda@Edge.
+- D) AWS Fargate.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 215)</strong></summary>
+
+**Correct Answer:** `B`
+
+AWS Batch automatically provisions the optimal quantity and type of compute resources based on the volume and requirements of batch jobs, removing the need to manage batch computing infrastructure manually and allowing engineers to focus on their workloads rather than the underlying infrastructure.
+Amazon EC2 provides virtual servers that could run batch workloads, but requires engineers to manually provision, configure, and manage the instances and batch scheduling software themselves, which is exactly the problem the scenario describes. Lambda@Edge runs AWS Lambda functions at CloudFront edge locations to process content closer to end users, and is designed for lightweight event-driven tasks rather than large-scale batch computing jobs. AWS Fargate is a serverless compute engine for running containers without managing servers, but is designed for containerised application workloads rather than purpose-built batch job scheduling and management at scale.
+
+</details>
+
+---
+
+### Question 216 — `CLF-U0252` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 3.1: Compute Services (EC2, Lambda, Elastic Beanstalk)*
+
+**Which of the following are valid ways for a customer to interact with AWS services? (Select TWO)**
+
+- A) Command line interface.
+- B) On-premises.
+- C) Software Development Kits.
+- D) Software-as-a-service.
+- E) Hybrid.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 216)</strong></summary>
+
+**Correct Answer:** `A, C`
+
+The AWS Command Line Interface allows command-based interaction with AWS services from a terminal, and AWS Software Development Kits provide programmatic access to AWS services from application code written in multiple programming languages. Both are direct, supported methods for interacting with AWS services.
+On-premises refers to infrastructure and software hosted in a company's own physical data center rather than in the cloud, and is a deployment model rather than a method of interacting with AWS services. Software-as-a-service is a cloud delivery model in which software applications are provided over the internet by a vendor, and is a service consumption model rather than a way for customers to interact with AWS services directly. Hybrid refers to an architecture that combines on-premises infrastructure with cloud resources, and is a deployment strategy rather than an interaction method for AWS services.
+
+</details>
+
+---
+
+### Question 217 — `CLF-U0262` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 3.1: Compute Services (EC2, Lambda, Elastic Beanstalk)*
+
+**A company is considering using AWS for a self-hosted database that requires a nightly shutdown for maintenance and cost-saving purposes. Which service should the company use?**
+
+- A) Amazon Redshift.
+- B) Amazon DynamoDB.
+- C) Amazon Elastic Compute Cloud (Amazon EC2) with Amazon EC2 instance store.
+- D) Amazon EC2 with Amazon Elastic Block Store (Amazon EBS).
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 217)</strong></summary>
+
+**Correct Answer:** `D`
+
+EC2 with EBS is the right choice because EBS volumes persist independently from the instance. When the instance is stopped nightly, the data on EBS is retained.
+Amazon Redshift is a fully managed data warehouse service optimized for analytical SQL queries across large datasets, and as a managed service it cannot be stopped on a nightly schedule the way an EC2 instance can, making it unsuitable for a workload with a nightly shutdown requirement. Amazon DynamoDB is a fully managed NoSQL database service that scales automatically and operates continuously as a managed service, and cannot be stopped on a schedule for maintenance or cost-saving purposes. Amazon EC2 with Amazon EC2 instance store provides temporary block storage that is physically attached to the host machine, and this storage is lost when the instance is stopped, making it unsuitable for a database that requires data persistence across nightly shutdowns.
+
+</details>
+
+---
+
+### Question 218 — `CLF-U0443` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 3.1: Compute Services (EC2, Lambda, Elastic Beanstalk)*
+
+**Which is a recommended pattern for designing a highly available architecture on AWS?**
+
+- A) Ensure that components have low-latency network connectivity.
+- B) Run enough Amazon EC2 instances to operate at peak load.
+- C) Ensure that the application is designed to accommodate failure of any single component.
+- D) Use a monolithic application that handles all operations.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 218)</strong></summary>
+
+**Correct Answer:** `C`
+
+Designing an application to accommodate the failure of any single component, through redundancy, health checks, and automatic failover, is the core principle of designing for failure and is the recommended pattern for achieving high availability on AWS.
+Ensuring low-latency network connectivity is a performance optimization consideration that improves user experience, but low latency alone does not protect an application from component failures or maintain availability during an outage. Running enough EC2 instances to handle peak load addresses capacity planning but does not build in redundancy or fault tolerance, meaning a single component failure could still bring down the application. A monolithic application that handles all operations consolidates functionality into a single unit, which creates a single point of failure and is the opposite of a highly available architecture that can survive individual component failures.
+
+</details>
+
+---
+
+### Question 219 — `CLF-U0571` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 3.1: Compute Services (EC2, Lambda, Elastic Beanstalk)*
+
+**Which of the following is NOT correct regarding Amazon EC2 On-demand instances?**
+
+- A) You have to pay a start-up fee when launching a new instance for the first time.
+- B) The on-demand instances follow the AWS pay-as-you-go pricing model.
+- C) With on-demand instances, no longer-term commitments or upfront payments are needed.
+- D) When using on-demand Linux instances, you are charged per second based on an hourly rate.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 219)</strong></summary>
+
+**Correct Answer:** `A`
+
+On-Demand EC2 instances have no start-up fee. You simply pay for the compute time you use with no upfront charges. On-Demand instances follow pay-as-you-go pricing, require no commitments, and Linux instances are billed per second.
+There is no start-up fee when launching an On-Demand EC2 instance for the first time. AWS charges only for the compute time the instance runs, with no additional fees for initial provisioning or launch. The AWS pay-as-you-go pricing model for On-Demand instances means you are charged only for the time the instance runs, with no additional start-up fees, fixed monthly charges, or minimum usage requirements. With On-Demand instances there are no longer-term commitments or upfront payments required, allowing you to start and stop instances at any time based on your needs. Linux-based EC2 instances are indeed billed per second based on an hourly rate, with a minimum charge of one full minute, which is an accurate statement and not the incorrect one the question asks you to identify.
+
+</details>
+
+---
+
+### Question 220 — `CLF-U0807` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 3.1: Compute Services (EC2, Lambda, Elastic Beanstalk)*
+
+**Which of the following can help protect your EC2 instances from DDoS attacks? (Choose TWO)**
+
+- A) AWS CloudHSM.
+- B) Security Groups.
+- C) AWS Batch.
+- D) AWS IAM.
+- E) Network Access Control Lists (Network ACLs).
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 220)</strong></summary>
+
+**Correct Answer:** `B, E`
+
+Security groups are stateful instance-level firewalls that can block unwanted traffic before it reaches EC2 instances, and Network ACLs are stateless subnet-level controls that can block volumetric attack traffic at the network perimeter. Both can help protect EC2 instances from DDoS traffic.
+AWS CloudHSM provides dedicated hardware security modules for generating and managing cryptographic keys within the AWS Cloud, and is a key management service with no capability to block or mitigate DDoS traffic targeting EC2 instances. AWS Batch is a fully managed batch computing service that dynamically provisions compute resources for batch jobs, and is a job scheduling and compute service with no network traffic filtering or DDoS protection capability. AWS IAM manages user permissions and access to AWS services and resources, and is an identity and access management service rather than a network defense tool that can block DDoS traffic.
+
+</details>
+
+---
+
+### Question 221 — `CLF-U1478` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 3.1: Compute Services (EC2, Lambda, Elastic Beanstalk)*
+
+**Which AWS service or feature captures information about the network traffic to and from an Amazon EC2 instance?**
+
+- A) VPC Reachability Analyzer
+- B) Amazon Athena
+- C) VPC Flow Logs
+- D) AWS X-Ray
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 221)</strong></summary>
+
+**Correct Answer:** `C`
+
+The correct answer is C because VPC Flow Logs is an AWS service or feature that
+captures information about the network traffic to and from an Amazon EC2 instance. VPC
+Flow Logs is a feature that enables customers to capture information about the IP traffic
+going to and from network interfaces in their VPC. VPC Flow Logs can help customers to
+monitor and troubleshoot connectivity issues, such as traffic not reaching an instance or
+traffic being rejected by a security group. The other options are incorrect because they are
+not AWS services or features that capture information about the network traffic to and from
+an Amazon EC2 instance. VPC Reachability Analyzer is an AWS service or feature that
+enables customers to perform connectivity testing between resources in their VPC and
+identify configuration issues that prevent connectivity. Amazon Athena is an AWS service
+that enables customers to query data stored in Amazon S3 using standard SQL. AWS XRay is an AWS service that enables custom
+
+</details>
+
+---
+
+### Question 222 — `CLF-U0141` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 3.2: Container Technologies (ECS, EKS, Fargate, ECR)*
 
 **Which of the following are use cases for Amazon EMR? (Choose TWO)**
@@ -4704,7 +6392,7 @@ AWS CodePipeline automates the stages of a software release pipeline including s
 - E) Enables you to easily run and manage Docker containers.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 157)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 222)</strong></summary>
 
 **Correct Answer:** `C, D`
 
@@ -4715,7 +6403,7 @@ Backing up extremely large amounts of data at very low costs describes Amazon S3
 
 ---
 
-### Question 158 — `CLF-U0879` | 🔁 Repeated in 3 Exam Sources
+### Question 223 — `CLF-U0879` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 3.2: Container Technologies (ECS, EKS, Fargate, ECR)*
 
 **What credential components are required to gain programmatic access to an AWS account? (Select TWO)**
@@ -4727,7 +6415,7 @@ Backing up extremely large amounts of data at very low costs describes Amazon S3
 - E) A secondary key.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 158)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 223)</strong></summary>
 
 **Correct Answer:** `A, C`
 
@@ -4738,7 +6426,242 @@ A primary key is not a valid AWS IAM credential component; it is a database term
 
 ---
 
-### Question 159 — `CLF-U0024` | 🔁 Repeated in 3 Exam Sources
+### Question 224 — `CLF-U0082` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 3.3: Storage Services (S3, EBS, EFS, Storage Gateway)*
+
+**A company plans to migrate a large amount of archived data to AWS. The archived data must be maintained for a period of 5 years and must be retrievable within 5 hours of a request. What is the most cost-effective AWS storage service to use?**
+
+- A) Amazon S3 Glacier.
+- B) Amazon EFS.
+- C) Amazon S3 Standard.
+- D) Amazon EBS.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 224)</strong></summary>
+
+**Correct Answer:** `A`
+
+Amazon S3 Glacier provides low-cost archival storage with retrieval options including Expedited (1 to 5 minutes), Standard (3 to 5 hours), and Bulk (5 to 12 hours). For a five-hour retrieval requirement, S3 Glacier Standard retrieval meets the SLA at the lowest cost.
+Amazon EFS is a managed shared network file system that provides concurrent file access from multiple instances, and is designed for active file workloads rather than long-term archival storage where cost is the primary concern. Amazon S3 Standard provides durable, highly available object storage with immediate millisecond retrieval, and while it meets the retrieval requirement it is significantly more expensive per gigabyte than S3 Glacier for storing five years of infrequently accessed archival data. Amazon EBS provides persistent block storage volumes attached directly to EC2 instances for low-latency disk access, and is a compute-attached storage service not designed for long-term archival or for storing data independently of a running instance.
+
+</details>
+
+---
+
+### Question 225 — `CLF-U0107` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 3.3: Storage Services (S3, EBS, EFS, Storage Gateway)*
+
+**A company is building an online cloud storage platform. They need a storage service that can scale capacity automatically, while minimizing cost. Which AWS storage service should the company use to meet these requirements?**
+
+- A) Amazon Simple Storage Service.
+- B) Amazon Elastic Block Store.
+- C) Amazon Elastic Container Service.
+- D) AWS Storage Gateway.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 225)</strong></summary>
+
+**Correct Answer:** `A`
+
+Amazon S3 provides virtually unlimited object storage that scales automatically with usage and charges only for what you store, making it ideal for cloud storage platforms that need elastic capacity at low cost.
+Amazon Elastic Block Store provides persistent block storage volumes that attach directly to EC2 instances for low-latency disk access, and has a fixed provisioned capacity model where you pay for the volume size you provision rather than scaling automatically based on objects stored. Amazon Elastic Container Service is a container orchestration service that manages the deployment and scaling of containerised applications, and is a compute service rather than a storage service for an object storage platform. AWS Storage Gateway connects on-premises environments to AWS cloud storage for hybrid storage integration, and is designed for bridging on-premises infrastructure with AWS rather than serving as the underlying storage for a cloud-native storage platform.
+
+</details>
+
+---
+
+### Question 226 — `CLF-U0108` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 3.3: Storage Services (S3, EBS, EFS, Storage Gateway)*
+
+**You have just hired a skilled sys-admin to join your team. As usual, you have created a new IAM user for him to interact with AWS services. On his first day, you ask him to create snapshots of all existing Amazon EBS volumes and save them in a new Amazon S3 bucket. However, the new member reports back that he is unable to create neither EBS snapshots nor S3 buckets. What might prevent him from doing this simple task?**
+
+- A) EBS and S3 are accessible only to the root account owner.
+- B) The systems administrator must contact AWS Support first to activate his new IAM account.
+- C) There is not enough space in S3 to store the snapshots.
+- D) There is a non-explicit deny to all new users.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 226)</strong></summary>
+
+**Correct Answer:** `D`
+
+By default, new IAM users have no permissions attached to them, meaning all actions are implicitly denied until explicit permissions are granted through policies, which is why the new administrator cannot create EBS snapshots or S3 buckets.
+EBS and S3 are not accessible only to the root account owner; they can be accessed by any IAM user, group, or role that has been granted the appropriate permissions through IAM policies, making this statement factually incorrect. A new IAM user does not need to contact AWS Support to activate their account; IAM users are created and active immediately, and the issue is the absence of permissions rather than an account activation requirement. There is no inherent storage limit in S3 that would prevent creating a new bucket for snapshots; S3 scales automatically to accommodate any amount of data, and the inability to create the bucket is due to missing permissions rather than a storage capacity issue.
+
+</details>
+
+---
+
+### Question 227 — `CLF-U0130` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 3.3: Storage Services (S3, EBS, EFS, Storage Gateway)*
+
+**Which of the following S3 storage classes is most appropriate to host static assets for a popular e-commerce website with stable access patterns?**
+
+- A) S3 Standard-IA.
+- B) S3 Intelligent-Tiering.
+- C) S3 Glacier Deep Archive.
+- D) S3 Standard.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 227)</strong></summary>
+
+**Correct Answer:** `D`
+
+S3 Standard is designed for frequently accessed data with low latency and high throughput, making it the most appropriate storage class for static assets on a popular e-commerce site with consistent, stable access patterns.
+S3 Standard-IA is designed for data that is accessed infrequently but requires rapid access when needed, and carries a per-retrieval charge that makes it more expensive than S3 Standard for assets that are accessed consistently and frequently. S3 Intelligent-Tiering automatically moves objects between access tiers based on changing access patterns, making it better suited for data with unpredictable or unknown access frequency rather than assets with stable, predictable demand. S3 Glacier Deep Archive is the lowest-cost storage class designed for long-term archival of data that is rarely if ever accessed, and is entirely unsuitable for serving live website assets that require immediate low-latency retrieval.
+
+</details>
+
+---
+
+### Question 228 — `CLF-U0146` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 3.3: Storage Services (S3, EBS, EFS, Storage Gateway)*
+
+**To protect against data loss, you need to backup your database regularly. What is the most cost-effective storage option that provides immediate retrieval of your backups?**
+
+- A) Amazon S3 Glacier Deep Archive.
+- B) Amazon S3 Standard-Infrequent Access.
+- C) Amazon S3 Glacier.
+- D) Instance Store.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 228)</strong></summary>
+
+**Correct Answer:** `B`
+
+Amazon S3 Standard-Infrequent Access offers lower storage costs than S3 Standard while still providing immediate, millisecond retrieval, making it cost-effective for backups that are accessed infrequently but need to be available instantly.
+Amazon S3 Glacier Deep Archive is the lowest-cost storage class for long-term archival data that is accessed very rarely, with retrieval times of 12 hours or more, making it unsuitable for backups that require immediate retrieval. Amazon S3 Glacier provides low-cost archival storage with retrieval options ranging from minutes to hours depending on the retrieval tier selected, and while less expensive than S3 Standard it does not provide the immediate millisecond retrieval required for backup recovery. Instance Store provides temporary block storage physically attached to the host machine running an EC2 instance, and is ephemeral storage that is lost when the instance stops, making it entirely unsuitable for durable backup storage.
+
+</details>
+
+---
+
+### Question 229 — `CLF-U0219` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 3.3: Storage Services (S3, EBS, EFS, Storage Gateway)*
+
+**Which AWS services should be used for read/write of constantly changing data? (Select TWO)**
+
+- A) Amazon Glacier.
+- B) Amazon RDS.
+- C) AWS Snowball.
+- D) Amazon Redshift.
+- E) Amazon EFS.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 229)</strong></summary>
+
+**Correct Answer:** `B, E`
+
+Amazon RDS supports frequent read/write operations on relational data with full ACID transaction support, making it well suited for applications with constantly changing structured data. Amazon EFS provides a shared network file system with concurrent read/write access for multiple EC2 instances, making it appropriate for workloads that require continuous file-level changes.
+Amazon S3 Glacier is an archival storage service designed for data that is rarely accessed and does not support the frequent read/write operations that constantly changing data requires. AWS Snowball is a physical device used to transfer large volumes of data into or out of AWS and has no capability to serve as a read/write data store for active workloads. Amazon Redshift is a data warehouse service optimized for running complex analytical queries across large datasets, not for handling frequent transactional read/write operations on constantly changing data.
+
+</details>
+
+---
+
+### Question 230 — `CLF-U0247` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 3.3: Storage Services (S3, EBS, EFS, Storage Gateway)*
+
+**Which of the following AWS services can be used to serve large amounts of online video content with the lowest possible latency? (Select TWO)**
+
+- A) appGateway.
+- B) Amazon S3.
+- C) Amazon Elastic File System (EFS).
+- D) Amazon Glacier.
+- E) Amazom CloudFront.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 230)</strong></summary>
+
+**Correct Answer:** `B, E`
+
+Amazon S3 stores video content with high durability and scalability, and Amazon CloudFront caches and delivers that content from edge locations worldwide with low latency, making them the purpose-built combination for serving large-scale online video efficiently.
+AWS Storage Gateway connects on-premises environments to AWS cloud storage for hybrid storage integration, and is not designed for serving or distributing online video content to end users. Amazon Elastic File System is a managed shared network file system for use with AWS compute services, and is not optimized for delivering large volumes of video content at low latency to a distributed audience. Amazon S3 Glacier is an archival storage service designed for data that is rarely accessed and can tolerate retrieval times of minutes to hours, making it entirely unsuitable for serving online video content that requires immediate low-latency delivery.
+
+</details>
+
+---
+
+### Question 231 — `CLF-U0769` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 3.3: Storage Services (S3, EBS, EFS, Storage Gateway)*
+
+**What does the Amazon S3 Intelligent-Tiering storage class offer?**
+
+- A) Payment flexibility by reserving storage capacity
+- B) Long-term retention of data by copying the data to an encrypted Amazon Elastic Block Store (Amazon EBS) volume
+- C) Automatic cost savings by moving objects between tiers based on access pattern changes
+- D) Secure, durable, and lowest cost storage for data archival
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 231)</strong></summary>
+
+**Correct Answer:** `C`
+
+S3 Intelligent-Tiering automatically monitors access patterns and moves objects between a frequent access tier and an infrequent access tier without performance impact or operational overhead, reducing storage costs for data with unpredictable or changing access patterns.
+Payment flexibility by reserving storage capacity describes a commitment-based pricing model that does not exist for Amazon S3, which charges based on actual usage rather than reserved capacity. Long-term retention of data by copying it to an encrypted EBS volume is not how S3 Intelligent-Tiering works. EBS is block storage attached to EC2 instances and is entirely separate from S3 storage classes, and Intelligent-Tiering manages data within S3 itself. Secure, durable, and lowest cost storage for data archival describes Amazon S3 Glacier, which is a separate storage class designed specifically for infrequently accessed archival data with retrieval times ranging from minutes to hours, not S3 Intelligent-Tiering.
+
+</details>
+
+---
+
+### Question 232 — `CLF-U1459` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 3.3: Storage Services (S3, EBS, EFS, Storage Gateway)*
+
+**A company wants to store its files in the AWS Cloud. Users need to be able to download these files directly using a public URL. Which AWS service or feature will meet this requirement?**
+
+- A) Amazon Redshift
+- B) Amazon Elastic Block Store (Amazon EBS)
+- C) Amazon Elastic File System (Amazon EFS)
+- D) Amazon S3
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 232)</strong></summary>
+
+**Correct Answer:** `D`
+
+Amazon S3 (Simple Storage Service)is a scalable object storage service that allows users
+to store and retrieve any amount of data at any time from anywhere on the web. S3
+provides the ability to make objects (files) publicly accessible via a public URL, which
+allows users to download files directly. S3 is highly durable, scalable, and secure, making it
+an ideal service for storing files that need to be accessed publicly.
+Why other options are not suitable:
+A . Amazon Redshift: A data warehouse service designed for complex queries and
+analytics, not for storing and publicly sharing files.
+B . Amazon Elastic Block Store (Amazon EBS): Provides block storage for use with EC2
+instances, but does not support public URLs or direct file access from the web.
+C . Amazon Elastic File System (Amazon EFS): A managed file storage service for use
+with EC2 instances, not designed for public access via URLs.
+Reference:
+Amazon S3 Documentation
+
+</details>
+
+---
+
+### Question 233 — `CLF-U0015` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 3.4: Database & In-Memory Caching Services*
+
+**Which of the following are examples of AWS-Managed Services, where AWS is responsible for the operational and maintenance burdens of running the service? (Choose TWO)**
+
+- A) Amazon VPC.
+- B) Amazon DynamoDB.
+- C) Amazon Elastic MapReduce.
+- D) AWS IAM.
+- E) Amazon Elastic Compute Cloud.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 233)</strong></summary>
+
+**Correct Answer:** `B, C`
+
+Amazon DynamoDB and Amazon EMR are fully managed services where AWS handles provisioning, patching, scaling, and maintenance automatically, freeing customers from managing the underlying infrastructure.
+Amazon VPC is a networking construct that customers configure and manage themselves, including subnets, route tables, internet gateways, and security groups, making it a customer-configured resource rather than a fully managed service. AWS IAM is a service customers use to manage their own users, roles, and permissions, and while AWS maintains the IAM infrastructure, customers are responsible for all identity and access configuration. Amazon Elastic Compute Cloud provides virtual servers where customers are responsible for the operating system, installed software, patches, and configuration, making it an infrastructure service where the customer manages the virtual machine layer rather than a fully managed one.
+
+</details>
+
+---
+
+### Question 234 — `CLF-U0024` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 3.4: Database & In-Memory Caching Services*
 
 **What does AWS provide to deploy popular technologies such as IBM MQ on AWS with the least amount of effort and time?**
@@ -4749,7 +6672,7 @@ A primary key is not a valid AWS IAM credential component; it is a database term
 - D) AWS OpsWorks.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 159)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 234)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -4760,7 +6683,215 @@ Amazon Aurora is a fully managed relational database compatible with MySQL and P
 
 ---
 
-### Question 160 — `CLF-U0014` | 🔁 Repeated in 3 Exam Sources
+### Question 235 — `CLF-U0064` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 3.4: Database & In-Memory Caching Services*
+
+**Which of the following AWS offerings is a MySQL-compatible relational database service that can scale capacity automatically based on demand?**
+
+- A) Amazon Neptune.
+- B) Amazon Aurora.
+- C) Amazon RDS for SQL Server.
+- D) Amazon RDS for PostgreSQL.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 235)</strong></summary>
+
+**Correct Answer:** `B`
+
+Amazon Aurora is a MySQL and PostgreSQL-compatible managed relational database that automatically scales storage as needed, making it the purpose-built solution for applications requiring MySQL compatibility with automatic capacity scaling.
+Amazon Neptune is a fully managed graph database service designed for storing and querying highly connected data such as social networks and knowledge graphs, and is not a MySQL-compatible relational database. Amazon RDS for SQL Server is a managed relational database running Microsoft's SQL Server engine, which is not MySQL-compatible and does not automatically scale storage capacity on demand. Amazon RDS for PostgreSQL is a managed relational database running the PostgreSQL engine which, while sharing some compatibility with Aurora, does not auto-scale storage the way Aurora does.
+
+</details>
+
+---
+
+### Question 236 — `CLF-U0085` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 3.4: Database & In-Memory Caching Services*
+
+**What is the AWS service that provides five times the performance of a standard MySQL database?**
+
+- A) Amazon Aurora.
+- B) Amazon Redshift.
+- C) Amazon DynamoDB.
+- D) Amazon Neptune.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 236)</strong></summary>
+
+**Correct Answer:** `A`
+
+Amazon Aurora is a MySQL and PostgreSQL-compatible relational database that delivers up to five times the throughput of standard MySQL, with the reliability and availability of a commercial database at a fraction of the cost.
+Amazon Redshift is a fully managed data warehouse service optimized for running complex analytical queries across large datasets, and is not a MySQL-compatible relational database designed for high-throughput transactional workloads. Amazon DynamoDB is a fully managed NoSQL database that supports key-value and document data models, and does not offer MySQL compatibility or the relational capabilities that Aurora provides. Amazon Neptune is a fully managed graph database service designed for storing and querying highly connected data, and has no MySQL compatibility or relation to the performance characteristics described.
+
+</details>
+
+---
+
+### Question 237 — `CLF-U0150` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 3.4: Database & In-Memory Caching Services*
+
+**You have a real-time IoT application that requires sub-millisecond latency. Which of the following services should you use?**
+
+- A) Amazon Redshift.
+- B) Amazon Athena.
+- C) AWS Cloud9.
+- D) Amazon ElastiCache for Redis.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 237)</strong></summary>
+
+**Correct Answer:** `D`
+
+Amazon ElastiCache for Redis is an in-memory data store that delivers sub-millisecond response times, making it the appropriate choice for a real-time IoT application requiring extremely low latency.
+Amazon Redshift is a managed data warehouse service optimized for running analytical SQL queries across large datasets, and is designed for throughput-oriented batch analytics rather than sub-millisecond real-time data access. Amazon Athena is a serverless query service that analyzes data stored in Amazon S3 using SQL, and involves query execution times measured in seconds rather than the sub-millisecond latency that real-time IoT applications require. AWS Cloud9 is a cloud-based integrated development environment for writing, running, and debugging code, and is a developer tool with no data storage or low-latency serving capability.
+
+</details>
+
+---
+
+### Question 238 — `CLF-U0209` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 3.4: Database & In-Memory Caching Services*
+
+**What is the benefit of using AWS managed services, such as Amazon ElastiCache and Amazon Relational Database Service (Amazon RDS)?**
+
+- A) They require the customer to monitor and replace failing instances.
+- B) They have better performance than customer-managed services.
+- C) They simplify patching and updating underlying OSs.
+- D) They do not require the customer to optimize instance type or size selections.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 238)</strong></summary>
+
+**Correct Answer:** `C`
+
+AWS managed services like Amazon ElastiCache and Amazon RDS handle patching and updating the underlying operating systems and database engines, freeing customers from these time-consuming maintenance tasks.
+Requiring the customer to monitor and replace failing instances describes the opposite of a managed service benefit, as AWS managed services handle failure detection and recovery automatically, removing that burden from customers. Having better performance than customer-managed services is not guaranteed as a universal benefit, since performance depends on instance type, configuration, and workload rather than simply on whether a service is managed. Not requiring the customer to optimize instance type or size selections is incorrect, as customers are still responsible for choosing the appropriate instance type and size to match their workload requirements even when using managed services.
+
+</details>
+
+---
+
+### Question 239 — `CLF-U0212` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 3.4: Database & In-Memory Caching Services*
+
+**Which of the following is a fast and reliable NoSQL database service?**
+
+- A) Amazon Redshift.
+- B) Amazon RDS.
+- C) Amazon DynamoDB.
+- D) Amazon S3.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 239)</strong></summary>
+
+**Correct Answer:** `C`
+
+Amazon DynamoDB is a fully managed NoSQL database that delivers single-digit millisecond performance at any scale, with built-in security, backup, and in-memory caching.
+Amazon Redshift is a managed data warehouse service optimized for running analytical SQL queries across large datasets, and is a relational columnar store rather than a NoSQL database service. Amazon RDS is a fully managed relational database service supporting engines such as MySQL, PostgreSQL, and SQL Server, and uses structured schemas and SQL rather than the flexible schema-less data models that NoSQL databases provide. Amazon S3 is an object storage service for storing and retrieving files and unstructured data, and while it can store large volumes of data it is not a database service and does not support the query patterns or data models of a NoSQL database.
+
+</details>
+
+---
+
+### Question 240 — `CLF-U0620` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 3.4: Database & In-Memory Caching Services*
+
+**A company is migrating production workloads to AWS, and they are concerned about cost management across different departments. Which option should the company implement to categorize and track AWS spending?**
+
+- A) Use the AWS Pricing Calculator service to monitor the costs incurred by each department.
+- B) Use Amazon Aurora to forecast AWS spending based on usage.
+- C) Apply cost allocation tags to segment AWS costs by different e projects and departments.
+- D) Configure AWS Price List API to receive billing updates for each department automatically.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 240)</strong></summary>
+
+**Correct Answer:** `C`
+
+Cost allocation tags are key-value metadata that you apply to AWS resources, enabling you to segment and categorize costs by project, department, or environment in Cost Explorer and billing reports.
+The AWS Pricing Calculator is used to estimate future costs for new AWS service configurations before deploying them, and does not monitor or categorize actual spending incurred by active workloads. Amazon Aurora is a fully managed relational database service compatible with MySQL and PostgreSQL, and is a database engine with no capability to forecast AWS spending or categorize costs by department. The AWS Price List API provides programmatic access to AWS service pricing data for building custom pricing tools, and delivers pricing information rather than automatically updating billing categories based on department usage.
+
+</details>
+
+---
+
+### Question 241 — `CLF-U0812` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 3.4: Database & In-Memory Caching Services*
+
+**What is the AWS’ recommendation regarding access keys?**
+
+- A) Delete all access keys and use passwords instead.
+- B) Only share them with trusted people.
+- C) Rotate them regularly.
+- D) Save them within your application code.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 241)</strong></summary>
+
+**Correct Answer:** `C`
+
+AWS recommends rotating access keys regularly to limit the window of exposure if a key is ever compromised, as shorter-lived credentials reduce the risk of unauthorised access going undetected.
+Deleting all access keys and using passwords instead is not a valid approach, as passwords are used for console access while access keys are required for programmatic access through the CLI and API, and both have legitimate roles in a well-managed AWS account. Sharing access keys only with trusted people still violates the principle of least privilege, as access keys should be scoped to individual IAM users or roles rather than shared between people. Saving access keys within application code is a significant security risk as code repositories can be exposed publicly or internally, and AWS recommends using IAM roles for applications running on AWS resources instead of embedding credentials in code.
+
+</details>
+
+---
+
+### Question 242 — `CLF-U0844` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 3.4: Database & In-Memory Caching Services*
+
+**Who is responsible for scaling a DynamoDB database in the AWS Shared Responsibility Model?**
+
+- A) Your security team.
+- B) Your development team.
+- C) AWS.
+- D) Your internal DevOps team.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 242)</strong></summary>
+
+**Correct Answer:** `C`
+
+Amazon DynamoDB is a fully managed NoSQL database service where AWS handles all scaling automatically, including read and write capacity adjustments, so customers do not need to manage or plan for database scaling themselves.
+The customer's security team focuses on security policies, access controls, and compliance rather than the operational scaling of a managed database service, and DynamoDB's autoscaling is handled by AWS infrastructure rather than any customer team. The development team builds and maintains application code, and while they configure DynamoDB table settings during development, the actual scaling of a fully managed service is performed automatically by AWS rather than manually by developers. The internal DevOps team manages infrastructure, deployments, and operational workflows, but the scaling of a fully managed service like DynamoDB is handled automatically by AWS and does not require DevOps intervention.
+
+</details>
+
+---
+
+### Question 243 — `CLF-U2514` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 3.4: Database & In-Memory Caching Services*
+
+**Which AWS services are supported by Savings Plans? (Choose two.)**
+
+- A) Amazon EC2
+- B) Amazon RDS
+- C) Amazon SageMaker
+- D) Amazon Redshift
+- E) Amazon DynamoDB
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 243)</strong></summary>
+
+**Correct Answer:** `AC`
+
+**Correct Answer: AC (Amazon EC2, Amazon SageMaker)**
+
+This question (# 177) is directly sourced from authentic **Community Consensus Pool** community discussions.
+**Why this is correct:** The scenario specifically tests AWS best practices. 'Amazon EC2, Amazon SageMaker' directly satisfies the architectural requirement defined in the prompt.
+
+**Key Option Breakdown:**
+- **Option A (Amazon EC2)** [CORRECT]: Satisfies the prompt requirements directly.
+- **Option B (Amazon RDS)** [INCORRECT]: Does not meet the scenario requirements or introduces suboptimal design for this specific workload.
+- **Option C (Amazon SageMaker)** [CORRECT]: Satisfies the prompt requirements directly.
+- **Option D (Amazon Redshift)** [INCORRECT]: Does not meet the scenario requirements or introduces suboptimal design for this specific workload.
+- **Option E (Amazon DynamoDB)** [INCORRECT]: Does not meet the scenario requirements or introduces suboptimal design for this specific workload.
+
+</details>
+
+---
+
+### Question 244 — `CLF-U0014` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 3.5: Networking & Content Delivery (VPC, Route 53, CloudFront)*
 
 **Which of the following can be described as a global content delivery network (CDN) service?**
@@ -4771,7 +6902,7 @@ Amazon Aurora is a fully managed relational database compatible with MySQL and P
 - D) Amazon CloudFront.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 160)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 244)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -4782,7 +6913,7 @@ AWS VPN creates encrypted network connections between on-premises infrastructure
 
 ---
 
-### Question 161 — `CLF-U0069` | 🔁 Repeated in 3 Exam Sources
+### Question 245 — `CLF-U0069` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 3.5: Networking & Content Delivery (VPC, Route 53, CloudFront)*
 
 **What is the connectivity option that uses Internet Protocol Security (IPSec) to establish encrypted connectivity between an on-premises network and the AWS Cloud?**
@@ -4793,7 +6924,7 @@ AWS VPN creates encrypted network connections between on-premises infrastructure
 - D) AWS Site-to-Site VPN.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 161)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 245)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -4804,7 +6935,7 @@ Internet Gateway connects a VPC to the public internet for inbound and outbound 
 
 ---
 
-### Question 162 — `CLF-U0137` | 🔁 Repeated in 3 Exam Sources
+### Question 246 — `CLF-U0137` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 3.5: Networking & Content Delivery (VPC, Route 53, CloudFront)*
 
 **Which of the below options is true of Amazon VPC?**
@@ -4815,7 +6946,7 @@ Internet Gateway connects a VPC to the public internet for inbound and outbound 
 - D) Amazon VPC helps customers to review their AWS architecture and adopt best practices.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 162)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 246)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -4826,7 +6957,7 @@ Controlling user interactions with AWS resources is the function of AWS IAM, whi
 
 ---
 
-### Question 163 — `CLF-U0144` | 🔁 Repeated in 3 Exam Sources
+### Question 247 — `CLF-U0144` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 3.5: Networking & Content Delivery (VPC, Route 53, CloudFront)*
 
 **A media company has an application that requires the transfer of large data sets to and from AWS every day. This data is business critical and should be transferred over a consistent connection. Which AWS service should the company use?**
@@ -4837,7 +6968,7 @@ Controlling user interactions with AWS resources is the function of AWS IAM, whi
 - D) AWS VPN.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 163)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 247)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -4848,7 +6979,7 @@ Amazon Comprehend is a natural language processing service for extracting insigh
 
 ---
 
-### Question 164 — `CLF-U0148` | 🔁 Repeated in 3 Exam Sources
+### Question 248 — `CLF-U0148` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 3.5: Networking & Content Delivery (VPC, Route 53, CloudFront)*
 
 **Which of the below options are use cases of the Amazon Route 53 service? (Choose TWO)**
@@ -4860,7 +6991,7 @@ Amazon Comprehend is a natural language processing service for extracting insigh
 - E) Provides infrastructure security optimization recommendations.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 164)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 248)</strong></summary>
 
 **Correct Answer:** `C, D`
 
@@ -4871,7 +7002,7 @@ Point-to-point connectivity between an on-premises data center and AWS describes
 
 ---
 
-### Question 165 — `CLF-U0220` | 🔁 Repeated in 3 Exam Sources
+### Question 249 — `CLF-U0220` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 3.5: Networking & Content Delivery (VPC, Route 53, CloudFront)*
 
 **Which of the following is an AWS managed Domain Name System (DNS) web service?**
@@ -4882,7 +7013,7 @@ Point-to-point connectivity between an on-premises data center and AWS describes
 - D) Amazon Lightsail.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 165)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 249)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -4893,7 +7024,7 @@ Amazon Neptune is a fully managed graph database service for applications that w
 
 ---
 
-### Question 166 — `CLF-U0809` | 🔁 Repeated in 3 Exam Sources
+### Question 250 — `CLF-U0809` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 3.5: Networking & Content Delivery (VPC, Route 53, CloudFront)*
 
 **Which of the following is used to control network traffic in AWS? (Choose TWO)**
@@ -4905,7 +7036,7 @@ Amazon Neptune is a fully managed graph database service for applications that w
 - E) Security Groups.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 166)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 250)</strong></summary>
 
 **Correct Answer:** `A, E`
 
@@ -4916,7 +7047,7 @@ Key pairs are RSA public/private key combinations used to authenticate SSH conne
 
 ---
 
-### Question 167 — `CLF-U0849` | 🔁 Repeated in 3 Exam Sources
+### Question 251 — `CLF-U0849` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 3.5: Networking & Content Delivery (VPC, Route 53, CloudFront)*
 
 **You have been tasked with auditing the security of your VPC. As part of this process, you need to start by analyzing what inbound and outbound traffic is allowed on your EC2 instances. What two parts of the VPC do you need to check to accomplish this task?**
@@ -4927,7 +7058,7 @@ Key pairs are RSA public/private key combinations used to authenticate SSH conne
 - D) Security Groups and Network ACLs.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 167)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 251)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -4938,7 +7069,29 @@ Network ACLs and Traffic Manager is not a valid combination for VPC traffic anal
 
 ---
 
-### Question 168 — `CLF-U0092` | 🔁 Repeated in 3 Exam Sources
+### Question 252 — `CLF-U0021` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 3.6: Management, Monitoring & Application Integration*
+
+**What is the AWS service that enables AWS architects to manage infrastructure as code?**
+
+- A) AWS CloudFormation.
+- B) AWS Config.
+- C) Amazon SES.
+- D) Amazon EMR.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 252)</strong></summary>
+
+**Correct Answer:** `A`
+
+AWS CloudFormation lets you define your entire AWS infrastructure as code using JSON or YAML templates, enabling repeatable and automated provisioning of resources without manual configuration.
+AWS Config continuously monitors and records the configuration state of AWS resources and evaluates them against desired settings, but it does not provision or manage infrastructure. Amazon SES is a cloud-based email sending and receiving service, entirely unrelated to infrastructure management. Amazon EMR is a managed big data processing service for running frameworks such as Apache Spark and Hadoop, unrelated to infrastructure as code.
+
+</details>
+
+---
+
+### Question 253 — `CLF-U0092` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 3.6: Management, Monitoring & Application Integration*
 
 **Which of the following activities supports the Operational Excellence pillar of the AWS Well-Architected Framework?**
@@ -4949,7 +7102,7 @@ Network ACLs and Traffic Manager is not a valid combination for VPC traffic anal
 - D) Deploying an application in multiple Availability Zones.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 168)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 253)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -4969,7 +7122,7 @@ AWS CloudFormation allows you to define and provision AWS infrastructure as code
 
 ---
 
-### Question 169 — `CLF-U0128` | 🔁 Repeated in 3 Exam Sources
+### Question 254 — `CLF-U0128` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 3.6: Management, Monitoring & Application Integration*
 
 **What are some key benefits of using AWS CloudFormation? (Choose TWO)**
@@ -4981,7 +7134,7 @@ AWS CloudFormation allows you to define and provision AWS infrastructure as code
 - E) It compiles and builds application code in a timely manner.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 169)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 254)</strong></summary>
 
 **Correct Answer:** `C, D`
 
@@ -4992,7 +7145,7 @@ Deploying applications without worrying about underlying infrastructure describe
 
 ---
 
-### Question 170 — `CLF-U0181` | 🔁 Repeated in 3 Exam Sources
+### Question 255 — `CLF-U0181` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 3.6: Management, Monitoring & Application Integration*
 
 **You are working as a site reliability engineer (SRE) in an AWS environment, which of the following services helps monitor your applications?**
@@ -5003,7 +7156,7 @@ Deploying applications without worrying about underlying infrastructure describe
 - D) Amazon CloudHSM.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 170)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 255)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -5014,7 +7167,7 @@ Amazon CloudSearch is a managed search service for building search functionality
 
 ---
 
-### Question 171 — `CLF-U0210` | 🔁 Repeated in 3 Exam Sources
+### Question 256 — `CLF-U0210` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 3.6: Management, Monitoring & Application Integration*
 
 **Which services can be used across hybrid AWS Cloud architectures? (Select TWO)**
@@ -5026,7 +7179,7 @@ Amazon CloudSearch is a managed search service for building search functionality
 - E) Amazon CloudWatch default metrics.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 171)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 256)</strong></summary>
 
 **Correct Answer:** `A, B`
 
@@ -5037,7 +7190,52 @@ Classic Load Balancer distributes traffic across EC2 instances within AWS and op
 
 ---
 
-### Question 172 — `CLF-U0371` | 🔁 Repeated in 3 Exam Sources
+### Question 257 — `CLF-U0215` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 3.6: Management, Monitoring & Application Integration*
+
+**Which of the following are features of Amazon CloudWatch Logs? (Select TWO)**
+
+- A) Summaries by Amazon Simple Notification Service (Amazon SNS).
+- B) Free Amazon Elasticsearch Service analytics.
+- C) Provided at no charge.
+- D) Real-time monitoring.
+- E) Adjustable retention.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 257)</strong></summary>
+
+**Correct Answer:** `D, E`
+
+Amazon CloudWatch Logs supports real-time monitoring of log data and configurable retention periods, allowing you to control exactly how long log data is kept before it is automatically deleted.
+Amazon SNS is a notification and messaging service that can be triggered by CloudWatch alarms, but summarizing log data is not a native feature of CloudWatch Logs. Amazon CloudWatch Logs is not free, as charges apply based on the volume of data ingested, stored, and analyzed. Amazon OpenSearch Service is a separate analytics service that can be integrated with CloudWatch Logs as a destination, but free OpenSearch analytics is not a native feature of CloudWatch Logs.
+
+</details>
+
+---
+
+### Question 258 — `CLF-U0223` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 3.6: Management, Monitoring & Application Integration*
+
+**Which AWS service can be used to query stored datasets directly from Amazon S3 using standard SQL?**
+
+- A) AWS Glue.
+- B) AWS Data Pipeline.
+- C) Amazon CloudSearch.
+- D) Amazon Athena.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 258)</strong></summary>
+
+**Correct Answer:** `D`
+
+Amazon Athena lets you run standard SQL queries directly against data stored in S3 without loading it into a database first, making it the purpose-built service for querying datasets directly from S3.
+AWS Glue is a serverless ETL service for discovering, preparing, and transforming data for analytics pipelines, not for running ad hoc SQL queries directly against S3. Amazon EMR provides managed clusters for processing large datasets using frameworks like Spark and Hadoop, but requires provisioning infrastructure rather than querying S3 directly with standard SQL. Amazon CloudSearch is a managed search service for adding full-text search functionality to applications and has no capability for SQL-based data querying.
+
+</details>
+
+---
+
+### Question 259 — `CLF-U0371` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 3.6: Management, Monitoring & Application Integration*
 
 **A company is building an application that requires the ability to send, store, and receive messages between application components. The company has another requirement to process messages in first-in, first-out (FIFO) order. Which AWS service should the company use?**
@@ -5048,7 +7246,7 @@ Classic Load Balancer distributes traffic across EC2 instances within AWS and op
 - D) Amazon Simple Queue Service (Amazon SQS)
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 172)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 259)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -5059,7 +7257,7 @@ AWS Step Functions is a workflow orchestration service that coordinates distribu
 
 ---
 
-### Question 173 — `CLF-U0612` | 🔁 Repeated in 3 Exam Sources
+### Question 260 — `CLF-U0612` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 3.6: Management, Monitoring & Application Integration*
 
 **You have migrated your application to AWS recently. How can you view the AWS costs applied to your account?**
@@ -5070,7 +7268,7 @@ AWS Step Functions is a workflow orchestration service that coordinates distribu
 - D) Using the Amazon VPC dashboard.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 173)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 260)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -5081,7 +7279,29 @@ AWS Cost Explorer provides interactive visualisations and analysis of AWS spendi
 
 ---
 
-### Question 174 — `CLF-U0675` | 🔁 Repeated in 3 Exam Sources
+### Question 261 — `CLF-U0624` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 3.6: Management, Monitoring & Application Integration*
+
+**Which of the following makes it easier for you to categorize, manage and filter your resources?**
+
+- A) Amazon CloudWatch.
+- B) AWS Service Catalog.
+- C) AWS Directory Service.
+- D) AWS Tagging.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 261)</strong></summary>
+
+**Correct Answer:** `D`
+
+AWS tags are key-value metadata pairs attached to resources, making it easy to categorize, filter, search, and manage resources by project, environment, owner, or any other custom criteria.
+Amazon CloudWatch is a monitoring and observability service for collecting metrics, logs, and alarms on AWS resources, not a resource categorization or filtering tool. AWS Service Catalog allows organizations to create and manage approved catalogs of IT services for internal deployment, not for tagging or filtering existing resources. AWS Directory Service provides managed Microsoft Active Directory for user authentication and access management, unrelated to resource categorization or metadata management.
+
+</details>
+
+---
+
+### Question 262 — `CLF-U0675` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 3.6: Management, Monitoring & Application Integration*
 
 **How should a customer forecast the future costs for running a new web application?**
@@ -5092,7 +7312,7 @@ AWS Cost Explorer provides interactive visualisations and analysis of AWS spendi
 - D) AWS Cost and Usage report.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 174)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 262)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -5103,7 +7323,7 @@ Amazon Aurora Backtrack is a feature that allows an Aurora database to be rewoun
 
 ---
 
-### Question 175 — `CLF-U0850` | 🔁 Repeated in 3 Exam Sources
+### Question 263 — `CLF-U0850` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 3.6: Management, Monitoring & Application Integration*
 
 **Which AWS service provides the EASIEST way to set up and manage a secure, well-architected, multi-account AWS environment?**
@@ -5114,7 +7334,7 @@ Amazon Aurora Backtrack is a feature that allows an Aurora database to be rewoun
 - D) AWS Security Hub.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 175)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 263)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -5125,7 +7345,7 @@ Amazon Macie is a data security service that uses machine learning to discover a
 
 ---
 
-### Question 176 — `CLF-U0915` | 🔁 Repeated in 3 Exam Sources
+### Question 264 — `CLF-U0915` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 3.6: Management, Monitoring & Application Integration*
 
 **Treating infrastructure as code in the AWS Cloud allows users to:**
@@ -5136,7 +7356,7 @@ Amazon Macie is a data security service that uses machine learning to discover a
 - D) automate the infrastructure provisioning process.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 176)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 264)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -5147,9 +7367,9 @@ Automating migration of on-premises hardware to AWS data centers is not possible
 
 ---
 
-## 🎯 Domain 4: Billing, Pricing, and Support (12% — 24 Questions)
+## 🎯 Domain 4: Billing, Pricing, and Support (12% — 36 Questions)
 
-### Question 177 — `CLF-U0050` | 🔁 Repeated in 4 Exam Sources
+### Question 265 — `CLF-U0050` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 4.1: Pricing Models & Purchasing Options*
 
 **Which of the following describes the payment model that AWS makes available for customers that can commit to using Amazon EC2 over a one or 3-year term to reduce their total computing costs?**
@@ -5160,7 +7380,7 @@ Automating migration of on-premises hardware to AWS data centers is not possible
 - D) Save when you reserve.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 177)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 265)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -5180,7 +7400,7 @@ The "Save when you commit" payment model accurately describes AWS's approach to 
 
 ---
 
-### Question 178 — `CLF-U0558` | 🔁 Repeated in 4 Exam Sources
+### Question 266 — `CLF-U0558` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 4.1: Pricing Models & Purchasing Options*
 
 **You have set up consolidated billing for several AWS accounts. One of the accounts has purchased a number of reserved instances for 3 years. Which of the following is true regarding this scenario?**
@@ -5191,7 +7411,7 @@ The "Save when you commit" payment model accurately describes AWS's approach to 
 - D) There are no cost benefits from using consolidated billing; It is for informational purposes only.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 178)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 266)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -5211,7 +7431,7 @@ With consolidated billing in AWS Organizations, the cost benefits of Reserved In
 
 ---
 
-### Question 179 — `CLF-U0561` | 🔁 Repeated in 4 Exam Sources
+### Question 267 — `CLF-U0561` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 4.1: Pricing Models & Purchasing Options*
 
 **What do you gain from setting up consolidated billing for five different AWS accounts under another master account?**
@@ -5222,7 +7442,7 @@ With consolidated billing in AWS Organizations, the cost benefits of Reserved In
 - D) Each AWS account gets five times the free-tier services capacity.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 179)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 267)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -5242,7 +7462,7 @@ Consolidated billing in AWS allows you to combine billing and payment for multip
 
 ---
 
-### Question 180 — `CLF-U0026` | 🔁 Repeated in 4 Exam Sources
+### Question 268 — `CLF-U0026` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 4.2: Cost Management, Governance & Budgets*
 
 **A company is concerned that they are spending money on underutilized compute resources in AWS. Which AWS feature will help ensure that their applications are automatically adding/removing EC2 compute capacity to closely match the required demand?**
@@ -5253,7 +7473,7 @@ Consolidated billing in AWS allows you to combine billing and payment for multip
 - D) AWS Cost Explorer.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 180)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 268)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -5273,7 +7493,7 @@ AWS Auto Scaling automatically adjusts the number of EC2 instances in your appli
 
 ---
 
-### Question 181 — `CLF-U0076` | 🔁 Repeated in 4 Exam Sources
+### Question 269 — `CLF-U0076` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 4.2: Cost Management, Governance & Budgets*
 
 **Data security is one of the top priorities of AWS. How does AWS deal with old storage devices that have reached the end of their useful life?**
@@ -5284,7 +7504,7 @@ AWS Auto Scaling automatically adjusts the number of EC2 instances in your appli
 - D) AWS stores the old devices in a secure place.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 181)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 269)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -5304,7 +7524,7 @@ AWS prioritizes data security, including the secure disposal of storage devices 
 
 ---
 
-### Question 182 — `CLF-U0126` | 🔁 Repeated in 4 Exam Sources
+### Question 270 — `CLF-U0126` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 4.2: Cost Management, Governance & Budgets*
 
 **There is a requirement to grant a DevOps team full administrative access to all resources in an AWS account. Who can grant them these permissions?**
@@ -5315,7 +7535,7 @@ AWS prioritizes data security, including the secure disposal of storage devices 
 - D) AWS cloud support engineers.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 182)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 270)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -5335,7 +7555,7 @@ The AWS account owner has ultimate control over the AWS account and is the only 
 
 ---
 
-### Question 183 — `CLF-U0564` | 🔁 Repeated in 4 Exam Sources
+### Question 271 — `CLF-U0564` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 4.2: Cost Management, Governance & Budgets*
 
 **How can you view the distribution of AWS spending in one of your AWS accounts?**
@@ -5346,7 +7566,7 @@ The AWS account owner has ultimate control over the AWS account and is the only 
 - D) By contacting the AWS Finance team.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 183)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 271)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -5366,7 +7586,7 @@ AWS Cost Explorer is a service that enables you to visualize, understand, and ma
 
 ---
 
-### Question 184 — `CLF-U0583` | 🔁 Repeated in 4 Exam Sources
+### Question 272 — `CLF-U0583` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 4.2: Cost Management, Governance & Budgets*
 
 **Which AWS service provides cost-optimization recommendations?**
@@ -5377,7 +7597,7 @@ AWS Cost Explorer is a service that enables you to visualize, understand, and ma
 - D) AWS X-Ray.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 184)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 272)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -5397,7 +7617,7 @@ AWS Trusted Advisor is an online tool that provides real-time guidance to help y
 
 ---
 
-### Question 185 — `CLF-U0586` | 🔁 Repeated in 4 Exam Sources
+### Question 273 — `CLF-U0586` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 4.2: Cost Management, Governance & Budgets*
 
 **A company is trying to analyze the costs applied to their AWS account recently. Which of the following provides them the most granular data about their AWS costs and usage?**
@@ -5408,7 +7628,7 @@ AWS Trusted Advisor is an online tool that provides real-time guidance to help y
 - D) Amazon CloudWatch.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 185)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 273)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -5428,7 +7648,7 @@ The AWS Cost & Usage Report (CUR) provides the most granular data about your AWS
 
 ---
 
-### Question 186 — `CLF-U0592` | 🔁 Repeated in 4 Exam Sources
+### Question 274 — `CLF-U0592` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 4.2: Cost Management, Governance & Budgets*
 
 **What is the AWS tool that can help a company visualize their AWS spending in the last few months?**
@@ -5439,7 +7659,7 @@ The AWS Cost & Usage Report (CUR) provides the most granular data about your AWS
 - D) AWS Consolidated Billing.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 186)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 274)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -5459,7 +7679,7 @@ AWS Cost Explorer is a tool that enables you to visualize your AWS spending patt
 
 ---
 
-### Question 187 — `CLF-U0559` | 🔁 Repeated in 4 Exam Sources
+### Question 275 — `CLF-U0559` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 4.3: AWS Support Plans & Trusted Advisor*
 
 **A company has an AWS Enterprise Support plan. They want quick and efficient guidance with their billing and account inquiries. Which of the following should the company use?**
@@ -5470,7 +7690,7 @@ AWS Cost Explorer is a tool that enables you to visualize your AWS spending patt
 - D) AWS Operations Support.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 187)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 275)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -5490,7 +7710,7 @@ The AWS Support Concierge is a billing and account support team that provides qu
 
 ---
 
-### Question 188 — `CLF-U0563` | 🔁 Repeated in 4 Exam Sources
+### Question 276 — `CLF-U0563` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 4.3: AWS Support Plans & Trusted Advisor*
 
 **As part of the Enterprise support plan, who is the primary point of contact for ongoing support needs?**
@@ -5501,7 +7721,7 @@ The AWS Support Concierge is a billing and account support team that provides qu
 - D) Technical Account Manager (TAM).
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 188)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 276)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -5521,7 +7741,7 @@ The Technical Account Manager (TAM) is the primary point of contact for customer
 
 ---
 
-### Question 189 — `CLF-U0566` | 🔁 Repeated in 4 Exam Sources
+### Question 277 — `CLF-U0566` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 4.3: AWS Support Plans & Trusted Advisor*
 
 **What does the AWS Health Dashboard provide? (Choose TWO)**
@@ -5533,7 +7753,7 @@ The Technical Account Manager (TAM) is the primary point of contact for customer
 - E) Personalized view of AWS service health.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 189)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 277)</strong></summary>
 
 **Correct Answer:** `A, E`
 
@@ -5557,7 +7777,7 @@ The AWS Health Dashboard offers a personalized view of the health of AWS service
 
 ---
 
-### Question 190 — `CLF-U0573` | 🔁 Repeated in 4 Exam Sources
+### Question 278 — `CLF-U0573` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 4.3: AWS Support Plans & Trusted Advisor*
 
 **A company is introducing a new product to their customers, and is expecting a surge in traffic to their web application. As part of their Enterprise Support plan, which of the following provides the company with architectural and scaling guidance?**
@@ -5568,7 +7788,7 @@ The AWS Health Dashboard offers a personalized view of the health of AWS service
 - D) AWS Support Concierge Service.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 190)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 278)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -5588,7 +7808,7 @@ Infrastructure Event Management, offered as part of the AWS Enterprise Support p
 
 ---
 
-### Question 191 — `CLF-U0584` | 🔁 Repeated in 4 Exam Sources
+### Question 279 — `CLF-U0584` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 4.3: AWS Support Plans & Trusted Advisor*
 
 **Which support plan includes AWS Support Concierge Service?**
@@ -5599,7 +7819,7 @@ Infrastructure Event Management, offered as part of the AWS Enterprise Support p
 - D) Standard Support.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 191)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 279)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -5619,7 +7839,7 @@ The Enterprise Support plan is the only AWS Support plan that includes the AWS S
 
 ---
 
-### Question 192 — `CLF-U0596` | 🔁 Repeated in 4 Exam Sources
+### Question 280 — `CLF-U0596` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 4.3: AWS Support Plans & Trusted Advisor*
 
 **What is the AWS Support feature that allows customers to manage support cases programmatically?**
@@ -5630,7 +7850,7 @@ The Enterprise Support plan is the only AWS Support plan that includes the AWS S
 - D) AWS Health Dashboard (formerly AWS AWS Health Dashboard (Your Account Health)).
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 192)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 280)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -5650,7 +7870,7 @@ The AWS Support API provides programmatic access to AWS Support features. This a
 
 ---
 
-### Question 193 — `CLF-U0604` | 🔁 Repeated in 4 Exam Sources
+### Question 281 — `CLF-U0604` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 4.3: AWS Support Plans & Trusted Advisor*
 
 **Which features are included in the AWS Business Support Plan? (Choose TWO)**
@@ -5662,7 +7882,7 @@ The AWS Support API provides programmatic access to AWS Support features. This a
 - E) Partial access to the core Trusted Advisor checks.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 193)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 281)</strong></summary>
 
 **Correct Answer:** `A, C`
 
@@ -5686,7 +7906,29 @@ The AWS Business Support plan provides 24x7 access to customer service. This mea
 
 ---
 
-### Question 194 — `CLF-U0574` | 🔁 Repeated in 3 Exam Sources
+### Question 282 — `CLF-U0101` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 4.1: Pricing Models & Purchasing Options*
+
+**Which AWS Service offers volume discounts based on usage?**
+
+- A) Amazon VPC.
+- B) Amazon S3.
+- C) Amazon Lightsail.
+- D) AWS Cost Explorer.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 282)</strong></summary>
+
+**Correct Answer:** `B`
+
+Amazon S3 uses a tiered pricing model where the per-GB storage cost decreases as your total usage increases, automatically providing volume discounts to customers who store more data.
+Amazon VPC is a networking service that lets you provision isolated virtual networks within AWS, and while VPC itself is free the resources deployed within it such as NAT Gateways are charged individually without volume-based discounts. Amazon Lightsail is a simplified compute service with straightforward bundled pricing for virtual servers and web applications, and uses fixed pricing tiers rather than volume discounts based on usage. AWS Cost Explorer provides visualisation and analysis of AWS spending patterns over time, and is a cost management tool rather than an AWS service that applies volume-based pricing discounts.
+
+</details>
+
+---
+
+### Question 283 — `CLF-U0574` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 4.1: Pricing Models & Purchasing Options*
 
 **Which of the below is a best-practice when designing solutions on AWS?**
@@ -5697,7 +7939,7 @@ The AWS Business Support plan provides 24x7 access to customer service. This mea
 - D) Provision a large compute capacity to handle any spikes in load
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 194)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 283)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -5708,7 +7950,7 @@ Investing heavily in upfront architectural design contradicts the cloud principl
 
 ---
 
-### Question 195 — `CLF-U0598` | 🔁 Repeated in 3 Exam Sources
+### Question 284 — `CLF-U0598` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 4.1: Pricing Models & Purchasing Options*
 
 **A user has opened a "Production System Down" support case to get help from AWS Support after a production system disruption. What is the expected response time for this type of support case?**
@@ -5719,7 +7961,7 @@ Investing heavily in upfront architectural design contradicts the cloud principl
 - D) One hour.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 195)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 284)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -5730,7 +7972,53 @@ A 12-hour response time corresponds to the general guidance response target for 
 
 ---
 
-### Question 196 — `CLF-U0652` | 🔁 Repeated in 3 Exam Sources
+### Question 285 — `CLF-U0623` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 4.1: Pricing Models & Purchasing Options*
+
+**Which statement is true regarding AWS pricing? (Choose TWO)**
+
+- A) With the AWS pay-as-you-go pricing model, you don't have to pay any upfront fee.
+- B) You have no responsibility for third-party software license costs.
+- C) You only pay for the individual services that you need with no long-term contracts.
+- D) For some services, you have to pay a startup fee in order to get the service running.
+- E) There are no reservations on AWS, you only pay for what you use.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 285)</strong></summary>
+
+**Correct Answer:** `A, C`
+
+AWS pay-as-you-go pricing requires no upfront fees or long-term contracts. You pay only for the individual services you use with no minimum commitments.
+Customers do retain responsibility for third-party software license costs when running applications on AWS, unless they use AWS-provided licenses through services such as Amazon RDS. AWS does not take on software licensing obligations on the customer's behalf. For some services AWS does offer a startup fee, and Reserved Instances require upfront payment. However, the pay-as-you-go model for On-Demand services requires no startup fee. AWS does offer reservations such as Reserved Instances and Savings Plans that provide discounts in exchange for usage commitments, so the claim that there are no reservations on AWS is incorrect.
+
+</details>
+
+---
+
+### Question 286 — `CLF-U0638` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 4.1: Pricing Models & Purchasing Options*
+
+**Which of the following BEST describe the AWS pricing model? (Select TWO)**
+
+- A) Fixed-term.
+- B) Pay-as-you-go.
+- C) Colocation.
+- D) Planned.
+- E) Variable cost.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 286)</strong></summary>
+
+**Correct Answer:** `B, E`
+
+AWS pricing is pay-as-you-go and variable cost. There are no fixed terms required, no colocation fees, and no mandatory upfront plans.
+Fixed-term pricing requires a commitment to a set contract duration, which is the opposite of the AWS pay-as-you-go model where usage can scale up or down at any time without contractual obligations. Colocation refers to housing customer-owned servers in a third-party data center, which is an on-premises model rather than a cloud pricing principle. Planned pricing implies predetermined usage schedules and costs, which contradicts the AWS model where customers pay based on actual consumption without mandatory advance planning.
+
+</details>
+
+---
+
+### Question 287 — `CLF-U0652` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 4.1: Pricing Models & Purchasing Options*
 
 **Which of the following are advantages of AWS consolidated billing? (Select TWO)**
@@ -5742,7 +8030,7 @@ A 12-hour response time corresponds to the general guidance response target for 
 - E) The automatic extension of the master account’s AWS support plan to all accounts.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 196)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 287)</strong></summary>
 
 **Correct Answer:** `A, D`
 
@@ -5753,7 +8041,209 @@ Service limits do not automatically increase for all accounts under consolidated
 
 ---
 
-### Question 197 — `CLF-U0577` | 🔁 Repeated in 3 Exam Sources
+### Question 288 — `CLF-U1485` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 4.1: Pricing Models & Purchasing Options*
+
+**Which of the following is an architectural design principle of the AWS Well-Architected Framework?**
+
+- A) Loosely couple components
+- B) Build monolithic systems
+- C) Scale vertically, not horizontally
+- D) Use third-party software
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 288)</strong></summary>
+
+**Correct Answer:** `A`
+
+- **Option A** ✅ (CORRECT): Option A directly satisfies the requirement based on AWS architectural best practices and official documentation.
+- **Option B** ❌ (INCORRECT): Option B does not meet the specified criteria or refers to a different AWS service capability.
+- **Option C** ❌ (INCORRECT): Option C does not meet the specified criteria or refers to a different AWS service capability.
+- **Option D** ❌ (INCORRECT): Option D does not meet the specified criteria or refers to a different AWS service capability.
+
+</details>
+
+---
+
+### Question 289 — `CLF-U0170` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 4.2: Cost Management, Governance & Budgets*
+
+**Which of the following security resources are available to any user for free? (Choose TWO)**
+
+- A) AWS Bulletins.
+- B) AWS TAM.
+- C) AWS Support APl.
+- D) AWS Security Blog.
+- E) AWS Classroom Training.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 289)</strong></summary>
+
+**Correct Answer:** `A, D`
+
+AWS documentation provides comprehensive technical guides and API references for all AWS services at no cost and is freely accessible to any user, and AWS discussion forums allow any user to post questions and share knowledge about AWS services at no charge. Both are free security resources.
+AWS Support Center provides technical case support that requires a paid support plan to submit cases, and while some basic content is available for free, the case submission feature for getting direct engineering assistance is not a free resource available to all users without a qualifying support plan. AWS Managed Services provides ongoing management of AWS infrastructure on behalf of enterprise customers for a fee, and is a paid service rather than a free security resource available to any user. Amazon Inspector is an automated vulnerability assessment service that requires configuration and generates findings, and while there is a free trial period, it is a paid service rather than a free resource available to all users without any cost.
+
+</details>
+
+---
+
+### Question 290 — `CLF-U0609` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 4.2: Cost Management, Governance & Budgets*
+
+**What best describes penetration testing?**
+
+- A) Testing your application’s response time from different locations.
+- B) Testing your network to find security vulnerabilities that an attacker could exploit.
+- C) Testing your instances to check for the unhealthy ones.
+- D) Testing your software for bugs and errors.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 290)</strong></summary>
+
+**Correct Answer:** `B`
+
+Penetration testing is the practice of simulating cyberattacks against your own systems to discover exploitable security vulnerabilities before malicious attackers can find and use them, allowing you to remediate weaknesses proactively.
+Testing application response time from different locations describes performance and latency testing, which evaluates how quickly an application responds to requests from various geographic locations rather than identifying security vulnerabilities that attackers could exploit. Testing instances to check for unhealthy ones describes health checking or monitoring, which verifies that compute instances are operational and responsive rather than assessing the security posture of the network for exploitable weaknesses. Testing software for bugs and errors describes functional or quality assurance testing, which validates that code behaves as expected rather than specifically probing for security vulnerabilities that an attacker could use to gain unauthorised access.
+
+</details>
+
+---
+
+### Question 291 — `CLF-U0615` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 4.2: Cost Management, Governance & Budgets*
+
+**Which AWS Cost Governance best practice recommends refining workloads regularly to make the most of existing AWS resources and reduce costs?**
+
+- A) Tagging Enforcement.
+- B) Architecture Optimization.
+- C) Budgeting Processes.
+- D) Resource Controls.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 291)</strong></summary>
+
+**Correct Answer:** `B`
+
+Architecture Optimization involves regularly reviewing and refining workloads to ensure they use the most efficient AWS resource types, sizes, and configurations, directly reducing costs while maintaining performance.
+Tagging Enforcement is a cost governance practice that requires resources to be labeled with specific tags before they can be created or used, which improves cost visibility and attribution but is a compliance and visibility mechanism rather than a practice focused on refining workloads to better utilize existing resources. Budgeting Processes involve setting cost and usage thresholds and tracking actual spending against those budgets, which helps manage financial expectations but does not itself involve reviewing and optimizing underlying resource configurations. Resource Controls restrict which resources users can provision or how they can be configured, and while they prevent unnecessary resource creation they are a governance guardrail rather than a practice of regularly reviewing existing workloads.
+
+</details>
+
+---
+
+### Question 292 — `CLF-U0673` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 4.2: Cost Management, Governance & Budgets*
+
+**Which of the following security-related services does AWS offer? (Select TWO)**
+
+- A) Multi-factor authentication physical tokens.
+- B) AWS Trusted Advisor security checks.
+- C) Data encryption.
+- D) Automated penetration testing.
+- E) Amazon S3 copyrighted content detection.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 292)</strong></summary>
+
+**Correct Answer:** `B, C`
+
+AWS Trusted Advisor includes security checks that flag vulnerabilities such as open security groups, and AWS provides data encryption capabilities through services like KMS and native encryption across storage and database services. Both are genuine AWS security-related offerings.
+Multi-factor authentication physical tokens are hardware MFA devices that customers purchase independently rather than a service provided by AWS; customers configure them with their accounts but AWS does not supply or manufacture the hardware tokens. Automated penetration testing is not an AWS service offering; AWS permits customers to conduct their own penetration testing on permitted services, but AWS does not perform automated penetration testing on customer workloads as a service. Amazon S3 copyrighted content detection is not an AWS service; Amazon Macie detects sensitive data categories such as PII in S3, but copyright detection is not within the scope of available AWS security services.
+
+</details>
+
+---
+
+### Question 293 — `CLF-U0616` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 4.3: AWS Support Plans & Trusted Advisor*
+
+**Which of the following AWS support plans provides access to only the seven core AWS Trusted Advisor checks?**
+
+- A) Business & Enterprise Support.
+- B) Basic & Developer Support.
+- C) Developer & Enterprise Support.
+- D) Developer & Business Support.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 293)</strong></summary>
+
+**Correct Answer:** `B`
+
+Basic and Developer Support plans provide access to only the seven core Trusted Advisor checks. The full set of Trusted Advisor checks requires a Business or Enterprise Support plan.
+Business and Enterprise Support plans both provide access to the full suite of Trusted Advisor checks rather than only the seven core checks, so this option describes the plans with the most Trusted Advisor access rather than those limited to seven checks. Developer and Enterprise Support is an incorrect pairing because Developer Support is limited to the seven core checks while Enterprise Support has access to the full suite, meaning they are at opposite ends of the Trusted Advisor access spectrum. Developer and Business Support is an incorrect pairing because Business Support provides the full suite of Trusted Advisor checks while Developer Support is limited to the seven core checks, so only Developer Support belongs in this limited-access category.
+
+</details>
+
+---
+
+### Question 294 — `CLF-U0653` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 4.3: AWS Support Plans & Trusted Advisor*
+
+**Which is the MINIMUM AWS Support plan that allows for one-hour target response time for support cases?**
+
+- A) Enterprise.
+- B) Business.
+- C) Developer
+- D) Basic
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 294)</strong></summary>
+
+**Correct Answer:** `B`
+
+AWS Business Support guarantees a one-hour response time for production system-down cases and provides 24/7 phone, email, and chat access. Developer Support offers business-hours email only; Basic has no case support; Enterprise offers faster response but at higher cost.
+Enterprise Support provides faster response times including a 15-minute SLA for business-critical system failures, and also meets the one-hour production system-down SLA, but it is a higher-cost plan than Business Support and therefore not the minimum required. Developer Support provides business-hours email access to Cloud Support Engineers with response times measured in hours rather than one hour, and does not include 24/7 access or a one-hour production system-down SLA. Basic Support provides access to documentation and the seven core Trusted Advisor checks but includes no technical case support and no defined response time SLAs.
+
+</details>
+
+---
+
+### Question 295 — `CLF-U0654` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 4.3: AWS Support Plans & Trusted Advisor*
+
+**What AWS team assists customers with accelerating cloud adoption through paid engagements in any of several specialty practice areas?**
+
+- A) AWS Enterprise Support.
+- B) AWS Solutions Architects.
+- C) AWS Professional Services.
+- D) AWS Account Managers.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 295)</strong></summary>
+
+**Correct Answer:** `C`
+
+AWS Professional Services is a global team of experts that helps customers achieve their desired business outcomes on AWS through paid engagements across specialty practice areas including migration, security, and data analytics.
+AWS Enterprise Support is a paid support plan that provides access to a Technical Account Manager and 24/7 access to senior cloud support engineers, but it is a support tier rather than a consulting engagement team that works on specialty practice projects. AWS Solutions Architects advise customers on designing well-architected solutions and are available through various AWS programs, but they provide architectural guidance rather than leading paid consulting engagements across specialty practice areas. AWS Account Managers manage the overall commercial relationship between AWS and a customer, but they handle account and sales activities rather than delivering hands-on technical consulting engagements.
+
+</details>
+
+---
+
+### Question 296 — `CLF-U0968` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 4.3: AWS Support Plans & Trusted Advisor*
+
+**An external auditor has requested that a company provide a list of all its IAM users, including the status of users' credentials and access keys. What it the SIMPLEST way to provide this information?**
+
+- A) Create an IAM user account for the auditor, granting the auditor administrator permissions.
+- B) Take a screenshot of each user's page in the AWS Management Console, then provide the screenshots to the auditor.
+- C) Download the IAM credential report, then provide the report to the auditor.
+- D) Download the AWS Trusted Advisor report, then provide the report to the auditor.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 296)</strong></summary>
+
+**Correct Answer:** `C`
+
+The IAM credential report is a downloadable CSV file that lists all IAM users in the account along with the status of their credentials including passwords, access keys, MFA devices, and last-used timestamps, providing exactly what is needed for a user access audit.
+AWS Config continuously monitors and records resource configuration changes and evaluates them against compliance rules, and is a resource configuration compliance tool rather than an IAM user listing service. Amazon CloudWatch monitors operational metrics and logs for AWS resources and applications, and is an observability service rather than a source of IAM user account information or credential status reports. AWS CloudTrail records all API calls and management events including IAM-related actions, and while it logs who created users and when, it does not provide a current consolidated list of all users and their credential status in the way the credential report does.
+
+</details>
+
+---
+
+### Question 297 — `CLF-U0577` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 4.4: AWS Marketplace & Partner Ecosystem*
 
 **A company has created a solution that helps AWS customers improve their architectures on AWS. Which AWS program may support this company?**
@@ -5764,7 +8254,7 @@ Service limits do not automatically increase for all accounts under consolidated
 - D) AWS Professional Services.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 197)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 297)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -5775,7 +8265,7 @@ AWS TAM is a Technical Account Manager, which is a direct AWS resource assigned 
 
 ---
 
-### Question 198 — `CLF-U0618` | 🔁 Repeated in 3 Exam Sources
+### Question 298 — `CLF-U0618` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 4.4: AWS Marketplace & Partner Ecosystem*
 
 **What AWS service allows you to buy third-party software solutions and services that run on AWS resources?**
@@ -5786,7 +8276,7 @@ AWS TAM is a Technical Account Manager, which is a direct AWS resource assigned 
 - D) Resource Groups.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 198)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 298)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -5797,7 +8287,7 @@ AWS Application Discovery Service collects information about on-premises servers
 
 ---
 
-### Question 199 — `CLF-U0626` | 🔁 Repeated in 3 Exam Sources
+### Question 299 — `CLF-U0626` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 4.4: AWS Marketplace & Partner Ecosystem*
 
 **What are the benefits of the AWS Marketplace service? (Choose TWO)**
@@ -5809,7 +8299,7 @@ AWS Application Discovery Service collects information about on-premises servers
 - E) Provides software solutions that run on AWS or any other Cloud vendor.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 199)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 299)</strong></summary>
 
 **Correct Answer:** `D, E`
 
@@ -5820,7 +8310,7 @@ AWS Marketplace does not perform periodic security checks on listed products. Re
 
 ---
 
-### Question 200 — `CLF-U0650` | 🔁 Repeated in 3 Exam Sources
+### Question 300 — `CLF-U0650` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 4.4: AWS Marketplace & Partner Ecosystem*
 
 **A customer would like to design and build a new workload on AWS Cloud but does not have the AWS-related software technical expertise in-house. Which of the following AWS programs can a customer take advantage of to achieve that outcome?**
@@ -5831,7 +8321,7 @@ AWS Marketplace does not perform periodic security checks on listed products. Re
 - D) AWS Service Catalog.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 200)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 300)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -5842,107 +8332,158 @@ AWS Partner Network Technology Partners develop software, tools, and services th
 
 ---
 
-## ✅ Quick-Revision Master Answer Key (Q1–Q200)
+
+## ✅ Quick-Revision Master Answer Key (Q1–Q300)
 
 | Q# | ID | Domain | Freq | Answer | Q# | ID | Domain | Freq | Answer |
 | :---: | :--- | :---: | :---: | :---: | :---: | :--- | :---: | :---: | :---: |
-| **1** | `CLF-U0495` | D1 | 5x | **`D`** | **101** | `CLF-U0839` | D2 | 3x | **`A, E`** |
-| **2** | `CLF-U0390` | D1 | 4x | **`C`** | **102** | `CLF-U0848` | D2 | 3x | **`B`** |
-| **3** | `CLF-U0400` | D1 | 4x | **`B`** | **103** | `CLF-U0862` | D2 | 3x | **`A`** |
-| **4** | `CLF-U0401` | D1 | 4x | **`C, E`** | **104** | `CLF-U0966` | D2 | 3x | **`B`** |
-| **5** | `CLF-U0579` | D1 | 4x | **`D`** | **105** | `CLF-U1397` | D2 | 3x | **`AC`** |
-| **6** | `CLF-U0597` | D1 | 4x | **`C`** | **106** | `CLF-U0199` | D2 | 3x | **`C`** |
-| **7** | `CLF-U0588` | D1 | 4x | **`C`** | **107** | `CLF-U0837` | D2 | 3x | **`A`** |
-| **8** | `CLF-U0035` | D1 | 4x | **`D, E`** | **108** | `CLF-U0856` | D2 | 3x | **`B, C`** |
-| **9** | `CLF-U0392` | D1 | 4x | **`C`** | **109** | `CLF-U0242` | D3 | 5x | **`B`** |
-| **10** | `CLF-U0448` | D1 | 4x | **`B, C`** | **110** | `CLF-U0001` | D3 | 4x | **`D`** |
-| **11** | `CLF-U0019` | D1 | 4x | **`D`** | **111** | `CLF-U0002` | D3 | 4x | **`D`** |
-| **12** | `CLF-U0043` | D1 | 4x | **`B`** | **112** | `CLF-U0020` | D3 | 4x | **`B`** |
-| **13** | `CLF-U0044` | D1 | 4x | **`A`** | **113** | `CLF-U0042` | D3 | 4x | **`A`** |
-| **14** | `CLF-U0045` | D1 | 4x | **`B, E`** | **114** | `CLF-U0051` | D3 | 4x | **`A`** |
-| **15** | `CLF-U0055` | D1 | 4x | **`B, D`** | **115** | `CLF-U0062` | D3 | 4x | **`D`** |
-| **16** | `CLF-U0060` | D1 | 4x | **`D`** | **116** | `CLF-U0066` | D3 | 4x | **`A`** |
-| **17** | `CLF-U0398` | D1 | 4x | **`D`** | **117** | `CLF-U0068` | D3 | 4x | **`A, C`** |
-| **18** | `CLF-U0402` | D1 | 4x | **`A, B`** | **118** | `CLF-U0091` | D3 | 4x | **`D`** |
-| **19** | `CLF-U0403` | D1 | 4x | **`C`** | **119** | `CLF-U0385` | D3 | 4x | **`B`** |
-| **20** | `CLF-U0405` | D1 | 4x | **`D`** | **120** | `CLF-U0397` | D3 | 4x | **`B`** |
-| **21** | `CLF-U0410` | D1 | 4x | **`C`** | **121** | `CLF-U0408` | D3 | 4x | **`D`** |
-| **22** | `CLF-U0414` | D1 | 4x | **`C, E`** | **122** | `CLF-U0418` | D3 | 4x | **`B`** |
-| **23** | `CLF-U0417` | D1 | 4x | **`A`** | **123** | `CLF-U0799` | D3 | 4x | **`C, E`** |
-| **24** | `CLF-U0817` | D1 | 4x | **`C, E`** | **124** | `CLF-U0810` | D3 | 4x | **`C`** |
-| **25** | `CLF-U0825` | D1 | 4x | **`B, C`** | **125** | `CLF-U0007` | D3 | 4x | **`B, C`** |
-| **26** | `CLF-U0415` | D1 | 4x | **`C`** | **126** | `CLF-U0012` | D3 | 4x | **`D`** |
-| **27** | `CLF-U0004` | D1 | 3x | **`A, E`** | **127** | `CLF-U0023` | D3 | 4x | **`B, D`** |
-| **28** | `CLF-U0179` | D1 | 3x | **`C`** | **128** | `CLF-U0033` | D3 | 4x | **`C`** |
-| **29** | `CLF-U0386` | D1 | 3x | **`D`** | **129** | `CLF-U0048` | D3 | 4x | **`A, C`** |
-| **30** | `CLF-U0444` | D1 | 3x | **`C, D`** | **130** | `CLF-U0049` | D3 | 4x | **`A`** |
-| **31** | `CLF-U0466` | D1 | 3x | **`A`** | **131** | `CLF-U0052` | D3 | 4x | **`B`** |
-| **32** | `CLF-U0471` | D1 | 3x | **`C`** | **132** | `CLF-U0054` | D3 | 4x | **`C, E`** |
-| **33** | `CLF-U0633` | D1 | 3x | **`A, C`** | **133** | `CLF-U0077` | D3 | 4x | **`A, B`** |
-| **34** | `CLF-U0802` | D1 | 3x | **`D`** | **134** | `CLF-U0084` | D3 | 4x | **`C`** |
-| **35** | `CLF-U1445` | D1 | 3x | **`D`** | **135** | `CLF-U0106` | D3 | 4x | **`B`** |
-| **36** | `CLF-U1465` | D1 | 3x | **`B`** | **136** | `CLF-U0111` | D3 | 4x | **`C`** |
-| **37** | `CLF-U0207` | D1 | 3x | **`B`** | **137** | `CLF-U0570` | D3 | 4x | **`A`** |
-| **38** | `CLF-U0439` | D1 | 3x | **`C`** | **138** | `CLF-U0006` | D3 | 4x | **`B`** |
-| **39** | `CLF-U0445` | D1 | 3x | **`D`** | **139** | `CLF-U0016` | D3 | 4x | **`B`** |
-| **40** | `CLF-U0449` | D1 | 3x | **`C, E`** | **140** | `CLF-U0027` | D3 | 4x | **`A`** |
-| **41** | `CLF-U0459` | D1 | 3x | **`A`** | **141** | `CLF-U0028` | D3 | 4x | **`A`** |
-| **42** | `CLF-U0470` | D1 | 3x | **`B`** | **142** | `CLF-U0034` | D3 | 4x | **`A`** |
-| **43** | `CLF-U1305` | D1 | 3x | **`B`** | **143** | `CLF-U0039` | D3 | 4x | **`C`** |
-| **44** | `CLF-U1309` | D1 | 3x | **`C`** | **144** | `CLF-U0046` | D3 | 4x | **`A, C`** |
-| **45** | `CLF-U2529` | D1 | 3x | **`B`** | **145** | `CLF-U0047` | D3 | 4x | **`C`** |
-| **46** | `CLF-U0249` | D1 | 3x | **`D`** | **146** | `CLF-U0065` | D3 | 4x | **`A`** |
-| **47** | `CLF-U0477` | D1 | 3x | **`B`** | **147** | `CLF-U0087` | D3 | 4x | **`C, D`** |
-| **48** | `CLF-U0478` | D1 | 3x | **`C, D`** | **148** | `CLF-U0093` | D3 | 4x | **`A, D`** |
-| **49** | `CLF-U0013` | D2 | 4x | **`D`** | **149** | `CLF-U0804` | D3 | 4x | **`A`** |
-| **50** | `CLF-U0063` | D2 | 4x | **`D`** | **150** | `CLF-U0030` | D3 | 4x | **`A`** |
-| **51** | `CLF-U0078` | D2 | 4x | **`B, C`** | **151** | `CLF-U0098` | D3 | 4x | **`A, C`** |
-| **52** | `CLF-U0080` | D2 | 4x | **`C`** | **152** | `CLF-U0353` | D3 | 4x | **`B`** |
-| **53** | `CLF-U0104` | D2 | 4x | **`B`** | **153** | `CLF-U0038` | D3 | 4x | **`A`** |
-| **54** | `CLF-U0391` | D2 | 4x | **`B, C`** | **154** | `CLF-U0086` | D3 | 4x | **`C`** |
-| **55** | `CLF-U0394` | D2 | 4x | **`B, C`** | **155** | `CLF-U0095` | D3 | 4x | **`C`** |
-| **56** | `CLF-U0412` | D2 | 4x | **`A, D`** | **156** | `CLF-U0244` | D3 | 4x | **`D`** |
-| **57** | `CLF-U0576` | D2 | 4x | **`B`** | **157** | `CLF-U0141` | D3 | 3x | **`C, D`** |
-| **58** | `CLF-U0788` | D2 | 4x | **`A`** | **158** | `CLF-U0879` | D3 | 3x | **`A, C`** |
-| **59** | `CLF-U0794` | D2 | 4x | **`D, E`** | **159** | `CLF-U0024` | D3 | 3x | **`C`** |
-| **60** | `CLF-U0800` | D2 | 4x | **`D, E`** | **160** | `CLF-U0014` | D3 | 3x | **`D`** |
-| **61** | `CLF-U0806` | D2 | 4x | **`D, E`** | **161** | `CLF-U0069` | D3 | 3x | **`D`** |
-| **62** | `CLF-U0040` | D2 | 4x | **`C`** | **162** | `CLF-U0137` | D3 | 3x | **`B`** |
-| **63** | `CLF-U0072` | D2 | 4x | **`A, D`** | **163** | `CLF-U0144` | D3 | 3x | **`A`** |
-| **64** | `CLF-U0115` | D2 | 4x | **`B, C`** | **164** | `CLF-U0148` | D3 | 3x | **`C, D`** |
-| **65** | `CLF-U0575` | D2 | 4x | **`C`** | **165** | `CLF-U0220` | D3 | 3x | **`A`** |
-| **66** | `CLF-U0591` | D2 | 4x | **`B`** | **166** | `CLF-U0809` | D3 | 3x | **`A, E`** |
-| **67** | `CLF-U0789` | D2 | 4x | **`C`** | **167** | `CLF-U0849` | D3 | 3x | **`D`** |
-| **68** | `CLF-U0797` | D2 | 4x | **`C`** | **168** | `CLF-U0092` | D3 | 3x | **`C`** |
-| **69** | `CLF-U0798` | D2 | 4x | **`D`** | **169** | `CLF-U0128` | D3 | 3x | **`C, D`** |
-| **70** | `CLF-U0803` | D2 | 4x | **`C`** | **170** | `CLF-U0181` | D3 | 3x | **`A`** |
-| **71** | `CLF-U0808` | D2 | 4x | **`B`** | **171** | `CLF-U0210` | D3 | 3x | **`A, B`** |
-| **72** | `CLF-U0821` | D2 | 4x | **`C, D`** | **172** | `CLF-U0371` | D3 | 3x | **`D`** |
-| **73** | `CLF-U0824` | D2 | 4x | **`C`** | **173** | `CLF-U0612` | D3 | 3x | **`A`** |
-| **74** | `CLF-U0831` | D2 | 4x | **`C`** | **174** | `CLF-U0675` | D3 | 3x | **`C`** |
-| **75** | `CLF-U0053` | D2 | 4x | **`B`** | **175** | `CLF-U0850` | D3 | 3x | **`A`** |
-| **76** | `CLF-U0058` | D2 | 4x | **`C`** | **176** | `CLF-U0915` | D3 | 3x | **`D`** |
-| **77** | `CLF-U0816` | D2 | 4x | **`A, E`** | **177** | `CLF-U0050` | D4 | 4x | **`D`** |
-| **78** | `CLF-U0867` | D2 | 4x | **`B`** | **178** | `CLF-U0558` | D4 | 4x | **`B`** |
-| **79** | `CLF-U0884` | D2 | 4x | **`B`** | **179** | `CLF-U0561` | D4 | 4x | **`C`** |
-| **80** | `CLF-U0890` | D2 | 4x | **`D`** | **180** | `CLF-U0026` | D4 | 4x | **`C`** |
-| **81** | `CLF-U0071` | D2 | 4x | **`B`** | **181** | `CLF-U0076` | D4 | 4x | **`B`** |
-| **82** | `CLF-U0822` | D2 | 4x | **`B`** | **182** | `CLF-U0126` | D4 | 4x | **`A`** |
-| **83** | `CLF-U0022` | D2 | 4x | **`C`** | **183** | `CLF-U0564` | D4 | 4x | **`C`** |
-| **84** | `CLF-U0067` | D2 | 4x | **`D`** | **184** | `CLF-U0583` | D4 | 4x | **`A`** |
-| **85** | `CLF-U0203` | D2 | 4x | **`A`** | **185** | `CLF-U0586` | D4 | 4x | **`C`** |
-| **86** | `CLF-U0585` | D2 | 4x | **`C`** | **186** | `CLF-U0592` | D4 | 4x | **`A`** |
-| **87** | `CLF-U0590` | D2 | 4x | **`A, C`** | **187** | `CLF-U0559` | D4 | 4x | **`B`** |
-| **88** | `CLF-U0801` | D2 | 4x | **`A, E`** | **188** | `CLF-U0563` | D4 | 4x | **`D`** |
-| **89** | `CLF-U0811` | D2 | 4x | **`C`** | **189** | `CLF-U0566` | D4 | 4x | **`A, E`** |
-| **90** | `CLF-U0814` | D2 | 4x | **`D`** | **190** | `CLF-U0573` | D4 | 4x | **`C`** |
-| **91** | `CLF-U0962` | D2 | 4x | **`D`** | **191** | `CLF-U0584` | D4 | 4x | **`C`** |
-| **92** | `CLF-U0188` | D2 | 3x | **`D`** | **192** | `CLF-U0596` | D4 | 4x | **`C`** |
-| **93** | `CLF-U0194` | D2 | 3x | **`D`** | **193** | `CLF-U0604` | D4 | 4x | **`A, C`** |
-| **94** | `CLF-U0572` | D2 | 3x | **`A, B`** | **194** | `CLF-U0574` | D4 | 3x | **`C`** |
-| **95** | `CLF-U0611` | D2 | 3x | **`A`** | **195** | `CLF-U0598` | D4 | 3x | **`D`** |
-| **96** | `CLF-U0630` | D2 | 3x | **`A`** | **196** | `CLF-U0652` | D4 | 3x | **`A, D`** |
-| **97** | `CLF-U0852` | D2 | 3x | **`B`** | **197** | `CLF-U0577` | D4 | 3x | **`A`** |
-| **98** | `CLF-U0876` | D2 | 3x | **`A`** | **198** | `CLF-U0618` | D4 | 3x | **`C`** |
-| **99** | `CLF-U0667` | D2 | 3x | **`B, D`** | **199** | `CLF-U0626` | D4 | 3x | **`D, E`** |
-| **100** | `CLF-U0830` | D2 | 3x | **`B`** | **200** | `CLF-U0650` | D4 | 3x | **`C`** |
+| **1** | `CLF-U0495` | D1 | 5x | **`D`** | **151** | `CLF-U1397` | D2 | 3x | **`AC`** |
+| **2** | `CLF-U0390` | D1 | 4x | **`C`** | **152** | `CLF-U0199` | D2 | 3x | **`C`** |
+| **3** | `CLF-U0400` | D1 | 4x | **`B`** | **153** | `CLF-U0233` | D2 | 3x | **`A`** |
+| **4** | `CLF-U0401` | D1 | 4x | **`C, E`** | **154** | `CLF-U0819` | D2 | 3x | **`B`** |
+| **5** | `CLF-U0579` | D1 | 4x | **`D`** | **155** | `CLF-U0836` | D2 | 3x | **`A, D`** |
+| **6** | `CLF-U0597` | D1 | 4x | **`C`** | **156** | `CLF-U0837` | D2 | 3x | **`A`** |
+| **7** | `CLF-U0588` | D1 | 4x | **`C`** | **157** | `CLF-U0856` | D2 | 3x | **`B, C`** |
+| **8** | `CLF-U0035` | D1 | 4x | **`D, E`** | **158** | `CLF-U0861` | D2 | 3x | **`B`** |
+| **9** | `CLF-U0392` | D1 | 4x | **`C`** | **159** | `CLF-U0864` | D2 | 3x | **`A`** |
+| **10** | `CLF-U0448` | D1 | 4x | **`B, C`** | **160** | `CLF-U0888` | D2 | 3x | **`C`** |
+| **11** | `CLF-U0011` | D1 | 4x | **`A`** | **161** | `CLF-U0964` | D2 | 3x | **`A`** |
+| **12** | `CLF-U0019` | D1 | 4x | **`D`** | **162** | `CLF-U1469` | D2 | 3x | **`D`** |
+| **13** | `CLF-U0036` | D1 | 4x | **`A`** | **163** | `CLF-U0242` | D3 | 5x | **`B`** |
+| **14** | `CLF-U0043` | D1 | 4x | **`B`** | **164** | `CLF-U0001` | D3 | 4x | **`D`** |
+| **15** | `CLF-U0044` | D1 | 4x | **`A`** | **165** | `CLF-U0002` | D3 | 4x | **`D`** |
+| **16** | `CLF-U0045` | D1 | 4x | **`B, E`** | **166** | `CLF-U0020` | D3 | 4x | **`B`** |
+| **17** | `CLF-U0055` | D1 | 4x | **`B, D`** | **167** | `CLF-U0042` | D3 | 4x | **`A`** |
+| **18** | `CLF-U0059` | D1 | 4x | **`D, E`** | **168** | `CLF-U0051` | D3 | 4x | **`A`** |
+| **19** | `CLF-U0060` | D1 | 4x | **`D`** | **169** | `CLF-U0062` | D3 | 4x | **`D`** |
+| **20** | `CLF-U0083` | D1 | 4x | **`A, D`** | **170** | `CLF-U0066` | D3 | 4x | **`A`** |
+| **21** | `CLF-U0393` | D1 | 4x | **`C`** | **171** | `CLF-U0068` | D3 | 4x | **`A, C`** |
+| **22** | `CLF-U0398` | D1 | 4x | **`D`** | **172** | `CLF-U0091` | D3 | 4x | **`D`** |
+| **23** | `CLF-U0402` | D1 | 4x | **`A, B`** | **173** | `CLF-U0385` | D3 | 4x | **`B`** |
+| **24** | `CLF-U0403` | D1 | 4x | **`C`** | **174** | `CLF-U0397` | D3 | 4x | **`B`** |
+| **25** | `CLF-U0405` | D1 | 4x | **`D`** | **175** | `CLF-U0408` | D3 | 4x | **`D`** |
+| **26** | `CLF-U0406` | D1 | 4x | **`D`** | **176** | `CLF-U0418` | D3 | 4x | **`B`** |
+| **27** | `CLF-U0410` | D1 | 4x | **`C`** | **177** | `CLF-U0799` | D3 | 4x | **`C, E`** |
+| **28** | `CLF-U0414` | D1 | 4x | **`C, E`** | **178** | `CLF-U0810` | D3 | 4x | **`C`** |
+| **29** | `CLF-U0417` | D1 | 4x | **`A`** | **179** | `CLF-U0007` | D3 | 4x | **`B, C`** |
+| **30** | `CLF-U0420` | D1 | 4x | **`D`** | **180** | `CLF-U0012` | D3 | 4x | **`D`** |
+| **31** | `CLF-U0796` | D1 | 4x | **`B, E`** | **181** | `CLF-U0023` | D3 | 4x | **`B, D`** |
+| **32** | `CLF-U0817` | D1 | 4x | **`C, E`** | **182** | `CLF-U0033` | D3 | 4x | **`C`** |
+| **33** | `CLF-U0825` | D1 | 4x | **`B, C`** | **183** | `CLF-U0041` | D3 | 4x | **`D`** |
+| **34** | `CLF-U0828` | D1 | 4x | **`A`** | **184** | `CLF-U0048` | D3 | 4x | **`A, C`** |
+| **35** | `CLF-U0415` | D1 | 4x | **`C`** | **185** | `CLF-U0049` | D3 | 4x | **`A`** |
+| **36** | `CLF-U0004` | D1 | 3x | **`A, E`** | **186** | `CLF-U0052` | D3 | 4x | **`B`** |
+| **37** | `CLF-U0179` | D1 | 3x | **`C`** | **187** | `CLF-U0054` | D3 | 4x | **`C, E`** |
+| **38** | `CLF-U0383` | D1 | 3x | **`C`** | **188** | `CLF-U0077` | D3 | 4x | **`A, B`** |
+| **39** | `CLF-U0384` | D1 | 3x | **`A, E`** | **189** | `CLF-U0084` | D3 | 4x | **`C`** |
+| **40** | `CLF-U0386` | D1 | 3x | **`D`** | **190** | `CLF-U0106` | D3 | 4x | **`B`** |
+| **41** | `CLF-U0421` | D1 | 3x | **`D, E`** | **191** | `CLF-U0111` | D3 | 4x | **`C`** |
+| **42** | `CLF-U0424` | D1 | 3x | **`C`** | **192** | `CLF-U0570` | D3 | 4x | **`A`** |
+| **43** | `CLF-U0425` | D1 | 3x | **`D`** | **193** | `CLF-U0006` | D3 | 4x | **`B`** |
+| **44** | `CLF-U0442` | D1 | 3x | **`B`** | **194** | `CLF-U0016` | D3 | 4x | **`B`** |
+| **45** | `CLF-U0444` | D1 | 3x | **`C, D`** | **195** | `CLF-U0027` | D3 | 4x | **`A`** |
+| **46** | `CLF-U0450` | D1 | 3x | **`D`** | **196** | `CLF-U0028` | D3 | 4x | **`A`** |
+| **47** | `CLF-U0451` | D1 | 3x | **`C`** | **197** | `CLF-U0034` | D3 | 4x | **`A`** |
+| **48** | `CLF-U0464` | D1 | 3x | **`C`** | **198** | `CLF-U0039` | D3 | 4x | **`C`** |
+| **49** | `CLF-U0466` | D1 | 3x | **`A`** | **199** | `CLF-U0046` | D3 | 4x | **`A, C`** |
+| **50** | `CLF-U0471` | D1 | 3x | **`C`** | **200** | `CLF-U0047` | D3 | 4x | **`C`** |
+| **51** | `CLF-U0480` | D1 | 3x | **`B`** | **201** | `CLF-U0065` | D3 | 4x | **`A`** |
+| **52** | `CLF-U0481` | D1 | 3x | **`C`** | **202** | `CLF-U0087` | D3 | 4x | **`C, D`** |
+| **53** | `CLF-U0485` | D1 | 3x | **`D`** | **203** | `CLF-U0093` | D3 | 4x | **`A, D`** |
+| **54** | `CLF-U0599` | D1 | 3x | **`A, B`** | **204** | `CLF-U0804` | D3 | 4x | **`A`** |
+| **55** | `CLF-U0633` | D1 | 3x | **`A, C`** | **205** | `CLF-U0030` | D3 | 4x | **`A`** |
+| **56** | `CLF-U0802` | D1 | 3x | **`D`** | **206** | `CLF-U0098` | D3 | 4x | **`A, C`** |
+| **57** | `CLF-U1445` | D1 | 3x | **`D`** | **207** | `CLF-U0353` | D3 | 4x | **`B`** |
+| **58** | `CLF-U1465` | D1 | 3x | **`B`** | **208** | `CLF-U0038` | D3 | 4x | **`A`** |
+| **59** | `CLF-U0207` | D1 | 3x | **`B`** | **209** | `CLF-U0086` | D3 | 4x | **`C`** |
+| **60** | `CLF-U0439` | D1 | 3x | **`C`** | **210** | `CLF-U0095` | D3 | 4x | **`C`** |
+| **61** | `CLF-U0445` | D1 | 3x | **`D`** | **211** | `CLF-U0244` | D3 | 4x | **`D`** |
+| **62** | `CLF-U0449` | D1 | 3x | **`C, E`** | **212** | `CLF-U0029` | D3 | 3x | **`C`** |
+| **63** | `CLF-U0459` | D1 | 3x | **`A`** | **213** | `CLF-U0161` | D3 | 3x | **`C`** |
+| **64** | `CLF-U0470` | D1 | 3x | **`B`** | **214** | `CLF-U0166` | D3 | 3x | **`A`** |
+| **65** | `CLF-U1305` | D1 | 3x | **`B`** | **215** | `CLF-U0186` | D3 | 3x | **`B`** |
+| **66** | `CLF-U1309` | D1 | 3x | **`C`** | **216** | `CLF-U0252` | D3 | 3x | **`A, C`** |
+| **67** | `CLF-U2529` | D1 | 3x | **`B`** | **217** | `CLF-U0262` | D3 | 3x | **`D`** |
+| **68** | `CLF-U0114` | D1 | 3x | **`A`** | **218** | `CLF-U0443` | D3 | 3x | **`C`** |
+| **69** | `CLF-U2481` | D1 | 3x | **`AC`** | **219** | `CLF-U0571` | D3 | 3x | **`A`** |
+| **70** | `CLF-U0249` | D1 | 3x | **`D`** | **220** | `CLF-U0807` | D3 | 3x | **`B, E`** |
+| **71** | `CLF-U0477` | D1 | 3x | **`B`** | **221** | `CLF-U1478` | D3 | 3x | **`C`** |
+| **72** | `CLF-U0478` | D1 | 3x | **`C, D`** | **222** | `CLF-U0141` | D3 | 3x | **`C, D`** |
+| **73** | `CLF-U0013` | D2 | 4x | **`D`** | **223** | `CLF-U0879` | D3 | 3x | **`A, C`** |
+| **74** | `CLF-U0032` | D2 | 4x | **`D, E`** | **224** | `CLF-U0082` | D3 | 3x | **`A`** |
+| **75** | `CLF-U0057` | D2 | 4x | **`A`** | **225** | `CLF-U0107` | D3 | 3x | **`A`** |
+| **76** | `CLF-U0063` | D2 | 4x | **`D`** | **226** | `CLF-U0108` | D3 | 3x | **`D`** |
+| **77** | `CLF-U0078` | D2 | 4x | **`B, C`** | **227** | `CLF-U0130` | D3 | 3x | **`D`** |
+| **78** | `CLF-U0080` | D2 | 4x | **`C`** | **228** | `CLF-U0146` | D3 | 3x | **`B`** |
+| **79** | `CLF-U0089` | D2 | 4x | **`A`** | **229** | `CLF-U0219` | D3 | 3x | **`B, E`** |
+| **80** | `CLF-U0104` | D2 | 4x | **`B`** | **230** | `CLF-U0247` | D3 | 3x | **`B, E`** |
+| **81** | `CLF-U0387` | D2 | 4x | **`D`** | **231** | `CLF-U0769` | D3 | 3x | **`C`** |
+| **82** | `CLF-U0391` | D2 | 4x | **`B, C`** | **232** | `CLF-U1459` | D3 | 3x | **`D`** |
+| **83** | `CLF-U0394` | D2 | 4x | **`B, C`** | **233** | `CLF-U0015` | D3 | 3x | **`B, C`** |
+| **84** | `CLF-U0396` | D2 | 4x | **`B`** | **234** | `CLF-U0024` | D3 | 3x | **`C`** |
+| **85** | `CLF-U0411` | D2 | 4x | **`D`** | **235** | `CLF-U0064` | D3 | 3x | **`B`** |
+| **86** | `CLF-U0412` | D2 | 4x | **`A, D`** | **236** | `CLF-U0085` | D3 | 3x | **`A`** |
+| **87** | `CLF-U0576` | D2 | 4x | **`B`** | **237** | `CLF-U0150` | D3 | 3x | **`D`** |
+| **88** | `CLF-U0788` | D2 | 4x | **`A`** | **238** | `CLF-U0209` | D3 | 3x | **`C`** |
+| **89** | `CLF-U0794` | D2 | 4x | **`D, E`** | **239** | `CLF-U0212` | D3 | 3x | **`C`** |
+| **90** | `CLF-U0800` | D2 | 4x | **`D, E`** | **240** | `CLF-U0620` | D3 | 3x | **`C`** |
+| **91** | `CLF-U0806` | D2 | 4x | **`D, E`** | **241** | `CLF-U0812` | D3 | 3x | **`C`** |
+| **92** | `CLF-U0826` | D2 | 4x | **`A, E`** | **242** | `CLF-U0844` | D3 | 3x | **`C`** |
+| **93** | `CLF-U1460` | D2 | 4x | **`C`** | **243** | `CLF-U2514` | D3 | 3x | **`AC`** |
+| **94** | `CLF-U0017` | D2 | 4x | **`A`** | **244** | `CLF-U0014` | D3 | 3x | **`D`** |
+| **95** | `CLF-U0040` | D2 | 4x | **`C`** | **245** | `CLF-U0069` | D3 | 3x | **`D`** |
+| **96** | `CLF-U0072` | D2 | 4x | **`A, D`** | **246** | `CLF-U0137` | D3 | 3x | **`B`** |
+| **97** | `CLF-U0115` | D2 | 4x | **`B, C`** | **247** | `CLF-U0144` | D3 | 3x | **`A`** |
+| **98** | `CLF-U0575` | D2 | 4x | **`C`** | **248** | `CLF-U0148` | D3 | 3x | **`C, D`** |
+| **99** | `CLF-U0591` | D2 | 4x | **`B`** | **249** | `CLF-U0220` | D3 | 3x | **`A`** |
+| **100** | `CLF-U0789` | D2 | 4x | **`C`** | **250** | `CLF-U0809` | D3 | 3x | **`A, E`** |
+| **101** | `CLF-U0797` | D2 | 4x | **`C`** | **251** | `CLF-U0849` | D3 | 3x | **`D`** |
+| **102** | `CLF-U0798` | D2 | 4x | **`D`** | **252** | `CLF-U0021` | D3 | 3x | **`A`** |
+| **103** | `CLF-U0803` | D2 | 4x | **`C`** | **253** | `CLF-U0092` | D3 | 3x | **`C`** |
+| **104** | `CLF-U0808` | D2 | 4x | **`B`** | **254** | `CLF-U0128` | D3 | 3x | **`C, D`** |
+| **105** | `CLF-U0821` | D2 | 4x | **`C, D`** | **255** | `CLF-U0181` | D3 | 3x | **`A`** |
+| **106** | `CLF-U0824` | D2 | 4x | **`C`** | **256** | `CLF-U0210` | D3 | 3x | **`A, B`** |
+| **107** | `CLF-U0831` | D2 | 4x | **`C`** | **257** | `CLF-U0215` | D3 | 3x | **`D, E`** |
+| **108** | `CLF-U0053` | D2 | 4x | **`B`** | **258** | `CLF-U0223` | D3 | 3x | **`D`** |
+| **109** | `CLF-U0058` | D2 | 4x | **`C`** | **259** | `CLF-U0371` | D3 | 3x | **`D`** |
+| **110** | `CLF-U0816` | D2 | 4x | **`A, E`** | **260** | `CLF-U0612` | D3 | 3x | **`A`** |
+| **111** | `CLF-U0867` | D2 | 4x | **`B`** | **261** | `CLF-U0624` | D3 | 3x | **`D`** |
+| **112** | `CLF-U0884` | D2 | 4x | **`B`** | **262** | `CLF-U0675` | D3 | 3x | **`C`** |
+| **113** | `CLF-U0890` | D2 | 4x | **`D`** | **263** | `CLF-U0850` | D3 | 3x | **`A`** |
+| **114** | `CLF-U0071` | D2 | 4x | **`B`** | **264** | `CLF-U0915` | D3 | 3x | **`D`** |
+| **115** | `CLF-U0822` | D2 | 4x | **`B`** | **265** | `CLF-U0050` | D4 | 4x | **`D`** |
+| **116** | `CLF-U0022` | D2 | 4x | **`C`** | **266** | `CLF-U0558` | D4 | 4x | **`B`** |
+| **117** | `CLF-U0067` | D2 | 4x | **`D`** | **267** | `CLF-U0561` | D4 | 4x | **`C`** |
+| **118** | `CLF-U0203` | D2 | 4x | **`A`** | **268** | `CLF-U0026` | D4 | 4x | **`C`** |
+| **119** | `CLF-U0585` | D2 | 4x | **`C`** | **269** | `CLF-U0076` | D4 | 4x | **`B`** |
+| **120** | `CLF-U0590` | D2 | 4x | **`A, C`** | **270** | `CLF-U0126` | D4 | 4x | **`A`** |
+| **121** | `CLF-U0801` | D2 | 4x | **`A, E`** | **271** | `CLF-U0564` | D4 | 4x | **`C`** |
+| **122** | `CLF-U0811` | D2 | 4x | **`C`** | **272** | `CLF-U0583` | D4 | 4x | **`A`** |
+| **123** | `CLF-U0814` | D2 | 4x | **`D`** | **273** | `CLF-U0586` | D4 | 4x | **`C`** |
+| **124** | `CLF-U0962` | D2 | 4x | **`D`** | **274** | `CLF-U0592` | D4 | 4x | **`A`** |
+| **125** | `CLF-U0151` | D2 | 3x | **`C, D`** | **275** | `CLF-U0559` | D4 | 4x | **`B`** |
+| **126** | `CLF-U0834` | D2 | 3x | **`A`** | **276** | `CLF-U0563` | D4 | 4x | **`D`** |
+| **127** | `CLF-U0835` | D2 | 3x | **`B`** | **277** | `CLF-U0566` | D4 | 4x | **`A, E`** |
+| **128** | `CLF-U0883` | D2 | 3x | **`B, D`** | **278** | `CLF-U0573` | D4 | 4x | **`C`** |
+| **129** | `CLF-U1394` | D2 | 3x | **`B`** | **279** | `CLF-U0584` | D4 | 4x | **`C`** |
+| **130** | `CLF-U2486` | D2 | 3x | **`CD`** | **280** | `CLF-U0596` | D4 | 4x | **`C`** |
+| **131** | `CLF-U0158` | D2 | 3x | **`B`** | **281** | `CLF-U0604` | D4 | 4x | **`A, C`** |
+| **132** | `CLF-U0165` | D2 | 3x | **`A`** | **282** | `CLF-U0101` | D4 | 3x | **`B`** |
+| **133** | `CLF-U0188` | D2 | 3x | **`D`** | **283** | `CLF-U0574` | D4 | 3x | **`C`** |
+| **134** | `CLF-U0194` | D2 | 3x | **`D`** | **284** | `CLF-U0598` | D4 | 3x | **`D`** |
+| **135** | `CLF-U0204` | D2 | 3x | **`B`** | **285** | `CLF-U0623` | D4 | 3x | **`A, C`** |
+| **136** | `CLF-U0572` | D2 | 3x | **`A, B`** | **286** | `CLF-U0638` | D4 | 3x | **`B, E`** |
+| **137** | `CLF-U0611` | D2 | 3x | **`A`** | **287** | `CLF-U0652` | D4 | 3x | **`A, D`** |
+| **138** | `CLF-U0630` | D2 | 3x | **`A`** | **288** | `CLF-U1485` | D4 | 3x | **`A`** |
+| **139** | `CLF-U0787` | D2 | 3x | **`B`** | **289** | `CLF-U0170` | D4 | 3x | **`A, D`** |
+| **140** | `CLF-U0842` | D2 | 3x | **`C`** | **290** | `CLF-U0609` | D4 | 3x | **`B`** |
+| **141** | `CLF-U0852` | D2 | 3x | **`B`** | **291** | `CLF-U0615` | D4 | 3x | **`B`** |
+| **142** | `CLF-U0854` | D2 | 3x | **`B`** | **292** | `CLF-U0673` | D4 | 3x | **`B, C`** |
+| **143** | `CLF-U0876` | D2 | 3x | **`A`** | **293** | `CLF-U0616` | D4 | 3x | **`B`** |
+| **144** | `CLF-U0953` | D2 | 3x | **`C`** | **294** | `CLF-U0653` | D4 | 3x | **`B`** |
+| **145** | `CLF-U0667` | D2 | 3x | **`B, D`** | **295** | `CLF-U0654` | D4 | 3x | **`C`** |
+| **146** | `CLF-U0830` | D2 | 3x | **`B`** | **296** | `CLF-U0968` | D4 | 3x | **`C`** |
+| **147** | `CLF-U0839` | D2 | 3x | **`A, E`** | **297** | `CLF-U0577` | D4 | 3x | **`A`** |
+| **148** | `CLF-U0848` | D2 | 3x | **`B`** | **298** | `CLF-U0618` | D4 | 3x | **`C`** |
+| **149** | `CLF-U0862` | D2 | 3x | **`A`** | **299** | `CLF-U0626` | D4 | 3x | **`D, E`** |
+| **150** | `CLF-U0966` | D2 | 3x | **`B`** | **300** | `CLF-U0650` | D4 | 3x | **`C`** |
