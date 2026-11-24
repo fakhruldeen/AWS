@@ -280,29 +280,6 @@
     "frequency": 4
   },
   {
-    "id": "CLF-U0036",
-    "prompt": "Which AWS Service can be used to establish a dedicated, private network connection between AWS and your datacenter?",
-    "choices": [
-      "A) AWS Direct Connect.",
-      "B) Amazon CloudFront.",
-      "C) AWS Snowball.",
-      "D) Amazon Route 53."
-    ],
-    "answer": "A",
-    "explanation": "**Correct answer: AWS Direct Connect**\n\nAWS Direct Connect enables you to establish a dedicated network connection from your premises to AWS. This connection is private, offering more consistent network performance and often lower network costs than using the public internet. It's ideal for workloads requiring high bandwidth, low latency, and secure data transfer between your on-premises infrastructure and AWS.\n\n**Incorrect:**\n\n**A. Amazon Route 53** - Amazon Route 53 is a highly available and scalable Domain Name System (DNS) web service. While it's crucial for directing internet traffic to your AWS resources, it doesn't establish a dedicated network connection between your datacenter and AWS.\n\n**B. Amazon CloudFront** - Amazon CloudFront is a content delivery network (CDN) service. It caches and distributes content from AWS edge locations to users globally, improving performance and reducing latency. It doesn't create a dedicated network connection between your datacenter and AWS.\n\n**C. AWS Snowball** - AWS Snowball (now part of AWS Snow Family) is a data transport solution that uses physical storage devices to transfer large amounts of data into and out of AWS. It's used for migrating data, not for establishing a continuous, dedicated network connection.",
-    "domain": 1,
-    "domain_name": "Cloud Concepts",
-    "topic": "Topic 1.4: AWS Global Infrastructure",
-    "point_tested": "point:infra_edge_location_caching",
-    "sources": [
-      "CloudCertPrep_Questions",
-      "ExamCert_Questions",
-      "AwsCcpTrainer_Questions",
-      "DevOpsKing_Questions"
-    ],
-    "frequency": 4
-  },
-  {
     "id": "CLF-U0043",
     "prompt": "Which of the following procedures will help reduce your Amazon S3 costs?",
     "choices": [
@@ -455,29 +432,6 @@
     ],
     "answer": "A, D",
     "explanation": "**Correct answer: A media store for the CloudFront service**\n\nAmazon S3 is often used as the origin store for Amazon CloudFront, a content delivery network (CDN). CloudFront caches content from S3 (or other origins) and distributes it to edge locations globally, providing faster access for users. S3 provides durable and scalable storage for the media files that CloudFront distributes.\n\n**Correct answer: Hosting static websites**\n\nAmazon S3 can host static websites. This means websites that consist of HTML, CSS, JavaScript, images, and other static files. S3 provides the storage and retrieval of these files, and you can configure S3 buckets for website hosting. This is a cost-effective and scalable way to host static websites.\n\n**Incorrect:**\n\n**A. Hosting websites that require sustained high CPU utilization** - Amazon S3 is an object storage service, not a compute service. Websites requiring sustained high CPU utilization are better suited for services like Amazon EC2, AWS Elastic Beanstalk, or AWS Lambda.\n\n**C. Processing data streams at any scale** - While S3 can store data streams, it's not designed for real-time processing. Services like Amazon Kinesis Data Streams or Amazon Managed Streaming for Apache Kafka (MSK) are better suited for processing data streams at any scale.\n\n**E. Cost-effective database and log storage** - While S3 can be used for log storage, it's not a database service. For database storage, services like Amazon RDS, Amazon DynamoDB, or Amazon Aurora are more appropriate. While S3 can be cost-effective for storing large volumes of data, other services may be more suitable for database storage depending on the specific requirements.",
-    "domain": 1,
-    "domain_name": "Cloud Concepts",
-    "topic": "Topic 1.4: AWS Global Infrastructure",
-    "point_tested": "point:infra_edge_location_caching",
-    "sources": [
-      "CloudCertPrep_Questions",
-      "ExamCert_Questions",
-      "AwsCcpTrainer_Questions",
-      "DevOpsKing_Questions"
-    ],
-    "frequency": 4
-  },
-  {
-    "id": "CLF-U0393",
-    "prompt": "AWS has created a large number of Edge Locations as part of its Global Infrastructure. Which of the following is NOT a benefit of using Edge Locations?",
-    "choices": [
-      "A) Edge locations are used by CloudFront to cache the most recent responses.",
-      "B) Edge locations are used by CloudFront to improve your end users’ experience when uploading files.",
-      "C) Edge locations are used by CloudFront to distribute traffic across multiple instances to reduce latency.",
-      "D) Edge locations are used by CloudFront to distribute content to global users with low latency."
-    ],
-    "answer": "C",
-    "explanation": "**Correct answer: Edge locations are used by CloudFront to distribute traffic across multiple instances to reduce latency**\n\nThis statement is NOT a benefit of using Edge Locations. Edge locations are primarily used for caching content closer to the end-users to reduce latency. They do not distribute traffic across multiple instances. The distribution of traffic across multiple instances is typically handled by services like Elastic Load Balancing (ELB) in conjunction with Auto Scaling Groups within the AWS region, not at the Edge Location. CloudFront uses edge locations to cache content and deliver it to users with low latency.\n\n**Incorrect:**\n\n**B. Edge locations are used by CloudFront to cache the most recent responses** - This is a core function of Edge Locations. CloudFront caches content at these locations to serve requests faster.\n\n**C. Edge locations are used by CloudFront to improve your end users’ experience when uploading files** - CloudFront can be used to accelerate uploads using its PUT/POST capabilities, improving the user experience.\n\n**D. Edge locations are used by CloudFront to distribute content to global users with low latency** - This is a primary benefit. By caching content closer to users globally, latency is significantly reduced.",
     "domain": 1,
     "domain_name": "Cloud Concepts",
     "topic": "Topic 1.4: AWS Global Infrastructure",
@@ -997,28 +951,6 @@
     "frequency": 3
   },
   {
-    "id": "CLF-U0442",
-    "prompt": "The AWS Cloud’s multiple Regions are an example of:",
-    "choices": [
-      "A) Agility.",
-      "B) Global infrastructure.",
-      "C) Elasticity.",
-      "D) Pay-as-you-go pricing."
-    ],
-    "answer": "B",
-    "explanation": "AWS Regions spread across the globe are part of the AWS global infrastructure, which includes Regions, Availability Zones, and edge locations designed to deliver services worldwide.\nAgility refers to the speed at which customers can provision resources and iterate on new functionality, which is a cloud adoption benefit rather than a characteristic of physical infrastructure placement. Elasticity refers to dynamically scaling resources up or down in response to demand, which is a compute and capacity concept unrelated to the geographic distribution of Regions. Pay-as-you-go pricing is a billing model where customers pay only for what they consume, which is a commercial benefit rather than an infrastructure concept.",
-    "domain": 1,
-    "domain_name": "Cloud Concepts",
-    "topic": "Topic 1.1: Cloud Economics & Benefits",
-    "point_tested": "point:economics_agility_elasticity",
-    "sources": [
-      "CloudCertPrep_Questions",
-      "AwsCcpTrainer_Questions",
-      "DevOpsKing_Questions"
-    ],
-    "frequency": 3
-  },
-  {
     "id": "CLF-U0444",
     "prompt": "Which AWS characteristics make AWS cost effective for a workload with dynamic user demand? (Select TWO)",
     "choices": [
@@ -1038,72 +970,6 @@
       "CloudCertPrep_Questions",
       "AwsCcpTrainer_Questions",
       "DevOpsKing_Questions"
-    ],
-    "frequency": 3
-  },
-  {
-    "id": "CLF-U0450",
-    "prompt": "When architecting cloud applications, which of the following are a key design principle?",
-    "choices": [
-      "A) Use the largest instance possible.",
-      "B) Provision capacity for peak load.",
-      "C) Use the Scrum development process.",
-      "D) Implement elasticity."
-    ],
-    "answer": "D",
-    "explanation": "Elasticity is a key cloud design principle that means automatically scaling compute resources up or down based on actual demand, avoiding over-provisioning and reducing costs compared to traditional fixed-capacity infrastructure.\nUsing the largest instance possible is the opposite of good cloud design, as it leads to over-provisioning and unnecessary cost rather than matching capacity to actual demand. Provisioning capacity for peak load is a traditional on-premises approach that results in idle resources during normal periods, which cloud elasticity is specifically designed to replace. Using the Scrum development process is a software delivery methodology unrelated to cloud architecture design principles.",
-    "domain": 1,
-    "domain_name": "Cloud Concepts",
-    "topic": "Topic 1.1: Cloud Economics & Benefits",
-    "point_tested": "point:economics_agility_elasticity",
-    "sources": [
-      "CloudCertPrep_Questions",
-      "AwsCcpTrainer_Questions",
-      "DevOpsKing_Questions"
-    ],
-    "frequency": 3
-  },
-  {
-    "id": "CLF-U0451",
-    "prompt": "Which AWS feature will reduce the customer’s total cost of ownership (TCO)?",
-    "choices": [
-      "A) Shared responsibility security model.",
-      "B) Single tenancy.",
-      "C) Elastic computing.",
-      "D) Encryption."
-    ],
-    "answer": "C",
-    "explanation": "Elastic computing lets customers match resource capacity to actual demand, scaling up during peaks and down during lulls, eliminating payment for idle infrastructure and directly reducing total cost of ownership.\nThe Shared Responsibility Model defines the division of security duties between AWS and the customer, but does not itself reduce infrastructure costs or TCO. Single tenancy dedicates hardware to a single customer, which typically increases cost compared to the shared multi-tenant model that underpins AWS's economies of scale. Encryption is a security control that protects data at rest and in transit, and has no direct impact on infrastructure costs or TCO.",
-    "domain": 1,
-    "domain_name": "Cloud Concepts",
-    "topic": "Topic 1.1: Cloud Economics & Benefits",
-    "point_tested": "point:general_cloud_concept",
-    "sources": [
-      "CloudCertPrep_Questions",
-      "AwsCcpTrainer_Questions",
-      "DevOpsKing_Questions"
-    ],
-    "frequency": 3
-  },
-  {
-    "id": "CLF-U0464",
-    "prompt": "A company's web application currently has tight dependencies on underlying components, so when one component fails the entire web application fails. Applying which AWS Cloud design principle will address the current design issue?",
-    "choices": [
-      "A) Implementing elasticity enabling the application to scale up or scale down as demand changes.",
-      "B) Enabling several EC2 instances to run in parallel to achieve better performance.",
-      "C) Focusing on decoupling components by isolating them and ensuring individual components can function when other components.",
-      "D) Doubling EC2 computing resources to increase system fault tolerance."
-    ],
-    "answer": "C",
-    "explanation": "Decoupling components means isolating them so each can function independently, communicating through asynchronous interfaces rather than direct calls, so a failure in one component does not bring down the entire application.\nImplementing elasticity addresses scaling resources up and down in response to demand, but does not resolve the tight dependency problem that causes cascading failures. Enabling EC2 instances to run in parallel improves performance and throughput but does not isolate components from each other's failures. Doubling EC2 computing resources adds capacity but does not change the tightly coupled architecture, meaning a component failure would still take down the whole application.",
-    "domain": 1,
-    "domain_name": "Cloud Concepts",
-    "topic": "Topic 1.1: Cloud Economics & Benefits",
-    "point_tested": "point:economics_agility_elasticity",
-    "sources": [
-      "AwsCcpTrainer_Questions",
-      "DevOpsKing_Questions",
-      "CloudCertPrep_Questions"
     ],
     "frequency": 3
   },
@@ -1529,51 +1395,6 @@
     "frequency": 3
   },
   {
-    "id": "CLF-U0114",
-    "prompt": "An organization has a legacy application designed using monolithic-based architecture. Which AWS Service can be used to decouple the components of the application?",
-    "choices": [
-      "A) Amazon SQS.",
-      "B) Virtual Private Gateway.",
-      "C) AWS Artifact.",
-      "D) Amazon CloudFront."
-    ],
-    "answer": "A",
-    "explanation": "Amazon SQS is a fully managed message queuing service that decouples application components by allowing each component to send and receive messages independently, enabling a monolithic application to be broken into loosely coupled parts that communicate asynchronously.\nAmazon SNS is a publish/subscribe messaging service that broadcasts messages to multiple subscribers simultaneously, which is useful for fan-out notification patterns but is not the primary service for decoupling monolithic application components through asynchronous message queuing. Amazon EventBridge is a serverless event bus that routes events between AWS services, SaaS applications, and custom applications based on event patterns; while it supports decoupled architectures, it is event-driven routing rather than a message queue for decoupling component dependencies in a monolithic application. AWS Step Functions is a serverless workflow orchestration service that coordinates multiple AWS services into structured workflows, which handles workflow state management rather than providing the message queuing mechanism needed to decouple monolithic application components.",
-    "domain": 1,
-    "domain_name": "Cloud Concepts",
-    "topic": "Topic 1.4: AWS Global Infrastructure",
-    "point_tested": "point:infra_edge_location_caching",
-    "sources": [
-      "CloudCertPrep_Questions",
-      "AwsCcpTrainer_Questions",
-      "DevOpsKing_Questions"
-    ],
-    "frequency": 3
-  },
-  {
-    "id": "CLF-U2481",
-    "prompt": "What does the concept of agility mean in AWS Cloud computing? (Choose two.)",
-    "choices": [
-      "A) The speed at which AWS resources are implemented",
-      "B) The speed at which AWS creates new AWS Regions",
-      "C) The ability to experiment quickly",
-      "D) The elimination of wasted capacity",
-      "E) The low cost of entry into cloud computing"
-    ],
-    "answer": "AC",
-    "explanation": "**Correct Answer: AC (The speed at which AWS resources are implemented, The ability to experiment quickly)**\n\nThis question (# 136) is directly sourced from authentic **Community Consensus Pool** community discussions.\n**Why this is correct:** The scenario specifically tests AWS best practices. 'The speed at which AWS resources are implemented, The ability to experiment quickly' directly satisfies the architectural requirement defined in the prompt.\n\n**Key Option Breakdown:**\n- **Option A (The speed at which AWS resources are implemented)** [CORRECT]: Satisfies the prompt requirements directly.\n- **Option B (The speed at which AWS creates new AWS Regions)** [INCORRECT]: Does not meet the scenario requirements or introduces suboptimal design for this specific workload.\n- **Option C (The ability to experiment quickly)** [CORRECT]: Satisfies the prompt requirements directly.\n- **Option D (The elimination of wasted capacity)** [INCORRECT]: Does not meet the scenario requirements or introduces suboptimal design for this specific workload.\n- **Option E (The low cost of entry into cloud computing)** [INCORRECT]: Does not meet the scenario requirements or introduces suboptimal design for this specific workload.",
-    "domain": 1,
-    "domain_name": "Cloud Concepts",
-    "topic": "Topic 1.4: AWS Global Infrastructure",
-    "point_tested": "point:economics_agility_elasticity",
-    "sources": [
-      "Community Consensus Pool_Questions",
-      "Amazon_CLF_C02_Nov2026_Recall_393Q",
-      "Consensus_Aligned"
-    ],
-    "frequency": 3
-  },
-  {
     "id": "CLF-U0249",
     "prompt": "Which disaster recovery scenario offers the lowest probability of down time?",
     "choices": [
@@ -1639,6 +1460,176 @@
       "DevOpsKing_Questions"
     ],
     "frequency": 3
+  },
+  {
+    "id": "ACTUAL-393-Q041",
+    "prompt": "A company is planning to migrate a monolithic application to AWS. The company wants to\nmodernize the application by splitting it into microservices. The company will deploy the\nmicroservices on AWS.\nWhich migration strategy should the company use?",
+    "choices": [
+      "A) Rehost",
+      "B) Repurchase",
+      "C) Replatform",
+      "D) Refactor"
+    ],
+    "answer": "D",
+    "explanation": "Refactoring involves re-architecting and modifying an application to take advantage of\ncloud-native features. In this case, the company wants to modernize a monolithic\napplication by breaking it into microservices. This process aligns with the Refactor\nstrategy, which is aimed at modernizing and re-architecting applications. Rehost,\nRepurchase, and Replatform do not involve the level of re-architecting needed to move\nfrom a monolithic to a microservices architecture.",
+    "domain": 1,
+    "domain_name": "Cloud Concepts",
+    "topic": "Topic 1.2: AWS Cloud Adoption Framework (CAF 3.0)",
+    "point_tested": "point:general_cloud_concept",
+    "sources": [
+      "Consensus_Aligned",
+      "Amazon_CLF_C02_Nov2026_Recall_393Q"
+    ],
+    "frequency": 2
+  },
+  {
+    "id": "ACTUAL-393-Q053",
+    "prompt": "Which options are perspectives that include foundational capabilities of the AWS Cloud\nAdoption Framework (AWS CAF)? (Select TWO.)",
+    "choices": [
+      "A) Sustainability",
+      "B) Security",
+      "C) Operations",
+      "D) Performance efficiency",
+      "E) Reliability"
+    ],
+    "answer": "CD",
+    "explanation": "The options that are perspectives that include foundational capabilities of the AWS Cloud\nAdoption Framework (AWS CAF) are operations and performance efficiency. The AWS\nCAF is a guidance that helps organizations design and travel an accelerated path to\nsuccessful cloud adoption. The AWS CAF organizes the cloud adoption process into six\nareas of focus, called perspectives, which are business, people, governance, platform,\nsecurity, and operations. Each perspective is divided into capabilities, which are further\ndivided into skills and responsibilities. The operations perspective focuses on the\nmanagement and monitoring of the cloud resources and applications, as well as the\nautomation and optimization of the operational processes. The operations perspective\ncapabilities are operations support, operations integration, and service management. The\nperformance efficiency perspective focuses on the selection and configuration of the right\ncloud resources and services to meet the performance",
+    "domain": 1,
+    "domain_name": "Cloud Concepts",
+    "topic": "Topic 1.2: AWS Cloud Adoption Framework (CAF 3.0)",
+    "point_tested": "point:caf_perspectives",
+    "sources": [
+      "Consensus_Aligned",
+      "Amazon_CLF_C02_Nov2026_Recall_393Q"
+    ],
+    "frequency": 2
+  },
+  {
+    "id": "ACTUAL-393-Q392",
+    "prompt": "Which perspective in the AWS Cloud Adoption Framework (AWS CAF) includes a\ncapability for well-designed data and analytics architecture?",
+    "choices": [
+      "A) Security",
+      "B) Governance",
+      "C) Operations",
+      "D) Platform"
+    ],
+    "answer": "C",
+    "explanation": "The correct answer is D. Platform.\nThe Platform perspective in the AWS Cloud Adoption Framework (AWS CAF) includes a\ncapability for well-designed data and analytics architecture. This capability helps you\ndesign, implement, and optimize your data and analytics solutions on AWS, using services\nsuch as Amazon S3, Amazon Redshift, Amazon EMR, Amazon Kinesis, Amazon Athena,\nand Amazon QuickSight.A well-designed data and analytics architecture enables you to\ncollect, store, process, analyze, and visualize data from various sources, and derive\ninsights that can drive your business decisions12.\nThe Security perspective does not include a capability for data and analytics architecture,\nbut it does include a capability for data protection, which helps you secure your data at rest\nand in transit using encryption, key management, access control, and auditing13.\nThe Governance perspective does not include a capability for data and analytics\narchitecture, but it does include a capability for data g",
+    "domain": 1,
+    "domain_name": "Cloud Concepts",
+    "topic": "Topic 1.2: AWS Cloud Adoption Framework (CAF 3.0)",
+    "point_tested": "point:caf_perspectives",
+    "sources": [
+      "Consensus_Aligned",
+      "Amazon_CLF_C02_Nov2026_Recall_393Q"
+    ],
+    "frequency": 2
+  },
+  {
+    "id": "CLF-U1324",
+    "prompt": "Which AWS Cloud Adoption Framework (AWS CAF) perspective focuses on designing and implementing new cloud environments with enterprise-grade scalability?",
+    "choices": [
+      "A) Operations",
+      "B) Security",
+      "C) Platform",
+      "D) People"
+    ],
+    "answer": "C",
+    "explanation": "The Platform perspective focuses on building an enterprise-grade, scalable cloud platform by designing the target architecture for networking, compute, storage, and database services, and establishing patterns for provisioning and managing cloud resources.\nThe Operations perspective focuses on delivering and managing cloud services to meet day-to-day business needs through monitoring, incident management, and process improvement, not on designing the underlying platform architecture. The Security perspective focuses on protecting data and workloads through identity management, threat detection, and security controls, rather than designing the cloud infrastructure platform. The People perspective focuses on workforce readiness, organizational change, and skills development, which is unrelated to technical platform architecture.",
+    "domain": 1,
+    "domain_name": "Cloud Concepts",
+    "topic": "Topic 1.2: AWS Cloud Adoption Framework (CAF 3.0)",
+    "point_tested": "point:caf_perspectives",
+    "sources": [
+      "CloudCertPrep_Questions",
+      "Community Consensus Pool_Questions"
+    ],
+    "frequency": 2
+  },
+  {
+    "id": "CLF-U1335",
+    "prompt": "A company wants to move its on-premises application to AWS as quickly as possible with minimal changes to the existing code. Which migration strategy does this describe?",
+    "choices": [
+      "A) Replatform",
+      "B) Refactor",
+      "C) Rehost",
+      "D) Repurchase"
+    ],
+    "answer": "C",
+    "explanation": "Rehosting, also known as lift and shift, involves moving an application to the cloud without making any changes to the application code or architecture, making it the fastest migration strategy for getting workloads into AWS.\nReplatforming involves making targeted optimizations during migration, such as moving a database to a managed service like Amazon RDS, which requires some changes beyond a simple lift and shift. Refactoring involves redesigning the application to take advantage of cloud-native features such as serverless computing or microservices, which requires significant development effort and is not a minimal-change approach. Repurchasing involves replacing the existing application with a different product, typically a SaaS solution, which is not a strategy for moving existing code to AWS.",
+    "domain": 1,
+    "domain_name": "Cloud Concepts",
+    "topic": "Topic 1.2: AWS Cloud Adoption Framework (CAF 3.0)",
+    "point_tested": "point:general_cloud_concept",
+    "sources": [
+      "CloudCertPrep_Questions",
+      "OpenExamPrep_Questions"
+    ],
+    "frequency": 2
+  },
+  {
+    "id": "CLF-U1437",
+    "prompt": "Which options are AWS Cloud Adoption Framework (AWS CAF) cloud transformation journey \nrecommendations? (Select TWO.)",
+    "choices": [
+      "A) Envision phase",
+      "B) AIign phase",
+      "C) Assess phase",
+      "D) Mobilize phase",
+      "E) Migrate and modernize phase"
+    ],
+    "answer": "AB",
+    "explanation": "The AWS Cloud Adoption Framework (AWS CAF) cloud transformation journey is a fourphase process that helps customers plan and execute their cloud migration and digital\ntransformation. The four phases are:\nEnvision phase: This phase focuses on demonstrating how cloud will help accelerate the\nbusiness outcomes of the customer. It involves identifying and prioritizing transformation\nopportunities across four domains: business, people, governance, and platform. It also\ninvolves associating the transformation initiatives with key stakeholders and measurable\nbusiness outcomes1.\nAlign phase: This phase focuses on identifying capability gaps across six perspectives:\nbusiness, people, governance, platform, security, and operations. It also involves\nidentifying cross-organizational dependencies and surfacing stakeholder concerns and\nchallenges. The goal of this phase is to create strategies for improving the cloud readiness,\nensure stakeholder alignment, and facilitate relevant organizational cha",
+    "domain": 1,
+    "domain_name": "Cloud Concepts",
+    "topic": "Topic 1.2: AWS Cloud Adoption Framework (CAF 3.0)",
+    "point_tested": "point:caf_perspectives",
+    "sources": [
+      "Edurely_Questions",
+      "Community Consensus Pool_Questions"
+    ],
+    "frequency": 2
+  },
+  {
+    "id": "CLF-U1311",
+    "prompt": "Which TWO of the following are perspectives of the AWS Cloud Adoption Framework (AWS CAF)?",
+    "choices": [
+      "A) Governance",
+      "B) Financial",
+      "C) People",
+      "D) Infrastructure",
+      "E) Agility"
+    ],
+    "answer": "A, C",
+    "explanation": "The AWS CAF organizes guidance into six perspectives: Business, People, Governance, Platform, Security, and Operations. Governance focuses on orchestrating cloud initiatives while maximizing organizational benefits and minimizing transformation-related risks, and People focuses on developing an organization-wide change management strategy and building cloud skills across the workforce.\nFinancial is not one of the six AWS CAF perspectives; financial and cost-related guidance falls within the Business perspective, which addresses how cloud adoption drives business value and return on investment rather than existing as its own separate financial perspective. Infrastructure is not one of the six AWS CAF perspectives; guidance on building and provisioning the technology foundation for cloud workloads falls under the Platform perspective rather than a perspective named Infrastructure. Agility is a benefit and characteristic of cloud computing but is not one of the six CAF perspectives; it does not appear in the CAF framework structure alongside Business, People, Governance, Platform, Security, and Operations.",
+    "domain": 1,
+    "domain_name": "Cloud Concepts",
+    "topic": "Topic 1.2: AWS Cloud Adoption Framework (CAF 3.0)",
+    "point_tested": "point:caf_perspectives",
+    "sources": [
+      "CloudCertPrep_Questions"
+    ],
+    "frequency": 1
+  },
+  {
+    "id": "CLF-U1312",
+    "prompt": "According to the AWS Cloud Adoption Framework (AWS CAF), which TWO of the following are benefits that organizations can achieve through successful cloud adoption?",
+    "choices": [
+      "A) Reduced business risk",
+      "B) Elimination of all operational expenditure",
+      "C) Improved environmental, social, and governance (ESG) performance",
+      "D) Immediate compliance with all regulatory requirements",
+      "E) Guaranteed elimination of all security vulnerabilities"
+    ],
+    "answer": "A, C",
+    "explanation": "The AWS CAF identifies four key benefits of cloud adoption: reduced business risk through improved reliability, increased performance, and enhanced security posture; improved ESG performance through reduced carbon footprint and greater energy efficiency enabled by cloud infrastructure; increased revenue through the ability to develop and deliver new products faster; and increased operational efficiency through optimized cost structures and workforce productivity.\nElimination of all operational expenditure is not an AWS CAF benefit; moving to the cloud converts large upfront capital expenditure to variable operational expenditure rather than eliminating ongoing costs, as customers continue to pay for cloud services based on actual consumption and operational costs such as staffing and tooling remain. Immediate compliance with all regulatory requirements is not a benefit the CAF promises; while AWS provides compliance certifications and tools to support customers' compliance programs, each customer is still responsible for applying the appropriate controls to their own workloads and meeting their specific regulatory obligations. Guaranteed elimination of all security vulnerabilities is not a CAF-defined benefit; while cloud adoption can improve the security posture of an organization through shared responsibility and access to advanced security services, the CAF does not promise that cloud migration eliminates all security risk.",
+    "domain": 1,
+    "domain_name": "Cloud Concepts",
+    "topic": "Topic 1.2: AWS Cloud Adoption Framework (CAF 3.0)",
+    "point_tested": "point:caf_perspectives",
+    "sources": [
+      "CloudCertPrep_Questions"
+    ],
+    "frequency": 1
   },
   {
     "id": "CLF-U0013",

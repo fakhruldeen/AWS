@@ -1,6 +1,6 @@
 # 🔥 AWS Certified Cloud Practitioner (`CLF-C02`) — Top 300 Most Frequent Repeated Exam Questions
 
-> **Selection Methodology:** Extracted from the canonical 2,716-question Master Bank by selecting exclusively **multi-source repeated questions** (each appearing across **3 to 5 independent exam pools/releases**), stratified proportionally to the official **CLF-C02 Exam Blueprint** across all 4 Domains and all 20 sub-topics.
+> **Selection Methodology:** Extracted from the canonical 2,716-question Master Bank by selecting the **highest-frequency repeated questions** (292 questions repeated across **3 to 5 independent exam pools**, plus 8 targeted **AWS CAF** questions for balanced 100% blueprint coverage), stratified proportionally to the official **CLF-C02 Exam Blueprint** across all 4 Domains and all 20 sub-topics.
 
 ---
 
@@ -8,11 +8,11 @@
 
 | Domain | Official Weight | Questions Selected | Frequency Distribution (Exam Sources) | Topics Covered |
 | :--- | :---: | :---: | :--- | :---: |
-| **Domain 1: Cloud Concepts** | 24% | **72** | **5x**: 1 Qs, **4x**: 34 Qs, **3x**: 37 Qs | 5 Topics |
+| **Domain 1: Cloud Concepts** | 24% | **72** | **5x**: 1 Qs, **4x**: 32 Qs, **3x**: 31 Qs, **2x**: 6 Qs, **1x**: 2 Qs | 5 Topics |
 | **Domain 2: Security and Compliance** | 30% | **90** | **4x**: 52 Qs, **3x**: 38 Qs | 5 Topics |
 | **Domain 3: Cloud Technology and Services** | 34% | **102** | **5x**: 1 Qs, **4x**: 48 Qs, **3x**: 53 Qs | 6 Topics |
 | **Domain 4: Billing, Pricing, and Support** | 12% | **36** | **4x**: 17 Qs, **3x**: 19 Qs | 4 Topics |
-| **TOTAL** | **100%** | **300** | **100% Repeated in 3–5 Exam Sources** | **20 / 20 Topics** |
+| **TOTAL** | **100%** | **300** | **High-Frequency Repeated + Full CAF Coverage** | **20 / 20 Topics** |
 
 ---
 
@@ -386,38 +386,7 @@ Amazon CloudFront is a content delivery network (CDN) service that accelerates t
 
 ---
 
-### Question 13 — `CLF-U0036` | 🔁 Repeated in 4 Exam Sources
-*Topic: Topic 1.4: AWS Global Infrastructure*
-
-**Which AWS Service can be used to establish a dedicated, private network connection between AWS and your datacenter?**
-
-- A) AWS Direct Connect.
-- B) Amazon CloudFront.
-- C) AWS Snowball.
-- D) Amazon Route 53.
-
-<details>
-<summary><strong>Reveal Answer & Explanation (Question 13)</strong></summary>
-
-**Correct Answer:** `A`
-
-**Correct answer: AWS Direct Connect**
-
-AWS Direct Connect enables you to establish a dedicated network connection from your premises to AWS. This connection is private, offering more consistent network performance and often lower network costs than using the public internet. It's ideal for workloads requiring high bandwidth, low latency, and secure data transfer between your on-premises infrastructure and AWS.
-
-**Incorrect:**
-
-**A. Amazon Route 53** - Amazon Route 53 is a highly available and scalable Domain Name System (DNS) web service. While it's crucial for directing internet traffic to your AWS resources, it doesn't establish a dedicated network connection between your datacenter and AWS.
-
-**B. Amazon CloudFront** - Amazon CloudFront is a content delivery network (CDN) service. It caches and distributes content from AWS edge locations to users globally, improving performance and reducing latency. It doesn't create a dedicated network connection between your datacenter and AWS.
-
-**C. AWS Snowball** - AWS Snowball (now part of AWS Snow Family) is a data transport solution that uses physical storage devices to transfer large amounts of data into and out of AWS. It's used for migrating data, not for establishing a continuous, dedicated network connection.
-
-</details>
-
----
-
-### Question 14 — `CLF-U0043` | 🔁 Repeated in 4 Exam Sources
+### Question 13 — `CLF-U0043` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 1.4: AWS Global Infrastructure*
 
 **Which of the following procedures will help reduce your Amazon S3 costs?**
@@ -428,7 +397,7 @@ AWS Direct Connect enables you to establish a dedicated network connection from 
 - D) Move all the data stored in S3 standard to EBS.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 14)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 13)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -448,7 +417,7 @@ Amazon S3 offers various storage classes optimized for different access patterns
 
 ---
 
-### Question 15 — `CLF-U0044` | 🔁 Repeated in 4 Exam Sources
+### Question 14 — `CLF-U0044` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 1.4: AWS Global Infrastructure*
 
 **Which of the following activities may help reduce your AWS monthly costs?**
@@ -459,7 +428,7 @@ Amazon S3 offers various storage classes optimized for different access patterns
 - D) Deploying your AWS resources across multiple Availability Zones.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 15)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 14)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -483,7 +452,7 @@ Lifecycle policies automate the movement of data to more cost-effective storage 
 
 ---
 
-### Question 16 — `CLF-U0045` | 🔁 Repeated in 4 Exam Sources
+### Question 15 — `CLF-U0045` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 1.4: AWS Global Infrastructure*
 
 **Which AWS services can be used to improve the performance of a global application and reduce latency for its users? (Choose TWO)**
@@ -495,7 +464,7 @@ Lifecycle policies automate the movement of data to more cost-effective storage 
 - E) Amazon CloudFront.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 16)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 15)</strong></summary>
 
 **Correct Answer:** `B, E`
 
@@ -519,7 +488,7 @@ Amazon CloudFront is a content delivery network (CDN) service that caches conten
 
 ---
 
-### Question 17 — `CLF-U0055` | 🔁 Repeated in 4 Exam Sources
+### Question 16 — `CLF-U0055` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 1.4: AWS Global Infrastructure*
 
 **What are the Amazon RDS features that can be used to improve the availability of your database? (Choose TWO)**
@@ -531,7 +500,7 @@ Amazon CloudFront is a content delivery network (CDN) service that caches conten
 - E) Edge Locations.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 17)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 16)</strong></summary>
 
 **Correct Answer:** `B, D`
 
@@ -555,7 +524,7 @@ Multi-AZ deployments provide enhanced availability and durability for database i
 
 ---
 
-### Question 18 — `CLF-U0059` | 🔁 Repeated in 4 Exam Sources
+### Question 17 — `CLF-U0059` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 1.4: AWS Global Infrastructure*
 
 **Savings Plans are available for which of the following AWS compute services? (Choose TWO)**
@@ -567,7 +536,7 @@ Multi-AZ deployments provide enhanced availability and durability for database i
 - E) AWS Lambda.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 18)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 17)</strong></summary>
 
 **Correct Answer:** `D, E`
 
@@ -591,7 +560,7 @@ Savings Plans are indeed applicable to Amazon EC2 instances. There are two types
 
 ---
 
-### Question 19 — `CLF-U0060` | 🔁 Repeated in 4 Exam Sources
+### Question 18 — `CLF-U0060` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 1.4: AWS Global Infrastructure*
 
 **A company has business critical workloads hosted on AWS and they are unwilling to accept any downtime. Which of the following is a recommended best practice to protect their workloads in the event of an unexpected natural disaster?**
@@ -602,7 +571,7 @@ Savings Plans are indeed applicable to Amazon EC2 instances. There are two types
 - D) Deploy AWS resources to another AWS Region and implement an Active-Active disaster recovery strategy.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 19)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 18)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -622,7 +591,7 @@ An Active-Active disaster recovery strategy involves running workloads simultane
 
 ---
 
-### Question 20 — `CLF-U0083` | 🔁 Repeated in 4 Exam Sources
+### Question 19 — `CLF-U0083` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 1.4: AWS Global Infrastructure*
 
 **Which of the following are use cases for Amazon S3? (Choose TWO)**
@@ -634,7 +603,7 @@ An Active-Active disaster recovery strategy involves running workloads simultane
 - E) Processing data streams at any scale.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 20)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 19)</strong></summary>
 
 **Correct Answer:** `A, D`
 
@@ -658,38 +627,7 @@ Amazon S3 can host static websites. This means websites that consist of HTML, CS
 
 ---
 
-### Question 21 — `CLF-U0393` | 🔁 Repeated in 4 Exam Sources
-*Topic: Topic 1.4: AWS Global Infrastructure*
-
-**AWS has created a large number of Edge Locations as part of its Global Infrastructure. Which of the following is NOT a benefit of using Edge Locations?**
-
-- A) Edge locations are used by CloudFront to cache the most recent responses.
-- B) Edge locations are used by CloudFront to improve your end users’ experience when uploading files.
-- C) Edge locations are used by CloudFront to distribute traffic across multiple instances to reduce latency.
-- D) Edge locations are used by CloudFront to distribute content to global users with low latency.
-
-<details>
-<summary><strong>Reveal Answer & Explanation (Question 21)</strong></summary>
-
-**Correct Answer:** `C`
-
-**Correct answer: Edge locations are used by CloudFront to distribute traffic across multiple instances to reduce latency**
-
-This statement is NOT a benefit of using Edge Locations. Edge locations are primarily used for caching content closer to the end-users to reduce latency. They do not distribute traffic across multiple instances. The distribution of traffic across multiple instances is typically handled by services like Elastic Load Balancing (ELB) in conjunction with Auto Scaling Groups within the AWS region, not at the Edge Location. CloudFront uses edge locations to cache content and deliver it to users with low latency.
-
-**Incorrect:**
-
-**B. Edge locations are used by CloudFront to cache the most recent responses** - This is a core function of Edge Locations. CloudFront caches content at these locations to serve requests faster.
-
-**C. Edge locations are used by CloudFront to improve your end users’ experience when uploading files** - CloudFront can be used to accelerate uploads using its PUT/POST capabilities, improving the user experience.
-
-**D. Edge locations are used by CloudFront to distribute content to global users with low latency** - This is a primary benefit. By caching content closer to users globally, latency is significantly reduced.
-
-</details>
-
----
-
-### Question 22 — `CLF-U0398` | 🔁 Repeated in 4 Exam Sources
+### Question 20 — `CLF-U0398` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 1.4: AWS Global Infrastructure*
 
 **Sarah has deployed an application in the Northern California (us-west-1) region. After examining the application’s traffic, she notices that about 30% of the traffic is coming from Asia. What can she do to reduce latency for the users in Asia?**
@@ -700,7 +638,7 @@ This statement is NOT a benefit of using Edge Locations. Edge locations are prim
 - D) Create a CDN using CloudFront, so that content is cached at Edge Locations close to and in Asia.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 22)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 20)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -720,7 +658,7 @@ CloudFront is AWS's Content Delivery Network (CDN) service. A CDN caches content
 
 ---
 
-### Question 23 — `CLF-U0402` | 🔁 Repeated in 4 Exam Sources
+### Question 21 — `CLF-U0402` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 1.4: AWS Global Infrastructure*
 
 **Which of the following will impact the price paid for an EC2 instance? (Choose TWO)**
@@ -732,7 +670,7 @@ CloudFront is AWS's Content Delivery Network (CDN) service. A CDN caches content
 - E) Number of private IPs.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 23)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 21)</strong></summary>
 
 **Correct Answer:** `A, B`
 
@@ -756,7 +694,7 @@ While less common, the Availability Zone (AZ) can impact EC2 pricing. AWS occasi
 
 ---
 
-### Question 24 — `CLF-U0403` | 🔁 Repeated in 4 Exam Sources
+### Question 22 — `CLF-U0403` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 1.4: AWS Global Infrastructure*
 
 **Which of the following statements describes the AWS Cloud’s agility?**
@@ -767,7 +705,7 @@ While less common, the Availability Zone (AZ) can impact EC2 pricing. AWS occasi
 - D) AWS allows you to pay upfront to reduce costs.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 24)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 22)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -787,7 +725,7 @@ Agility in the context of cloud computing, and specifically AWS, refers to the a
 
 ---
 
-### Question 25 — `CLF-U0405` | 🔁 Repeated in 4 Exam Sources
+### Question 23 — `CLF-U0405` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 1.4: AWS Global Infrastructure*
 
 **Which of the following is a benefit of running an application in multiple Availability Zones?**
@@ -798,7 +736,7 @@ Agility in the context of cloud computing, and specifically AWS, refers to the a
 - D) Increases the availability of your application.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 25)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 23)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -818,7 +756,7 @@ Running an application in multiple Availability Zones (AZs) is a key strategy fo
 
 ---
 
-### Question 26 — `CLF-U0406` | 🔁 Repeated in 4 Exam Sources
+### Question 24 — `CLF-U0406` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 1.4: AWS Global Infrastructure*
 
 **How do ELBs improve the reliability of your application?**
@@ -829,7 +767,7 @@ Running an application in multiple Availability Zones (AZs) is a key strategy fo
 - D) By ensuring that only healthy targets receive traffic.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 26)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 24)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -849,7 +787,7 @@ Elastic Load Balancers (ELBs) improve application reliability by continuously mo
 
 ---
 
-### Question 27 — `CLF-U0410` | 🔁 Repeated in 4 Exam Sources
+### Question 25 — `CLF-U0410` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 1.4: AWS Global Infrastructure*
 
 **Which statement best describes the concept of an AWS region?**
@@ -860,7 +798,7 @@ Elastic Load Balancers (ELBs) improve application reliability by continuously mo
 - D) An AWS Region represents the country where the AWS infrastructure exist.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 27)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 25)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -880,7 +818,7 @@ An AWS Region is a fundamental concept in AWS. It represents a distinct geograph
 
 ---
 
-### Question 28 — `CLF-U0414` | 🔁 Repeated in 4 Exam Sources
+### Question 26 — `CLF-U0414` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 1.4: AWS Global Infrastructure*
 
 **Why do many startup companies prefer AWS over traditional on-premises solutions? (Choose TWO)**
@@ -892,7 +830,7 @@ An AWS Region is a fundamental concept in AWS. It represents a distinct geograph
 - E) Using AWS allows companies to replace large capital expenditure with low variable costs.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 28)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 26)</strong></summary>
 
 **Correct Answer:** `C, E`
 
@@ -916,7 +854,7 @@ AWS's pay-as-you-go pricing model is a significant advantage for startups. Inste
 
 ---
 
-### Question 29 — `CLF-U0417` | 🔁 Repeated in 4 Exam Sources
+### Question 27 — `CLF-U0417` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 1.4: AWS Global Infrastructure*
 
 **Which of the below options is a best practice for making your application on AWS highly available?**
@@ -927,7 +865,7 @@ AWS's pay-as-you-go pricing model is a significant advantage for startups. Inste
 - D) Rewrite the application code to handle all incoming requests.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 29)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 27)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -947,7 +885,7 @@ High availability in AWS means ensuring your application remains accessible even
 
 ---
 
-### Question 30 — `CLF-U0420` | 🔁 Repeated in 4 Exam Sources
+### Question 28 — `CLF-U0420` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 1.4: AWS Global Infrastructure*
 
 **Which of the following is true regarding the AWS availability zones and edge locations?**
@@ -958,7 +896,7 @@ High availability in AWS means ensuring your application remains accessible even
 - D) An AWS Availability Zone is an isolated location within an AWS Region, however edge locations are located in multiple cities worldwide.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 30)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 28)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -978,7 +916,7 @@ This statement accurately describes the relationship between Availability Zones 
 
 ---
 
-### Question 31 — `CLF-U0796` | 🔁 Repeated in 4 Exam Sources
+### Question 29 — `CLF-U0796` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 1.4: AWS Global Infrastructure*
 
 **According to the AWS Shared responsibility model, which of the following are the responsibility of the customer? (Choose TWO)**
@@ -990,7 +928,7 @@ This statement accurately describes the relationship between Availability Zones 
 - E) Patching applications installed on Amazon EC2.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 31)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 29)</strong></summary>
 
 **Correct Answer:** `B, E`
 
@@ -1014,7 +952,7 @@ Customers are responsible for managing the operating system, patching, and secur
 
 ---
 
-### Question 32 — `CLF-U0817` | 🔁 Repeated in 4 Exam Sources
+### Question 30 — `CLF-U0817` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 1.4: AWS Global Infrastructure*
 
 **When running a workload in AWS, the customer is NOT responsible for: (Select TWO)**
@@ -1026,7 +964,7 @@ Customers are responsible for managing the operating system, patching, and secur
 - E) Infrastructure security.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 32)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 30)</strong></summary>
 
 **Correct Answer:** `C, E`
 
@@ -1050,7 +988,7 @@ AWS is responsible for the security *of* the cloud. This includes protecting the
 
 ---
 
-### Question 33 — `CLF-U0825` | 🔁 Repeated in 4 Exam Sources
+### Question 31 — `CLF-U0825` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 1.4: AWS Global Infrastructure*
 
 **Which of the following factors should be considered when determining the region in which AWS Resources will be deployed? (Choose TWO)**
@@ -1062,7 +1000,7 @@ AWS is responsible for the security *of* the cloud. This includes protecting the
 - E) Geographic proximity to the company's location.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 33)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 31)</strong></summary>
 
 **Correct Answer:** `B, C`
 
@@ -1086,7 +1024,7 @@ Cost is a significant factor when determining the AWS Region for deployment. AWS
 
 ---
 
-### Question 34 — `CLF-U0828` | 🔁 Repeated in 4 Exam Sources
+### Question 32 — `CLF-U0828` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 1.4: AWS Global Infrastructure*
 
 **An external auditor is requesting a log of all accesses to the AWS resources in the company’s account. Which of the following services will provide the auditor with the requested information?**
@@ -1097,7 +1035,7 @@ Cost is a significant factor when determining the AWS Region for deployment. AWS
 - D) Amazon CloudWatch.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 34)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 32)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -1117,7 +1055,7 @@ AWS CloudTrail is a service that enables governance, compliance, operational aud
 
 ---
 
-### Question 35 — `CLF-U0415` | 🔁 Repeated in 4 Exam Sources
+### Question 33 — `CLF-U0415` | 🔁 Repeated in 4 Exam Sources
 *Topic: Topic 1.5: High Availability, Fault Tolerance & Disaster Recovery*
 
 **A company is using EC2 Instances to run their e-commerce site on the AWS platform. If the site becomes unavailable, the company will lose a significant amount of money for each minute the site is unavailable. Which design principle should the company use to minimize the risk of an outage?**
@@ -1128,7 +1066,7 @@ AWS CloudTrail is a service that enables governance, compliance, operational aud
 - D) Multi-threading.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 35)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 33)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -1148,7 +1086,7 @@ Fault tolerance is the ability of a system to continue operating properly in the
 
 ---
 
-### Question 36 — `CLF-U0004` | 🔁 Repeated in 3 Exam Sources
+### Question 34 — `CLF-U0004` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.1: Cloud Economics & Benefits*
 
 **What does AWS Snowball provide? (Choose TWO)**
@@ -1160,7 +1098,7 @@ Fault tolerance is the ability of a system to continue operating properly in the
 - E) Secure transfer of large amounts of data into and out of the AWS.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 36)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 34)</strong></summary>
 
 **Correct Answer:** `A, E`
 
@@ -1184,7 +1122,7 @@ AWS Snowball is designed for securely transferring large datasets into and out o
 
 ---
 
-### Question 37 — `CLF-U0179` | 🔁 Repeated in 3 Exam Sources
+### Question 35 — `CLF-U0179` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.1: Cloud Economics & Benefits*
 
 **A company is running a large web application that needs to always be available. The application tends to slow down when CPU usage is greater than 60%. How can they track when CPU usage goes above 60% for any of the EC2 Instances in their account?**
@@ -1195,7 +1133,7 @@ AWS Snowball is designed for securely transferring large datasets into and out o
 - D) Use SNS to monitor the utilization of the server.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 37)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 35)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -1206,7 +1144,7 @@ Amazon CloudFront is a content delivery network that caches and distributes cont
 
 ---
 
-### Question 38 — `CLF-U0383` | 🔁 Repeated in 3 Exam Sources
+### Question 36 — `CLF-U0383` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.1: Cloud Economics & Benefits*
 
 **Adjusting compute capacity dynamically to reduce cost is an implementation of which AWS cloud best practice?**
@@ -1217,7 +1155,7 @@ Amazon CloudFront is a content delivery network that caches and distributes cont
 - D) Adopt monolithic architecture.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 38)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 36)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -1228,7 +1166,7 @@ Build security in every layer is the Defense in Depth principle from the Securit
 
 ---
 
-### Question 39 — `CLF-U0384` | 🔁 Repeated in 3 Exam Sources
+### Question 37 — `CLF-U0384` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.1: Cloud Economics & Benefits*
 
 **What are the benefits of having infrastructure hosted in AWS? (Choose TWO)**
@@ -1240,7 +1178,7 @@ Build security in every layer is the Defense in Depth principle from the Securit
 - E) All of the physical security and most of the data/network security are taken care of for you.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 39)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 37)</strong></summary>
 
 **Correct Answer:** `A, E`
 
@@ -1251,7 +1189,7 @@ Unlimited free storage is not an AWS benefit, as storage services such as Amazon
 
 ---
 
-### Question 40 — `CLF-U0386` | 🔁 Repeated in 3 Exam Sources
+### Question 38 — `CLF-U0386` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.1: Cloud Economics & Benefits*
 
 **One of the most important AWS best-practices to follow is the cloud architecture principle of elasticity. How does this principle improve your architecture’s design?**
@@ -1262,7 +1200,7 @@ Unlimited free storage is not an AWS benefit, as storage services such as Amazon
 - D) By automatically provisioning the required AWS resources based on changes in demand.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 40)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 38)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -1273,7 +1211,7 @@ Automatically scaling on-premises resources is not what elasticity describes in 
 
 ---
 
-### Question 41 — `CLF-U0421` | 🔁 Repeated in 3 Exam Sources
+### Question 39 — `CLF-U0421` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.1: Cloud Economics & Benefits*
 
 **Which of the following are advantages of using AWS as a cloud computing provider? (Choose TWO)**
@@ -1285,7 +1223,7 @@ Automatically scaling on-premises resources is not what elasticity describes in 
 - E) Enables customers to trade their capital expenses for operational expenses.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 41)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 39)</strong></summary>
 
 **Correct Answer:** `D, E`
 
@@ -1296,7 +1234,7 @@ Customers remain responsible for monitoring their own servers and applications, 
 
 ---
 
-### Question 42 — `CLF-U0424` | 🔁 Repeated in 3 Exam Sources
+### Question 40 — `CLF-U0424` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.1: Cloud Economics & Benefits*
 
 **What does the term “Economies of scale” mean?**
@@ -1307,7 +1245,7 @@ Customers remain responsible for monitoring their own servers and applications, 
 - D) It means that you have the ability to pay as you go.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 42)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 40)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -1318,7 +1256,7 @@ Saving more when you consume more describes volume-based discounts such as Reser
 
 ---
 
-### Question 43 — `CLF-U0425` | 🔁 Repeated in 3 Exam Sources
+### Question 41 — `CLF-U0425` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.1: Cloud Economics & Benefits*
 
 **Which statement best describes the AWS Pay-As-You-Go pricing model?**
@@ -1329,7 +1267,7 @@ Saving more when you consume more describes volume-based discounts such as Reser
 - D) With AWS, you replace large capital expenses with low variable payments.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 43)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 41)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -1340,29 +1278,7 @@ Replacing low upfront expenses with large variable payments inverts the AWS pric
 
 ---
 
-### Question 44 — `CLF-U0442` | 🔁 Repeated in 3 Exam Sources
-*Topic: Topic 1.1: Cloud Economics & Benefits*
-
-**The AWS Cloud’s multiple Regions are an example of:**
-
-- A) Agility.
-- B) Global infrastructure.
-- C) Elasticity.
-- D) Pay-as-you-go pricing.
-
-<details>
-<summary><strong>Reveal Answer & Explanation (Question 44)</strong></summary>
-
-**Correct Answer:** `B`
-
-AWS Regions spread across the globe are part of the AWS global infrastructure, which includes Regions, Availability Zones, and edge locations designed to deliver services worldwide.
-Agility refers to the speed at which customers can provision resources and iterate on new functionality, which is a cloud adoption benefit rather than a characteristic of physical infrastructure placement. Elasticity refers to dynamically scaling resources up or down in response to demand, which is a compute and capacity concept unrelated to the geographic distribution of Regions. Pay-as-you-go pricing is a billing model where customers pay only for what they consume, which is a commercial benefit rather than an infrastructure concept.
-
-</details>
-
----
-
-### Question 45 — `CLF-U0444` | 🔁 Repeated in 3 Exam Sources
+### Question 42 — `CLF-U0444` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.1: Cloud Economics & Benefits*
 
 **Which AWS characteristics make AWS cost effective for a workload with dynamic user demand? (Select TWO)**
@@ -1374,7 +1290,7 @@ Agility refers to the speed at which customers can provision resources and itera
 - E) Reliability.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 45)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 42)</strong></summary>
 
 **Correct Answer:** `C, D`
 
@@ -1385,73 +1301,7 @@ High availability ensures that applications remain accessible despite failures b
 
 ---
 
-### Question 46 — `CLF-U0450` | 🔁 Repeated in 3 Exam Sources
-*Topic: Topic 1.1: Cloud Economics & Benefits*
-
-**When architecting cloud applications, which of the following are a key design principle?**
-
-- A) Use the largest instance possible.
-- B) Provision capacity for peak load.
-- C) Use the Scrum development process.
-- D) Implement elasticity.
-
-<details>
-<summary><strong>Reveal Answer & Explanation (Question 46)</strong></summary>
-
-**Correct Answer:** `D`
-
-Elasticity is a key cloud design principle that means automatically scaling compute resources up or down based on actual demand, avoiding over-provisioning and reducing costs compared to traditional fixed-capacity infrastructure.
-Using the largest instance possible is the opposite of good cloud design, as it leads to over-provisioning and unnecessary cost rather than matching capacity to actual demand. Provisioning capacity for peak load is a traditional on-premises approach that results in idle resources during normal periods, which cloud elasticity is specifically designed to replace. Using the Scrum development process is a software delivery methodology unrelated to cloud architecture design principles.
-
-</details>
-
----
-
-### Question 47 — `CLF-U0451` | 🔁 Repeated in 3 Exam Sources
-*Topic: Topic 1.1: Cloud Economics & Benefits*
-
-**Which AWS feature will reduce the customer’s total cost of ownership (TCO)?**
-
-- A) Shared responsibility security model.
-- B) Single tenancy.
-- C) Elastic computing.
-- D) Encryption.
-
-<details>
-<summary><strong>Reveal Answer & Explanation (Question 47)</strong></summary>
-
-**Correct Answer:** `C`
-
-Elastic computing lets customers match resource capacity to actual demand, scaling up during peaks and down during lulls, eliminating payment for idle infrastructure and directly reducing total cost of ownership.
-The Shared Responsibility Model defines the division of security duties between AWS and the customer, but does not itself reduce infrastructure costs or TCO. Single tenancy dedicates hardware to a single customer, which typically increases cost compared to the shared multi-tenant model that underpins AWS's economies of scale. Encryption is a security control that protects data at rest and in transit, and has no direct impact on infrastructure costs or TCO.
-
-</details>
-
----
-
-### Question 48 — `CLF-U0464` | 🔁 Repeated in 3 Exam Sources
-*Topic: Topic 1.1: Cloud Economics & Benefits*
-
-**A company's web application currently has tight dependencies on underlying components, so when one component fails the entire web application fails. Applying which AWS Cloud design principle will address the current design issue?**
-
-- A) Implementing elasticity enabling the application to scale up or scale down as demand changes.
-- B) Enabling several EC2 instances to run in parallel to achieve better performance.
-- C) Focusing on decoupling components by isolating them and ensuring individual components can function when other components.
-- D) Doubling EC2 computing resources to increase system fault tolerance.
-
-<details>
-<summary><strong>Reveal Answer & Explanation (Question 48)</strong></summary>
-
-**Correct Answer:** `C`
-
-Decoupling components means isolating them so each can function independently, communicating through asynchronous interfaces rather than direct calls, so a failure in one component does not bring down the entire application.
-Implementing elasticity addresses scaling resources up and down in response to demand, but does not resolve the tight dependency problem that causes cascading failures. Enabling EC2 instances to run in parallel improves performance and throughput but does not isolate components from each other's failures. Doubling EC2 computing resources adds capacity but does not change the tightly coupled architecture, meaning a component failure would still take down the whole application.
-
-</details>
-
----
-
-### Question 49 — `CLF-U0466` | 🔁 Repeated in 3 Exam Sources
+### Question 43 — `CLF-U0466` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.1: Cloud Economics & Benefits*
 
 **How can a company reduce its Total Cost of Ownership (TCO) using AWS?**
@@ -1462,7 +1312,7 @@ Implementing elasticity addresses scaling resources up and down in response to d
 - D) By having AWS manage applications.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 49)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 43)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -1473,7 +1323,7 @@ Having no responsibility for third-party license costs is not a general AWS bene
 
 ---
 
-### Question 50 — `CLF-U0471` | 🔁 Repeated in 3 Exam Sources
+### Question 44 — `CLF-U0471` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.1: Cloud Economics & Benefits*
 
 **A company will be moving from an on-premises data center to the AWS Cloud. What would be one financial difference after the move?**
@@ -1484,7 +1334,7 @@ Having no responsibility for third-party license costs is not a general AWS bene
 - D) Elimination of upfront capital expense (capex) and elimination of variable operational expense ( opex ).
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 50)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 44)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -1495,7 +1345,7 @@ Moving from variable operational expense (opex) to upfront capital expense (cape
 
 ---
 
-### Question 51 — `CLF-U0480` | 🔁 Repeated in 3 Exam Sources
+### Question 45 — `CLF-U0480` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.1: Cloud Economics & Benefits*
 
 **A solution that is able to support growth in users, traffic, or data size with no drop in performance aligns with which cloud architecture principle?**
@@ -1506,7 +1356,7 @@ Moving from variable operational expense (opex) to upfront capital expense (cape
 - D) Design for failure.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 51)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 45)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -1517,7 +1367,7 @@ Think parallel refers to the principle of designing systems to handle tasks simu
 
 ---
 
-### Question 52 — `CLF-U0481` | 🔁 Repeated in 3 Exam Sources
+### Question 46 — `CLF-U0481` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.1: Cloud Economics & Benefits*
 
 **Which AWS Cloud benefit eliminates the need for users to try estimating future infrastructure usage?**
@@ -1528,7 +1378,7 @@ Think parallel refers to the principle of designing systems to handle tasks simu
 - D) Lower variable costs due to massive economies of scale.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 52)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 46)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -1539,7 +1389,7 @@ Easy and fast deployment of applications in multiple Regions is a benefit of AWS
 
 ---
 
-### Question 53 — `CLF-U0485` | 🔁 Repeated in 3 Exam Sources
+### Question 47 — `CLF-U0485` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.1: Cloud Economics & Benefits*
 
 **What is an example of agility in the AWS Cloud?**
@@ -1550,7 +1400,7 @@ Easy and fast deployment of applications in multiple Regions is a benefit of AWS
 - D) Decreased acquisition time for new compute resources.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 53)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 47)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -1561,7 +1411,7 @@ Access to multiple instance types is a flexibility benefit that allows customers
 
 ---
 
-### Question 54 — `CLF-U0599` | 🔁 Repeated in 3 Exam Sources
+### Question 48 — `CLF-U0599` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.1: Cloud Economics & Benefits*
 
 **Which of the following should be taken into account when performing a TCO analysis regarding the costs of running an application on AWS VS on-premises? (Choose TWO)**
@@ -1573,7 +1423,7 @@ Access to multiple instance types is a flexibility benefit that allows customers
 - E) Software compatibility.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 54)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 48)</strong></summary>
 
 **Correct Answer:** `A, B`
 
@@ -1584,7 +1434,7 @@ Amazon EBS computing power is an AWS service cost rather than an on-premises inf
 
 ---
 
-### Question 55 — `CLF-U0633` | 🔁 Repeated in 3 Exam Sources
+### Question 49 — `CLF-U0633` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.1: Cloud Economics & Benefits*
 
 **The financial benefits of using AWS are: (Select TWO)**
@@ -1596,7 +1446,7 @@ Amazon EBS computing power is an AWS service cost rather than an on-premises inf
 - E) Business credit lines for startups.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 55)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 49)</strong></summary>
 
 **Correct Answer:** `A, C`
 
@@ -1607,7 +1457,7 @@ Increased capital expenditure describes the opposite of an AWS financial benefit
 
 ---
 
-### Question 56 — `CLF-U0802` | 🔁 Repeated in 3 Exam Sources
+### Question 50 — `CLF-U0802` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.1: Cloud Economics & Benefits*
 
 **Which of the following services will help businesses ensure compliance in AWS?**
@@ -1618,7 +1468,7 @@ Increased capital expenditure describes the opposite of an AWS financial benefit
 - D) CloudTrail.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 56)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 50)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -1629,7 +1479,7 @@ Amazon CloudFront is a global content delivery network that caches and distribut
 
 ---
 
-### Question 57 — `CLF-U1445` | 🔁 Repeated in 3 Exam Sources
+### Question 51 — `CLF-U1445` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.1: Cloud Economics & Benefits*
 
 **Which AWS Cloud benefit is shown by an architecture’s ability to withstand failures with minimal downtime?**
@@ -1640,7 +1490,7 @@ Amazon CloudFront is a global content delivery network that caches and distribut
 - D) High availability
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 57)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 51)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -1666,7 +1516,7 @@ AWS Well-Archit
 
 ---
 
-### Question 58 — `CLF-U1465` | 🔁 Repeated in 3 Exam Sources
+### Question 52 — `CLF-U1465` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.2: AWS Cloud Adoption Framework (CAF 3.0)*
 
 **Which option is a perspective that includes foundational capabilities of the AWS Cloud Adoption Framework (AWS CAF)?**
@@ -1677,7 +1527,7 @@ AWS Well-Archit
 - D) Reliability
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 58)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 52)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -1697,7 +1547,7 @@ solution. Reliability is not a perspective of the AWS CAF, but
 
 ---
 
-### Question 59 — `CLF-U0207` | 🔁 Repeated in 3 Exam Sources
+### Question 53 — `CLF-U0207` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.3: AWS Well-Architected Framework*
 
 **Which of the following is a cloud architectural design principle?**
@@ -1708,7 +1558,7 @@ solution. Reliability is not a perspective of the AWS CAF, but
 - D) Use commercial database software.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 59)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 53)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -1719,7 +1569,7 @@ Scaling up not out describes vertical scaling, which is an on-premises approach 
 
 ---
 
-### Question 60 — `CLF-U0439` | 🔁 Repeated in 3 Exam Sources
+### Question 54 — `CLF-U0439` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.3: AWS Well-Architected Framework*
 
 **Which pillar of the AWS Well-Architected Framework provides recommendations to help customers select the right compute resources based on workload requirements?**
@@ -1730,7 +1580,7 @@ Scaling up not out describes vertical scaling, which is an on-premises approach 
 - D) Reliability.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 60)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 54)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -1741,7 +1591,7 @@ Operational Excellence focuses on running and monitoring systems to deliver busi
 
 ---
 
-### Question 61 — `CLF-U0445` | 🔁 Repeated in 3 Exam Sources
+### Question 55 — `CLF-U0445` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.3: AWS Well-Architected Framework*
 
 **An administrator needs to rapidly deploy a popular IT solution and start using it immediately. Where can the administrator find assistance?**
@@ -1752,7 +1602,7 @@ Operational Excellence focuses on running and monitoring systems to deliver busi
 - D) AWS Quick Start reference deployments.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 61)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 55)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -1763,7 +1613,7 @@ AWS Well-Architected Framework documentation provides architectural guidance and
 
 ---
 
-### Question 62 — `CLF-U0449` | 🔁 Repeated in 3 Exam Sources
+### Question 56 — `CLF-U0449` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.3: AWS Well-Architected Framework*
 
 **Which design principles for cloud architecture are recommended when re-architecting a large monolithic application? (Select TWO)**
@@ -1775,7 +1625,7 @@ AWS Well-Architected Framework documentation provides architectural guidance and
 - E) Design for scalability.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 62)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 56)</strong></summary>
 
 **Correct Answer:** `C, E`
 
@@ -1786,7 +1636,7 @@ Manual monitoring relies on human observation rather than automated alerting and
 
 ---
 
-### Question 63 — `CLF-U0459` | 🔁 Repeated in 3 Exam Sources
+### Question 57 — `CLF-U0459` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.3: AWS Well-Architected Framework*
 
 **Which of the following is an important architectural design principle when designing cloud applications?**
@@ -1797,7 +1647,7 @@ Manual monitoring relies on human observation rather than automated alerting and
 - D) Provision extra capacity.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 63)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 57)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -1808,7 +1658,7 @@ Using tightly coupled components is an anti-pattern in cloud architecture, as ti
 
 ---
 
-### Question 64 — `CLF-U0470` | 🔁 Repeated in 3 Exam Sources
+### Question 58 — `CLF-U0470` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.3: AWS Well-Architected Framework*
 
 **Which of the following is an AWS Cloud architecture design principle?**
@@ -1819,7 +1669,7 @@ Using tightly coupled components is an anti-pattern in cloud architecture, as ti
 - D) Implement vertical scaling.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 64)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 58)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -1830,7 +1680,7 @@ Implementing single points of failure is an anti-pattern that directly contradic
 
 ---
 
-### Question 65 — `CLF-U1305` | 🔁 Repeated in 3 Exam Sources
+### Question 59 — `CLF-U1305` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.3: AWS Well-Architected Framework*
 
 **Which pillar of the AWS Well-Architected Framework focuses on running workloads effectively, gaining operational insights, and continuously improving processes?**
@@ -1841,7 +1691,7 @@ Implementing single points of failure is an anti-pattern that directly contradic
 - D) Operational Excellence
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 65)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 59)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -1852,7 +1702,7 @@ Security focuses on protecting data, systems, and assets through access controls
 
 ---
 
-### Question 66 — `CLF-U1309` | 🔁 Repeated in 3 Exam Sources
+### Question 60 — `CLF-U1309` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.3: AWS Well-Architected Framework*
 
 **Which pillar of the AWS Well-Architected Framework focuses on the ability to run workloads effectively, gain insight into operations, and continuously improve supporting processes and procedures?**
@@ -1863,7 +1713,7 @@ Security focuses on protecting data, systems, and assets through access controls
 - D) Performance Efficiency
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 66)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 60)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -1874,7 +1724,7 @@ Operational Excellence focuses on running workloads effectively, monitoring oper
 
 ---
 
-### Question 67 — `CLF-U2529` | 🔁 Repeated in 3 Exam Sources
+### Question 61 — `CLF-U2529` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.3: AWS Well-Architected Framework*
 
 **A company wants to protect its AWS Cloud information, systems, and assets while performing risk assessment and mitigation tasks. Which pillar of the AWS Well-Architected Framework is supported by these goals?**
@@ -1885,7 +1735,7 @@ Operational Excellence focuses on running workloads effectively, monitoring oper
 - D) Performance efficiency
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 67)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 61)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -1904,61 +1754,7 @@ This question (# 194) is directly sourced from authentic **Community Consensus P
 
 ---
 
-### Question 68 — `CLF-U0114` | 🔁 Repeated in 3 Exam Sources
-*Topic: Topic 1.4: AWS Global Infrastructure*
-
-**An organization has a legacy application designed using monolithic-based architecture. Which AWS Service can be used to decouple the components of the application?**
-
-- A) Amazon SQS.
-- B) Virtual Private Gateway.
-- C) AWS Artifact.
-- D) Amazon CloudFront.
-
-<details>
-<summary><strong>Reveal Answer & Explanation (Question 68)</strong></summary>
-
-**Correct Answer:** `A`
-
-Amazon SQS is a fully managed message queuing service that decouples application components by allowing each component to send and receive messages independently, enabling a monolithic application to be broken into loosely coupled parts that communicate asynchronously.
-Amazon SNS is a publish/subscribe messaging service that broadcasts messages to multiple subscribers simultaneously, which is useful for fan-out notification patterns but is not the primary service for decoupling monolithic application components through asynchronous message queuing. Amazon EventBridge is a serverless event bus that routes events between AWS services, SaaS applications, and custom applications based on event patterns; while it supports decoupled architectures, it is event-driven routing rather than a message queue for decoupling component dependencies in a monolithic application. AWS Step Functions is a serverless workflow orchestration service that coordinates multiple AWS services into structured workflows, which handles workflow state management rather than providing the message queuing mechanism needed to decouple monolithic application components.
-
-</details>
-
----
-
-### Question 69 — `CLF-U2481` | 🔁 Repeated in 3 Exam Sources
-*Topic: Topic 1.4: AWS Global Infrastructure*
-
-**What does the concept of agility mean in AWS Cloud computing? (Choose two.)**
-
-- A) The speed at which AWS resources are implemented
-- B) The speed at which AWS creates new AWS Regions
-- C) The ability to experiment quickly
-- D) The elimination of wasted capacity
-- E) The low cost of entry into cloud computing
-
-<details>
-<summary><strong>Reveal Answer & Explanation (Question 69)</strong></summary>
-
-**Correct Answer:** `AC`
-
-**Correct Answer: AC (The speed at which AWS resources are implemented, The ability to experiment quickly)**
-
-This question (# 136) is directly sourced from authentic **Community Consensus Pool** community discussions.
-**Why this is correct:** The scenario specifically tests AWS best practices. 'The speed at which AWS resources are implemented, The ability to experiment quickly' directly satisfies the architectural requirement defined in the prompt.
-
-**Key Option Breakdown:**
-- **Option A (The speed at which AWS resources are implemented)** [CORRECT]: Satisfies the prompt requirements directly.
-- **Option B (The speed at which AWS creates new AWS Regions)** [INCORRECT]: Does not meet the scenario requirements or introduces suboptimal design for this specific workload.
-- **Option C (The ability to experiment quickly)** [CORRECT]: Satisfies the prompt requirements directly.
-- **Option D (The elimination of wasted capacity)** [INCORRECT]: Does not meet the scenario requirements or introduces suboptimal design for this specific workload.
-- **Option E (The low cost of entry into cloud computing)** [INCORRECT]: Does not meet the scenario requirements or introduces suboptimal design for this specific workload.
-
-</details>
-
----
-
-### Question 70 — `CLF-U0249` | 🔁 Repeated in 3 Exam Sources
+### Question 62 — `CLF-U0249` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.5: High Availability, Fault Tolerance & Disaster Recovery*
 
 **Which disaster recovery scenario offers the lowest probability of down time?**
@@ -1969,7 +1765,7 @@ This question (# 136) is directly sourced from authentic **Community Consensus P
 - D) Multi-site active-active.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 70)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 62)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -1980,7 +1776,7 @@ Backup and restore has the highest recovery time of all DR strategies. Data is r
 
 ---
 
-### Question 71 — `CLF-U0477` | 🔁 Repeated in 3 Exam Sources
+### Question 63 — `CLF-U0477` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.5: High Availability, Fault Tolerance & Disaster Recovery*
 
 **Which feature of the AWS Cloud will support an international company’s requirement for low latency to all of its customers?**
@@ -1991,7 +1787,7 @@ Backup and restore has the highest recovery time of all DR strategies. Data is r
 - D) High availability.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 71)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 63)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -2002,7 +1798,7 @@ Fault tolerance refers to a system's ability to continue operating despite compo
 
 ---
 
-### Question 72 — `CLF-U0478` | 🔁 Repeated in 3 Exam Sources
+### Question 64 — `CLF-U0478` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 1.5: High Availability, Fault Tolerance & Disaster Recovery*
 
 **What are the benefits of developing and running a new application in the AWS Cloud compared to on-premises? (Select TWO)**
@@ -2014,12 +1810,227 @@ Fault tolerance refers to a system's ability to continue operating despite compo
 - E) AWS takes care of application security patching.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 72)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 64)</strong></summary>
 
 **Correct Answer:** `C, D`
 
 AWS makes it easy to architect for high availability using multi-AZ deployments, load balancers, and managed services, and the cloud's elasticity allows applications to scale up or down to match demand changes quickly.
 AWS does not automatically distribute all data globally by default, as data residency and replication are configuration choices the customer makes depending on the services and settings they select. AWS does not take care of operating the application, as customers remain responsible for deploying, managing, and maintaining their own application code and runtime environments. AWS does not take care of application security patching, as patching the application layer is the customer's responsibility under the Shared Responsibility Model.
+
+</details>
+
+---
+
+### Question 65 — `ACTUAL-393-Q041` | 🔁 Repeated in 2 Exam Sources
+*Topic: Topic 1.2: AWS Cloud Adoption Framework (CAF 3.0)*
+
+**A company is planning to migrate a monolithic application to AWS. The company wants to modernize the application by splitting it into microservices. The company will deploy the microservices on AWS. Which migration strategy should the company use?**
+
+- A) Rehost
+- B) Repurchase
+- C) Replatform
+- D) Refactor
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 65)</strong></summary>
+
+**Correct Answer:** `D`
+
+Refactoring involves re-architecting and modifying an application to take advantage of
+cloud-native features. In this case, the company wants to modernize a monolithic
+application by breaking it into microservices. This process aligns with the Refactor
+strategy, which is aimed at modernizing and re-architecting applications. Rehost,
+Repurchase, and Replatform do not involve the level of re-architecting needed to move
+from a monolithic to a microservices architecture.
+
+</details>
+
+---
+
+### Question 66 — `ACTUAL-393-Q053` | 🔁 Repeated in 2 Exam Sources
+*Topic: Topic 1.2: AWS Cloud Adoption Framework (CAF 3.0)*
+
+**Which options are perspectives that include foundational capabilities of the AWS Cloud Adoption Framework (AWS CAF)? (Select TWO.)**
+
+- A) Sustainability
+- B) Security
+- C) Operations
+- D) Performance efficiency
+- E) Reliability
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 66)</strong></summary>
+
+**Correct Answer:** `CD`
+
+The options that are perspectives that include foundational capabilities of the AWS Cloud
+Adoption Framework (AWS CAF) are operations and performance efficiency. The AWS
+CAF is a guidance that helps organizations design and travel an accelerated path to
+successful cloud adoption. The AWS CAF organizes the cloud adoption process into six
+areas of focus, called perspectives, which are business, people, governance, platform,
+security, and operations. Each perspective is divided into capabilities, which are further
+divided into skills and responsibilities. The operations perspective focuses on the
+management and monitoring of the cloud resources and applications, as well as the
+automation and optimization of the operational processes. The operations perspective
+capabilities are operations support, operations integration, and service management. The
+performance efficiency perspective focuses on the selection and configuration of the right
+cloud resources and services to meet the performance
+
+</details>
+
+---
+
+### Question 67 — `ACTUAL-393-Q392` | 🔁 Repeated in 2 Exam Sources
+*Topic: Topic 1.2: AWS Cloud Adoption Framework (CAF 3.0)*
+
+**Which perspective in the AWS Cloud Adoption Framework (AWS CAF) includes a capability for well-designed data and analytics architecture?**
+
+- A) Security
+- B) Governance
+- C) Operations
+- D) Platform
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 67)</strong></summary>
+
+**Correct Answer:** `C`
+
+The correct answer is D. Platform.
+The Platform perspective in the AWS Cloud Adoption Framework (AWS CAF) includes a
+capability for well-designed data and analytics architecture. This capability helps you
+design, implement, and optimize your data and analytics solutions on AWS, using services
+such as Amazon S3, Amazon Redshift, Amazon EMR, Amazon Kinesis, Amazon Athena,
+and Amazon QuickSight.A well-designed data and analytics architecture enables you to
+collect, store, process, analyze, and visualize data from various sources, and derive
+insights that can drive your business decisions12.
+The Security perspective does not include a capability for data and analytics architecture,
+but it does include a capability for data protection, which helps you secure your data at rest
+and in transit using encryption, key management, access control, and auditing13.
+The Governance perspective does not include a capability for data and analytics
+architecture, but it does include a capability for data g
+
+</details>
+
+---
+
+### Question 68 — `CLF-U1324` | 🔁 Repeated in 2 Exam Sources
+*Topic: Topic 1.2: AWS Cloud Adoption Framework (CAF 3.0)*
+
+**Which AWS Cloud Adoption Framework (AWS CAF) perspective focuses on designing and implementing new cloud environments with enterprise-grade scalability?**
+
+- A) Operations
+- B) Security
+- C) Platform
+- D) People
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 68)</strong></summary>
+
+**Correct Answer:** `C`
+
+The Platform perspective focuses on building an enterprise-grade, scalable cloud platform by designing the target architecture for networking, compute, storage, and database services, and establishing patterns for provisioning and managing cloud resources.
+The Operations perspective focuses on delivering and managing cloud services to meet day-to-day business needs through monitoring, incident management, and process improvement, not on designing the underlying platform architecture. The Security perspective focuses on protecting data and workloads through identity management, threat detection, and security controls, rather than designing the cloud infrastructure platform. The People perspective focuses on workforce readiness, organizational change, and skills development, which is unrelated to technical platform architecture.
+
+</details>
+
+---
+
+### Question 69 — `CLF-U1335` | 🔁 Repeated in 2 Exam Sources
+*Topic: Topic 1.2: AWS Cloud Adoption Framework (CAF 3.0)*
+
+**A company wants to move its on-premises application to AWS as quickly as possible with minimal changes to the existing code. Which migration strategy does this describe?**
+
+- A) Replatform
+- B) Refactor
+- C) Rehost
+- D) Repurchase
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 69)</strong></summary>
+
+**Correct Answer:** `C`
+
+Rehosting, also known as lift and shift, involves moving an application to the cloud without making any changes to the application code or architecture, making it the fastest migration strategy for getting workloads into AWS.
+Replatforming involves making targeted optimizations during migration, such as moving a database to a managed service like Amazon RDS, which requires some changes beyond a simple lift and shift. Refactoring involves redesigning the application to take advantage of cloud-native features such as serverless computing or microservices, which requires significant development effort and is not a minimal-change approach. Repurchasing involves replacing the existing application with a different product, typically a SaaS solution, which is not a strategy for moving existing code to AWS.
+
+</details>
+
+---
+
+### Question 70 — `CLF-U1437` | 🔁 Repeated in 2 Exam Sources
+*Topic: Topic 1.2: AWS Cloud Adoption Framework (CAF 3.0)*
+
+**Which options are AWS Cloud Adoption Framework (AWS CAF) cloud transformation journey recommendations? (Select TWO.)**
+
+- A) Envision phase
+- B) AIign phase
+- C) Assess phase
+- D) Mobilize phase
+- E) Migrate and modernize phase
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 70)</strong></summary>
+
+**Correct Answer:** `AB`
+
+The AWS Cloud Adoption Framework (AWS CAF) cloud transformation journey is a fourphase process that helps customers plan and execute their cloud migration and digital
+transformation. The four phases are:
+Envision phase: This phase focuses on demonstrating how cloud will help accelerate the
+business outcomes of the customer. It involves identifying and prioritizing transformation
+opportunities across four domains: business, people, governance, and platform. It also
+involves associating the transformation initiatives with key stakeholders and measurable
+business outcomes1.
+Align phase: This phase focuses on identifying capability gaps across six perspectives:
+business, people, governance, platform, security, and operations. It also involves
+identifying cross-organizational dependencies and surfacing stakeholder concerns and
+challenges. The goal of this phase is to create strategies for improving the cloud readiness,
+ensure stakeholder alignment, and facilitate relevant organizational cha
+
+</details>
+
+---
+
+### Question 71 — `CLF-U1311` | 🔁 Repeated in 1 Exam Sources
+*Topic: Topic 1.2: AWS Cloud Adoption Framework (CAF 3.0)*
+
+**Which TWO of the following are perspectives of the AWS Cloud Adoption Framework (AWS CAF)?**
+
+- A) Governance
+- B) Financial
+- C) People
+- D) Infrastructure
+- E) Agility
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 71)</strong></summary>
+
+**Correct Answer:** `A, C`
+
+The AWS CAF organizes guidance into six perspectives: Business, People, Governance, Platform, Security, and Operations. Governance focuses on orchestrating cloud initiatives while maximizing organizational benefits and minimizing transformation-related risks, and People focuses on developing an organization-wide change management strategy and building cloud skills across the workforce.
+Financial is not one of the six AWS CAF perspectives; financial and cost-related guidance falls within the Business perspective, which addresses how cloud adoption drives business value and return on investment rather than existing as its own separate financial perspective. Infrastructure is not one of the six AWS CAF perspectives; guidance on building and provisioning the technology foundation for cloud workloads falls under the Platform perspective rather than a perspective named Infrastructure. Agility is a benefit and characteristic of cloud computing but is not one of the six CAF perspectives; it does not appear in the CAF framework structure alongside Business, People, Governance, Platform, Security, and Operations.
+
+</details>
+
+---
+
+### Question 72 — `CLF-U1312` | 🔁 Repeated in 1 Exam Sources
+*Topic: Topic 1.2: AWS Cloud Adoption Framework (CAF 3.0)*
+
+**According to the AWS Cloud Adoption Framework (AWS CAF), which TWO of the following are benefits that organizations can achieve through successful cloud adoption?**
+
+- A) Reduced business risk
+- B) Elimination of all operational expenditure
+- C) Improved environmental, social, and governance (ESG) performance
+- D) Immediate compliance with all regulatory requirements
+- E) Guaranteed elimination of all security vulnerabilities
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 72)</strong></summary>
+
+**Correct Answer:** `A, C`
+
+The AWS CAF identifies four key benefits of cloud adoption: reduced business risk through improved reliability, increased performance, and enhanced security posture; improved ESG performance through reduced carbon footprint and greater energy efficiency enabled by cloud infrastructure; increased revenue through the ability to develop and deliver new products faster; and increased operational efficiency through optimized cost structures and workforce productivity.
+Elimination of all operational expenditure is not an AWS CAF benefit; moving to the cloud converts large upfront capital expenditure to variable operational expenditure rather than eliminating ongoing costs, as customers continue to pay for cloud services based on actual consumption and operational costs such as staffing and tooling remain. Immediate compliance with all regulatory requirements is not a benefit the CAF promises; while AWS provides compliance certifications and tools to support customers' compliance programs, each customer is still responsible for applying the appropriate controls to their own workloads and meeting their specific regulatory obligations. Guaranteed elimination of all security vulnerabilities is not a CAF-defined benefit; while cloud adoption can improve the security posture of an organization through shared responsibility and access to advanced security services, the CAF does not promise that cloud migration eliminates all security risk.
 
 </details>
 
@@ -8349,66 +8360,66 @@ AWS Partner Network Technology Partners develop software, tools, and services th
 | **10** | `CLF-U0448` | D1 | 4x | **`B, C`** | **160** | `CLF-U0888` | D2 | 3x | **`C`** |
 | **11** | `CLF-U0011` | D1 | 4x | **`A`** | **161** | `CLF-U0964` | D2 | 3x | **`A`** |
 | **12** | `CLF-U0019` | D1 | 4x | **`D`** | **162** | `CLF-U1469` | D2 | 3x | **`D`** |
-| **13** | `CLF-U0036` | D1 | 4x | **`A`** | **163** | `CLF-U0242` | D3 | 5x | **`B`** |
-| **14** | `CLF-U0043` | D1 | 4x | **`B`** | **164** | `CLF-U0001` | D3 | 4x | **`D`** |
-| **15** | `CLF-U0044` | D1 | 4x | **`A`** | **165** | `CLF-U0002` | D3 | 4x | **`D`** |
-| **16** | `CLF-U0045` | D1 | 4x | **`B, E`** | **166** | `CLF-U0020` | D3 | 4x | **`B`** |
-| **17** | `CLF-U0055` | D1 | 4x | **`B, D`** | **167** | `CLF-U0042` | D3 | 4x | **`A`** |
-| **18** | `CLF-U0059` | D1 | 4x | **`D, E`** | **168** | `CLF-U0051` | D3 | 4x | **`A`** |
-| **19** | `CLF-U0060` | D1 | 4x | **`D`** | **169** | `CLF-U0062` | D3 | 4x | **`D`** |
-| **20** | `CLF-U0083` | D1 | 4x | **`A, D`** | **170** | `CLF-U0066` | D3 | 4x | **`A`** |
-| **21** | `CLF-U0393` | D1 | 4x | **`C`** | **171** | `CLF-U0068` | D3 | 4x | **`A, C`** |
-| **22** | `CLF-U0398` | D1 | 4x | **`D`** | **172** | `CLF-U0091` | D3 | 4x | **`D`** |
-| **23** | `CLF-U0402` | D1 | 4x | **`A, B`** | **173** | `CLF-U0385` | D3 | 4x | **`B`** |
-| **24** | `CLF-U0403` | D1 | 4x | **`C`** | **174** | `CLF-U0397` | D3 | 4x | **`B`** |
-| **25** | `CLF-U0405` | D1 | 4x | **`D`** | **175** | `CLF-U0408` | D3 | 4x | **`D`** |
-| **26** | `CLF-U0406` | D1 | 4x | **`D`** | **176** | `CLF-U0418` | D3 | 4x | **`B`** |
-| **27** | `CLF-U0410` | D1 | 4x | **`C`** | **177** | `CLF-U0799` | D3 | 4x | **`C, E`** |
-| **28** | `CLF-U0414` | D1 | 4x | **`C, E`** | **178** | `CLF-U0810` | D3 | 4x | **`C`** |
-| **29** | `CLF-U0417` | D1 | 4x | **`A`** | **179** | `CLF-U0007` | D3 | 4x | **`B, C`** |
-| **30** | `CLF-U0420` | D1 | 4x | **`D`** | **180** | `CLF-U0012` | D3 | 4x | **`D`** |
-| **31** | `CLF-U0796` | D1 | 4x | **`B, E`** | **181** | `CLF-U0023` | D3 | 4x | **`B, D`** |
-| **32** | `CLF-U0817` | D1 | 4x | **`C, E`** | **182** | `CLF-U0033` | D3 | 4x | **`C`** |
-| **33** | `CLF-U0825` | D1 | 4x | **`B, C`** | **183** | `CLF-U0041` | D3 | 4x | **`D`** |
-| **34** | `CLF-U0828` | D1 | 4x | **`A`** | **184** | `CLF-U0048` | D3 | 4x | **`A, C`** |
-| **35** | `CLF-U0415` | D1 | 4x | **`C`** | **185** | `CLF-U0049` | D3 | 4x | **`A`** |
-| **36** | `CLF-U0004` | D1 | 3x | **`A, E`** | **186** | `CLF-U0052` | D3 | 4x | **`B`** |
-| **37** | `CLF-U0179` | D1 | 3x | **`C`** | **187** | `CLF-U0054` | D3 | 4x | **`C, E`** |
-| **38** | `CLF-U0383` | D1 | 3x | **`C`** | **188** | `CLF-U0077` | D3 | 4x | **`A, B`** |
-| **39** | `CLF-U0384` | D1 | 3x | **`A, E`** | **189** | `CLF-U0084` | D3 | 4x | **`C`** |
-| **40** | `CLF-U0386` | D1 | 3x | **`D`** | **190** | `CLF-U0106` | D3 | 4x | **`B`** |
-| **41** | `CLF-U0421` | D1 | 3x | **`D, E`** | **191** | `CLF-U0111` | D3 | 4x | **`C`** |
-| **42** | `CLF-U0424` | D1 | 3x | **`C`** | **192** | `CLF-U0570` | D3 | 4x | **`A`** |
-| **43** | `CLF-U0425` | D1 | 3x | **`D`** | **193** | `CLF-U0006` | D3 | 4x | **`B`** |
-| **44** | `CLF-U0442` | D1 | 3x | **`B`** | **194** | `CLF-U0016` | D3 | 4x | **`B`** |
-| **45** | `CLF-U0444` | D1 | 3x | **`C, D`** | **195** | `CLF-U0027` | D3 | 4x | **`A`** |
-| **46** | `CLF-U0450` | D1 | 3x | **`D`** | **196** | `CLF-U0028` | D3 | 4x | **`A`** |
-| **47** | `CLF-U0451` | D1 | 3x | **`C`** | **197** | `CLF-U0034` | D3 | 4x | **`A`** |
-| **48** | `CLF-U0464` | D1 | 3x | **`C`** | **198** | `CLF-U0039` | D3 | 4x | **`C`** |
-| **49** | `CLF-U0466` | D1 | 3x | **`A`** | **199** | `CLF-U0046` | D3 | 4x | **`A, C`** |
-| **50** | `CLF-U0471` | D1 | 3x | **`C`** | **200** | `CLF-U0047` | D3 | 4x | **`C`** |
-| **51** | `CLF-U0480` | D1 | 3x | **`B`** | **201** | `CLF-U0065` | D3 | 4x | **`A`** |
-| **52** | `CLF-U0481` | D1 | 3x | **`C`** | **202** | `CLF-U0087` | D3 | 4x | **`C, D`** |
-| **53** | `CLF-U0485` | D1 | 3x | **`D`** | **203** | `CLF-U0093` | D3 | 4x | **`A, D`** |
-| **54** | `CLF-U0599` | D1 | 3x | **`A, B`** | **204** | `CLF-U0804` | D3 | 4x | **`A`** |
-| **55** | `CLF-U0633` | D1 | 3x | **`A, C`** | **205** | `CLF-U0030` | D3 | 4x | **`A`** |
-| **56** | `CLF-U0802` | D1 | 3x | **`D`** | **206** | `CLF-U0098` | D3 | 4x | **`A, C`** |
-| **57** | `CLF-U1445` | D1 | 3x | **`D`** | **207** | `CLF-U0353` | D3 | 4x | **`B`** |
-| **58** | `CLF-U1465` | D1 | 3x | **`B`** | **208** | `CLF-U0038` | D3 | 4x | **`A`** |
-| **59** | `CLF-U0207` | D1 | 3x | **`B`** | **209** | `CLF-U0086` | D3 | 4x | **`C`** |
-| **60** | `CLF-U0439` | D1 | 3x | **`C`** | **210** | `CLF-U0095` | D3 | 4x | **`C`** |
-| **61** | `CLF-U0445` | D1 | 3x | **`D`** | **211** | `CLF-U0244` | D3 | 4x | **`D`** |
-| **62** | `CLF-U0449` | D1 | 3x | **`C, E`** | **212** | `CLF-U0029` | D3 | 3x | **`C`** |
-| **63** | `CLF-U0459` | D1 | 3x | **`A`** | **213** | `CLF-U0161` | D3 | 3x | **`C`** |
-| **64** | `CLF-U0470` | D1 | 3x | **`B`** | **214** | `CLF-U0166` | D3 | 3x | **`A`** |
-| **65** | `CLF-U1305` | D1 | 3x | **`B`** | **215** | `CLF-U0186` | D3 | 3x | **`B`** |
-| **66** | `CLF-U1309` | D1 | 3x | **`C`** | **216** | `CLF-U0252` | D3 | 3x | **`A, C`** |
-| **67** | `CLF-U2529` | D1 | 3x | **`B`** | **217** | `CLF-U0262` | D3 | 3x | **`D`** |
-| **68** | `CLF-U0114` | D1 | 3x | **`A`** | **218** | `CLF-U0443` | D3 | 3x | **`C`** |
-| **69** | `CLF-U2481` | D1 | 3x | **`AC`** | **219** | `CLF-U0571` | D3 | 3x | **`A`** |
-| **70** | `CLF-U0249` | D1 | 3x | **`D`** | **220** | `CLF-U0807` | D3 | 3x | **`B, E`** |
-| **71** | `CLF-U0477` | D1 | 3x | **`B`** | **221** | `CLF-U1478` | D3 | 3x | **`C`** |
-| **72** | `CLF-U0478` | D1 | 3x | **`C, D`** | **222** | `CLF-U0141` | D3 | 3x | **`C, D`** |
+| **13** | `CLF-U0043` | D1 | 4x | **`B`** | **163** | `CLF-U0242` | D3 | 5x | **`B`** |
+| **14** | `CLF-U0044` | D1 | 4x | **`A`** | **164** | `CLF-U0001` | D3 | 4x | **`D`** |
+| **15** | `CLF-U0045` | D1 | 4x | **`B, E`** | **165** | `CLF-U0002` | D3 | 4x | **`D`** |
+| **16** | `CLF-U0055` | D1 | 4x | **`B, D`** | **166** | `CLF-U0020` | D3 | 4x | **`B`** |
+| **17** | `CLF-U0059` | D1 | 4x | **`D, E`** | **167** | `CLF-U0042` | D3 | 4x | **`A`** |
+| **18** | `CLF-U0060` | D1 | 4x | **`D`** | **168** | `CLF-U0051` | D3 | 4x | **`A`** |
+| **19** | `CLF-U0083` | D1 | 4x | **`A, D`** | **169** | `CLF-U0062` | D3 | 4x | **`D`** |
+| **20** | `CLF-U0398` | D1 | 4x | **`D`** | **170** | `CLF-U0066` | D3 | 4x | **`A`** |
+| **21** | `CLF-U0402` | D1 | 4x | **`A, B`** | **171** | `CLF-U0068` | D3 | 4x | **`A, C`** |
+| **22** | `CLF-U0403` | D1 | 4x | **`C`** | **172** | `CLF-U0091` | D3 | 4x | **`D`** |
+| **23** | `CLF-U0405` | D1 | 4x | **`D`** | **173** | `CLF-U0385` | D3 | 4x | **`B`** |
+| **24** | `CLF-U0406` | D1 | 4x | **`D`** | **174** | `CLF-U0397` | D3 | 4x | **`B`** |
+| **25** | `CLF-U0410` | D1 | 4x | **`C`** | **175** | `CLF-U0408` | D3 | 4x | **`D`** |
+| **26** | `CLF-U0414` | D1 | 4x | **`C, E`** | **176** | `CLF-U0418` | D3 | 4x | **`B`** |
+| **27** | `CLF-U0417` | D1 | 4x | **`A`** | **177** | `CLF-U0799` | D3 | 4x | **`C, E`** |
+| **28** | `CLF-U0420` | D1 | 4x | **`D`** | **178** | `CLF-U0810` | D3 | 4x | **`C`** |
+| **29** | `CLF-U0796` | D1 | 4x | **`B, E`** | **179** | `CLF-U0007` | D3 | 4x | **`B, C`** |
+| **30** | `CLF-U0817` | D1 | 4x | **`C, E`** | **180** | `CLF-U0012` | D3 | 4x | **`D`** |
+| **31** | `CLF-U0825` | D1 | 4x | **`B, C`** | **181** | `CLF-U0023` | D3 | 4x | **`B, D`** |
+| **32** | `CLF-U0828` | D1 | 4x | **`A`** | **182** | `CLF-U0033` | D3 | 4x | **`C`** |
+| **33** | `CLF-U0415` | D1 | 4x | **`C`** | **183** | `CLF-U0041` | D3 | 4x | **`D`** |
+| **34** | `CLF-U0004` | D1 | 3x | **`A, E`** | **184** | `CLF-U0048` | D3 | 4x | **`A, C`** |
+| **35** | `CLF-U0179` | D1 | 3x | **`C`** | **185** | `CLF-U0049` | D3 | 4x | **`A`** |
+| **36** | `CLF-U0383` | D1 | 3x | **`C`** | **186** | `CLF-U0052` | D3 | 4x | **`B`** |
+| **37** | `CLF-U0384` | D1 | 3x | **`A, E`** | **187** | `CLF-U0054` | D3 | 4x | **`C, E`** |
+| **38** | `CLF-U0386` | D1 | 3x | **`D`** | **188** | `CLF-U0077` | D3 | 4x | **`A, B`** |
+| **39** | `CLF-U0421` | D1 | 3x | **`D, E`** | **189** | `CLF-U0084` | D3 | 4x | **`C`** |
+| **40** | `CLF-U0424` | D1 | 3x | **`C`** | **190** | `CLF-U0106` | D3 | 4x | **`B`** |
+| **41** | `CLF-U0425` | D1 | 3x | **`D`** | **191** | `CLF-U0111` | D3 | 4x | **`C`** |
+| **42** | `CLF-U0444` | D1 | 3x | **`C, D`** | **192** | `CLF-U0570` | D3 | 4x | **`A`** |
+| **43** | `CLF-U0466` | D1 | 3x | **`A`** | **193** | `CLF-U0006` | D3 | 4x | **`B`** |
+| **44** | `CLF-U0471` | D1 | 3x | **`C`** | **194** | `CLF-U0016` | D3 | 4x | **`B`** |
+| **45** | `CLF-U0480` | D1 | 3x | **`B`** | **195** | `CLF-U0027` | D3 | 4x | **`A`** |
+| **46** | `CLF-U0481` | D1 | 3x | **`C`** | **196** | `CLF-U0028` | D3 | 4x | **`A`** |
+| **47** | `CLF-U0485` | D1 | 3x | **`D`** | **197** | `CLF-U0034` | D3 | 4x | **`A`** |
+| **48** | `CLF-U0599` | D1 | 3x | **`A, B`** | **198** | `CLF-U0039` | D3 | 4x | **`C`** |
+| **49** | `CLF-U0633` | D1 | 3x | **`A, C`** | **199** | `CLF-U0046` | D3 | 4x | **`A, C`** |
+| **50** | `CLF-U0802` | D1 | 3x | **`D`** | **200** | `CLF-U0047` | D3 | 4x | **`C`** |
+| **51** | `CLF-U1445` | D1 | 3x | **`D`** | **201** | `CLF-U0065` | D3 | 4x | **`A`** |
+| **52** | `CLF-U1465` | D1 | 3x | **`B`** | **202** | `CLF-U0087` | D3 | 4x | **`C, D`** |
+| **53** | `CLF-U0207` | D1 | 3x | **`B`** | **203** | `CLF-U0093` | D3 | 4x | **`A, D`** |
+| **54** | `CLF-U0439` | D1 | 3x | **`C`** | **204** | `CLF-U0804` | D3 | 4x | **`A`** |
+| **55** | `CLF-U0445` | D1 | 3x | **`D`** | **205** | `CLF-U0030` | D3 | 4x | **`A`** |
+| **56** | `CLF-U0449` | D1 | 3x | **`C, E`** | **206** | `CLF-U0098` | D3 | 4x | **`A, C`** |
+| **57** | `CLF-U0459` | D1 | 3x | **`A`** | **207** | `CLF-U0353` | D3 | 4x | **`B`** |
+| **58** | `CLF-U0470` | D1 | 3x | **`B`** | **208** | `CLF-U0038` | D3 | 4x | **`A`** |
+| **59** | `CLF-U1305` | D1 | 3x | **`B`** | **209** | `CLF-U0086` | D3 | 4x | **`C`** |
+| **60** | `CLF-U1309` | D1 | 3x | **`C`** | **210** | `CLF-U0095` | D3 | 4x | **`C`** |
+| **61** | `CLF-U2529` | D1 | 3x | **`B`** | **211** | `CLF-U0244` | D3 | 4x | **`D`** |
+| **62** | `CLF-U0249` | D1 | 3x | **`D`** | **212** | `CLF-U0029` | D3 | 3x | **`C`** |
+| **63** | `CLF-U0477` | D1 | 3x | **`B`** | **213** | `CLF-U0161` | D3 | 3x | **`C`** |
+| **64** | `CLF-U0478` | D1 | 3x | **`C, D`** | **214** | `CLF-U0166` | D3 | 3x | **`A`** |
+| **65** | `ACTUAL-393-Q041` | D1 | 2x | **`D`** | **215** | `CLF-U0186` | D3 | 3x | **`B`** |
+| **66** | `ACTUAL-393-Q053` | D1 | 2x | **`CD`** | **216** | `CLF-U0252` | D3 | 3x | **`A, C`** |
+| **67** | `ACTUAL-393-Q392` | D1 | 2x | **`C`** | **217** | `CLF-U0262` | D3 | 3x | **`D`** |
+| **68** | `CLF-U1324` | D1 | 2x | **`C`** | **218** | `CLF-U0443` | D3 | 3x | **`C`** |
+| **69** | `CLF-U1335` | D1 | 2x | **`C`** | **219** | `CLF-U0571` | D3 | 3x | **`A`** |
+| **70** | `CLF-U1437` | D1 | 2x | **`AB`** | **220** | `CLF-U0807` | D3 | 3x | **`B, E`** |
+| **71** | `CLF-U1311` | D1 | 1x | **`A, C`** | **221** | `CLF-U1478` | D3 | 3x | **`C`** |
+| **72** | `CLF-U1312` | D1 | 1x | **`A, C`** | **222** | `CLF-U0141` | D3 | 3x | **`C, D`** |
 | **73** | `CLF-U0013` | D2 | 4x | **`D`** | **223** | `CLF-U0879` | D3 | 3x | **`A, C`** |
 | **74** | `CLF-U0032` | D2 | 4x | **`D, E`** | **224** | `CLF-U0082` | D3 | 3x | **`A`** |
 | **75** | `CLF-U0057` | D2 | 4x | **`A`** | **225** | `CLF-U0107` | D3 | 3x | **`A`** |
