@@ -1,100 +1,106 @@
 <div dir="rtl">
 
-# 🗄️🌐 Domain 3 (الجزء التاني): Databases & Networking — قواعد البيانات والشبكات
+# Domain 3 (الجزء الثاني): Databases & Networking — قواعد البيانات وهندسة الشبكات
 
-في الجزء ده هنتعرف على إزاي AWS بتخزن البيانات المنظمة (**Databases**) وإزاي بتبني شبكتك وتوصل موقعك للعالم كله بأسرع وقت وأعلى أمان (**Networking & Content Delivery**).
+يتناول هذا الجزء الثاني من المجال الثالث (`Cloud Technology and Services`) محورين أساسيين في أي معمارية سحابية: **قواعد البيانات المُدارة (`Managed Databases`)** بمختلف أنواعها، و **هندسة الشبكات وتوصيل المحتوى العالمي (`Networking & Content Delivery`)**.
 
 ---
 
-## 1️⃣ قواعد البيانات (AWS Database Services)
+## أولاً: قواعد البيانات في AWS (`AWS Database Services`)
 
-الأول، إيه الفرق ببساطة بين **SQL (Relational)** و **NoSQL (Non-Relational)**؟
-* **SQL (Relational):** بيانات متنظمة في **جداول وصفوف وأعمدة** زي الإكسيل بالظبط، وكل جدول مربوط بالتاني (زي جدول العملاء مربوط بجدول الطلبات).
-* **NoSQL (Non-Relational):** بيانات مرنة من غير جداول ثابتة (ممكن تبقى **Key-Value** زي القاموس أو ملفات **JSON**)، وسريعة جداً جداً في التوسع!
+تتبنى AWS مبدأ **قواعد البيانات المصممة لغرض محدد (`Purpose-Built Databases`)**، أي اختيار نوع قاعدة البيانات الأنسب لطبيعة البيانات بدلاً من حشر جميع التطبيقات في نوع واحد.
 
-### 🗂️ خريطة خدمات الـ Databases في AWS:
+### 1. الفرق الأساسي بين `Relational (SQL)` و `Non-Relational (NoSQL)`
+* **قواعد البيانات العلائقية (`Relational / SQL`):** تخزّن البيانات في جداول منظمة (صفوف وأعمدة) ذات هيكل مخطط صارم (`Fixed Schema`) وعلاقات واضحة بين الجداول، وتدعم معاملات دقيقة (`ACID Transactions`). مثالية للأنظمة المالية، والمخازن، وتطبيقات الـ ERP.
+* **قواعد البيانات غير العلائقية (`Non-Relational / NoSQL`):** تخزّن البيانات بهياكل مرنة (`Flexible Schema`) مثل أزواج المفتاح والقيمة (`Key-Value`) أو مستندات `JSON` أو الرسوم البيانية (`Graphs`). مصممة للتوسع الأفقي الهائل (`Horizontal Scaling`) وزمن الاستجابة فائق الانخفاض.
 
-| الخدمة | النوع | الشرح بالعامية والمثال المصري |
+### 2. خريطة خدمات قواعد البيانات المُدارة في AWS
+
+| الخدمة | التصنيف | الشرح التفصيلي وحالة الاستخدام |
 | :--- | :---: | :--- |
-| **`Amazon RDS`** (Relational Database Service) | **SQL (Managed)** | **داتابيز SQL جاهزة ومدارة من AWS:** بتدعم 6 محركات مشهورة (`MySQL`, `PostgreSQL`, `MariaDB`, `Oracle`, `SQL Server`, `Db2`). AWS بتعملك الـ **Backups** وتحديثات الـ **OS Patching** أوتوماتيك! |
-| **`Amazon Aurora`** | **SQL (Cloud-Native)** | **الوحش بتاع AWS!** داتابيز SQL معمولة مخصوص للكلاود، متوافقة مع `MySQL` و `PostgreSQL`، **أسرع 5 مرات من MySQL و 3 مرات من PostgreSQL**، وبتخزن 6 نسخ من بياناتك عبر 3 **AZs** أوتوماتيك! |
-| **`Amazon DynamoDB`** | **NoSQL (Key-Value)** | **صاروخ الـ NoSQL والـ Serverless!** بترد في **Single-digit milliseconds** مهما كان حجم البيانات، ومش بتدير فيها أي سيرفرات. (لو عايزها أسرع 10 مرات في القراءة بـ **Microseconds** بنحط قدامها **`DynamoDB Accelerator — DAX`**). |
-| **`Amazon ElastiCache`** | **In-Memory Cache** | **ذاكرة سريعة جداً (`Redis` / `Memcached`)** بتتحط قدام الداتابيز عشان تشيل الضغط عنها وتحفظ نتايج البحث المتكررة (**Sub-millisecond latency**). |
-| **`Amazon Redshift`** | **Data Warehouse (OLAP)** | **مخزن البيانات الضخمة للتحليلات والتقارير (Business Intelligence):** مش للتطبيق اليومي العادي، ده عشان تحلل تيرابايتس وبيتابايتس من بيانات المبيعات لآخر 10 سنين وتطلع تقارير للإدارة! |
-| **`Amazon DocumentDB`** | **Document (NoSQL)** | نسخة مدارة من AWS متوافقة مع **`MongoDB`** لتخزين ملفات الـ JSON. |
-| **`Amazon Neptune`** | **Graph Database** | **داتابيز العلاقات والشبكات:** ممتازة لشبكات التواصل الاجتماعي (مين صاحب مين؟)، وأنظمة التوصيات (**Recommendation Engines**)، وكشف الاحتيال (**Fraud Detection**). |
-| **`Amazon MemoryDB`** | **In-Memory (Durable)** | زي Redis بس بيحفظ البيانات بشكل دائم (**Durable**) كداتابيز أساسية. |
-| **`AWS DMS`** (Database Migration Service) | **Migration** | **عربية النقل للداتابيز:** بتنقل الداتابيز بتاعتك من شركتك (**On-Premises**) لـ AWS بأقل وقت توقف (**Near-zero downtime**)، وتقدر تحول حتى من Oracle لـ PostgreSQL! |
+| **`Amazon RDS`** (Relational Database Service) | **SQL (`OLTP`)** | خدمة مُدارة بالكامل لتشغيل قواعد البيانات العلائقية القياسية. تدعم 6 محركات معروفة: **`MySQL`, `PostgreSQL`, `MariaDB`, `Oracle`, `Microsoft SQL Server`, و `IBM Db2`**. تتولى AWS أتمتة النسخ الاحتياطي، وتحديثات نظام التشغيل (`OS Patching`)، والتوافر العالي، مما يقلل العبء التشغيلي مقارنة بتشغيل قاعدة البيانات يدوياً على `EC2`. |
+| **`Amazon Aurora`** | **SQL (Cloud-Native)** | قاعدة بيانات علائقية طورتها AWS خصيصاً للسحابة، متوافقة تماماً مع **`MySQL`** و **`PostgreSQL`**. توفر أداءً **أسرع حتى 5 مرات من MySQL وحتى 3 مرات من PostgreSQL** بتكلفة أقل بكثير من القواعد التجارية. تقوم تلقائياً بتخزين **6 نسخ** من بياناتك موزعة على **3 `AZs`** وتتوسع تخزينياً تلقائياً حتى **128 TB**. |
+| **`Amazon DynamoDB`** | **NoSQL (Key-Value)** | قاعدة بيانات غير علائقية **مُدارة بالكامل و `Serverless`**. تضمن أداءً ثابتاً بزمن استجابة في حدود **أجزاء من الملي ثانية (`Single-digit millisecond latency`)** مهما بلغ حجم البيانات أو عدد الطلبات (ملايين الطلبات في الثانية). تدعم النسخ العالمي متعدد المناطق (**`DynamoDB Global Tables`**). |
+| **`DynamoDB Accelerator (DAX)`** | **In-Memory Cache** | طبقة تخزين مؤقت في الذاكرة مُدارة بالكامل ومصممة خصيصاً لـ `DynamoDB`، تحسّن سرعة القراءة بمقدار **10 أضعاف** لتصل إلى **الميكروثانية (`Microseconds`)**. |
+| **`Amazon ElastiCache`** | **In-Memory Cache** | خدمة مُدارة لتشغيل محركات التخزين المؤقت في الذاكرة **`Redis`** و **`Memcached`**. توضع أمام قواعد البيانات (`RDS` أو غيرها) لحفظ نتائج الاستعلامات المتكررة وتخفيف الضغط عن قاعدة البيانات الرئيسية (`Sub-millisecond latency`). |
+| **`Amazon Redshift`** | **Data Warehouse (`OLAP`)** | مستودع بيانات سحابي مُدار مخصص **لتحليلات البيانات الضخمة وذكاء الأعمال (`Business Intelligence / Analytics`)** على نطاق البيتابايت (`Petabyte-scale`). يُستخدم للاستعلامات التحليلية المعقدة وإعداد التقارير التاريخية، وليس للمعاملات اليومية للتطبيق (`OLTP`). |
+| **`Amazon DocumentDB`** | **NoSQL (Document)** | قاعدة بيانات مستندات مُدارة بالكامل ومتوافقة مع واجهات برمجة **`MongoDB`** لتخزين وفهرسة بيانات `JSON` بسرعة وقابلية توسع عالية. |
+| **`Amazon Neptune`** | **Graph Database** | قاعدة بيانات رسوم بيانية مُدارة، مصممة خصيصاً للبيانات شديدة الترابط والعلاقات المعقدة مثل **الشبكات الاجتماعية (`Social Networks`)، ومحركات التوصية (`Recommendation Engines`)، وكشف الاحتيال المالي (`Fraud Detection`)**. |
+| **`Amazon MemoryDB`** | **In-Memory (Durable)** | قاعدة بيانات في الذاكرة متوافقة مع `Redis` لكنها توفر **متانة دائمة (`Multi-AZ Durability`)** تتيح استخدامها كقاعدة بيانات أساسية (`Primary Database`) وليست مجرد ذاكرة مؤقتة. |
+| **`AWS DMS`** (Database Migration Service) | **Migration** | خدمة لنقل قواعد البيانات من البيئة المحلية (`On-Premises`) إلى AWS **بأقل زمن توقف ممكن (`Near-zero downtime`)** مع بقاء قاعدة البيانات المصدر تعمل طوال فترة النقل. تدعم النقل المتجانس (مثل `MySQL -> MySQL`) وغير المتجانس (مثل `Oracle -> Aurora PostgreSQL` بالتعاون مع أداة `AWS SCT`). |
 
 > [!IMPORTANT]
-> **فرق مهم جداً في الامتحان داخل `Amazon RDS`:**
-> * **`Multi-AZ`:** نسخة احتياطية متزامنة في **AZ** تانية عشان **High Availability / Disaster Recovery** (لو الداتابيز الأساسية وقعت، التانية تشتغل مكانها أوتوماتيك — **Failover**). **ما تقدرش تقرأ منها!**
-> * **`Read Replicas`:** نسخ للقراءة بس عشان **Performance / Read Scaling** (تخفف ضغط القراءة والتقارير عن الداتابيز الأساسية!).
+> **تمييز حاسم داخل `Amazon RDS` يتكرر في الاختبار:**
+> * **`RDS Multi-AZ Deployment`:** ينشئ نسخة احتياطية متزامنة (`Synchronous Standby`) في **`Availability Zone`** أخرى. الهدف الوحيد هو **التوافر العالي والتعافي التلقائي (`High Availability & Automatic Failover`)** عند تعطل القاعدة الأساسية. **لا يمكن توجيه استعلامات القراءة إلى النسخة الاحتياطية.**
+> * **`RDS Read Replicas`:** تنشئ نسخاً غير متزامنة (`Asynchronous`) مخصصة **للقراءة فقط**. الهدف هو **تحسين الأداء وتوزيع ضغط القراءة والتقارير (`Read Scaling / Performance`)** بعيداً عن قاعدة البيانات الرئيسية.
 
 ---
 
-## 2️⃣ الشبكات وتوصيل المحتوى (Networking & Content Delivery)
+## ثانياً: هندسة الشبكات وتوصيل المحتوى (`Networking & Content Delivery`)
 
-### 🏙️ 1. `Amazon VPC` (Virtual Private Cloud)
-تخيل الـ **VPC** كأنها **مدينتك أو كومباوندك الخاص المعزول** جوه AWS. إنت اللي بترسم الشوارع وتتحكم مين يدخل ومين يخرج:
+### 1. السحابة الخاصة الافتراضية (`Amazon VPC` — Virtual Private Cloud)
+تُمكّنك خدمة **`Amazon VPC`** من إنشاء قسم شبكي خاص ومعزول منطقياً داخل سحابة AWS، تتحكم فيه بالكامل في نطاق عناوين الـ `IP`، والشبكات الفرعية (`Subnets`)، وجداول التوجيه (`Route Tables`)، وبوابات الاتصال.
 
-* **Public Subnet:** شارع ليه بوابة مباشرة على الإنترنت (**Internet Gateway — IGW**). بنحط فيه السيرفرات اللي الناس بتدخل عليها (زي الـ Web Servers و الـ Load Balancer).
-* **Private Subnet:** شارع داخلي مقفول محدش من الإنترنت يقدر يدخله مباشرة. بنحط فيه الداتابيز (`RDS`) والبيانات السرية.
-* **`Internet Gateway (IGW)`:** **البوابة الرئيسية** اللي بتوصل الـ VPC بالإنترنت العام.
-* **`NAT Gateway`:** لو سيرفر في الـ **Private Subnet** محتاج ينزل تحديث (**Update**) من الإنترنت، بيخرج عن طريق الـ **NAT Gateway** (يعني يخرج للإنترنت يجيب حاجة ويرجع، **بس محدش من الإنترنت يقدر يبدأ اتصال معاه من برة!**).
-* **`VPC Peering`:** وصلة خاصة بتربط **2 VPCs** ببعض عشان يكلموا بعض بشكل خاص من غير الإنترنت العام.
-* **`AWS Transit Gateway`:** **ميدان التحرير / المركز الرئيسي (Hub-and-Spoke)!** لو عندك عشرات الـ VPCs وشبكة شركتك On-Premises وعايز تربطهم كلهم ببعض بطريقة منظمة بدل ما تعمل مئات الوصلات!
-* **`VPC Endpoints` (`AWS PrivateLink`):** بتخلي سيرفراتك جوه الـ Private Subnet تكلم خدمات AWS (زي `S3` أو `DynamoDB`) **عن طريق شبكة AWS الداخلية الخاصة** من غير ما تخرج على الإنترنت العام خالص!
+#### المكونات الجوهرية داخل `Amazon VPC`:
+* **`Public Subnet`:** شبكة فرعية يحتوي جدول التوجيه الخاص بها (`Route Table`) على مسار يشير إلى **`Internet Gateway (IGW)`**، مما يسمح للموارد داخلها بالاتصال المباشر مع الإنترنت العام (مثل خوادم الويب و `ALB`).
+* **`Private Subnet`:** شبكة فرعية معزولة لا تملك مساراً مباشراً إلى الإنترنت العام، وتُوضَع فيها الموارد الحساسة مثل قواعد البيانات (`RDS`) والخوادم الخلفية.
+* **`Internet Gateway (IGW)`:** مكون مُدار وعالي التوافر يُربط بالـ `VPC` لتمكين الاتصال ثنائي الاتجاه بين الموارد في الـ `Public Subnets` والإنترنت العام.
+* **`NAT Gateway` (Network Address Translation Gateway):** يُوضَع داخل **`Public Subnet`** ويسمح للخوادم الموجودة في **`Private Subnet`** ببدء اتصال **صادر فقط (`Outbound only`)** نحو الإنترنت (مثلاً لتحميل تحديثات النظام الأمنية)، بينما **يمنع تماماً** أي جهة من الإنترنت العام من بدء اتصال وارد نحو تلك الخوادم الخاصة.
+* **`VPC Peering`:** ربط شبكي خاص ومباشر بين شبكتي **`VPC`** (في نفس الحساب أو حسابات مختلفة أو مناطق مختلفة) لتبادل البيانات عبر شبكة AWS الخاصة دون المرور بالإنترنت العام. *(علاقة واحد-إلى-واحد، غير متعدية `Non-transitive`).*
+* **`AWS Transit Gateway`:** محور توجيه مركزي (`Central Hub-and-Spoke`) يربط **مئات الـ `VPCs`** وشبكات الشركة المحلية (`On-Premises`) معاً عبر نقطة إدارة مركزية واحدة، مما يلغي تعقيد إدارة مئات روابط الـ `VPC Peering`.
+* **`VPC Endpoints` (`AWS PrivateLink`):** تتيح للخوادم داخل الـ `Private Subnet` الوصول المباشر والخاص إلى خدمات AWS الأخرى (مثل `Amazon S3` و `Amazon DynamoDB` و `Amazon Bedrock`) **عبر شبكة AWS الداخلية فقط** دون الحاجة إلى `Internet Gateway` أو `NAT Gateway` ودون خروج البيانات إلى الإنترنت العام.
 
 ---
 
-### 🌍 2. توصيل الموقع للعملاء في العالم كله (`Route 53`, `CloudFront`, `Global Accelerator`)
+### 2. نظام أسماء النطاقات وتسريع المحتوى العالمي
 
-* **`Amazon Route 53` (DNS Service):**
-  * خدمة الـ **DNS** العالمية بتاعة AWS (بالمناسبة: سموها 53 عشان بورت الـ DNS هو 53!).
-  * بتسجل بيها أسماء الدومينات (زي `myshop.com`) وتوجه الزوار لسيرفراتك (وتقدر تعمل **Health Checks** وتوجيه ذكي زي **Latency-based routing** أو **Geolocation** أو **Failover**).
+#### أ. `Amazon Route 53` (خدمة DNS العالمية)
+خدمة **`DNS`** سحابية عالية التوافر وقابلة للتوسع (سُمّيت `53` نسبةً إلى المنفذ القياسي لبروتوكول DNS). تؤدي ثلاث وظائف أساسية:
+1. تسجيل أسماء النطاقات (`Domain Registration`).
+2. توجيه طلبات المستخدمين إلى موارد AWS (مثل `ALB`, `CloudFront`, `S3`) باستخدام سياسات توجيه ذكية (`Routing Policies`) مثل: **`Latency-based`**, **`Geolocation`**, **`Failover`**, و **`Weighted`**.
+3. فحص صحة الموارد (`Health Checks`) والتحويل التلقائي بعيداً عن الخوادم المعطلة.
 
-* **`Amazon CloudFront` vs. `AWS Global Accelerator` — مقارنة بتيجي كتير في الامتحان!**
+#### ب. المقارنة الدقيقة: `Amazon CloudFront` مقابل `AWS Global Accelerator`
 
-| المقارنة | `Amazon CloudFront` (CDN) | `AWS Global Accelerator` |
+| وجه المقارنة | `Amazon CloudFront` (`CDN`) | `AWS Global Accelerator` |
 | :--- | :--- | :--- |
-| **الفكرة بالبلدي** | **فروع تخزين مؤقت (`Caching`) في كل العالم** (في الـ **Edge Locations**) بتحفظ نسخة من صور وفيديوهات موقعك قريبة من المستخدم. | **طريق سريع خاص (`AWS Global Network`)** بياخد حركة البيانات بتاعتك من أقرب Edge Location ويوصلها لسيرفرك بأسرع طريق من غير زحمة الإنترنت العام! |
-| **نوع البيانات** | ممتاز للمحتوى الثابت والديناميكي (**HTTP/HTTPS — صور، فيديوهات، مواقع**). | ممتاز للـ **Non-HTTP (TCP/UDP)** زي الألعاب الأونلاين، مكالمات الـ VoIP، وتطبيقات الـ IoT، وبيديك **2 Static Anycast IP Addresses**. |
+| **آلية العمل** | **تخزين مؤقت (`Caching`)** لنسخ المحتوى في مئات الـ **`Edge Locations`** القريبة من المستخدمين حول العالم. | توجيه حركة المرور عبر **الشبكة العالمية الخاصة لـ AWS (`AWS Global Network`)** بدءاً من أقرب `Edge Location` لتجنب ازدحام الإنترنت العام وتقليل زمن الاستجابة. |
+| **البروتوكولات المدعومة** | مثالي للمحتوى الثابت والديناميكي عبر **`HTTP / HTTPS`** (صور، فيديوهات، ملفات ويب، APIs). | مثالي للتطبيقات التي تعتمد على **`TCP / UDP` (Non-HTTP)** مثل الألعاب الجماعية، المكالمات الصوتية (`VoIP`)، وإنترنت الأشياء (`IoT`). |
+| **عناوين الـ IP** | عناوين IP ديناميكية تتغير تلقائياً. | يمنحك **عنواني `Static Anycast IP`** ثابتين عالمياً لا يتغيران حتى عند التحويل الفوري بين الـ Regions (`Instant Failover`). |
 
 ---
 
-### 🔌 3. ربط شركتك على الأرض بـ AWS (Hybrid Connectivity)
+### 3. الاتصال الهجين بين مركز البيانات المحلي و AWS (`Hybrid Connectivity`)
 
-لو عندك فرع شركة حقيقي (**On-Premises Data Center**) وعايز توصله بالـ VPC بتاعتك على AWS، عندك حلّين:
-
-| المقارنة | `AWS Site-to-Site VPN` | `AWS Direct Connect (DX)` |
+| وجه المقارنة | `AWS Site-to-Site VPN` | `AWS Direct Connect (DX)` |
 | :--- | :--- | :--- |
-| **التشبيه المصري** | **عربية مصفحة ماشية على الطريق الدائري العام (الإنترنت العام):** مشفرة وآمنة، بس ممكن تقابل زحمة الإنترنت. | **خط مترو خاص ومباشر من باب شركتك لباب AWS!** كابل ألياف ضوئية خاص مبيمرش على الإنترنت العام نهائياً. |
-| **وقت التركيب** | **سريع جداً (في دقايق/ساعات)** ورخيص. | بياخد **أسابيع أو شهور** وتكلفته أعلى. |
-| **السرعة والاستقرار** | بتعتمد على سرعة الإنترنت العام عندك. | سرعة رهيبة ومستقرة جداً (**Consistent Low Latency / High Bandwidth**). |
+| **مسار الاتصال** | نفق مشفر (`IPsec VPN`) يمر عبر **شبكة الإنترنت العام**. | **خط ألياف ضوئية مادي مخصص ومباشر** يربط مركز بياناتك بـ AWS دون المرور بالإنترنت العام نهائياً. |
+| **زمن الإعداد والتكلفة** | سريع الإعداد (دقائق إلى ساعات) ومنخفض التكلفة. | يستغرق **أسابيع إلى شهور** للتجهيز المادي وتكلفته أعلى. |
+| **استقرار الأداء** | يعتمد على جودة واستقرار الإنترنت العام. | نطاق ترددي عالٍ (`High Bandwidth`) وزمن استجابة مستقر ومنخفض جداً (**`Consistent Network Performance`**). |
+| **التشفير** | مشفر افتراضياً عبر `IPsec`. | غير مشفر تلقائياً افتراضياً؛ يمكن إضافة `VPN` فوقه أو استخدام `MACsec` إذا لزم التشفير. |
 
 ---
 
-## 🎯 زتونة الامتحان للجزء التاني (Databases & Networking)
+## منهجية التعامل مع أسئلة Databases & Networking في الاختبار
 
-| لو شفت في السؤال... | الإجابة الصح فوراً! |
+| مؤشر أو عبارة في نص السؤال | الإجابة الدقيقة |
 | :--- | :--- |
-| **Managed relational database (MySQL, PostgreSQL, Oracle, SQL Server)** | **`Amazon RDS`** |
-| **High Availability / Automatic Failover for RDS** | **`RDS Multi-AZ`** |
-| **Offload read-heavy queries / reporting traffic from RDS** | **`RDS Read Replicas`** |
+| **Managed relational database supporting MySQL, PostgreSQL, Oracle, SQL Server** | **`Amazon RDS`** |
+| **Cloud-native relational DB compatible with MySQL/PostgreSQL, up to 5x faster** | **`Amazon Aurora`** |
+| **High Availability & automatic failover for an RDS database** | **`RDS Multi-AZ`** |
+| **Offload heavy read/reporting traffic from an RDS database** | **`RDS Read Replicas`** |
 | **Serverless NoSQL key-value database with single-digit millisecond latency** | **`Amazon DynamoDB`** |
-| **In-memory caching (Redis / Memcached) to speed up database reads** | **`Amazon ElastiCache`** |
-| **Petabyte-scale Data Warehouse for Business Intelligence (OLAP)** | **`Amazon Redshift`** |
-| **Graph database for social networks / fraud detection / recommendations** | **`Amazon Neptune`** |
-| **Allow instances in a Private Subnet to access the internet for updates (outbound only)** | **`NAT Gateway`** |
-| **Dedicated private physical fiber connection from On-Premises to AWS (no public internet)** | **`AWS Direct Connect`** |
-| **Quick encrypted connection from On-Premises to AWS over the public internet** | **`AWS Site-to-Site VPN`** |
+| **Managed in-memory caching (Redis / Memcached) for sub-millisecond reads** | **`Amazon ElastiCache`** |
+| **Petabyte-scale Data Warehouse for OLAP / Business Intelligence analytics** | **`Amazon Redshift`** |
+| **Graph database for social networks, recommendations, and fraud detection** | **`Amazon Neptune`** |
+| **Enable outbound internet access for instances in a Private Subnet (no inbound)** | **`NAT Gateway`** |
+| **Private connection from VPC to S3/DynamoDB without traversing the public internet** | **`VPC Endpoints` (`AWS PrivateLink`)** |
 | **Connect hundreds of VPCs and on-premises networks via a central hub** | **`AWS Transit Gateway`** |
-| **CDN to cache static content at Edge Locations globally** | **`Amazon CloudFront`** |
-| **Connect privately from VPC to S3/DynamoDB without going over the internet** | **`VPC Endpoints` (`AWS PrivateLink`)** |
+| **Dedicated private fiber network connection from On-Premises to AWS** | **`AWS Direct Connect`** |
+| **Quick encrypted hybrid connection over the public internet** | **`AWS Site-to-Site VPN`** |
 
 ---
 
-> ⬅️ **الدرس السابق:** [Domain 3 — الجزء الأول: Compute & Storage](./03_Domain_3_Part1_Compute_and_Storage.md) | **الدرس التالي:** 👉 **[03_Domain_3_Part3_Integration_Monitoring_Analytics_AI.md](./03_Domain_3_Part3_Integration_Monitoring_Analytics_AI.md)** | [الفهرس](./README.md)
+> **الدرس السابق:** [Domain 3 — الجزء الأول: Compute & Storage](./03_Domain_3_Part1_Compute_and_Storage.md) | **الدرس التالي:** 👉 [03_Domain_3_Part3_Integration_Monitoring_Analytics_AI.md](./03_Domain_3_Part3_Integration_Monitoring_Analytics_AI.md) | [الفهرس الرئيسي](./README.md)
 
 </div>

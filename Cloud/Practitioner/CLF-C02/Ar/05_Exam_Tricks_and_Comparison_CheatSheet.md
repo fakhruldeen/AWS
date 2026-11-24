@@ -1,84 +1,92 @@
 <div dir="rtl">
 
-# 🔥 الزتونة النهائية: مقارنات X vs Y وخدع الامتحان (ليلة الامتحان)
+# دليل المقارنات المعمارية ومنهجية حل أسئلة الاختبار (`X vs Y` & MCQ Strategy)
 
-الملف ده هو **ورقة الإنقاذ** بتاعتك قبل الامتحان بساعات! جمعنالك فيه كل الخدمات اللي شكلها شبه بعض وبتوقع الناس في الفخاخ، ومعاها استراتيجية حل أسئلة الـ **MCQ** في الامتحان الحقيقي عشان تضمن النجاح بسكور عالي بإذن الله!
+يجمع هذا المرجع الخلاصة التنفيذية لجميع المقارنات الدقيقة بين خدمات **AWS** المتشابهة التي تمثل المصدر الأول للالتباس في اختبار **`CLF-C02`**، متبوعاً بمنهجية منظمة لتحليل أسئلة الاختيار من متعدد (`Multiple Choice Questions`) واستبعاد الخيارات المضللة بدقة.
 
 ---
 
-## ⚔️ 1. جدول المقارنات الذهبية (X vs Y) بالعامية المصرية
+## أولاً: جدول المقارنات المعمارية الحاسمة (`X vs Y`)
 
-### 🛡️ مقارنات الأمان والمراقبة (Security & Monitoring)
+### 1. مقارنات الأمن السيبراني والمراقبة (`Security & Observability`)
 
-| المقارنة | الخدمة الأولى | الخدمة التانية / التالتة |
+| المقارنة | الخدمة الأولى | الخدمة الثانية / الثالثة |
 | :--- | :--- | :--- |
-| **`Security Groups` vs `NACLs`** | **`Security Groups`:** على مستوى الـ **EC2 Instance**، فيها **`Allow` فقط**، و **`Stateful`**. | **`NACLs`:** على مستوى الـ **Subnet**، فيها **`Allow` و `Deny`** (لو عايز تعمل Block لـ IP)، و **`Stateless`**. |
-| **`AWS Shield` vs `AWS WAF`** | **`AWS Shield`:** حماية ضد هجمات حجب الخدمة (**DDoS** — Layer 3/4). | **`AWS WAF`:** حماية تطبيقات الويب (Layer 7 HTTP) ضد **`SQL Injection`** و **`XSS`**. |
-| **`GuardDuty` vs `Inspector` vs `Macie`** | **`GuardDuty`:** كشف تهديدات وسلوك مريب بالـ AI (زي تعدين Crypto أو دخول هاكر). | **`Inspector`:** فحص ثغرات البرامج (**Software Vulnerabilities**) على EC2/Containers.<br>**`Macie`:** اكتشاف بيانات شخصية (**PII**) متسابة جوه **`Amazon S3`**. |
-| **`CloudWatch` vs `CloudTrail` vs `Config`** | **`CloudWatch`:** **الأداء (`Metrics & Logs`)** — الـ CPU سخن؟ ابعت Alarm! | **`CloudTrail`:** **مين عمل إيه؟ (`API Auditing`)** — مين مسح السيرفر؟<br>**`AWS Config`:** **تاريخ الإعدادات (`Configuration History & Compliance`)** — إعدادات الـ Bucket اتغيرت امتى؟ |
-| **`Secrets Manager` vs `Parameter Store`** | **`Secrets Manager`:** لبسوردات الداتابيز وفيه **`Automatic Rotation`** (تغيير باسورد أوتوماتيك) — مدفوع. | **`Parameter Store`:** لإعدادات التطبيقات البسيطة ومجاني (النسخة Standard) بس مفيهوش Rotation جاهز. |
-| **`AWS KMS` vs `AWS CloudHSM`** | **`AWS KMS`:** مفاتيح تشفير مدارة من AWS على هاردوير مشترك (**Multi-tenant**). | **`AWS CloudHSM`:** جهاز هاردوير تشفير مخصص ليك لوحدك (**Single-tenant / Dedicated**) للبنوك. |
-| **`AWS Trusted Advisor` vs `AWS Inspector`** | **`Trusted Advisor`:** مستشار **للحساب كله** (تكلفة، أمان، أداء، حدود الخدمات). | **`Inspector`:** فاحص **ثغرات برمجية (`CVEs`)** جوه سيرفرات الـ EC2 و Lambda و Containers. |
+| **`Security Groups` vs `NACLs`** | **`Security Groups`:** تعمل على مستوى الخادم (**`EC2 Instance Level`**)، تدعم قواعد **`Allow` فقط**، وتتبع الحالة (**`Stateful`**). | **`NACLs`:** تعمل على مستوى الشبكة الفرعية (**`Subnet Level`**)، تدعم قواعد **`Allow` و `Deny`** (تُستخدم لحظر عنوان IP محدد)، ولا تتبع الحالة (**`Stateless`**). |
+| **`AWS Shield` vs `AWS WAF`** | **`AWS Shield`:** حماية ضد هجمات حجب الخدمة الموزعة (**`DDoS`** — الطبقتين 3 و 4). | **`AWS WAF`:** جدار حماية لتطبيقات الويب (الطبقة السابعة `HTTP/HTTPS`) ضد **`SQL Injection`** و **`XSS`**. |
+| **`GuardDuty` vs `Inspector` vs `Macie`** | **`Amazon GuardDuty`:** كشف تهديدات ذكي مستمر بالتعلم الآلي لتحليل السجلات واكتشاف الأنشطة المشبوهة (مثل تعدين العملات أو مفاتيح مسروقة). | **`Amazon Inspector`:** فحص آلي **للثغرات البرمجية (`CVEs`)** في `EC2`, `ECR`, `Lambda`.<br>**`Amazon Macie`:** اكتشاف وحماية **البيانات الشخصية الحساسة (`PII`)** داخل حاويات **`Amazon S3`**. |
+| **`CloudWatch` vs `CloudTrail` vs `Config`** | **`Amazon CloudWatch`:** مراقبة **الأداء والسجلات والإنذارات (`Metrics, Logs, Alarms`)** مثل ارتفاع `CPU`. | **`AWS CloudTrail`:** سجل تدقيق **من قام بأي إجراء (`API Auditing`)**.<br>**`AWS Config`:** تتبع **تاريخ تغييرات الإعدادات (`Configuration History`)** وتقييم قواعد الامتثال. |
+| **`Secrets Manager` vs `Parameter Store`** | **`AWS Secrets Manager`:** مخصص لبيانات الاعتماد الحساسة ويدعم **التدوير التلقائي (`Automatic Secret Rotation`)** — مدفوع. | **`SSM Parameter Store`:** مخزن لإعدادات التطبيقات البسيطة (مجاني في الطبقة القياسية) ولا يمتلك ميزة التدوير التلقائي الجاهزة. |
+| **`AWS KMS` vs `AWS CloudHSM`** | **`AWS KMS`:** إدارة مفاتيح التشفير عبر عتاد أمني مُدار ومشترك (`Multi-tenant`). | **`AWS CloudHSM`:** جهاز عتادي مخصص ومفرد للعميل (`Single-tenant Dedicated Hardware`) لمتطلبات الامتثال الصارمة (`FIPS 140-2 Level 3`). |
+| **`Trusted Advisor` vs `Inspector`** | **`AWS Trusted Advisor`:** مستشار **للحساب بأكمله** يقدم توصيات في التكلفة والأمان والأداء والتسامح مع الأخطاء وحدود الخدمات. | **`Amazon Inspector`:** أداة فحص **للثغرات الأمنية البرمجية** داخل خوادم `EC2` والحاويات ودوال `Lambda`. |
 
 ---
 
-### 🖥️ مقارنات السيرفرات والتخزين (Compute & Storage)
+### 2. مقارنات الحوسبة والتخزين (`Compute & Storage`)
 
-| المقارنة | الخدمة الأولى | الخدمة التانية / التالتة |
+| المقارنة | الخدمة الأولى | الخدمة الثانية / الثالثة |
 | :--- | :--- | :--- |
-| **`Amazon EC2` vs `AWS Lambda`** | **`Amazon EC2`:** سيرفرات كاملة بتديرها إنت (IaaS) — شغالة طول الوقت. | **`AWS Lambda`:** **Serverless** — ارفع الكود بس، بيشتغل عند حدوث Event وبتدفع بالملي ثانية (أقصى وقت 15 دقيقة). |
-| **`Amazon S3` vs `Amazon EBS` vs `Amazon EFS`** | **`Amazon S3`:** **Object Storage** — ملفات وصور وفيديوهات و Backups بمساحة لا نهائية (ما ينفعش تنزل عليه OS). | **`Amazon EBS`:** **Block Storage** — هارد لسيرفر EC2 واحد في AZ واحدة.<br>**`Amazon EFS`:** **File Storage** — فولدر مشترك لعدة سيرفرات Linux عبر أكتر من AZ. |
-| **`EBS` vs `EC2 Instance Store`** | **`EBS`:** تخزين **دائم (`Persistent`)** — البيانات مش بتتمسح لو طفيت السيرفر. | **`Instance Store`:** تخزين **مؤقت (`Ephemeral`)** — سريع جداً بس البيانات **بتتمسح** لو طفيت السيرفر! |
-| **`Savings Plans` vs `Reserved Instances`** | **`Savings Plans`:** التزام بمبلغ بالساعة (مرن جداً — بيغطي EC2 + Fargate + Lambda). | **`Reserved Instances (RI)`:** التزام بنوع سيرفر معين في Region معينة (أقل مرونة). |
-| **`ECS / EKS` vs `AWS Fargate`** | **`ECS` / `EKS`:** أدوات إدارة الـ Containers (على سيرفرات EC2 إنت بتديرها أو على Fargate). | **`AWS Fargate`:** محرك **Serverless** بيشغل الـ Containers من غير ما تدير ولا سيرفر EC2! |
+| **`Amazon EC2` vs `AWS Lambda`** | **`Amazon EC2`:** خوادم افتراضية (`IaaS`) يدير العميل نظام تشغيلها وتعمل باستمرار حسب الحاجة. | **`AWS Lambda`:** حوسبة **`Serverless`** مبنية على الأحداث؛ ترفع الكود فقط وتدفع مقابل زمن التنفيذ الفعلي بالملي ثانية (بحد أقصى 15 دقيقة). |
+| **`S3` vs `EBS` vs `EFS`** | **`Amazon S3`:** **`Object Storage`** بسعة غير محدودة للملفات والنسخ الاحتياطية والمواقع الثابتة (لا يُثبّت عليه نظام تشغيل). | **`Amazon EBS`:** **`Block Storage`** لخادم `EC2` واحد داخل `AZ` واحدة.<br>**`Amazon EFS`:** **`File Storage (NFS)`** مشترك بين عدة خوادم Linux عبر أكثر من `AZ`. |
+| **`EBS` vs `Instance Store`** | **`Amazon EBS`:** تخزين **دائم (`Persistent`)**؛ تبقى البيانات محفوظة عند إيقاف الخادم (`Stop`). | **`EC2 Instance Store`:** تخزين **مؤقت (`Ephemeral`)** عالي الأداء؛ **تُفقد بياناته بالكامل** عند إيقاف الخادم أو إنهائه. |
+| **`Savings Plans` vs `Reserved Instances`** | **`Savings Plans`:** التزام بإنفاق مبلغ ثابت في الساعة مع مرونة عالية جداً (تغطي `EC2`, `Fargate`, `Lambda`). | **`Reserved Instances (RI)`:** التزام بعائلة خادم ومواصفات محددة في منطقة محددة (أقل مرونة). |
+| **`ECS / EKS` vs `AWS Fargate`** | **`Amazon ECS` / `EKS`:** منصات تنسيق وإدارة الحاويات (تعمل على `EC2` أو `Fargate`). | **`AWS Fargate`:** محرك **`Serverless`** لتشغيل الحاويات دون توفير أو إدارة خوادم `EC2` أسفلها. |
 
 ---
 
-### 🗄️🌐 مقارنات الداتابيز والشبكات والرسائل (DB, Networking & Messaging)
+### 3. مقارنات قواعد البيانات والشبكات والتكامل والفوترة (`DB, Networking, Integration & Billing`)
 
-| المقارنة | الخدمة الأولى | الخدمة التانية |
+| المقارنة | الخدمة الأولى | الخدمة الثانية / الثالثة |
 | :--- | :--- | :--- |
-| **`RDS Multi-AZ` vs `RDS Read Replicas`** | **`Multi-AZ`:** للـ **High Availability / Failover** (نسخة طوارئ مش بنقرأ منها). | **`Read Replicas`:** للـ **Performance / Read Scaling** (تخفيف ضغط القراءة). |
-| **`Amazon RDS` vs `Amazon DynamoDB` vs `Redshift`** | **`RDS`:** داتابيز **SQL** للتطبيقات اليومية (OLTP). | **`DynamoDB`:** داتابيز **NoSQL Serverless** فائقة السرعة.<br>**`Redshift`:** **Data Warehouse** للتحليلات والتقارير (OLAP). |
-| **`CloudFront` vs `Global Accelerator`** | **`CloudFront`:** **CDN Caching** للصور والفيديوهات والمواقع (HTTP/HTTPS). | **`Global Accelerator`:** تسريع شبكة **TCP/UDP** بـ **Static IPs** للألعاب والـ VoIP. |
-| **`Site-to-Site VPN` vs `Direct Connect`** | **`VPN`:** مشفر على **الإنترنت العام** (سريع التركيب ورخيص). | **`Direct Connect`:** كابل ألياف ضوئية **خاص ومباشر** مبيمرش على الإنترنت العام (سرعة ثابتة وتكلفة أعلى). |
-| **`Amazon SQS` vs `Amazon SNS`** | **`SQS`:** **Queue (طابور)** — فصل الخدمات (**Decoupling**)، المستلم بيسحب (**Pull**) الرسالة. | **`SNS`:** **Pub/Sub (إذاعة)** — إرسال إشعارات (**Push**) لآلاف المشتركين (SMS, Email) في نفس اللحظة. |
-| **`AWS Budgets` vs `AWS Cost Explorer`** | **`AWS Budgets`:** **إنذارات (`Alerts`)** لما الصرف يعدي حد معين. | **`AWS Cost Explorer`:** **رسوم بيانية وتحليل (`Charts & Forecast`)** للصرف القديم والمستقبلي. |
+| **`RDS Multi-AZ` vs `Read Replicas`** | **`Multi-AZ`:** مخصصة **للتوافر العالي والتعافي التلقائي (`High Availability / Failover`)** فقط؛ لا تُستخدم للقراءة. | **`Read Replicas`:** مخصصة **لتحسين الأداء وتوزيع ضغط القراءة والتقارير (`Read Scaling`)**. |
+| **`RDS` vs `DynamoDB` vs `Redshift`** | **`Amazon RDS`:** قواعد بيانات علائقية (`SQL`) للمعاملات اليومية (`OLTP`). | **`Amazon DynamoDB`:** قاعدة بيانات **`NoSQL Serverless`** فائقة السرعة.<br>**`Amazon Redshift`:** مستودع بيانات (`Data Warehouse`) للتحليلات (`OLAP`). |
+| **`CloudFront` vs `Global Accelerator`** | **`Amazon CloudFront`:** شبكة توصيل محتوى (**`CDN Caching`**) للملفات الثابتة والديناميكية عبر `HTTP/HTTPS`. | **`AWS Global Accelerator`:** تسريع حركة مرور **`TCP/UDP`** عبر شبكة AWS الخاصة مع توفير **عنواني `Static Anycast IP`**. |
+| **`Site-to-Site VPN` vs `Direct Connect`** | **`Site-to-Site VPN`:** اتصال مشفر عبر **الإنترنت العام** (سريع الإعداد ومنخفض التكلفة). | **`AWS Direct Connect`:** كابل ألياف ضوئية **مخصص وخاص** لا يمر عبر الإنترنت العام (أداء ثابت وزمن استجابة منخفض). |
+| **`Amazon SQS` vs `Amazon SNS`** | **`Amazon SQS`:** **طابور رسائل (`Message Queue — Pull`)** لفصل المكونات (`Decoupling`) ومنع فقدان الطلبات. | **`Amazon SNS`:** **خدمة نشر واشتراك (`Pub/Sub — Push`)** لإرسال الإشعارات (`Email`, `SMS`) لعدة مشتركين في وقت واحد. |
+| **`AWS Budgets` vs `AWS Cost Explorer`** | **`AWS Budgets`:** وضع حدود مالية وإرسال **إنذارات تلقائية (`Alerts`)** عند تجاوز الميزانية. | **`AWS Cost Explorer`:** **الرسوم البيانية وتحليل الإنفاق التاريخي والتنبؤ المستقبلي (`Forecasting`)**. |
 
 ---
 
-## 🧠 2. استراتيجية حل أسئلة الـ MCQ في الامتحان الحقيقي (4 خطوات مضمونة)
+## ثانياً: المنهجية القياسية لتحليل وحل أسئلة الاختبار (`MCQ Strategy`)
 
-لما يظهرلك سؤال طويل في امتحان **CLF-C02**، ما تتخضش! امشي على الـ 4 خطوات دول:
+عند التعامل مع أسئلة السيناريوهات الطويلة في اختبار **`CLF-C02`**، اتبع الخطوات الأربع التالية لرفع دقة الإجابة وتقليل التشتت:
 
-1. **اقرأ آخر سطر في السؤال الأول!**
-   * غالباً القصة اللي فوق كلها ديكور، والسؤال الحقيقي في آخر جملة: *"Which AWS service meets these requirements **with the LEAST operational overhead**?"* أو *"MOST cost-effectively?"*.
-2. **اصطاد الكلمات المفتاحية (`Keywords`):**
-   * شفت كلمة **`Least operational overhead`** أو **`No server management`**؟ $\leftarrow$ استبعد فوراً أي إجابة فيها `EC2` واختار خدمة **Serverless** (`Lambda`, `Fargate`, `DynamoDB`, `S3`, `Athena`)!
-   * شفت كلمة **`Lowest cost`** أو **`Most cost-effective`**؟ $\leftarrow$ فكر في `Spot Instances`, `Savings Plans`, `S3 Glacier Deep Archive`, `S3 Intelligent-Tiering`.
-   * شفت كلمة **`Global / Low latency / Static content`**؟ $\leftarrow$ فوراً **`Amazon CloudFront`**!
-   * شفت كلمة **`Audit / Who did what`**؟ $\leftarrow$ فوراً **`AWS CloudTrail`**!
-3. **استبعد الإجابات الغلط الأول (`Elimination`):**
-   * في كل سؤال من 4 اختيارات، هتلاقي اختيارين ملهمش علاقة بالموضوع أصلاً (مثلاً سؤال عن الأمان وحاططلك `Amazon Polly` بتاعة الصوت!). شطب عليهم فوراً وهيفضلك اختيارين بس تقارن بينهم بهدوء.
-4. **احذر فخ "الاختيار الصعب زيادة عن اللزوم":**
-   * في امتحان **Cloud Practitioner**، AWS دايماً بتفضل **الخدمة الجاهزة المدارة (`Managed Service`)** عن إنك تبني حاجة بنفسك على `EC2`!
+### 1. قراءة الجملة الأخيرة أولاً لتحديد القيد الحاكم (`Identify the Governing Constraint`)
+تبدأ معظم أسئلة AWS بسيناريو عملي يليه سؤال محدد يحتوي على كلمة مفتاحية حاكمة تحدد الإجابة الصحيحة:
+* **`Least operational overhead` / `Minimal administrative effort`:** استبعد فوراً الخيارات التي تتطلب إدارة خوادم `EC2` يدوياً، واتجه نحو الخدمات المُدارة بالكامل أو `Serverless` (مثل `AWS Lambda`, `AWS Fargate`, `Amazon DynamoDB`, `Amazon RDS`, `Amazon Athena`).
+* **`Most cost-effective` / `Lowest cost`:** ركّز على خيارات التحسين المالي (`Spot Instances`, `Savings Plans`, `S3 Glacier Deep Archive`, `S3 Intelligent-Tiering`).
+* **`Globally` / `Lowest latency`:** فكّر مباشرةً في `Amazon CloudFront`, `AWS Global Accelerator`, `Amazon Route 53`, أو `DynamoDB Global Tables`.
+
+### 2. تطبيق الاستبعاد المنهجي (`Systematic Elimination`)
+في كل سؤال من أربعة خيارات، غالباً ما يكون هناك خياران لا علاقة لهما بالمجال الوظيفي للسؤال (مثلاً ذكر خدمة تحليل صوتي في سؤال عن أمن الشبكات). استبعدهما فوراً لحصر المقارنة بين خيارين متقاربين فقط، ثم طبّق الفروق الدقيقة من جدول `X vs Y` أعلاه.
+
+### 3. الحذر من مصائد المسؤولية المشتركة (`Shared Responsibility Traps`)
+تذكر دائماً أن **بيانات العميل، وإدارة الهويات `IAM`، وتحديث نظام التشغيل الضيف على `EC2`** هي مسؤولية **العميل**؛ بينما **الأمن المادي لمراكز البيانات، والعتاد، والشبكة الأساسية، وأنظمة تشغيل الخدمات المُدارة (`RDS`, `Lambda`)** هي مسؤولية **AWS**.
+
+### 4. إدارة الوقت والاستفادة من التمديد المجاني (`ESL +30`)
+* يمنحك الاختبار 90 دقيقة لـ 65 سؤالاً (نحو 83 ثانية لكل سؤال)، ويمكن لغير الناطقين بالإنجليزية كلغة أم طلب تمديد مجاني لمدة 30 دقيقة إضافية (`ESL +30`) من لوحة تحكم الشهادات قبل حجز الموعد ليصبح الوقت الإجمالي **120 دقيقة**.
+* لا تتوقف طويلاً أمام سؤال غامض؛ اختر أفضل تقدير لديك وضع عليه علامة للمراجعة (`Flag for Review`) ثم عد إليه بعد إنهاء باقي الأسئلة.
 
 ---
 
-> 🏆 **عاش يا بطل! إنت دلوقتي خلصت شرح الكورس كله بالعامية المصرية!**
->
-> **الخطوة الأخيرة عشان تقفّل الامتحان:** ادخل دلوقتي حل أسئلة تدريبية من مجلد [11_Practice_Exams](../11_Practice_Exams/) أو شغّل محاكي الامتحان على جهازك:
->
-> <div dir="ltr">
->
-> ```bash
-> python3 scripts/aws_revision_runner.py --cert CLF --mode practice -n 20 --tricks
-> ```
->
-> </div>
->
-> **بالتوفيق في الامتحان وإن شاء الله ترجع مبسوط بشهادة `AWS Certified Cloud Practitioner`! 🎓🚀**
->
-> ⬅️ [الرجوع للفهرس الرئيسي للدليل المصري](./README.md)
+## الخطوة العملية للتدريب على الأسئلة
+
+بعد إتمام قراءة هذا الدليل، يُنصح بالتدرب المكثف على الأسئلة المجمّعة في مجلد [11_Practice_Exams](../11_Practice_Exams/)، أو تشغيل أداة المحاكاة التفاعلية في سطر الأوامر:
+
+<div dir="ltr">
+
+```bash
+# تدريب تفاعلي على 20 سؤالاً مع عرض استراتيجيات الحل
+python3 scripts/aws_revision_runner.py --cert CLF --mode practice -n 20 --tricks
+
+# محاكاة اختبار كامل بوقت محدد (65 سؤالاً)
+python3 scripts/aws_revision_runner.py --cert CLF --mode mock
+```
+
+</div>
+
+---
+
+> **الدرس السابق:** [Domain 4: Billing, Pricing & Support](./04_Domain_4_Billing_Pricing_and_Support.md) | [العودة إلى الفهرس الرئيسي](./README.md)
 
 </div>

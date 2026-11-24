@@ -1,126 +1,155 @@
 <div dir="rtl">
 
-# 🔒 Domain 2: Security and Compliance (30% من الامتحان)
+# Domain 2: Security and Compliance — الأمن السيبراني وإدارة الهوية والامتثال (30% من الاختبار)
 
-الـ Domain ده عليه **30%** من درجات الامتحان — يعني تلت الامتحان تقريباً! بس الجميل فيه إنه واضح جداً، وكل خدمة في الأمان ليها وظيفة محددة ومعروفة، ولو فهمت التشبيه بتاعها هتضمن درجاته 100%.
-
----
-
-## 1️⃣ نموذج المسؤولية المشتركة (AWS Shared Responsibility Model)
-
-ده **أهم مفهوم في الامتحان كله**! تخيل إنك مأجّر شقة في كومباوند فخم جداً:
-* **صاحب الكومباوند (`AWS`) مسؤول عن أمان الكومباوند نفسه — Security OF the Cloud:**
-  * مباني الـ **Data Centers**، الأمن والحراسة والكاميرات، الكهرباء، الهاردوير، السيرفرات الحقيقية، شبكات الـ **Regions** و الـ **AZs**، والـ **Hypervisor**.
-* **إنت كساكن (`Customer`) مسؤول عن أمان شقتك وحاجتك جواها — Security IN the Cloud:**
-  * بياناتك (**Customer Data**) وتشفيرها.
-  * تقفل باب شقتك وتدي المفاتيح لمين (**IAM Users, Roles, MFA**).
-  * تحديثات الويندوز واللينكس جوه سيرفر الـ **`Amazon EC2`** بتاعك (**Guest OS Patching**).
-  * قواعد الفايروول بتاعتك (**Security Groups & NACLs**).
-
-> [!IMPORTANT]
-> **فرق مهم جداً في الامتحان:**
-> * لو بتستخدم **`Amazon EC2`** (خدمة **IaaS**): إنت المسؤول عن تحديث الـ **Operating System (OS Patching)** جوه السيرفر.
-> * لو بتستخدم **`Amazon RDS`** أو **`AWS Lambda`** أو **`Amazon S3`** (خدمات **Managed / Serverless**): **AWS** هي اللي بتعمل الـ **OS Patching** وإنت مسؤول بس عن بياناتك وصلاحيات الوصول ليها!
-> * **حاجات مشتركة (`Shared Controls`):** زي **Patch Management** (AWS تحدث الهاردوير وإنت تحدث الـ Guest OS)، و **Awareness & Training** (AWS تدرب موظفيها وإنت تدرب موظفينك).
+يمثل هذا المجال **30%** من إجمالي اختبار `CLF-C02`، وهو ثاني أكبر مجالات الاختبار وزناً. يركز على تقسيم المسؤوليات الأمنية بين AWS والعميل، وإدارة الهويات والصلاحيات، وحماية الشبكات والتطبيقات، وتشفير البيانات، وأدوات كشف التهديدات والامتثال القانوني.
 
 ---
 
-## 2️⃣ إدارة الهوية والصلاحيات (`AWS IAM`)
+## أولاً: نموذج المسؤولية المشتركة (`AWS Shared Responsibility Model`)
 
-الـ **IAM (Identity and Access Management)** هو **خدمة عالمية (`Global Service`) ومجانية** بتتحكم في: مين يدخل حساب AWS بتاعك ويعمل إيه؟
+يُعد هذا النموذج حجر الأساس في الأمن السحابي وأحد أكثر الموضوعات تكراراً في الاختبار. يقوم النموذج على تقسيم واضح للمسؤوليات بين طرفين:
 
-### مكونات الـ IAM:
-1. **Root User (المالك الأصلي للحساب):**
-   * أول إيميل وباسورد عملت بيهم الحساب. ليه صلاحيات مطلقة ومحدش يقدر يوقفه.
-   * **القاعدة الذهبية في الامتحان:** **أوعى تستخدم الـ Root User في شغلك اليومي!** فعّل عليه **MFA** فوراً، ما تعملش ليه **Access Keys**، واقفل عليه في الدرج! استخدمه بس في حاجات نادرة زي قفل الحساب أو تغيير الـ Support Plan.
-2. **IAM User:** حساب لشخص أو تطبيق (ليه Username/Password للـ Console أو Access Keys للـ CLI).
-3. **IAM Group:** جروب بتحط فيه مجموعة **IAM Users** (مثلاً جروب `Developers` أو `Admins`) وتديهم صلاحية مرة واحدة بدل ما تدي لكل واحد لوحده. *(ملحوظة: الجروب بياخد Users بس، ما ينفعش تحط Group جوه Group).*
-4. **IAM Policy:** ورقة مكتوبة بصيغة **JSON** بتحدد الصلاحيات (مثلاً: مسموحلك تقرأ من `Amazon S3` بس، وممنوع تمسح).
-   * دايماً نطبق مبدأ **Principle of Least Privilege:** ادي كل واحد **أقل صلاحية ممكنة** تكفي شغله وبس!
-5. **IAM Role (بطاقة الزائر / تصريح مؤقت):**
-   * مش لشخص معين، دي صلاحية **مؤقتة** بنلبسها لخدمة AWS عشان تكلم خدمة تانية (مثلاً: نلبس **IAM Role** لسيرفر **`Amazon EC2`** عشان يقدر يقرأ ملفات من **`Amazon S3`** من غير ما نحط باسورد أو **Access Keys** جوه الكود!).
-6. **MFA (Multi-Factor Authentication):** طبقة حماية إضافية (كود من تطبيق على موبايلك زي Google Authenticator أو جهاز هاردوير) غير الباسورد.
-7. **`AWS IAM Identity Center` (زمان كان اسمه AWS SSO):** بيخلي موظفين الشركة يدخلوا على **كل حسابات AWS** وتطبيقات الشركة بـ **تسجيل دخول واحد بس (`Single Sign-On`)**.
+### 1. مسؤولية AWS: أمن السحابة نفسها (`Security OF the Cloud`)
+تتحمل AWS المسؤولية الكاملة عن حماية البنية التحتية التي تُشغّل جميع الخدمات السحابية، وتشمل:
+* **الأمن المادي (`Physical Security`):** حراسة مراكز البيانات (`Data Centers`)، وأنظمة الدخول البيومترية، وكاميرات المراقبة، وإتلاف الأقراص التالفة.
+* **العتاد والشبكة الأساسية (`Hardware & Global Infrastructure`):** الخوادم الفيزيائية، وأجهزة التخزين، والشبكة التي تربط الـ `Regions` والـ `Availability Zones` والـ `Edge Locations`.
+* **طبقة المحاكاة الافتراضية (`Virtualization Layer / Hypervisor`):** تأمين وعزل الآلات الافتراضية عن بعضها وتحديث برمجيات المضيف (`Host OS`).
 
----
+### 2. مسؤولية العميل: الأمن داخل السحابة (`Security IN the Cloud`)
+تعتمد مسؤولية العميل على نوع الخدمة التي يختارها (البنية التحتية مقابل الخدمات المُدارة):
+* **بيانات العميل (`Customer Data`):** تصنيف البيانات، وإدارة صلاحيات الوصول إليها، وتشفيرها (`Encryption at Rest` و `Encryption in Transit`)، وتحديد مكان تخزينها (`Region`).
+* **إدارة الهوية والصلاحيات (`IAM`):** إنشاء المستخدمين والأدوار، وتفعيل **`MFA`**، وتطبيق مبدأ أقل الصلاحيات (`Least Privilege`).
+* **إعدادات الشبكة وجدران الحماية:** تكوين **`Security Groups`** و **`Network ACLs`** وجداول التوجيه (`Route Tables`).
+* **تحديثات نظام التشغيل (`Guest OS Patching`):**
+  * في الخدمات من نوع **`IaaS`** مثل **`Amazon EC2`**: **العميل** هو المسؤول الكامل عن تحديث نظام التشغيل (`Linux / Windows`) والتطبيقات المثبتة داخله.
+  * في الخدمات المُدارة (`Managed Services`) مثل **`Amazon RDS`** و **`Amazon S3`** و **`AWS Lambda`**: **AWS** هي المسؤولة عن تحديث نظام التشغيل الأساسي وإدارة الخادم، بينما يظل العميل مسؤولاً عن إعدادات الخدمة وبياناته وصلاحيات الوصول.
 
-## 3️⃣ إدارة الحسابات المتعددة (`AWS Organizations`)
-
-لو عندك شركة كبيرة وعندك حساب AWS للتطوير (`Dev`) وحساب للتجربة (`Test`) وحساب للعملاء (`Prod`):
-* **`AWS Organizations`:** خدمة مجانية بتجمعلك كل حساباتك تحت شجرة واحدة (مقسمة لمجموعات اسمها **Organizational Units — OUs**).
-* **أهم ميزتين فيها:**
-  1. **Consolidated Billing (الفاتورة المجمعة):** فاتورة واحدة لكل الحسابات، وبتاخد خصم حجم استهلاك أكبر (**Volume Discounts**) وتشارك الـ **Reserved Instances / Savings Plans** بين الحسابات.
-  2. **Service Control Policies (`SCPs`):** "السقف الأعلى للصلاحيات" — قواعد بتحطها الإدارة العليا تمنع حسابات معينة تعمل حاجات معينة (مثلاً: ممنوع أي حد في حساب الـ `Dev` يفتح سيرفرات برة أوروبا، حتى لو كان Admin!).
+### 3. الضوابط المشتركة (`Shared Controls`)
+هي مسؤوليات تنطبق على الطرفين ولكن في طبقات مختلفة، ومن أبرزها:
+* **`Patch Management`:** تقوم AWS بتحديث العتاد ونظام التشغيل المضيف (`Host OS`)، بينما يقوم العميل بتحديث نظام التشغيل الضيف (`Guest OS`) وتطبيقاته على `EC2`.
+* **`Configuration Management`:** تدير AWS إعدادات أجهزتها التحتية، بينما يدير العميل إعدادات أنظمته وقواعد بياناته.
+* **`Awareness & Training`:** تدرب AWS موظفيها على معايير الأمان، ويدرب العميل موظفيه على الاستخدام الآمن لحسابات AWS.
 
 ---
 
-## 4️⃣ التشفير وإدارة الأسرار (Encryption & Secrets)
+## ثانياً: إدارة الهوية والوصول (`AWS IAM` — Identity and Access Management)
 
-| الخدمة | وظيفتها بالبلدي والمصري |
+تُعد **`AWS IAM`** خدمة **عالمية (`Global Service`) ومجانية** تتيح التحكم الدقيق في من يُسمح له بالوصول إلى موارد AWS وما هي الإجراءات المصرح له بتنفيذها.
+
+### المكونات الأساسية لـ `AWS IAM`:
+
+1. **حساب الجذر (`AWS Account Root User`):**
+   * هو الحساب الأولي الذي يُنشأ باستخدام البريد الإلكتروني وكلمة المرور عند فتح حساب AWS لأول مرة، ويمتلك صلاحيات غير محدودة لا يمكن تقييدها بسياسات IAM.
+   * **أفضل الممارسات الإلزامية في الاختبار:**
+     * تفعيل المصادقة متعددة العوامل (**`MFA`**) على حساب الجذر فوراً.
+     * **عدم استخدام `Root User` للمهام اليومية مطلقاً**، بل إنشاء مستخدم إداري أو استخدام `IAM Identity Center`.
+     * **عدم إنشاء `Access Keys`** لحساب الجذر (وحذفها فوراً إن وُجدت).
+     * يقتصر استخدامه على مهام إدارية نادرة للغاية مثل إغلاق الحساب، أو تغيير باقة الدعم الفني (`Support Plan`)، أو تعديل بيانات مالك الحساب.
+
+2. **مستخدمو IAM (`IAM Users`):**
+   * هويات مخصصة للأفراد أو التطبيقات داخل حساب AWS. يُمنح كل مستخدم بيانات دخول مستقلة (`Console Password` أو `Access Keys` للـ CLI/SDK).
+
+3. **مجموعات IAM (`IAM Groups`):**
+   * حاوية تنظيمية تضم مجموعة من الـ **`IAM Users`** (مثل `Developers`, `Finance`, `Admins`) لربط السياسات الأمنية بالمجموعة دفعة واحدة بدلاً من تكرارها لكل مستخدم.
+   * *ملاحظة هامة:* لا يمكن للمجموعة أن تحتوي على مجموعة أخرى (`Groups cannot be nested`)، ولا يمكنها احتواء `IAM Roles`.
+
+4. **سياسات IAM (`IAM Policies`):**
+   * مستندات مكتوبة بصيغة **`JSON`** تحدد الصلاحيات بدقة (`Effect: Allow / Deny`، و `Action`، و `Resource`).
+   * **مبدأ التقييم الافتراضي (`Implicit Deny`):** أي مستخدم جديد يبدأ بصلاحيات **صفرية** تماماً، وأي قاعدة منع صريحة (**`Explicit Deny`**) تتغلب دائماً على أي قاعدة سماح (`Allow`).
+   * يجب دائماً الالتزام بمبدأ أقل الصلاحيات (**`Principle of Least Privilege`**): منح المستخدم الحد الأدنى فقط من الصلاحيات اللازمة لأداء عمله.
+
+5. **أدوار IAM (`IAM Roles`):**
+   * هويات لا ترتبط بكلمة مرور دائمة أو مفاتيح ثابتة، بل تمنح **بيانات اعتماد مؤقتة (`Temporary Security Credentials`)** عبر خدمة **`AWS STS` (Security Token Service)**.
+   * **الحالة القياسية في الاختبار:** لتمكين خادم **`Amazon EC2`** أو دالة **`AWS Lambda`** من قراءة ملفات في **`Amazon S3`** بأمان، نربط **`IAM Role`** بالخادم بدلاً من كتابة `Access Keys` ثابتة داخل الكود.
+
+6. **المصادقة متعددة العوامل (`MFA` — Multi-Factor Authentication):**
+   * تضيف طبقة تحقق ثانية (شيء تمتلكه مثل تطبيق مصادقة على الهاتف أو مفتاح أمان فيزيائي `Hardware MFA`) بجانب كلمة المرور (شيء تعرفه).
+
+7. **مركز الهوية (`AWS IAM Identity Center` — سابقاً `AWS SSO`):**
+   * الخدمة الموصى بها للمؤسسات لإدارة وصول الموظفين إلى **عدة حسابات AWS** وتطبيقات الأعمال السحابية عبر **تسجيل دخول موحد (`Single Sign-On`)**، مع إمكانية الربط بمزودي الهوية الخارجيين مثل `Microsoft Active Directory` و `Okta`.
+
+---
+
+## ثالثاً: حوكمة الحسابات المتعددة (`AWS Organizations`)
+
+تعتمد المؤسسات الاحترافية على فصل بيئات العمل في حسابات AWS مستقلة (حساب للتطوير `Dev`، وحساب للاختبار `Staging`، وحساب للإنتاج `Prod`) لتقليل نطاق الضرر (`Blast Radius`) وعزل الفواتير.
+
+* **`AWS Organizations`:** خدمة مجانية تتيح إدارة جميع حسابات المؤسسة مركزياً ضمن هيكل شجري من الوحدات التنظيمية (**`Organizational Units — OUs`**).
+* **المزايا الجوهرية:**
+  1. **الفوترة الموحدة (`Consolidated Billing`):** إصدار فاتورة واحدة لجميع الحسابات، وتجميع الاستهلاك للحصول على خصومات الكميات (**`Volume Discounts`**)، ومشاركة خصومات `Reserved Instances` و `Savings Plans` بين الحسابات.
+  2. **سياسات التحكم في الخدمات (`Service Control Policies — SCPs`):** قواعد حوكمة مركزية تحدد **الحد الأقصى المسموح به من الصلاحيات (`Guardrails`)** للحسابات أو الوحدات التنظيمية. *ملاحظة هامة:* الـ `SCP` لا تمنح صلاحيات بحد ذاتها، لكنها تضع سقفاً لا يستطيع حتى مدير الحساب (`Administrator`) تجاوزه (مثل حظر إطلاق موارد خارج `eu-north-1`).
+
+---
+
+## رابعاً: التشفير وإدارة الشهادات والأسرار (Encryption & Secrets Management)
+
+| الخدمة | آلية العمل وحالة الاستخدام الدقيقة |
 | :--- | :--- |
-| **`AWS KMS` (Key Management Service)** | **خزنة مفاتيح التشفير المدارة من AWS:** بتعمل وتدير مفاتيح التشفير لبياناتك في S3 و EBS و RDS بضغطة زرار (مشتركة على هاردوير AWS — **Multi-tenant**). |
-| **`AWS CloudHSM`** | زي KMS بس **جهاز هاردوير مخصص ليك لوحدك (`Single-tenant / Dedicated Hardware`)** عشان قوانين البنوك الصارمة (**FIPS 140-2 Level 3**). |
-| **`AWS Certificate Manager (ACM)`** | بيطلعلك ويجددلك شهادات الـ **SSL/TLS Certificates** بتاعة الـ **HTTPS** لموقعك أوتوماتيك ومجاناً! |
-| **`AWS Secrets Manager`** | خزنة للباسوردات بتاعة الداتابيز (**Database Credentials**) و الـ API Keys. **الميزة القاتلة في الامتحان:** بتغير الباسورد **أوتوماتيك كل فترة (`Automatic Secret Rotation`)**! |
-| **`AWS Systems Manager Parameter Store`** | مخزن لإعدادات التطبيق (**Configuration Data**) والباسوردات البسيطة ومجاني للـ Standard، لكن مفيهوش **Automatic Rotation** جاهز زي Secrets Manager. |
+| **`AWS KMS` (Key Management Service)** | خدمة مُدارة لإنشاء وإدارة مفاتيح التشفير المستخدمة في تشفير البيانات عبر خدمات AWS (`S3`, `EBS`, `RDS`, `DynamoDB`). تعمل على عتاد أمني مشترك (`Multi-tenant HSM`) وتتكامل تلقائياً مع `AWS CloudTrail` لتسجيل كل عملية استخدام للمفتاح. |
+| **`AWS CloudHSM`** | جهاز عتادي مخصص ومفرد للعميل (**`Single-tenant Dedicated Hardware`**) يوفر تحكماً حصرياً بالمفاتيح ويلبي متطلبات الامتثال الصارمة للقطاع المصرفي والحكومي (`FIPS 140-2 Level 3`). لا تمتلك AWS صلاحية الوصول إلى المفاتيح داخله. |
+| **`AWS Certificate Manager (ACM)`** | خدمة تتولى إصدار ونشر وتجديد شهادات **`SSL/TLS Certificates`** تلقائياً ومجاناً للشهادات العامة المرتبطة بخدمات AWS مثل `CloudFront` و `ALB` و `API Gateway` لتأمين حركة مرور `HTTPS`. |
+| **`AWS Secrets Manager`** | خزنة مُدارة لتخزين بيانات الاعتماد الحساسة مثل كلمات مرور قواعد البيانات (`RDS`) ومفاتيح الـ `API`. **الميزة الفارقة:** تدعم التدوير التلقائي لكلمات المرور (**`Automatic Secret Rotation`**) بشكل دوري دون تدخل بشري. |
+| **`AWS Systems Manager Parameter Store`** | مخزن هرمي للإعدادات النصية (`Configuration Parameters`) والبيانات السرية البسيطة (بالتكامل مع KMS). يتميز بتكلفة منخفضة جداً (الطبقة القياسية مجانية)، لكنه لا يوفر ميزة التدوير التلقائي الجاهزة الموجودة في `Secrets Manager`. |
 
 ---
 
-## 5️⃣ حماية الشبكة والمواقع (Network & Edge Security)
+## خامساً: أمن الشبكات وحماية التطبيقات (Network & Edge Protection)
 
-### 🧱 Security Groups vs. Network ACLs (NACLs) — سؤال أكيد في الامتحان!
+### 1. المقارنة الجوهرية: `Security Groups` مقابل `Network ACLs (NACLs)`
 
-| المقارنة | `Security Groups` | `Network ACLs (NACLs)` |
+| وجه المقارنة | `Security Groups` | `Network ACLs (NACLs)` |
 | :--- | :--- | :--- |
-| **مكانه فين؟** | على باب **السيرفر نفسه (`EC2 Instance Level`)** — زي قفل شقتك | على باب **الشارع كله (`Subnet Level`)** — زي بوابة الكومباوند |
-| **نوع القواعد** | **`Allow` rules ONLY** (بتقول مين يدخل بس، والباقي ممنوع تلقائي) | **`Allow` AND `Deny` rules** (تقدر تعمل Block صريح لـ IP معين!) |
-| **الحالة (`State`)** | **`Stateful`** (لو سمحت لحد يدخل، مسموحله يخرج تاني أوتوماتيك) | **`Stateless`** (لازم تكتب قاعدة للدخول `Inbound` وقاعدة للخروج `Outbound`) |
+| **نطاق التطبيق** | على مستوى واجهة الشبكة للخادم (**`EC2 Instance / ENI Level`**) | على مستوى الشبكة الفرعية بالكامل (**`Subnet Level`**) |
+| **أنواع القواعد** | تدعم قواعد السماح فقط (**`Allow rules ONLY`**) — كل ما لم يُسمح به مرفوض ضمنياً | تدعم قواعد السماح والمنع الصريح (**`Allow AND Deny rules`**) — تُستخدم لحظر عناوين IP خبيثة محددة |
+| **تتبع الحالة (`State`)** | **`Stateful`:** حركة المرور المسموح بدخولها يُسمح بردّها بالخروج تلقائياً دون قاعدة إضافية | **`Stateless`:** يجب تعريف قواعد صريحة لحركة الدخول (`Inbound`) وأخرى منفصلة لحركة الخروج (`Outbound`) |
+| **ترتيب التقييم** | يتم تقييم **جميع القواعد** معاً قبل اتخاذ القرار | يتم تقييم القواعد **بالتسلسل الرقمي** من الأصغر إلى الأكبر، ويُطبق أول تطابق |
 
-### 🛡️ حماية ضد الهجمات على الإنترنت:
-* **`AWS Shield`:** الحماية ضد هجمات حجب الخدمة (**DDoS Attacks** — لما هاكر يبعتلك ملايين الطلبات الوهمية عشان يوقع موقعك):
-  * **`Shield Standard`:** مجاني وشغال أوتوماتيك لكل عملاء AWS!
-  * **`Shield Advanced`:** مدفوع (3000 دولار شهرياً)، بيديك حماية متقدمة، وفريق طوارئ 24/7 اسمه **SRT (Shield Response Team)**، و**تعويض مالي (`Cost Protection`)** لو الهجمة خلت فاتورة AWS تزيد!
-* **`AWS WAF` (Web Application Firewall):** بيحمي موقعك (Layer 7 HTTP/HTTPS) من هجمات الويب المشهورة زي **`SQL Injection`** و **`Cross-Site Scripting (XSS)`** وتقدر تحطه على `CloudFront` أو `ALB` أو `API Gateway`.
-* **`AWS Firewall Manager`:** لو عندك عشرات الحسابات في `AWS Organizations` وعايز تتحكم في قواعد الـ `WAF` و `Shield` و `Security Groups` من مكان واحد مركزي.
-
----
-
-## 6️⃣ كشف التهديدات والمراجعة والامتثال (Threat Detection & Compliance)
-
-الـ 5 خدمات دول بيتلخبط فيهم ناس كتير، بس بالمثال المصري ده مش هتنساهم أبداً:
-
-| الخدمة | التشبيه المصري | الكلمة المفتاحية في الامتحان |
-| :--- | :--- | :--- |
-| **`Amazon GuardDuty`** | **ضابط المخابرات الذكي:** بيراقب Logs حسابك بالذكاء الاصطناعي ويلقط أي سلوك مريب (هاكر بيعدّن Bitcoin على سيرفرك أو دخول من دولة غريبة). | **Intelligent Threat Detection** (ML/AI) |
-| **`Amazon Inspector`** | **مفتش الصحة والسلامة:** بيفحص سيرفرات الـ `EC2` و الـ `Lambda` و الـ `ECR Containers` عشان يلاقي **ثغرات أمنية في البرامج (`Software Vulnerabilities / CVEs`)** أو بورتات مفتوحة بالغلط. | **Automated Vulnerability Assessment / Scanning** |
-| **`Amazon Macie`** | **كلب البوليس اللي بيشم البيانات السرية:** بيدوّر جوه ملفات **`Amazon S3`** عشان يكتشف أي بيانات شخصية حساسة (**PII** — أرقام بطاقات، كروت ائتمان) متسابة مكشوفة! | **Discover & Protect Sensitive Data (`PII`) in `S3`** |
-| **`AWS Security Hub`** | **غرفة العمليات المركزية:** بتجمعلك كل التنبيهات من GuardDuty و Inspector و Macie في شاشة واحدة (**Single Pane of Glass**). | **Centralized Security Dashboard / Aggregator** |
-| **`Amazon Detective`** | **المحقق كونان:** بعد ما يحصل اختراق، بتستخدمه عشان تحقق وتعرف السبب الجذري (**Root Cause Analysis**). | **Root Cause Investigation** |
-| **`AWS Artifact`** | **مكتبة الشهادات الرسمية:** بوابة مجانية بتنزل منها شهادات الامتثال بتاعة AWS (زي **ISO 27001, SOC 2, PCI-DSS**) والـ **BAA** عشان توريها للمراجعين القانونيين. | **Download Compliance Reports & Agreements** |
-| **`AWS Audit Manager`** | بيساعدك تجمع الأدلة أوتوماتيك من حسابك عشان تجهز نفسك للمراجعة (**Audit Preparation**). | **Continuous Auditing & Evidence Collection** |
-| **`AWS CloudTrail`** | **كاميرا المراقبة (مين عمل إيه وامتى؟):** بتسجل كل حركة أو API Call بتحصل في حساب AWS بتاعك! | **Audit API Activity / Governance / Who did what?** |
+### 2. الحماية من الهجمات الإلكترونية
+* **`AWS Shield` (الحماية من هجمات حجب الخدمة `DDoS` — الطبقتين 3 و 4):**
+  * **`AWS Shield Standard`:** مفعّل تلقائياً **ومجاناً** لجميع عملاء AWS للحماية من هجمات `DDoS` الشائعة.
+  * **`AWS Shield Advanced`:** خدمة مدفوعة للمؤسسات توفر حماية متقدمة ومخصصة، ووصولاً على مدار الساعة لفريق الاستجابة المتخصص (**`AWS Shield Response Team — SRT`**)، وحماية مالية ضد ارتفاع الفاتورة الناتج عن هجمات `DDoS` (**`DDoS Cost Protection`**).
+* **`AWS WAF` (Web Application Firewall — الطبقة السابعة `Layer 7`):**
+  * يحمي تطبيقات الويب من الهجمات الشائعة على بروتوكول `HTTP/HTTPS` مثل حقن قواعد البيانات (**`SQL Injection`**) والبرمجة النصية العابرة للمواقع (**`Cross-Site Scripting — XSS`**)، ويمكن ربطه بـ `Amazon CloudFront` و `ALB` و `Amazon API Gateway`.
+* **`AWS Network Firewall`:** جدار حماية شبكي مُدار على مستوى الـ **`VPC`** بالكامل، يوفر فحصاً عميقاً للحزم (`Stateful Inspection`) وتصفية لنطاقات الـ `DNS` ومنع التسلل (`IDS/IPS`).
+* **`AWS Firewall Manager`:** أداة إدارة مركزية لتطبيق وتوحيد قواعد `WAF` و `Shield Advanced` و `Security Groups` و `Network Firewall` عبر جميع الحسابات داخل `AWS Organizations`.
 
 ---
 
-## 🎯 زتونة الامتحان لـ Domain 2 (كلمة بكلمة!)
+## سادساً: كشف التهديدات، التدقيق، والامتثال (Threat Detection & Compliance)
 
-| لو شفت في السؤال... | الإجابة الصح 100% |
+| الخدمة | الوظيفة الدقيقة والغرض الأمني |
 | :--- | :--- |
-| **Who is responsible for patching the Guest OS on EC2?** | **The Customer (العميل)** |
-| **Who is responsible for physical security of Data Centers?** | **AWS** |
-| **Grant EC2 instance access to S3 without hardcoded credentials?** | **Attach an `IAM Role` to the EC2 instance** |
-| **Block a specific malicious IP address at the Subnet level?** | **`Network ACL (NACL)`** (لأن الـ Security Group مفيهاش Deny!) |
-| **Protect against SQL Injection or XSS?** | **`AWS WAF`** |
-| **Protect against DDoS attacks?** | **`AWS Shield`** |
-| **Detect PII (credit cards, SSN) in Amazon S3 buckets?** | **`Amazon Macie`** |
-| **Scan EC2 instances or containers for software vulnerabilities?** | **`Amazon Inspector`** |
-| **Detect unusual / malicious API activity or crypto mining?** | **`Amazon GuardDuty`** |
-| **Download AWS SOC 2 or ISO compliance reports?** | **`AWS Artifact`** |
-| **Automatically rotate database passwords?** | **`AWS Secrets Manager`** |
-| **Restrict maximum permissions across multiple AWS accounts?** | **`AWS Organizations` with `SCPs`** |
+| **`Amazon GuardDuty`** | **كشف التهديدات الذكي (`Intelligent Threat Detection`):** يحلل باستمرار سجلات `CloudTrail` و `VPC Flow Logs` و `DNS Logs` باستخدام التعلم الآلي (`Machine Learning`) لاكتشاف الأنشطة المشبوهة مثل تعدين العملات الرقمية (`Crypto-mining`)، أو استخدام مفاتيح مسروقة، أو التواصل مع خوادم خبيثة. |
+| **`Amazon Inspector`** | **فحص الثغرات البرمجية الآلي (`Automated Vulnerability Management`):** يفحص بشكل مستمر خوادم `Amazon EC2` وصور الحاويات في `Amazon ECR` ودوال `AWS Lambda` لاكتشاف الثغرات الأمنية المعروفة (**`CVEs`**) والتعرض الشبكي غير المقصود. |
+| **`Amazon Macie`** | **اكتشاف وحماية البيانات الحساسة في `S3`:** يستخدم التعلم الآلي ومطابقة الأنماط لمسح حاويات **`Amazon S3`** واكتشاف البيانات الشخصية الحساسة (**`PII`** — مثل أرقام بطاقات الائتمان والهويات) وتنبيه الفريق في حال وجود حاويات مكشوفة للعامة. |
+| **`AWS Security Hub`** | **لوحة التحكم الأمنية المركزية (`CSPM`):** يجمع ويوحد وينظم التنبيهات الأمنية من `GuardDuty` و `Inspector` و `Macie` و `Firewall Manager` في شاشة واحدة، ويقيّم امتثال الحساب لأطر الأمان القياسية مثل `CIS` و `PCI-DSS`. |
+| **`Amazon Detective`** | **التحقيق الجنائي وتحليل السبب الجذري (`Root Cause Analysis`):** يبني رسماً بيانياً للعلاقات الأمنية لمساعدة فرق الأمان على تتبع مصدر الهجوم وفهم نطاقه بعد اكتشاف التهديد. |
+| **`AWS Artifact`** | **بوابة تقارير الامتثال والاتفاقيات:** خدمة مجانية تتيح تنزيل شهادات الامتثال المستقلة لـ AWS (مثل **`ISO 27001`**, **`SOC 2`**, **`PCI-DSS`**) وإدارة الاتفاقيات القانونية مثل اتفاقية **`BAA`** الخاصة بمعيار `HIPAA`. |
+| **`AWS Audit Manager`** | **أتمتة جمع أدلة التدقيق:** يساعد المؤسسات على جمع الأدلة التشغيلية تلقائياً وبشكل مستمر لتقييم جاهزيتها للمراجعات التنظيمية وتقليل الجهد اليدوي أثناء التدقيق. |
+| **`AWS CloudTrail`** | **سجل التدقيق الشامل للأنشطة (`API Auditing`):** يسجل كل استدعاء برمجي (`API Call`) وإجراء يتم عبر Console أو CLI أو SDK (من قام بالإجراء، متى، ومن أي عنوان IP)، وهو الأداة الأساسية للتحقيق والحوكمة. |
 
 ---
 
-> ⬅️ **الدرس السابق:** [Domain 1: Cloud Concepts](./01_Domain_1_Cloud_Concepts.md) | **الدرس التالي:** 👉 **[03_Domain_3_Part1_Compute_and_Storage.md](./03_Domain_3_Part1_Compute_and_Storage.md)** | [الفهرس](./README.md)
+## منهجية التعامل مع أسئلة Domain 2 في الاختبار
+
+| مؤشر أو عبارة في نص السؤال | الإجابة الدقيقة |
+| :--- | :--- |
+| **Patching the Guest Operating System on an `Amazon EC2` instance** | **مسؤولية العميل (`Customer`)** |
+| **Patching the underlying OS of `Amazon RDS` or physical security of data centers** | **مسؤولية `AWS`** |
+| **Allow an EC2 application to access S3 securely without storing credentials** | **ربط `IAM Role` بـ `EC2 Instance`** |
+| **Explicitly block/deny a malicious IP address at the Subnet boundary** | **`Network ACL (NACL)`** (لأن `Security Groups` لا تدعم `Deny`) |
+| **Protect web applications from SQL Injection and Cross-Site Scripting (XSS)** | **`AWS WAF`** |
+| **Protect against DDoS attacks with 24/7 SRT access and cost protection** | **`AWS Shield Advanced`** |
+| **Discover Sensitive Data / PII stored inside `Amazon S3` buckets** | **`Amazon Macie`** |
+| **Continuously scan EC2 instances, ECR containers, and Lambda for CVEs** | **`Amazon Inspector`** |
+| **Intelligent threat detection using ML on CloudTrail, VPC Flow, and DNS logs** | **`Amazon GuardDuty`** |
+| **Download AWS SOC 2, ISO, or PCI-DSS compliance reports** | **`AWS Artifact`** |
+| **Store and automatically rotate database credentials** | **`AWS Secrets Manager`** |
+| **Set maximum permission boundaries across multiple accounts in an organization** | **`AWS Organizations` مع `Service Control Policies (SCPs)`** |
+
+---
+
+> **الدرس السابق:** [Domain 1: Cloud Concepts](./01_Domain_1_Cloud_Concepts.md) | **الدرس التالي:** 👉 [03_Domain_3_Part1_Compute_and_Storage.md](./03_Domain_3_Part1_Compute_and_Storage.md) | [الفهرس الرئيسي](./README.md)
 
 </div>

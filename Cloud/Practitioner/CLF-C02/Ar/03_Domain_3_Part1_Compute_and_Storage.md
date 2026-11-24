@@ -1,112 +1,112 @@
 <div dir="rtl">
 
-# 🖥️ Domain 3 (الجزء الأول): Compute & Storage — السيرفرات والتخزين
+# Domain 3 (الجزء الأول): Compute & Storage — الحوسبة والخوادم وأنظمة التخزين
 
-الـ Domain التالت (**Cloud Technology and Services**) هو أكبر جزء في الامتحان (**34%**). عشان يبقى خفيف وسهل في المذاكرة، قسمناه لـ 3 ملفات، وهنا هنبدأ بأهم حاجتين: **الـ Compute (السيرفرات)** و **الـ Storage (التخزين)**.
+يمثل المجال الثالث (**Cloud Technology and Services**) النسبة الأكبر من اختبار `CLF-C02` بوزن **34%**. لتسهيل الفهم والاستيعاب العميق، قُسّم هذا المجال إلى ثلاثة أجزاء متكاملة. يتناول هذا الجزء الأول خدمات **الحوسبة (`Compute`)** وخدمات **التخزين (`Storage`)** بتفصيل شامل.
 
 ---
 
-## 1️⃣ خدمات السيرفرات والحوسبة (Compute Services)
+## أولاً: خدمات الحوسبة (`AWS Compute Services`)
 
-### 🖥️ 1. `Amazon EC2` (Elastic Compute Cloud)
-دي أشهر خدمة في AWS كلها — عبارة عن **سيرفر افتراضي (Virtual Machine)** بتأجره على الكلاود وتختارله الويندوز أو اللينكس اللي يعجبك وحجم الـ CPU والـ RAM.
+### 1. خدمة الخوادم الافتراضية (`Amazon EC2` — Elastic Compute Cloud)
+تُعد **`Amazon EC2`** خدمة الحوسبة الأساسية من نموذج **`IaaS`** في AWS، حيث توفر خوادم افتراضية (`Instances`) قابلة للتخصيص بالكامل من حيث نظام التشغيل (`Amazon Machine Image — AMI`)، وسعة المعالج (`vCPU`)، والذاكرة (`RAM`)، والتخزين، والشبكة.
 
-#### 🏷️ عائلات الـ EC2 (Instance Families — بتيجي كتير في الامتحان!):
-* **General Purpose (`T`, `M`):** متوازن (CPU و RAM و Network معقولين) — ممتاز لمواقع الويب العادية.
-* **Compute Optimized (`C`):** بروسيسور جبار — للألعاب، معالجة الفيديو، والحسابات التقيلة (`High-performance computing`).
-* **Memory Optimized (`R`, `X`):** RAM ضخمة جداً — لقواعد البيانات الكبيرة في الذاكرة (`In-memory databases`) وتحليل البيانات الضخمة.
-* **Storage Optimized (`I`, `D`):** هاردات فائقة السرعة — للتطبيقات اللي بتقرأ وتكتب بيانات ضخمة بسرعة عالية (`High IOPS`).
-* **Accelerated Computing (`P`, `G`):** فيه كروت شاشة (**GPU**) — للذكاء الاصطناعي (**Machine Learning**) والجرافيك.
+#### أ. عائلات خوادم EC2 (`EC2 Instance Families`):
+تم تصميم كل عائلة لتحسين الأداء والتكلفة لنوع محدد من أحمال العمل:
+* **`General Purpose` (مثل `T3`, `M6i`):** توازن مدروس بين المعالج والذاكرة والشبكة؛ مثالية لخوادم الويب، مستودعات الكود، وبيئات التطوير والاختبار.
+* **`Compute Optimized` (مثل `C6i`, `C7g`):** معالجات عالية الأداء؛ مخصصة لمعالجة البيانات المكثفة (`Batch Processing`)، خوادم الألعاب، والنمذجة العلمية (`HPC`).
+* **`Memory Optimized` (مثل `R6i`, `X2`):** سعة ذاكرة عشوائية (`RAM`) ضخمة؛ مصممة لقواعد البيانات في الذاكرة (`In-memory Databases`)، وتحليل البيانات الضخمة في الوقت الفعلي.
+* **`Storage Optimized` (مثل `I3`, `D3`):** أقراص `NVMe SSD` محلية فائقة السرعة لعمليات القراءة والكتابة المتتابعة والعشوائية العالية (`High IOPS`) مثل قواعد بيانات NoSQL الموزعة وأنظمة الملفات الكبيرة.
+* **`Accelerated Computing` (مثل `P4`, `G5`, `Inf2`):** مزودة بمسرّعات عتادية مثل بطاقات الرسوميات (**`GPU`**) أو شرائح الذكاء الاصطناعي المخصصة (`AWS Trainium / Inferentia`) لتدريب وتشغيل نماذج التعلم الآلي ومعالجة الرسوميات ثلاثية الأبعاد.
 
-#### 💰 خطط تسعير الـ EC2 (EC2 Pricing Models — سؤال مؤكد 100% في الامتحان!):
+#### ب. نماذج تسعير EC2 (`EC2 Purchasing Options` — محور أساسي في الاختبار):
 
-| الخطة | الفكرة بالبلدي والمصري | امتى تختارها؟ |
+| نموذج التسعير | آلية العمل والخصم | حالة الاستخدام المثالية |
 | :--- | :--- | :--- |
-| **On-Demand** | **ادفع بالثانية/الساعة من غير أي التزام** — أغلى سعر بس حرية كاملة تطفي وتشغل براحتك. | شغل قصير، متقطع، مش عارف هياخد وقت قد إيه (**Unpredictable / Short-term**). |
-| **Savings Plans** | **عقد التزام لمدة سنة أو 3 سنين** إنك تصرف مبلغ معين في الساعة (مثلاً \$10/ساعة) وتاخد خصم يوصل لـ **72%**. مرن جداً (بيغطي EC2 و Fargate و Lambda). | شغل ثابت ومستمر ومحتاج مرونة في تغيير نوع السيرفر أو الـ Region. |
-| **Reserved Instances (RI)** | زي Savings Plans (عقد سنة أو 3 سنين وخصم لحد **72%**) بس مرتبط بنوع سيرفر معين في Region معينة. | شغل ثابت ومستقر (**Steady-state / Predictable workloads**). |
-| **Spot Instances** | **مزاد البواقي!** بتشتري السيرفرات الفاضية عند AWS بخصم خرافي يوصل لـ **90%**! بس خلي بالك: AWS ممكن تاخد السيرفر منك تاني بإنذار **دقيقتين بس** لو احتاجته! | شغل يقدر يقف ويكمل تاني (**Fault-tolerant / Stateless / Batch jobs**). **أوعى تستخدمه للداتابيز!** |
-| **Dedicated Hosts** | بتأجر **سيرفر فيزيائي كامل (`Physical Server`) ليك لوحدك** محدش بيشاركك فيه. | لو عندك رخص برامج قديمة مربوطة بعدد الـ Sockets/Cores (**BYOL — Bring Your Own License**) أو قوانين امتثال صارمة. |
+| **`On-Demand Instances`** | الدفع بالثانية أو الساعة دون أي التزام طويل الأجل أو دفعة مقدمة. | أحمال العمل قصيرة الأجل، أو غير المتوقعة (`Unpredictable`)، أو التي لا تحتمل الانقطاع ولا يمكن التنبؤ بمدتها. |
+| **`Savings Plans`** | التزام بإنفاق مبلغ ثابت في الساعة (مثلاً `$10/hr`) لمدة **سنة أو 3 سنوات** مقابل خصم يصل إلى **72%**. يتميز بمرونة عالية جداً؛ إذ يغطي **`Compute Savings Plans`** كلاً من `EC2` و `AWS Fargate` و `AWS Lambda` عبر مختلف الـ Regions وعائلات الخوادم. | أحمال العمل المستمرة والمستقرة مع الحاجة إلى مرونة في تغيير حجم الخادم أو نظام التشغيل أو الانتقال إلى Serverless. |
+| **`Reserved Instances (RI)`** | التزام بعائلة خادم محددة (أو قابلة للتحويل في `Convertible RI`) لمدة **سنة أو 3 سنوات** مقابل خصم يصل إلى **72%**. | التطبيقات ذات الاستهلاك الثابت والمتوقع بدقة (`Steady-state workloads`). |
+| **`Spot Instances`** | الاستفادة من السعة الفائضة غير المستخدمة في مراكز بيانات AWS بخصم يصل إلى **90%** مقارنة بـ `On-Demand`. **القيد الحاسم:** يمكن لـ AWS استعادة الخادم بإشعار مدته **دقيقتان فقط (`2-minute interruption notice`)**. | المهام المرنة القابلة للتوقف والاستئناف (`Fault-tolerant`, `Stateless`, `Batch jobs`, `CI/CD runners`). **لا تصلح مطلقاً لقواعد البيانات أو الأنظمة الحرجة.** |
+| **`Dedicated Hosts`** | استئجار خادم فيزيائي كامل مخصص لك وحدك مع إظهار تفاصيل المعالجات (`Sockets / Physical Cores`). | الالتزام برخص البرمجيات القائمة على العتاد الفيزيائي (**`BYOL` — Bring Your Own License**) أو المتطلبات التنظيمية التي تحظر مشاركة العتاد (`Multi-tenancy`). |
+| **`Dedicated Instances`** | تشغيل خوادمك على عتاد مخصص لحسابك فقط، ولكن دون التحكم في مستوى الـ Sockets أو تخصيص نفس الجهاز الفعلي عند إعادة التشغيل. | متطلبات عزل العتاد دون الحاجة لإدارة رخص `BYOL` على مستوى المعالج. |
 
 ---
 
-### ⚖️ 2. التوزيع والتوسع التلقائي (`ELB` & `Auto Scaling`)
-* **`Elastic Load Balancing (ELB)`:** **ظابط المرور** اللي واقف قدام سيرفراتك بيوزع الزوار بالتساوي عليهم، ولو سيرفر وقع مش بيبعتله حد (**Health Checks**):
-  * **`ALB` (Application Load Balancer):** ذكي جداً، شغال على Layer 7 (**HTTP/HTTPS**)، بيفهم الروابط (مثلاً `/images` تروح لسيرفر و `/videos` تروح لسيرفر تاني).
-  * **`NLB` (Network Load Balancer):** صاروخ في السرعة! شغال على Layer 4 (**TCP/UDP**)، بيتحمل ملايين الطلبات في الثانية مع **Ultra-low latency** وبيديك **Static IP**.
-* **`Amazon EC2 Auto Scaling`:** لما الزوار يزيدوا، بيزود عدد سيرفرات الـ EC2 أوتوماتيك (**Scale Out**)، ولما يقلوا، بيطفي السيرفرات الزيادة أوتوماتيك (**Scale In**) عشان توفر فلوس!
+### 2. موازنة الأحمال والتوسع التلقائي (`ELB` & `Amazon EC2 Auto Scaling`)
+* **`Elastic Load Balancing (ELB)`:** خدمة مُدارة توزع حركة المرور الواردة تلقائياً عبر عدة خوادم (`Targets`) في أكثر من `Availability Zone`، وتجري فحوصات دورية (`Health Checks`) لتوجيه الطلبات فقط إلى الخوادم السليمة:
+  * **`Application Load Balancer (ALB)`:** يعمل على **الطبقة السابعة (`Layer 7 — HTTP/HTTPS`)**، ويدعم التوجيه الذكي بناءً على المسار (`/api`, `/images`) أو اسم النطاق، وهو الأنسب لتطبيقات الويب الحديثة والـ Microservices.
+  * **`Network Load Balancer (NLB)`:** يعمل على **الطبقة الرابعة (`Layer 4 — TCP/UDP/TLS`)**، ويُستخدم للأداء الفائق جداً (ملايين الطلبات في الثانية مع `Ultra-low latency`) وعند الحاجة إلى عناوين `Static IP`.
+  * **`Gateway Load Balancer (GWLB)`:** يُستخدم لنشر وإدارة أجهزة الشبكة الأمنية الافتراضية من أطراف ثالثة (مثل Firewalls وأنظمة IDS/IPS).
+* **`Amazon EC2 Auto Scaling`:** يراقب حالة التطبيق ويقوم تلقائياً بإضافة خوادم جديدة (`Scale Out`) عند ارتفاع الحمل (مثل ارتفاع استهلاك `CPU` فوق 70%) وإزالة الخوادم الزائدة (`Scale In`) عند انخفاض الحمل، مما يحقق التوافر العالي (`High Availability`) والمرونة (`Elasticity`) وخفض التكلفة في آنٍ واحد.
 
 ---
 
-### ⚡ 3. الـ Serverless والحاويات (Serverless & Containers)
-
+### 3. الحوسبة بدون خوادم والحاويات والمنصات المُدارة
 * **`AWS Lambda` (Serverless Compute):**
-  * **بدون سيرفرات نهائياً!** إنت بتكتب الكود بتاعك (Python, Node.js, Java...) وبترفعه بس.
-  * الكود بيشتغل بس لما يحصل حدث (**Event-driven** — زي حد يرفع صورة على S3 أو يضغط زرار)، وبتدفع بالملي ثانية على قد وقت تشغيل الكود بس! لو محدش استخدمه بتدفع **صفر**! *(أقصى مدة تشغيل للمرة الواحدة: 15 دقيقة).*
-* **`Amazon ECS` (Elastic Container Service):** خدمة من AWS لإدارة وتشغيل الـ **Docker Containers** بسهولة.
-* **`Amazon EKS` (Elastic Kubernetes Service):** لو فريقك بيستخدم **Kubernetes** وعايز AWS تديرهولك.
-* **`AWS Fargate`:** **Serverless للـ Containers!** بتشغل الـ Containers على ECS أو EKS من غير ما تدير ولا سيرفر EC2 واحد تحتهم!
-* **`AWS Elastic Beanstalk` (PaaS):** ارفع الكود بتاع موقعك بس، و Elastic Beanstalk هيعملك الـ EC2 والـ Load Balancer والـ Auto Scaling أوتوماتيك من غير ما توجع دماغك بالبنية التحتية (الخدمة نفسها مجانية وبتدفع تمن الموارد بس).
-* **`Amazon Lightsail`:** أسهل وأبسط خدمة للمبتدئين والشركات الصغيرة — موقع ووردبريس أو سيرفر بسيط بسعر شهري ثابت ومحدد (**Fixed monthly pricing**).
+  * يتيح تنفيذ الكود البرمجي (Python, Node.js, Java, Go, .NET, وغيرها) دون إنشاء أو إدارة أي خوادم.
+  * يعمل بنمط **مبني على الأحداث (`Event-driven`)** (مثل رفع ملف إلى `S3`، أو طلب عبر `API Gateway`، أو رسالة في `SQS`).
+  * **نموذج التكلفة:** تدفع فقط مقابل عدد الطلبات ومدة التنفيذ الفعلية بالملي ثانية؛ وعند عدم وجود طلبات تكون التكلفة **صفراً**. *(الحد الأقصى لمدة تنفيذ الاستدعاء الواحد هو 15 دقيقة).*
+* **`Amazon ECS` (Elastic Container Service):** خدمة مُدارة بالكامل من AWS لتنسيق وتشغيل حاويات **Docker** بأداء عالٍ وتكامل عميق مع خدمات AWS.
+* **`Amazon EKS` (Elastic Kubernetes Service):** خدمة مُدارة لتشغيل مجموعات **Kubernetes** القياسية دون عبء إدارة طبقة التحكم (`Control Plane`).
+* **`Amazon ECR` (Elastic Container Registry):** مستودع مُدار وآمن لتخزين وإدارة ونشر صور حاويات Docker.
+* **`AWS Fargate`:** محرك حوسبة **Serverless للحاويات** يعمل مع كل من `ECS` و `EKS`، حيث يتيح تشغيل الحاويات مباشرة دون الحاجة لتوفير أو إدارة خوادم `EC2` أسفلها.
+* **`AWS Elastic Beanstalk` (`PaaS`):** خدمة تتيح للمطورين رفع الكود البرمجي للتطبيق فقط، فتتولى AWS تلقائياً إنشاء وإدارة البنية التحتية الكاملة (`EC2`, `ELB`, `Auto Scaling`, `Health Monitoring`) مع احتفاظ المطور بالقدرة على الوصول إلى الموارد التحتية إذا رغب. الخدمة نفسها مجانية ويدفع العميل تكلفة الموارد المُنشأة فقط.
+* **`Amazon Lightsail`:** منصة مبسطة ومثالية للمشاريع الصغيرة والمواقع التعريفية (مثل WordPress)، تقدم حزماً متكاملة (خادم + تخزين + شبكة) بـ **سعر شهري ثابت ومتوقع (`Predictable Monthly Pricing`)**.
 
 ---
 
-## 2️⃣ خدمات التخزين (Storage Services)
+## ثانياً: خدمات التخزين (`AWS Storage Services`)
 
-### 🪣 1. `Amazon S3` (Simple Storage Service)
-**مخزن الملفات اللا نهائي على الإنترنت (`Object Storage`)!**
-* بتحط ملفاتك (`Objects`) جوه جرادل اسمها **`Buckets`** (اسم الـ Bucket لازم يكون **فريد على مستوى العالم كله — Globally Unique**).
-* أقصى حجم للملف الواحد: **5 TB**.
-* **الاعتمادية (`Durability`):** **`99.999999999%` (11 Nines!)** — يعني مستحيل ملفك يضيع!
-* تقدر تستضيف عليه موقع ثابت (**Static Website Hosting** — HTML/CSS/JS).
+### 1. خدمة التخزين الكائني (`Amazon S3` — Simple Storage Service)
+تُعد **`Amazon S3`** خدمة تخزين كائني (`Object Storage`) عالمية النطاق، مصممة لتحقيق متانة فائقة تصل إلى **`99.999999999%` (11 Nines of Durability)** عبر نسخ البيانات تلقائياً على عدة مرافق داخل نفس الـ `Region`.
+* **المفاهيم الأساسية:** تُخزَّن الملفات (`Objects` بحد أقصى **5 TB** للملف الواحد) داخل حاويات تُسمى **`Buckets`**. يجب أن يكون اسم الـ `Bucket` **فريداً عالمياً (`Globally Unique`)** على مستوى جميع حسابات AWS.
+* **مزايا هامة:** تدعم **`S3 Versioning`** (الاحتفاظ بنسخ سابقة من الملفات للحماية من الحذف أو التعديل العرضي)، و **`S3 Lifecycle Policies`** (أتمتة نقل الملفات بين فئات التخزين أو حذفها بعد مدة زمنية)، و **`Static Website Hosting`** (استضافة مواقع HTML/CSS/JS مباشرة بدون خوادم).
 
-#### 📦 فئات تخزين S3 (`S3 Storage Classes` — مهم جداً في الامتحان!):
+#### فئات التخزين في `Amazon S3` (`S3 Storage Classes`):
 
-| الفئة (`Storage Class`) | التشبيه المصري | امتى تستخدمها؟ |
-| :--- | :--- | :--- |
-| **`S3 Standard`** | **مكتبك اللي إيدك فيه كل يوم** | بيانات بتفتحها كتير جداً (**Frequently accessed**) ومحتاجها فوراً. |
-| **`S3 Intelligent-Tiering`** | **المساعد الذكي** | لما ما تكونش عارف البيانات دي هتتفتح كتير ولا قليل (**Unknown or changing access patterns**). بينقلها أوتوماتيك للأرخص! |
-| **`S3 Standard-IA` (Infrequent Access)** | **الرف العالي في الدولاب** | بيانات مش بتفتحها كتير، بس لو احتجتها لازم تطلع في نفس اللحظة (**Immediate access**). |
-| **`S3 One Zone-IA`** | زي اللي فوق بس متخزنة في **AZ واحدة بس** (أرخص 20%) | لبيانات نقدر نعملها تاني بسهولة (**Re-creatable data** زي صور مصغرة Thumbnails). |
-| **`S3 Glacier Instant Retrieval`** | **مخزن الأرشيف السريع** | أرشيف بتفتحه مرة كل 3 شهور بس عايزه يفتح في أجزاء من الثانية (**Milliseconds**). |
-| **`S3 Glacier Flexible Retrieval`** | **أرشيف في المخزن تحت** | أرشيف رخيص جداً، لما تطلبه بياخد من **دقايق لساعات** عشان يرجعلك. |
-| **`S3 Glacier Deep Archive`** | **خزنة في قبو البنك!** | **أرخص تخزين في AWS كلها!** لأرشيف قانوني مش بتفتحه غير مرة كل كام سنة، وبياخد من **12 لـ 48 ساعة** عشان يرجعلك. |
-
-> [!TIP]
-> **`S3 Lifecycle Policies`:** قواعد أوتوماتيك بتقول لـ S3: "أي ملف يعدي عليه 30 يوم انقله لـ `Standard-IA`، وبعد 90 يوم انقله لـ `Glacier Deep Archive`، وبعد 7 سنين امسحه!". دي بتوفر فلوس بالهبل!
+| فئة التخزين (`Storage Class`) | التوافر والانتشار | زمن الاسترجاع (`Retrieval`) | حالة الاستخدام المثالية |
+| :--- | :---: | :---: | :--- |
+| **`S3 Standard`** | `>= 3 AZs` | فوري (`Milliseconds`) | البيانات النشطة التي يتم الوصول إليها بشكل متكرر (`Frequently accessed data`). |
+| **`S3 Intelligent-Tiering`** | `>= 3 AZs` | فوري / أرشيف اختياري | البيانات ذات **أنماط الوصول غير المعروفة أو المتغيرة (`Unknown or changing access patterns`)**؛ تنقل الكائنات تلقائياً إلى الفئة الأرخص دون رسوم استرجاع. |
+| **`S3 Standard-IA`** (Infrequent Access) | `>= 3 AZs` | فوري (`Milliseconds`) | بيانات نادرة الوصول لكنها تتطلب استرجاعاً فورياً عند الحاجة (مثل النسخ الاحتياطية الحديثة). |
+| **`S3 One Zone-IA`** | **`1 AZ` فقط** | فوري (`Milliseconds`) | أرخص بنحو 20% من `Standard-IA`؛ مناسبة للبيانات الثانوية القابلة لإعادة الإنشاء (`Re-creatable data` مثل الصور المصغرة). |
+| **`S3 Glacier Instant Retrieval`** | `>= 3 AZs` | فوري (`Milliseconds`) | أرشيف طويل الأمد يُطلب مرة كل ربع سنة ولكنه يحتاج استرجاعاً فورياً (مثل الصور الطبية أو الأرشيف الإخباري). |
+| **`S3 Glacier Flexible Retrieval`** | `>= 3 AZs` | من دقائق إلى ساعات (1 دقيقة – 12 ساعة) | الأرشيف السنوي والنسخ الاحتياطية التي لا تتطلب وصولاً لحظياً. |
+| **`S3 Glacier Deep Archive`** | `>= 3 AZs` | من **12 إلى 48 ساعة** | **أقل فئة تخزين تكلفةً في AWS**؛ مصممة لحفظ السجلات القانونية والمالية لـ 7–10 سنوات دون الحاجة للوصول إليها إلا نادراً. |
 
 ---
 
-### 💾 2. باقي خدمات التخزين المهمة:
+### 2. خدمات التخزين الكتلي والملفي والهجين
 
-| الخدمة | النوع | المعنى بالبلدي والمصري |
+| الخدمة | النوع | الشرح التفصيلي وحالة الاستخدام |
 | :--- | :---: | :--- |
-| **`Amazon EBS` (Elastic Block Store)** | **Block Storage** | **هارد الشبكة بتاع سيرفر EC2.** بيفضل محتفظ ببياناتك حتى لو طفيت السيرفر. مربوط بـ **AZ واحدة** (وتقدر تاخد منه نسخة احتياطية **EBS Snapshot** بتتخزن في S3). |
-| **`EC2 Instance Store`** | **Temporary Block** | **هارد مؤقت (`Ephemeral`)** لازق في السيرفر الحقيقي، سريع جداً زي الصاروخ، بس **لو طفيت السيرفر البيانات بتتمسح!** (ممتاز للـ Cache والملفات المؤقتة بس). |
-| **`Amazon EFS` (Elastic File System)** | **File Storage (Linux)** | **فولدر مشترك (`NFS`)** لمئات سيرفرات الـ Linux **في أكتر من AZ في نفس الوقت**، وبيكبر ويصغر لوحده أوتوماتيك! |
-| **`Amazon FSx`** | **File Storage (Windows/HPC)** | لو محتاج **Windows File Server (`SMB`)** أو نظام ملفات فائق السرعة (`FSx for Lustre`). |
-| **`AWS Storage Gateway`** | **Hybrid Storage** | **الكوبري** اللي بيربط سيرفراتك اللي في الشركة (**On-Premises**) بمساحات التخزين في **AWS Cloud** (`S3`). |
-| **`AWS Backup`** | **Centralized Backup** | مكان واحد مركزي تعمل منه **Backups** أوتوماتيك لكل خدمات AWS (EBS, RDS, DynamoDB, EFS). |
+| **`Amazon EBS`** (Elastic Block Store) | **Block Storage** | قرص تخزين شبكي دائم (`Persistent`) يُربط بخادم `EC2` واحد داخل نفس الـ **`Availability Zone`**. يحتفظ بالبيانات حتى بعد إيقاف تشغيل الخادم (`Stop`). يمكن أخذ نسخ احتياطية تدريجية منه تُسمى **`EBS Snapshots`** وتُخزَّن تلقائياً في `Amazon S3` لسهولة النقل بين الـ `AZs` أو الـ `Regions`. |
+| **`EC2 Instance Store`** | **Temporary Block** | قرص عتادي مدمج مادياً في الخادم الفيزيائي، يتميز بأداء `IOPS` فائق جداً، لكنه **مؤقت (`Ephemeral`)** — أي تُفقد بياناته بالكامل عند إيقاف الخادم (`Stop`) أو إنهائه (`Terminate`). يُستخدم للذاكرة المؤقتة (`Cache` / `Buffer`) فقط. |
+| **`Amazon EFS`** (Elastic File System) | **Managed File (`NFS`)** | نظام ملفات سحابي مُدار لخوادم **Linux**، يتميز بأنه قابل للمشاركة المتزامنة من مئات خوادم `EC2` عبر **عدة `AZs` في نفس الوقت**، ويتوسع وينكمش تلقائياً حسب حجم الملفات المخزنة (تدفع مقابل المساحة المستخدمة فعلياً فقط). |
+| **`Amazon FSx`** | **Managed File** | يوفر أنظمة ملفات قياسية مُدارة بالكامل مثل **`FSx for Windows File Server`** (يدعم بروتوكول **`SMB`** وتكامل Active Directory)، و **`FSx for Lustre`** للحوسبة عالية الأداء (`HPC`) والتعلم الآلي. |
+| **`AWS Storage Gateway`** | **Hybrid Storage** | خدمة هجينة تربط بيئة العمل المحلية (`On-Premises`) بسحابة تخزين AWS (مثل `S3` و `EBS` و `Glacier`) لتمكين النسخ الاحتياطي السحابي والوصول منخفض التأخير إلى الملفات السحابية من داخل مقر الشركة. |
+| **`AWS Backup`** | **Backup Management** | خدمة مركزية مُدارة بالكامل لأتمتة وإدارة ومراقبة سياسات النسخ الاحتياطي عبر معظم خدمات AWS (`EBS`, `RDS`, `DynamoDB`, `EFS`, `S3`) من لوحة تحكم واحدة. |
 
 ---
 
-## 🎯 زتونة الامتحان للجزء الأول (Compute & Storage)
+## منهجية التعامل مع أسئلة Compute & Storage في الاختبار
 
-| لو شفت في السؤال... | الإجابة الصح فوراً! |
+| مؤشر أو عبارة في نص السؤال | الإجابة الدقيقة |
 | :--- | :--- |
-| **Up to 90% discount, fault-tolerant / interruptible batch workloads** | **`EC2 Spot Instances`** |
-| **Steady-state workload, 1-year or 3-year commitment, up to 72% discount** | **`Savings Plans` or `Reserved Instances`** |
-| **Run code without managing servers, pay only for compute time consumed** | **`AWS Lambda`** |
-| **Run containers without managing underlying EC2 servers** | **`AWS Fargate`** |
-| **Deploy web app quickly without managing infrastructure (PaaS)** | **`AWS Elastic Beanstalk`** |
-| **Lowest-cost long-term archival storage (retrieval in 12–48 hours)** | **`S3 Glacier Deep Archive`** |
-| **Unknown or unpredictable data access patterns in S3** | **`S3 Intelligent-Tiering`** |
-| **Shared file system accessible by multiple Linux EC2 instances across AZs** | **`Amazon EFS`** |
-| **Persistent block-level storage volume attached to a single EC2 instance** | **`Amazon EBS`** |
-| **Connect on-premises storage to AWS Cloud storage (Hybrid)** | **`AWS Storage Gateway`** |
+| **Up to 90% cost savings for stateless, fault-tolerant, interruptible workloads** | **`EC2 Spot Instances`** |
+| **Flexible 1-year or 3-year commitment covering EC2, Fargate, and Lambda** | **`Compute Savings Plans`** |
+| **Dedicated physical server required for BYOL (per-socket / per-core licensing)** | **`EC2 Dedicated Hosts`** |
+| **Execute event-driven code with zero server management (up to 15 min)** | **`AWS Lambda`** |
+| **Run Docker containers without provisioning or managing underlying EC2 servers** | **`AWS Fargate`** |
+| **Deploy a web application quickly by uploading code while AWS manages infrastructure** | **`AWS Elastic Beanstalk`** |
+| **Lowest-cost long-term archival storage with 12–48 hour retrieval time** | **`S3 Glacier Deep Archive`** |
+| **Optimize S3 storage costs automatically for unknown or changing access patterns** | **`S3 Intelligent-Tiering`** |
+| **Shared POSIX/NFS file storage mounted simultaneously by Linux EC2 instances across AZs** | **`Amazon EFS`** |
+| **Shared SMB file storage for Windows servers with Active Directory integration** | **`Amazon FSx for Windows File Server`** |
+| **Persistent block volume attached to a single EC2 instance (retained after Stop)** | **`Amazon EBS`** |
 
 ---
 
-> ⬅️ **الدرس السابق:** [Domain 2: Security & Compliance](./02_Domain_2_Security_and_Compliance.md) | **الدرس التالي:** 👉 **[03_Domain_3_Part2_Databases_and_Networking.md](./03_Domain_3_Part2_Databases_and_Networking.md)** | [الفهرس](./README.md)
+> **الدرس السابق:** [Domain 2: Security & Compliance](./02_Domain_2_Security_and_Compliance.md) | **الدرس التالي:** 👉 [03_Domain_3_Part2_Databases_and_Networking.md](./03_Domain_3_Part2_Databases_and_Networking.md) | [الفهرس الرئيسي](./README.md)
 
 </div>

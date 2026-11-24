@@ -283,4 +283,4 @@ Track your completion by checking off each module as you study:
 | **[`10_Knowledge_Checks/`](./10_Knowledge_Checks/)** | Rapid diagnostic retention quizzes per domain | Checking retention after each lecture |
 | **[`11_Practice_Exams/`](./11_Practice_Exams/)** | 2,716 Canonical Questions, 718Q Community Pool, 393Q Nov 2026 Release | Final exam drills & full simulations |
 | **[`12_Sources/`](./12_Sources/)** | Reference textbooks, study guides & literature index | Deep academic reading |
-| **[`Ar/`](./Ar/README.md)** | 🇪🇬 Simple Egyptian Arabic (`RTL`) full-course walkthrough keeping English AWS terms | Arabic-speaking beginners & quick intuitive understanding |
+| **[`Ar/`](./Ar/README.md)** | Comprehensive Arabic (`RTL`) detailed course guide keeping English AWS & technical terms | Arabic-speaking learners seeking structured, thorough explanations |

@@ -1,127 +1,127 @@
 <div dir="rtl">
 
-# 🔗📊🤖 Domain 3 (الجزء التالت): Integration, Monitoring, Migration & AI/ML
+# Domain 3 (الجزء الثالث): Integration, Monitoring, Migration, Analytics & AI/ML
 
-ده الجزء الأخير في Domain 3، وبيجمعلك كل الخدمات اللي بتخلي السيستم بتاعك مترابط (`Decoupled`)، ومتراقب كويس، وبتنقل بياناتك للكلاود، وبتضيف ذكاء اصطناعي وتحليلات بيانات. ركّز على **الوظيفة في سطر واحد** لكل خدمة!
-
----
-
-## 1️⃣ ربط التطبيقات وفصلها (Application Integration & Decoupling)
-
-تخيل مطعم شغال كويس: بدل ما الكاشير يقف يستنى الشيف يخلص الساندوتش عشان ياخد طلب الزبون اللي بعده (**Tightly Coupled**)، الكاشير بيحط ورقة الطلب في طابور الطلبات وياخد الزبون اللي بعده على طول (**Loosely Coupled / Decoupled**)!
-
-| الخدمة | التشبيه المصري | الوظيفة الأساسية في AWS |
-| :--- | :--- | :--- |
-| **`Amazon SQS`** (Simple Queue Service) | **طابور طلبات الكاشير (`Message Queue`)** | بيفصل بين أجزاء التطبيق (**Decoupling**). خدمة ترمي رسايل في الطابور وخدمة تانية تسحبها (**Pull**) وتشتغل عليها براحتها من غير ما حاجة تضيع! فيه نوعين: **Standard** (أسرع بس الترتيب مش مضمون 100%) و **FIFO** (اللي يدخل الأول يخرج الأول بالترتيب بالظبط — *First-In-First-Out*). |
-| **`Amazon SNS`** (Simple Notification Service) | **ميكروفون الجامع / جروب الإعلانات (`Pub/Sub`)** | بتبعت رسالة واحدة لـ **Topic**، و SNS بيزقها (**Push**) فوراً لآلاف المشتركين في نفس الوقت (إيميل، SMS، إشعار موبايل، أو حتى لـ Lambda و SQS). |
-| **`Amazon EventBridge`** | **موزع الأحداث الذكي (`Event Bus`)** | بيستقبل الأحداث من خدمات AWS أو تطبيقات خارجية (SaaS زي Zendesk و Shopify) ويوجهها بقواعد ذكية لخدمات تانية (وكمان بيشغل مهام بجدول زمني زي الـ Cron Job). |
-| **`AWS Step Functions`** | **المايسترو (`Workflow Orchestration`)** | بترسم عليه خطوات متسلسلة (**Visual Workflow**) تربط بيها عدة دوال **AWS Lambda** وخدمات AWS ورا بعض مع معالجة الأخطاء أوتوماتيك. |
-| **`Amazon API Gateway`** | **موظف الاستقبال الرئيسي (`Front Door for APIs`)** | بيعملك ويديرلك الـ **REST / HTTP / WebSocket APIs** بشكل Serverless ويحميها (بـ Throttling و Authentication) ويوصلها بـ **AWS Lambda**. |
+يستكمل هذا الجزء الأخير من المجال الثالث (`Cloud Technology and Services`) المنظومة السحابية بتغطية أربعة محاور حيوية: **فك الارتباط وربط التطبيقات (`Application Integration`)**، و **المراقبة والحوكمة والأتمتة (`Monitoring, Management & DevOps`)**، و **استراتيجيات وأدوات الانتقال للسحابة (`Migration & Transfer`)**، و **خدمات تحليل البيانات والذكاء الاصطناعي (`Analytics & AI/ML`)**.
 
 ---
 
-## 2️⃣ المراقبة والإدارة والأتمتة (Monitoring, Governance & DevOps)
+## أولاً: تكامل التطبيقات وفك الارتباط (`Application Integration & Decoupling`)
 
-### 👀 الـ 3 الكبار في المراقبة (لازم تفرق بينهم كويس أوي!):
-1. **`Amazon CloudWatch` (مؤشرات الأداء والـ Logs — "السيستم عامل إيه؟"):**
-   * بيراقب **الأداء (`Performance Metrics`)** زي استهلاك الـ **CPU** والـ **Memory** وبيجمع الـ **Application Logs** وبيبعتلك إنذار (**CloudWatch Alarms**) لو السيرفر سخن أو استهلاكه عدى 80%!
-2. **`AWS CloudTrail` (كاميرا المراقبة — "مين عمل إيه وامتى؟"):**
-   * بيسجل كل حركة و **API Call** بتحصل في حسابك (مين مسح الـ S3 Bucket الساعة 3 الفجر؟). أساسي للـ **Auditing & Governance**.
-3. **`AWS Config` (سجل التغييرات والامتثال — "إعدادات السيرفر كانت إيه واتغيرت لإيه؟"):**
-   * بيراقب **إعدادات مواردك (`Resource Configurations`)** عبر الزمن، ويتأكد إنها مطابقة لقواعد الشركة (**Compliance Rules** — مثلاً: هل كل S3 Buckets مشفرة ولا لأ؟).
+في الأنظمة الموزعة الحديثة، يؤدي الربط المباشر والوثيق بين المكونات (`Tightly Coupled Architecture`) إلى توقف النظام بأكمله عند تعطل مكون واحد أو ارتفاع الضغط عليه. لحل ذلك نعتمد على **فك الارتباط (`Loosely Coupled / Decoupled Architecture`)** باستخدام خدمات الرسائل والأحداث:
 
-### 🛠️ خدمات الإدارة والـ DevOps المهمة:
-* **`AWS Trusted Advisor` (المستشار الشخصي بتاعك):** بيفحص حسابك كله ويديك نصايح ذكية في **5 مجالات**:
-  1. **Cost Optimization** (بيقولك فيه سيرفرات فاضية بتدفع فيها فلوس عالفاضي!).
-  2. **Performance**
-  3. **Security** (بيقولك الـ Root User مش عليه MFA!).
-  4. **Fault Tolerance**
-  5. **Service Quotas**
-* **`AWS Systems Manager (SSM)`:** أداة سحرية بتدير بيها مئات السيرفرات (سواء على AWS أو On-Premises) من مكان واحد: تعملهم تحديثات (**Patch Manager**)، وتدخل على السيرفر بآمان من غير ما تفتح بورت SSH (**Session Manager**)!
-* **`AWS Health Dashboard`:** بيوريك الحالة الصحية لخدمات AWS، وهل فيه عطل عالمي أو صيانة مجدولة هتأثر على حسابك إنت شخصياً (**Personal Health Dashboard**).
-* **`AWS CloudFormation` (Infrastructure as Code — IaC):** بدل ما تقعد تضغط كليكات في الـ Console عشان تبني VPC وسيرفرات، بتكتب وصف البنية التحتية في ملف **YAML** أو **JSON**، و CloudFormation بيبنيها أو يمسحها كلها بضغطة زرار!
-* **`AWS CDK` (Cloud Development Kit):** زي CloudFormation بس بتكتب البنية التحتية بلغات برمجة حقيقية بتحبها (زي **Python**, **TypeScript**, **Java**, **C#**)!
-* **أدوات الـ CI/CD (توصيل الكود أوتوماتيك):**
-  * `AWS CodeBuild` (بيبني ويختبر الكود)
-  * `AWS CodeDeploy` (بينزل الكود الجديد على السيرفرات)
-  * `AWS CodePipeline` (خط الإنتاج الكامل اللي بيشغل كل الخطوات أوتوماتيك من أول ما المبرمج يرفع الكود).
+| الخدمة | النمط المعماري | الشرح التفصيلي وحالة الاستخدام |
+| :--- | :---: | :--- |
+| **`Amazon SQS`** (Simple Queue Service) | **Message Queue (`Pull`)** | خدمة طوابير رسائل مُدارة بالكامل و `Serverless`. يضع المرسِل (`Producer`) الرسائل في الطابور، ويقوم المستقبِل (`Consumer`) بسحبها ومعالجتها بالسرعة التي تناسبه دون فقدان أي طلب عند ارتفاع الضغط المفاجئ. يتوفر بنوعين: **`Standard Queue`** (إنتاجية غير محدودة تقريباً مع تسليم *At-least-once*) و **`FIFO Queue`** (تضمن الترتيب الدقيق *First-In-First-Out* والمعالجة مرة واحدة بالضبط *Exactly-once*). |
+| **`Amazon SNS`** (Simple Notification Service) | **Pub/Sub (`Push`)** | خدمة نشر واشتراك مُدارة بالكامل. تُرسل الرسالة مرة واحدة إلى موضوع (`SNS Topic`)، فتتولى الخدمة دفعها فوراً بالتوازي (**Fan-out**) إلى آلاف المشتركين عبر البريد الإلكتروني (`Email`)، الرسائل النصية (`SMS`)، إشعارات الهواتف (`Mobile Push`)، أو خدمات AWS مثل `AWS Lambda` و `Amazon SQS`. |
+| **`Amazon EventBridge`** | **Event Bus (`Serverless`)** | ناقل أحداث ذكي يربط بين خدمات AWS، وتطبيقاتك الخاصة، وتطبيقات `SaaS` الخارجية (مثل Zendesk و Shopify و Datadog) عبر قواعد تصفية وتوجيه دقيقة، كما يدعم جدولة المهام الدورية (`Scheduled Rules / Cron`). |
+| **`AWS Step Functions`** | **Workflow Orchestration** | خدمة تنسيق مرئية تتيح بناء وتنفيذ سلاسل عمل متعددة الخطوات (`State Machines`) تربط بين عدة دوال `AWS Lambda` وخدمات AWS أخرى، مع إدارة تلقائية لإعادة المحاولة (`Retries`) ومعالجة الأخطاء والتفرعات المنطقية. |
+| **`Amazon API Gateway`** | **Managed API Front Door** | خدمة `Serverless` لإنشاء ونشر وتأمين ومراقبة واجهات برمجة التطبيقات (`REST`, `HTTP`, `WebSocket APIs`) على أي نطاق، مع دعم تحديد معدل الطلبات (`Throttling`) والمصادقة (`IAM` / `Cognito`) والتخزين المؤقت. |
 
 ---
 
-## 3️⃣ نقل البيانات والانتقال للكلاود (Migration & Transfer)
+## ثانياً: المراقبة والحوكمة والإدارة والأتمتة (`Monitoring, Governance & DevOps`)
 
-لو عندك شركة فيها **تيرابايتس أو بيتابايتس** من البيانات وعايز تنقلها لـ AWS، الإنترنت العادي هياخد سنين! AWS عملتلك حلول عبقرية:
+### 1. منظومة المراقبة الثلاثية (التمييز الدقيق بينها ضروري للاختبار)
 
-* **`AWS Snow Family` (الشنط والصناديق الفعلية — Physical Data Transfer & Edge Computing):**
-  * **`AWS Snowcone`:** أصغر واحد (حجم علبة مناديل) — بيشيل لحد **8–14 TB**.
-  * **`AWS Snowball Edge`:** حجم شنطة سفر — بيشيل لحد **80–210 TB** وفيه CPU يقدر يعالج بيانات في الأماكن اللي مفيهاش إنترنت (زي السفن أو الصحراء).
-  * *(ملحوظة: زمان كان فيه **`AWS Snowmobile`** عبارة عن تريلا/شاحنة بتنقل 100 Petabytes).*
-* **`AWS DataSync`:** بينقل كميات ضخمة من الملفات **أونلاين** بسرعة عالية بين سيرفرات شركتك و AWS (`S3`, `EFS`, `FSx`).
-* **`AWS Application Migration Service (MGN)`:** أسرع طريقة لنقل سيرفراتك الفعلية (**Lift-and-Shift / Rehost**) زي ما هي لـ AWS بأقل توقف.
-* **`AWS Migration Hub`:** شاشة مركزية بتابع منها تقدم كل مشاريع النقل بتاعت شركتك.
+1. **`Amazon CloudWatch` (الأداء والسجلات والإنذارات — "كيف يؤدي النظام؟"):**
+   * يجمع ويراقب **مؤشرات الأداء (`Metrics`)** مثل استهلاك الـ `CPU` والقرص والشبكة، ويجمع سجلات التطبيقات (**`CloudWatch Logs`**)، ويتيح إنشاء **إنذارات تلقائية (`CloudWatch Alarms`)** (مثل تشغيل `Auto Scaling` أو إرسال إشعار `SNS` عند تجاوز استهلاك المعالج 80%).
+2. **`AWS CloudTrail` (التدقيق الأمني وسجل الأنشطة — "من فعل ماذا ومتى؟"):**
+   * يسجل تاريخ جميع استدعاءات الـ **`API`** والإجراءات المنفذة في حسابك (سواء عبر Management Console أو CLI أو SDK). يُعد المرجع الأساسي للتدقيق الأمني (`Governance & Compliance Auditing`) والتحقيق في الحوادث التشغيلية.
+3. **`AWS Config` (تاريخ الإعدادات والامتثال — "كيف تغيرت إعدادات المورد عبر الزمن؟"):**
+   * يتتبع التغييرات التي تطرأ على **إعدادات وتكوينات موارد AWS (`Resource Configurations`)** عبر الزمن، ويقيّم تلقائياً مدى مطابقتها للقواعد الأمنية المعتمدة في المؤسسة (`Compliance Rules` — مثلاً التحقق من أن جميع أقراص `EBS` مشفرة وأن حاويات `S3` غير مفتوحة للعامة).
 
-### 🚀 الـ 7 استراتيجيات للانتقال للكلاود (The 7 Rs of Cloud Migration):
-1. **Rehost (Lift-and-Shift):** انقل السيرفر زي ما هو من غير أي تعديل في الكود (أسرع طريقة).
-2. **Replatform (Lift-and-Reshape):** انقل زي ما هو مع تعديل بسيط عشان تستفيد من الكلاود (مثلاً بدل ما تدير MySQL بنفسك تحطها على `Amazon RDS`).
-3. **Refactor / Re-architect:** أعد كتابة التطبيق من جديد عشان يستفيد من الكلاود بالكامل (مثلاً تحوله لـ **Serverless / Microservices**).
-4. **Repurchase (Drop and Shop):** تسيب برنامجك القديم وتشتري بداله منتج جاهز **SaaS** (مثلاً تسيب CRM قديم وتشترك في Salesforce).
-5. **Relocate:** تنقل سيرفرات **VMware** للكلاود (`VMware Cloud on AWS`) من غير تعديل.
-6. **Retain:** تسيب التطبيق عندك في الشركة زي ما هو دلوقتي ومش هتنقله.
-7. **Retire:** تقفل وتمسح التطبيقات القديمة اللي محدش بيستخدمها أصلاً!
+### 2. خدمات الإدارة والتوجيه والتحسين التشغيلي
+* **`AWS Trusted Advisor`:** مستشار آلي يفحص بيئة حسابك وفق أفضل الممارسات العالمية لـ AWS ويقدم توصيات عملية في **خمس فئات رئيسية**:
+  1. **`Cost Optimization`** (كشف الخوادم الخاملة أو غير المستغلة وعناوين Elastic IP غير المرتبطة).
+  2. **`Performance`** (تحسين كفاءة الموارد).
+  3. **`Security`** (التنبيه عند غياب `MFA` على `Root User` أو وجود منافذ مفتوحة للعامة).
+  4. **`Fault Tolerance`** (التحقق من توزيع الموارد وتفعيل النسخ الاحتياطي).
+  5. **`Service Quotas`** (التنبيه عند الاقتراب من الحدود القصوى للاستخدام).
+* **`AWS Systems Manager (SSM)`:** مركز إدارة موحد لأسطول الخوادم (على AWS أو في البيئة المحلية `On-Premises`). يضم أدوات بالغة الأهمية مثل **`Patch Manager`** (أتمتة تحديثات أنظمة التشغيل)، و **`Session Manager`** (الدخول الآمن إلى خوادم `EC2` عبر المتصفح أو CLI **دون الحاجة لفتح منفذ `SSH 22`** أو استخدام `Bastion Host`)، و **`Parameter Store`**.
+* **`AWS Health Dashboard`:** يعرض الحالة التشغيلية العالمية لخدمات AWS، بالإضافة إلى تنبيهات مخصصة لحسابك (`Account Health`) حول الصيانات المجدولة أو الأعطال التي قد تؤثر على مواردك تحديداً.
+
+### 3. البنية التحتية ككود (`IaC`) وأدوات التكامل والنشر المستمر (`CI/CD`)
+* **`AWS CloudFormation`:** يتيح تعريف ونشر وتحديث وحذف البنية التحتية الكاملة على AWS باستخدام قوالب نصية تصريحية بصيغة **`YAML`** أو **`JSON`**، مما يضمن قابلية التكرار (`Repeatability`) وتقليل الأخطاء البشرية.
+* **`AWS CDK` (Cloud Development Kit):** يتيح للمطورين كتابة تعريف البنية التحتية باستخدام لغات برمجة مألوفة (مثل **TypeScript**, **Python**, **Java**, **C#**, **Go**)، ثم يقوم تلقائياً بترجمتها وتوليد قوالب `CloudFormation`.
+* **منظومة `AWS Code*` للـ `CI/CD`:**
+  * **`AWS CodeBuild`:** خدمة مُدارة لتجميع الكود وتشغيل الاختبارات الآلية وإنتاج حزم برمجية جاهزة للنشر.
+  * **`AWS CodeDeploy`:** أتمتة نشر تحديثات التطبيقات على `EC2` أو `ECS` أو `Lambda` أو الخوادم المحلية بأقل توقف ممكن.
+  * **`AWS CodePipeline`:** أتمتة خط الإنتاج الكامل (`Continuous Delivery Pipeline`) لربط مراحل البناء والاختبار والنشر تلقائياً عند كل تعديل في الكود.
 
 ---
 
-## 4️⃣ خدمات تحليل البيانات والذكاء الاصطناعي (Analytics & AI/ML)
+## ثالثاً: نقل البيانات والانتقال إلى السحابة (`Migration & Transfer`)
 
-في امتحان `CLF-C02` مش مطلوب منك تفاصيل عميقة هنا — بس لازم تعرف **اسم الخدمة = بتعمل إيه في 3 كلمات**:
+### 1. أدوات نقل البيانات الضخمة والهجينة
+* **`AWS Snow Family` (النقل المادي للبيانات والحوسبة الطرفية `Edge Computing`):** أجهزة مادية مؤمَّنة ومشفرة تشحنها AWS إليك عند الحاجة لنقل كميات ضخمة من البيانات (`Terabytes / Petabytes`) لا يمكن نقلها عملياً عبر الإنترنت العادي، أو لتشغيل المعالجة في بيئات منقطعة عن الإنترنت:
+  * **`AWS Snowcone`:** أصغر جهاز محمول (حتى **8–14 TB**).
+  * **`AWS Snowball Edge`:** جهاز بحجم حقيبة متينة (حتى **80–210 TB**) متوفر بنسخ محسّنة للتخزين (`Storage Optimized`) أو للحوسبة (`Compute Optimized`).
+  * *(ملاحظة تاريخية في بعض الأسئلة: **`AWS Snowmobile`** كان شاحنة حاوية لنقل حتى 100 Petabytes).*
+* **`AWS DataSync`:** خدمة نقل بيانات **عبر الشبكة (`Online`)** سريعة وآمنة ومؤتمتة لنقل كميات كبيرة من الملفات بين مراكز البيانات المحلية وخدمات تخزين AWS (`S3`, `EFS`, `FSx`).
+* **`AWS Application Migration Service (MGN)`:** الخدمة الموصى بها لنقل الخوادم الفيزيائية والافتراضية كما هي (**`Lift-and-Shift / Rehost`**) إلى AWS بأقل زمن توقف.
+* **`AWS Migration Hub`:** لوحة متابعة مركزية لتتبع حالة وتقدم جميع مشاريع الترحيل عبر أدوات AWS والشركاء من مكان واحد.
 
-### 📊 خدمات تحليل البيانات (Analytics):
-* **`Amazon Athena`:** تكتب أوامر **SQL** عشان تحلل ملفات متخزنة جوه **`Amazon S3`** مباشرة (**Serverless** ومن غير ما تعمل داتابيز!).
-* **`AWS Glue`:** خدمة **Serverless ETL** (بتنضف وتحول وتجهز البيانات للتحليل).
-* **`Amazon EMR`:** لتشغيل بيانات ضخمة (**Big Data**) بأدوات مفتوحة المصدر زي **Apache Spark** و **Hadoop**.
-* **`Amazon Kinesis`:** بتستقبل وتحلل **البيانات الحية المتدفقة في الوقت الفعلي (`Real-time Streaming Data`)** زي بيانات حساسات السيارات والأسهم.
-* **`Amazon QuickSight`:** أداة **Business Intelligence (BI)** بتعملك رسوم بيانية و **Dashboards** تفاعلية جميلة للإدارة.
-* **`Amazon OpenSearch Service`:** محرك بحث وتحليل Logs سريع جداً.
+### 2. استراتيجيات الانتقال السبع (`The 7 Rs of Cloud Migration`)
+1. **`Rehost` (Lift-and-Shift):** نقل التطبيقات والخوادم كما هي دون تعديل الكود البرمجي (الأسرع تنفيذاً).
+2. **`Replatform` (Lift-and-Reshape):** نقل التطبيق مع إجراء تحسينات سحابية محدودة دون تغيير معماريته الجوهرية (مثل الانتقال من قاعدة بيانات مُدارة يدوياً إلى `Amazon RDS`).
+3. **`Refactor / Re-architect`:** إعادة تصميم وبناء التطبيق بالكامل للاستفادة القصوى من مزايا السحابة (مثل التحول إلى `Serverless` و `Microservices`).
+4. **`Repurchase` (Drop and Shop):** الاستغناء عن النظام التقليدي وشراء منتج بديل جاهز من نوع `SaaS` (مثل الانتقال إلى نظام CRM سحابي).
+5. **`Relocate`:** نقل بنية تحتية كاملة تعمل على `VMware` إلى `VMware Cloud on AWS` دون الحاجة لشراء عتاد أو تعديل التطبيقات.
+6. **`Retain`:** الإبقاء على بعض التطبيقات مؤقتاً في البيئة المحلية لاعتبارات تنظيمية أو تقنية.
+7. **`Retire`:** إيقاف وإزالة التطبيقات القديمة التي لم تعد تحقق قيمة فعلية للأعمال لتوفير التكاليف.
 
-### 🤖 خدمات الذكاء الاصطناعي (AI & Machine Learning):
-| الخدمة | بتعمل إيه في كلمتين؟ |
+---
+
+## رابعاً: خدمات تحليل البيانات والذكاء الاصطناعي (`Analytics & AI/ML`)
+
+### 1. خدمات تحليل البيانات (`AWS Analytics Services`)
+* **`Amazon Athena`:** خدمة استعلام تفاعلية **`Serverless`** تتيح تحليل البيانات المخزنة مباشرةً داخل **`Amazon S3`** باستخدام لغة **`SQL`** القياسية (تدفع فقط مقابل حجم البيانات التي يتم مسحها في كل استعلام).
+* **`AWS Glue`:** خدمة **`Serverless ETL`** (Extract, Transform, Load) لاكتشاف البيانات وتنظيفها وتحويل صيغها وتجهيزها للتحليل، مع فهرس مركزي (`Glue Data Catalog`).
+* **`Amazon EMR` (Elastic MapReduce):** منصة مُدارة لمعالجة البيانات الضخمة (`Big Data`) باستخدام أطر مفتوحة المصدر مثل **`Apache Spark`** و **`Apache Hadoop`**.
+* **`Amazon Kinesis`:** عائلة خدمات مُدارة لاستقبال ومعالجة وتحليل **البيانات المتدفقة في الوقت الفعلي (`Real-time Streaming Data`)** مثل سجلات النقر، وبيانات البورصة، ومستشعرات `IoT`.
+* **`Amazon QuickSight`:** خدمة ذكاء أعمال (`Business Intelligence — BI`) سحابية و `Serverless` لإنشاء لوحات بيانات ورسوم بيانية تفاعلية (`Dashboards`) للإدارة وصناع القرار.
+* **`Amazon OpenSearch Service`:** خدمة مُدارة للبحث النصي السريع وتحليل سجلات التشغيل (`Log Analytics`) في الوقت الفعلي.
+
+### 2. خدمات الذكاء الاصطناعي وتعلم الآلة (`AWS AI & ML Services`)
+
+| الخدمة | التخصص الدقيق وحالة الاستخدام |
 | :--- | :--- |
-| **`Amazon Bedrock`** | **الذكاء الاصطناعي التوليدي (`Generative AI`)** — بتديك وصول لـ **Foundation Models (LLMs)** زي Claude و Amazon Nova بـ API جاهز ومن غير سيرفرات. |
-| **`Amazon SageMaker`** | منصة متكاملة للمطورين وعلماء البيانات عشان **يبنوا ويدربوا وينشروا (`Build, Train, Deploy`)** نماذج **Machine Learning** خاصة بيهم. |
-| **`Amazon Rekognition`** | **تحليل الصور والفيديوهات** (التعرف على الوجوه، الأشياء، والمحتوى غير اللائق). |
-| **`Amazon Textract`** | **قراءة النصوص والجداول من المستندات والصور والـ PDF** (OCR ذكي للفواتير والعقود). |
-| **`Amazon Comprehend`** | **فهم اللغة الطبيعية (`NLP`)** — يحلل تعليقات العملاء ويعرف هل هما مبسوطين ولا زعلانين (**Sentiment Analysis**). |
-| **`Amazon Polly`** | يحوّل **النص إلى صوت بشري واقعي (`Text-to-Speech`)**. |
-| **`Amazon Transcribe`** | يحوّل **الصوت إلى نص مكتوب (`Speech-to-Text`)** (مثلاً تفريغ مكالمات الكول سنتر). |
-| **`Amazon Translate`** | **ترجمة اللغات** أوتوماتيك وبجودة عالية. |
-| **`Amazon Lex`** | بناء **Chatbots** ومساعدين صوتيين (نفس المحرك اللي بيشغّل **Alexa**!). |
-| **`Amazon Kendra`** | **محرك بحث ذكي جوه مستندات الشركة** بالذكاء الاصطناعي. |
-| **`Amazon Personalize`** | محرك **توصيات المنتجات** (زي "الناس اللي اشترت ده اشترت كمان..." على موقع Amazon.com!). |
+| **`Amazon Bedrock`** | خدمة مُدارة و `Serverless` لبناء تطبيقات **الذكاء الاصطناعي التوليدي (`Generative AI`)** عبر واجهة برمجية موحدة تتيح الوصول إلى نماذج الأساس الرائدة (**`Foundation Models — FMs`**) مثل Claude و Amazon Nova مع ميزات `RAG` و `Guardrails`. |
+| **`Amazon SageMaker`** | منصة متكاملة ومُدارة بالكامل تُمكّن علماء البيانات والمطورين من **بناء وتدريب ونشر (`Build, Train, and Deploy`)** نماذج التعلم الآلي المخصصة على نطاق واسع. |
+| **`Amazon Rekognition`** | تحليل **الصور ومقاطع الفيديو** باستخدام الرؤية الحاسوبية (`Computer Vision`) للتعرف على الأشياء، الوجوه، النصوص داخل الصور، واكتشاف المحتوى غير اللائق. |
+| **`Amazon Textract`** | استخراج النصوص المكتوبة والجداول والنماذج تلقائياً من المستندات الممسوحة ضوئياً وملفات الـ `PDF` (`Intelligent OCR`). |
+| **`Amazon Comprehend`** | معالجة اللغات الطبيعية (**`NLP`**) لاكتشاف المشاعر (**`Sentiment Analysis`**)، واستخراج الكيانات الرئيسية، وتحديد لغة النصوص في مراجعات العملاء والمستندات. |
+| **`Amazon Polly`** | تحويل **النص المكتوب إلى كلام صوتي واقعي (`Text-to-Speech`)** بلغات ولهجات متعددة. |
+| **`Amazon Transcribe`** | تحويل **الصوت والكلام المسجل أو المباشر إلى نص مكتوب (`Speech-to-Text`)** (مثل تفريغ مكالمات مراكز خدمة العملاء). |
+| **`Amazon Translate`** | خدمة ترجمة آلية عصبية سريعة ودقيقة بين اللغات المختلفة. |
+| **`Amazon Lex`** | بناء واجهات محادثة ذكية (**`Conversational Chatbots`**) نصية وصوتية (تعتمد على نفس تقنية `Amazon Alexa`). |
+| **`Amazon Kendra`** | محرك بحث مؤسسي ذكي مدعوم بتعلم الآلة للبحث بلغة طبيعية داخل مستندات ومستودعات المعرفة الداخلية للشركة. |
+| **`Amazon Personalize`** | بناء أنظمة **توصية مخصصة في الوقت الفعلي (`Real-time Recommendations`)** للمنتجات والمحتوى (بنفس التقنية المستخدمة في متجر Amazon.com). |
 
 ---
 
-## 🎯 زتونة الامتحان للجزء التالت
+## منهجية التعامل مع أسئلة هذا الجزء في الاختبار
 
-| لو شفت في السؤال... | الإجابة الصح فوراً! |
+| مؤشر أو عبارة في نص السؤال | الإجابة الدقيقة |
 | :--- | :--- |
-| **Decouple microservices using a message queue** | **`Amazon SQS`** |
-| **Send push notifications (SMS, Email) to multiple subscribers (Pub/Sub)** | **`Amazon SNS`** |
-| **Monitor CPU utilization, application logs, and set alarms** | **`Amazon CloudWatch`** |
-| **Audit who made an API call or deleted a resource** | **`AWS CloudTrail`** |
-| **Track resource configuration history and evaluate compliance rules** | **`AWS Config`** |
-| **Get best-practice recommendations for Cost, Security, Fault Tolerance** | **`AWS Trusted Advisor`** |
-| **Provision AWS infrastructure using JSON/YAML templates (IaC)** | **`AWS CloudFormation`** |
-| **Query data directly in Amazon S3 using standard SQL (Serverless)** | **`Amazon Athena`** |
-| **Process real-time streaming data** | **`Amazon Kinesis`** |
-| **Convert speech to text / transcribe customer service calls** | **`Amazon Transcribe`** |
-| **Convert text to lifelike speech** | **`Amazon Polly`** |
-| **Extract text and tables from scanned PDF forms** | **`Amazon Textract`** |
+| **Decouple application components using a fully managed message queue** | **`Amazon SQS`** |
+| **Send push notifications (Email, SMS) to multiple subscribers simultaneously (Pub/Sub)** | **`Amazon SNS`** |
+| **Monitor EC2 CPU utilization, collect logs, and trigger alarms** | **`Amazon CloudWatch`** |
+| **Audit user activity and API calls across an AWS account** | **`AWS CloudTrail`** |
+| **Record resource configuration history and evaluate compliance rules** | **`AWS Config`** |
+| **Inspect account for cost, security, fault tolerance, and service quota best practices** | **`AWS Trusted Advisor`** |
+| **Provision and manage AWS infrastructure reproducibly using YAML/JSON templates** | **`AWS CloudFormation`** |
+| **Query structured/unstructured files directly in S3 using SQL without servers** | **`Amazon Athena`** |
+| **Ingest and analyze real-time streaming data** | **`Amazon Kinesis`** |
+| **Extract text, forms, and tables from scanned PDF documents** | **`Amazon Textract`** |
+| **Convert speech/audio recordings into text transcripts** | **`Amazon Transcribe`** |
+| **Convert written text into lifelike speech** | **`Amazon Polly`** |
 | **Analyze customer sentiment from product reviews (NLP)** | **`Amazon Comprehend`** |
-| **Build conversational chatbots (same tech as Alexa)** | **`Amazon Lex`** |
-| **Build Generative AI apps using Foundation Models (LLMs)** | **`Amazon Bedrock`** |
+| **Build Generative AI applications using Foundation Models via a serverless API** | **`Amazon Bedrock`** |
 
 ---
 
-> ⬅️ **الدرس السابق:** [Domain 3 — الجزء التاني: Databases & Networking](./03_Domain_3_Part2_Databases_and_Networking.md) | **الدرس التالي:** 👉 **[04_Domain_4_Billing_Pricing_and_Support.md](./04_Domain_4_Billing_Pricing_and_Support.md)** | [الفهرس](./README.md)
+> **الدرس السابق:** [Domain 3 — الجزء الثاني: Databases & Networking](./03_Domain_3_Part2_Databases_and_Networking.md) | **الدرس التالي:** 👉 [04_Domain_4_Billing_Pricing_and_Support.md](./04_Domain_4_Billing_Pricing_and_Support.md) | [الفهرس الرئيسي](./README.md)
 
 </div>
