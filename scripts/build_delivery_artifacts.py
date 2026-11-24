@@ -364,10 +364,79 @@ AIF_MANIFEST = {
     ]
 }
 
+CLF_AR_MANIFEST = {
+    "cert_code": "CLF-C02-Ar",
+    "title": "AWS Certified Cloud Practitioner (CLF-C02) — Arabic Handbook",
+    "cover_title": "الدليل العربي الشامل لشهادة AWS Certified Cloud Practitioner (CLF-C02)",
+    "subtitle": "شرح تفصيلي ومنهجي لمفاهيم وخدمات الحوسبة السحابية مع الحفاظ على المصطلحات التقنية الإنجليزية",
+    "rtl": True,
+    "lang": "ar",
+    "sources": [
+        "Cloud/Practitioner/CLF-C02/Ar/README.md",
+        "Cloud/Practitioner/CLF-C02/Ar/00_Prerequisites_Asasiyat_ElCloud.md",
+        "Cloud/Practitioner/CLF-C02/Ar/01_Domain_1_Cloud_Concepts.md",
+        "Cloud/Practitioner/CLF-C02/Ar/02_Domain_2_Security_and_Compliance.md",
+        "Cloud/Practitioner/CLF-C02/Ar/03_Domain_3_Part1_Compute_and_Storage.md",
+        "Cloud/Practitioner/CLF-C02/Ar/03_Domain_3_Part2_Databases_and_Networking.md",
+        "Cloud/Practitioner/CLF-C02/Ar/03_Domain_3_Part3_Integration_Monitoring_Analytics_AI.md",
+        "Cloud/Practitioner/CLF-C02/Ar/04_Domain_4_Billing_Pricing_and_Support.md",
+        "Cloud/Practitioner/CLF-C02/Ar/05_Exam_Tricks_and_Comparison_CheatSheet.md",
+    ]
+}
+
+RTL_CSS = """
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap');
+body {
+    direction: rtl;
+    text-align: right;
+    font-family: 'Cairo', 'Noto Sans Arabic', 'DejaVu Sans', 'Segoe UI', Tahoma, sans-serif;
+    line-height: 1.75;
+}
+.cover-page {
+    align-items: flex-start;
+    text-align: right;
+}
+th, td {
+    text-align: right;
+}
+.callout {
+    border-left: none;
+    border-right: 4px solid #3b82f6;
+    border-radius: 6px 0 0 6px;
+}
+.callout-note { border-right-color: #0284c7; }
+.callout-tip { border-right-color: #10b981; }
+.callout-important { border-right-color: #8b5cf6; }
+.callout-warning { border-right-color: #f59e0b; }
+.callout-caution { border-right-color: #ef4444; }
+blockquote {
+    border-left: none;
+    border-right: 3px solid #cbd5e1;
+    padding-left: 0;
+    padding-right: 14px;
+}
+code {
+    direction: ltr;
+    unicode-bidi: isolate;
+    display: inline-block;
+}
+pre {
+    direction: ltr;
+    text-align: left;
+}
+"""
+
 VENDOR_DIR = WORK_DIR / "scripts/vendor"
 
-def clean_markdown_for_compilation(text: str) -> str:
+def clean_markdown_for_compilation(text: str, strip_rtl_wrapper: bool = False) -> str:
     """Pre-processes markdown to handle alerts, math, and custom layout tags."""
+    if strip_rtl_wrapper:
+        # Remove outer <div dir="rtl"> / </div> and <div dir="ltr"> wrappers so Markdown parses cleanly
+        text = re.sub(r'^\s*<div\s+dir="rtl">\s*', '', text)
+        text = re.sub(r'\s*</div>\s*$', '', text)
+        text = re.sub(r'<div\s+dir="ltr">\s*', '', text)
+        text = re.sub(r'\s*</div>', '', text)
+
     # 1. Convert ```mermaid ... ``` to <pre class="mermaid">...</pre>
     mermaid_pattern = re.compile(r"```mermaid\s*\n(.*?)\n```", re.DOTALL)
     def repl_mermaid(m):
@@ -381,7 +450,7 @@ def clean_markdown_for_compilation(text: str) -> str:
         pattern = re.compile(rf'>\s*\[!{atype}\](.*?)(?=(\n\n|\Z))', re.DOTALL | re.IGNORECASE)
         def replace_alert(m):
             body = m.group(1).replace('\n> ', '\n').strip()
-            return f'<div class="callout callout-{atype.lower()}"><div class="callout-title">{atype}</div>\n\n{body}\n\n</div>'
+            return f'<div class="callout callout-{atype.lower()}" markdown="1"><div class="callout-title">{atype}</div>\n\n{body}\n\n</div>'
         text = pattern.sub(replace_alert, text)
 
     # 3. Clean Obsidian wiki-links: [[TargetNote|Display Text]] -> Display Text, [[TargetNote]] -> TargetNote
@@ -413,16 +482,20 @@ def compile_handbook(manifest: Dict, format_choice: str):
     """Compiles a student handbook into HTML, PDF, and ePub."""
     cert_code = manifest["cert_code"]
     title = manifest["title"]
+    cover_title = manifest.get("cover_title", title)
     subtitle = manifest["subtitle"]
+    is_rtl = manifest.get("rtl", False)
+    lang = manifest.get("lang", "en")
+    dir_attr = "rtl" if is_rtl else "ltr"
     out_dir = DIST_DIR / cert_code / "handbook"
     out_dir.mkdir(parents=True, exist_ok=True)
 
     print(f"\n=======================================================")
-    print(f"  Compiling Master Handbook: {cert_code}")
+    print(f"  Compiling Master Handbook: {cert_code} ({dir_attr.upper()})")
     print(f"=======================================================")
 
     combined_html_parts = []
-    combined_html_parts.append(build_cover_html(title, subtitle, cert_code))
+    combined_html_parts.append(build_cover_html(cover_title, subtitle, cert_code))
 
     md_compiler = markdown.Markdown(extensions=[
         'tables',
@@ -431,7 +504,8 @@ def compile_handbook(manifest: Dict, format_choice: str):
         'toc',
         'admonition',
         'attr_list',
-        'def_list'
+        'def_list',
+        'md_in_html'
     ])
 
     for rel_path in manifest["sources"]:
@@ -442,7 +516,7 @@ def compile_handbook(manifest: Dict, format_choice: str):
 
         print(f"  -> Processing: {src_file.name}")
         content = src_file.read_text(encoding="utf-8")
-        cleaned_content = clean_markdown_for_compilation(content)
+        cleaned_content = clean_markdown_for_compilation(content, strip_rtl_wrapper=is_rtl)
         rendered_html = md_compiler.convert(cleaned_content)
         md_compiler.reset()
 
@@ -453,15 +527,17 @@ def compile_handbook(manifest: Dict, format_choice: str):
     katex_js = VENDOR_DIR.joinpath("katex.min.js").read_text(encoding="utf-8") if VENDOR_DIR.joinpath("katex.min.js").exists() else ""
     auto_render_js = VENDOR_DIR.joinpath("auto-render.min.js").read_text(encoding="utf-8") if VENDOR_DIR.joinpath("auto-render.min.js").exists() else ""
     mermaid_js = VENDOR_DIR.joinpath("mermaid.min.js").read_text(encoding="utf-8") if VENDOR_DIR.joinpath("mermaid.min.js").exists() else ""
+    extra_rtl_css = RTL_CSS if is_rtl else ""
 
     master_html = f"""<!DOCTYPE html>
-<html lang="en">
+<html lang="{lang}" dir="{dir_attr}">
 <head>
     <meta charset="utf-8">
     <title>{title}</title>
     <style>
         {katex_css}
         {HANDBOOK_CSS}
+        {extra_rtl_css}
         .mermaid {{ display: flex; justify-content: center; margin: 25px 0; background: #ffffff; page-break-inside: avoid; break-inside: avoid; }}
         .mermaid svg {{ max-width: 100%; height: auto; }}
         .katex-display {{ margin: 16px 0; overflow-x: auto; page-break-inside: avoid; break-inside: avoid; }}
@@ -507,10 +583,11 @@ def compile_handbook(manifest: Dict, format_choice: str):
 </html>
 """
 
-    html_file = out_dir / f"{title.replace(' ', '_').replace('(', '').replace(')', '')}.html"
-    raw_html_file = out_dir / f"{title.replace(' ', '_').replace('(', '').replace(')', '')}_raw.html"
-    pdf_file = out_dir / f"{title.replace(' ', '_').replace('(', '').replace(')', '')}.pdf"
-    epub_file = out_dir / f"{title.replace(' ', '_').replace('(', '').replace(')', '')}.epub"
+    safe_name = re.sub(r'[^A-Za-z0-9_\-]+', '_', title).strip('_')
+    html_file = out_dir / f"{safe_name}.html"
+    raw_html_file = out_dir / f"{safe_name}_raw.html"
+    pdf_file = out_dir / f"{safe_name}.pdf"
+    epub_file = out_dir / f"{safe_name}.epub"
 
     raw_html_file.write_text(master_html, encoding="utf-8")
 
@@ -527,9 +604,9 @@ def compile_handbook(manifest: Dict, format_choice: str):
         f"file://{raw_html_file.resolve()}"
     ]
     res_dump = subprocess.run(dump_cmd, capture_output=True, text=True)
-    if res_dump.returncode == 0 and "<svg" in res_dump.stdout:
+    if res_dump.returncode == 0 and len(res_dump.stdout) > 1000:
         html_file.write_text(res_dump.stdout, encoding="utf-8")
-        print(f"  ✔ Fully Pre-Rendered DOM with Vector SVGs & Math: {html_file.name} ({len(res_dump.stdout)//1024} KB)")
+        print(f"  ✔ Fully Pre-Rendered DOM: {html_file.name} ({len(res_dump.stdout)//1024} KB)")
     else:
         print(f"  [WARN] DOM pre-rendering warning: {res_dump.stderr[:300]}, using raw HTML")
         html_file.write_text(master_html, encoding="utf-8")
@@ -563,9 +640,9 @@ def compile_handbook(manifest: Dict, format_choice: str):
             "ebook-convert",
             str(epub_clean_html),
             str(epub_file),
-            "--title", title,
+            "--title", cover_title,
             "--authors", "Mohamed Fakhruldeen",
-            "--language", "en",
+            "--language", lang,
             "--chapter", "h1",
             "--insert-metadata"
         ]
@@ -658,21 +735,23 @@ def generate_manifest():
 
 def main():
     parser = argparse.ArgumentParser(description="AWS Delivery Artifacts Packaging Engine")
-    parser.add_argument("--cert", choices=["CLF", "AIF", "ALL"], default="ALL", help="Target certification")
+    parser.add_argument("--cert", choices=["CLF", "CLF-AR", "AIF", "ALL"], default="ALL", help="Target certification")
     parser.add_argument("--target", choices=["handbook", "slides", "all"], default="all", help="Target component")
     parser.add_argument("--format", choices=["pdf", "epub", "html", "all"], default="all", help="Target format")
     args = parser.parse_args()
 
     certs = []
     if args.cert in ["CLF", "ALL"]:
-        certs.append(("CLF-C02", CLF_MANIFEST))
+        certs.append(("CLF-C02", CLF_MANIFEST, True))
+    if args.cert in ["CLF-AR", "ALL"]:
+        certs.append(("CLF-C02-Ar", CLF_AR_MANIFEST, False))
     if args.cert in ["AIF", "ALL"]:
-        certs.append(("AIF-C01", AIF_MANIFEST))
+        certs.append(("AIF-C01", AIF_MANIFEST, True))
 
-    for cert_code, manifest in certs:
+    for cert_code, manifest, has_slides in certs:
         if args.target in ["handbook", "all"]:
             compile_handbook(manifest, args.format)
-        if args.target in ["slides", "all"]:
+        if has_slides and args.target in ["slides", "all"]:
             compile_slides(cert_code, args.format)
 
     generate_manifest()

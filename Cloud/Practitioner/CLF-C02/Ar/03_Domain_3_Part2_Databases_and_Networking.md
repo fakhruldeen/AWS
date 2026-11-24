@@ -48,7 +48,9 @@
 * **`NAT Gateway` (Network Address Translation Gateway):** يُوضَع داخل **`Public Subnet`** ويسمح للخوادم الموجودة في **`Private Subnet`** ببدء اتصال **صادر فقط (`Outbound only`)** نحو الإنترنت (مثلاً لتحميل تحديثات النظام الأمنية)، بينما **يمنع تماماً** أي جهة من الإنترنت العام من بدء اتصال وارد نحو تلك الخوادم الخاصة.
 * **`VPC Peering`:** ربط شبكي خاص ومباشر بين شبكتي **`VPC`** (في نفس الحساب أو حسابات مختلفة أو مناطق مختلفة) لتبادل البيانات عبر شبكة AWS الخاصة دون المرور بالإنترنت العام. *(علاقة واحد-إلى-واحد، غير متعدية `Non-transitive`).*
 * **`AWS Transit Gateway`:** محور توجيه مركزي (`Central Hub-and-Spoke`) يربط **مئات الـ `VPCs`** وشبكات الشركة المحلية (`On-Premises`) معاً عبر نقطة إدارة مركزية واحدة، مما يلغي تعقيد إدارة مئات روابط الـ `VPC Peering`.
-* **`VPC Endpoints` (`AWS PrivateLink`):** تتيح للخوادم داخل الـ `Private Subnet` الوصول المباشر والخاص إلى خدمات AWS الأخرى (مثل `Amazon S3` و `Amazon DynamoDB` و `Amazon Bedrock`) **عبر شبكة AWS الداخلية فقط** دون الحاجة إلى `Internet Gateway` أو `NAT Gateway` ودون خروج البيانات إلى الإنترنت العام.
+* **`VPC Endpoints` (`Gateway` vs `Interface / AWS PrivateLink`):** تتيح للخوادم داخل الـ `Private Subnet` الوصول المباشر والخاص إلى خدمات AWS الأخرى **عبر شبكة AWS الداخلية فقط** دون الحاجة إلى `Internet Gateway` أو `NAT Gateway` ودون خروج البيانات إلى الإنترنت العام. وتنقسم إلى نوعين رئيسيين في الاختبار:
+  * **`Gateway VPC Endpoint`:** مجاني تماماً، يُضاف كمسار داخل جدول التوجيه (`Route Table`)، ويدعم خدمتين فقط هما **`Amazon S3`** و **`Amazon DynamoDB`**.
+  * **`Interface VPC Endpoint` (`AWS PrivateLink`):** يُنشئ واجهة شبكة مرنة (`ENI`) بعنوان `Private IP` داخل الـ `Subnet` بتكلفة بالساعة، ويدعم الغالبية العظمى من خدمات AWS الأخرى (مثل `SQS`, `SNS`, `Secrets Manager`, `KMS`, `Bedrock`) بالإضافة إلى خدماتك الخاصة أو خدمات الشركاء.
 
 ---
 

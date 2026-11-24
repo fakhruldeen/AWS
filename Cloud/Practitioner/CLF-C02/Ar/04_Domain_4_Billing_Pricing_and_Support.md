@@ -57,6 +57,11 @@
 | **`Enterprise On-Ramp`** | تبدأ من **`$5,500/شهر`** | دعم تقني 24/7: أقل من **30 دقيقة** عند تعطل نظام حيوي للأعمال (**`Business-Critical System Down`**). | وصول إلى **مجموعة مشتركة من مهندسي `TAM` (`Pool of TAMs`)** + فريق `Concierge Support` للفواتير + مراجعة سنوية واحدة للـ `Well-Architected` + فعالية `IEM` واحدة سنوياً. |
 | **`Enterprise Support`** | تبدأ من **`$15,000/شهر`** | **أسرع استجابة في AWS: أقل من 15 دقيقة** عند تعطل نظام حيوي للأعمال (**`Business-Critical System Down`**). | **مهندس حسابات تقني مخصص لك وحدك (`Designated Technical Account Manager — TAM`)** + فريق **`AWS Support Concierge`** (لإدارة الفواتير والحسابات) + دعم **`Infrastructure Event Management (IEM)`** مجاناً لإطلاق المنتجات الكبرى والمواسم. |
 
+### لوحة الحالة الصحية لـ AWS (`AWS Health Dashboard: Service Health vs. Account Health`)
+توفر AWS مجاناً (حتى في باقة `Basic Support`) لوحة متابعة صحية تنقسم إلى عرضين مهمين في الاختبار:
+* **`Service Health` (العرض العام العالمي — `Global / Public`):** متاح للجميع دون تسجيل دخول؛ يعرض الحالة التشغيلية العامة لجميع خدمات AWS في كل الـ `Regions` حول العالم (هل هناك عطل عام في `us-east-1`؟).
+* **`Account Health` (العرض الشخصي المخصص — `Personal / Account-Specific`):** يتطلب تسجيل الدخول لحسابك؛ يعرض فقط الأعطال النشطة، أو الصيانات المجدولة (`Scheduled Maintenance`)، أو الإشعارات الأمنية التي **تؤثر مباشرة على مواردك الفعلية** (مثل خادم `EC2` أو قاعدة بيانات `RDS` في حسابك)، ويمكن ربطها بـ `Amazon EventBridge` لأتمتة التنبيهات.
+
 ---
 
 ## رابعاً: السوق الرقمي وشبكة الشركاء (`AWS Marketplace` & `APN`)

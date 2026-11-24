@@ -49,6 +49,11 @@
   * **`AWS CodeDeploy`:** أتمتة نشر تحديثات التطبيقات على `EC2` أو `ECS` أو `Lambda` أو الخوادم المحلية بأقل توقف ممكن.
   * **`AWS CodePipeline`:** أتمتة خط الإنتاج الكامل (`Continuous Delivery Pipeline`) لربط مراحل البناء والاختبار والنشر تلقائياً عند كل تعديل في الكود.
 
+### 4. خدمات المطورين وتطبيقات الويب والهواتف (`Developer & Mobile Services`)
+* **`AWS Amplify`:** منصة تطوير متكاملة لتسريع بناء ونشر واستضافة **تطبيقات الويب والهواتف الذكية (`Full-Stack Web & Mobile Apps`)** بسهولة؛ حيث تربط الواجهة الأمامية (`React`, `Next.js`, `Flutter`, `iOS`, `Android`) بخدمات خلفية مُدارة مثل المصادقة (`Cognito`)، والتخزين، و `CI/CD Hosting`.
+* **`AWS Device Farm`:** خدمة اختبار تطبيقات الهواتف الذكية (`Android` / `iOS`) وتطبيقات الويب على **مئات الهواتف الحقيقية والمتصفحات الفعلية (`Real Physical Devices & Browsers`)** المستضافة في سحابة AWS، وذلك لاكتشاف أعطال الأداء والتوافق قبل إطلاق التطبيق للمستخدمين.
+* **`AWS AppSync`:** خدمة مُدارة و `Serverless` لإنشاء واجهات برمجة تطبيقات من نوع **`GraphQL APIs`**، تُمكّن التطبيقات من جلب البيانات بدقة من مصادر متعددة (`DynamoDB`, `Lambda`, `Aurora`) مع دعم **التحديثات اللحظية (`Real-time Subscriptions`)** و**مزامنة البيانات عند انقطاع الإنترنت (`Offline Data Sync`)**.
+
 ---
 
 ## ثالثاً: نقل البيانات والانتقال إلى السحابة (`Migration & Transfer`)
@@ -119,6 +124,9 @@
 | **Convert written text into lifelike speech** | **`Amazon Polly`** |
 | **Analyze customer sentiment from product reviews (NLP)** | **`Amazon Comprehend`** |
 | **Build Generative AI applications using Foundation Models via a serverless API** | **`Amazon Bedrock`** |
+| **Build and host full-stack web and mobile apps quickly with built-in CI/CD** | **`AWS Amplify`** |
+| **Test mobile and web apps across real physical Android/iOS devices in the cloud** | **`AWS Device Farm`** |
+| **Build serverless GraphQL APIs with real-time updates and offline sync** | **`AWS AppSync`** |
 
 ---
 

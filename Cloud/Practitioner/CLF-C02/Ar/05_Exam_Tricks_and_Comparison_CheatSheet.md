@@ -43,7 +43,10 @@
 | **`CloudFront` vs `Global Accelerator`** | **`Amazon CloudFront`:** شبكة توصيل محتوى (**`CDN Caching`**) للملفات الثابتة والديناميكية عبر `HTTP/HTTPS`. | **`AWS Global Accelerator`:** تسريع حركة مرور **`TCP/UDP`** عبر شبكة AWS الخاصة مع توفير **عنواني `Static Anycast IP`**. |
 | **`Site-to-Site VPN` vs `Direct Connect`** | **`Site-to-Site VPN`:** اتصال مشفر عبر **الإنترنت العام** (سريع الإعداد ومنخفض التكلفة). | **`AWS Direct Connect`:** كابل ألياف ضوئية **مخصص وخاص** لا يمر عبر الإنترنت العام (أداء ثابت وزمن استجابة منخفض). |
 | **`Amazon SQS` vs `Amazon SNS`** | **`Amazon SQS`:** **طابور رسائل (`Message Queue — Pull`)** لفصل المكونات (`Decoupling`) ومنع فقدان الطلبات. | **`Amazon SNS`:** **خدمة نشر واشتراك (`Pub/Sub — Push`)** لإرسال الإشعارات (`Email`, `SMS`) لعدة مشتركين في وقت واحد. |
+| **`Gateway` vs `Interface VPC Endpoint`** | **`Gateway Endpoint`:** مجاني عبر `Route Table`، يدعم **`S3` و `DynamoDB` فقط**. | **`Interface Endpoint` (`PrivateLink`):** عبر `ENI` بـ `Private IP`، يدعم معظم خدمات AWS الأخرى. |
+| **`Amplify` vs `Device Farm` vs `AppSync`** | **`AWS Amplify`:** بناء واستضافة تطبيقات الويب والموبايل `Full-Stack`. | **`AWS Device Farm`:** اختبار التطبيقات على هواتف فعلية حقيقية.<br>**`AWS AppSync`:** واجهات **`GraphQL APIs`** لحظية و `Offline Sync`. |
 | **`AWS Budgets` vs `AWS Cost Explorer`** | **`AWS Budgets`:** وضع حدود مالية وإرسال **إنذارات تلقائية (`Alerts`)** عند تجاوز الميزانية. | **`AWS Cost Explorer`:** **الرسوم البيانية وتحليل الإنفاق التاريخي والتنبؤ المستقبلي (`Forecasting`)**. |
+| **`Health: Service` vs `Account Health`** | **`Service Health`:** الحالة العامة لجميع خدمات AWS عالمياً (متاح للجميع). | **`Account Health`:** تنبيهات مخصصة لحسابك حول الأعطال أو الصيانات التي تؤثر على مواردك. |
 
 ---
 
