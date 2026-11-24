@@ -11,6 +11,7 @@
 
 | Document | Exam Domain | Official Weight | Focus & Key Traps |
 | :--- | :--- | :---: | :--- |
+| **[CLF_C02_Top_200_Most_Frequent_Exam_Questions.md](./CLF_C02_Top_200_Most_Frequent_Exam_Questions.md)** | **🏆 Top 200 Most Frequent (3–5x Repeated)** | **All 4 Domains (Exact Blueprint)** | **200 highest-frequency questions repeated across 3–5 exam pools (48 D1 / 60 D2 / 68 D3 / 24 D4) covering all 20 blueprint topics** |
 | **[November_2026_Actual_Exam_Release_393Q.md](./November_2026_Actual_Exam_Release_393Q.md)** | **🔥 Nov 2026 Practice Release** | **All 4 Domains** | **Complete 393-question authentic candidate practice pool from November 2026 with 3-tier priority categorization** |
 | **[CLF_C02_Community_Practice_Pool_718Q.md](./CLF_C02_Community_Practice_Pool_718Q.md)** | **🌐 Community Practice Pool** | **All 4 Domains** | **Comprehensive 718-question community practice suite with community consensus and rationale** |
 | **[Community_High_Yield_Focus_Set.md](./Community_High_Yield_Focus_Set.md)** | **⭐ Community High Yield Focus** | **Top Priority** | **65 high-frequency community questions with verified consensus & distractor traps** |
