@@ -1,6 +1,6 @@
 # 🔥 AWS Certified Cloud Practitioner (`CLF-C02`) — Top 300 Most Frequent Repeated Exam Questions
 
-> **Selection Methodology:** Extracted from the canonical 2,716-question Master Bank by selecting the **highest-frequency repeated questions** (repeated across **3 to 5 independent exam pools**, supplemented with targeted **AWS CAF** and **End-User Computing (`AppStream 2.0`, `WorkSpaces`, `Connect`)** questions for complete 100% blueprint coverage), stratified proportionally to the official **CLF-C02 Exam Blueprint** across all 4 Domains and all 20 sub-topics.
+> **Selection Methodology:** Extracted from the canonical 2,716-question Master Bank by selecting the **highest-frequency repeated questions** (repeated across **3 to 5 independent exam pools**, supplemented with targeted **AWS CAF**, **IAM Access Analyzer**, and **End-User Computing (`AppStream 2.0`, `WorkSpaces`, `Connect`)** questions for complete 100% blueprint coverage), stratified proportionally to the official **CLF-C02 Exam Blueprint** across all 4 Domains and all 20 sub-topics.
 
 ---
 
@@ -9,7 +9,7 @@
 | Domain | Official Weight | Questions Selected | Frequency Distribution (Exam Sources) | Topics Covered |
 | :--- | :---: | :---: | :--- | :---: |
 | **Domain 1: Cloud Concepts** | 24% | **72** | **5x**: 1 Qs, **4x**: 32 Qs, **3x**: 31 Qs, **2x**: 6 Qs, **1x**: 2 Qs | 5 Topics |
-| **Domain 2: Security and Compliance** | 30% | **90** | **4x**: 52 Qs, **3x**: 38 Qs | 5 Topics |
+| **Domain 2: Security and Compliance** | 30% | **90** | **4x**: 52 Qs, **3x**: 36 Qs, **2x**: 1 Qs, **1x**: 1 Qs | 5 Topics |
 | **Domain 3: Cloud Technology and Services** | 34% | **102** | **5x**: 1 Qs, **4x**: 48 Qs, **3x**: 51 Qs, **2x**: 1 Qs, **1x**: 1 Qs | 6 Topics |
 | **Domain 4: Billing, Pricing, and Support** | 12% | **36** | **4x**: 17 Qs, **3x**: 19 Qs | 4 Topics |
 | **TOTAL** | **100%** | **300** | **High-Frequency Repeated + 100% Topic Coverage** | **20 / 20 Topics** |
@@ -3718,7 +3718,29 @@ Deleting encryption keys once data is encrypted would permanently prevent decryp
 
 ---
 
-### Question 126 — `CLF-U0834` | 🔁 Repeated in 3 Exam Sources
+### Question 126 — `CLF-U0833` | 🔁 Repeated in 3 Exam Sources
+*Topic: Topic 2.2: IAM, Identity & Access Governance*
+
+**A company is developing a mobile application and wants to allow users to use their Amazon, Apple, Facebook, or Google identities to authenticate to the application. Which AWS Service should the company use for this purpose?**
+
+- A) Amazon GuardDuty.
+- B) Amazon Personalize.
+- C) Amazon Cognito.
+- D) AWS IAM.
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 126)</strong></summary>
+
+**Correct Answer:** `C`
+
+Amazon Cognito supports federated identity authentication, allowing users to sign in with their existing Amazon, Apple, Facebook, or Google accounts and exchange those tokens for AWS credentials, making it the correct service for social identity provider integration.
+Amazon GuardDuty is a threat detection service that continuously monitors AWS accounts and workloads for malicious activity and anomalous behavior, and is not a service for enabling user authentication with social identity providers. AWS Directory Service provides managed Microsoft Active Directory for enterprise identity management and SSO with corporate credentials, and is designed for workforce identity rather than customer-facing social identity provider authentication. AWS IAM manages user identities and permissions for accessing AWS services and resources, and while IAM can grant permissions to users authenticated through Cognito, it does not itself handle federated sign-in with Amazon, Apple, Facebook, or Google.
+
+</details>
+
+---
+
+### Question 127 — `CLF-U0834` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.2: IAM, Identity & Access Governance*
 
 **Which of the following strategies helps protect your AWS root account?**
@@ -3729,7 +3751,7 @@ Deleting encryption keys once data is encrypted would permanently prevent decryp
 - D) Only share your AWS account password or access keys with trusted persons.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 126)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 127)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -3740,7 +3762,7 @@ Applying MFA for the root account is correct but the second part of the option i
 
 ---
 
-### Question 127 — `CLF-U0835` | 🔁 Repeated in 3 Exam Sources
+### Question 128 — `CLF-U0835` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.2: IAM, Identity & Access Governance*
 
 **You have just set up your AWS environment and have created six IAM user accounts for the DevOps team. What is the AWS recommendation when granting permissions to these IAM accounts?**
@@ -3751,7 +3773,7 @@ Applying MFA for the root account is correct but the second part of the option i
 - D) Create six different IAM passwords.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 127)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 128)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -3762,7 +3784,7 @@ Attaching a separate IAM policy to each individual account is a valid approach f
 
 ---
 
-### Question 128 — `CLF-U0883` | 🔁 Repeated in 3 Exam Sources
+### Question 129 — `CLF-U0883` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.2: IAM, Identity & Access Governance*
 
 **How can a customer increase security to AWS account logons? (Select TWO)**
@@ -3774,7 +3796,7 @@ Attaching a separate IAM policy to each individual account is a valid approach f
 - E) Enable AWS Organizations
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 128)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 129)</strong></summary>
 
 **Correct Answer:** `B, D`
 
@@ -3784,7 +3806,7 @@ Correct answer: Enable Multi-Factor Authentication (MFA); Configure a strong pas
 
 ---
 
-### Question 129 — `CLF-U1394` | 🔁 Repeated in 3 Exam Sources
+### Question 130 — `CLF-U1394` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.2: IAM, Identity & Access Governance*
 
 **Which AWS service or tool can be used to consolidate payments for a company with multiple AWS accounts?**
@@ -3795,7 +3817,7 @@ Correct answer: Enable Multi-Factor Authentication (MFA); Configure a strong pas
 - D) AWS Budgets
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 129)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 130)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -3820,7 +3842,7 @@ Watch out for distractors testing similar AWS service boundaries. When the quest
 
 ---
 
-### Question 130 — `CLF-U2486` | 🔁 Repeated in 3 Exam Sources
+### Question 131 — `CLF-U2486` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.2: IAM, Identity & Access Governance*
 
 **Which actions are best practices for an AWS account root user? (Choose two.)**
@@ -3832,7 +3854,7 @@ Watch out for distractors testing similar AWS service boundaries. When the quest
 - E) Use programmatic access instead of the root user and password.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 130)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 131)</strong></summary>
 
 **Correct Answer:** `CD`
 
@@ -3852,7 +3874,7 @@ This question (# 148) is directly sourced from authentic **Community Consensus P
 
 ---
 
-### Question 131 — `CLF-U0158` | 🔁 Repeated in 3 Exam Sources
+### Question 132 — `CLF-U0158` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.3: Perimeter Defense, Threat Detection & Firewalls*
 
 **Your web application currently faces performance issues and suffers from long load times. Which of the following AWS services could help fix these issues and improve performance?**
@@ -3863,7 +3885,7 @@ This question (# 148) is directly sourced from authentic **Community Consensus P
 - D) AWS Shield.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 131)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 132)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -3874,7 +3896,7 @@ Amazon Detective is a security investigation service that analyzes and visualise
 
 ---
 
-### Question 132 — `CLF-U0165` | 🔁 Repeated in 3 Exam Sources
+### Question 133 — `CLF-U0165` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.3: Perimeter Defense, Threat Detection & Firewalls*
 
 **Which of the following services allows you to install and run custom relational database software?**
@@ -3885,7 +3907,7 @@ Amazon Detective is a security investigation service that analyzes and visualise
 - D) Amazon Inspector.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 132)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 133)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -3896,7 +3918,7 @@ Amazon Cognito is a user identity and authentication service for web and mobile 
 
 ---
 
-### Question 133 — `CLF-U0188` | 🔁 Repeated in 3 Exam Sources
+### Question 134 — `CLF-U0188` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.3: Perimeter Defense, Threat Detection & Firewalls*
 
 **Which of the following AWS services integrates with AWS Shield and AWS Web Application Firewall (AWS WAF) to protect against network and application layer DDoS attacks?**
@@ -3907,7 +3929,7 @@ Amazon Cognito is a user identity and authentication service for web and mobile 
 - D) Amazon CloudFront.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 133)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 134)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -3918,7 +3940,7 @@ Amazon EFS is a fully managed elastic file system for providing shared file stor
 
 ---
 
-### Question 134 — `CLF-U0194` | 🔁 Repeated in 3 Exam Sources
+### Question 135 — `CLF-U0194` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.3: Perimeter Defense, Threat Detection & Firewalls*
 
 **Which of the following steps should be taken by a customer when conducting penetration testing on AWS?**
@@ -3929,7 +3951,7 @@ Amazon EFS is a fully managed elastic file system for providing shared file stor
 - D) Request and wait for approval from AWS support, and then conduct testing.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 134)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 135)</strong></summary>
 
 **Correct Answer:** `D`
 
@@ -3940,7 +3962,7 @@ Amazon Inspector is an automated vulnerability assessment service that scans for
 
 ---
 
-### Question 135 — `CLF-U0204` | 🔁 Repeated in 3 Exam Sources
+### Question 136 — `CLF-U0204` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.3: Perimeter Defense, Threat Detection & Firewalls*
 
 **What is Amazon CloudWatch?**
@@ -3951,7 +3973,7 @@ Amazon Inspector is an automated vulnerability assessment service that scans for
 - D) A rule repository of a web application firewall with automated vulnerability prevention features.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 135)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 136)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -3962,7 +3984,7 @@ AWS CloudTrail records all API calls and account activity across an AWS environm
 
 ---
 
-### Question 136 — `CLF-U0572` | 🔁 Repeated in 3 Exam Sources
+### Question 137 — `CLF-U0572` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.3: Perimeter Defense, Threat Detection & Firewalls*
 
 **A company has moved to AWS recently. Which of the following AWS Services will help ensure that they have the proper security settings? (Choose TWO)**
@@ -3974,7 +3996,7 @@ AWS CloudTrail records all API calls and account activity across an AWS environm
 - E) Concierge Support Team.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 136)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 137)</strong></summary>
 
 **Correct Answer:** `A, B`
 
@@ -3985,7 +4007,7 @@ Amazon SNS is a fully managed publish/subscribe messaging service for sending no
 
 ---
 
-### Question 137 — `CLF-U0611` | 🔁 Repeated in 3 Exam Sources
+### Question 138 — `CLF-U0611` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.3: Perimeter Defense, Threat Detection & Firewalls*
 
 **Which of the following strategies help analyze costs in AWS?**
@@ -3996,7 +4018,7 @@ Amazon SNS is a fully managed publish/subscribe messaging service for sending no
 - D) Configuring Amazon Inspector to automatically analyze costs and email reports.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 137)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 138)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -4007,7 +4029,7 @@ Using AWS CloudFormation to automate the deployment of resources improves operat
 
 ---
 
-### Question 138 — `CLF-U0630` | 🔁 Repeated in 3 Exam Sources
+### Question 139 — `CLF-U0630` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.3: Perimeter Defense, Threat Detection & Firewalls*
 
 **Which AWS service identifies security groups that allow unrestricted access to a user’s AWS resources?**
@@ -4018,7 +4040,7 @@ Using AWS CloudFormation to automate the deployment of resources improves operat
 - D) AWS CloudTrail.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 138)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 139)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -4029,7 +4051,7 @@ Amazon Inspector is an automated vulnerability assessment service that scans EC2
 
 ---
 
-### Question 139 — `CLF-U0787` | 🔁 Repeated in 3 Exam Sources
+### Question 140 — `CLF-U0787` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.3: Perimeter Defense, Threat Detection & Firewalls*
 
 **You have noticed that several critical Amazon EC2 instances have been terminated. Which of the following AWS services would help you determine who took this action?**
@@ -4040,7 +4062,7 @@ Amazon Inspector is an automated vulnerability assessment service that scans EC2
 - D) EC2 Instance Usage Report.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 139)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 140)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -4051,7 +4073,7 @@ Amazon Inspector is an automated security assessment service that scans EC2 inst
 
 ---
 
-### Question 140 — `CLF-U0842` | 🔁 Repeated in 3 Exam Sources
+### Question 141 — `CLF-U0842` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.3: Perimeter Defense, Threat Detection & Firewalls*
 
 **Which of the following services enables you to easily generate and use your own encryption keys in the AWS Cloud?**
@@ -4062,7 +4084,7 @@ Amazon Inspector is an automated security assessment service that scans EC2 inst
 - D) AWS WAF.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 140)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 141)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -4073,7 +4095,7 @@ AWS Shield provides managed DDoS protection at the network and transport layers,
 
 ---
 
-### Question 141 — `CLF-U0852` | 🔁 Repeated in 3 Exam Sources
+### Question 142 — `CLF-U0852` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.3: Perimeter Defense, Threat Detection & Firewalls*
 
 **What does Amazon GuardDuty do to protect AWS accounts and workloads?**
@@ -4084,7 +4106,7 @@ AWS Shield provides managed DDoS protection at the network and transport layers,
 - D) Checks security groups for rules that allow unrestricted access to AWS. resources.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 141)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 142)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -4095,7 +4117,7 @@ Notifying customers about abuse events once they are reported is the function of
 
 ---
 
-### Question 142 — `CLF-U0854` | 🔁 Repeated in 3 Exam Sources
+### Question 143 — `CLF-U0854` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.3: Perimeter Defense, Threat Detection & Firewalls*
 
 **Which of the following services is used when encrypting EBS volumes?**
@@ -4106,7 +4128,7 @@ Notifying customers about abuse events once they are reported is the function of
 - D) Amazon GuardDuty.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 142)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 143)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -4117,7 +4139,7 @@ AWS WAF is a web application firewall that filters HTTP and HTTPS traffic to blo
 
 ---
 
-### Question 143 — `CLF-U0876` | 🔁 Repeated in 3 Exam Sources
+### Question 144 — `CLF-U0876` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.3: Perimeter Defense, Threat Detection & Firewalls*
 
 **If a customer needs to audit the change management of AWS resources, which of the following AWS services should the customer use?**
@@ -4128,7 +4150,7 @@ AWS WAF is a web application firewall that filters HTTP and HTTPS traffic to blo
 - D) Amazon Inspector.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 143)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 144)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -4139,7 +4161,7 @@ AWS Trusted Advisor inspects your AWS environment and provides recommendations a
 
 ---
 
-### Question 144 — `CLF-U0953` | 🔁 Repeated in 3 Exam Sources
+### Question 145 — `CLF-U0953` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.3: Perimeter Defense, Threat Detection & Firewalls*
 
 **Which AWS service allows users to download security and compliance reports about the AWS infrastructure on demand?**
@@ -4150,7 +4172,7 @@ AWS Trusted Advisor inspects your AWS environment and provides recommendations a
 - D) AWS Shield
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 144)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 145)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -4161,7 +4183,7 @@ Amazon CloudWatch monitors operational metrics and logs for AWS resources and ap
 
 ---
 
-### Question 145 — `CLF-U0667` | 🔁 Repeated in 3 Exam Sources
+### Question 146 — `CLF-U0667` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.4: Data Protection, Cryptography & Secrets*
 
 **What can assist in evaluating an application for migration to the cloud? (Select TWO)**
@@ -4173,7 +4195,7 @@ Amazon CloudWatch monitors operational metrics and logs for AWS resources and ap
 - E) AWS Secrets Manager.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 145)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 146)</strong></summary>
 
 **Correct Answer:** `B, D`
 
@@ -4184,7 +4206,7 @@ AWS Trusted Advisor scans existing AWS environments for best practice recommenda
 
 ---
 
-### Question 146 — `CLF-U0830` | 🔁 Repeated in 3 Exam Sources
+### Question 147 — `CLF-U0830` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.4: Data Protection, Cryptography & Secrets*
 
 **Which AWS service enables you to quickly purchase and deploy SSL/TLS certificates?**
@@ -4195,7 +4217,7 @@ AWS Trusted Advisor scans existing AWS environments for best practice recommenda
 - D) AWS WAF.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 146)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 147)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -4206,7 +4228,7 @@ Amazon GuardDuty is a threat detection service that continuously monitors AWS ac
 
 ---
 
-### Question 147 — `CLF-U0839` | 🔁 Repeated in 3 Exam Sources
+### Question 148 — `CLF-U0839` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.4: Data Protection, Cryptography & Secrets*
 
 **Which of the following would you use to manage your encryption keys in the AWS Cloud? (Choose TWO)**
@@ -4218,7 +4240,7 @@ Amazon GuardDuty is a threat detection service that continuously monitors AWS ac
 - E) CloudHSM.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 147)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 148)</strong></summary>
 
 **Correct Answer:** `A, E`
 
@@ -4229,7 +4251,7 @@ AWS Certificate Manager provisions and manages SSL/TLS certificates for encrypti
 
 ---
 
-### Question 148 — `CLF-U0848` | 🔁 Repeated in 3 Exam Sources
+### Question 149 — `CLF-U0848` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.4: Data Protection, Cryptography & Secrets*
 
 **What is the main benefit of attaching security groups to an Amazon RDS instance?**
@@ -4240,7 +4262,7 @@ AWS Certificate Manager provisions and manages SSL/TLS certificates for encrypti
 - D) Distributes incoming traffic across multiple targets.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 148)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 149)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -4251,7 +4273,7 @@ Managing user access and encryption keys describes AWS IAM and AWS KMS respectiv
 
 ---
 
-### Question 149 — `CLF-U0862` | 🔁 Repeated in 3 Exam Sources
+### Question 150 — `CLF-U0862` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.4: Data Protection, Cryptography & Secrets*
 
 **Where can AWS compliance and certification reports be downloaded?**
@@ -4262,7 +4284,7 @@ Managing user access and encryption keys describes AWS IAM and AWS KMS respectiv
 - D) AWS Trusted Advisor.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 149)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 150)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -4273,7 +4295,7 @@ AWS Concierge is a dedicated support resource for Enterprise support plan custom
 
 ---
 
-### Question 150 — `CLF-U0966` | 🔁 Repeated in 3 Exam Sources
+### Question 151 — `CLF-U0966` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.4: Data Protection, Cryptography & Secrets*
 
 **Which AWS service can be used to retrieve compliance reports on demand?**
@@ -4284,7 +4306,7 @@ AWS Concierge is a dedicated support resource for Enterprise support plan custom
 - D) AWS Certificate Manager
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 150)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 151)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -4295,7 +4317,7 @@ AWS Secrets Manager stores, rotates, and manages access to secrets such as datab
 
 ---
 
-### Question 151 — `CLF-U1397` | 🔁 Repeated in 3 Exam Sources
+### Question 152 — `CLF-U1397` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.4: Data Protection, Cryptography & Secrets*
 
 **A user has been granted permission to change their own IAM user password. Which AWS services can the user use to change the password? (Select TWO.)**
@@ -4307,7 +4329,7 @@ AWS Secrets Manager stores, rotates, and manages access to secrets such as datab
 - E) AWS Secrets Manager
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 151)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 152)</strong></summary>
 
 **Correct Answer:** `AC`
 
@@ -4330,7 +4352,7 @@ AWS IAM User Guide - Changing Your Own Password
 
 ---
 
-### Question 152 — `CLF-U0199` | 🔁 Repeated in 3 Exam Sources
+### Question 153 — `CLF-U0199` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.5: Compliance, Auditing & Artifact*
 
 **Which AWS service or feature can be used to monitor CPU usage?**
@@ -4341,7 +4363,7 @@ AWS IAM User Guide - Changing Your Own Password
 - D) AWS Config.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 152)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 153)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -4366,51 +4388,7 @@ Watch out for distractors testing similar AWS service boundaries. When the quest
 
 ---
 
-### Question 153 — `CLF-U0233` | 🔁 Repeated in 3 Exam Sources
-*Topic: Topic 2.5: Compliance, Auditing & Artifact*
-
-**Which AWS service can be used to automatically scale an application up and down without making capacity planning decisions?**
-
-- A) Amazon AutoScaling.
-- B) Amazon Redshift.
-- C) AWS CloudTrail.
-- D) AWS Lambda.
-
-<details>
-<summary><strong>Reveal Answer & Explanation (Question 153)</strong></summary>
-
-**Correct Answer:** `A`
-
-AWS Auto Scaling automatically adjusts the number of EC2 instances based on defined policies, eliminating the need for manual capacity planning decisions and ensuring the application always has the right amount of compute capacity.
-Amazon Redshift is a fully managed data warehouse service designed for running analytical queries across large datasets, and has no capability to automatically scale application infrastructure. AWS CloudTrail is a logging and auditing service that records API calls and account activity across an AWS environment, and does not manage or adjust application capacity. AWS Lambda is a serverless compute service that runs code in response to events without provisioning servers, but it is an event-driven execution environment rather than a service that scales existing application infrastructure up and down.
-
-</details>
-
----
-
-### Question 154 — `CLF-U0819` | 🔁 Repeated in 3 Exam Sources
-*Topic: Topic 2.5: Compliance, Auditing & Artifact*
-
-**Which AWS Service allows customers to download AWS SOC & PCI reports?**
-
-- A) AWS Well-Architected Tool.
-- B) AWS Artifact.
-- C) AWS Glue.
-- D) Amazon Chime.
-
-<details>
-<summary><strong>Reveal Answer & Explanation (Question 154)</strong></summary>
-
-**Correct Answer:** `B`
-
-AWS Artifact is a self-service portal for on-demand access to AWS compliance reports including SOC and PCI reports, and agreement documents such as Business Associate Addenda, making it the correct service for downloading AWS SOC and PCI compliance reports.
-AWS Well-Architected Tool is a service that helps you review the state of your workloads and compare them against AWS architectural best practices across the six pillars, and is a workload review and guidance tool rather than a compliance report repository. AWS Glue is a fully managed extract, transform, and load service for preparing and transforming data for analytics, and is a data integration service with no connection to compliance documentation. Amazon Chime is a unified communications service for online meetings, video conferencing, and chat, and has no relationship to compliance reports or AWS certification documents.
-
-</details>
-
----
-
-### Question 155 — `CLF-U0836` | 🔁 Repeated in 3 Exam Sources
+### Question 154 — `CLF-U0836` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.5: Compliance, Auditing & Artifact*
 
 **Which of the following services provide real-time auditing for compliance and vulnerabilities? (Choose TWO)**
@@ -4422,7 +4400,7 @@ AWS Well-Architected Tool is a service that helps you review the state of your w
 - E) Amazon Cognito.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 155)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 154)</strong></summary>
 
 **Correct Answer:** `A, D`
 
@@ -4433,7 +4411,7 @@ Amazon Redshift is a fully managed cloud data warehouse service for running anal
 
 ---
 
-### Question 156 — `CLF-U0837` | 🔁 Repeated in 3 Exam Sources
+### Question 155 — `CLF-U0837` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.5: Compliance, Auditing & Artifact*
 
 **Which of the following services gives you access to all AWS auditor-issued reports and certifications?**
@@ -4444,7 +4422,7 @@ Amazon Redshift is a fully managed cloud data warehouse service for running anal
 - D) AWS CloudTrail.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 156)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 155)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -4455,7 +4433,7 @@ AWS Config continuously monitors and records resource configurations against com
 
 ---
 
-### Question 157 — `CLF-U0856` | 🔁 Repeated in 3 Exam Sources
+### Question 156 — `CLF-U0856` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.5: Compliance, Auditing & Artifact*
 
 **A financial services company decides to migrate one of its applications to AWS. The application deals with sensitive data, such as credit card information, and must run on a PCI-compliant environment. Which of the following is the company’s responsibility when building a PCI-compliant environment in AWS? (Choose TWO)**
@@ -4467,7 +4445,7 @@ AWS Config continuously monitors and records resource configurations against com
 - E) Ensure that all PCI DSS physical security requirements are met.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 157)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 156)</strong></summary>
 
 **Correct Answer:** `B, C`
 
@@ -4478,7 +4456,7 @@ Not all AWS services are PCI DSS compliant by default; only specific AWS service
 
 ---
 
-### Question 158 — `CLF-U0861` | 🔁 Repeated in 3 Exam Sources
+### Question 157 — `CLF-U0861` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.5: Compliance, Auditing & Artifact*
 
 **Which service enables risk auditing by continuously monitoring and logging account activity, including user actions in the AWS Management Console and AWS SDKs?**
@@ -4489,7 +4467,7 @@ Not all AWS services are PCI DSS compliant by default; only specific AWS service
 - D) AWS Health.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 158)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 157)</strong></summary>
 
 **Correct Answer:** `B`
 
@@ -4500,7 +4478,7 @@ Amazon CloudWatch collects metrics, logs, and event data from AWS services and r
 
 ---
 
-### Question 159 — `CLF-U0864` | 🔁 Repeated in 3 Exam Sources
+### Question 158 — `CLF-U0864` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.5: Compliance, Auditing & Artifact*
 
 **Which AWS service would you use to obtain compliance reports and certificates?**
@@ -4511,7 +4489,7 @@ Amazon CloudWatch collects metrics, logs, and event data from AWS services and r
 - D) AWS Certificate Manager.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 159)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 158)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -4522,7 +4500,7 @@ AWS Lambda is a serverless compute service that runs code in response to events 
 
 ---
 
-### Question 160 — `CLF-U0888` | 🔁 Repeated in 3 Exam Sources
+### Question 159 — `CLF-U0888` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.5: Compliance, Auditing & Artifact*
 
 **Where are AWS compliance documents, such as an SOC 1 report, located?**
@@ -4533,7 +4511,7 @@ AWS Lambda is a serverless compute service that runs code in response to events 
 - D) AWS Certificate Manager.
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 160)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 159)</strong></summary>
 
 **Correct Answer:** `C`
 
@@ -4544,7 +4522,7 @@ Amazon Inspector is an automated security assessment service that scans EC2 inst
 
 ---
 
-### Question 161 — `CLF-U0964` | 🔁 Repeated in 3 Exam Sources
+### Question 160 — `CLF-U0964` | 🔁 Repeated in 3 Exam Sources
 *Topic: Topic 2.5: Compliance, Auditing & Artifact*
 
 **A company has a compliance requirement to record and evaluate configuration changes, as well as perform remediation actions on AWS resources. Which AWS service should the company use?**
@@ -4555,7 +4533,7 @@ Amazon Inspector is an automated security assessment service that scans EC2 inst
 - D) AWS Trusted Advisor
 
 <details>
-<summary><strong>Reveal Answer & Explanation (Question 161)</strong></summary>
+<summary><strong>Reveal Answer & Explanation (Question 160)</strong></summary>
 
 **Correct Answer:** `A`
 
@@ -4566,34 +4544,63 @@ AWS Secrets Manager stores, rotates, and manages access to secrets such as datab
 
 ---
 
-### Question 162 — `CLF-U1469` | 🔁 Repeated in 3 Exam Sources
-*Topic: Topic 2.5: Compliance, Auditing & Artifact*
+### Question 161 — `ACTUAL-393-Q075` | 🔁 Repeated in 2 Exam Sources
+*Topic: Topic 2.2: IAM, Identity & Access Governance*
 
-**A company plans to migrate its custom marketing application and order-processing application to AWS. The company needs to deploy the applications on different types of instances with various configurations of CPU, memory, storage, and networking capacity. Which AWS service should the company use to meet these requirements?**
+**A company needs to identify unused access that has been granted to users in its AWS accounts. Which AWS service or feature will provide this information?**
 
-- A) AWS Lambda
-- B) Amazon Cognito
-- C) Amazon Athena
-- D) Amazon EC2
+- A) AWS CloudTrail
+- B) AWS IAM Access Analyzer
+- C) AWS IAM Identity Center
+- D) AWS Trusted Advisor
+
+<details>
+<summary><strong>Reveal Answer & Explanation (Question 161)</strong></summary>
+
+**Correct Answer:** `B`
+
+AWS IAM Access Analyzer can identify and report unused access granted to IAM users
+and roles. When an unused-access analyzer is created, it reviews access activity and
+generates findings for conditions such as unused roles, unused IAM user access keys,
+unused console passwords, and permissions for services or actions that have not been
+used during the configured analysis period. This allows organizations to remove
+unnecessary permissions and move toward least-privilege access. Therefore, option B is
+correct. AWS CloudTrail records account and API activity, and its data can support
+investigations, but it does not by itself produce the specialized unused-access findings
+described in the question. IAM Identity Center centrally manages workforce access to
+multiple AWS accounts and applications but is not the analysis service for identifying
+unused IAM permissions. AWS Trusted Advisor provides best-practice checks across
+categories such as cost, performance, resilience, security, and servic
+
+</details>
+
+---
+
+### Question 162 — `CLF-U2356` | 🔁 Repeated in 1 Exam Sources
+*Topic: Topic 2.2: IAM, Identity & Access Governance*
+
+**Which AWS service or feature will search for and identify AWS resources that are shared externally?**
+
+- A) Amazon OpenSearch Service
+- B) AWS Control Tower
+- C) AWS IAM Access Analyzer
+- D) AWS Fargate
 
 <details>
 <summary><strong>Reveal Answer & Explanation (Question 162)</strong></summary>
 
-**Correct Answer:** `D`
+**Correct Answer:** `C`
 
-Amazon EC2 (Elastic Compute Cloud)provides scalable computing capacity in the AWS
-Cloud, allowing customers to run virtual servers (instances) with different configurations of
-CPU, memory, storage, and networking capacity. This flexibility is ideal for applications
-that require specific infrastructure configurations, such as custom marketing and orderprocessing applications.
-A . AWS Lambda: Incorrect, as it is a serverless compute service that automatically
-manages the computing resources needed to run code but does not offer the flexibility of
-choosing different instance types.
-B . Amazon Cognito: Incorrect, as it is used for user authentication and authorization, not
-for deploying applications.
-C . Amazon Athena: Incorrect, as it is an interactive query service for analyzing data in
-Amazon S3 using standard SQL.
-AWS Cloud Reference:
-Amazon EC2
+**Correct Answer: C (AWS IAM Access Analyzer)**
+
+This question (# 6) is directly sourced from authentic **Community Consensus Pool** community discussions.
+**Why this is correct:** The scenario specifically tests AWS best practices. 'AWS IAM Access Analyzer' directly satisfies the architectural requirement defined in the prompt.
+
+**Key Option Breakdown:**
+- **Option A (Amazon OpenSearch Service)** [INCORRECT]: Does not meet the scenario requirements or introduces suboptimal design for this specific workload.
+- **Option B (AWS Control Tower)** [INCORRECT]: Does not meet the scenario requirements or introduces suboptimal design for this specific workload.
+- **Option C (AWS IAM Access Analyzer)** [CORRECT]: Satisfies the prompt requirements directly.
+- **Option D (AWS Fargate)** [INCORRECT]: Does not meet the scenario requirements or introduces suboptimal design for this specific workload.
 
 </details>
 
@@ -8352,18 +8359,18 @@ AWS Partner Network Technology Partners develop software, tools, and services th
 
 | Q# | ID | Domain | Freq | Answer | Q# | ID | Domain | Freq | Answer |
 | :---: | :--- | :---: | :---: | :---: | :---: | :--- | :---: | :---: | :---: |
-| **1** | `CLF-U0495` | D1 | 5x | **`D`** | **151** | `CLF-U1397` | D2 | 3x | **`AC`** |
-| **2** | `CLF-U0390` | D1 | 4x | **`C`** | **152** | `CLF-U0199` | D2 | 3x | **`C`** |
-| **3** | `CLF-U0400` | D1 | 4x | **`B`** | **153** | `CLF-U0233` | D2 | 3x | **`A`** |
-| **4** | `CLF-U0401` | D1 | 4x | **`C, E`** | **154** | `CLF-U0819` | D2 | 3x | **`B`** |
-| **5** | `CLF-U0579` | D1 | 4x | **`D`** | **155** | `CLF-U0836` | D2 | 3x | **`A, D`** |
-| **6** | `CLF-U0597` | D1 | 4x | **`C`** | **156** | `CLF-U0837` | D2 | 3x | **`A`** |
-| **7** | `CLF-U0588` | D1 | 4x | **`C`** | **157** | `CLF-U0856` | D2 | 3x | **`B, C`** |
-| **8** | `CLF-U0035` | D1 | 4x | **`D, E`** | **158** | `CLF-U0861` | D2 | 3x | **`B`** |
-| **9** | `CLF-U0392` | D1 | 4x | **`C`** | **159** | `CLF-U0864` | D2 | 3x | **`A`** |
-| **10** | `CLF-U0448` | D1 | 4x | **`B, C`** | **160** | `CLF-U0888` | D2 | 3x | **`C`** |
-| **11** | `CLF-U0011` | D1 | 4x | **`A`** | **161** | `CLF-U0964` | D2 | 3x | **`A`** |
-| **12** | `CLF-U0019` | D1 | 4x | **`D`** | **162** | `CLF-U1469` | D2 | 3x | **`D`** |
+| **1** | `CLF-U0495` | D1 | 5x | **`D`** | **151** | `CLF-U0966` | D2 | 3x | **`B`** |
+| **2** | `CLF-U0390` | D1 | 4x | **`C`** | **152** | `CLF-U1397` | D2 | 3x | **`AC`** |
+| **3** | `CLF-U0400` | D1 | 4x | **`B`** | **153** | `CLF-U0199` | D2 | 3x | **`C`** |
+| **4** | `CLF-U0401` | D1 | 4x | **`C, E`** | **154** | `CLF-U0836` | D2 | 3x | **`A, D`** |
+| **5** | `CLF-U0579` | D1 | 4x | **`D`** | **155** | `CLF-U0837` | D2 | 3x | **`A`** |
+| **6** | `CLF-U0597` | D1 | 4x | **`C`** | **156** | `CLF-U0856` | D2 | 3x | **`B, C`** |
+| **7** | `CLF-U0588` | D1 | 4x | **`C`** | **157** | `CLF-U0861` | D2 | 3x | **`B`** |
+| **8** | `CLF-U0035` | D1 | 4x | **`D, E`** | **158** | `CLF-U0864` | D2 | 3x | **`A`** |
+| **9** | `CLF-U0392` | D1 | 4x | **`C`** | **159** | `CLF-U0888` | D2 | 3x | **`C`** |
+| **10** | `CLF-U0448` | D1 | 4x | **`B, C`** | **160** | `CLF-U0964` | D2 | 3x | **`A`** |
+| **11** | `CLF-U0011` | D1 | 4x | **`A`** | **161** | `ACTUAL-393-Q075` | D2 | 2x | **`B`** |
+| **12** | `CLF-U0019` | D1 | 4x | **`D`** | **162** | `CLF-U2356` | D2 | 1x | **`C`** |
 | **13** | `CLF-U0043` | D1 | 4x | **`B`** | **163** | `CLF-U0242` | D3 | 5x | **`B`** |
 | **14** | `CLF-U0044` | D1 | 4x | **`A`** | **164** | `CLF-U0001` | D3 | 4x | **`D`** |
 | **15** | `CLF-U0045` | D1 | 4x | **`B, E`** | **165** | `CLF-U0002` | D3 | 4x | **`D`** |
@@ -8477,28 +8484,28 @@ AWS Partner Network Technology Partners develop software, tools, and services th
 | **123** | `CLF-U0814` | D2 | 4x | **`D`** | **273** | `CLF-U0586` | D4 | 4x | **`C`** |
 | **124** | `CLF-U0962` | D2 | 4x | **`D`** | **274** | `CLF-U0592` | D4 | 4x | **`A`** |
 | **125** | `CLF-U0151` | D2 | 3x | **`C, D`** | **275** | `CLF-U0559` | D4 | 4x | **`B`** |
-| **126** | `CLF-U0834` | D2 | 3x | **`A`** | **276** | `CLF-U0563` | D4 | 4x | **`D`** |
-| **127** | `CLF-U0835` | D2 | 3x | **`B`** | **277** | `CLF-U0566` | D4 | 4x | **`A, E`** |
-| **128** | `CLF-U0883` | D2 | 3x | **`B, D`** | **278** | `CLF-U0573` | D4 | 4x | **`C`** |
-| **129** | `CLF-U1394` | D2 | 3x | **`B`** | **279** | `CLF-U0584` | D4 | 4x | **`C`** |
-| **130** | `CLF-U2486` | D2 | 3x | **`CD`** | **280** | `CLF-U0596` | D4 | 4x | **`C`** |
-| **131** | `CLF-U0158` | D2 | 3x | **`B`** | **281** | `CLF-U0604` | D4 | 4x | **`A, C`** |
-| **132** | `CLF-U0165` | D2 | 3x | **`A`** | **282** | `CLF-U0101` | D4 | 3x | **`B`** |
-| **133** | `CLF-U0188` | D2 | 3x | **`D`** | **283** | `CLF-U0574` | D4 | 3x | **`C`** |
-| **134** | `CLF-U0194` | D2 | 3x | **`D`** | **284** | `CLF-U0598` | D4 | 3x | **`D`** |
-| **135** | `CLF-U0204` | D2 | 3x | **`B`** | **285** | `CLF-U0623` | D4 | 3x | **`A, C`** |
-| **136** | `CLF-U0572` | D2 | 3x | **`A, B`** | **286** | `CLF-U0638` | D4 | 3x | **`B, E`** |
-| **137** | `CLF-U0611` | D2 | 3x | **`A`** | **287** | `CLF-U0652` | D4 | 3x | **`A, D`** |
-| **138** | `CLF-U0630` | D2 | 3x | **`A`** | **288** | `CLF-U1485` | D4 | 3x | **`A`** |
-| **139** | `CLF-U0787` | D2 | 3x | **`B`** | **289** | `CLF-U0170` | D4 | 3x | **`A, D`** |
-| **140** | `CLF-U0842` | D2 | 3x | **`C`** | **290** | `CLF-U0609` | D4 | 3x | **`B`** |
-| **141** | `CLF-U0852` | D2 | 3x | **`B`** | **291** | `CLF-U0615` | D4 | 3x | **`B`** |
-| **142** | `CLF-U0854` | D2 | 3x | **`B`** | **292** | `CLF-U0673` | D4 | 3x | **`B, C`** |
-| **143** | `CLF-U0876` | D2 | 3x | **`A`** | **293** | `CLF-U0616` | D4 | 3x | **`B`** |
-| **144** | `CLF-U0953` | D2 | 3x | **`C`** | **294** | `CLF-U0653` | D4 | 3x | **`B`** |
-| **145** | `CLF-U0667` | D2 | 3x | **`B, D`** | **295** | `CLF-U0654` | D4 | 3x | **`C`** |
-| **146** | `CLF-U0830` | D2 | 3x | **`B`** | **296** | `CLF-U0968` | D4 | 3x | **`C`** |
-| **147** | `CLF-U0839` | D2 | 3x | **`A, E`** | **297** | `CLF-U0577` | D4 | 3x | **`A`** |
-| **148** | `CLF-U0848` | D2 | 3x | **`B`** | **298** | `CLF-U0618` | D4 | 3x | **`C`** |
-| **149** | `CLF-U0862` | D2 | 3x | **`A`** | **299** | `CLF-U0626` | D4 | 3x | **`D, E`** |
-| **150** | `CLF-U0966` | D2 | 3x | **`B`** | **300** | `CLF-U0650` | D4 | 3x | **`C`** |
+| **126** | `CLF-U0833` | D2 | 3x | **`C`** | **276** | `CLF-U0563` | D4 | 4x | **`D`** |
+| **127** | `CLF-U0834` | D2 | 3x | **`A`** | **277** | `CLF-U0566` | D4 | 4x | **`A, E`** |
+| **128** | `CLF-U0835` | D2 | 3x | **`B`** | **278** | `CLF-U0573` | D4 | 4x | **`C`** |
+| **129** | `CLF-U0883` | D2 | 3x | **`B, D`** | **279** | `CLF-U0584` | D4 | 4x | **`C`** |
+| **130** | `CLF-U1394` | D2 | 3x | **`B`** | **280** | `CLF-U0596` | D4 | 4x | **`C`** |
+| **131** | `CLF-U2486` | D2 | 3x | **`CD`** | **281** | `CLF-U0604` | D4 | 4x | **`A, C`** |
+| **132** | `CLF-U0158` | D2 | 3x | **`B`** | **282** | `CLF-U0101` | D4 | 3x | **`B`** |
+| **133** | `CLF-U0165` | D2 | 3x | **`A`** | **283** | `CLF-U0574` | D4 | 3x | **`C`** |
+| **134** | `CLF-U0188` | D2 | 3x | **`D`** | **284** | `CLF-U0598` | D4 | 3x | **`D`** |
+| **135** | `CLF-U0194` | D2 | 3x | **`D`** | **285** | `CLF-U0623` | D4 | 3x | **`A, C`** |
+| **136** | `CLF-U0204` | D2 | 3x | **`B`** | **286** | `CLF-U0638` | D4 | 3x | **`B, E`** |
+| **137** | `CLF-U0572` | D2 | 3x | **`A, B`** | **287** | `CLF-U0652` | D4 | 3x | **`A, D`** |
+| **138** | `CLF-U0611` | D2 | 3x | **`A`** | **288** | `CLF-U1485` | D4 | 3x | **`A`** |
+| **139** | `CLF-U0630` | D2 | 3x | **`A`** | **289** | `CLF-U0170` | D4 | 3x | **`A, D`** |
+| **140** | `CLF-U0787` | D2 | 3x | **`B`** | **290** | `CLF-U0609` | D4 | 3x | **`B`** |
+| **141** | `CLF-U0842` | D2 | 3x | **`C`** | **291** | `CLF-U0615` | D4 | 3x | **`B`** |
+| **142** | `CLF-U0852` | D2 | 3x | **`B`** | **292** | `CLF-U0673` | D4 | 3x | **`B, C`** |
+| **143** | `CLF-U0854` | D2 | 3x | **`B`** | **293** | `CLF-U0616` | D4 | 3x | **`B`** |
+| **144** | `CLF-U0876` | D2 | 3x | **`A`** | **294** | `CLF-U0653` | D4 | 3x | **`B`** |
+| **145** | `CLF-U0953` | D2 | 3x | **`C`** | **295** | `CLF-U0654` | D4 | 3x | **`C`** |
+| **146** | `CLF-U0667` | D2 | 3x | **`B, D`** | **296** | `CLF-U0968` | D4 | 3x | **`C`** |
+| **147** | `CLF-U0830` | D2 | 3x | **`B`** | **297** | `CLF-U0577` | D4 | 3x | **`A`** |
+| **148** | `CLF-U0839` | D2 | 3x | **`A, E`** | **298** | `CLF-U0618` | D4 | 3x | **`C`** |
+| **149** | `CLF-U0848` | D2 | 3x | **`B`** | **299** | `CLF-U0626` | D4 | 3x | **`D, E`** |
+| **150** | `CLF-U0862` | D2 | 3x | **`A`** | **300** | `CLF-U0650` | D4 | 3x | **`C`** |

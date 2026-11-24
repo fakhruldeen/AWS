@@ -2866,6 +2866,28 @@
     "frequency": 3
   },
   {
+    "id": "CLF-U0833",
+    "prompt": "A company is developing a mobile application and wants to allow users to use their Amazon, Apple, Facebook, or Google identities to authenticate to the application. Which AWS Service should the company use for this purpose?",
+    "choices": [
+      "A) Amazon GuardDuty.",
+      "B) Amazon Personalize.",
+      "C) Amazon Cognito.",
+      "D) AWS IAM."
+    ],
+    "answer": "C",
+    "explanation": "Amazon Cognito supports federated identity authentication, allowing users to sign in with their existing Amazon, Apple, Facebook, or Google accounts and exchange those tokens for AWS credentials, making it the correct service for social identity provider integration.\nAmazon GuardDuty is a threat detection service that continuously monitors AWS accounts and workloads for malicious activity and anomalous behavior, and is not a service for enabling user authentication with social identity providers. AWS Directory Service provides managed Microsoft Active Directory for enterprise identity management and SSO with corporate credentials, and is designed for workforce identity rather than customer-facing social identity provider authentication. AWS IAM manages user identities and permissions for accessing AWS services and resources, and while IAM can grant permissions to users authenticated through Cognito, it does not itself handle federated sign-in with Amazon, Apple, Facebook, or Google.",
+    "domain": 2,
+    "domain_name": "Security and Compliance",
+    "topic": "Topic 2.2: IAM, Identity & Access Governance",
+    "point_tested": "point:sec_guardduty_threat_detection",
+    "sources": [
+      "CloudCertPrep_Questions",
+      "AwsCcpTrainer_Questions",
+      "DevOpsKing_Questions"
+    ],
+    "frequency": 3
+  },
+  {
     "id": "CLF-U0834",
     "prompt": "Which of the following strategies helps protect your AWS root account?",
     "choices": [
@@ -3466,50 +3488,6 @@
     "frequency": 3
   },
   {
-    "id": "CLF-U0233",
-    "prompt": "Which AWS service can be used to automatically scale an application up and down without making capacity planning decisions?",
-    "choices": [
-      "A) Amazon AutoScaling.",
-      "B) Amazon Redshift.",
-      "C) AWS CloudTrail.",
-      "D) AWS Lambda."
-    ],
-    "answer": "A",
-    "explanation": "AWS Auto Scaling automatically adjusts the number of EC2 instances based on defined policies, eliminating the need for manual capacity planning decisions and ensuring the application always has the right amount of compute capacity.\nAmazon Redshift is a fully managed data warehouse service designed for running analytical queries across large datasets, and has no capability to automatically scale application infrastructure. AWS CloudTrail is a logging and auditing service that records API calls and account activity across an AWS environment, and does not manage or adjust application capacity. AWS Lambda is a serverless compute service that runs code in response to events without provisioning servers, but it is an event-driven execution environment rather than a service that scales existing application infrastructure up and down.",
-    "domain": 2,
-    "domain_name": "Security and Compliance",
-    "topic": "Topic 2.5: Compliance, Auditing & Artifact",
-    "point_tested": "point:comp_cloudtrail_api_governance",
-    "sources": [
-      "CloudCertPrep_Questions",
-      "AwsCcpTrainer_Questions",
-      "DevOpsKing_Questions"
-    ],
-    "frequency": 3
-  },
-  {
-    "id": "CLF-U0819",
-    "prompt": "Which AWS Service allows customers to download AWS SOC & PCI reports?",
-    "choices": [
-      "A) AWS Well-Architected Tool.",
-      "B) AWS Artifact.",
-      "C) AWS Glue.",
-      "D) Amazon Chime."
-    ],
-    "answer": "B",
-    "explanation": "AWS Artifact is a self-service portal for on-demand access to AWS compliance reports including SOC and PCI reports, and agreement documents such as Business Associate Addenda, making it the correct service for downloading AWS SOC and PCI compliance reports.\nAWS Well-Architected Tool is a service that helps you review the state of your workloads and compare them against AWS architectural best practices across the six pillars, and is a workload review and guidance tool rather than a compliance report repository. AWS Glue is a fully managed extract, transform, and load service for preparing and transforming data for analytics, and is a data integration service with no connection to compliance documentation. Amazon Chime is a unified communications service for online meetings, video conferencing, and chat, and has no relationship to compliance reports or AWS certification documents.",
-    "domain": 2,
-    "domain_name": "Security and Compliance",
-    "topic": "Topic 2.5: Compliance, Auditing & Artifact",
-    "point_tested": "point:comp_artifact_compliance_reports",
-    "sources": [
-      "CloudCertPrep_Questions",
-      "AwsCcpTrainer_Questions",
-      "DevOpsKing_Questions"
-    ],
-    "frequency": 3
-  },
-  {
     "id": "CLF-U0836",
     "prompt": "Which of the following services provide real-time auditing for compliance and vulnerabilities? (Choose TWO)",
     "choices": [
@@ -3666,26 +3644,45 @@
     "frequency": 3
   },
   {
-    "id": "CLF-U1469",
-    "prompt": "A company plans to migrate its custom marketing application and order-processing application to \nAWS. The company needs to deploy the applications on different types of instances with various \nconfigurations of CPU, memory, storage, and networking capacity. \nWhich AWS service should the company use to meet these requirements?",
+    "id": "ACTUAL-393-Q075",
+    "prompt": "A company needs to identify unused access that has been granted to users in its AWS\naccounts.\nWhich AWS service or feature will provide this information?",
     "choices": [
-      "A) AWS Lambda",
-      "B) Amazon Cognito",
-      "C) Amazon Athena",
-      "D) Amazon EC2"
+      "A) AWS CloudTrail",
+      "B) AWS IAM Access Analyzer",
+      "C) AWS IAM Identity Center",
+      "D) AWS Trusted Advisor"
     ],
-    "answer": "D",
-    "explanation": "Amazon EC2 (Elastic Compute Cloud)provides scalable computing capacity in the AWS\nCloud, allowing customers to run virtual servers (instances) with different configurations of\nCPU, memory, storage, and networking capacity. This flexibility is ideal for applications\nthat require specific infrastructure configurations, such as custom marketing and orderprocessing applications.\nA . AWS Lambda: Incorrect, as it is a serverless compute service that automatically\nmanages the computing resources needed to run code but does not offer the flexibility of\nchoosing different instance types.\nB . Amazon Cognito: Incorrect, as it is used for user authentication and authorization, not\nfor deploying applications.\nC . Amazon Athena: Incorrect, as it is an interactive query service for analyzing data in\nAmazon S3 using standard SQL.\nAWS Cloud Reference:\nAmazon EC2",
+    "answer": "B",
+    "explanation": "AWS IAM Access Analyzer can identify and report unused access granted to IAM users\nand roles. When an unused-access analyzer is created, it reviews access activity and\ngenerates findings for conditions such as unused roles, unused IAM user access keys,\nunused console passwords, and permissions for services or actions that have not been\nused during the configured analysis period. This allows organizations to remove\nunnecessary permissions and move toward least-privilege access. Therefore, option B is\ncorrect. AWS CloudTrail records account and API activity, and its data can support\ninvestigations, but it does not by itself produce the specialized unused-access findings\ndescribed in the question. IAM Identity Center centrally manages workforce access to\nmultiple AWS accounts and applications but is not the analysis service for identifying\nunused IAM permissions. AWS Trusted Advisor provides best-practice checks across\ncategories such as cost, performance, resilience, security, and servic",
     "domain": 2,
     "domain_name": "Security and Compliance",
-    "topic": "Topic 2.5: Compliance, Auditing & Artifact",
-    "point_tested": "point:compute_lambda_serverless_execution",
+    "topic": "Topic 2.2: IAM, Identity & Access Governance",
+    "point_tested": "point:iam_identity_center_sso",
     "sources": [
-      "Edurely_Questions",
-      "Amazon_CLF_C02_Nov2026_Recall_393Q",
-      "Consensus_Aligned"
+      "Consensus_Aligned",
+      "Amazon_CLF_C02_Nov2026_Recall_393Q"
     ],
-    "frequency": 3
+    "frequency": 2
+  },
+  {
+    "id": "CLF-U2356",
+    "prompt": "Which AWS service or feature will search for and identify AWS resources that are shared externally?",
+    "choices": [
+      "A) Amazon OpenSearch Service",
+      "B) AWS Control Tower",
+      "C) AWS IAM Access Analyzer",
+      "D) AWS Fargate"
+    ],
+    "answer": "C",
+    "explanation": "**Correct Answer: C (AWS IAM Access Analyzer)**\n\nThis question (# 6) is directly sourced from authentic **Community Consensus Pool** community discussions.\n**Why this is correct:** The scenario specifically tests AWS best practices. 'AWS IAM Access Analyzer' directly satisfies the architectural requirement defined in the prompt.\n\n**Key Option Breakdown:**\n- **Option A (Amazon OpenSearch Service)** [INCORRECT]: Does not meet the scenario requirements or introduces suboptimal design for this specific workload.\n- **Option B (AWS Control Tower)** [INCORRECT]: Does not meet the scenario requirements or introduces suboptimal design for this specific workload.\n- **Option C (AWS IAM Access Analyzer)** [CORRECT]: Satisfies the prompt requirements directly.\n- **Option D (AWS Fargate)** [INCORRECT]: Does not meet the scenario requirements or introduces suboptimal design for this specific workload.",
+    "domain": 2,
+    "domain_name": "Cloud Technology and Services",
+    "topic": "Topic 2.2: IAM, Identity & Access Governance",
+    "point_tested": "point:container_ecs_eks_fargate",
+    "sources": [
+      "Community Consensus Pool_Questions"
+    ],
+    "frequency": 1
   },
   {
     "id": "CLF-U0242",

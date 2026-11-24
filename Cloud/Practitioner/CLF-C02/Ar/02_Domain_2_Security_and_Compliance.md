@@ -69,9 +69,18 @@
 7. **مركز الهوية (`AWS IAM Identity Center` — سابقاً `AWS SSO`):**
    * الخدمة الموصى بها للمؤسسات لإدارة وصول الموظفين إلى **عدة حسابات AWS** وتطبيقات الأعمال السحابية عبر **تسجيل دخول موحد (`Single Sign-On`)**، مع إمكانية الربط بمزودي الهوية الخارجيين مثل `Microsoft Active Directory` و `Okta`.
 
+8. **محلل صلاحيات الوصول (`AWS IAM Access Analyzer`):**
+   * أداة تحليل أمني متقدمة تساعد على تطبيق مبدأ **`Least Privilege`** من خلال ثلاث وظائف أساسية في الاختبار:
+     * **اكتشاف الموارد المشتركة خارجياً (`External Access Analysis`):** تحديد أي موارد في حسابك (مثل `S3 Buckets`, `KMS Keys`, `IAM Roles`, `SQS Queues`) تمت مشاركتها مع جهات خارجية أو حسابات أخرى بشكل غير مقصود.
+     * **اكتشاف الصلاحيات غير المستخدمة (`Unused Access Analysis`):** تحديد الأدوار أو المفاتيح أو الصلاحيات الممنوحة للمستخدمين والتي لم تُستخدم فعلياً لفترات طويلة لإلغائها.
+     * **توليد والتحقق من السياسات (`Policy Generation & Validation`):** إنشاء سياسات `IAM` دقيقة بناءً على النشاط الفعلي المسجل في `CloudTrail`.
+
+9. **إدارة هويات مستخدمي التطبيقات (`Amazon Cognito`):**
+   * خدمة مُدارة بالكامل لتوفير التسجيل وتسجيل الدخول (`Sign-up / Sign-in`) لمستخدمي **تطبيقات الويب والهواتف الذكية** (بما في ذلك تسجيل الدخول عبر حسابات التواصل الاجتماعي مثل Google و Apple و Facebook).
+
 ---
 
-## ثالثاً: حوكمة الحسابات المتعددة (`AWS Organizations`)
+## ثالثاً: حوكمة الحسابات المتعددة (`AWS Organizations`, `Control Tower` & `RAM`)
 
 تعتمد المؤسسات الاحترافية على فصل بيئات العمل في حسابات AWS مستقلة (حساب للتطوير `Dev`، وحساب للاختبار `Staging`، وحساب للإنتاج `Prod`) لتقليل نطاق الضرر (`Blast Radius`) وعزل الفواتير.
 
@@ -79,6 +88,8 @@
 * **المزايا الجوهرية:**
   1. **الفوترة الموحدة (`Consolidated Billing`):** إصدار فاتورة واحدة لجميع الحسابات، وتجميع الاستهلاك للحصول على خصومات الكميات (**`Volume Discounts`**)، ومشاركة خصومات `Reserved Instances` و `Savings Plans` بين الحسابات.
   2. **سياسات التحكم في الخدمات (`Service Control Policies — SCPs`):** قواعد حوكمة مركزية تحدد **الحد الأقصى المسموح به من الصلاحيات (`Guardrails`)** للحسابات أو الوحدات التنظيمية. *ملاحظة هامة:* الـ `SCP` لا تمنح صلاحيات بحد ذاتها، لكنها تضع سقفاً لا يستطيع حتى مدير الحساب (`Administrator`) تجاوزه (مثل حظر إطلاق موارد خارج `eu-north-1`).
+* **`AWS Control Tower`:** أسهل وأسرع طريقة لإعداد وإدارة بيئة متعددة الحسابات آمنة ومتوافقة مع أفضل الممارسات (**`Landing Zone`**)؛ تعمل فوق `AWS Organizations` وتطبق ضوابط وقائية وكشفية جاهزة (**`Guardrails`**).
+* **`AWS Resource Access Manager (RAM)`:** تتيح مشاركة موارد AWS (مثل `VPC Subnets` و `Transit Gateway`) بأمان بين عدة حسابات داخل المؤسسة دون الحاجة لتكرار إنشائها.
 
 ---
 
@@ -147,6 +158,8 @@
 | **Download AWS SOC 2, ISO, or PCI-DSS compliance reports** | **`AWS Artifact`** |
 | **Store and automatically rotate database credentials** | **`AWS Secrets Manager`** |
 | **Set maximum permission boundaries across multiple accounts in an organization** | **`AWS Organizations` مع `Service Control Policies (SCPs)`** |
+| **Identify AWS resources shared with external entities or detect unused IAM access** | **`AWS IAM Access Analyzer`** |
+| **Add user sign-up, sign-in, and social login (Google/Apple/Facebook) to web/mobile apps** | **`Amazon Cognito`** |
 
 ---
 
