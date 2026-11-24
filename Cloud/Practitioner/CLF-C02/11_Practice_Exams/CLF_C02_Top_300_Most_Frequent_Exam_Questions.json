@@ -3578,72 +3578,6 @@
     "frequency": 3
   },
   {
-    "id": "CLF-U0864",
-    "prompt": "Which AWS service would you use to obtain compliance reports and certificates?",
-    "choices": [
-      "A) AWS Artifact.",
-      "B) AWS Lambda.",
-      "C) Amazon Inspector.",
-      "D) AWS Certificate Manager."
-    ],
-    "answer": "A",
-    "explanation": "AWS Artifact provides on-demand access to AWS compliance reports and certifications including SOC, PCI DSS, ISO, and HIPAA documents, available directly from the AWS Management Console without needing to engage AWS support.\nAWS Lambda is a serverless compute service that runs code in response to events without requiring server provisioning or management, and is a compute service with no connection to compliance reports or certification documentation. Amazon Inspector is an automated security assessment service that scans EC2 instances and container images for software vulnerabilities and network misconfigurations, and produces customer-specific vulnerability findings rather than AWS compliance certifications. AWS Certificate Manager provisions and manages SSL/TLS certificates for use with AWS services, and is a certificate management service rather than a repository of compliance reports or regulatory certifications.",
-    "domain": 2,
-    "domain_name": "Security and Compliance",
-    "topic": "Topic 2.5: Compliance, Auditing & Artifact",
-    "point_tested": "point:comp_artifact_compliance_reports",
-    "sources": [
-      "CloudCertPrep_Questions",
-      "AwsCcpTrainer_Questions",
-      "DevOpsKing_Questions"
-    ],
-    "frequency": 3
-  },
-  {
-    "id": "CLF-U0888",
-    "prompt": "Where are AWS compliance documents, such as an SOC 1 report, located?",
-    "choices": [
-      "A) Amazon Inspector.",
-      "B) AWS CloudTrail.",
-      "C) AWS Artifact.",
-      "D) AWS Certificate Manager."
-    ],
-    "answer": "C",
-    "explanation": "AWS Artifact is the dedicated self-service portal for accessing AWS compliance documentation, including SOC 1, SOC 2, ISO 27001, and PCI DSS reports, allowing customers to download these documents for their own audit and compliance purposes.\nAmazon Inspector is an automated security assessment service that scans EC2 instances and container images for software vulnerabilities and network exposure risks, and does not provide or store AWS compliance certifications or SOC reports. AWS CloudTrail logs all API calls and management events in an AWS account for auditing purposes, and produces customer-specific activity logs rather than AWS compliance certifications or third-party audit reports. AWS Certificate Manager provisions and manages SSL/TLS certificates for use with AWS services to encrypt data in transit, and is a certificate management service rather than a repository of compliance reports.",
-    "domain": 2,
-    "domain_name": "Security and Compliance",
-    "topic": "Topic 2.5: Compliance, Auditing & Artifact",
-    "point_tested": "point:sec_inspector_vulnerability_scan",
-    "sources": [
-      "CloudCertPrep_Questions",
-      "AwsCcpTrainer_Questions",
-      "DevOpsKing_Questions"
-    ],
-    "frequency": 3
-  },
-  {
-    "id": "CLF-U0964",
-    "prompt": "A company has a compliance requirement to record and evaluate configuration changes, as well as perform remediation actions on AWS resources. Which AWS service should the company use?",
-    "choices": [
-      "A) AWS Config",
-      "B) AWS Secrets Manager",
-      "C) AWS CloudTrail",
-      "D) AWS Trusted Advisor"
-    ],
-    "answer": "A",
-    "explanation": "AWS Config records configuration changes, evaluates them against compliance rules, and can trigger automated remediation actions when resources become non-compliant, meeting all three requirements of recording, evaluating, and remediating.\nAWS Secrets Manager stores, rotates, and manages access to secrets such as database credentials and API keys, and is a credentials management service with no capability to record configuration changes or trigger compliance remediation. AWS CloudTrail logs all API calls and account activity for auditing purposes, and while it records who made changes and when, it does not evaluate resources against compliance rules or trigger remediation actions. AWS Trusted Advisor inspects your AWS environment and provides recommendations across security, cost, performance, and fault tolerance, and offers advisory guidance rather than automated compliance rule evaluation or remediation capability.",
-    "domain": 2,
-    "domain_name": "Security and Compliance",
-    "topic": "Topic 2.5: Compliance, Auditing & Artifact",
-    "point_tested": "point:sec_secrets_manager_rotation",
-    "sources": [
-      "AwsCcpTrainer_Questions",
-      "CloudCertPrep_Questions",
-      "Community Consensus Pool_Questions"
-    ],
-    "frequency": 3
-  },
-  {
     "id": "ACTUAL-393-Q075",
     "prompt": "A company needs to identify unused access that has been granted to users in its AWS\naccounts.\nWhich AWS service or feature will provide this information?",
     "choices": [
@@ -3663,6 +3597,67 @@
       "Amazon_CLF_C02_Nov2026_Recall_393Q"
     ],
     "frequency": 2
+  },
+  {
+    "id": "ACTUAL-393-Q281",
+    "prompt": "A company needs to manage multiple logins across AWS accounts within the same\norganization in AWS Organizations.\nWhich AWS service should the company use to meet this requirement?",
+    "choices": [
+      "A) Amazon VPC",
+      "B) Amazon GuardDuty",
+      "C) Amazon Cognito",
+      "D) AWS IAM Identity Center"
+    ],
+    "answer": "D",
+    "explanation": "AWS IAM Identity Center (formerly AWS Single Sign-On) provides centralized\nmanagement of user access to multiple AWS accounts within an organization in AWS\nOrganizations. It allows users to log in once and gain access to all assigned accounts\nwithout managing separate logins for each account. Amazon Cognito is generally used for\napplication-level user management and authentication, not for managing access across\nAWS accounts.",
+    "domain": 2,
+    "domain_name": "Security and Compliance",
+    "topic": "Topic 2.2: IAM, Identity & Access Governance",
+    "point_tested": "point:iam_identity_center_sso",
+    "sources": [
+      "Consensus_Aligned",
+      "Amazon_CLF_C02_Nov2026_Recall_393Q"
+    ],
+    "frequency": 2
+  },
+  {
+    "id": "CLF-U1448",
+    "prompt": "A company wants to manage access and permissions for its third-party software as a service (SaaS) \napplications. The company wants to use a portal where end users can access assigned AWS accounts \nand AWS Cloud applications. \nWhich AWS service should the company use to meet these requirements?",
+    "choices": [
+      "A) Amazon Cognito",
+      "B) AWS IAM Identity Center (AWS IAM Identity Center (formerly AWS Single Sign-On))",
+      "C) AWS Identity and Access Management (IAM)",
+      "D) AWS Directory Service for Microsoft Active Directory"
+    ],
+    "answer": "B",
+    "explanation": "- **Option A** ❌ (INCORRECT): Option A does not meet the specified criteria or refers to a different AWS service capability.\n- **Option B** ✅ (CORRECT): Option B directly satisfies the requirement based on AWS architectural best practices and official documentation.\n- **Option C** ❌ (INCORRECT): Option C does not meet the specified criteria or refers to a different AWS service capability.\n- **Option D** ❌ (INCORRECT): Option D does not meet the specified criteria or refers to a different AWS service capability.",
+    "domain": 2,
+    "domain_name": "Security and Compliance",
+    "topic": "Topic 2.2: IAM, Identity & Access Governance",
+    "point_tested": "point:iam_identity_center_sso",
+    "sources": [
+      "Edurely_Questions"
+    ],
+    "frequency": 1
+  },
+  {
+    "id": "CLF-U1597",
+    "prompt": "Which AWS service provides centralized workforce access to multiple AWS accounts and business applications?",
+    "choices": [
+      "A) AWS IAM Identity Center",
+      "B) Amazon Cognito user pools",
+      "C) AWS Certificate Manager",
+      "D) Amazon GuardDuty"
+    ],
+    "answer": "A",
+    "explanation": "AWS IAM Identity Center provides one place to connect workforce identities and assign access to multiple AWS accounts and supported applications. Amazon Cognito is primarily for customer identities in applications; Certificate Manager handles certificates; GuardDuty detects threats.",
+    "domain": 2,
+    "domain_name": "Security and Compliance",
+    "topic": "Topic 2.2: IAM, Identity & Access Governance",
+    "point_tested": "point:iam_identity_center_sso",
+    "sources": [
+      "OpenExamPrep_Questions"
+    ],
+    "frequency": 1
   },
   {
     "id": "CLF-U2356",

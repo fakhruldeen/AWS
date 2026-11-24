@@ -159,6 +159,7 @@
 | **Store and automatically rotate database credentials** | **`AWS Secrets Manager`** |
 | **Set maximum permission boundaries across multiple accounts in an organization** | **`AWS Organizations` مع `Service Control Policies (SCPs)`** |
 | **Identify AWS resources shared with external entities or detect unused IAM access** | **`AWS IAM Access Analyzer`** |
+| **Centralized Single Sign-On (SSO) for workforce access across multiple AWS accounts & SaaS apps** | **`AWS IAM Identity Center` (`AWS SSO`)** |
 | **Add user sign-up, sign-in, and social login (Google/Apple/Facebook) to web/mobile apps** | **`Amazon Cognito`** |
 
 ---

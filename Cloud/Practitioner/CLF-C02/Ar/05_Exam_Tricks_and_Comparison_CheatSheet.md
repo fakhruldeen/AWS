@@ -19,6 +19,7 @@
 | **`Secrets Manager` vs `Parameter Store`** | **`AWS Secrets Manager`:** مخصص لبيانات الاعتماد الحساسة ويدعم **التدوير التلقائي (`Automatic Secret Rotation`)** — مدفوع. | **`SSM Parameter Store`:** مخزن لإعدادات التطبيقات البسيطة (مجاني في الطبقة القياسية) ولا يمتلك ميزة التدوير التلقائي الجاهزة. |
 | **`AWS KMS` vs `AWS CloudHSM`** | **`AWS KMS`:** إدارة مفاتيح التشفير عبر عتاد أمني مُدار ومشترك (`Multi-tenant`). | **`AWS CloudHSM`:** جهاز عتادي مخصص ومفرد للعميل (`Single-tenant Dedicated Hardware`) لمتطلبات الامتثال الصارمة (`FIPS 140-2 Level 3`). |
 | **`Trusted Advisor` vs `Inspector`** | **`AWS Trusted Advisor`:** مستشار **للحساب بأكمله** يقدم توصيات في التكلفة والأمان والأداء والتسامح مع الأخطاء وحدود الخدمات. | **`Amazon Inspector`:** أداة فحص **للثغرات الأمنية البرمجية** داخل خوادم `EC2` والحاويات ودوال `Lambda`. |
+| **`IAM Identity Center` vs `Amazon Cognito`** | **`IAM Identity Center` (`AWS SSO`):** إدارة دخول **الموظفين (`Workforce`)** لعدة حسابات AWS وتطبيقات الأعمال (`SaaS`) بتسجيل دخول موحد. | **`Amazon Cognito`:** إدارة تسجيل ودخول **عملاء تطبيقات الويب والموبايل (`External Customers`)** بما يشمل Google و Apple و Facebook. |
 
 ---
 
