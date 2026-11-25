@@ -11,9 +11,9 @@
 > **Healthcare & Medical Coverage Tiers:**
 > - **Basic Support (Free for Everyone):** The emergency first-aid kit inside your bathroom cabinet. You can read the printed instruction leaflet (AWS documentation) and call customer service if your pharmacy card was billed incorrectly, but there is no nurse or doctor available to answer medical questions.
 > - **Developer Support (\$29/month):** An online telehealth messaging clinic open strictly during normal business hours. One primary designated person can email non-urgent questions to a medical assistant with a 12-to-24 hour callback response window.
-> - **Business Support (\$100/month+):** A 24/7 emergency urgent care clinic. An unlimited number of staff members can call or live-chat with certified doctors anytime day or night. If a critical production limb is broken, doctors guarantee a response in **under 1 hour**, and you receive a comprehensive full-body health scan (all 115+ AWS Trusted Advisor checks).
+> - **Business Support (\$100/month+):** A 24/7 emergency urgent care clinic. An unlimited number of staff members can call or live-chat with certified doctors anytime day or night. If a critical production limb is broken, doctors guarantee a response in **under 1 hour**, and you receive a comprehensive full-body health scan (all 115+ [AWS Trusted Advisor](../../AWS_SERVICES_GLOSSARY.md#aws-trusted-advisor) checks).
 > - **Enterprise Support (\$15,000/month+):** A dedicated, personal concierge physician (Technical Account Manager - TAM) assigned exclusively to your family. The TAM reviews your diet and exercise habits (architectural reviews), participates in emergency preparedness drills, assists with high-profile event planning, and if a life-threatening crisis occurs, arrives at your bedside in **under 15 minutes**.
-> - **AWS Marketplace:** An authorized luxury medical supply catalog and digital superstore where you can purchase specialized third-party surgical tools, software licenses, and pre-built medical kits from outside vendors, with all charges consolidated directly onto your regular hospital invoice.
+> - **[AWS Marketplace](../../AWS_SERVICES_GLOSSARY.md#aws-marketplace):** An authorized luxury medical supply catalog and digital superstore where you can purchase specialized third-party surgical tools, software licenses, and pre-built medical kits from outside vendors, with all charges consolidated directly onto your regular hospital invoice.
 
 ---
 
@@ -51,7 +51,7 @@ Before unified cloud support and digital marketplace procurement, managing multi
 |---|---|---|
 | **Multi-Vendor Finger Pointing** | During a database outage, the hardware vendor blamed the OS vendor, the OS vendor blamed the SAN storage vendor, and the SAN vendor blamed the database vendor. | **Single Point of Escalation**. AWS manages the physical facilities, hypervisors, and managed services; a **Technical Account Manager (TAM)** coordinates across all internal AWS engineering teams. |
 | **Bizarre Support Licensing Contracts** | Enterprises negotiated separate, rigid 3-year support maintenance contracts with 15 disparate vendors, paying 20% annual maintenance fees whether cases were opened or not. | **Flexible Monthly Billing**. AWS Support is billed monthly as a percentage of actual monthly AWS consumption; customers can upgrade or downgrade tiers as workload requirements change. |
-| **Procurement Red Tape for Third-Party Software** | Purchasing third-party security software or operating system licenses required 3-month legal procurement, credit checks, vendor onboarding, and separate invoices. | **AWS Marketplace Consolidated Billing**. Deploy third-party AMIs and SaaS products in 1 click; charges are billed directly on your monthly AWS invoice. |
+| **Procurement Red Tape for Third-Party Software** | Purchasing third-party security software or operating system licenses required 3-month legal procurement, credit checks, vendor onboarding, and separate invoices. | **[AWS Marketplace](../../AWS_SERVICES_GLOSSARY.md#aws-marketplace) Consolidated Billing**. Deploy third-party AMIs and SaaS products in 1 click; charges are billed directly on your monthly AWS invoice. |
 | **Surprise Traffic Collapse on Launch Day** | Companies launched major public campaigns (e.g., Super Bowl commercial or Black Friday sale) without vendor coordination, resulting in catastrophic capacity crashes. | **Infrastructure Event Management (IEM)**. AWS engineers and TAMs provide structured architecture reviews, capacity reservations, and 24/7 real-time monitoring during major events. |
 
 ---
@@ -78,7 +78,7 @@ graph TD
 ### 3.1 Basic Support (Free for All Accounts)
 * **Cost:** **\$0.00** (Included automatically with every active AWS account).
 * **Technical Case Access:** **NONE**. You cannot open technical troubleshooting tickets.
-* **Included Services:** 24/7 access to customer service and billing inquiries; access to official documentation, whitepapers, and AWS re:Post community forums; access to the **7 core AWS Trusted Advisor checks** and AWS Health Dashboard.
+* **Included Services:** 24/7 access to customer service and billing inquiries; access to official documentation, whitepapers, and AWS re:Post community forums; access to the **7 core [AWS Trusted Advisor](../../AWS_SERVICES_GLOSSARY.md#aws-trusted-advisor) checks** and [AWS Health Dashboard](../../AWS_SERVICES_GLOSSARY.md#aws-health-dashboard).
 
 ### 3.2 Developer Support
 * **Cost:** Starts at **\$29/month** (or 3% of monthly AWS usage).
@@ -93,7 +93,7 @@ graph TD
 * **Support Channel:** 24/7 access to Cloud Support Engineers via **phone, live web chat, and email**.
 * **Contact Limit:** **Unlimited contacts** (any IAM user with support permissions).
 * **Key Features:**
-  - **Full AWS Trusted Advisor Checks:** Unlocks all 115+ checks across Cost, Security, Fault Tolerance, Performance, and Quotas.
+  - **Full [AWS Trusted Advisor](../../AWS_SERVICES_GLOSSARY.md#aws-trusted-advisor) Checks:** Unlocks all 115+ checks across Cost, Security, Fault Tolerance, Performance, and Quotas.
   - **Production System Down SLA:** Guaranteed response in **$< 1\text{ hour}$**.
   - **AWS Support API:** Programmatic case management.
   - **Infrastructure Event Management (IEM):** Available for an additional fee.
@@ -134,7 +134,7 @@ flowchart LR
 * **What it is:** A curated digital catalog with thousands of software listings from independent software vendors (ISVs) that makes it easy to find, test, buy, and deploy software that runs on AWS.
 * **Delivery Methods:**
   - *Amazon Machine Images (AMIs):* Pre-configured virtual machines (e.g., hardened firewalls, enterprise Linux).
-  - *Containers:* Ready-to-deploy Docker containers for Amazon ECS or EKS.
+  - *Containers:* Ready-to-deploy Docker containers for [Amazon ECS](../../AWS_SERVICES_GLOSSARY.md#amazon-ecs) or EKS.
   - *Software-as-a-Service (SaaS):* Direct SaaS subscriptions integrated via API.
 * **Key Commercial Benefits:**
   1. **Consolidated Billing:** Software subscription and usage costs appear directly as line items on your standard monthly AWS bill, eliminating the need to onboard separate third-party vendor accounts.
@@ -165,9 +165,9 @@ flowchart LR
 | *"Lowest tier providing 24/7 technical phone, email, and chat access"* | **Business Support** | Trap: Do not choose Developer Support. Developer Support provides email access during business hours only. |
 | *"Guaranteed response time under 15 minutes for business-critical outages"* | **Enterprise Support** | Trap: Do not choose Business Support. Business Support provides a 1-hour response for production down; only Enterprise provides 15 minutes. |
 | *"Designated Technical Account Manager (TAM) to guide architecture and operations"* | **Enterprise Support** | Trap: Do not choose Business Support. A dedicated TAM is exclusive to Enterprise Support (Enterprise On-Ramp provides a pool). |
-| *"Access to all 5 categories of AWS Trusted Advisor checks at lowest cost"* | **Business Support** | Trap: Basic and Developer tiers only provide 7 core checks; Business Support is the lowest tier with full checks. |
+| *"Access to all 5 categories of [AWS Trusted Advisor](../../AWS_SERVICES_GLOSSARY.md#aws-trusted-advisor) checks at lowest cost"* | **Business Support** | Trap: Basic and Developer tiers only provide 7 core checks; Business Support is the lowest tier with full checks. |
 | *"Can you open technical troubleshooting tickets on the Basic Support plan?"* | **NO (Billing and account cases only)** | Trap: Basic Support has zero technical case support. |
-| *"Curated digital software catalog allowing purchase of third-party software on AWS bill"* | **AWS Marketplace** | Trap: Do not choose AWS Service Catalog. Service Catalog organizes internal templates; Marketplace purchases external third-party software. |
+| *"Curated digital software catalog allowing purchase of third-party software on AWS bill"* | **[AWS Marketplace](../../AWS_SERVICES_GLOSSARY.md#aws-marketplace)** | Trap: Do not choose [AWS Service Catalog](../../AWS_SERVICES_GLOSSARY.md#aws-service-catalog). Service Catalog organizes internal templates; Marketplace purchases external third-party software. |
 | *"Assistance and proactive capacity planning for major business launch events"* | **Infrastructure Event Management (IEM)** | Trap: Included for free in Enterprise; available for an additional fee in Business Support. |
 
 ---
@@ -186,7 +186,7 @@ flowchart LR
 
 **Correct Answer:** **B) Business Support**
 
-* **Why it's correct:** The Business Support plan is the entry-level tier for production workloads, offering 24/7 technical support access to Cloud Support Engineers via phone, email, and web chat for an unlimited number of IAM users, along with a 1-hour response SLA for production system outages and access to the full suite of AWS Trusted Advisor checks.
+* **Why it's correct:** The Business Support plan is the entry-level tier for production workloads, offering 24/7 technical support access to Cloud Support Engineers via phone, email, and web chat for an unlimited number of IAM users, along with a 1-hour response SLA for production system outages and access to the full suite of [AWS Trusted Advisor](../../AWS_SERVICES_GLOSSARY.md#aws-trusted-advisor) checks.
 * **Distractor Analysis:**
   - *A is incorrect:* Developer Support provides technical support via email only during local business hours for a single primary contact.
   - *C is incorrect:* Basic Support does not include any technical support case access (customer service and billing inquiries only).
@@ -238,7 +238,7 @@ flowchart LR
 ---
 
 ### Question 4
-**What is the primary function of AWS Marketplace?**
+**What is the primary function of [AWS Marketplace](../../AWS_SERVICES_GLOSSARY.md#aws-marketplace)?**
 - A) A physical hardware store for purchasing and renting AWS Snowball appliances
 - B) A curated digital software catalog that allows customers to find, test, buy, and deploy thousands of third-party software products with integrated billing on their AWS invoice
 - C) An e-commerce website for purchasing Amazon consumer retail electronics
@@ -249,17 +249,17 @@ flowchart LR
 
 **Correct Answer:** **B) A curated digital software catalog that allows customers to find, test, buy, and deploy thousands of third-party software products with integrated billing on their AWS invoice**
 
-* **Why it's correct:** AWS Marketplace is an online digital software store that enables customers to find, buy, and immediately deploy third-party software (such as Cisco virtual appliances, Datadog agents, Snowflake data platforms, and WordPress AMIs) that run on AWS, with all software subscription charges consolidated directly onto the customer's regular monthly AWS bill.
+* **Why it's correct:** [AWS Marketplace](../../AWS_SERVICES_GLOSSARY.md#aws-marketplace) is an online digital software store that enables customers to find, buy, and immediately deploy third-party software (such as Cisco virtual appliances, Datadog agents, Snowflake data platforms, and WordPress AMIs) that run on AWS, with all software subscription charges consolidated directly onto the customer's regular monthly AWS bill.
 * **Distractor Analysis:**
-  - *A is incorrect:* AWS Snowball appliances are ordered directly through the AWS Snow Family console, not via AWS Marketplace.
-  - *C is incorrect:* AWS Marketplace is strictly for enterprise cloud software, not consumer electronics.
-  - *D is incorrect:* Hiring certified cloud professionals is coordinated through AWS IQ or the AWS Partner Network (APN), not AWS Marketplace.
+  - *A is incorrect:* AWS Snowball appliances are ordered directly through the [AWS Snow Family](../../AWS_SERVICES_GLOSSARY.md#aws-snow-family) console, not via [AWS Marketplace](../../AWS_SERVICES_GLOSSARY.md#aws-marketplace).
+  - *C is incorrect:* [AWS Marketplace](../../AWS_SERVICES_GLOSSARY.md#aws-marketplace) is strictly for enterprise cloud software, not consumer electronics.
+  - *D is incorrect:* Hiring certified cloud professionals is coordinated through AWS IQ or the AWS Partner Network (APN), not [AWS Marketplace](../../AWS_SERVICES_GLOSSARY.md#aws-marketplace).
 </details>
 
 ---
 
 ### Question 5
-**Which AWS Support tier includes full access to all 5 categories of AWS Trusted Advisor best-practice recommendations at the lowest financial cost?**
+**Which AWS Support tier includes full access to all 5 categories of [AWS Trusted Advisor](../../AWS_SERVICES_GLOSSARY.md#aws-trusted-advisor) best-practice recommendations at the lowest financial cost?**
 - A) Developer Support
 - B) Business Support
 - C) Basic Support
@@ -270,7 +270,7 @@ flowchart LR
 
 **Correct Answer:** **B) Business Support**
 
-* **Why it's correct:** While the Basic and Developer Support tiers only include access to the 7 core security and service quota checks, the **Business Support** plan (starting at $100/month) is the lowest-tier plan that unlocks the full library of 115+ automated AWS Trusted Advisor checks across all five pillars: Cost Optimization, Security, Fault Tolerance, Performance, and Service Quotas.
+* **Why it's correct:** While the Basic and Developer Support tiers only include access to the 7 core security and service quota checks, the **Business Support** plan (starting at $100/month) is the lowest-tier plan that unlocks the full library of 115+ automated [AWS Trusted Advisor](../../AWS_SERVICES_GLOSSARY.md#aws-trusted-advisor) checks across all five pillars: Cost Optimization, Security, Fault Tolerance, Performance, and Service Quotas.
 * **Distractor Analysis:**
   - *A is incorrect:* Developer Support only includes the 7 core security and service quota checks.
   - *C is incorrect:* Basic Support only includes the 7 core security and service quota checks.
@@ -281,7 +281,7 @@ flowchart LR
 
 ## 🧠 Master MCQ Solving Blueprint: Pattern Decryption & Elimination Tricks
 
-> *This blueprint distills recurring patterns, keyword triggers, and trap options extracted from over 350 questions on AWS Support Plans (Basic, Developer, Business, Enterprise) and AWS Marketplace across the official CLF-C02 question bank.*
+> *This blueprint distills recurring patterns, keyword triggers, and trap options extracted from over 350 questions on AWS Support Plans (Basic, Developer, Business, Enterprise) and [AWS Marketplace](../../AWS_SERVICES_GLOSSARY.md#aws-marketplace) across the official CLF-C02 question bank.*
 
 ### 1. The "Clue-to-Service" Linguistic Decryption Matrix
 When reading a question scenario, search for these exact phrasing triggers:
@@ -292,10 +292,10 @@ When reading a question scenario, search for these exact phrasing triggers:
 | *"Production system down < 1-hour response SLA; 24/7 phone/chat/email; full Trusted Advisor checks; Support API"* | **AWS Business Support** | *AWS Developer Support* (Developer is business hours email only) |
 | *"Experimental or non-production workloads; business hours email-only access; 1 primary contact; < 12-24 hr response"* | **AWS Developer Support** | *AWS Basic Support* (Basic allows zero technical support cases) |
 | *"Billing and account questions only; access to documentation and 7 core Trusted Advisor checks; $0 cost"* | **AWS Basic Support** | *AWS Developer Support* |
-| *"Curated digital catalog to find, test, buy, and deploy third-party software with charges on AWS monthly bill"* | **AWS Marketplace** | *AWS Snowball* or *AWS Systems Manager* |
-| *"Architectural review and operational support for planned high-traffic marketing events or flash sales"* | **AWS Infrastructure Event Management (IEM)** | *AWS Trusted Advisor* (IEM is a human engagement; included in Enterprise) |
+| *"Curated digital catalog to find, test, buy, and deploy third-party software with charges on AWS monthly bill"* | **[AWS Marketplace](../../AWS_SERVICES_GLOSSARY.md#aws-marketplace)** | *AWS Snowball* or *[AWS Systems Manager](../../AWS_SERVICES_GLOSSARY.md#aws-systems-manager)* |
+| *"Architectural review and operational support for planned high-traffic marketing events or flash sales"* | **AWS Infrastructure Event Management (IEM)** | *[AWS Trusted Advisor](../../AWS_SERVICES_GLOSSARY.md#aws-trusted-advisor)* (IEM is a human engagement; included in Enterprise) |
 | *"Dedicated billing and account specialist team for enterprise customers"* | **AWS Concierge Support Team** | *AWS TAM* (TAM is technical; Concierge is for billing/accounts) |
-| *"Lowest cost support tier providing full access to all 115+ AWS Trusted Advisor checks"* | **AWS Business Support** | *AWS Developer Support* (Developer has only 7 core checks!) |
+| *"Lowest cost support tier providing full access to all 115+ [AWS Trusted Advisor](../../AWS_SERVICES_GLOSSARY.md#aws-trusted-advisor) checks"* | **AWS Business Support** | *AWS Developer Support* (Developer has only 7 core checks!) |
 
 ### 2. The 3-Step Rapid Elimination Heuristic
 When evaluating an AWS Support Plan question:
@@ -317,11 +317,11 @@ When evaluating an AWS Support Plan question:
   - *The Trap:* A scenario says: "A company needs 24/7 technical support by phone and chat, and wants a dedicated individual to help design their architecture."
   - *The Autopsy:* While Business Support gives you 24/7 phone/chat, it connects you to a **general pool** of AWS cloud support engineers. Only **Enterprise Support** assigns a **designated Technical Account Manager (TAM)** dedicated to your organization.
 * **Decoy #2: "Developer Support" vs. "Business Support" (Trusted Advisor Checks)**
-  - *The Trap:* Which is the lowest-tier support plan that unlocks all AWS Trusted Advisor best practice checks?
+  - *The Trap:* Which is the lowest-tier support plan that unlocks all [AWS Trusted Advisor](../../AWS_SERVICES_GLOSSARY.md#aws-trusted-advisor) best practice checks?
   - *The Autopsy:* Candidates frequently pick Developer Support because it's the cheapest paid plan (\$29/mo). But Developer Support **only includes the 7 core checks**. You must upgrade to **Business Support** (\$100/mo) to unlock the full suite of checks.
-* **Decoy #3: "AWS Marketplace" vs. "AWS Partner Network (APN)"**
+* **Decoy #3: "[AWS Marketplace](../../AWS_SERVICES_GLOSSARY.md#aws-marketplace)" vs. "AWS Partner Network (APN)"**
   - *The Trap:* A company wants to purchase a third-party firewall appliance or SaaS software and pay through AWS.
-  - *The Autopsy:* **AWS Marketplace** is the digital software store to purchase third-party software products. The **AWS Partner Network (APN)** is a global community of consulting and technology partners you hire for professional services.
+  - *The Autopsy:* **[AWS Marketplace](../../AWS_SERVICES_GLOSSARY.md#aws-marketplace)** is the digital software store to purchase third-party software products. The **AWS Partner Network (APN)** is a global community of consulting and technology partners you hire for professional services.
 
 ### 4. 10-Second Visual Decision Flowchart
 

@@ -51,9 +51,9 @@ Before automated cloud disaster recovery, enterprise business continuity was one
 
 | Enterprise DR Challenge | Traditional On-Premises Data Center | AWS Cloud Resilience Paradigm |
 |---|---|---|
-| **Tape Archiving & Off-Site Vaulting** | Nightly backup tapes were written manually, packed into metal boxes, and driven by courier truck to underground limestone vaults (Iron Mountain). Restoring from tape took **2 to 5 days**. | **Amazon S3 & AWS Backup**. Automated, continuous snapshot replication across 3+ AZs with instant restore APIs. |
+| **Tape Archiving & Off-Site Vaulting** | Nightly backup tapes were written manually, packed into metal boxes, and driven by courier truck to underground limestone vaults (Iron Mountain). Restoring from tape took **2 to 5 days**. | **[Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3) & [AWS Backup](../../AWS_SERVICES_GLOSSARY.md#aws-backup)**. Automated, continuous snapshot replication across 3+ AZs with instant restore APIs. |
 | **Idle Secondary Data Centers** | Large enterprises built duplicate "hot sites" with identical hardware that sat $100\%$ idle 24/7/365, wasting tens of millions in capital expense. | **Cloud Elasticity**. With Infrastructure as Code (CloudFormation), secondary DR infrastructure can be spun up in minutes only when disaster strikes. |
-| **Annual Failover Disasters** | Companies ran mandatory DR failover drills once a year on weekends. Inevitably, IP address conflicts, obsolete drivers, and configuration drift caused the test to fail. | **Automated Chaos Testing**. Test failovers continuously during normal business hours using AWS Fault Injection Service without impacting end users. |
+| **Annual Failover Disasters** | Companies ran mandatory DR failover drills once a year on weekends. Inevitably, IP address conflicts, obsolete drivers, and configuration drift caused the test to fail. | **Automated Chaos Testing**. Test failovers continuously during normal business hours using [AWS Fault Injection Service](../../AWS_SERVICES_GLOSSARY.md#aws-fault-injection-service) without impacting end users. |
 
 ---
 
@@ -106,7 +106,7 @@ flowchart LR
 ```
 
 ### 5.1 Strategy 1: Backup and Restore
-* **How it works:** Data and snapshots are backed up regularly (using AWS Backup or Amazon S3 Cross-Region Replication) to a secondary AWS Region. No compute instances run in the DR region during normal operations.
+* **How it works:** Data and snapshots are backed up regularly (using [AWS Backup](../../AWS_SERVICES_GLOSSARY.md#aws-backup) or [Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3) Cross-Region Replication) to a secondary AWS Region. No compute instances run in the DR region during normal operations.
 * **Failover Process:** When a primary region fails, operations teams trigger automation templates (CloudFormation) to provision VPCs, launch EC2 fleets from AMIs, and restore databases from snapshots.
 * **RPO & RTO:** RPO is measured in hours (time since last snapshot); RTO is measured in hours or days (time required to restore petabytes of disk blocks and initialize operating systems).
 * **Cost Profile:** **Lowest Cost**. You pay only for cold storage of snapshots and AMIs.
@@ -119,12 +119,12 @@ flowchart LR
 
 ### 5.3 Strategy 3: Warm Standby
 * **How it works:** A fully functional, but **scaled-down** (minimal capacity) replica of the entire production stack runs live 24/7 in the secondary AWS Region (e.g., 2 small instances running instead of 20 large instances).
-* **Failover Process:** When primary failure occurs, Amazon Route 53 health checks automatically shift traffic to the secondary region, while Auto Scaling immediately scales out the minimal fleet to full production capacity.
+* **Failover Process:** When primary failure occurs, [Amazon Route 53](../../AWS_SERVICES_GLOSSARY.md#amazon-route-53) health checks automatically shift traffic to the secondary region, while Auto Scaling immediately scales out the minimal fleet to full production capacity.
 * **RPO & RTO:** RPO is near-zero (sub-second database sync); RTO is measured in minutes (time required for Auto Scaling to scale from 2 instances to 20).
 * **Cost Profile:** **Moderate Cost**. You pay for running compute, storage, load balancers, and databases continuously in both regions.
 
 ### 5.4 Strategy 4: Multi-Site Active/Active
-* **How it works:** A full-scale, fully provisioned production environment runs simultaneously in two or more AWS Regions. Global traffic is dynamically distributed across all regions using Amazon Route 53 weighted or latency-based routing. Data is synchronized bidirectionally in real time (e.g., Amazon DynamoDB Global Tables or Amazon Aurora Global Database).
+* **How it works:** A full-scale, fully provisioned production environment runs simultaneously in two or more AWS Regions. Global traffic is dynamically distributed across all regions using [Amazon Route 53](../../AWS_SERVICES_GLOSSARY.md#amazon-route-53) weighted or latency-based routing. Data is synchronized bidirectionally in real time (e.g., [Amazon DynamoDB](../../AWS_SERVICES_GLOSSARY.md#amazon-dynamodb) Global Tables or [Amazon Aurora](../../AWS_SERVICES_GLOSSARY.md#amazon-aurora) Global Database).
 * **Failover Process:** If one Region collapses, Route 53 health checks detect the failure in seconds and seamlessly divert all global traffic to the remaining healthy Region(s).
 * **RPO & RTO:** **Near-zero RPO and near-zero RTO**. Zero perceived disruption to active users.
 * **Cost Profile:** **Highest Cost**. You pay for dual full-scale production infrastructure running continuously.
@@ -151,7 +151,7 @@ flowchart LR
 | *"Core database replicates continuously, compute instances launched only during disaster"* | **Pilot Light** | Trap: Do not confuse with Warm Standby. Pilot Light has NO compute running; Warm Standby has a small scaled-down compute fleet running. |
 | *"Scaled-down minimal production replica running 24/7 in secondary region"* | **Warm Standby** | Trap: Do not confuse with Pilot Light. The presence of running compute instances defines Warm Standby. |
 | *"Zero downtime, real-time traffic served across multiple AWS Regions simultaneously"* | **Multi-Site Active/Active** | Trap: Do not choose Warm Standby. Active/Active serves production traffic from all regions simultaneously. |
-| *"Automatic database failover within 60-120 seconds if an Availability Zone fails"* | **Amazon RDS Multi-AZ** | Trap: Do not choose Read Replica. Read Replicas are for read scalability; Multi-AZ is for synchronous disaster recovery and automated failover. |
+| *"Automatic database failover within 60-120 seconds if an Availability Zone fails"* | **[Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds) Multi-AZ** | Trap: Do not choose Read Replica. Read Replicas are for read scalability; Multi-AZ is for synchronous disaster recovery and automated failover. |
 
 ---
 
@@ -159,17 +159,17 @@ flowchart LR
 
 ### Question 1
 **An architecture requires high availability and automated synchronous database failover with zero data loss in the event that a power outage causes a physical data center facility failure. Which AWS configuration satisfies this requirement?**
-- A) Deploying an Amazon RDS DB instance in a single Availability Zone with hourly automated snapshots
-- B) Deploying an Amazon RDS Multi-AZ deployment across two Availability Zones
-- C) Creating an asynchronous Amazon RDS Read Replica in a separate AWS Region
-- D) Exporting database transaction logs daily to an Amazon S3 Glacier Flexible Retrieval vault
+- A) Deploying an [Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds) DB instance in a single Availability Zone with hourly automated snapshots
+- B) Deploying an [Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds) Multi-AZ deployment across two Availability Zones
+- C) Creating an asynchronous [Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds) Read Replica in a separate AWS Region
+- D) Exporting database transaction logs daily to an [Amazon S3 Glacier](../../AWS_SERVICES_GLOSSARY.md#amazon-s3-glacier) Flexible Retrieval vault
 
 <details>
 <summary><b>Click to View Answer & Detailed Distractor Analysis</b></summary>
 
-**Correct Answer:** **B) Deploying an Amazon RDS Multi-AZ deployment across two Availability Zones**
+**Correct Answer:** **B) Deploying an [Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds) Multi-AZ deployment across two Availability Zones**
 
-* **Why it's correct:** Amazon RDS Multi-AZ synchronously replicates database transactions to a standby replica in a completely separate Availability Zone within the same Region. If the primary AZ experiences an infrastructure failure, RDS automatically triggers an unassisted DNS failover to the standby replica in 60–120 seconds with zero data loss (RPO = 0).
+* **Why it's correct:** [Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds) Multi-AZ synchronously replicates database transactions to a standby replica in a completely separate Availability Zone within the same Region. If the primary AZ experiences an infrastructure failure, RDS automatically triggers an unassisted DNS failover to the standby replica in 60–120 seconds with zero data loss (RPO = 0).
 * **Distractor Analysis:**
   - *A is incorrect:* A single-AZ RDS instance represents a fatal single point of failure; if that AZ crashes, the database is offline until the hardware recovers or snapshots are manually restored.
   - *C is incorrect:* RDS Read Replicas utilize asynchronous replication primarily designed to scale read-heavy application query traffic, not to provide automated synchronous high-availability failover.
@@ -221,11 +221,11 @@ flowchart LR
 ---
 
 ### Question 4
-**Which database replication mechanism is utilized between the primary instance and the standby replica in an Amazon RDS Multi-AZ configuration?**
+**Which database replication mechanism is utilized between the primary instance and the standby replica in an [Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds) Multi-AZ configuration?**
 - A) Asynchronous batch replication executed once every 60 minutes
 - B) Synchronous block-level replication across private dark-fiber AZ interconnects
 - C) Client-side manual SQL dual-insert scripts
-- D) Public internet batch replication via Amazon CloudFront
+- D) Public internet batch replication via [Amazon CloudFront](../../AWS_SERVICES_GLOSSARY.md#amazon-cloudfront)
 
 <details>
 <summary><b>Click to View Answer & Detailed Distractor Analysis</b></summary>
@@ -253,7 +253,7 @@ flowchart LR
 
 **Correct Answer:** **D) Multi-Site Active/Active**
 
-* **Why it's correct:** Multi-Site Active/Active deploys full-scale production environments across multiple AWS Regions, actively serving live traffic simultaneously using Amazon Route 53 Anycast routing and bidirectional real-time database synchronization (e.g., DynamoDB Global Tables), achieving near-instantaneous failover with zero perceptible downtime.
+* **Why it's correct:** Multi-Site Active/Active deploys full-scale production environments across multiple AWS Regions, actively serving live traffic simultaneously using [Amazon Route 53](../../AWS_SERVICES_GLOSSARY.md#amazon-route-53) Anycast routing and bidirectional real-time database synchronization (e.g., DynamoDB Global Tables), achieving near-instantaneous failover with zero perceptible downtime.
 * **Distractor Analysis:**
   - *A is incorrect:* Pilot Light runs zero compute in the secondary region and requires 10 to 30 minutes to launch instances.
   - *B is incorrect:* Warm Standby runs only a minimal scaled-down fleet in the secondary region and takes minutes to scale up to full production capacity.
@@ -277,7 +277,7 @@ When reading a question scenario, search for these exact phrasing triggers:
 | *"Core database replicated live, but compute (EC2) servers are completely OFF until disaster strikes"* | **Pilot Light** | *Warm Standby* (Warm Standby has compute already running!) |
 | *"Scaled-down minimal fleet of servers constantly running 24/7 in secondary region, ready to scale out"* | **Warm Standby** | *Pilot Light* or *Multi-Site Active/Active* |
 | *"Near-zero RTO and RPO; production traffic actively served from two regions simultaneously"* | **Multi-Site Active/Active** | *Warm Standby* |
-| *"Replication method between primary and standby in Amazon RDS Multi-AZ"* | **Synchronous Block-Level Replication** | *Asynchronous Replication* (That's Read Replicas!) |
+| *"Replication method between primary and standby in [Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds) Multi-AZ"* | **Synchronous Block-Level Replication** | *Asynchronous Replication* (That's Read Replicas!) |
 | *"Purpose of RDS Multi-AZ"* | **High Availability & Fault Tolerance** (Standby cannot be used for read traffic!) | *Read performance scaling* |
 | *"Purpose of RDS Read Replicas"* | **Read Scalability & Performance** (Asynchronous, can be cross-region) | *Synchronous Disaster Recovery* |
 

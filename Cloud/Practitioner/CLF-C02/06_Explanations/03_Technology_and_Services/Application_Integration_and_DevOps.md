@@ -9,11 +9,11 @@
 ## 💡 The Real-World Analogy (ELI5)
 
 > **The Modern Automated Fulfillment Center & Post Office:**
-> - **Amazon SQS (Simple Queue Service):** A bank of physical PO Box mail slots. When an order arrives, the customer drops an envelope into the slot. The envelope sits safely inside the box until an available warehouse worker pulls it out. If workers are on lunch break, 5,000 envelopes safely buffer in the boxes without getting lost. Once a worker finishes an envelope, they shred it (decoupling components).
-> - **Amazon SNS (Simple Notification Service):** The public emergency broadcast siren on top of the town hall. A single event occurs (e.g., flash flood warning), the mayor speaks once into the microphone, and the message immediately "fans out" simultaneously to thousands of recipients via text messages (SMS), emails, and police car radios (Pub/Sub push).
-> - **Amazon EventBridge:** The central air traffic control radar and routing system. It observes planes taking off across the entire country, evaluates incoming flight telemetry against strict routing rules, and automatically routes each flight to its correct terminal gate.
-> - **AWS Step Functions:** The automated robotic assembly line coordinator. It moves an automobile chassis from Station 1 (Welding) to Station 2 (Painting). If Station 2 reports a paint defect, Step Functions pauses the line, waits 3 minutes, retries, and if it fails again, routes the car to the manual inspection bay (state machine workflow).
-> - **AWS CloudFormation:** The master architectural CAD blueprint for a pre-fabricated modular home. Instead of workers manually measuring wood by hand, you feed the blueprint (JSON/YAML template) into an automated 3D house printer, and AWS automatically erects identical foundations, walls, and plumbing in 15 minutes.
+> - **[Amazon SQS](../../AWS_SERVICES_GLOSSARY.md#amazon-sqs) (Simple Queue Service):** A bank of physical PO Box mail slots. When an order arrives, the customer drops an envelope into the slot. The envelope sits safely inside the box until an available warehouse worker pulls it out. If workers are on lunch break, 5,000 envelopes safely buffer in the boxes without getting lost. Once a worker finishes an envelope, they shred it (decoupling components).
+> - **[Amazon SNS](../../AWS_SERVICES_GLOSSARY.md#amazon-sns) (Simple Notification Service):** The public emergency broadcast siren on top of the town hall. A single event occurs (e.g., flash flood warning), the mayor speaks once into the microphone, and the message immediately "fans out" simultaneously to thousands of recipients via text messages (SMS), emails, and police car radios (Pub/Sub push).
+> - **[Amazon EventBridge](../../AWS_SERVICES_GLOSSARY.md#amazon-eventbridge):** The central air traffic control radar and routing system. It observes planes taking off across the entire country, evaluates incoming flight telemetry against strict routing rules, and automatically routes each flight to its correct terminal gate.
+> - **[AWS Step Functions](../../AWS_SERVICES_GLOSSARY.md#aws-step-functions):** The automated robotic assembly line coordinator. It moves an automobile chassis from Station 1 (Welding) to Station 2 (Painting). If Station 2 reports a paint defect, Step Functions pauses the line, waits 3 minutes, retries, and if it fails again, routes the car to the manual inspection bay (state machine workflow).
+> - **[AWS CloudFormation](../../AWS_SERVICES_GLOSSARY.md#aws-cloudformation):** The master architectural CAD blueprint for a pre-fabricated modular home. Instead of workers manually measuring wood by hand, you feed the blueprint (JSON/YAML template) into an automated 3D house printer, and AWS automatically erects identical foundations, walls, and plumbing in 15 minutes.
 
 ---
 
@@ -46,7 +46,7 @@ Under operations research and queuing theory, the average number of requests in 
 $$L = \lambda \times W$$
 where $\lambda$ is the arrival rate of incoming requests and $W$ is the average processing time per request.
 * **The Reality of Traffic Spikes:** If a flash sale causes the arrival rate ($\lambda$) to multiply by $50\times$, a synchronous web server's connection pool saturates in seconds, causing catastrophic thread exhaustion and memory crashes.
-* **The Queue as an Elastic Shock Absorber:** Introducing **Amazon SQS** decouples the arrival rate from the processing rate. Downstream worker nodes pull messages at their own sustainable pace, while the queue absorbs millions of messages safely.
+* **The Queue as an Elastic Shock Absorber:** Introducing **[Amazon SQS](../../AWS_SERVICES_GLOSSARY.md#amazon-sqs)** decouples the arrival rate from the processing rate. Downstream worker nodes pull messages at their own sustainable pace, while the queue absorbs millions of messages safely.
 
 ### 1.2 Message Delivery Semantics: At-Least-Once vs. Exactly-Once
 * **Standard Queues (At-Least-Once Delivery):** Messages are delivered at least once, but occasionally duplicate messages may be delivered due to distributed network retries. Messages are delivered in nearly best-effort order. Delivers **nearly unlimited throughput**.
@@ -60,10 +60,10 @@ Before cloud application integration and Infrastructure as Code services were av
 
 | Enterprise Integration Challenge | Traditional On-Premises Reality | AWS Cloud Integration Paradigm |
 |---|---|---|
-| **Cascading Failures in Monoliths** | When a single downstream billing microservice hung, it held open TCP sockets on upstream servers, triggering a domino effect that brought down the entire corporate website. | **Decouple with Amazon SQS & SNS**. Upstream systems publish messages and immediately return HTTP 200 to users, while background workers process jobs asynchronously. |
-| **Manual Point-to-Point Glue Code** | Connecting 10 microservices together required building and maintaining custom point-to-point webhook scripts and retry daemons. | **Event-Driven Architecture (Amazon EventBridge)**. Microservices publish events to a central event bus; services subscribe independently using declarative JSON rules. |
-| **Complex Spaghetti State Machines** | Coordinating multi-step checkout workflows (Charge Card $\to$ Deduct Inventory $\to$ Dispatch Warehouse) required writing thousands of lines of fragile database transaction logic. | **AWS Step Functions**. Build resilient, serverless visual state machines with built-in error handling, timeouts, and automated retries. |
-| **Manual Click-Ops Infrastructure Errors** | System engineers clicked through hundreds of web console screens to launch servers, load balancers, and databases, making staging environments completely inconsistent with production. | **Infrastructure as Code (AWS CloudFormation)**. Every server, database, and firewall rule is defined in version-controlled JSON/YAML templates that deploy identically every time. |
+| **Cascading Failures in Monoliths** | When a single downstream billing microservice hung, it held open TCP sockets on upstream servers, triggering a domino effect that brought down the entire corporate website. | **Decouple with [Amazon SQS](../../AWS_SERVICES_GLOSSARY.md#amazon-sqs) & SNS**. Upstream systems publish messages and immediately return HTTP 200 to users, while background workers process jobs asynchronously. |
+| **Manual Point-to-Point Glue Code** | Connecting 10 microservices together required building and maintaining custom point-to-point webhook scripts and retry daemons. | **Event-Driven Architecture ([Amazon EventBridge](../../AWS_SERVICES_GLOSSARY.md#amazon-eventbridge))**. Microservices publish events to a central event bus; services subscribe independently using declarative JSON rules. |
+| **Complex Spaghetti State Machines** | Coordinating multi-step checkout workflows (Charge Card $\to$ Deduct Inventory $\to$ Dispatch Warehouse) required writing thousands of lines of fragile database transaction logic. | **[AWS Step Functions](../../AWS_SERVICES_GLOSSARY.md#aws-step-functions)**. Build resilient, serverless visual state machines with built-in error handling, timeouts, and automated retries. |
+| **Manual Click-Ops Infrastructure Errors** | System engineers clicked through hundreds of web console screens to launch servers, load balancers, and databases, making staging environments completely inconsistent with production. | **Infrastructure as Code ([AWS CloudFormation](../../AWS_SERVICES_GLOSSARY.md#aws-cloudformation))**. Every server, database, and firewall rule is defined in version-controlled JSON/YAML templates that deploy identically every time. |
 
 ---
 
@@ -94,8 +94,8 @@ graph TD
 ### 3.2 Amazon SNS (Simple Notification Service)
 * **What it is:** A fully managed, push-based publish/subscribe (Pub/Sub) messaging service that coordinates message delivery to subscribed endpoints.
 * **The Fan-Out Architecture Pattern:**
-  - A single message published to an SNS Topic is instantaneously cloned and pushed to **multiple Amazon SQS queues**, AWS Lambda functions, and HTTP webhooks simultaneously.
-* **Subscriber Protocol Endpoints:** Amazon SQS queues, AWS Lambda functions, HTTPS endpoints, SMS text messages, Email notifications, and Mobile push notifications (APNs, FCM).
+  - A single message published to an SNS Topic is instantaneously cloned and pushed to **multiple [Amazon SQS](../../AWS_SERVICES_GLOSSARY.md#amazon-sqs) queues**, [AWS Lambda](../../AWS_SERVICES_GLOSSARY.md#aws-lambda) functions, and HTTP webhooks simultaneously.
+* **Subscriber Protocol Endpoints:** [Amazon SQS](../../AWS_SERVICES_GLOSSARY.md#amazon-sqs) queues, [AWS Lambda](../../AWS_SERVICES_GLOSSARY.md#aws-lambda) functions, HTTPS endpoints, SMS text messages, Email notifications, and Mobile push notifications (APNs, FCM).
 
 ### 3.3 Amazon EventBridge
 * **What it is:** A serverless event bus that ingests data from your own applications, integrated Software-as-a-Service (SaaS) applications (e.g., Salesforce, Zendesk, Datadog), and AWS services, routing events to target destinations based on declarative JSON matching rules.
@@ -138,19 +138,19 @@ flowchart LR
 ### 4.2 AWS Elastic Beanstalk (Platform as a Service - PaaS)
 * **What it is:** An easy-to-use service for deploying and scaling web applications and services developed with Java, .NET, PHP, Node.js, Python, Ruby, and Docker.
 * **How it Works:** You simply upload your application source code bundle, and Elastic Beanstalk automatically handles the deployment details of capacity provisioning, load balancing, auto-scaling, and application health monitoring.
-* **Full Administrative Control:** Unlike closed proprietary PaaS platforms, Elastic Beanstalk gives developers full underlying administrative access to the underlying Amazon EC2 instances, OS configurations, and Security Groups at any time.
+* **Full Administrative Control:** Unlike closed proprietary PaaS platforms, Elastic Beanstalk gives developers full underlying administrative access to the underlying [Amazon EC2](../../AWS_SERVICES_GLOSSARY.md#amazon-ec2) instances, OS configurations, and Security Groups at any time.
 
 ### 4.3 The AWS CI/CD Developer Tool Suite
 * **AWS CodeCommit:** Fully managed, secure source-control service hosting private Git repositories.
-* **AWS CodeBuild:** Fully managed, serverless continuous integration service that compiles source code, executes unit tests, and produces deployable software artifact packages (e.g., Docker images or JAR files). You pay strictly per build minute.
-* **AWS CodeDeploy:** Automates software deployments to a variety of compute services, including Amazon EC2, AWS Fargate, AWS Lambda, and on-premises servers, supporting rolling, blue/green, and canary deployment strategies.
-* **AWS CodePipeline:** A continuous delivery service that models, visualizes, and automates the software release phases (Source $\to$ Build $\to$ Test $\to$ Deploy).
+* **[AWS CodeBuild](../../AWS_SERVICES_GLOSSARY.md#aws-codebuild):** Fully managed, serverless continuous integration service that compiles source code, executes unit tests, and produces deployable software artifact packages (e.g., Docker images or JAR files). You pay strictly per build minute.
+* **[AWS CodeDeploy](../../AWS_SERVICES_GLOSSARY.md#aws-codedeploy):** Automates software deployments to a variety of compute services, including [Amazon EC2](../../AWS_SERVICES_GLOSSARY.md#amazon-ec2), [AWS Fargate](../../AWS_SERVICES_GLOSSARY.md#aws-fargate), [AWS Lambda](../../AWS_SERVICES_GLOSSARY.md#aws-lambda), and on-premises servers, supporting rolling, blue/green, and canary deployment strategies.
+* **[AWS CodePipeline](../../AWS_SERVICES_GLOSSARY.md#aws-codepipeline):** A continuous delivery service that models, visualizes, and automates the software release phases (Source $\to$ Build $\to$ Test $\to$ Deploy).
 
 ---
 
 ## 5. Multi-Dimensional Application Integration Decision Matrix
 
-| Dimension | Amazon SQS | Amazon SNS | Amazon EventBridge | AWS Step Functions | Amazon MQ |
+| Dimension | [Amazon SQS](../../AWS_SERVICES_GLOSSARY.md#amazon-sqs) | [Amazon SNS](../../AWS_SERVICES_GLOSSARY.md#amazon-sns) | [Amazon EventBridge](../../AWS_SERVICES_GLOSSARY.md#amazon-eventbridge) | [AWS Step Functions](../../AWS_SERVICES_GLOSSARY.md#aws-step-functions) | Amazon MQ |
 |---|---|---|---|---|---|
 | **Messaging Pattern** | **Point-to-Point Queue** | **Publish / Subscribe** | **Serverless Event Bus** | **State Machine Orchestrator** | **Managed Message Broker** |
 | **Delivery Model** | **Pull-based** (Consumer polls) | **Push-based** (Immediate fan-out) | **Push-based** (Event router) | Visual task sequence | Push or Pull (JMS/AMQP) |
@@ -164,12 +164,12 @@ flowchart LR
 
 | Question Scenario Keyword | Target Service | Exam Trap & Distractor Explanation |
 |---|---|---|
-| *"Decouple distributed microservices using a pull-based message queue"* | **Amazon SQS** | Trap: Do not choose Amazon SNS. SQS is a pull-based queue; SNS is a push-based notification service. |
-| *"Send push notifications or fan-out a single message to multiple subscribers (SMS, email, SQS)"* | **Amazon SNS** | Trap: Do not choose Amazon SQS. SQS delivers to one consumer at a time; SNS fans out to multiple subscribers. |
-| *"Serverless event bus routing events from SaaS providers (Shopify, Zendesk) and AWS services"* | **Amazon EventBridge** | Trap: Do not choose CloudWatch Alarms. Native SaaS partner integration is exclusive to EventBridge. |
-| *"Model, provision, and version AWS infrastructure using declarative JSON or YAML templates"* | **AWS CloudFormation** | Trap: Do not choose Elastic Beanstalk. Elastic Beanstalk deploys application code; CloudFormation defines raw infrastructure as code. |
-| *"Platform as a Service (PaaS) to upload application code while AWS handles servers and scaling"* | **AWS Elastic Beanstalk** | Trap: Do not choose EC2 or CloudFormation. Uploading application code with automated deployment is Elastic Beanstalk. |
-| *"Coordinate distributed microservices into visual state machine workflows with branching and retries"* | **AWS Step Functions** | Trap: Do not choose SQS or EventBridge. Visual workflow orchestration and state management is Step Functions. |
+| *"Decouple distributed microservices using a pull-based message queue"* | **[Amazon SQS](../../AWS_SERVICES_GLOSSARY.md#amazon-sqs)** | Trap: Do not choose [Amazon SNS](../../AWS_SERVICES_GLOSSARY.md#amazon-sns). SQS is a pull-based queue; SNS is a push-based notification service. |
+| *"Send push notifications or fan-out a single message to multiple subscribers (SMS, email, SQS)"* | **[Amazon SNS](../../AWS_SERVICES_GLOSSARY.md#amazon-sns)** | Trap: Do not choose [Amazon SQS](../../AWS_SERVICES_GLOSSARY.md#amazon-sqs). SQS delivers to one consumer at a time; SNS fans out to multiple subscribers. |
+| *"Serverless event bus routing events from SaaS providers (Shopify, Zendesk) and AWS services"* | **[Amazon EventBridge](../../AWS_SERVICES_GLOSSARY.md#amazon-eventbridge)** | Trap: Do not choose CloudWatch Alarms. Native SaaS partner integration is exclusive to EventBridge. |
+| *"Model, provision, and version AWS infrastructure using declarative JSON or YAML templates"* | **[AWS CloudFormation](../../AWS_SERVICES_GLOSSARY.md#aws-cloudformation)** | Trap: Do not choose Elastic Beanstalk. Elastic Beanstalk deploys application code; CloudFormation defines raw infrastructure as code. |
+| *"Platform as a Service (PaaS) to upload application code while AWS handles servers and scaling"* | **[AWS Elastic Beanstalk](../../AWS_SERVICES_GLOSSARY.md#aws-elastic-beanstalk)** | Trap: Do not choose EC2 or CloudFormation. Uploading application code with automated deployment is Elastic Beanstalk. |
+| *"Coordinate distributed microservices into visual state machine workflows with branching and retries"* | **[AWS Step Functions](../../AWS_SERVICES_GLOSSARY.md#aws-step-functions)** | Trap: Do not choose SQS or EventBridge. Visual workflow orchestration and state management is Step Functions. |
 | *"Migrate legacy enterprise messaging using JMS, AMQP, or MQTT without rewriting code"* | **Amazon MQ** | Trap: Do not choose SQS. SQS uses proprietary AWS APIs; Amazon MQ provides standard JMS and AMQP protocols. |
 
 ---
@@ -178,27 +178,27 @@ flowchart LR
 
 ### Question 1
 **Which AWS messaging service provides a fully managed, scalable message queuing service that enables asynchronous decoupling of distributed microservices by allowing consumers to pull messages from a buffer?**
-- A) Amazon SNS
-- B) Amazon SQS
-- C) Amazon EventBridge
-- D) AWS Step Functions
+- A) [Amazon SNS](../../AWS_SERVICES_GLOSSARY.md#amazon-sns)
+- B) [Amazon SQS](../../AWS_SERVICES_GLOSSARY.md#amazon-sqs)
+- C) [Amazon EventBridge](../../AWS_SERVICES_GLOSSARY.md#amazon-eventbridge)
+- D) [AWS Step Functions](../../AWS_SERVICES_GLOSSARY.md#aws-step-functions)
 
 <details>
 <summary><b>Click to View Answer & Detailed Distractor Analysis</b></summary>
 
-**Correct Answer:** **B) Amazon SQS**
+**Correct Answer:** **B) [Amazon SQS](../../AWS_SERVICES_GLOSSARY.md#amazon-sqs)**
 
 * **Why it's correct:** Amazon Simple Queue Service (SQS) is a pull-based distributed message queuing service that decouples microservices and serverless applications, storing messages safely in a buffer until downstream worker consumers poll the queue and process the tasks.
 * **Distractor Analysis:**
-  - *A is incorrect:* Amazon SNS is a push-based publish/subscribe service that broadcasts notifications immediately to multiple subscribers rather than storing messages in a pull-based queue.
-  - *C is incorrect:* Amazon EventBridge is a serverless event bus that routes events between applications using content-matching rules, not a worker queue buffer.
-  - *D is incorrect:* AWS Step Functions is a visual workflow orchestrator used to sequence multi-step microservice tasks into state machines.
+  - *A is incorrect:* [Amazon SNS](../../AWS_SERVICES_GLOSSARY.md#amazon-sns) is a push-based publish/subscribe service that broadcasts notifications immediately to multiple subscribers rather than storing messages in a pull-based queue.
+  - *C is incorrect:* [Amazon EventBridge](../../AWS_SERVICES_GLOSSARY.md#amazon-eventbridge) is a serverless event bus that routes events between applications using content-matching rules, not a worker queue buffer.
+  - *D is incorrect:* [AWS Step Functions](../../AWS_SERVICES_GLOSSARY.md#aws-step-functions) is a visual workflow orchestrator used to sequence multi-step microservice tasks into state machines.
 </details>
 
 ---
 
 ### Question 2
-**What is the core architectural difference between Amazon SQS and Amazon SNS?**
+**What is the core architectural difference between [Amazon SQS](../../AWS_SERVICES_GLOSSARY.md#amazon-sqs) and [Amazon SNS](../../AWS_SERVICES_GLOSSARY.md#amazon-sns)?**
 - A) SQS uses a publish/subscribe push model; SNS uses a pull-based queue buffer model
 - B) SQS is a pull-based message queue where consumers poll for messages; SNS is a push-based Pub/Sub service that broadcasts messages simultaneously to multiple subscribers
 - C) SQS only supports sending SMS text messages; SNS only supports storing video streams
@@ -209,31 +209,31 @@ flowchart LR
 
 **Correct Answer:** **B) SQS is a pull-based message queue where consumers poll for messages; SNS is a push-based Pub/Sub service that broadcasts messages simultaneously to multiple subscribers**
 
-* **Why it's correct:** Amazon SQS operates on a point-to-point queue model where consumers explicitly poll (pull) messages from a buffer. Amazon SNS operates on a publisher/subscriber (push) model where an event published to a topic is instantly broadcast (fanned out) to multiple subscribers simultaneously.
+* **Why it's correct:** [Amazon SQS](../../AWS_SERVICES_GLOSSARY.md#amazon-sqs) operates on a point-to-point queue model where consumers explicitly poll (pull) messages from a buffer. [Amazon SNS](../../AWS_SERVICES_GLOSSARY.md#amazon-sns) operates on a publisher/subscriber (push) model where an event published to a topic is instantly broadcast (fanned out) to multiple subscribers simultaneously.
 * **Distractor Analysis:**
   - *A is incorrect:* The definitions are inverted: SQS is pull-based queueing; SNS is push-based pub/sub.
   - *C is incorrect:* SQS carries arbitrary text payloads (up to 256 KB); SNS supports fan-out to SMS, email, SQS, Lambda, and HTTP endpoints.
-  - *D is incorrect:* Both Amazon SQS and Amazon SNS are fully managed, highly available, serverless AWS services requiring zero server maintenance.
+  - *D is incorrect:* Both [Amazon SQS](../../AWS_SERVICES_GLOSSARY.md#amazon-sqs) and [Amazon SNS](../../AWS_SERVICES_GLOSSARY.md#amazon-sns) are fully managed, highly available, serverless AWS services requiring zero server maintenance.
 </details>
 
 ---
 
 ### Question 3
 **Which service allows developers and system administrators to model, provision, version, and manage AWS infrastructure using declarative JSON or YAML templates as Infrastructure as Code (IaC)?**
-- A) AWS Elastic Beanstalk
-- B) AWS CloudFormation
-- C) AWS CodeDeploy
+- A) [AWS Elastic Beanstalk](../../AWS_SERVICES_GLOSSARY.md#aws-elastic-beanstalk)
+- B) [AWS CloudFormation](../../AWS_SERVICES_GLOSSARY.md#aws-cloudformation)
+- C) [AWS CodeDeploy](../../AWS_SERVICES_GLOSSARY.md#aws-codedeploy)
 - D) AWS OpsWorks
 
 <details>
 <summary><b>Click to View Answer & Detailed Distractor Analysis</b></summary>
 
-**Correct Answer:** **B) AWS CloudFormation**
+**Correct Answer:** **B) [AWS CloudFormation](../../AWS_SERVICES_GLOSSARY.md#aws-cloudformation)**
 
-* **Why it's correct:** AWS CloudFormation allows organizations to treat infrastructure as code, defining collections of AWS resources (such as VPCs, EC2 instances, S3 buckets, and RDS databases) in declarative JSON or YAML templates that can be version-controlled, tested, and deployed reliably in automated stacks.
+* **Why it's correct:** [AWS CloudFormation](../../AWS_SERVICES_GLOSSARY.md#aws-cloudformation) allows organizations to treat infrastructure as code, defining collections of AWS resources (such as VPCs, EC2 instances, S3 buckets, and RDS databases) in declarative JSON or YAML templates that can be version-controlled, tested, and deployed reliably in automated stacks.
 * **Distractor Analysis:**
-  - *A is incorrect:* AWS Elastic Beanstalk is a Platform as a Service (PaaS) for deploying application code, not a raw declarative Infrastructure as Code template engine.
-  - *C is incorrect:* AWS CodeDeploy automates software deployments to compute instances, but does not provision foundational AWS cloud infrastructure.
+  - *A is incorrect:* [AWS Elastic Beanstalk](../../AWS_SERVICES_GLOSSARY.md#aws-elastic-beanstalk) is a Platform as a Service (PaaS) for deploying application code, not a raw declarative Infrastructure as Code template engine.
+  - *C is incorrect:* [AWS CodeDeploy](../../AWS_SERVICES_GLOSSARY.md#aws-codedeploy) automates software deployments to compute instances, but does not provision foundational AWS cloud infrastructure.
   - *D is incorrect:* AWS OpsWorks is a configuration management service that provides managed instances of Chef and Puppet.
 </details>
 
@@ -241,42 +241,42 @@ flowchart LR
 
 ### Question 4
 **Which AWS Platform as a Service (PaaS) offering allows software developers to upload application code (e.g., in Node.js, Python, Java, or PHP) while AWS automatically handles provisioning, load balancing, auto-scaling, and operational health monitoring?**
-- A) Amazon EC2
-- B) AWS Elastic Beanstalk
-- C) AWS CodePipeline
-- D) AWS Lambda
+- A) [Amazon EC2](../../AWS_SERVICES_GLOSSARY.md#amazon-ec2)
+- B) [AWS Elastic Beanstalk](../../AWS_SERVICES_GLOSSARY.md#aws-elastic-beanstalk)
+- C) [AWS CodePipeline](../../AWS_SERVICES_GLOSSARY.md#aws-codepipeline)
+- D) [AWS Lambda](../../AWS_SERVICES_GLOSSARY.md#aws-lambda)
 
 <details>
 <summary><b>Click to View Answer & Detailed Distractor Analysis</b></summary>
 
-**Correct Answer:** **B) AWS Elastic Beanstalk**
+**Correct Answer:** **B) [AWS Elastic Beanstalk](../../AWS_SERVICES_GLOSSARY.md#aws-elastic-beanstalk)**
 
-* **Why it's correct:** AWS Elastic Beanstalk is an application deployment service (PaaS) where developers upload their application code bundle, and Elastic Beanstalk automatically provisions and manages the underlying Amazon EC2 virtual machines, Elastic Load Balancers, Auto Scaling groups, and databases while retaining full administrative control.
+* **Why it's correct:** [AWS Elastic Beanstalk](../../AWS_SERVICES_GLOSSARY.md#aws-elastic-beanstalk) is an application deployment service (PaaS) where developers upload their application code bundle, and Elastic Beanstalk automatically provisions and manages the underlying [Amazon EC2](../../AWS_SERVICES_GLOSSARY.md#amazon-ec2) virtual machines, Elastic Load Balancers, Auto Scaling groups, and databases while retaining full administrative control.
 * **Distractor Analysis:**
-  - *A is incorrect:* Amazon EC2 is an Infrastructure as a Service (IaaS) offering requiring manual installation and configuration of the OS, web server, and runtime environments.
-  - *C is incorrect:* AWS CodePipeline is a continuous delivery orchestration service that manages CI/CD release stages, not an application runtime platform.
-  - *D is incorrect:* AWS Lambda is a Function as a Service (FaaS) serverless compute engine executing individual stateless functions in response to events, rather than hosting complete web application runtime platforms.
+  - *A is incorrect:* [Amazon EC2](../../AWS_SERVICES_GLOSSARY.md#amazon-ec2) is an Infrastructure as a Service (IaaS) offering requiring manual installation and configuration of the OS, web server, and runtime environments.
+  - *C is incorrect:* [AWS CodePipeline](../../AWS_SERVICES_GLOSSARY.md#aws-codepipeline) is a continuous delivery orchestration service that manages CI/CD release stages, not an application runtime platform.
+  - *D is incorrect:* [AWS Lambda](../../AWS_SERVICES_GLOSSARY.md#aws-lambda) is a Function as a Service (FaaS) serverless compute engine executing individual stateless functions in response to events, rather than hosting complete web application runtime platforms.
 </details>
 
 ---
 
 ### Question 5
 **Which AWS service coordinates distributed microservices, serverless components, and human approvals into visual state machine workflows, natively managing branching logic, timeouts, and automated retries?**
-- A) Amazon EventBridge
-- B) AWS Step Functions
-- C) Amazon SQS
-- D) AWS CodeBuild
+- A) [Amazon EventBridge](../../AWS_SERVICES_GLOSSARY.md#amazon-eventbridge)
+- B) [AWS Step Functions](../../AWS_SERVICES_GLOSSARY.md#aws-step-functions)
+- C) [Amazon SQS](../../AWS_SERVICES_GLOSSARY.md#amazon-sqs)
+- D) [AWS CodeBuild](../../AWS_SERVICES_GLOSSARY.md#aws-codebuild)
 
 <details>
 <summary><b>Click to View Answer & Detailed Distractor Analysis</b></summary>
 
-**Correct Answer:** **B) AWS Step Functions**
+**Correct Answer:** **B) [AWS Step Functions](../../AWS_SERVICES_GLOSSARY.md#aws-step-functions)**
 
-* **Why it's correct:** AWS Step Functions is a serverless visual workflow orchestration service that allows developers to sequence multiple AWS services (such as AWS Lambda functions, ECS tasks, and DynamoDB operations) into resilient state machines with declarative branching logic, error handling, and automated retry mechanisms.
+* **Why it's correct:** [AWS Step Functions](../../AWS_SERVICES_GLOSSARY.md#aws-step-functions) is a serverless visual workflow orchestration service that allows developers to sequence multiple AWS services (such as [AWS Lambda](../../AWS_SERVICES_GLOSSARY.md#aws-lambda) functions, ECS tasks, and DynamoDB operations) into resilient state machines with declarative branching logic, error handling, and automated retry mechanisms.
 * **Distractor Analysis:**
-  - *A is incorrect:* Amazon EventBridge is an event router that filters and delivers individual events between services, but does not manage multi-step stateful workflow execution sequences.
-  - *C is incorrect:* Amazon SQS is a point-to-point message queuing service, but does not provide state machine logic, decision branching, or task orchestration.
-  - *D is incorrect:* AWS CodeBuild is a serverless continuous integration build service that compiles source code and runs unit tests.
+  - *A is incorrect:* [Amazon EventBridge](../../AWS_SERVICES_GLOSSARY.md#amazon-eventbridge) is an event router that filters and delivers individual events between services, but does not manage multi-step stateful workflow execution sequences.
+  - *C is incorrect:* [Amazon SQS](../../AWS_SERVICES_GLOSSARY.md#amazon-sqs) is a point-to-point message queuing service, but does not provide state machine logic, decision branching, or task orchestration.
+  - *D is incorrect:* [AWS CodeBuild](../../AWS_SERVICES_GLOSSARY.md#aws-codebuild) is a serverless continuous integration build service that compiles source code and runs unit tests.
 </details>
 
 ---
@@ -290,40 +290,40 @@ When reading a question scenario, search for these exact phrasing triggers:
 
 | If You See This Trigger Phrase in the Question Stem... | The Correct Integration / DevOps Service Is... | Trap Distractor to Immediately Discard |
 |---|---|---|
-| *"Decouple application components; buffer messages; worker instances pull messages at their own pace"* | **Amazon SQS (Simple Queue Service)** | *Amazon SNS* (SNS is push-based pub/sub, not a pull queue!) |
-| *"Publish/Subscribe (Pub/Sub) messaging; fan-out pattern; push notifications to email, SMS, mobile, HTTP endpoints"* | **Amazon SNS (Simple Notification Service)** | *Amazon SQS* (SQS cannot send SMS or mobile push notifications) |
-| *"Serverless event bus; routes events between SaaS apps (Salesforce, Datadog) and AWS services based on rules"* | **Amazon EventBridge** | *Amazon SQS* or *AWS Step Functions* |
-| *"Visual state machine workflow; coordinates microservices and Lambda functions with branching logic and retries"* | **AWS Step Functions** | *Amazon EventBridge* (EventBridge routes events; Step Functions coordinates multi-step state) |
-| *"Model, provision, and version AWS resources using declarative JSON or YAML templates (Infrastructure as Code - IaC)"* | **AWS CloudFormation** | *AWS Elastic Beanstalk* (Beanstalk is PaaS for apps, not raw IaC) |
-| *"Upload application code (Python, Java, Node.js) and AWS automatically handles provisioning, load balancing, scaling"* | **AWS Elastic Beanstalk** | *AWS CloudFormation* (CloudFormation requires authoring resource templates) |
-| *"Compile source code, run automated tests, and produce deployable software packages in a serverless build environment"* | **AWS CodeBuild** | *AWS CodeDeploy* (CodeDeploy deploys binaries; CodeBuild compiles/tests them) |
-| *"Automate software deployments to Amazon EC2, AWS Lambda, or on-premises servers"* | **AWS CodeDeploy** | *AWS CodePipeline* (CodePipeline orchestrates the entire workflow) |
-| *"Orchestrate and visualize the complete end-to-end continuous delivery pipeline (Build $\to$ Test $\to$ Deploy)"* | **AWS CodePipeline** | *AWS CodeDeploy* |
+| *"Decouple application components; buffer messages; worker instances pull messages at their own pace"* | **[Amazon SQS](../../AWS_SERVICES_GLOSSARY.md#amazon-sqs) (Simple Queue Service)** | *[Amazon SNS](../../AWS_SERVICES_GLOSSARY.md#amazon-sns)* (SNS is push-based pub/sub, not a pull queue!) |
+| *"Publish/Subscribe (Pub/Sub) messaging; fan-out pattern; push notifications to email, SMS, mobile, HTTP endpoints"* | **[Amazon SNS](../../AWS_SERVICES_GLOSSARY.md#amazon-sns) (Simple Notification Service)** | *[Amazon SQS](../../AWS_SERVICES_GLOSSARY.md#amazon-sqs)* (SQS cannot send SMS or mobile push notifications) |
+| *"Serverless event bus; routes events between SaaS apps (Salesforce, Datadog) and AWS services based on rules"* | **[Amazon EventBridge](../../AWS_SERVICES_GLOSSARY.md#amazon-eventbridge)** | *[Amazon SQS](../../AWS_SERVICES_GLOSSARY.md#amazon-sqs)* or *[AWS Step Functions](../../AWS_SERVICES_GLOSSARY.md#aws-step-functions)* |
+| *"Visual state machine workflow; coordinates microservices and Lambda functions with branching logic and retries"* | **[AWS Step Functions](../../AWS_SERVICES_GLOSSARY.md#aws-step-functions)** | *[Amazon EventBridge](../../AWS_SERVICES_GLOSSARY.md#amazon-eventbridge)* (EventBridge routes events; Step Functions coordinates multi-step state) |
+| *"Model, provision, and version AWS resources using declarative JSON or YAML templates (Infrastructure as Code - IaC)"* | **[AWS CloudFormation](../../AWS_SERVICES_GLOSSARY.md#aws-cloudformation)** | *[AWS Elastic Beanstalk](../../AWS_SERVICES_GLOSSARY.md#aws-elastic-beanstalk)* (Beanstalk is PaaS for apps, not raw IaC) |
+| *"Upload application code (Python, Java, Node.js) and AWS automatically handles provisioning, load balancing, scaling"* | **[AWS Elastic Beanstalk](../../AWS_SERVICES_GLOSSARY.md#aws-elastic-beanstalk)** | *[AWS CloudFormation](../../AWS_SERVICES_GLOSSARY.md#aws-cloudformation)* (CloudFormation requires authoring resource templates) |
+| *"Compile source code, run automated tests, and produce deployable software packages in a serverless build environment"* | **[AWS CodeBuild](../../AWS_SERVICES_GLOSSARY.md#aws-codebuild)** | *[AWS CodeDeploy](../../AWS_SERVICES_GLOSSARY.md#aws-codedeploy)* (CodeDeploy deploys binaries; CodeBuild compiles/tests them) |
+| *"Automate software deployments to [Amazon EC2](../../AWS_SERVICES_GLOSSARY.md#amazon-ec2), [AWS Lambda](../../AWS_SERVICES_GLOSSARY.md#aws-lambda), or on-premises servers"* | **[AWS CodeDeploy](../../AWS_SERVICES_GLOSSARY.md#aws-codedeploy)** | *[AWS CodePipeline](../../AWS_SERVICES_GLOSSARY.md#aws-codepipeline)* (CodePipeline orchestrates the entire workflow) |
+| *"Orchestrate and visualize the complete end-to-end continuous delivery pipeline (Build $\to$ Test $\to$ Deploy)"* | **[AWS CodePipeline](../../AWS_SERVICES_GLOSSARY.md#aws-codepipeline)** | *[AWS CodeDeploy](../../AWS_SERVICES_GLOSSARY.md#aws-codedeploy)* |
 
 ### 2. The 3-Step Rapid Elimination Heuristic
 When evaluating an Integration or DevOps question:
 1. **Step 1: Message Flow (Push vs. Pull):**
-   - Do worker servers **poll or pull messages from a buffer** so orders aren't lost when the backend is overwhelmed? $\to$ **Amazon SQS** (Pull-based).
-   - Does a publisher broadcast an update that immediately **pushes to multiple recipients simultaneously** (Fan-out)? $\to$ **Amazon SNS** (Push-based).
+   - Do worker servers **poll or pull messages from a buffer** so orders aren't lost when the backend is overwhelmed? $\to$ **[Amazon SQS](../../AWS_SERVICES_GLOSSARY.md#amazon-sqs)** (Pull-based).
+   - Does a publisher broadcast an update that immediately **pushes to multiple recipients simultaneously** (Fan-out)? $\to$ **[Amazon SNS](../../AWS_SERVICES_GLOSSARY.md#amazon-sns)** (Push-based).
 2. **Step 2: Workflow vs. Event Routing:**
-   - Need to route an event (e.g. S3 file uploaded, ticket created in Zendesk) to a target? $\to$ **Amazon EventBridge**.
-   - Need a **multi-step stateful business process** with sequential steps, parallel branches, "wait" states, and failure retries? $\to$ **AWS Step Functions**.
+   - Need to route an event (e.g. S3 file uploaded, ticket created in Zendesk) to a target? $\to$ **[Amazon EventBridge](../../AWS_SERVICES_GLOSSARY.md#amazon-eventbridge)**.
+   - Need a **multi-step stateful business process** with sequential steps, parallel branches, "wait" states, and failure retries? $\to$ **[AWS Step Functions](../../AWS_SERVICES_GLOSSARY.md#aws-step-functions)**.
 3. **Step 3: The Developer / CI/CD Suite Roles:**
    - Store Git code $\to$ **AWS CodeCommit**.
-   - Compile code & run unit tests $\to$ **AWS CodeBuild**.
-   - Install packages onto instances $\to$ **AWS CodeDeploy**.
-   - Connect everything into an automated pipeline $\to$ **AWS CodePipeline**.
+   - Compile code & run unit tests $\to$ **[AWS CodeBuild](../../AWS_SERVICES_GLOSSARY.md#aws-codebuild)**.
+   - Install packages onto instances $\to$ **[AWS CodeDeploy](../../AWS_SERVICES_GLOSSARY.md#aws-codedeploy)**.
+   - Connect everything into an automated pipeline $\to$ **[AWS CodePipeline](../../AWS_SERVICES_GLOSSARY.md#aws-codepipeline)**.
 
 ### 3. High-Frequency Decoy Autopsy: Why AWS Tries to Trick You
-* **Decoy #1: "Amazon SQS" vs. "Amazon SNS"**
+* **Decoy #1: "[Amazon SQS](../../AWS_SERVICES_GLOSSARY.md#amazon-sqs)" vs. "[Amazon SNS](../../AWS_SERVICES_GLOSSARY.md#amazon-sns)"**
   - *The Trap:* A scenario describes a payment system that must not drop transactions when web traffic spikes.
-  - *The Autopsy:* If the system needs a **buffer queue** so downstream servers can process tasks asynchronously without crashing, the answer is **Amazon SQS**. If the goal is **broadcasting an alert or notification to many endpoints at once**, the answer is **Amazon SNS**.
-* **Decoy #2: "AWS CloudFormation" vs. "AWS Elastic Beanstalk"**
+  - *The Autopsy:* If the system needs a **buffer queue** so downstream servers can process tasks asynchronously without crashing, the answer is **[Amazon SQS](../../AWS_SERVICES_GLOSSARY.md#amazon-sqs)**. If the goal is **broadcasting an alert or notification to many endpoints at once**, the answer is **[Amazon SNS](../../AWS_SERVICES_GLOSSARY.md#amazon-sns)**.
+* **Decoy #2: "[AWS CloudFormation](../../AWS_SERVICES_GLOSSARY.md#aws-cloudformation)" vs. "[AWS Elastic Beanstalk](../../AWS_SERVICES_GLOSSARY.md#aws-elastic-beanstalk)"**
   - *The Trap:* Asking for the quickest way for a web developer with zero cloud infrastructure experience to deploy a web application.
-  - *The Autopsy:* If the prompt emphasizes **"uploading code with AWS managing the environment"**, select **AWS Elastic Beanstalk**. If the prompt emphasizes **"authoring JSON/YAML templates to provision repeatable multi-resource stacks"**, select **AWS CloudFormation**.
-* **Decoy #3: "Amazon EventBridge" vs. "Amazon SNS"**
+  - *The Autopsy:* If the prompt emphasizes **"uploading code with AWS managing the environment"**, select **[AWS Elastic Beanstalk](../../AWS_SERVICES_GLOSSARY.md#aws-elastic-beanstalk)**. If the prompt emphasizes **"authoring JSON/YAML templates to provision repeatable multi-resource stacks"**, select **[AWS CloudFormation](../../AWS_SERVICES_GLOSSARY.md#aws-cloudformation)**.
+* **Decoy #3: "[Amazon EventBridge](../../AWS_SERVICES_GLOSSARY.md#amazon-eventbridge)" vs. "[Amazon SNS](../../AWS_SERVICES_GLOSSARY.md#amazon-sns)"**
   - *The Trap:* Filtering events from multiple sources and routing them to Lambda.
-  - *The Autopsy:* While SNS supports topic filtering, **Amazon EventBridge** is the modern cloud event bus engineered specifically for **JSON content-based event filtering and schema discovery**, natively connecting to 3rd-party SaaS partners and dozens of AWS service events.
+  - *The Autopsy:* While SNS supports topic filtering, **[Amazon EventBridge](../../AWS_SERVICES_GLOSSARY.md#amazon-eventbridge)** is the modern cloud event bus engineered specifically for **JSON content-based event filtering and schema discovery**, natively connecting to 3rd-party SaaS partners and dozens of AWS service events.
 
 ### 4. 10-Second Visual Decision Flowchart
 

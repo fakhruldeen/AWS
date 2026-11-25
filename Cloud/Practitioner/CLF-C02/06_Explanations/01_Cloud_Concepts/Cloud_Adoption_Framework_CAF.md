@@ -54,10 +54,10 @@ Before AWS codified the Cloud Adoption Framework and the 7 Rs of Migration, ente
 
 | Migration Anti-Pattern | Traditional Unstructured Migration | AWS CAF & 7 Rs Structured Framework |
 |---|---|---|
-| **The "Throw Over the Wall" Lift-and-Shift** | Blindly copying physical virtual machines to the cloud without rightsizing or optimization, leading to unexpected **cloud bill shock**. | Assess workloads using **AWS Migration Evaluator**; evaluate the 7 Rs to determine whether to Rehost, Replatform, or Refactor. |
+| **The "Throw Over the Wall" Lift-and-Shift** | Blindly copying physical virtual machines to the cloud without rightsizing or optimization, leading to unexpected **cloud bill shock**. | Assess workloads using **[AWS Migration Evaluator](../../AWS_SERVICES_GLOSSARY.md#aws-migration-evaluator)**; evaluate the 7 Rs to determine whether to Rehost, Replatform, or Refactor. |
 | **Workforce Skill Inertia & Resistance** | Engineers feared cloud automation would eliminate their jobs; lack of training led to misconfigurations and project sabotage. | The **People Perspective** builds structured learning paths, cloud certification programs, and cultural psychological safety. |
-| **Lack of Financial Governance (FinOps)** | Teams spun up large GPU instances with zero budget tracking, resulting in massive month-end invoice overruns. | The **Governance Perspective** establishes automated AWS Budgets, Cost Allocation Tags, and Service Control Policies (SCPs). |
-| **Security Blind Spots** | Migrating legacy perimeter security appliances to cloud without leveraging cloud-native IAM and KMS encryption. | The **Security Perspective** establishes Defense-in-Depth, automated compliance scanning (AWS Config), and identity boundaries. |
+| **Lack of Financial Governance (FinOps)** | Teams spun up large GPU instances with zero budget tracking, resulting in massive month-end invoice overruns. | The **Governance Perspective** establishes automated [AWS Budgets](../../AWS_SERVICES_GLOSSARY.md#aws-budgets), Cost Allocation Tags, and Service Control Policies (SCPs). |
+| **Security Blind Spots** | Migrating legacy perimeter security appliances to cloud without leveraging cloud-native IAM and KMS encryption. | The **Security Perspective** establishes Defense-in-Depth, automated compliance scanning ([AWS Config](../../AWS_SERVICES_GLOSSARY.md#aws-config)), and identity boundaries. |
 
 ---
 
@@ -88,7 +88,7 @@ The AWS Cloud Adoption Framework (AWS CAF 3.0) structures transformation guidanc
 
 4. **Platform Perspective:**
    * *Target Stakeholders:* Chief Technology Officer (CTO), Enterprise Architects, Cloud Solutions Architects, Infrastructure Engineers.
-   * *Core Objective:* Designs, constructs, and modernizes the foundational cloud environment, scalable cloud architectures, multi-account landing zones (AWS Control Tower), and data platforms.
+   * *Core Objective:* Designs, constructs, and modernizes the foundational cloud environment, scalable cloud architectures, multi-account landing zones ([AWS Control Tower](../../AWS_SERVICES_GLOSSARY.md#aws-control-tower)), and data platforms.
    * *Key Capabilities:* Cloud infrastructure architecture, data engineering, continuous integration and delivery (CI/CD), application modernization.
 
 5. **Security Perspective:**
@@ -152,17 +152,17 @@ graph TD
 
 ### Detailed Breakdown of the 7 Rs:
 1. **Rehost ("Lift-and-Shift"):**
-   * Moving applications from physical or virtualized on-premise servers to Amazon EC2 with **zero code modifications**.
+   * Moving applications from physical or virtualized on-premise servers to [Amazon EC2](../../AWS_SERVICES_GLOSSARY.md#amazon-ec2) with **zero code modifications**.
    * *Best For:* Rapid datacenter evacuation timelines, legacy applications where source code is unavailable.
-   * *Primary Tool:* **AWS Application Migration Service (AWS MGN)**.
+   * *Primary Tool:* **[AWS Application Migration Service](../../AWS_SERVICES_GLOSSARY.md#aws-application-migration-service) (AWS MGN)**.
 2. **Replatform ("Lift, Tinker, and Shift"):**
    * Making minimal cloud optimizations to eliminate operational management overhead without modifying the core application code.
-   * *Classic Example:* Migrating an on-premises self-managed Oracle database to **Amazon RDS for Oracle**, or moving an application to a managed container runtime (AWS Elastic Beanstalk or ECS).
+   * *Classic Example:* Migrating an on-premises self-managed Oracle database to **[Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds) for Oracle**, or moving an application to a managed container runtime ([AWS Elastic Beanstalk](../../AWS_SERVICES_GLOSSARY.md#aws-elastic-beanstalk) or ECS).
 3. **Repurchase ("Drop-and-Shop"):**
    * Replacing an existing custom or licensed legacy system with a commercial Software-as-a-Service (SaaS) platform.
    * *Classic Example:* Retiring an on-premises Microsoft Exchange email server in favor of a cloud SaaS solution, or adopting Salesforce.
 4. **Refactor / Rearchitect:**
-   * Completely reimagining and rewriting the application using cloud-native architectures (e.g., decomposing a monolithic Java application into serverless microservices using AWS Lambda, Amazon API Gateway, and Amazon DynamoDB).
+   * Completely reimagining and rewriting the application using cloud-native architectures (e.g., decomposing a monolithic Java application into serverless microservices using [AWS Lambda](../../AWS_SERVICES_GLOSSARY.md#aws-lambda), [Amazon API Gateway](../../AWS_SERVICES_GLOSSARY.md#amazon-api-gateway), and [Amazon DynamoDB](../../AWS_SERVICES_GLOSSARY.md#amazon-dynamodb)).
    * *Best For:* High business value applications requiring extreme scalability, agility, and performance. Carries the highest upfront engineering effort.
 5. **Relocate ("Hypervisor-Level Lift"):**
    * Moving virtual machines at the hypervisor layer without rewriting code, modifying OS configurations, or changing IP addresses (e.g., VMware Cloud on AWS).
@@ -173,16 +173,16 @@ graph TD
 
 ### 4.2 The 3 AWS Migration Acceleration Program (MAP) Phases
 In real-world enterprise migrations, AWS structures the end-to-end journey into **3 sequential phases**:
-1. **Assess:** Evaluate cloud readiness (`AWS Migration Readiness Assessment — MRA`), discover existing on-premises servers and dependencies (`AWS Application Discovery Service`), and build a Total Cost of Ownership (TCO) business case (`AWS Migration Evaluator`).
-2. **Mobilize:** Close readiness gaps identified in Assess, build the secure multi-account **Landing Zone** (`AWS Control Tower` & `AWS Organizations`), train staff, establish security/operations baselines, and execute initial pilot migrations.
-3. **Migrate and Modernize:** Execute large-scale migration waves using `AWS Application Migration Service (MGN)`, `AWS DMS`, `AWS DataSync`, and `AWS Snow Family`, tracked centrally in `AWS Migration Hub`, then modernize workloads toward managed and serverless architectures.
+1. **Assess:** Evaluate cloud readiness (`AWS Migration Readiness Assessment — MRA`), discover existing on-premises servers and dependencies ([`AWS Application Discovery Service`](../../AWS_SERVICES_GLOSSARY.md#aws-application-discovery-service)), and build a Total Cost of Ownership (TCO) business case ([`AWS Migration Evaluator`](../../AWS_SERVICES_GLOSSARY.md#aws-migration-evaluator)).
+2. **Mobilize:** Close readiness gaps identified in Assess, build the secure multi-account **Landing Zone** ([`AWS Control Tower`](../../AWS_SERVICES_GLOSSARY.md#aws-control-tower) & [`AWS Organizations`](../../AWS_SERVICES_GLOSSARY.md#aws-organizations)), train staff, establish security/operations baselines, and execute initial pilot migrations.
+3. **Migrate and Modernize:** Execute large-scale migration waves using `AWS Application Migration Service (MGN)`, [`AWS DMS`](../../AWS_SERVICES_GLOSSARY.md#aws-dms), [`AWS DataSync`](../../AWS_SERVICES_GLOSSARY.md#aws-datasync), and [`AWS Snow Family`](../../AWS_SERVICES_GLOSSARY.md#aws-snow-family), tracked centrally in [`AWS Migration Hub`](../../AWS_SERVICES_GLOSSARY.md#aws-migration-hub), then modernize workloads toward managed and serverless architectures.
 
 ### 4.3 Real-World 7 Rs Decision Walkthrough (How to Choose in Exam Scenarios)
 Imagine a retail bank migrating 5 legacy systems to AWS:
 * **System A (Legacy Billing Server — Lease expires in 30 days, zero time to touch code):** Choose **Rehost** (`AWS MGN`) to evacuate the data center immediately.
-* **System B (Self-managed MySQL database on Linux — Team is tired of OS/DB patching, app code stays identical):** Choose **Replatform** (move DB to `Amazon RDS`).
-* **System C (Old in-house CRM tool — Commercial cloud CRM already does everything better):** Choose **Repurchase** (move to SaaS like Salesforce / AWS Marketplace).
-* **System D (Core Mobile Banking API — Needs instant auto-scaling for millions of users & new features):** Choose **Refactor / Rearchitect** (rewrite as serverless microservices using `AWS Lambda`, `API Gateway`, `DynamoDB`).
+* **System B (Self-managed MySQL database on Linux — Team is tired of OS/DB patching, app code stays identical):** Choose **Replatform** (move DB to [`Amazon RDS`](../../AWS_SERVICES_GLOSSARY.md#amazon-rds)).
+* **System C (Old in-house CRM tool — Commercial cloud CRM already does everything better):** Choose **Repurchase** (move to SaaS like Salesforce / [AWS Marketplace](../../AWS_SERVICES_GLOSSARY.md#aws-marketplace)).
+* **System D (Core Mobile Banking API — Needs instant auto-scaling for millions of users & new features):** Choose **Refactor / Rearchitect** (rewrite as serverless microservices using [`AWS Lambda`](../../AWS_SERVICES_GLOSSARY.md#aws-lambda), `API Gateway`, `DynamoDB`).
 * **System E (2014 Internal Holiday Tracker — Zero logins in 18 months):** Choose **Retire** (decommission immediately to save money).
 
 ---
@@ -191,13 +191,13 @@ Imagine a retail bank migrating 5 legacy systems to AWS:
 
 | The 7 Rs Strategy | Migration Speed | Engineering Effort | Upfront Cost | Long-Term Cloud Benefit | Primary AWS Service Driver |
 |---|---|---|---|---|---|
-| **Rehost** | **Fastest** | Minimal (No code changes) | Low | Low to Moderate (IaaS savings) | AWS Application Migration Service (MGN) |
-| **Replatform** | Fast | Low (Minor configuration adjustments) | Moderate | Moderate to High (Reduced OS/DB patching) | Amazon RDS, AWS Elastic Beanstalk |
-| **Repurchase** | Moderate | Low to Moderate (Data export/import) | Variable (SaaS licensing) | High (Zero infrastructure management) | AWS Marketplace, 3P SaaS solutions |
-| **Refactor** | **Slowest** | **Highest** (Complete code rewrite) | High | **Highest** (Maximum elasticity & serverless agility) | AWS Lambda, Amazon ECS/EKS, DynamoDB |
+| **Rehost** | **Fastest** | Minimal (No code changes) | Low | Low to Moderate (IaaS savings) | [AWS Application Migration Service](../../AWS_SERVICES_GLOSSARY.md#aws-application-migration-service) (MGN) |
+| **Replatform** | Fast | Low (Minor configuration adjustments) | Moderate | Moderate to High (Reduced OS/DB patching) | [Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds), [AWS Elastic Beanstalk](../../AWS_SERVICES_GLOSSARY.md#aws-elastic-beanstalk) |
+| **Repurchase** | Moderate | Low to Moderate (Data export/import) | Variable (SaaS licensing) | High (Zero infrastructure management) | [AWS Marketplace](../../AWS_SERVICES_GLOSSARY.md#aws-marketplace), 3P SaaS solutions |
+| **Refactor** | **Slowest** | **Highest** (Complete code rewrite) | High | **Highest** (Maximum elasticity & serverless agility) | [AWS Lambda](../../AWS_SERVICES_GLOSSARY.md#aws-lambda), Amazon ECS/EKS, DynamoDB |
 | **Relocate** | Very Fast | Very Low (VMware hypervisor transfer) | Low | Moderate (Familiar tooling) | VMware Cloud on AWS |
-| **Retain** | Zero | Zero | Zero | Zero (Workload remains on-prem) | AWS Outposts / AWS Storage Gateway |
-| **Retire** | Instant | Minimal (Decommissioning) | **Negative** (Immediate cost savings) | High (Immediate waste elimination) | AWS Application Discovery Service |
+| **Retain** | Zero | Zero | Zero | Zero (Workload remains on-prem) | [AWS Outposts](../../AWS_SERVICES_GLOSSARY.md#aws-outposts) / [AWS Storage Gateway](../../AWS_SERVICES_GLOSSARY.md#aws-storage-gateway) |
+| **Retire** | Instant | Minimal (Decommissioning) | **Negative** (Immediate cost savings) | High (Immediate waste elimination) | [AWS Application Discovery Service](../../AWS_SERVICES_GLOSSARY.md#aws-application-discovery-service) |
 
 ---
 
@@ -211,8 +211,8 @@ Imagine a retail bank migrating 5 legacy systems to AWS:
 | *"Ensuring workloads comply with regulations, identity access control, threat detection"* | **Security Perspective** | Trap: Do not select Governance. Technical security, compliance controls, and IAM belong to Security. |
 | *"Day-to-day service delivery, observability, monitoring, incident management"* | **Operations Perspective** | Trap: Do not choose Platform. Running and monitoring live systems is Operations. |
 | *"Lift-and-shift migration without code modifications"* | **Rehost** | Trap: Do not choose Replatform or Refactor. Zero code change lift-and-shift is Rehost. |
-| *"Moving self-managed database to Amazon RDS without modifying application code"* | **Replatform** | Trap: Do not choose Rehost. Adopting a managed service like RDS is Replatform (Lift, Tinker, and Shift). |
-| *"Completely rewriting application using serverless microservices and AWS Lambda"* | **Refactor / Rearchitect** | Trap: Do not choose Replatform. Rewriting code into cloud-native serverless architecture is Refactor. |
+| *"Moving self-managed database to [Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds) without modifying application code"* | **Replatform** | Trap: Do not choose Rehost. Adopting a managed service like RDS is Replatform (Lift, Tinker, and Shift). |
+| *"Completely rewriting application using serverless microservices and [AWS Lambda](../../AWS_SERVICES_GLOSSARY.md#aws-lambda)"* | **Refactor / Rearchitect** | Trap: Do not choose Replatform. Rewriting code into cloud-native serverless architecture is Refactor. |
 
 ---
 
@@ -230,7 +230,7 @@ Imagine a retail bank migrating 5 legacy systems to AWS:
 
 **Correct Answer:** **B) Platform Perspective**
 
-* **Why it's correct:** The Platform Perspective focuses on the technical capabilities required to architect, provision, and modernize cloud environments, including building enterprise landing zones (AWS Control Tower), architecting scalable VPC networks, and implementing continuous integration and continuous delivery (CI/CD) pipelines.
+* **Why it's correct:** The Platform Perspective focuses on the technical capabilities required to architect, provision, and modernize cloud environments, including building enterprise landing zones ([AWS Control Tower](../../AWS_SERVICES_GLOSSARY.md#aws-control-tower)), architecting scalable VPC networks, and implementing continuous integration and continuous delivery (CI/CD) pipelines.
 * **Distractor Analysis:**
   - *A is incorrect:* The People Perspective focuses on organizational culture, cloud training programs, upskilling, and change management.
   - *C is incorrect:* The Business Perspective focuses on business model innovation, ROI calculations, and aligning cloud strategies with corporate monetization goals.
@@ -282,7 +282,7 @@ Imagine a retail bank migrating 5 legacy systems to AWS:
 ---
 
 ### Question 4
-**A company migrates an on-premises legacy web application to Amazon EC2 with zero modifications to the application code or operating system configuration. Which of the 7 Rs migration strategies does this represent?**
+**A company migrates an on-premises legacy web application to [Amazon EC2](../../AWS_SERVICES_GLOSSARY.md#amazon-ec2) with zero modifications to the application code or operating system configuration. Which of the 7 Rs migration strategies does this represent?**
 - A) Replatform
 - B) Refactor
 - C) Rehost
@@ -293,9 +293,9 @@ Imagine a retail bank migrating 5 legacy systems to AWS:
 
 **Correct Answer:** **C) Rehost**
 
-* **Why it's correct:** Rehost (commonly referred to as "Lift-and-Shift") involves moving applications directly from physical or on-premises virtualized environments into Amazon EC2 with no code changes, providing the fastest route to datacenter evacuation.
+* **Why it's correct:** Rehost (commonly referred to as "Lift-and-Shift") involves moving applications directly from physical or on-premises virtualized environments into [Amazon EC2](../../AWS_SERVICES_GLOSSARY.md#amazon-ec2) with no code changes, providing the fastest route to datacenter evacuation.
 * **Distractor Analysis:**
-  - *A is incorrect:* Replatform ("Lift, Tinker, and Shift") involves minor modifications to take advantage of managed services (e.g., switching from self-managed database to Amazon RDS) without core application rewrites.
+  - *A is incorrect:* Replatform ("Lift, Tinker, and Shift") involves minor modifications to take advantage of managed services (e.g., switching from self-managed database to [Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds)) without core application rewrites.
   - *B is incorrect:* Refactor ("Rearchitect") entails completely rewriting the application code using cloud-native architectures such as serverless microservices.
   - *D is incorrect:* Repurchase ("Drop-and-Shop") involves replacing the application entirely with a third-party SaaS solution.
 </details>
@@ -314,7 +314,7 @@ Imagine a retail bank migrating 5 legacy systems to AWS:
 
 **Correct Answer:** **B) Repurchase**
 
-* **Why it's correct:** The Repurchase strategy (also known as "Drop-and-Shop") involves retiring an internally developed or licensed legacy workload and replacing it with an established commercial Software-as-a-Service (SaaS) platform (e.g., Salesforce, Workday, or an AWS Marketplace SaaS product).
+* **Why it's correct:** The Repurchase strategy (also known as "Drop-and-Shop") involves retiring an internally developed or licensed legacy workload and replacing it with an established commercial Software-as-a-Service (SaaS) platform (e.g., Salesforce, Workday, or an [AWS Marketplace](../../AWS_SERVICES_GLOSSARY.md#aws-marketplace) SaaS product).
 * **Distractor Analysis:**
   - *A is incorrect:* Retain involves keeping workloads in the on-premises environment without migrating them.
   - *C is incorrect:* Replatform involves modifying the platform layer (e.g., adopting managed databases or containers) while keeping the custom code.
@@ -338,7 +338,7 @@ When reading a question scenario, search for these exact phrasing triggers:
 | *"Designing landing zones, cloud infrastructure patterns, and data platforms"* | **Platform Perspective** | *Operations Perspective* |
 | *"Incident response, observability, SLA delivery, and day-to-day runbooks"* | **Operations Perspective** | *Platform Perspective* |
 | *"Migrate to EC2 with ZERO code changes ('Lift and Shift')"* | **Rehost** | *Replatform* or *Refactor* |
-| *"Move to managed services (e.g., self-hosted DB to Amazon RDS) with minor adjustments ('Lift, Tinker, Shift')"* | **Replatform** | *Refactor* (No core rewrite!) |
+| *"Move to managed services (e.g., self-hosted DB to [Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds)) with minor adjustments ('Lift, Tinker, Shift')"* | **Replatform** | *Refactor* (No core rewrite!) |
 | *"Completely rewrite application code using cloud-native microservices or serverless ('Rearchitect')"* | **Refactor** | *Replatform* |
 | *"Replace an in-house application with a commercial third-party SaaS solution ('Drop and Shop')"* | **Repurchase** | *Rehost* |
 | *"Move hypervisor VMs (VMware Cloud on AWS) without converting formats"* | **Relocate** | *Rehost* |
@@ -365,11 +365,11 @@ When evaluating a CAF or Migration question:
   - *The Trap:* A scenario discusses setting up a Cloud Center of Excellence (CCoE) training program or organizational change management.
   - *The Autopsy:* Candidates frequently confuse Governance with People. Training, skills development, and organizational career transitions belong strictly to the **People Perspective**. Financial accountability (FinOps) and project prioritization belong to **Governance**.
 * **Decoy #2: "Rehost" vs. "Replatform" vs. "Refactor"**
-  - *The Trap:* Moving an app to AWS and moving the database to Amazon RDS. Is it Rehost or Replatform?
-  - *The Autopsy:* If the database is migrated to **Amazon RDS (a managed service)**, that is **Replatform** (*Lift, Tinker, and Shift*). If the database was moved as-is onto an EC2 virtual machine without touching the engine, that is **Rehost**.
-* **Decoy #3: "AWS Application Migration Service (MGN)" vs. "AWS Database Migration Service (DMS)"**
-  - *The Trap:* Asking which service migrates physical or virtual servers to Amazon EC2.
-  - *The Autopsy:* **AWS MGN** lifts and shifts block-level server disks (EC2 instances). **AWS DMS** migrates database data and schema between database engines.
+  - *The Trap:* Moving an app to AWS and moving the database to [Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds). Is it Rehost or Replatform?
+  - *The Autopsy:* If the database is migrated to **[Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds) (a managed service)**, that is **Replatform** (*Lift, Tinker, and Shift*). If the database was moved as-is onto an EC2 virtual machine without touching the engine, that is **Rehost**.
+* **Decoy #3: "[AWS Application Migration Service](../../AWS_SERVICES_GLOSSARY.md#aws-application-migration-service) (MGN)" vs. "AWS Database Migration Service (DMS)"**
+  - *The Trap:* Asking which service migrates physical or virtual servers to [Amazon EC2](../../AWS_SERVICES_GLOSSARY.md#amazon-ec2).
+  - *The Autopsy:* **AWS MGN** lifts and shifts block-level server disks (EC2 instances). **[AWS DMS](../../AWS_SERVICES_GLOSSARY.md#aws-dms)** migrates database data and schema between database engines.
 
 ### 4. 10-Second Visual Decision Flowchart
 

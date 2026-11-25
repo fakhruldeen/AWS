@@ -110,7 +110,7 @@ graph TD
 AWS operates under three foundational pricing principles:
 1. **Pay-as-you-go:** Pay only for the resources you actually consume. There are no minimum commitments, activation fees, or termination penalties.
 2. **Pay less when you reserve:** Save up to $72\%$ compared to On-Demand rates by committing to a consistent volume of compute usage for a 1-year or 3-year term (Savings Plans and Reserved Instances).
-3. **Pay even less as AWS grows (Volume-based discounts):** Tiered pricing structures reduce the per-unit cost as usage scales (e.g., Amazon S3 storage cost per GB drops as stored data exceeds 50 TB and 500 TB).
+3. **Pay even less as AWS grows (Volume-based discounts):** Tiered pricing structures reduce the per-unit cost as usage scales (e.g., [Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3) storage cost per GB drops as stored data exceeds 50 TB and 500 TB).
 
 ### 5.1 Data Transfer Pricing Rules (Crucial Exam Concept!)
 * **Inbound Data Transfer into AWS:** **Always 100% FREE** across all AWS services from the public internet. AWS never charges customers to upload data into the cloud.
@@ -121,9 +121,9 @@ AWS operates under three foundational pricing principles:
 
 ### 5.2 AWS Free Tier Classifications
 The AWS Free Tier offers three distinct tiers of free service access:
-1. **Always Free:** Never expires; available to all active AWS customers indefinitely (e.g., AWS Lambda: 1,000,000 free requests/month; Amazon DynamoDB: 25 GB of free NoSQL storage; Amazon CloudWatch: 10 free custom metrics and alarms).
+1. **Always Free:** Never expires; available to all active AWS customers indefinitely (e.g., [AWS Lambda](../../AWS_SERVICES_GLOSSARY.md#aws-lambda): 1,000,000 free requests/month; [Amazon DynamoDB](../../AWS_SERVICES_GLOSSARY.md#amazon-dynamodb): 25 GB of free NoSQL storage; [Amazon CloudWatch](../../AWS_SERVICES_GLOSSARY.md#amazon-cloudwatch): 10 free custom metrics and alarms).
 2. **12 Months Free:** Available to new AWS accounts for 12 months following initial registration (e.g., 750 hours/month of Linux `t2.micro` or `t3.micro` EC2 instances; 5 GB of standard S3 storage; 750 hours/month of single-AZ RDS `db.t3.micro` database).
-3. **Short-Term Trials:** Short trial periods beginning from the moment a specific service is first activated (e.g., Amazon SageMaker 2-month free trial; Amazon Inspector 15-day free trial; Amazon GuardDuty 30-day free trial).
+3. **Short-Term Trials:** Short trial periods beginning from the moment a specific service is first activated (e.g., [Amazon SageMaker](../../AWS_SERVICES_GLOSSARY.md#amazon-sagemaker) 2-month free trial; [Amazon Inspector](../../AWS_SERVICES_GLOSSARY.md#amazon-inspector) 15-day free trial; [Amazon GuardDuty](../../AWS_SERVICES_GLOSSARY.md#amazon-guardduty) 30-day free trial).
 
 ---
 
@@ -132,7 +132,7 @@ The AWS Free Tier offers three distinct tiers of free service access:
 | Financial & Operational Dimension | Capital Expenditure (CapEx) | Operational Expenditure (OpEx) | AWS Realization |
 |---|---|---|---|
 | **Upfront Financial Commitment** | Massive upfront cash payment before launching any application | Zero upfront commitment; pay only for actual runtime | Elastic On-Demand compute & storage |
-| **Capacity Risk** | High: Risk of costly over-provisioning or business-halting under-provisioning | Zero: Dynamically expand and shrink resources as demand fluctuates | EC2 Auto Scaling, AWS Lambda serverless |
+| **Capacity Risk** | High: Risk of costly over-provisioning or business-halting under-provisioning | Zero: Dynamically expand and shrink resources as demand fluctuates | EC2 Auto Scaling, [AWS Lambda](../../AWS_SERVICES_GLOSSARY.md#aws-lambda) serverless |
 | **Accounting & Tax Treatment** | Capitalized asset; depreciated on balance sheet over 3 to 7 years | Fully deductible operational expense against revenue in the current tax year | Monthly itemized billing invoice |
 | **Agility & Innovation Speed** | Low: Experiments blocked by budget cycles and 6-month hardware lead times | High: Spin up thousands of experimental servers in minutes; terminate if unsuccessful | AWS Management Console & CloudFormation |
 | **Physical Facilities Overhead** | Enterprise pays for power, cooling, physical security, and datacenter floor space | 100% absorbed by AWS in the per-unit service price | Security and compliance OF the cloud |
@@ -144,9 +144,9 @@ The AWS Free Tier offers three distinct tiers of free service access:
 | Question Scenario Keyword | Target Financial Concept | Exam Trap & Distractor Explanation |
 |---|---|---|
 | *"Trade upfront capital expenditure for variable operational expenditure"* | **Trade CapEx for OpEx** | Trap: Do not confuse with "Stop guessing capacity" or "Economies of scale". CapEx vs OpEx is strictly the financial accounting shift. |
-| *"How much does it cost to transfer 10 TB of data into Amazon S3 from on-premises?"* | **$0.00 (Inbound is Free)** | Trap: Inbound data transfer from the internet into AWS is always completely free. Charges apply only to outbound data transfer (egress). |
+| *"How much does it cost to transfer 10 TB of data into [Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3) from on-premises?"* | **$0.00 (Inbound is Free)** | Trap: Inbound data transfer from the internet into AWS is always completely free. Charges apply only to outbound data transfer (egress). |
 | *"AWS passes lower operating costs to customers via proactive price cuts"* | **Massive Economies of Scale** | Trap: Do not choose "Pay-as-you-go" or "Agility". Price cuts resulting from aggregate purchasing volume are driven by Economies of Scale. |
-| *"Estimate the cost of migrating on-premises architecture to AWS before launching"* | **AWS Pricing Calculator** | Trap: Do not choose AWS Cost Explorer. Cost Explorer analyzes historical past usage; AWS Pricing Calculator estimates future hypothetical costs. |
+| *"Estimate the cost of migrating on-premises architecture to AWS before launching"* | **[AWS Pricing Calculator](../../AWS_SERVICES_GLOSSARY.md#aws-pricing-calculator)** | Trap: Do not choose [AWS Cost Explorer](../../AWS_SERVICES_GLOSSARY.md#aws-cost-explorer). Cost Explorer analyzes historical past usage; [AWS Pricing Calculator](../../AWS_SERVICES_GLOSSARY.md#aws-pricing-calculator) estimates future hypothetical costs. |
 | *"Free Tier offering that never expires and remains free indefinitely"* | **Always Free** | Trap: Do not choose "12 Months Free". Always Free includes DynamoDB (25 GB) and Lambda (1M requests/mo) forever. |
 | *"Eliminating physical data center cooling, power, and real estate costs"* | **Indirect TCO Savings** | Trap: Hardware purchase is direct; cooling, electricity, real estate, and physical guards are indirect TCO expenses. |
 
@@ -176,7 +176,7 @@ The AWS Free Tier offers three distinct tiers of free service access:
 ---
 
 ### Question 2
-**Which of the following represents an indirect Total Cost of Ownership (TCO) expense that is completely eliminated when migrating on-premises physical servers to Amazon EC2?**
+**Which of the following represents an indirect Total Cost of Ownership (TCO) expense that is completely eliminated when migrating on-premises physical servers to [Amazon EC2](../../AWS_SERVICES_GLOSSARY.md#amazon-ec2)?**
 - A) Monthly outbound internet data transfer bandwidth fees
 - B) Software engineering salaries for developing application features
 - C) Physical data center electrical power, HVAC cooling, and raised floor space leasing
@@ -218,7 +218,7 @@ The AWS Free Tier offers three distinct tiers of free service access:
 ---
 
 ### Question 4
-**A media agency uploads 50 Terabytes of raw 4K video footage from an on-premises studio into an Amazon S3 bucket located in the us-east-1 Region. How much will AWS invoice the customer for this inbound data transfer?**
+**A media agency uploads 50 Terabytes of raw 4K video footage from an on-premises studio into an [Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3) bucket located in the us-east-1 Region. How much will AWS invoice the customer for this inbound data transfer?**
 - A) $0.09 per Gigabyte transferred
 - B) $0.01 per Gigabyte transferred
 - C) $0.00 (Inbound internet data transfer is completely free)
@@ -243,18 +243,18 @@ The AWS Free Tier offers three distinct tiers of free service access:
 - A) Consolidated Billing
 - B) Bring Your Own License (BYOL) managed via AWS License Manager
 - C) AWS Free Tier
-- D) AWS Cost Explorer
+- D) [AWS Cost Explorer](../../AWS_SERVICES_GLOSSARY.md#aws-cost-explorer)
 
 <details>
 <summary><b>Click to View Answer & Detailed Distractor Analysis</b></summary>
 
 **Correct Answer:** **B) Bring Your Own License (BYOL) managed via AWS License Manager**
 
-* **Why it's correct:** Bring Your Own License (BYOL) permits customers to leverage their existing on-premises software investments on Amazon EC2 (frequently on EC2 Dedicated Hosts), while AWS License Manager automates tracking and enforces licensing compliance rules to prevent costly audit violations.
+* **Why it's correct:** Bring Your Own License (BYOL) permits customers to leverage their existing on-premises software investments on [Amazon EC2](../../AWS_SERVICES_GLOSSARY.md#amazon-ec2) (frequently on EC2 Dedicated Hosts), while AWS License Manager automates tracking and enforces licensing compliance rules to prevent costly audit violations.
 * **Distractor Analysis:**
-  - *A is incorrect:* Consolidated Billing is an AWS Organizations feature that aggregates usage across multiple AWS accounts to achieve tiered volume discounts and provide a single payment invoice.
+  - *A is incorrect:* Consolidated Billing is an [AWS Organizations](../../AWS_SERVICES_GLOSSARY.md#aws-organizations) feature that aggregates usage across multiple AWS accounts to achieve tiered volume discounts and provide a single payment invoice.
   - *C is incorrect:* The AWS Free Tier provides limited complimentary access to select AWS services for evaluation and testing.
-  - *D is incorrect:* AWS Cost Explorer is a reporting tool used to visualize, track, and forecast historical and future cloud expenditure.
+  - *D is incorrect:* [AWS Cost Explorer](../../AWS_SERVICES_GLOSSARY.md#aws-cost-explorer) is a reporting tool used to visualize, track, and forecast historical and future cloud expenditure.
 </details>
 
 ---
@@ -276,7 +276,7 @@ When reading a question scenario, search for these exact phrasing triggers:
 | *"Deploy applications to customers around the world with just a few clicks"* | **Go Global in Minutes** | *Local Hosting* |
 | *"How much does AWS charge for inbound internet data transfer into S3 or EC2?"* | **$0.00 (ALWAYS 100% FREE)** | *$0.09/GB* or *Flat Monthly Bandwidth Fee* |
 | *"Which cost is an indirect (soft) cost included in a Total Cost of Ownership (TCO) calculation?"* | **Datacenter power, HVAC cooling, physical security guards, facility real estate** | *Server hardware purchase invoice* (That's a direct cost!) |
-| *"Bring existing on-premises software licenses (Windows / SQL Server) to AWS without rebuying"* | **Bring Your Own License (BYOL) / AWS License Manager** | *AWS Marketplace* or *Consolidated Billing* |
+| *"Bring existing on-premises software licenses (Windows / SQL Server) to AWS without rebuying"* | **Bring Your Own License (BYOL) / AWS License Manager** | *[AWS Marketplace](../../AWS_SERVICES_GLOSSARY.md#aws-marketplace)* or *Consolidated Billing* |
 
 ### 2. The 3-Step Rapid Elimination Heuristic
 When evaluating a Cloud Economics or Cloud Value question:

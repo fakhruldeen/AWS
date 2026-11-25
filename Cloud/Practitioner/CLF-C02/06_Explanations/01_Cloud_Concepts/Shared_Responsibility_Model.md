@@ -72,7 +72,7 @@ Before the cloud shared responsibility paradigm, enterprises bore 100% of the en
 | **Physical Data Center Security** | Companies spent millions on armed 24/7 guards, biometric mantraps, video surveillance archiving, and facility perimeter fencing. | **100% managed by AWS**. Physical access is strictly restricted, monitored, and audited under global compliance standards. |
 | **Environmental & Electrical Redundancy** | Purchasing and maintaining diesel turbine generators, routine fuel filtration, battery backup UPS arrays, and HVAC chillers. | **100% managed by AWS**. Redundant power and cooling systems are engineered into every Availability Zone. |
 | **Hardware Lifecycle & Disposal** | Decommissioning hard drives required certified physical shredding, degaussing logs, and hazardous waste disposal compliance (NIST 800-88). | **100% managed by AWS**. Storage media is decommissioned using strict multi-pass cryptographic erasure or physical destruction. |
-| **Audit & Compliance Verification** | Enterprise teams spent months compiling evidence for SOC 2, ISO 27001, and HIPAA auditors regarding physical door logs and server room temperatures. | **Accelerated via AWS Artifact**. Customers download third-party auditor compliance attestations on-demand at zero cost. |
+| **Audit & Compliance Verification** | Enterprise teams spent months compiling evidence for SOC 2, ISO 27001, and HIPAA auditors regarding physical door logs and server room temperatures. | **Accelerated via [AWS Artifact](../../AWS_SERVICES_GLOSSARY.md#aws-artifact)**. Customers download third-party auditor compliance attestations on-demand at zero cost. |
 
 ---
 
@@ -116,7 +116,7 @@ AWS protects and manages the foundational physical and virtualization layer that
 The customer is entirely responsible for the security controls they choose to implement, configure, and manage for the services they run:
 * **Customer Data:** Classifying data sensitivity, configuring bucket access policies, enabling client-side encryption, and managing lifecycle deletion rules.
 * **Identity & Access Management (IAM):** Creating IAM users, enforcing Multi-Factor Authentication (MFA), setting strict password complexity policies, implementing least-privilege permissions, and rotating access keys.
-* **Guest Operating System (IaaS):** For Amazon EC2 instances, the customer must apply security updates, kernel patches, anti-malware agents, and local firewall iptables.
+* **Guest Operating System (IaaS):** For [Amazon EC2](../../AWS_SERVICES_GLOSSARY.md#amazon-ec2) instances, the customer must apply security updates, kernel patches, anti-malware agents, and local firewall iptables.
 * **Network & Firewall Rules:** Configuring Virtual Private Cloud (VPC) subnets, routing tables, Security Group stateful instance firewalls, and Network ACL stateless subnet firewalls.
 * **Application Security:** Writing secure, vulnerability-free application code (protecting against SQL injection, Cross-Site Scripting, and OWASP Top 10 vulnerabilities).
 
@@ -166,7 +166,7 @@ AWS categorizes security controls into three distinct operational classification
 
 ## 5. Multi-Dimensional Service Responsibility Matrix
 
-| Security & Operational Layer | Amazon EC2 (IaaS) | Amazon RDS (PaaS) | AWS Lambda (Serverless) | Amazon S3 (Abstracted Storage) |
+| Security & Operational Layer | [Amazon EC2](../../AWS_SERVICES_GLOSSARY.md#amazon-ec2) (IaaS) | [Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds) (PaaS) | [AWS Lambda](../../AWS_SERVICES_GLOSSARY.md#aws-lambda) (Serverless) | [Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3) (Abstracted Storage) |
 |---|:---:|:---:|:---:|:---:|
 | **Physical Facilities & Datacenter Security** | **AWS** | **AWS** | **AWS** | **AWS** |
 | **Physical Hardware & Disk Sanitization** | **AWS** | **AWS** | **AWS** | **AWS** |
@@ -184,13 +184,13 @@ AWS categorizes security controls into three distinct operational classification
 
 | Question Scenario Keyword | Responsible Party | Exam Trap & Distractor Explanation |
 |---|---|---|
-| *"Patching guest operating system on Amazon EC2"* | **Customer** | Trap: Never choose AWS. AWS provides the AMI, but the customer controls root/admin and must patch the OS. |
+| *"Patching guest operating system on [Amazon EC2](../../AWS_SERVICES_GLOSSARY.md#amazon-ec2)"* | **Customer** | Trap: Never choose AWS. AWS provides the AMI, but the customer controls root/admin and must patch the OS. |
 | *"Physical security and biometric access to data centers"* | **AWS** | Trap: The customer never has physical access to AWS data centers under any circumstance. |
-| *"Patching the operating system hosting an Amazon RDS database"* | **AWS** | Trap: In managed services like RDS, AWS manages host OS patching automatically during maintenance windows. |
+| *"Patching the operating system hosting an [Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds) database"* | **AWS** | Trap: In managed services like RDS, AWS manages host OS patching automatically during maintenance windows. |
 | *"Configuring database user credentials and grants on RDS"* | **Customer** | Trap: AWS provides the database engine, but managing DB logins, passwords, and SQL schemas is 100% customer responsibility. |
 | *"Configuring IAM policies, MFA, and access keys"* | **Customer** | Trap: AWS provides the IAM engine, but creating users, assigning least privilege, and enabling MFA is strictly customer responsibility. |
 | *"Disposal and degaussing of decommissioned hard disk drives"* | **AWS** | Trap: AWS performs physical destruction in accordance with NIST 800-88; customers never touch physical disks. |
-| *"Accessing third-party SOC and ISO compliance reports"* | **AWS Artifact** | Trap: Do not choose AWS Trusted Advisor or Inspector. AWS Artifact is the official portal for compliance reports. |
+| *"Accessing third-party SOC and ISO compliance reports"* | **[AWS Artifact](../../AWS_SERVICES_GLOSSARY.md#aws-artifact)** | Trap: Do not choose [AWS Trusted Advisor](../../AWS_SERVICES_GLOSSARY.md#aws-trusted-advisor) or Inspector. [AWS Artifact](../../AWS_SERVICES_GLOSSARY.md#aws-artifact) is the official portal for compliance reports. |
 
 ---
 
@@ -199,9 +199,9 @@ AWS categorizes security controls into three distinct operational classification
 ### Question 1
 **Under the AWS Shared Responsibility Model, which of the following tasks is considered "Security OF the Cloud" and is the exclusive responsibility of AWS?**
 - A) Enforcing multi-factor authentication (MFA) and strong password policies for corporate IAM users
-- B) Installing security kernel patches on an Amazon EC2 Linux virtual machine instance
+- B) Installing security kernel patches on an [Amazon EC2](../../AWS_SERVICES_GLOSSARY.md#amazon-ec2) Linux virtual machine instance
 - C) Physical security of data center buildings, environmental cooling, and certified storage hardware disposal
-- D) Encrypting client-side application data payloads before transmitting them to an Amazon S3 bucket
+- D) Encrypting client-side application data payloads before transmitting them to an [Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3) bucket
 
 <details>
 <summary><b>Click to View Answer & Detailed Distractor Analysis</b></summary>
@@ -211,14 +211,14 @@ AWS categorizes security controls into three distinct operational classification
 * **Why it's correct:** AWS is strictly responsible for "Security OF the Cloud": safeguarding the physical facilities, server blades, power feeds, HVAC climate chillers, hypervisor virtualization software, and executing certified media destruction (NIST 800-88).
 * **Distractor Analysis:**
   - *A is incorrect:* Configuring IAM user credentials, password expiration policies, and MFA tokens is a customer responsibility ("Security IN the Cloud").
-  - *B is incorrect:* For Infrastructure as a Service (IaaS) instances such as Amazon EC2, the customer holds root/administrator privileges and is solely responsible for guest operating system patching.
+  - *B is incorrect:* For Infrastructure as a Service (IaaS) instances such as [Amazon EC2](../../AWS_SERVICES_GLOSSARY.md#amazon-ec2), the customer holds root/administrator privileges and is solely responsible for guest operating system patching.
   - *D is incorrect:* Implementing client-side encryption algorithms and managing encryption keys prior to cloud upload is entirely the customer's responsibility.
 </details>
 
 ---
 
 ### Question 2
-**A financial company provisions an Amazon RDS for PostgreSQL database instance. Which security and maintenance task remains the customer's responsibility?**
+**A financial company provisions an [Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds) for PostgreSQL database instance. Which security and maintenance task remains the customer's responsibility?**
 - A) Applying security patches to the underlying Linux host operating system supporting the database
 - B) Replacing failed solid-state disk drives (SSDs) in the underlying storage array
 - C) Managing database user accounts, granting granular SQL table permissions, and configuring VPC Security Group ingress rules
@@ -229,9 +229,9 @@ AWS categorizes security controls into three distinct operational classification
 
 **Correct Answer:** **C) Managing database user accounts, granting granular SQL table permissions, and configuring VPC Security Group ingress rules**
 
-* **Why it's correct:** In a managed PaaS service like Amazon RDS, AWS manages the underlying physical server, hypervisor, and host OS patching. However, the customer retains full control and responsibility over database credentials, user roles, table grants, schema architecture, and network firewall (Security Group) rules.
+* **Why it's correct:** In a managed PaaS service like [Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds), AWS manages the underlying physical server, hypervisor, and host OS patching. However, the customer retains full control and responsibility over database credentials, user roles, table grants, schema architecture, and network firewall (Security Group) rules.
 * **Distractor Analysis:**
-  - *A is incorrect:* AWS automatically patches the underlying host operating system and database engine for Amazon RDS during scheduled maintenance windows.
+  - *A is incorrect:* AWS automatically patches the underlying host operating system and database engine for [Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds) during scheduled maintenance windows.
   - *B is incorrect:* Physical hardware maintenance and disk replacement are managed 100% by AWS infrastructure teams without customer intervention.
   - *D is incorrect:* Physical facility surveillance and guard posts are exclusive AWS responsibilities ("Security OF the Cloud").
 </details>
@@ -242,7 +242,7 @@ AWS categorizes security controls into three distinct operational classification
 **Which of the following is classified as a "Shared Control" under the AWS Shared Responsibility Model?**
 - A) Physical data center perimeter fencing and biometric locks
 - B) Patch management
-- C) Amazon S3 bucket naming and object tagging
+- C) [Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3) bucket naming and object tagging
 - D) Customer IAM root user credential rotation
 
 <details>
@@ -260,7 +260,7 @@ AWS categorizes security controls into three distinct operational classification
 ---
 
 ### Question 4
-**An application running on an Amazon EC2 instance is breached because an unpatched zero-day vulnerability in the Apache web server daemon was left unaddressed for six months. Who is responsible for this security failure?**
+**An application running on an [Amazon EC2](../../AWS_SERVICES_GLOSSARY.md#amazon-ec2) instance is breached because an unpatched zero-day vulnerability in the Apache web server daemon was left unaddressed for six months. Who is responsible for this security failure?**
 - A) AWS, because AWS owns and manages the cloud infrastructure
 - B) The customer, because maintaining and patching guest operating system software and application daemons on EC2 is "Security IN the Cloud"
 - C) AWS and the customer share legal responsibility equally under the SLA agreement
@@ -271,7 +271,7 @@ AWS categorizes security controls into three distinct operational classification
 
 **Correct Answer:** **B) The customer, because maintaining and patching guest operating system software and application daemons on EC2 is "Security IN the Cloud"**
 
-* **Why it's correct:** Amazon EC2 is an Infrastructure as a Service (IaaS) offering. AWS guarantees the security and availability of the underlying physical hardware and hypervisor, but the customer retains administrative control over the guest OS, including installing software packages, configuring firewalls, and applying security patches.
+* **Why it's correct:** [Amazon EC2](../../AWS_SERVICES_GLOSSARY.md#amazon-ec2) is an Infrastructure as a Service (IaaS) offering. AWS guarantees the security and availability of the underlying physical hardware and hypervisor, but the customer retains administrative control over the guest OS, including installing software packages, configuring firewalls, and applying security patches.
 * **Distractor Analysis:**
   - *A is incorrect:* AWS does not inspect, modify, or patch guest operating system packages running inside a customer's private EC2 instances.
   - *C is incorrect:* The Shared Responsibility Model establishes strict non-overlapping boundaries; guest OS application vulnerabilities on IaaS are solely customer responsibilities.
@@ -282,21 +282,21 @@ AWS categorizes security controls into three distinct operational classification
 
 ### Question 5
 **Which AWS service provides on-demand access to AWS security and compliance reports (such as SOC 1, SOC 2, ISO 27001, and PCI-DSS attestations) to verify AWS's adherence to "Security OF the Cloud"?**
-- A) AWS Trusted Advisor
-- B) AWS Artifact
-- C) Amazon Inspector
-- D) AWS CloudTrail
+- A) [AWS Trusted Advisor](../../AWS_SERVICES_GLOSSARY.md#aws-trusted-advisor)
+- B) [AWS Artifact](../../AWS_SERVICES_GLOSSARY.md#aws-artifact)
+- C) [Amazon Inspector](../../AWS_SERVICES_GLOSSARY.md#amazon-inspector)
+- D) [AWS CloudTrail](../../AWS_SERVICES_GLOSSARY.md#aws-cloudtrail)
 
 <details>
 <summary><b>Click to View Answer & Detailed Distractor Analysis</b></summary>
 
-**Correct Answer:** **B) AWS Artifact**
+**Correct Answer:** **B) [AWS Artifact](../../AWS_SERVICES_GLOSSARY.md#aws-artifact)**
 
-* **Why it's correct:** AWS Artifact is the central compliance portal in the AWS Management Console that allows customers to review and download official AWS compliance documentation, third-party audit reports (SOC 1/2/3, ISO certificates), and execute formal Business Associate Agreements (BAAs).
+* **Why it's correct:** [AWS Artifact](../../AWS_SERVICES_GLOSSARY.md#aws-artifact) is the central compliance portal in the AWS Management Console that allows customers to review and download official AWS compliance documentation, third-party audit reports (SOC 1/2/3, ISO certificates), and execute formal Business Associate Agreements (BAAs).
 * **Distractor Analysis:**
-  - *A is incorrect:* AWS Trusted Advisor is an automated management tool that scans customer accounts to provide real-time recommendations across cost optimization, performance, security, fault tolerance, and service quotas.
-  - *C is incorrect:* Amazon Inspector is an automated vulnerability management service that scans EC2 instances and ECR container images for software vulnerabilities and unintended network exposure.
-  - *D is incorrect:* AWS CloudTrail is an audit logging service that records AWS API calls, user actions, and administrative changes across an AWS account.
+  - *A is incorrect:* [AWS Trusted Advisor](../../AWS_SERVICES_GLOSSARY.md#aws-trusted-advisor) is an automated management tool that scans customer accounts to provide real-time recommendations across cost optimization, performance, security, fault tolerance, and service quotas.
+  - *C is incorrect:* [Amazon Inspector](../../AWS_SERVICES_GLOSSARY.md#amazon-inspector) is an automated vulnerability management service that scans EC2 instances and ECR container images for software vulnerabilities and unintended network exposure.
+  - *D is incorrect:* [AWS CloudTrail](../../AWS_SERVICES_GLOSSARY.md#aws-cloudtrail) is an audit logging service that records AWS API calls, user actions, and administrative changes across an AWS account.
 </details>
 
 ---
@@ -312,11 +312,11 @@ When reading a question scenario, search for these exact phrasing triggers:
 |---|---|---|
 | *"Security OF the Cloud"* | **AWS Responsibility** (Physical facilities, hardware, hypervisors, global network) | *Customer Responsibility* |
 | *"Security IN the Cloud"* | **Customer Responsibility** (Data, IAM, OS on EC2, firewalls, app code) | *AWS Responsibility* |
-| *"Patching guest OS, anti-malware, or local firewall on Amazon EC2"* | **Customer Responsibility** | *AWS Responsibility* (AWS gives you root; you must patch it!) |
-| *"Patching the operating system or database engine on Amazon RDS"* | **AWS Responsibility** | *Customer Responsibility* (RDS is managed; AWS patches the host OS) |
+| *"Patching guest OS, anti-malware, or local firewall on [Amazon EC2](../../AWS_SERVICES_GLOSSARY.md#amazon-ec2)"* | **Customer Responsibility** | *AWS Responsibility* (AWS gives you root; you must patch it!) |
+| *"Patching the operating system or database engine on [Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds)"* | **AWS Responsibility** | *Customer Responsibility* (RDS is managed; AWS patches the host OS) |
 | *"Disposal, degaussing, or physical shredding of decommissioned disks"* | **AWS Responsibility** (NIST 800-88 compliance) | *Customer Responsibility* (Customers never touch AWS physical media) |
 | *"Which control is a Shared Control between AWS and Customer?"* | **Patch Management** (or *Configuration Management* / *Awareness & Training*) | *Physical Security* (Inherited) or *IAM Configuration* (Customer) |
-| *"On-demand access to AWS compliance reports (SOC 1/2, ISO, PCI-DSS) and agreements"* | **AWS Artifact** | *AWS Trusted Advisor* or *Amazon Inspector* |
+| *"On-demand access to AWS compliance reports (SOC 1/2, ISO, PCI-DSS) and agreements"* | **[AWS Artifact](../../AWS_SERVICES_GLOSSARY.md#aws-artifact)** | *[AWS Trusted Advisor](../../AWS_SERVICES_GLOSSARY.md#aws-trusted-advisor)* or *[Amazon Inspector](../../AWS_SERVICES_GLOSSARY.md#amazon-inspector)* |
 | *"Who is responsible for encrypting customer data?"* | **Customer Responsibility** (AWS provides KMS tools, but customer decides to encrypt) | *AWS Responsibility* |
 | *"Configuring database user credentials, schemas, and table permissions in RDS"* | **Customer Responsibility** | *AWS Responsibility* (AWS manages the engine, not your logins/schemas) |
 
@@ -328,9 +328,9 @@ When faced with a Shared Responsibility Model question:
    - Is it made of **software, configuration, logins, or data**?
      - $\to$ Proceed to Step 2.
 2. **Step 2: Check the Service Model (IaaS vs. PaaS vs. Serverless):**
-   - **IaaS (Amazon EC2):** Customer holds root/administrator. Customer patches the OS, installs updates, and configures firewalls.
-   - **PaaS (Amazon RDS):** AWS patches the host OS and DB engine. Customer creates database users, schemas, and security group firewall rules.
-   - **Serverless (AWS Lambda, S3):** AWS manages all execution environments and servers. Customer manages application code, data, and IAM execution roles.
+   - **IaaS ([Amazon EC2](../../AWS_SERVICES_GLOSSARY.md#amazon-ec2)):** Customer holds root/administrator. Customer patches the OS, installs updates, and configures firewalls.
+   - **PaaS ([Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds)):** AWS patches the host OS and DB engine. Customer creates database users, schemas, and security group firewall rules.
+   - **Serverless ([AWS Lambda](../../AWS_SERVICES_GLOSSARY.md#aws-lambda), S3):** AWS manages all execution environments and servers. Customer manages application code, data, and IAM execution roles.
 3. **Step 3: Check "Tool Provider" vs. "Tool Operator":**
    - AWS provides the tool (e.g., IAM, KMS, Security Groups, WAF).
    - The customer **must operate and configure** the tool. If data leaks because an S3 bucket was set to public, or an EC2 security group allowed `0.0.0.0/0` on port 22, it is **100% the Customer's fault**.
@@ -340,11 +340,11 @@ When faced with a Shared Responsibility Model question:
   - *The Trap:* The exam will deliberately present "Operating system patching" without specifying the service, or will swap EC2 and RDS.
   - *The Autopsy:* Always check the target service! On **EC2**, the customer is root $\to$ **Customer patches**. On **RDS**, the customer has no shell access $\to$ **AWS patches**.
 * **Decoy #2: "Data Encryption at Rest" — Who is responsible?**
-  - *The Trap:* The question asks who is responsible for encrypting sensitive customer data stored in Amazon S3 or EBS.
+  - *The Trap:* The question asks who is responsible for encrypting sensitive customer data stored in [Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3) or EBS.
   - *The Autopsy:* Candidates frequently answer "AWS" because AWS supports default server-side encryption. However, under the Shared Responsibility Model, **Data Classification and Encryption is strictly a Customer Responsibility**. AWS provides the KMS service, but configuring encryption and protecting access keys rests with the customer.
-* **Decoy #3: "AWS Artifact" vs. "AWS Trusted Advisor" vs. "Amazon Inspector"**
+* **Decoy #3: "[AWS Artifact](../../AWS_SERVICES_GLOSSARY.md#aws-artifact)" vs. "[AWS Trusted Advisor](../../AWS_SERVICES_GLOSSARY.md#aws-trusted-advisor)" vs. "[Amazon Inspector](../../AWS_SERVICES_GLOSSARY.md#amazon-inspector)"**
   - *The Trap:* Scenario asks how an enterprise auditor can inspect AWS's SOC 2 compliance reports or sign a HIPAA BAA.
-  - *The Autopsy:* Decoys will include Trusted Advisor (best-practice checkup tool), Inspector (software vulnerability scanner), and CloudTrail (API audit log). The only portal for official AWS compliance documents and auditor certifications is **AWS Artifact**.
+  - *The Autopsy:* Decoys will include Trusted Advisor (best-practice checkup tool), Inspector (software vulnerability scanner), and CloudTrail (API audit log). The only portal for official AWS compliance documents and auditor certifications is **[AWS Artifact](../../AWS_SERVICES_GLOSSARY.md#aws-artifact)**.
 
 ### 4. 10-Second Visual Decision Flowchart
 

@@ -7,7 +7,7 @@
 > [!NOTE]
 > **منهجية هذا الدليل:**
 > * **الوضوح والعمق:** شرح مفصّل لكل مفهوم وخدمة يشمل آلية العمل، المكونات الأساسية، حالات الاستخدام العملية، والفروق الدقيقة بين الخدمات المتشابهة.
-> * **الدقة المصطلحية:** الإبقاء على المصطلحات التقنية وأسماء خدمات AWS باللغة الإنجليزية (مثل `Amazon EC2`, `IAM`, `High Availability`, `Shared Responsibility Model`) لربط الفهم النظري بصياغة أسئلة الاختبار الرسمية وبيئة العمل الفعلية.
+> * **الدقة المصطلحية:** الإبقاء على المصطلحات التقنية وأسماء خدمات AWS باللغة الإنجليزية (مثل [`Amazon EC2`](../AWS_SERVICES_GLOSSARY.md#amazon-ec2), `IAM`, `High Availability`, `Shared Responsibility Model`) لربط الفهم النظري بصياغة أسئلة الاختبار الرسمية وبيئة العمل الفعلية.
 > * **الاستعداد للاختبار:** يتضمن كل قسم خلاصة مركزة ومنهجية واضحة لتحليل أسئلة الاختيار من متعدد (`MCQ`) وتجنب الخيارات المضللة.
 
 ---
@@ -45,8 +45,8 @@
 
 1. **اليوم الأول:** دراسة ملف [الأساسيات التقنية](./00_Prerequisites_Asasiyat_ElCloud.md) لبناء تصور واضح للخوادم والشبكات والتخزين والتشفير، ثم قراءة [Domain 1](./01_Domain_1_Cloud_Concepts.md).
 2. **اليوم الثاني والثالث:** التعمق في [Domain 2 (الأمن والامتثال)](./02_Domain_2_Security_and_Compliance.md) نظراً لوزنه الكبير (30%) وأهمية استيعاب `Shared Responsibility Model` و `IAM`.
-3. **اليوم الرابع:** دراسة [Domain 3 — الجزء الأول (Compute & Storage)](./03_Domain_3_Part1_Compute_and_Storage.md) مع التركيز على نماذج تسعير `Amazon EC2` وفئات تخزين `Amazon S3`.
-4. **اليوم الخامس:** دراسة [Domain 3 — الجزء الثاني (Databases & Networking)](./03_Domain_3_Part2_Databases_and_Networking.md) لفهم الفروق بين قواعد البيانات العلائقية وغير العلائقية وبنية `Amazon VPC`.
+3. **اليوم الرابع:** دراسة [Domain 3 — الجزء الأول (Compute & Storage)](./03_Domain_3_Part1_Compute_and_Storage.md) مع التركيز على نماذج تسعير [`Amazon EC2`](../AWS_SERVICES_GLOSSARY.md#amazon-ec2) وفئات تخزين [`Amazon S3`](../AWS_SERVICES_GLOSSARY.md#amazon-s3).
+4. **اليوم الخامس:** دراسة [Domain 3 — الجزء الثاني (Databases & Networking)](./03_Domain_3_Part2_Databases_and_Networking.md) لفهم الفروق بين قواعد البيانات العلائقية وغير العلائقية وبنية [`Amazon VPC`](../AWS_SERVICES_GLOSSARY.md#amazon-vpc).
 5. **اليوم السادس:** دراسة [Domain 3 — الجزء الثالث (Integration, Monitoring, Migration & AI/ML)](./03_Domain_3_Part3_Integration_Monitoring_Analytics_AI.md).
 6. **اليوم السابع:** دراسة [Domain 4 (الفوترة والدعم الفني)](./04_Domain_4_Billing_Pricing_and_Support.md) ومراجعة [دليل المقارنات المعمارية](./05_Exam_Tricks_and_Comparison_CheatSheet.md).
 7. **الأيام الثامن إلى العاشر:** التطبيق العملي وحل الأسئلة التدريبية في مجلد [11_Practice_Exams](../11_Practice_Exams/) لتقييم الجاهزية قبل دخول الاختبار الرسمي.

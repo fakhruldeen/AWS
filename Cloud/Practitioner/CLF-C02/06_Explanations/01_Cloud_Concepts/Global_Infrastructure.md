@@ -12,8 +12,8 @@
 > - **AWS Region:** A major world metropolitan area (e.g., London, Tokyo, Frankfurt). It is an autonomous geographical entity containing multiple distinct airports and logistics facilities.
 > - **Availability Zone (AZ):** An individual, fully functional international terminal (Terminal A, Terminal B, Terminal C) located tens of miles apart in that metropolitan area. Each terminal features its own dedicated power substation, emergency diesel turbine generators, independent municipal water cooling lines, and private flood protection. However, they are connected to each other via a high-speed underground transit system (private dark fiber) with near-instant transit times (< 1–2 milliseconds). If Terminal A experiences a catastrophic power outage, international passenger flights land at Terminal B without disruption.
 > - **Edge Location (Point of Presence - PoP):** City-center satellite ticket offices, package pickup lockers, and express drop-off kiosks situated in over 600 locations worldwide. Travelers in Lisbon or Seattle can validate tickets or pick up cached parcels locally in milliseconds without traveling all the way to the main regional airport hub.
-> - **AWS Local Zones & Wavelength:** Micro-terminals placed directly in metropolitan downtown centers (Local Zones) or inside 5G telecommunication towers (Wavelength), enabling instantaneous sub-millisecond reaction times for self-driving vehicles, live mobile rendering, and urban hospitals.
-> - **AWS Outposts:** An official AWS delivery vehicle and secure automated conveyor belt leased and bolted directly inside your company's private basement mailroom.
+> - **[AWS Local Zones](../../AWS_SERVICES_GLOSSARY.md#aws-local-zones) & Wavelength:** Micro-terminals placed directly in metropolitan downtown centers (Local Zones) or inside 5G telecommunication towers (Wavelength), enabling instantaneous sub-millisecond reaction times for self-driving vehicles, live mobile rendering, and urban hospitals.
+> - **[AWS Outposts](../../AWS_SERVICES_GLOSSARY.md#aws-outposts):** An official AWS delivery vehicle and secure automated conveyor belt leased and bolted directly inside your company's private basement mailroom.
 
 ---
 
@@ -109,17 +109,17 @@ An **AWS Region** is a physical geographical area in the world where AWS cluster
 ### 3.2 Availability Zones (AZs)
 An **Availability Zone (AZ)** consists of one or more discrete physical data centers, each equipped with independent redundant power (utility feeds and 48-hour diesel reserves), networking, and cooling, housed in physically separate buildings.
 * **Separation Distance:** AZs within a single Region are separated by meaningful physical distance (typically tens of kilometers) to guarantee fault isolation from floods, earthquakes, and power substation blackouts.
-* **Low-Latency Interconnect:** All AZs in a Region are interconnected through redundant, private, high-capacity dark-fiber optical links delivering single-digit millisecond latency ($< 1\text{–}2\text{ ms}$). This enables real-time synchronous data replication across multi-AZ databases (e.g., Amazon RDS Multi-AZ).
+* **Low-Latency Interconnect:** All AZs in a Region are interconnected through redundant, private, high-capacity dark-fiber optical links delivering single-digit millisecond latency ($< 1\text{–}2\text{ ms}$). This enables real-time synchronous data replication across multi-AZ databases (e.g., [Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds) Multi-AZ).
 * **AZ Randomization / Mapping:** To prevent all customers from launching resources in `az1` and creating unbalanced load, AWS maps physical AZ identifiers randomly to account-specific AZ letters. Account A's `us-east-1a` may correspond to Account B's `us-east-1b`.
 
 ### 3.3 Edge Locations and Points of Presence (PoPs)
 An **Edge Location** is an AWS datacenter site optimized not for heavy server compute, but for edge caching, high-speed routing, and perimeter network security.
 * **Global Footprint:** Over 600+ Points of Presence distributed across major metropolitan population centers worldwide.
 * **Services Hosted at the Edge:**
-  - **Amazon CloudFront:** High-performance Content Delivery Network (CDN) caching static media, web scripts, dynamic API endpoints, and live streaming video.
-  - **Amazon Route 53:** Globally distributed, latency-based, authoritative Anycast DNS service.
-  - **AWS Shield Standard & AWS WAF:** Perimeter DDoS and Layer 7 web security filtering that drops malicious traffic at the edge before packets reach internal application servers.
-  - **AWS Global Accelerator:** Routes end-user TCP/UDP traffic onto AWS's private global fiber network at the nearest edge PoP, bypassing congested public internet transit hops.
+  - **[Amazon CloudFront](../../AWS_SERVICES_GLOSSARY.md#amazon-cloudfront):** High-performance Content Delivery Network (CDN) caching static media, web scripts, dynamic API endpoints, and live streaming video.
+  - **[Amazon Route 53](../../AWS_SERVICES_GLOSSARY.md#amazon-route-53):** Globally distributed, latency-based, authoritative Anycast DNS service.
+  - **[AWS Shield](../../AWS_SERVICES_GLOSSARY.md#aws-shield) Standard & [AWS WAF](../../AWS_SERVICES_GLOSSARY.md#aws-waf):** Perimeter DDoS and Layer 7 web security filtering that drops malicious traffic at the edge before packets reach internal application servers.
+  - **[AWS Global Accelerator](../../AWS_SERVICES_GLOSSARY.md#aws-global-accelerator):** Routes end-user TCP/UDP traffic onto AWS's private global fiber network at the nearest edge PoP, bypassing congested public internet transit hops.
 * **Regional Edge Caches (RECs):** Larger caching tiers positioned between CloudFront Edge Locations and customer origin servers to retain cached content longer and shield origins from cache-miss traffic storms.
 
 ---
@@ -137,13 +137,13 @@ graph TD
     Workload -->|Strict on-premises hardware residency & LAN speed| OP[AWS Outposts<br/>Physical 42U racks in customer data center]
 ```
 
-1. **AWS Local Zones:**
+1. **[AWS Local Zones](../../AWS_SERVICES_GLOSSARY.md#aws-local-zones):**
    * Places AWS compute, storage, and databases in major metropolitan, industrial, and digital centers where no full AWS Region exists (e.g., Los Angeles, Boston, Hamburg, Taipei).
    * Delivers single-digit millisecond latency ($< 10\text{ ms}$) for local end users executing video rendering, real-time CAD simulations, high-frequency trading, and local healthcare imaging.
-2. **AWS Wavelength:**
+2. **[AWS Wavelength](../../AWS_SERVICES_GLOSSARY.md#aws-wavelength):**
    * Embeds AWS compute and storage hardware directly inside telecommunications providers' 5G mobile network data centers (e.g., Verizon, Vodafone, KDDI, SK Telecom).
    * Application traffic from 5G mobile devices reaches the Wavelength server directly from the cell tower without leaving the carrier's private network, eliminating internet routing hops and delivering $< 10\text{ ms}$ latency for autonomous vehicles, mobile AR/VR gaming, and smart factory robotics.
-3. **AWS Outposts:**
+3. **[AWS Outposts](../../AWS_SERVICES_GLOSSARY.md#aws-outposts):**
    * Physical, fully assembled 42U server racks built and shipped by AWS, installed directly inside a customer's on-premises datacenter or colocation facility.
    * Customers run EC2, EBS, and container workloads on physical local hardware with local microsecond LAN access to existing on-prem mainframes and manufacturing plant-floor systems.
    * AWS manages, monitors, updates, and patches the physical Outpost hardware remotely via a dedicated secure link back to the parent AWS Region.
@@ -158,8 +158,8 @@ graph TD
 | **Availability Zone (AZ)** | 1+ isolated datacenters within a Region | $< 1\text{–}2\text{ ms}$ intra-AZ | EC2, VPC subnets, RDS Multi-AZ, EFS, EKS clusters | Isolated to single AZ; survive via Multi-AZ | AWS manages physical facilities and dark fiber |
 | **Edge Location (PoP)** | 600+ metro points of presence | $< 10\text{ ms}$ to end users | CloudFront caching, Route 53 DNS, WAF/Shield perimeter security | Single PoP failure routes traffic to nearest alternate PoP | 100% managed by AWS |
 | **AWS Local Zone** | Urban metro extension of a parent Region | Single-digit ms ($< 10\text{ ms}$) | Video editing, local healthcare apps, live media production | Localized to metro zone; connected to parent Region | Fully managed by AWS hardware engineering |
-| **AWS Wavelength** | Embedded in telco 5G mobile edge | Single-digit ms to 5G devices | Connected autonomous vehicles (V2X), mobile gaming, drone control | Carrier network dependent; paired with parent Region | AWS manages compute; Carrier manages 5G network |
-| **AWS Outposts** | Customer on-premise computer room | Sub-millisecond LAN speed | Manufacturing execution systems, strict data sovereignty | Customer facility power/cooling failure | AWS owns & patches hardware; Customer provides power/space |
+| **[AWS Wavelength](../../AWS_SERVICES_GLOSSARY.md#aws-wavelength)** | Embedded in telco 5G mobile edge | Single-digit ms to 5G devices | Connected autonomous vehicles (V2X), mobile gaming, drone control | Carrier network dependent; paired with parent Region | AWS manages compute; Carrier manages 5G network |
+| **[AWS Outposts](../../AWS_SERVICES_GLOSSARY.md#aws-outposts)** | Customer on-premise computer room | Sub-millisecond LAN speed | Manufacturing execution systems, strict data sovereignty | Customer facility power/cooling failure | AWS owns & patches hardware; Customer provides power/space |
 
 ---
 
@@ -170,7 +170,7 @@ graph TD
 - A) Across multiple Edge Locations
 - B) Across multiple Availability Zones (Multi-AZ)
 - C) Inside a single AWS Local Zone
-- D) In an AWS Outposts rack
+- D) In an [AWS Outposts](../../AWS_SERVICES_GLOSSARY.md#aws-outposts) rack
 
 <details>
 <summary><b>Click to View Answer & Detailed Distractor Analysis</b></summary>
@@ -179,16 +179,16 @@ graph TD
 
 * **Why it's correct:** Each Availability Zone consists of one or more physically isolated data centers separated by a meaningful distance (tens of kilometers) on distinct floodplains and municipal power utility feeds. Deploying across Multi-AZ provides automatic fault isolation against localized physical disasters.
 * **Distractor Analysis:**
-  - *A is incorrect:* Edge Locations cache static and dynamic web content via Amazon CloudFront and handle Route 53 DNS queries; you cannot launch primary application workloads (such as EC2 instances or RDS databases) in Edge Locations.
+  - *A is incorrect:* Edge Locations cache static and dynamic web content via [Amazon CloudFront](../../AWS_SERVICES_GLOSSARY.md#amazon-cloudfront) and handle Route 53 DNS queries; you cannot launch primary application workloads (such as EC2 instances or RDS databases) in Edge Locations.
   - *C is incorrect:* An AWS Local Zone is designed to bring single-digit millisecond latency to urban metropolitan centers, not to provide multi-AZ fault-tolerant cloud redundancy within an AWS Region.
-  - *D is incorrect:* AWS Outposts installs physical AWS server hardware inside a customer's on-premises facility; it does not provide native Multi-AZ cloud resilience within an AWS Region.
+  - *D is incorrect:* [AWS Outposts](../../AWS_SERVICES_GLOSSARY.md#aws-outposts) installs physical AWS server hardware inside a customer's on-premises facility; it does not provide native Multi-AZ cloud resilience within an AWS Region.
 </details>
 
 ---
 
 ### Question 2
 **What is the fundamental architectural difference between an Availability Zone and an Edge Location?**
-- A) Edge Locations host Amazon EC2 instances, while Availability Zones host Amazon S3 buckets.
+- A) Edge Locations host [Amazon EC2](../../AWS_SERVICES_GLOSSARY.md#amazon-ec2) instances, while Availability Zones host [Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3) buckets.
 - B) Availability Zones run primary compute and database workloads, while Edge Locations cache content and terminate perimeter connections closer to end users.
 - C) Edge Locations are connected to AWS Regions strictly over the unencrypted public internet.
 - D) Availability Zones are only constructed outside the continental United States.
@@ -198,7 +198,7 @@ graph TD
 
 **Correct Answer:** **B) Availability Zones run primary compute and database workloads, while Edge Locations cache content and terminate perimeter connections closer to end users.**
 
-* **Why it's correct:** Availability Zones are regional clusters of physical data centers where customers provision VPC subnets, EC2 virtual machines, and RDS databases. Edge Locations (Points of Presence) cache static/dynamic content (CloudFront), execute DNS queries (Route 53), and mitigate DDoS traffic (AWS Shield) at the perimeter of the global network.
+* **Why it's correct:** Availability Zones are regional clusters of physical data centers where customers provision VPC subnets, EC2 virtual machines, and RDS databases. Edge Locations (Points of Presence) cache static/dynamic content (CloudFront), execute DNS queries (Route 53), and mitigate DDoS traffic ([AWS Shield](../../AWS_SERVICES_GLOSSARY.md#aws-shield)) at the perimeter of the global network.
 * **Distractor Analysis:**
   - *A is incorrect:* EC2 virtual machine instances cannot be provisioned inside Edge Locations.
   - *C is incorrect:* Edge Locations are directly connected to AWS Regions via AWS's private high-speed, redundant 100GbE/400GbE global fiber optic backbone.
@@ -209,42 +209,42 @@ graph TD
 
 ### Question 3
 **A hospital requires ultra-low latency (< 5 ms) processing on a manufacturing plant floor and must maintain physical custody of patient records on-site due to strict national data sovereignty legislation. Which AWS solution satisfies these constraints?**
-- A) Amazon CloudFront
-- B) AWS Outposts
-- C) AWS Local Zones
-- D) AWS Wavelength
+- A) [Amazon CloudFront](../../AWS_SERVICES_GLOSSARY.md#amazon-cloudfront)
+- B) [AWS Outposts](../../AWS_SERVICES_GLOSSARY.md#aws-outposts)
+- C) [AWS Local Zones](../../AWS_SERVICES_GLOSSARY.md#aws-local-zones)
+- D) [AWS Wavelength](../../AWS_SERVICES_GLOSSARY.md#aws-wavelength)
 
 <details>
 <summary><b>Click to View Answer & Detailed Distractor Analysis</b></summary>
 
-**Correct Answer:** **B) AWS Outposts**
+**Correct Answer:** **B) [AWS Outposts](../../AWS_SERVICES_GLOSSARY.md#aws-outposts)**
 
-* **Why it's correct:** AWS Outposts delivers physical, pre-configured AWS server racks directly into the customer's on-premises datacenter or local facility, enabling on-site data residency compliance and local LAN-speed processing while remaining centrally managed by AWS APIs.
+* **Why it's correct:** [AWS Outposts](../../AWS_SERVICES_GLOSSARY.md#aws-outposts) delivers physical, pre-configured AWS server racks directly into the customer's on-premises datacenter or local facility, enabling on-site data residency compliance and local LAN-speed processing while remaining centrally managed by AWS APIs.
 * **Distractor Analysis:**
-  - *A is incorrect:* Amazon CloudFront is a globally distributed content delivery network (CDN) that caches web files at edge locations, not an on-premises physical data storage solution.
-  - *C is incorrect:* AWS Local Zones are public infrastructure facilities owned and operated by AWS in major metropolitan areas; they do not reside on customer-owned premises.
-  - *D is incorrect:* AWS Wavelength embeds AWS compute infrastructure inside commercial telecommunications carriers' 5G mobile networks, not inside a private hospital facility.
+  - *A is incorrect:* [Amazon CloudFront](../../AWS_SERVICES_GLOSSARY.md#amazon-cloudfront) is a globally distributed content delivery network (CDN) that caches web files at edge locations, not an on-premises physical data storage solution.
+  - *C is incorrect:* [AWS Local Zones](../../AWS_SERVICES_GLOSSARY.md#aws-local-zones) are public infrastructure facilities owned and operated by AWS in major metropolitan areas; they do not reside on customer-owned premises.
+  - *D is incorrect:* [AWS Wavelength](../../AWS_SERVICES_GLOSSARY.md#aws-wavelength) embeds AWS compute infrastructure inside commercial telecommunications carriers' 5G mobile networks, not inside a private hospital facility.
 </details>
 
 ---
 
 ### Question 4
 **Which AWS extension embeds AWS compute and storage hardware directly within telecommunications providers' 5G networks to deliver single-digit millisecond latency to mobile applications?**
-- A) AWS Outposts
-- B) AWS Wavelength
-- C) AWS Direct Connect
-- D) AWS Transit Gateway
+- A) [AWS Outposts](../../AWS_SERVICES_GLOSSARY.md#aws-outposts)
+- B) [AWS Wavelength](../../AWS_SERVICES_GLOSSARY.md#aws-wavelength)
+- C) [AWS Direct Connect](../../AWS_SERVICES_GLOSSARY.md#aws-direct-connect)
+- D) [AWS Transit Gateway](../../AWS_SERVICES_GLOSSARY.md#aws-transit-gateway)
 
 <details>
 <summary><b>Click to View Answer & Detailed Distractor Analysis</b></summary>
 
-**Correct Answer:** **B) AWS Wavelength**
+**Correct Answer:** **B) [AWS Wavelength](../../AWS_SERVICES_GLOSSARY.md#aws-wavelength)**
 
-* **Why it's correct:** AWS Wavelength allows developers to deploy ultra-low-latency applications for 5G mobile devices (such as real-time multi-player gaming, computer vision, and autonomous vehicle telemetry) by hosting compute directly inside telecommunication carrier 5G data centers, eliminating internet routing hops.
+* **Why it's correct:** [AWS Wavelength](../../AWS_SERVICES_GLOSSARY.md#aws-wavelength) allows developers to deploy ultra-low-latency applications for 5G mobile devices (such as real-time multi-player gaming, computer vision, and autonomous vehicle telemetry) by hosting compute directly inside telecommunication carrier 5G data centers, eliminating internet routing hops.
 * **Distractor Analysis:**
-  - *A is incorrect:* AWS Outposts brings AWS hardware into customer-owned on-premises datacenters, not into commercial mobile 5G carrier switching facilities.
-  - *C is incorrect:* AWS Direct Connect is a dedicated private physical fiber link connecting an enterprise's on-premises network to an AWS Direct Connect location.
-  - *D is incorrect:* AWS Transit Gateway is a centralized regional cloud virtual router used to interconnect hundreds of VPCs and on-premises networks in a hub-and-spoke topology.
+  - *A is incorrect:* [AWS Outposts](../../AWS_SERVICES_GLOSSARY.md#aws-outposts) brings AWS hardware into customer-owned on-premises datacenters, not into commercial mobile 5G carrier switching facilities.
+  - *C is incorrect:* [AWS Direct Connect](../../AWS_SERVICES_GLOSSARY.md#aws-direct-connect) is a dedicated private physical fiber link connecting an enterprise's on-premises network to an [AWS Direct Connect](../../AWS_SERVICES_GLOSSARY.md#aws-direct-connect) location.
+  - *D is incorrect:* [AWS Transit Gateway](../../AWS_SERVICES_GLOSSARY.md#aws-transit-gateway) is a centralized regional cloud virtual router used to interconnect hundreds of VPCs and on-premises networks in a hub-and-spoke topology.
 </details>
 
 ---
@@ -283,17 +283,17 @@ When reading a question scenario, search for these exact phrasing triggers:
 | *"Geographical location in the world with $\ge 3$ isolated fault domains"* | **AWS Region** | *Edge Location* (Edge locations do not contain AZs). |
 | *"Most critical factor when selecting an AWS Region for healthcare or government"* | **Compliance & Data Sovereignty** | *Cost / Pricing* or *Proximity / Latency* (Legal mandates always overrule price!). |
 | *"Cache web content, videos, APIs closer to global users with low latency"* | **Edge Location / CloudFront PoP** | *Availability Zone* (You cannot launch web servers in Edge Locations). |
-| *"Single-digit millisecond latency in large metropolitan cities with NO AWS Region"* | **AWS Local Zones** | *AWS Outposts* (Local Zones are owned by AWS in cities; Outposts is on-premises). |
-| *"Ultra-low single-digit ms latency for mobile devices connected to 5G networks"* | **AWS Wavelength** | *AWS Local Zones* (Wavelength is specifically embedded in telecom 5G towers). |
-| *"Deploy physical AWS hardware racks directly inside a private on-premises data center"* | **AWS Outposts** | *AWS Storage Gateway* (Storage Gateway is virtual software; Outposts is physical 42U racks). |
+| *"Single-digit millisecond latency in large metropolitan cities with NO AWS Region"* | **[AWS Local Zones](../../AWS_SERVICES_GLOSSARY.md#aws-local-zones)** | *[AWS Outposts](../../AWS_SERVICES_GLOSSARY.md#aws-outposts)* (Local Zones are owned by AWS in cities; Outposts is on-premises). |
+| *"Ultra-low single-digit ms latency for mobile devices connected to 5G networks"* | **[AWS Wavelength](../../AWS_SERVICES_GLOSSARY.md#aws-wavelength)** | *[AWS Local Zones](../../AWS_SERVICES_GLOSSARY.md#aws-local-zones)* (Wavelength is specifically embedded in telecom 5G towers). |
+| *"Deploy physical AWS hardware racks directly inside a private on-premises data center"* | **[AWS Outposts](../../AWS_SERVICES_GLOSSARY.md#aws-outposts)** | *[AWS Storage Gateway](../../AWS_SERVICES_GLOSSARY.md#aws-storage-gateway)* (Storage Gateway is virtual software; Outposts is physical 42U racks). |
 | *"Does customer data automatically leave or replicate outside the chosen Region?"* | **NO (Never leaves without customer action)** | *Yes, for disaster backup* (AWS guarantees data sovereignty; zero auto-replication). |
 
 ### 2. The 3-Step Rapid Elimination Heuristic
 When faced with an infrastructure question:
 1. **Step 1: Check the Physical Boundary:**
-   - Is it on **customer premises**? $\to$ Instantly select **AWS Outposts**.
-   - Is it inside a **telecom 5G network**? $\to$ Instantly select **AWS Wavelength**.
-   - Is it in a **metropolitan city without a full Region**? $\to$ Instantly select **AWS Local Zones**.
+   - Is it on **customer premises**? $\to$ Instantly select **[AWS Outposts](../../AWS_SERVICES_GLOSSARY.md#aws-outposts)**.
+   - Is it inside a **telecom 5G network**? $\to$ Instantly select **[AWS Wavelength](../../AWS_SERVICES_GLOSSARY.md#aws-wavelength)**.
+   - Is it in a **metropolitan city without a full Region**? $\to$ Instantly select **[AWS Local Zones](../../AWS_SERVICES_GLOSSARY.md#aws-local-zones)**.
    - Is it for **global edge caching and DNS**? $\to$ Instantly select **Edge Location / CloudFront**.
 2. **Step 2: Check Compute Capabilities:**
    - If the scenario asks where you can **launch an EC2 instance or RDS database**, **ELIMINATE Edge Locations immediately**. Compute runs in AZs, Local Zones, Wavelength, or Outposts—never in Edge PoPs!
@@ -305,12 +305,12 @@ When faced with an infrastructure question:
 * **Decoy #1: "Availability Zone" vs. "Single Data Center"**
   - *The Trap:* AWS frequently offers both "Availability Zone" and "Data Center" as options.
   - *The Autopsy:* An Availability Zone is **not** a single building. An AZ is composed of **one or more** discrete physical data centers interconnected by dark fiber. If the question asks for the building block of an AWS Region, the answer is **Availability Zone**, not Data Center.
-* **Decoy #2: "AWS Local Zones" vs. "AWS Outposts"**
+* **Decoy #2: "[AWS Local Zones](../../AWS_SERVICES_GLOSSARY.md#aws-local-zones)" vs. "[AWS Outposts](../../AWS_SERVICES_GLOSSARY.md#aws-outposts)"**
   - *The Trap:* Both provide single-digit millisecond latency to local users.
-  - *The Autopsy:* Look at the physical property owner. If the servers are owned and housed by AWS in an urban metro center (e.g., Dallas, Los Angeles), it is a **Local Zone**. If the hardware is installed inside the **customer's own facility or computer room**, it is **AWS Outposts**.
+  - *The Autopsy:* Look at the physical property owner. If the servers are owned and housed by AWS in an urban metro center (e.g., Dallas, Los Angeles), it is a **Local Zone**. If the hardware is installed inside the **customer's own facility or computer room**, it is **[AWS Outposts](../../AWS_SERVICES_GLOSSARY.md#aws-outposts)**.
 * **Decoy #3: "Edge Location" vs. "Availability Zone"**
   - *The Trap:* Asking where to deploy web servers to reduce global latency.
-  - *The Autopsy:* Beginners often think you launch servers in Edge Locations. You launch your servers in **Availability Zones**, and you put **Amazon CloudFront in Edge Locations** in front of them to cache the data.
+  - *The Autopsy:* Beginners often think you launch servers in Edge Locations. You launch your servers in **Availability Zones**, and you put **[Amazon CloudFront](../../AWS_SERVICES_GLOSSARY.md#amazon-cloudfront) in Edge Locations** in front of them to cache the data.
 
 ### 4. 10-Second Visual Decision Flowchart
 

@@ -46,10 +46,10 @@ flowchart LR
 
 Before modern centralized cloud identity platforms, identity and access management was notoriously insecure:
 
-| Enterprise Identity Challenge | Traditional On-Premises Reality | AWS IAM Cloud Identity Paradigm |
+| Enterprise Identity Challenge | Traditional On-Premises Reality | [AWS IAM](../../AWS_SERVICES_GLOSSARY.md#aws-iam) Cloud Identity Paradigm |
 |---|---|---|
 | **Shared "Root / Admin" Credentials** | Multiple system administrators shared the single root password written on sticky notes or saved in shared text files. An administrator leaving the company required changing passwords everywhere. | **Individual IAM Users & Federation**. Every human has a unique identity. Root account access is permanently locked behind hardware MFA and never used for daily work. |
-| **Hardcoded API Keys in Source Code** | Developers embedded plaintext database passwords and access tokens directly into application source code, resulting in catastrophic credential leaks on public GitHub repositories. | **IAM Roles for Workloads**. Applications running on Amazon EC2 or AWS Lambda automatically retrieve temporary, self-rotating credentials via AWS STS. |
+| **Hardcoded API Keys in Source Code** | Developers embedded plaintext database passwords and access tokens directly into application source code, resulting in catastrophic credential leaks on public GitHub repositories. | **IAM Roles for Workloads**. Applications running on [Amazon EC2](../../AWS_SERVICES_GLOSSARY.md#amazon-ec2) or [AWS Lambda](../../AWS_SERVICES_GLOSSARY.md#aws-lambda) automatically retrieve temporary, self-rotating credentials via AWS STS. |
 | **Orphaned User Accounts & Privilege Creep** | When employees changed roles or left the company, their individual server SSH keys and database logins lingered for months, leaving backdoor attack vectors. | **Centralized Single Sign-On (IAM Identity Center)**. Deactivating a user in corporate Active Directory/Okta instantly terminates access across all 100+ AWS accounts. |
 | **Permission Bloat & Audit Guesswork** | Security teams had no visibility into whether a granted database privilege had actually been exercised in the past two years, making it impossible to enforce least privilege. | **IAM Access Advisor & Access Analyzer**. Automatically analyzes CloudTrail telemetry to identify unused permissions, enabling automated rightsizing. |
 
@@ -57,7 +57,7 @@ Before modern centralized cloud identity platforms, identity and access manageme
 
 ## 3. Deep-Dive: AWS IAM Architecture & Entities
 
-AWS IAM is a **global service** (identity configurations apply universally across all AWS Regions without regional configuration):
+[AWS IAM](../../AWS_SERVICES_GLOSSARY.md#aws-iam) is a **global service** (identity configurations apply universally across all AWS Regions without regional configuration):
 
 ```mermaid
 graph TD
@@ -94,7 +94,7 @@ graph TD
 * **What is an IAM Role?** An identity with specific permissions, but **no permanent credentials (no password, no long-term access keys)**.
 * **AWS Security Token Service (STS):** When a principal assumes a role, AWS STS issues temporary security credentials (access key, secret key, and session token) valid from 15 minutes to 12 hours.
 * **Primary Use Cases for IAM Roles:**
-  1. *AWS Services (EC2 / Lambda):* An EC2 instance retrieves temporary credentials from the Instance Metadata Service (IMDSv2) via its attached IAM Role profile to read from Amazon S3 without hardcoding keys.
+  1. *AWS Services (EC2 / Lambda):* An EC2 instance retrieves temporary credentials from the Instance Metadata Service (IMDSv2) via its attached IAM Role profile to read from [Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3) without hardcoding keys.
   2. *Cross-Account Access:* Granting developers in Account A temporary administrative access to resources in Account B without creating duplicate user accounts.
   3. *Federated Identity:* Enabling corporate employees to log into AWS using their enterprise Active Directory or Google Workspace accounts.
 
@@ -176,7 +176,7 @@ flowchart TD
 
 | Question Scenario Keyword | Target Entity / Practice | Exam Trap & Distractor Explanation |
 |---|---|---|
-| *"Grant temporary credentials to an EC2 instance to access Amazon S3"* | **IAM Role** | Trap: Never store long-term access keys inside an EC2 instance or application code. Always use IAM Roles. |
+| *"Grant temporary credentials to an EC2 instance to access [Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3)"* | **IAM Role** | Trap: Never store long-term access keys inside an EC2 instance or application code. Always use IAM Roles. |
 | *"Securing AWS account root user after initial creation"* | **Enable MFA, lock away root, use IAM admin user** | Trap: The root user should NEVER be used for daily administrative work. |
 | *"Granting only the permissions required to complete a specific task"* | **Principle of Least Privilege** | Trap: Avoid broad wildcard permissions (`*`). Start with implicit deny and grant minimal actions. |
 | *"Audit list of all account users showing password age, MFA status, and access keys"* | **IAM Credential Report** | Trap: Do not choose IAM Access Advisor. Credential Report downloads as a CSV auditing all user account credentials. |
@@ -210,18 +210,18 @@ flowchart TD
 ---
 
 ### Question 2
-**An application running on an Amazon EC2 instance needs to securely read objects from an Amazon S3 bucket. Which approach implements the principle of least privilege without hardcoding credentials?**
+**An application running on an [Amazon EC2](../../AWS_SERVICES_GLOSSARY.md#amazon-ec2) instance needs to securely read objects from an [Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3) bucket. Which approach implements the principle of least privilege without hardcoding credentials?**
 - A) Embed IAM user access keys and secret keys directly into the application's configuration file
 - B) Store AWS programmatic access keys in a public GitHub code repository
-- C) Attach an IAM Role with an Amazon S3 read-only policy to the EC2 instance profile
-- D) Configure the Amazon S3 bucket policy to allow unrestricted public read access across the internet
+- C) Attach an IAM Role with an [Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3) read-only policy to the EC2 instance profile
+- D) Configure the [Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3) bucket policy to allow unrestricted public read access across the internet
 
 <details>
 <summary><b>Click to View Answer & Detailed Distractor Analysis</b></summary>
 
-**Correct Answer:** **C) Attach an IAM Role with an Amazon S3 read-only policy to the EC2 instance profile**
+**Correct Answer:** **C) Attach an IAM Role with an [Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3) read-only policy to the EC2 instance profile**
 
-* **Why it's correct:** Attaching an IAM Role to an Amazon EC2 instance profile allows the application to retrieve short-lived, automatically rotated temporary security credentials from the AWS Security Token Service (STS) via the Instance Metadata Service (IMDSv2), eliminating the need to store long-term access keys.
+* **Why it's correct:** Attaching an IAM Role to an [Amazon EC2](../../AWS_SERVICES_GLOSSARY.md#amazon-ec2) instance profile allows the application to retrieve short-lived, automatically rotated temporary security credentials from the AWS Security Token Service (STS) via the Instance Metadata Service (IMDSv2), eliminating the need to store long-term access keys.
 * **Distractor Analysis:**
   - *A is incorrect:* Hardcoding long-term access keys into application files creates severe risk of accidental disclosure and requires manual rotation if compromised.
   - *B is incorrect:* Exposing access keys in a public repository allows unauthorized malicious actors to compromise and hijack the AWS account within seconds.
@@ -242,7 +242,7 @@ flowchart TD
 
 **Correct Answer:** **B) Principle of Least Privilege**
 
-* **Why it's correct:** The Principle of Least Privilege is the foundational security rule of AWS IAM. It mandates starting with zero access (implicit deny) and granting only the specific API actions, resource ARNs, and conditions strictly required to perform the intended job role.
+* **Why it's correct:** The Principle of Least Privilege is the foundational security rule of [AWS IAM](../../AWS_SERVICES_GLOSSARY.md#aws-iam). It mandates starting with zero access (implicit deny) and granting only the specific API actions, resource ARNs, and conditions strictly required to perform the intended job role.
 * **Distractor Analysis:**
   - *A is incorrect:* Separation of duties is an operational control ensuring that critical workflows require multiple people to complete (e.g., one person requests a database change, another approves it).
   - *C is incorrect:* Defense-in-depth is an architectural strategy that implements multiple layered defensive barriers (WAF, VPC security groups, encryption, IAM) across the entire stack.
@@ -252,28 +252,28 @@ flowchart TD
 ---
 
 ### Question 4
-**An enterprise operates 75 AWS accounts under AWS Organizations. Which service provides a single central portal for workforce employees to sign in with their corporate credentials and access their assigned accounts and business applications?**
-- A) AWS IAM Identity Center (AWS Single Sign-On)
-- B) AWS Secrets Manager
-- C) Amazon GuardDuty
-- D) AWS Shield Advanced
+**An enterprise operates 75 AWS accounts under [AWS Organizations](../../AWS_SERVICES_GLOSSARY.md#aws-organizations). Which service provides a single central portal for workforce employees to sign in with their corporate credentials and access their assigned accounts and business applications?**
+- A) [AWS IAM Identity Center](../../AWS_SERVICES_GLOSSARY.md#aws-iam-identity-center) (AWS Single Sign-On)
+- B) [AWS Secrets Manager](../../AWS_SERVICES_GLOSSARY.md#aws-secrets-manager)
+- C) [Amazon GuardDuty](../../AWS_SERVICES_GLOSSARY.md#amazon-guardduty)
+- D) [AWS Shield](../../AWS_SERVICES_GLOSSARY.md#aws-shield) Advanced
 
 <details>
 <summary><b>Click to View Answer & Detailed Distractor Analysis</b></summary>
 
-**Correct Answer:** **A) AWS IAM Identity Center (AWS Single Sign-On)**
+**Correct Answer:** **A) [AWS IAM Identity Center](../../AWS_SERVICES_GLOSSARY.md#aws-iam-identity-center) (AWS Single Sign-On)**
 
-* **Why it's correct:** AWS IAM Identity Center (successor to AWS Single Sign-On) centralizes workforce authentication and authorization across multiple AWS accounts, integrating with corporate identity providers (such as Microsoft Entra ID, Okta, or Active Directory) and providing a unified single sign-on user portal.
+* **Why it's correct:** [AWS IAM Identity Center](../../AWS_SERVICES_GLOSSARY.md#aws-iam-identity-center) (successor to AWS Single Sign-On) centralizes workforce authentication and authorization across multiple AWS accounts, integrating with corporate identity providers (such as Microsoft Entra ID, Okta, or Active Directory) and providing a unified single sign-on user portal.
 * **Distractor Analysis:**
-  - *B is incorrect:* AWS Secrets Manager stores, retrieves, and automatically rotates database passwords and API tokens, not workforce employee identities.
-  - *C is incorrect:* Amazon GuardDuty is an intelligent threat detection service that analyzes network telemetry and API logs for malicious activity.
-  - *D is incorrect:* AWS Shield Advanced is an enterprise Distributed Denial of Service (DDoS) mitigation and protection service.
+  - *B is incorrect:* [AWS Secrets Manager](../../AWS_SERVICES_GLOSSARY.md#aws-secrets-manager) stores, retrieves, and automatically rotates database passwords and API tokens, not workforce employee identities.
+  - *C is incorrect:* [Amazon GuardDuty](../../AWS_SERVICES_GLOSSARY.md#amazon-guardduty) is an intelligent threat detection service that analyzes network telemetry and API logs for malicious activity.
+  - *D is incorrect:* [AWS Shield](../../AWS_SERVICES_GLOSSARY.md#aws-shield) Advanced is an enterprise Distributed Denial of Service (DDoS) mitigation and protection service.
 </details>
 
 ---
 
 ### Question 5
-**What is the evaluation outcome in AWS IAM when an attached user identity policy explicitly contains an `Allow` statement for `s3:PutObject`, but the target Amazon S3 bucket policy contains an explicit `Deny` statement for that user?**
+**What is the evaluation outcome in [AWS IAM](../../AWS_SERVICES_GLOSSARY.md#aws-iam) when an attached user identity policy explicitly contains an `Allow` statement for `s3:PutObject`, but the target [Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3) bucket policy contains an explicit `Deny` statement for that user?**
 - A) Access is Allowed, because identity-based policies always override resource-based policies
 - B) Access is Denied, because an explicit Deny statement in any applicable policy always overrides an Allow
 - C) The user is prompted to submit a multi-factor authentication (MFA) code before proceeding
@@ -284,7 +284,7 @@ flowchart TD
 
 **Correct Answer:** **B) Access is Denied, because an explicit Deny statement in any applicable policy always overrides an Allow**
 
-* **Why it's correct:** In the AWS IAM policy evaluation engine, an **explicit Deny** statement in *any* applicable policy (whether a Service Control Policy, Permissions Boundary, Identity Policy, or Resource Policy) permanently overrides all Allow statements, resulting in an immediate HTTP 403 Access Denied.
+* **Why it's correct:** In the [AWS IAM](../../AWS_SERVICES_GLOSSARY.md#aws-iam) policy evaluation engine, an **explicit Deny** statement in *any* applicable policy (whether a Service Control Policy, Permissions Boundary, Identity Policy, or Resource Policy) permanently overrides all Allow statements, resulting in an immediate HTTP 403 Access Denied.
 * **Distractor Analysis:**
   - *A is incorrect:* Identity policies do not override resource policies; both are evaluated together, and any explicit Deny immediately blocks the request.
   - *C is incorrect:* IAM policy evaluation does not dynamically prompt for MFA at the evaluation stage unless an explicit MFA condition is configured in an Allow policy.
@@ -295,7 +295,7 @@ flowchart TD
 
 ## 🧠 Master MCQ Solving Blueprint: Pattern Decryption & Elimination Tricks
 
-> *This blueprint distills recurring patterns, keyword triggers, and trap options extracted from over 450 questions on AWS IAM, Identity Center, and Access Governance across the official CLF-C02 question bank.*
+> *This blueprint distills recurring patterns, keyword triggers, and trap options extracted from over 450 questions on [AWS IAM](../../AWS_SERVICES_GLOSSARY.md#aws-iam), Identity Center, and Access Governance across the official CLF-C02 question bank.*
 
 ### 1. The "Clue-to-Service" Linguistic Decryption Matrix
 When reading a question scenario, search for these exact phrasing triggers:
@@ -304,10 +304,10 @@ When reading a question scenario, search for these exact phrasing triggers:
 |---|---|---|
 | *"Grant permissions to an EC2 instance or Lambda function without hardcoding access keys"* | **IAM Role** | *IAM User* (Never put permanent access keys on EC2!) |
 | *"Grant only the permissions required to perform a specific job, and nothing more"* | **Principle of Least Privilege** | *Separation of Duties* or *Defense-in-Depth* |
-| *"Centralized single sign-on (SSO) across multiple AWS accounts with corporate Active Directory"* | **AWS IAM Identity Center** | *Amazon Cognito* (Cognito is for customer-facing web/mobile apps) |
-| *"Download a CSV report listing all account users, password age, and MFA status"* | **IAM Credential Report** | *IAM Access Advisor* or *AWS CloudTrail* |
+| *"Centralized single sign-on (SSO) across multiple AWS accounts with corporate Active Directory"* | **[AWS IAM Identity Center](../../AWS_SERVICES_GLOSSARY.md#aws-iam-identity-center)** | *[Amazon Cognito](../../AWS_SERVICES_GLOSSARY.md#amazon-cognito)* (Cognito is for customer-facing web/mobile apps) |
+| *"Download a CSV report listing all account users, password age, and MFA status"* | **IAM Credential Report** | *IAM Access Advisor* or *[AWS CloudTrail](../../AWS_SERVICES_GLOSSARY.md#aws-cloudtrail)* |
 | *"Identify unused permissions to reduce excess access privileges based on activity history"* | **IAM Access Advisor** | *IAM Credential Report* |
-| *"Mathematically analyze S3 bucket or KMS policies to identify unintended external public sharing"* | **IAM Access Analyzer** | *Amazon Inspector* |
+| *"Mathematically analyze S3 bucket or KMS policies to identify unintended external public sharing"* | **IAM Access Analyzer** | *[Amazon Inspector](../../AWS_SERVICES_GLOSSARY.md#amazon-inspector)* |
 | *"Root user initial setup and security best practices"* | **Lock away root, enable MFA, delete root access keys, create admin IAM identity** | *Generate root access keys for automation* |
 | *"An IAM policy has an Explicit Allow and an Explicit Deny for the same action"* | **Access is DENIED (Explicit Deny ALWAYS wins)** | *Access is Allowed* or *MFA prompt* |
 | *"Enforce organization-wide maximum permission guardrails across all member accounts"* | **Service Control Policies (SCPs)** | *IAM Identity Policies* |
@@ -330,14 +330,14 @@ When evaluating an IAM question:
 
 ### 3. High-Frequency Decoy Autopsy: Why AWS Tries to Trick You
 * **Decoy #1: "IAM Role" vs. "IAM User Access Keys" for EC2 Instances**
-  - *The Trap:* A Python script running on EC2 needs to upload files to Amazon S3. How should credentials be supplied?
+  - *The Trap:* A Python script running on EC2 needs to upload files to [Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3). How should credentials be supplied?
   - *The Autopsy:* AWS tests this incessantly. Options will suggest storing access keys in a config file, environment variable, or S3. The ONLY well-architected answer is an **IAM Role attached to the EC2 Instance Profile**.
-* **Decoy #2: "IAM Identity Center" vs. "Amazon Cognito"**
+* **Decoy #2: "IAM Identity Center" vs. "[Amazon Cognito](../../AWS_SERVICES_GLOSSARY.md#amazon-cognito)"**
   - *The Trap:* A company needs single sign-on for their application users vs. corporate employees.
-  - *The Autopsy:* If the users are **internal corporate employees** accessing AWS management accounts $\to$ **IAM Identity Center**. If the users are **external public consumers** signing into a custom mobile/web app via Google or Apple $\to$ **Amazon Cognito**.
+  - *The Autopsy:* If the users are **internal corporate employees** accessing AWS management accounts $\to$ **IAM Identity Center**. If the users are **external public consumers** signing into a custom mobile/web app via Google or Apple $\to$ **[Amazon Cognito](../../AWS_SERVICES_GLOSSARY.md#amazon-cognito)**.
 * **Decoy #3: "IAM Groups as Policy Principals"**
   - *The Trap:* Asking whether an IAM policy can define an IAM Group as the "Principal".
-  - *The Autopsy:* In AWS IAM, an IAM Group is strictly a management container for users. A group **cannot** be listed as a Principal in a resource-based policy, and cannot be assumed like a role!
+  - *The Autopsy:* In [AWS IAM](../../AWS_SERVICES_GLOSSARY.md#aws-iam), an IAM Group is strictly a management container for users. A group **cannot** be listed as a Principal in a resource-based policy, and cannot be assumed like a role!
 
 ### 4. 10-Second Visual Decision Flowchart
 

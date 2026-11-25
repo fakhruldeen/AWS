@@ -9,11 +9,11 @@
 ## 💡 The Real-World Analogy (ELI5)
 
 > **Commercial High-Rise Operations, Security & Governance:**
-> - **Amazon CloudWatch (The Smart Building Telemetry & Smoke Detector):** Measures real-time operational physical metrics: room temperature (CPU utilization), elevator speed (network throughput), and water tank pressure (disk I/O). If smoke is detected, it sounds an automated siren (CloudWatch Alarm) that calls the fire department (Amazon SNS) and automatically triggers emergency ventilation fans (EC2 Auto Scaling).
-> - **AWS CloudTrail (The 24/7 Security Entrance CCTV Camera):** The immutable forensic video camera recording the building's front revolving door. Every time someone enters or requests access, the camera permanently logs: *Who walked in (IAM Identity), What master key they presented (API Action), Which door handle they touched (AWS Resource ARN), At what exact second it occurred (Timestamp), and What vehicle license plate they arrived in (Source IP Address).*
-> - **AWS Config (The Municipal Building & Code Inspector):** Constantly walks every floor with an official building safety code checklist. If an employee removes an emergency exit sign or props open a security door (disabling S3 bucket encryption or opening port 22 to the public internet), Config flags the room as non-compliant, records the exact second the violation occurred, and can automatically dispatch a repair crew to re-lock the door.
-> - **AWS Systems Manager (The Building Maintenance Master iPad):** The universal digital remote control used by facility engineers to push firmware updates, run diagnostic scripts, and inspect 500 air conditioning units simultaneously without walking up physical stairs or needing individual physical brass keys (no SSH keys or open port 22 required).
-> - **AWS Organizations & Service Control Policies (The Corporate Parent Conglomerate):** The corporate headquarters that owns 50 franchise buildings. The board of directors enforces non-negotiable corporate policies (SCPs) that forbid any branch manager from demolishing load-bearing walls, even if the branch manager has local executive authority.
+> - **[Amazon CloudWatch](../../AWS_SERVICES_GLOSSARY.md#amazon-cloudwatch) (The Smart Building Telemetry & Smoke Detector):** Measures real-time operational physical metrics: room temperature (CPU utilization), elevator speed (network throughput), and water tank pressure (disk I/O). If smoke is detected, it sounds an automated siren (CloudWatch Alarm) that calls the fire department ([Amazon SNS](../../AWS_SERVICES_GLOSSARY.md#amazon-sns)) and automatically triggers emergency ventilation fans (EC2 Auto Scaling).
+> - **[AWS CloudTrail](../../AWS_SERVICES_GLOSSARY.md#aws-cloudtrail) (The 24/7 Security Entrance CCTV Camera):** The immutable forensic video camera recording the building's front revolving door. Every time someone enters or requests access, the camera permanently logs: *Who walked in (IAM Identity), What master key they presented (API Action), Which door handle they touched (AWS Resource ARN), At what exact second it occurred (Timestamp), and What vehicle license plate they arrived in (Source IP Address).*
+> - **[AWS Config](../../AWS_SERVICES_GLOSSARY.md#aws-config) (The Municipal Building & Code Inspector):** Constantly walks every floor with an official building safety code checklist. If an employee removes an emergency exit sign or props open a security door (disabling S3 bucket encryption or opening port 22 to the public internet), Config flags the room as non-compliant, records the exact second the violation occurred, and can automatically dispatch a repair crew to re-lock the door.
+> - **[AWS Systems Manager](../../AWS_SERVICES_GLOSSARY.md#aws-systems-manager) (The Building Maintenance Master iPad):** The universal digital remote control used by facility engineers to push firmware updates, run diagnostic scripts, and inspect 500 air conditioning units simultaneously without walking up physical stairs or needing individual physical brass keys (no SSH keys or open port 22 required).
+> - **[AWS Organizations](../../AWS_SERVICES_GLOSSARY.md#aws-organizations) & Service Control Policies (The Corporate Parent Conglomerate):** The corporate headquarters that owns 50 franchise buildings. The board of directors enforces non-negotiable corporate policies (SCPs) that forbid any branch manager from demolishing load-bearing walls, even if the branch manager has local executive authority.
 
 ---
 
@@ -42,9 +42,9 @@ flowchart TD
 ```
 
 ### 1.1 The Crucial Distinction: Metrics vs. Audit Logs vs. Configuration State
-* **Amazon CloudWatch answers:** *"How is the system performing right now, and what operational threshold was breached?"* (Telemetry data: CPU utilization hit $92\%$, database connections dropped, HTTP 500 error rate spiked).
-* **AWS CloudTrail answers:** *"Who made the API call, from what IP address, at what exact millisecond, and on what resource?"* (Management and forensic data: `Alice` called `ec2:TerminateInstances` from IP `198.51.100.24` at `14:22:01 UTC`).
-* **AWS Config answers:** *"What did the resource configuration look like last Tuesday at 3:00 PM compared to today, and does it comply with organizational security rules?"* (Configuration state data: Security Group `sg-01` had port 22 closed yesterday, but someone opened it to `0.0.0.0/0` today).
+* **[Amazon CloudWatch](../../AWS_SERVICES_GLOSSARY.md#amazon-cloudwatch) answers:** *"How is the system performing right now, and what operational threshold was breached?"* (Telemetry data: CPU utilization hit $92\%$, database connections dropped, HTTP 500 error rate spiked).
+* **[AWS CloudTrail](../../AWS_SERVICES_GLOSSARY.md#aws-cloudtrail) answers:** *"Who made the API call, from what IP address, at what exact millisecond, and on what resource?"* (Management and forensic data: `Alice` called `ec2:TerminateInstances` from IP `198.51.100.24` at `14:22:01 UTC`).
+* **[AWS Config](../../AWS_SERVICES_GLOSSARY.md#aws-config) answers:** *"What did the resource configuration look like last Tuesday at 3:00 PM compared to today, and does it comply with organizational security rules?"* (Configuration state data: Security Group `sg-01` had port 22 closed yesterday, but someone opened it to `0.0.0.0/0` today).
 
 ### 1.2 Mathematical Set Theory of Service Control Policies (SCPs)
 In AWS multi-account governance, an account's effective permissions are determined by the **intersection ($\cap$)** of Service Control Policies and IAM Identity Policies:
@@ -59,10 +59,10 @@ Before automated cloud observability and centralized multi-account governance, e
 
 | Enterprise Management Challenge | Traditional On-Premises Reality | AWS Cloud Governance Paradigm |
 |---|---|---|
-| **Ephemeral Logs Lost on Server Crash** | System application logs were stored locally on `/var/log` on physical hard drives. When a server crashed or caught fire, the root-cause crash logs were permanently destroyed. | **Amazon CloudWatch Logs Agent**. Streams logs continuously to high-durability, centralized cloud storage in real time before instances terminate. |
-| **Undetected Insider Threat & Tampering** | Rogue employees could modify administrative configurations or delete database tables, then delete local server bash history and syslogs to erase their tracks. | **AWS CloudTrail Immutable Logging**. API logs are cryptographically hashed and delivered to encrypted, tamper-evident S3 buckets with S3 Object Lock. |
-| **Configuration Drift & Shadow IT** | Developers manually adjusted firewall rules or opened ports to test code, leaving permanent security vulnerabilities that remained undiscovered for years. | **AWS Config Continuous Evaluation**. Detects configuration drift within seconds and automatically triggers automated remediation via AWS Systems Manager. |
-| **SSH Key Sprawl & Bastion Host Maintenance** | Managing SSH key pairs for 500 Linux servers required maintaining exposed "bastion hosts," opening port 22 to the public internet, and manually rotating keys. | **AWS Systems Manager Session Manager**. Provides browser-based one-click shell access to EC2 instances with zero open inbound ports and zero SSH keys. |
+| **Ephemeral Logs Lost on Server Crash** | System application logs were stored locally on `/var/log` on physical hard drives. When a server crashed or caught fire, the root-cause crash logs were permanently destroyed. | **[Amazon CloudWatch](../../AWS_SERVICES_GLOSSARY.md#amazon-cloudwatch) Logs Agent**. Streams logs continuously to high-durability, centralized cloud storage in real time before instances terminate. |
+| **Undetected Insider Threat & Tampering** | Rogue employees could modify administrative configurations or delete database tables, then delete local server bash history and syslogs to erase their tracks. | **[AWS CloudTrail](../../AWS_SERVICES_GLOSSARY.md#aws-cloudtrail) Immutable Logging**. API logs are cryptographically hashed and delivered to encrypted, tamper-evident S3 buckets with S3 Object Lock. |
+| **Configuration Drift & Shadow IT** | Developers manually adjusted firewall rules or opened ports to test code, leaving permanent security vulnerabilities that remained undiscovered for years. | **[AWS Config](../../AWS_SERVICES_GLOSSARY.md#aws-config) Continuous Evaluation**. Detects configuration drift within seconds and automatically triggers automated remediation via [AWS Systems Manager](../../AWS_SERVICES_GLOSSARY.md#aws-systems-manager). |
+| **SSH Key Sprawl & Bastion Host Maintenance** | Managing SSH key pairs for 500 Linux servers required maintaining exposed "bastion hosts," opening port 22 to the public internet, and manually rotating keys. | **[AWS Systems Manager](../../AWS_SERVICES_GLOSSARY.md#aws-systems-manager) Session Manager**. Provides browser-based one-click shell access to EC2 instances with zero open inbound ports and zero SSH keys. |
 
 ---
 
@@ -85,7 +85,7 @@ flowchart LR
   2. **CloudWatch Alarms:** Watches a specific metric over a specified time window and automatically initiates actions based on threshold evaluation:
      - *EC2 Action:* Automatically stop, terminate, reboot, or recover an EC2 instance.
      - *Auto Scaling Action:* Trigger scale-out or scale-in events to handle traffic surges.
-     - *Notification Action:* Publish an alert message to an **Amazon SNS** topic to send SMS or emails to on-call engineers.
+     - *Notification Action:* Publish an alert message to an **[Amazon SNS](../../AWS_SERVICES_GLOSSARY.md#amazon-sns)** topic to send SMS or emails to on-call engineers.
   3. **CloudWatch Logs:** Centralizes, monitors, and stores operating system and application log files from EC2, Lambda, CloudTrail, Route 53, and VPC Flow Logs. Supports CloudWatch Logs Insights for real-time interactive SQL-like log querying.
 
 ### 3.2 AWS CloudTrail
@@ -98,14 +98,14 @@ flowchart LR
   - *Request and Response Elements:* Parameters passed and HTTP status response.
 * **Trail Types:**
   - *Event History:* Free 90-day rolling log of management events in the console.
-  - *Multi-Region Trail:* Captures all events across all AWS Regions and delivers them to an encrypted, centralized Amazon S3 bucket for permanent archival.
+  - *Multi-Region Trail:* Captures all events across all AWS Regions and delivers them to an encrypted, centralized [Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3) bucket for permanent archival.
 
 ### 3.3 AWS Config
 * **What it is:** A service that continually assesses, audits, and evaluates the configurations of your AWS resources to ensure compliance with internal security guidelines and external regulatory mandates.
 * **Core Capabilities:**
   - *Configuration History:* Maintains a detailed point-in-time timeline of configuration changes made to every resource (e.g., showing every Security Group rule modification over the past year).
-  - *AWS Config Rules:* Pre-built managed rules (e.g., `s3-bucket-ssl-requests-only`, `encrypted-volumes`, `root-account-mfa-enabled`) that continuously evaluate resource compliance.
-  - *Automated Remediation:* Automatically executes an AWS Systems Manager Automation runbook when a resource drifts into non-compliance (e.g., automatically closing an open security group port).
+  - *[AWS Config](../../AWS_SERVICES_GLOSSARY.md#aws-config) Rules:* Pre-built managed rules (e.g., `s3-bucket-ssl-requests-only`, `encrypted-volumes`, `root-account-mfa-enabled`) that continuously evaluate resource compliance.
+  - *Automated Remediation:* Automatically executes an [AWS Systems Manager](../../AWS_SERVICES_GLOSSARY.md#aws-systems-manager) Automation runbook when a resource drifts into non-compliance (e.g., automatically closing an open security group port).
 
 ---
 
@@ -147,7 +147,7 @@ flowchart TD
 ## 5. Operations Automation: Systems Manager & Trusted Advisor
 
 ### 5.1 AWS Systems Manager (SSM)
-* **What it is:** The central operational hub for managing compute nodes (Amazon EC2 instances, on-premises physical servers, and virtual machines).
+* **What it is:** The central operational hub for managing compute nodes ([Amazon EC2](../../AWS_SERVICES_GLOSSARY.md#amazon-ec2) instances, on-premises physical servers, and virtual machines).
 * **Key Capabilities:**
   - **Session Manager:** Provides fully secure, browser-based one-click terminal shell access to EC2 instances without requiring open inbound ports (port 22 closed), bastion hosts, or SSH keys.
   - **Patch Manager:** Automates the rollout of operating system and security patches across large fleets of Linux and Windows instances according to predefined maintenance windows.
@@ -169,7 +169,7 @@ flowchart TD
 
 ## 6. Multi-Dimensional Governance & Observability Decision Matrix
 
-| Dimension | Amazon CloudWatch | AWS CloudTrail | AWS Config | AWS Systems Manager | AWS Trusted Advisor |
+| Dimension | [Amazon CloudWatch](../../AWS_SERVICES_GLOSSARY.md#amazon-cloudwatch) | [AWS CloudTrail](../../AWS_SERVICES_GLOSSARY.md#aws-cloudtrail) | [AWS Config](../../AWS_SERVICES_GLOSSARY.md#aws-config) | [AWS Systems Manager](../../AWS_SERVICES_GLOSSARY.md#aws-systems-manager) | [AWS Trusted Advisor](../../AWS_SERVICES_GLOSSARY.md#aws-trusted-advisor) |
 |---|---|---|---|---|---|
 | **Primary Question Answered** | *"How is my workload performing right now?"* | *"Who made the API call, when, and from where?"* | *"Is my configuration compliant with policy?"* | *"How do I operate and patch my server fleet?"* | *"Am I following AWS architectural best practices?"* |
 | **Primary Data Collected** | Numeric metrics (CPU, disk) and stdout/stderr logs | Structured JSON audit records of AWS API calls | Resource Configuration Items (CIs) and relationships | Server inventory, patch status, command executions | Account-level configuration and quota scans |
@@ -183,12 +183,12 @@ flowchart TD
 
 | Question Scenario Keyword | Target Service | Exam Trap & Distractor Explanation |
 |---|---|---|
-| *"Monitor CPU utilization, trigger Auto Scaling, and send email alerts on threshold breach"* | **Amazon CloudWatch** | Trap: Do not choose CloudTrail. CloudWatch monitors performance metrics; CloudTrail audits API actions. |
-| *"Record an immutable audit trail of who made API calls and deleted an S3 bucket"* | **AWS CloudTrail** | Trap: Do not choose CloudWatch Logs. CloudTrail specifically tracks the *identity, time, and IP* of the person who initiated the API call. |
-| *"Track resource configuration history and automatically detect when S3 encryption is turned off"* | **AWS Config** | Trap: Do not choose CloudTrail or GuardDuty. Tracking configuration compliance against rules is AWS Config. |
+| *"Monitor CPU utilization, trigger Auto Scaling, and send email alerts on threshold breach"* | **[Amazon CloudWatch](../../AWS_SERVICES_GLOSSARY.md#amazon-cloudwatch)** | Trap: Do not choose CloudTrail. CloudWatch monitors performance metrics; CloudTrail audits API actions. |
+| *"Record an immutable audit trail of who made API calls and deleted an S3 bucket"* | **[AWS CloudTrail](../../AWS_SERVICES_GLOSSARY.md#aws-cloudtrail)** | Trap: Do not choose CloudWatch Logs. CloudTrail specifically tracks the *identity, time, and IP* of the person who initiated the API call. |
+| *"Track resource configuration history and automatically detect when S3 encryption is turned off"* | **[AWS Config](../../AWS_SERVICES_GLOSSARY.md#aws-config)** | Trap: Do not choose CloudTrail or GuardDuty. Tracking configuration compliance against rules is [AWS Config](../../AWS_SERVICES_GLOSSARY.md#aws-config). |
 | *"Centrally restrict which AWS services can be accessed by member accounts in an organization"* | **Service Control Policies (SCPs)** | Trap: Do not choose IAM Identity Policies. Central multi-account guardrails are enforced via Organizations SCPs. |
-| *"Provide secure terminal shell access to EC2 instances without opening port 22 or SSH keys"* | **AWS Systems Manager Session Manager** | Trap: Do not choose EC2 Instance Connect or Bastion Host. Session Manager eliminates open inbound ports and SSH keys entirely. |
-| *"Automated tool providing real-time guidance across Cost, Security, Fault Tolerance, Performance, and Quotas"* | **AWS Trusted Advisor** | Trap: Do not choose AWS Well-Architected Tool. Trusted Advisor scans live API configurations automatically; Well-Architected Tool is a structured review questionnaire. |
+| *"Provide secure terminal shell access to EC2 instances without opening port 22 or SSH keys"* | **[AWS Systems Manager](../../AWS_SERVICES_GLOSSARY.md#aws-systems-manager) Session Manager** | Trap: Do not choose EC2 Instance Connect or Bastion Host. Session Manager eliminates open inbound ports and SSH keys entirely. |
+| *"Automated tool providing real-time guidance across Cost, Security, Fault Tolerance, Performance, and Quotas"* | **[AWS Trusted Advisor](../../AWS_SERVICES_GLOSSARY.md#aws-trusted-advisor)** | Trap: Do not choose [AWS Well-Architected Tool](../../AWS_SERVICES_GLOSSARY.md#aws-well-architected-tool). Trusted Advisor scans live API configurations automatically; Well-Architected Tool is a structured review questionnaire. |
 
 ---
 
@@ -196,105 +196,105 @@ flowchart TD
 
 ### Question 1
 **Which AWS service records API activity, user logins, and administrative modifications across an AWS account, providing an immutable audit trail for security investigations and regulatory compliance?**
-- A) Amazon CloudWatch
-- B) AWS CloudTrail
-- C) AWS Config
-- D) AWS Trusted Advisor
+- A) [Amazon CloudWatch](../../AWS_SERVICES_GLOSSARY.md#amazon-cloudwatch)
+- B) [AWS CloudTrail](../../AWS_SERVICES_GLOSSARY.md#aws-cloudtrail)
+- C) [AWS Config](../../AWS_SERVICES_GLOSSARY.md#aws-config)
+- D) [AWS Trusted Advisor](../../AWS_SERVICES_GLOSSARY.md#aws-trusted-advisor)
 
 <details>
 <summary><b>Click to View Answer & Detailed Distractor Analysis</b></summary>
 
-**Correct Answer:** **B) AWS CloudTrail**
+**Correct Answer:** **B) [AWS CloudTrail](../../AWS_SERVICES_GLOSSARY.md#aws-cloudtrail)**
 
-* **Why it's correct:** AWS CloudTrail captures, logs, and stores a continuous record of all API calls, console actions, and programmatic SDK invocations across an AWS account, answering the essential forensic audit questions: *"Who made the API request, at what timestamp, from what source IP address, and on what resource?"*
+* **Why it's correct:** [AWS CloudTrail](../../AWS_SERVICES_GLOSSARY.md#aws-cloudtrail) captures, logs, and stores a continuous record of all API calls, console actions, and programmatic SDK invocations across an AWS account, answering the essential forensic audit questions: *"Who made the API request, at what timestamp, from what source IP address, and on what resource?"*
 * **Distractor Analysis:**
-  - *A is incorrect:* Amazon CloudWatch monitors application performance metrics (e.g., CPU utilization, memory, disk I/O) and aggregates runtime logs, but does not generate identity-based AWS API audit trails.
-  - *C is incorrect:* AWS Config tracks the configuration history and compliance state of AWS resources, but does not capture the real-time API request payload or user authentication identity.
-  - *D is incorrect:* AWS Trusted Advisor provides automated recommendations against AWS best practices across five pillars, not immutable API call logging.
+  - *A is incorrect:* [Amazon CloudWatch](../../AWS_SERVICES_GLOSSARY.md#amazon-cloudwatch) monitors application performance metrics (e.g., CPU utilization, memory, disk I/O) and aggregates runtime logs, but does not generate identity-based AWS API audit trails.
+  - *C is incorrect:* [AWS Config](../../AWS_SERVICES_GLOSSARY.md#aws-config) tracks the configuration history and compliance state of AWS resources, but does not capture the real-time API request payload or user authentication identity.
+  - *D is incorrect:* [AWS Trusted Advisor](../../AWS_SERVICES_GLOSSARY.md#aws-trusted-advisor) provides automated recommendations against AWS best practices across five pillars, not immutable API call logging.
 </details>
 
 ---
 
 ### Question 2
-**A systems engineer needs to monitor Amazon EC2 CPU utilization, trigger automated horizontal scaling actions when average CPU exceeds 80% for 5 consecutive minutes, and dispatch email alerts to on-call engineers. Which service coordinates this?**
-- A) AWS CloudTrail
-- B) Amazon CloudWatch
-- C) AWS Config
-- D) AWS Systems Manager
+**A systems engineer needs to monitor [Amazon EC2](../../AWS_SERVICES_GLOSSARY.md#amazon-ec2) CPU utilization, trigger automated horizontal scaling actions when average CPU exceeds 80% for 5 consecutive minutes, and dispatch email alerts to on-call engineers. Which service coordinates this?**
+- A) [AWS CloudTrail](../../AWS_SERVICES_GLOSSARY.md#aws-cloudtrail)
+- B) [Amazon CloudWatch](../../AWS_SERVICES_GLOSSARY.md#amazon-cloudwatch)
+- C) [AWS Config](../../AWS_SERVICES_GLOSSARY.md#aws-config)
+- D) [AWS Systems Manager](../../AWS_SERVICES_GLOSSARY.md#aws-systems-manager)
 
 <details>
 <summary><b>Click to View Answer & Detailed Distractor Analysis</b></summary>
 
-**Correct Answer:** **B) Amazon CloudWatch**
+**Correct Answer:** **B) [Amazon CloudWatch](../../AWS_SERVICES_GLOSSARY.md#amazon-cloudwatch)**
 
-* **Why it's correct:** Amazon CloudWatch monitors operational telemetry metrics (e.g., CPU utilization) and allows administrators to configure CloudWatch Alarms that evaluate metric thresholds to trigger automated Amazon EC2 Auto Scaling actions and publish alert notifications to Amazon SNS topics.
+* **Why it's correct:** [Amazon CloudWatch](../../AWS_SERVICES_GLOSSARY.md#amazon-cloudwatch) monitors operational telemetry metrics (e.g., CPU utilization) and allows administrators to configure CloudWatch Alarms that evaluate metric thresholds to trigger automated [Amazon EC2 Auto Scaling](../../AWS_SERVICES_GLOSSARY.md#amazon-ec2-auto-scaling) actions and publish alert notifications to [Amazon SNS](../../AWS_SERVICES_GLOSSARY.md#amazon-sns) topics.
 * **Distractor Analysis:**
-  - *A is incorrect:* AWS CloudTrail audits API activity and administrative changes, but does not evaluate numerical operational performance metrics or trigger Auto Scaling.
-  - *C is incorrect:* AWS Config evaluates resource configuration compliance against predefined rules, not streaming performance metrics.
-  - *D is incorrect:* AWS Systems Manager automates node configuration and software patch deployments, but does not monitor performance thresholds or trigger dynamic auto-scaling.
+  - *A is incorrect:* [AWS CloudTrail](../../AWS_SERVICES_GLOSSARY.md#aws-cloudtrail) audits API activity and administrative changes, but does not evaluate numerical operational performance metrics or trigger Auto Scaling.
+  - *C is incorrect:* [AWS Config](../../AWS_SERVICES_GLOSSARY.md#aws-config) evaluates resource configuration compliance against predefined rules, not streaming performance metrics.
+  - *D is incorrect:* [AWS Systems Manager](../../AWS_SERVICES_GLOSSARY.md#aws-systems-manager) automates node configuration and software patch deployments, but does not monitor performance thresholds or trigger dynamic auto-scaling.
 </details>
 
 ---
 
 ### Question 3
 **Which AWS service tracks the complete configuration change history of AWS resources over time, evaluates active resource configurations against compliance rules, and supports automated remediation of non-compliant resources?**
-- A) AWS CloudTrail
-- B) AWS Config
-- C) Amazon Inspector
-- D) AWS Trusted Advisor
+- A) [AWS CloudTrail](../../AWS_SERVICES_GLOSSARY.md#aws-cloudtrail)
+- B) [AWS Config](../../AWS_SERVICES_GLOSSARY.md#aws-config)
+- C) [Amazon Inspector](../../AWS_SERVICES_GLOSSARY.md#amazon-inspector)
+- D) [AWS Trusted Advisor](../../AWS_SERVICES_GLOSSARY.md#aws-trusted-advisor)
 
 <details>
 <summary><b>Click to View Answer & Detailed Distractor Analysis</b></summary>
 
-**Correct Answer:** **B) AWS Config**
+**Correct Answer:** **B) [AWS Config](../../AWS_SERVICES_GLOSSARY.md#aws-config)**
 
-* **Why it's correct:** AWS Config continuously records configuration changes to AWS resources, provides a visual historical timeline of resource modifications, evaluates resource state against compliance rules (such as verifying EBS volume encryption), and initiates automated remediation via Systems Manager runbooks.
+* **Why it's correct:** [AWS Config](../../AWS_SERVICES_GLOSSARY.md#aws-config) continuously records configuration changes to AWS resources, provides a visual historical timeline of resource modifications, evaluates resource state against compliance rules (such as verifying EBS volume encryption), and initiates automated remediation via Systems Manager runbooks.
 * **Distractor Analysis:**
-  - *A is incorrect:* AWS CloudTrail records API calls (who initiated an action), but does not maintain a stateful historical model of resource configurations or evaluate compliance rules.
-  - *C is incorrect:* Amazon Inspector is an automated vulnerability scanner that evaluates operating systems and container images for software package CVEs.
-  - *D is incorrect:* AWS Trusted Advisor scans account resources against fixed architectural best practices, but does not provide custom configuration change tracking or automated remediation.
+  - *A is incorrect:* [AWS CloudTrail](../../AWS_SERVICES_GLOSSARY.md#aws-cloudtrail) records API calls (who initiated an action), but does not maintain a stateful historical model of resource configurations or evaluate compliance rules.
+  - *C is incorrect:* [Amazon Inspector](../../AWS_SERVICES_GLOSSARY.md#amazon-inspector) is an automated vulnerability scanner that evaluates operating systems and container images for software package CVEs.
+  - *D is incorrect:* [AWS Trusted Advisor](../../AWS_SERVICES_GLOSSARY.md#aws-trusted-advisor) scans account resources against fixed architectural best practices, but does not provide custom configuration change tracking or automated remediation.
 </details>
 
 ---
 
 ### Question 4
-**An enterprise operates 150 AWS accounts under AWS Organizations. Which feature allows administrators to establish central guardrails that strictly restrict which AWS services and API actions can be executed within member accounts, applying even to the account root users?**
-- A) AWS IAM Identity Center
+**An enterprise operates 150 AWS accounts under [AWS Organizations](../../AWS_SERVICES_GLOSSARY.md#aws-organizations). Which feature allows administrators to establish central guardrails that strictly restrict which AWS services and API actions can be executed within member accounts, applying even to the account root users?**
+- A) [AWS IAM Identity Center](../../AWS_SERVICES_GLOSSARY.md#aws-iam-identity-center)
 - B) Service Control Policies (SCPs)
-- C) AWS Trusted Advisor
-- D) Amazon CloudWatch Synthetics
+- C) [AWS Trusted Advisor](../../AWS_SERVICES_GLOSSARY.md#aws-trusted-advisor)
+- D) [Amazon CloudWatch](../../AWS_SERVICES_GLOSSARY.md#amazon-cloudwatch) Synthetics
 
 <details>
 <summary><b>Click to View Answer & Detailed Distractor Analysis</b></summary>
 
 **Correct Answer:** **B) Service Control Policies (SCPs)**
 
-* **Why it's correct:** Service Control Policies (SCPs) in AWS Organizations define the maximum allowable permissions for member accounts or Organizational Units (OUs). They function as central boundaries: if an action is denied by an SCP, no identity in that account—including the member account root user—can perform that action.
+* **Why it's correct:** Service Control Policies (SCPs) in [AWS Organizations](../../AWS_SERVICES_GLOSSARY.md#aws-organizations) define the maximum allowable permissions for member accounts or Organizational Units (OUs). They function as central boundaries: if an action is denied by an SCP, no identity in that account—including the member account root user—can perform that action.
 * **Distractor Analysis:**
-  - *A is incorrect:* AWS IAM Identity Center centralizes workforce single sign-on authentication, but does not enforce organization-wide service restriction boundaries across accounts.
-  - *C is incorrect:* AWS Trusted Advisor provides optimization recommendations, not policy enforcement guardrails.
-  - *D is incorrect:* Amazon CloudWatch Synthetics runs automated browser canary scripts to test customer-facing endpoints and APIs.
+  - *A is incorrect:* [AWS IAM Identity Center](../../AWS_SERVICES_GLOSSARY.md#aws-iam-identity-center) centralizes workforce single sign-on authentication, but does not enforce organization-wide service restriction boundaries across accounts.
+  - *C is incorrect:* [AWS Trusted Advisor](../../AWS_SERVICES_GLOSSARY.md#aws-trusted-advisor) provides optimization recommendations, not policy enforcement guardrails.
+  - *D is incorrect:* [Amazon CloudWatch](../../AWS_SERVICES_GLOSSARY.md#amazon-cloudwatch) Synthetics runs automated browser canary scripts to test customer-facing endpoints and APIs.
 </details>
 
 ---
 
 ### Question 5
 **Which AWS tool provides real-time automated guidance and recommendations across five pillars: Cost Optimization, Security, Fault Tolerance, Performance, and Service Quotas?**
-- A) AWS Trusted Advisor
-- B) AWS Health Dashboard
-- C) AWS CloudTrail
-- D) AWS Compute Optimizer
+- A) [AWS Trusted Advisor](../../AWS_SERVICES_GLOSSARY.md#aws-trusted-advisor)
+- B) [AWS Health Dashboard](../../AWS_SERVICES_GLOSSARY.md#aws-health-dashboard)
+- C) [AWS CloudTrail](../../AWS_SERVICES_GLOSSARY.md#aws-cloudtrail)
+- D) [AWS Compute Optimizer](../../AWS_SERVICES_GLOSSARY.md#aws-compute-optimizer)
 
 <details>
 <summary><b>Click to View Answer & Detailed Distractor Analysis</b></summary>
 
-**Correct Answer:** **A) AWS Trusted Advisor**
+**Correct Answer:** **A) [AWS Trusted Advisor](../../AWS_SERVICES_GLOSSARY.md#aws-trusted-advisor)**
 
-* **Why it's correct:** AWS Trusted Advisor is an automated online tool that inspects your AWS infrastructure and compares configurations against AWS best practices across five core categories: Cost Optimization, Security, Fault Tolerance, Performance, and Service Quotas.
+* **Why it's correct:** [AWS Trusted Advisor](../../AWS_SERVICES_GLOSSARY.md#aws-trusted-advisor) is an automated online tool that inspects your AWS infrastructure and compares configurations against AWS best practices across five core categories: Cost Optimization, Security, Fault Tolerance, Performance, and Service Quotas.
 * **Distractor Analysis:**
-  - *B is incorrect:* The AWS Health Dashboard provides alerts and remediation guidance when AWS experiences service disruptions or scheduled maintenance impacting your specific account.
-  - *C is incorrect:* AWS CloudTrail captures and records API activity, but does not generate automated architectural recommendations.
-  - *D is incorrect:* AWS Compute Optimizer focuses specifically on right-sizing compute instances, EBS volumes, and Lambda memory using machine learning, but does not cover the broad 5-pillar scope of Trusted Advisor.
+  - *B is incorrect:* The [AWS Health Dashboard](../../AWS_SERVICES_GLOSSARY.md#aws-health-dashboard) provides alerts and remediation guidance when AWS experiences service disruptions or scheduled maintenance impacting your specific account.
+  - *C is incorrect:* [AWS CloudTrail](../../AWS_SERVICES_GLOSSARY.md#aws-cloudtrail) captures and records API activity, but does not generate automated architectural recommendations.
+  - *D is incorrect:* [AWS Compute Optimizer](../../AWS_SERVICES_GLOSSARY.md#aws-compute-optimizer) focuses specifically on right-sizing compute instances, EBS volumes, and Lambda memory using machine learning, but does not cover the broad 5-pillar scope of Trusted Advisor.
 </details>
 
 ---
@@ -308,14 +308,14 @@ When reading a question scenario, search for these exact phrasing triggers:
 
 | If You See This Trigger Phrase in the Question Stem... | The Correct Management Service Is... | Trap Distractor to Immediately Discard |
 |---|---|---|
-| *"Monitor operational metrics (CPU %, disk I/O, network in); trigger Auto Scaling alarms and SNS alerts"* | **Amazon CloudWatch** | *AWS CloudTrail* (CloudTrail records API calls, not CPU metrics!) |
-| *"Audit API calls; identify WHO terminated an instance, from which IP address, and at what timestamp"* | **AWS CloudTrail** | *Amazon CloudWatch* (CloudWatch does not record API caller identities) |
-| *"Track configuration changes over time; detect compliance drift (e.g., unencrypted S3 buckets)"* | **AWS Config** | *AWS CloudTrail* (CloudTrail records the API event; Config tracks state history) |
-| *"Central guardrails across multiple AWS accounts in AWS Organizations; restricts actions even for root"* | **Service Control Policies (SCPs)** | *IAM Identity Policies* (IAM policies cannot override account root) |
-| *"Automated recommendations across 5 pillars: Cost, Performance, Security, Fault Tolerance, Quotas"* | **AWS Trusted Advisor** | *AWS Compute Optimizer* (Compute Optimizer only right-sizes compute/EBS) |
-| *"ML-driven rightsizing recommendations to identify over-provisioned or under-utilized EC2 instances"* | **AWS Compute Optimizer** | *AWS Trusted Advisor* |
-| *"Personalized alerts and guidance for AWS service disruptions directly impacting YOUR specific account"* | **AWS Health Dashboard (Personal Health)** | *AWS Service Health Dashboard* (Service Health is public global status) |
-| *"Remotely access EC2 instances via a secure browser shell without opening port 22 or managing SSH keys"* | **AWS Systems Manager Session Manager** | *EC2 Instance Connect* (Session Manager completely eliminates port 22!) |
+| *"Monitor operational metrics (CPU %, disk I/O, network in); trigger Auto Scaling alarms and SNS alerts"* | **[Amazon CloudWatch](../../AWS_SERVICES_GLOSSARY.md#amazon-cloudwatch)** | *[AWS CloudTrail](../../AWS_SERVICES_GLOSSARY.md#aws-cloudtrail)* (CloudTrail records API calls, not CPU metrics!) |
+| *"Audit API calls; identify WHO terminated an instance, from which IP address, and at what timestamp"* | **[AWS CloudTrail](../../AWS_SERVICES_GLOSSARY.md#aws-cloudtrail)** | *[Amazon CloudWatch](../../AWS_SERVICES_GLOSSARY.md#amazon-cloudwatch)* (CloudWatch does not record API caller identities) |
+| *"Track configuration changes over time; detect compliance drift (e.g., unencrypted S3 buckets)"* | **[AWS Config](../../AWS_SERVICES_GLOSSARY.md#aws-config)** | *[AWS CloudTrail](../../AWS_SERVICES_GLOSSARY.md#aws-cloudtrail)* (CloudTrail records the API event; Config tracks state history) |
+| *"Central guardrails across multiple AWS accounts in [AWS Organizations](../../AWS_SERVICES_GLOSSARY.md#aws-organizations); restricts actions even for root"* | **Service Control Policies (SCPs)** | *IAM Identity Policies* (IAM policies cannot override account root) |
+| *"Automated recommendations across 5 pillars: Cost, Performance, Security, Fault Tolerance, Quotas"* | **[AWS Trusted Advisor](../../AWS_SERVICES_GLOSSARY.md#aws-trusted-advisor)** | *[AWS Compute Optimizer](../../AWS_SERVICES_GLOSSARY.md#aws-compute-optimizer)* (Compute Optimizer only right-sizes compute/EBS) |
+| *"ML-driven rightsizing recommendations to identify over-provisioned or under-utilized EC2 instances"* | **[AWS Compute Optimizer](../../AWS_SERVICES_GLOSSARY.md#aws-compute-optimizer)** | *[AWS Trusted Advisor](../../AWS_SERVICES_GLOSSARY.md#aws-trusted-advisor)* |
+| *"Personalized alerts and guidance for AWS service disruptions directly impacting YOUR specific account"* | **[AWS Health Dashboard](../../AWS_SERVICES_GLOSSARY.md#aws-health-dashboard) (Personal Health)** | *AWS Service Health Dashboard* (Service Health is public global status) |
+| *"Remotely access EC2 instances via a secure browser shell without opening port 22 or managing SSH keys"* | **[AWS Systems Manager](../../AWS_SERVICES_GLOSSARY.md#aws-systems-manager) Session Manager** | *EC2 Instance Connect* (Session Manager completely eliminates port 22!) |
 
 ### 2. The 3-Step Rapid Elimination Heuristic
 When evaluating a Management & Observability question:
@@ -324,23 +324,23 @@ When evaluating a Management & Observability question:
    - **CloudTrail:** *Who did what, when, and from where?* (Audit trail of API calls, security investigations, forensics).
    - **Config:** *What did the resource look like, and does it break our rules?* (Configuration history, drift, compliance rules).
 2. **Step 2: Differentiate Trusted Advisor vs. Compute Optimizer:**
-   - Mentions **5 pillars (Security, Cost, Fault Tolerance, Performance, Quotas)** $\to$ **AWS Trusted Advisor**.
-   - Mentions **Machine Learning rightsizing of EC2 instances, EBS volumes, or Lambda memory** $\to$ **AWS Compute Optimizer**.
+   - Mentions **5 pillars (Security, Cost, Fault Tolerance, Performance, Quotas)** $\to$ **[AWS Trusted Advisor](../../AWS_SERVICES_GLOSSARY.md#aws-trusted-advisor)**.
+   - Mentions **Machine Learning rightsizing of EC2 instances, EBS volumes, or Lambda memory** $\to$ **[AWS Compute Optimizer](../../AWS_SERVICES_GLOSSARY.md#aws-compute-optimizer)**.
 3. **Step 3: Service Control Policies (SCPs) Rules:**
    - SCPs **DO NOT grant permissions** (they only filter/restrict maximum allowable permissions).
    - SCPs **apply to member accounts**, including the member account root user.
    - SCPs **DO NOT apply to the Management (Payer) Account** of the Organization!
 
 ### 3. High-Frequency Decoy Autopsy: Why AWS Tries to Trick You
-* **Decoy #1: "Amazon CloudWatch" vs. "AWS CloudTrail"**
+* **Decoy #1: "[Amazon CloudWatch](../../AWS_SERVICES_GLOSSARY.md#amazon-cloudwatch)" vs. "[AWS CloudTrail](../../AWS_SERVICES_GLOSSARY.md#aws-cloudtrail)"**
   - *The Trap:* An instance was terminated at 3:00 AM. Which service should you review to investigate the incident?
-  - *The Autopsy:* CloudWatch can tell you *that* the CPU dropped to 0%, but CloudWatch cannot tell you *who* did it. To identify the exact user identity, API call (`TerminateInstances`), IP address, and IAM role, you MUST inspect **AWS CloudTrail**.
-* **Decoy #2: "AWS CloudTrail" vs. "AWS Config"**
+  - *The Autopsy:* CloudWatch can tell you *that* the CPU dropped to 0%, but CloudWatch cannot tell you *who* did it. To identify the exact user identity, API call (`TerminateInstances`), IP address, and IAM role, you MUST inspect **[AWS CloudTrail](../../AWS_SERVICES_GLOSSARY.md#aws-cloudtrail)**.
+* **Decoy #2: "[AWS CloudTrail](../../AWS_SERVICES_GLOSSARY.md#aws-cloudtrail)" vs. "[AWS Config](../../AWS_SERVICES_GLOSSARY.md#aws-config)"**
   - *The Trap:* A compliance officer wants to see a historical timeline of changes made to an S3 bucket's access policy over the last 90 days.
-  - *The Autopsy:* CloudTrail logs the individual API calls (`PutBucketPolicy`). But **AWS Config** maintains the actual timeline of configuration changes, showing you the exact visual diff between states and evaluating whether the bucket was compliant on any given day.
-* **Decoy #3: "AWS Health Dashboard" vs. "AWS Service Health Dashboard"**
+  - *The Autopsy:* CloudTrail logs the individual API calls (`PutBucketPolicy`). But **[AWS Config](../../AWS_SERVICES_GLOSSARY.md#aws-config)** maintains the actual timeline of configuration changes, showing you the exact visual diff between states and evaluating whether the bucket was compliant on any given day.
+* **Decoy #3: "[AWS Health Dashboard](../../AWS_SERVICES_GLOSSARY.md#aws-health-dashboard)" vs. "AWS Service Health Dashboard"**
   - *The Trap:* Where can a customer see alerts regarding maintenance events or service degradation affecting *their* specific running resources?
-  - *The Autopsy:* The public **AWS Service Health Dashboard** shows generic, public status for all AWS services worldwide. The **AWS Health Dashboard (Personal Health Dashboard)** provides personalized notifications and guidance tailored specifically to the customer's account and running resources.
+  - *The Autopsy:* The public **AWS Service Health Dashboard** shows generic, public status for all AWS services worldwide. The **[AWS Health Dashboard](../../AWS_SERVICES_GLOSSARY.md#aws-health-dashboard) (Personal Health Dashboard)** provides personalized notifications and guidance tailored specifically to the customer's account and running resources.
 
 ### 4. 10-Second Visual Decision Flowchart
 

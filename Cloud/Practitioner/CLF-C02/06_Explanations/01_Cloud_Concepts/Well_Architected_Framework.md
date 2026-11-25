@@ -42,7 +42,7 @@ $$\text{Availability} = \frac{\text{MTBF}}{\text{MTBF} + \text{MTTR}}$$
 
 ### 1.2 Blast Radius Containment and Loose Coupling
 * **Monolithic Systems (Tight Coupling):** If a payment processing module encounters an unhandled exception or memory leak, the entire application server crashes, taking down the catalog, user login, and cart.
-* **Microservices & Queuing (Loose Coupling):** Decoupling components using message queues (Amazon SQS) and event buses (Amazon EventBridge) isolates failure domains. If downstream worker nodes fail, messages buffer safely in the queue without customer transactions being dropped.
+* **Microservices & Queuing (Loose Coupling):** Decoupling components using message queues ([Amazon SQS](../../AWS_SERVICES_GLOSSARY.md#amazon-sqs)) and event buses ([Amazon EventBridge](../../AWS_SERVICES_GLOSSARY.md#amazon-eventbridge)) isolates failure domains. If downstream worker nodes fail, messages buffer safely in the queue without customer transactions being dropped.
 
 ---
 
@@ -52,9 +52,9 @@ Before the Well-Architected Framework provided codified cloud blueprints, enterp
 
 | Architectural Challenge | Traditional On-Premises Architecture | AWS Well-Architected Paradigm |
 |---|---|---|
-| **Capacity Guessing Games** | Engineers had to estimate server capacity 3 to 5 years in advance. Over-provisioning wasted millions; under-provisioning caused site crashes on Black Friday. | **Stop guessing capacity**. Resources scale out and in elastically using Amazon EC2 Auto Scaling and serverless compute. |
+| **Capacity Guessing Games** | Engineers had to estimate server capacity 3 to 5 years in advance. Over-provisioning wasted millions; under-provisioning caused site crashes on Black Friday. | **Stop guessing capacity**. Resources scale out and in elastically using [Amazon EC2 Auto Scaling](../../AWS_SERVICES_GLOSSARY.md#amazon-ec2-auto-scaling) and serverless compute. |
 | **Untested Recovery Procedures** | Disaster recovery plans lived in printed binder manuals on a shelf. Backup tapes were rarely tested; restore failures were discovered *during* real disasters. | **Test recovery procedures**. Simulate outages and test failovers using automated chaos engineering and simulated "Game Days". |
-| **Monolithic "Pet" Infrastructure** | Servers were treated like "pets"—individually named, lovingly configured by hand, and irreplaceable when an OS kernel corrupted. | **Infrastructure as Code (IaC)**. Servers are "cattle"—ephemeral, disposable, and launched automatically via AWS CloudFormation templates. |
+| **Monolithic "Pet" Infrastructure** | Servers were treated like "pets"—individually named, lovingly configured by hand, and irreplaceable when an OS kernel corrupted. | **Infrastructure as Code (IaC)**. Servers are "cattle"—ephemeral, disposable, and launched automatically via [AWS CloudFormation](../../AWS_SERVICES_GLOSSARY.md#aws-cloudformation) templates. |
 | **Undifferentiated Heavy Lifting** | Teams spent 70% of their engineering cycles racking servers, cabling patch panels, and applying firmware patches rather than writing business logic. | **Democratize advanced technologies**. Leverage managed services (RDS, DynamoDB, Bedrock) to focus entirely on customer value. |
 
 ---
@@ -98,12 +98,12 @@ graph LR
 ### Pillar 1: Operational Excellence
 * **Core Focus:** Running and monitoring systems to deliver business value and continually improving supporting processes and procedures.
 * **Key Design Principles:**
-  - *Perform operations as code:* Define infrastructure and operational runbooks as code using AWS CloudFormation and Systems Manager.
+  - *Perform operations as code:* Define infrastructure and operational runbooks as code using [AWS CloudFormation](../../AWS_SERVICES_GLOSSARY.md#aws-cloudformation) and Systems Manager.
   - *Make frequent, small, reversible changes:* Break updates into tiny increments that can be rolled back safely if metrics degrade.
   - *Refine operations procedures frequently:* Continuously update operational runbooks as workloads evolve.
   - *Anticipate failure:* Conduct "pre-mortem" exercises to identify potential points of failure before production launch.
   - *Learn from all operational failures:* Conduct blameless root-cause analysis (RCA) and convert findings into automated guardrails.
-* **Key Services:** AWS CloudFormation, AWS Systems Manager, Amazon CloudWatch, AWS Config.
+* **Key Services:** [AWS CloudFormation](../../AWS_SERVICES_GLOSSARY.md#aws-cloudformation), [AWS Systems Manager](../../AWS_SERVICES_GLOSSARY.md#aws-systems-manager), [Amazon CloudWatch](../../AWS_SERVICES_GLOSSARY.md#amazon-cloudwatch), [AWS Config](../../AWS_SERVICES_GLOSSARY.md#aws-config).
 
 ---
 
@@ -113,11 +113,11 @@ graph LR
   - *Implement a strong identity foundation:* Enforce least-privilege permissions, Multi-Factor Authentication (MFA), and centralized identity management via IAM Identity Center.
   - *Enable traceability:* Log, monitor, and alert on all API activities and configuration changes in real time via CloudTrail and CloudWatch.
   - *Apply security at all layers (Defense in Depth):* Deploy multiple defensive layers (CloudFront edge WAF, VPC Security Groups, OS patching, IAM policies).
-  - *Automate security best practices:* Automate remediation of misconfigurations using AWS Config rules, Amazon EventBridge, and AWS Lambda.
-  - *Protect data in transit and at rest:* Enforce TLS 1.3 encryption for data in transit and AWS KMS envelope encryption for data at rest.
+  - *Automate security best practices:* Automate remediation of misconfigurations using [AWS Config](../../AWS_SERVICES_GLOSSARY.md#aws-config) rules, [Amazon EventBridge](../../AWS_SERVICES_GLOSSARY.md#amazon-eventbridge), and [AWS Lambda](../../AWS_SERVICES_GLOSSARY.md#aws-lambda).
+  - *Protect data in transit and at rest:* Enforce TLS 1.3 encryption for data in transit and [AWS KMS](../../AWS_SERVICES_GLOSSARY.md#aws-kms) envelope encryption for data at rest.
   - *Keep people away from data:* Eliminate manual SSH or direct database access using automated processing pipelines and temporary credentials.
   - *Prepare for security events:* Build automated incident response runbooks and run security incident simulation game days.
-* **Key Services:** AWS IAM, AWS KMS, AWS Secrets Manager, AWS Shield, AWS WAF, Amazon GuardDuty, AWS Security Hub, Amazon Inspector, AWS CloudTrail.
+* **Key Services:** [AWS IAM](../../AWS_SERVICES_GLOSSARY.md#aws-iam), [AWS KMS](../../AWS_SERVICES_GLOSSARY.md#aws-kms), [AWS Secrets Manager](../../AWS_SERVICES_GLOSSARY.md#aws-secrets-manager), [AWS Shield](../../AWS_SERVICES_GLOSSARY.md#aws-shield), [AWS WAF](../../AWS_SERVICES_GLOSSARY.md#aws-waf), [Amazon GuardDuty](../../AWS_SERVICES_GLOSSARY.md#amazon-guardduty), [AWS Security Hub](../../AWS_SERVICES_GLOSSARY.md#aws-security-hub), [Amazon Inspector](../../AWS_SERVICES_GLOSSARY.md#amazon-inspector), [AWS CloudTrail](../../AWS_SERVICES_GLOSSARY.md#aws-cloudtrail).
 
 ---
 
@@ -125,23 +125,23 @@ graph LR
 * **Core Focus:** Ensuring a workload performs its intended function correctly and consistently when it is expected to, and quickly recovering from failures.
 * **Key Design Principles:**
   - *Automatically recover from failure:* Monitor Key Performance Indicators (KPIs) and trigger automated self-healing (e.g., EC2 Auto Scaling spinning up replacement instances, Route 53 health-check failover).
-  - *Test recovery procedures:* Use chaos engineering tools (AWS Fault Injection Service) to simulate outages and prove systems recover automatically.
+  - *Test recovery procedures:* Use chaos engineering tools ([AWS Fault Injection Service](../../AWS_SERVICES_GLOSSARY.md#aws-fault-injection-service)) to simulate outages and prove systems recover automatically.
   - *Scale horizontally to increase aggregate workload availability:* Replace single large servers with fleets of smaller instances to reduce the blast radius of any individual hardware crash.
   - *Stop guessing capacity:* Use Auto Scaling to handle variable traffic spikes without resource exhaustion or manual provisioning.
   - *Manage change in automation:* Deploy all infrastructure changes via automated CI/CD pipelines.
-* **Key Services:** AWS Auto Scaling, Elastic Load Balancing (ELB), Amazon Route 53, AWS Backup, Amazon S3 (11 9s durability), AWS Fault Injection Service.
+* **Key Services:** AWS Auto Scaling, [Elastic Load Balancing](../../AWS_SERVICES_GLOSSARY.md#elastic-load-balancing) (ELB), [Amazon Route 53](../../AWS_SERVICES_GLOSSARY.md#amazon-route-53), [AWS Backup](../../AWS_SERVICES_GLOSSARY.md#aws-backup), [Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3) (11 9s durability), [AWS Fault Injection Service](../../AWS_SERVICES_GLOSSARY.md#aws-fault-injection-service).
 
 ---
 
 ### Pillar 4: Performance Efficiency
 * **Core Focus:** Using computing resources efficiently to meet system requirements and maintaining that efficiency as demand changes and technologies evolve.
 * **Key Design Principles:**
-  - *Democratize advanced technologies:* Use managed cloud services (e.g., Amazon SageMaker for ML, Amazon RDS for databases) instead of managing complex custom software installations.
+  - *Democratize advanced technologies:* Use managed cloud services (e.g., [Amazon SageMaker](../../AWS_SERVICES_GLOSSARY.md#amazon-sagemaker) for ML, [Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds) for databases) instead of managing complex custom software installations.
   - *Go global in minutes:* Deploy workloads across multiple AWS Regions and 600+ Edge Locations to deliver low latency to global users.
-  - *Use serverless architectures:* Eliminate server management overhead by leveraging AWS Lambda, Amazon DynamoDB, and AWS Fargate.
+  - *Use serverless architectures:* Eliminate server management overhead by leveraging [AWS Lambda](../../AWS_SERVICES_GLOSSARY.md#aws-lambda), [Amazon DynamoDB](../../AWS_SERVICES_GLOSSARY.md#amazon-dynamodb), and [AWS Fargate](../../AWS_SERVICES_GLOSSARY.md#aws-fargate).
   - *Experiment more often:* Rapidly test different instance families, storage types, and architectures using Infrastructure as Code.
   - *Consider mechanical sympathy:* Match the workload's specific compute/storage profile to the underlying hardware (e.g., memory-optimized instances for Redis caches; NVMe storage-optimized instances for high-IOPS analytics).
-* **Key Services:** AWS Lambda, AWS Fargate, Amazon CloudFront, Amazon ElastiCache, AWS Compute Optimizer.
+* **Key Services:** [AWS Lambda](../../AWS_SERVICES_GLOSSARY.md#aws-lambda), [AWS Fargate](../../AWS_SERVICES_GLOSSARY.md#aws-fargate), [Amazon CloudFront](../../AWS_SERVICES_GLOSSARY.md#amazon-cloudfront), [Amazon ElastiCache](../../AWS_SERVICES_GLOSSARY.md#amazon-elasticache), [AWS Compute Optimizer](../../AWS_SERVICES_GLOSSARY.md#aws-compute-optimizer).
 
 ---
 
@@ -153,26 +153,26 @@ graph LR
   - *Measure overall efficiency:* Measure business output per dollar spent to quantify return on cloud investments.
   - *Stop spending money on undifferentiated heavy lifting:* Let AWS handle the physical maintenance of data centers, cooling, and hardware replacement.
   - *Analyze and attribute expenditure:* Use cost allocation tags to accurately attribute cloud spending to specific departments, projects, or applications.
-* **Key Services:** AWS Cost Explorer, AWS Budgets, AWS Compute Optimizer, Savings Plans, Amazon EC2 Spot Instances, AWS Trusted Advisor.
+* **Key Services:** [AWS Cost Explorer](../../AWS_SERVICES_GLOSSARY.md#aws-cost-explorer), [AWS Budgets](../../AWS_SERVICES_GLOSSARY.md#aws-budgets), [AWS Compute Optimizer](../../AWS_SERVICES_GLOSSARY.md#aws-compute-optimizer), Savings Plans, [Amazon EC2](../../AWS_SERVICES_GLOSSARY.md#amazon-ec2) Spot Instances, [AWS Trusted Advisor](../../AWS_SERVICES_GLOSSARY.md#aws-trusted-advisor).
 
 ---
 
 ### Pillar 6: Sustainability
 * **Core Focus:** Minimizing the environmental impact of running cloud workloads, with an emphasis on energy consumption and carbon efficiency.
 * **Key Design Principles:**
-  - *Understand your impact:* Quantify energy consumption and carbon emissions associated with cloud workloads using the AWS Customer Carbon Footprint Tool.
+  - *Understand your impact:* Quantify energy consumption and carbon emissions associated with cloud workloads using the [AWS Customer Carbon Footprint Tool](../../AWS_SERVICES_GLOSSARY.md#aws-customer-carbon-footprint-tool).
   - *Establish sustainability goals:* Set long-term carbon reduction targets for all cloud workloads.
   - *Maximize utilization:* Right-size compute instances and eliminate idle capacity to ensure high energy efficiency per unit of work.
   - *Adopt new, more efficient hardware and software offerings:* Migrate workloads to custom-designed AWS Graviton processors (which deliver up to 60% less energy consumption for equivalent compute performance).
-  - *Use managed services:* Multi-tenant managed services (such as Amazon S3 or AWS Lambda) pool compute and storage across millions of users, maximizing physical server energy efficiency.
+  - *Use managed services:* Multi-tenant managed services (such as [Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3) or [AWS Lambda](../../AWS_SERVICES_GLOSSARY.md#aws-lambda)) pool compute and storage across millions of users, maximizing physical server energy efficiency.
   - *Reduce downstream impact of cloud workloads:* Optimize application code, compress payloads, and minimize user data transfer to reduce energy consumed on end-user devices.
-* **Key Services:** AWS Customer Carbon Footprint Tool, AWS Graviton processors, AWS Compute Optimizer.
+* **Key Services:** [AWS Customer Carbon Footprint Tool](../../AWS_SERVICES_GLOSSARY.md#aws-customer-carbon-footprint-tool), AWS Graviton processors, [AWS Compute Optimizer](../../AWS_SERVICES_GLOSSARY.md#aws-compute-optimizer).
 
 ---
 
 ## 5. The AWS Well-Architected Tool & Architectural Lenses
 
-The **AWS Well-Architected Tool** is a free self-service governance service in the AWS Management Console that allows organizations to review their architectures against AWS best practices:
+The **[AWS Well-Architected Tool](../../AWS_SERVICES_GLOSSARY.md#aws-well-architected-tool)** is a free self-service governance service in the AWS Management Console that allows organizations to review their architectures against AWS best practices:
 
 ```mermaid
 flowchart LR
@@ -229,7 +229,7 @@ Many `CLF-C02` questions test design principles that sound similar across two pi
 | *"Democratize advanced technologies", "mechanical sympathy", "go global in minutes"* | **Performance Efficiency** | Trap: Do not select Cost Optimization. Using serverless to offload management overhead is a Performance Efficiency principle. |
 | *"Stop spending money on undifferentiated heavy lifting", "consumption model"* | **Cost Optimization** | Trap: Do not select Operational Excellence. Heavy lifting elimination in financial contexts refers to avoiding datacenter CapEx. |
 | *"Minimize environmental impact", "reduce carbon footprint", "AWS Graviton"* | **Sustainability** | Trap: Do not confuse with Cost Optimization. Lowering carbon emissions is Sustainability; saving money is Cost Optimization. |
-| *"Structured questionnaire tool in the console to evaluate workloads against best practices"* | **AWS Well-Architected Tool** | Trap: Do not choose AWS Trusted Advisor. Trusted Advisor automatically scans live API configs; Well-Architected Tool is a structured review questionnaire. |
+| *"Structured questionnaire tool in the console to evaluate workloads against best practices"* | **[AWS Well-Architected Tool](../../AWS_SERVICES_GLOSSARY.md#aws-well-architected-tool)** | Trap: Do not choose [AWS Trusted Advisor](../../AWS_SERVICES_GLOSSARY.md#aws-trusted-advisor). Trusted Advisor automatically scans live API configs; Well-Architected Tool is a structured review questionnaire. |
 
 ---
 
@@ -237,21 +237,21 @@ Many `CLF-C02` questions test design principles that sound similar across two pi
 
 ### Question 1
 **An enterprise architecture team wants to evaluate a newly designed financial application against AWS best practices and generate actionable guidance to remediate High-Risk Issues (HRIs). Which AWS tool or service should they use?**
-- A) AWS Trusted Advisor
-- B) AWS Well-Architected Tool
-- C) AWS Systems Manager
-- D) AWS Compute Optimizer
+- A) [AWS Trusted Advisor](../../AWS_SERVICES_GLOSSARY.md#aws-trusted-advisor)
+- B) [AWS Well-Architected Tool](../../AWS_SERVICES_GLOSSARY.md#aws-well-architected-tool)
+- C) [AWS Systems Manager](../../AWS_SERVICES_GLOSSARY.md#aws-systems-manager)
+- D) [AWS Compute Optimizer](../../AWS_SERVICES_GLOSSARY.md#aws-compute-optimizer)
 
 <details>
 <summary><b>Click to View Answer & Detailed Distractor Analysis</b></summary>
 
-**Correct Answer:** **B) AWS Well-Architected Tool**
+**Correct Answer:** **B) [AWS Well-Architected Tool](../../AWS_SERVICES_GLOSSARY.md#aws-well-architected-tool)**
 
-* **Why it's correct:** The AWS Well-Architected Tool is a free self-service assessment tool in the AWS Management Console that guides architecture teams through structured questionnaires based on the 6 Pillars, identifying High-Risk Issues (HRIs) and generating customized improvement plans.
+* **Why it's correct:** The [AWS Well-Architected Tool](../../AWS_SERVICES_GLOSSARY.md#aws-well-architected-tool) is a free self-service assessment tool in the AWS Management Console that guides architecture teams through structured questionnaires based on the 6 Pillars, identifying High-Risk Issues (HRIs) and generating customized improvement plans.
 * **Distractor Analysis:**
-  - *A is incorrect:* AWS Trusted Advisor inspects active infrastructure against standard AWS recommendations (cost, performance, security, fault tolerance, quotas) automatically, but does not conduct structured questionnaire-based architectural reviews.
-  - *C is incorrect:* AWS Systems Manager is an operational management hub for managing EC2 instance configurations, patch baselines, and running remote shell scripts.
-  - *D is incorrect:* AWS Compute Optimizer uses machine learning to analyze CloudWatch metrics and recommend rightsizing compute, EBS volumes, and Lambda memory configurations.
+  - *A is incorrect:* [AWS Trusted Advisor](../../AWS_SERVICES_GLOSSARY.md#aws-trusted-advisor) inspects active infrastructure against standard AWS recommendations (cost, performance, security, fault tolerance, quotas) automatically, but does not conduct structured questionnaire-based architectural reviews.
+  - *C is incorrect:* [AWS Systems Manager](../../AWS_SERVICES_GLOSSARY.md#aws-systems-manager) is an operational management hub for managing EC2 instance configurations, patch baselines, and running remote shell scripts.
+  - *D is incorrect:* [AWS Compute Optimizer](../../AWS_SERVICES_GLOSSARY.md#aws-compute-optimizer) uses machine learning to analyze CloudWatch metrics and recommend rightsizing compute, EBS volumes, and Lambda memory configurations.
 </details>
 
 ---
@@ -278,7 +278,7 @@ Many `CLF-C02` questions test design principles that sound similar across two pi
 ---
 
 ### Question 3
-**A development team uses AWS CloudFormation to define their cloud infrastructure and establishes CI/CD deployment pipelines that release small, frequent, and reversible updates to production. Which Well-Architected Pillar does this pattern directly embody?**
+**A development team uses [AWS CloudFormation](../../AWS_SERVICES_GLOSSARY.md#aws-cloudformation) to define their cloud infrastructure and establishes CI/CD deployment pipelines that release small, frequent, and reversible updates to production. Which Well-Architected Pillar does this pattern directly embody?**
 - A) Security Pillar
 - B) Operational Excellence Pillar
 - C) Cost Optimization Pillar
@@ -320,7 +320,7 @@ Many `CLF-C02` questions test design principles that sound similar across two pi
 ---
 
 ### Question 5
-**An architectural team chooses an Amazon S3 Intelligent-Tiering storage class and configures Amazon EC2 Auto Scaling to terminate idle development servers outside business hours. Which Well-Architected Pillar are they directly optimizing?**
+**An architectural team chooses an [Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3) Intelligent-Tiering storage class and configures [Amazon EC2 Auto Scaling](../../AWS_SERVICES_GLOSSARY.md#amazon-ec2-auto-scaling) to terminate idle development servers outside business hours. Which Well-Architected Pillar are they directly optimizing?**
 - A) Security Pillar
 - B) Cost Optimization Pillar
 - C) Operational Excellence Pillar
@@ -355,8 +355,8 @@ When reading a question scenario, search for these exact phrasing triggers:
 | *"Democratize advanced technologies"* or *"Go global in minutes"* or *"Use serverless architectures"* | **Performance Efficiency Pillar** | *Operational Excellence* |
 | *"Adopt a consumption model"* or *"Stop spending money on undifferentiated heavy lifting"* | **Cost Optimization Pillar** | *Sustainability* |
 | *"Understand your impact"* or *"Maximize utilization"* or *"Adopt energy-efficient chips (AWS Graviton)"* | **Sustainability Pillar** | *Cost Optimization* (Environmental impact = Sustainability!) |
-| *"Review workloads against 6 pillars, identify High Risk Issues (HRIs), and get improvement plans"* | **AWS Well-Architected Tool** | *AWS Trusted Advisor* (Trusted Advisor checks live account resources; WAF Tool is a guided architectural review) |
-| *"Online tool that provides real-time checks across Cost, Performance, Security, Fault Tolerance, Quotas"* | **AWS Trusted Advisor** | *AWS Well-Architected Tool* |
+| *"Review workloads against 6 pillars, identify High Risk Issues (HRIs), and get improvement plans"* | **[AWS Well-Architected Tool](../../AWS_SERVICES_GLOSSARY.md#aws-well-architected-tool)** | *[AWS Trusted Advisor](../../AWS_SERVICES_GLOSSARY.md#aws-trusted-advisor)* (Trusted Advisor checks live account resources; WAF Tool is a guided architectural review) |
+| *"Online tool that provides real-time checks across Cost, Performance, Security, Fault Tolerance, Quotas"* | **[AWS Trusted Advisor](../../AWS_SERVICES_GLOSSARY.md#aws-trusted-advisor)** | *[AWS Well-Architected Tool](../../AWS_SERVICES_GLOSSARY.md#aws-well-architected-tool)* |
 
 ### 2. The 3-Step Rapid Elimination Heuristic
 When evaluating a Well-Architected Framework question:
@@ -373,8 +373,8 @@ When evaluating a Well-Architected Framework question:
      - If the prompt says "reduce monthly expenditure" $\to$ **Cost Optimization**.
      - If the prompt says "minimize environmental footprint / carbon intensity" $\to$ **Sustainability**.
 3. **Step 3: Differentiate Tooling (Well-Architected Tool vs. Trusted Advisor):**
-   - Did the question ask about an **architectural review against official AWS best practice questionnaires**? $\to$ **AWS Well-Architected Tool**.
-   - Did it ask for an **automated dashboard scanning your live resources** for open security ports or unattached EBS volumes? $\to$ **AWS Trusted Advisor**.
+   - Did the question ask about an **architectural review against official AWS best practice questionnaires**? $\to$ **[AWS Well-Architected Tool](../../AWS_SERVICES_GLOSSARY.md#aws-well-architected-tool)**.
+   - Did it ask for an **automated dashboard scanning your live resources** for open security ports or unattached EBS volumes? $\to$ **[AWS Trusted Advisor](../../AWS_SERVICES_GLOSSARY.md#aws-trusted-advisor)**.
 
 ### 3. High-Frequency Decoy Autopsy: Why AWS Tries to Trick You
 * **Decoy #1: "Operational Excellence" vs. "Reliability"**

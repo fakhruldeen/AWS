@@ -9,12 +9,12 @@
 ## 💡 The Real-World Analogy (ELI5)
 
 > **The Industrial Data Intelligence Factory & Moving Fleet:**
-> - **Amazon Athena (The High-Powered Searchlight):** Instead of spending weeks unboxing and loading millions of paper spreadsheets into a rigid filing cabinet, you shine a high-powered searchlight directly at raw files sitting in the Amazon S3 warehouse and read the answers using standard SQL queries on the fly.
-> - **AWS Glue (The Automated Sorting & Cleaning Conveyor):** The automated assembly line that inspects messy, dirty incoming data, catalogs its shape (Data Catalog), scrubs out defects, and formats it neatly (ETL — Extract, Transform, Load) for analysis.
-> - **Amazon EMR (The Fleet of Heavy Industrial Dump Trucks):** A massive fleet of heavy Caterpillar dump trucks running Apache Spark and Hadoop, crunching petabytes of big data distributed across hundreds of cooperating engines.
-> - **Amazon Bedrock (The Generative AI Vending Machine):** An automated vending machine serving leading frontier Artificial Intelligence models (Anthropic Claude, Meta Llama, Amazon Titan). You don't build a multi-billion-dollar supercomputer or train neural networks from scratch; you insert an API token and receive state-of-the-art generative responses instantly.
-> - **Amazon SageMaker (The Master Formula 1 R&D Machine Shop):** The complete professional engineering workshop for professional data scientists to build, train, fine-tune, tune hyperparameters, and deploy custom machine learning algorithms on dedicated GPU clusters.
-> - **AWS Application Migration Service - MGN (The Active House Mover):** A specialized team that moves your entire operating living room into a new house while you are still sitting on the couch watching television (continuous block-level server replication with near-zero cutover downtime).
+> - **[Amazon Athena](../../AWS_SERVICES_GLOSSARY.md#amazon-athena) (The High-Powered Searchlight):** Instead of spending weeks unboxing and loading millions of paper spreadsheets into a rigid filing cabinet, you shine a high-powered searchlight directly at raw files sitting in the [Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3) warehouse and read the answers using standard SQL queries on the fly.
+> - **[AWS Glue](../../AWS_SERVICES_GLOSSARY.md#aws-glue) (The Automated Sorting & Cleaning Conveyor):** The automated assembly line that inspects messy, dirty incoming data, catalogs its shape (Data Catalog), scrubs out defects, and formats it neatly (ETL — Extract, Transform, Load) for analysis.
+> - **[Amazon EMR](../../AWS_SERVICES_GLOSSARY.md#amazon-emr) (The Fleet of Heavy Industrial Dump Trucks):** A massive fleet of heavy Caterpillar dump trucks running Apache Spark and Hadoop, crunching petabytes of big data distributed across hundreds of cooperating engines.
+> - **[Amazon Bedrock](../../AWS_SERVICES_GLOSSARY.md#amazon-bedrock) (The Generative AI Vending Machine):** An automated vending machine serving leading frontier Artificial Intelligence models (Anthropic Claude, Meta Llama, Amazon Titan). You don't build a multi-billion-dollar supercomputer or train neural networks from scratch; you insert an API token and receive state-of-the-art generative responses instantly.
+> - **[Amazon SageMaker](../../AWS_SERVICES_GLOSSARY.md#amazon-sagemaker) (The Master Formula 1 R&D Machine Shop):** The complete professional engineering workshop for professional data scientists to build, train, fine-tune, tune hyperparameters, and deploy custom machine learning algorithms on dedicated GPU clusters.
+> - **[AWS Application Migration Service](../../AWS_SERVICES_GLOSSARY.md#aws-application-migration-service) - MGN (The Active House Mover):** A specialized team that moves your entire operating living room into a new house while you are still sitting on the couch watching television (continuous block-level server replication with near-zero cutover downtime).
 
 ---
 
@@ -40,12 +40,12 @@ flowchart TD
 
 ### 1.1 Schema-on-Write vs. Schema-on-Read
 * **Schema-on-Write (Traditional Relational):** Data must be rigorously parsed, validated, and transformed into strict tabular schemas *before* it can be written to disk. If a record contains an unexpected column, the write transaction fails.
-* **Schema-on-Read (Amazon Athena & AWS Glue):** Raw, unstructured, or semi-structured data (JSON, CSV, Parquet) is written directly into Amazon S3 in its native raw state. The schema is applied mathematically only when an analyst executes a query. This eliminates months of upfront database design.
+* **Schema-on-Read ([Amazon Athena](../../AWS_SERVICES_GLOSSARY.md#amazon-athena) & [AWS Glue](../../AWS_SERVICES_GLOSSARY.md#aws-glue)):** Raw, unstructured, or semi-structured data (JSON, CSV, Parquet) is written directly into [Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3) in its native raw state. The schema is applied mathematically only when an analyst executes a query. This eliminates months of upfront database design.
 
 ### 1.2 Columnar Storage Compression Mechanics (Apache Parquet / ORC)
-When querying a 1 Terabyte dataset of user transactions in Amazon Athena:
+When querying a 1 Terabyte dataset of user transactions in [Amazon Athena](../../AWS_SERVICES_GLOSSARY.md#amazon-athena):
 * If the data is stored as uncompressed CSV, Athena must physically scan all **1,000 GB**, costing $\$5.00$ ($1\text{ TB} \times \$5/\text{TB}$).
-* If converted by **AWS Glue** into columnar **Apache Parquet**, queries requesting only `TotalAmount` scan **less than 20 GB** (a $98\%$ reduction in disk I/O and query cost).
+* If converted by **[AWS Glue](../../AWS_SERVICES_GLOSSARY.md#aws-glue)** into columnar **Apache Parquet**, queries requesting only `TotalAmount` scan **less than 20 GB** (a $98\%$ reduction in disk I/O and query cost).
 
 ---
 
@@ -55,10 +55,10 @@ Before serverless cloud analytics and managed generative AI, extracting business
 
 | Enterprise Data Challenge | Traditional On-Premises Reality | AWS Cloud Analytics & AI Paradigm |
 |---|---|---|
-| **Hadoop/Spark Cluster Maintenance** | Sysadmins spent weeks configuring ZooKeeper, Ambari, and failed physical disk spindles in noisy server rooms just to keep a 50-node Hadoop cluster running. | **Amazon EMR & AWS Glue**. Deploy auto-scaling Apache Spark clusters in minutes, or run fully serverless ETL jobs without managing a single server. |
-| **Expensive BI Licensing & Slow Queries** | Legacy business intelligence tools charged \$10,000+ per user license and took 4 hours to run end-of-month reporting queries. | **Amazon QuickSight & Redshift**. Serverless pay-per-session BI dashboards powered by the in-memory SPICE calculation engine. |
-| **Exorbitant Generative AI Training Costs** | Building generative AI capabilities required acquiring rare \$40,000 GPUs, writing CUDA code, and spending millions of dollars on base model training. | **Amazon Bedrock**. Access pre-trained frontier foundation models (Claude 3.5, Llama 3) via a single standardized serverless API. |
-| **High-Risk Cutover Downtime Migrations** | Migrating an on-premises physical server required a 48-hour scheduled maintenance window, leaving customer applications completely offline. | **AWS Application Migration Service (MGN)**. Replicates server disks continuously in the background at the block level; cutover takes **minutes**. |
+| **Hadoop/Spark Cluster Maintenance** | Sysadmins spent weeks configuring ZooKeeper, Ambari, and failed physical disk spindles in noisy server rooms just to keep a 50-node Hadoop cluster running. | **[Amazon EMR](../../AWS_SERVICES_GLOSSARY.md#amazon-emr) & [AWS Glue](../../AWS_SERVICES_GLOSSARY.md#aws-glue)**. Deploy auto-scaling Apache Spark clusters in minutes, or run fully serverless ETL jobs without managing a single server. |
+| **Expensive BI Licensing & Slow Queries** | Legacy business intelligence tools charged \$10,000+ per user license and took 4 hours to run end-of-month reporting queries. | **[Amazon QuickSight](../../AWS_SERVICES_GLOSSARY.md#amazon-quicksight) & Redshift**. Serverless pay-per-session BI dashboards powered by the in-memory SPICE calculation engine. |
+| **Exorbitant Generative AI Training Costs** | Building generative AI capabilities required acquiring rare \$40,000 GPUs, writing CUDA code, and spending millions of dollars on base model training. | **[Amazon Bedrock](../../AWS_SERVICES_GLOSSARY.md#amazon-bedrock)**. Access pre-trained frontier foundation models (Claude 3.5, Llama 3) via a single standardized serverless API. |
+| **High-Risk Cutover Downtime Migrations** | Migrating an on-premises physical server required a 48-hour scheduled maintenance window, leaving customer applications completely offline. | **[AWS Application Migration Service](../../AWS_SERVICES_GLOSSARY.md#aws-application-migration-service) (MGN)**. Replicates server disks continuously in the background at the block level; cutover takes **minutes**. |
 
 ---
 
@@ -80,7 +80,7 @@ graph TD
 ```
 
 ### 3.1 Amazon Athena: Serverless Interactive SQL
-* **What it is:** An interactive, serverless query service that makes it easy to analyze data directly in **Amazon S3** using standard ANSI SQL.
+* **What it is:** An interactive, serverless query service that makes it easy to analyze data directly in **[Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3)** using standard ANSI SQL.
 * **Core Characteristics:**
   - *Completely Serverless:* Zero infrastructure to set up, manage, or scale.
   - *Pricing Model:* Pay strictly for the volume of data scanned by your queries (standard: **\$5.00 per Terabyte scanned**).
@@ -89,17 +89,17 @@ graph TD
 ### 3.2 AWS Glue: Serverless ETL & Central Data Catalog
 * **What it is:** A serverless data integration service that makes it easy to discover, prepare, and combine data for analytics, machine learning, and application development.
 * **Core Components:**
-  - **AWS Glue Data Catalog:** A centralized, unified persistent metadata store that stores table definitions, schemas, and partition metrics across all your cloud data.
+  - **[AWS Glue](../../AWS_SERVICES_GLOSSARY.md#aws-glue) Data Catalog:** A centralized, unified persistent metadata store that stores table definitions, schemas, and partition metrics across all your cloud data.
   - **Glue Crawlers:** Automated crawlers that scan S3 storage buckets, automatically infer data formats and schemas, and write table definitions into the Data Catalog.
   - **Glue ETL:** Serverless Apache Spark execution engine that extracts data from source repositories, cleans and transforms it, and loads it into target data warehouses.
 
 ### 3.3 Amazon EMR (Elastic MapReduce)
 * **What it is:** A cloud big data platform for processing vast amounts of data using open-source distributed frameworks such as **Apache Spark, Apache Hadoop, Apache Hive, and Presto**.
-* **Key Use Cases:** Running petabyte-scale data transformations, distributed machine learning pipelines, and financial risk modeling across clusters of Amazon EC2 instances (leveraging EC2 Spot Instances for up to 90% cost savings).
+* **Key Use Cases:** Running petabyte-scale data transformations, distributed machine learning pipelines, and financial risk modeling across clusters of [Amazon EC2](../../AWS_SERVICES_GLOSSARY.md#amazon-ec2) instances (leveraging EC2 Spot Instances for up to 90% cost savings).
 
 ### 3.4 Amazon Kinesis: Real-Time Data Streaming
-* **Amazon Kinesis Data Streams:** Ingests and stores high-volume streaming data (clickstreams, financial transactions, IoT telemetry) at sub-second latency for custom real-time processing applications.
-* **Amazon Kinesis Data Firehose:** A fully managed, serverless delivery stream that loads streaming data automatically into **Amazon S3, Amazon Redshift, Amazon OpenSearch Service, or Splunk** without writing custom ingestion code.
+* **[Amazon Kinesis](../../AWS_SERVICES_GLOSSARY.md#amazon-kinesis) Data Streams:** Ingests and stores high-volume streaming data (clickstreams, financial transactions, IoT telemetry) at sub-second latency for custom real-time processing applications.
+* **[Amazon Kinesis](../../AWS_SERVICES_GLOSSARY.md#amazon-kinesis) Data Firehose:** A fully managed, serverless delivery stream that loads streaming data automatically into **[Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3), [Amazon Redshift](../../AWS_SERVICES_GLOSSARY.md#amazon-redshift), [Amazon OpenSearch Service](../../AWS_SERVICES_GLOSSARY.md#amazon-opensearch-service), or Splunk** without writing custom ingestion code.
 
 ---
 
@@ -122,18 +122,18 @@ graph TD
 * **What it is:** The easiest way to build and scale generative AI applications using leading **Foundation Models (FMs)** through a single, unified serverless API.
 * **Model Choice:** Direct API access to leading models from AI21 Labs, Anthropic (Claude), Cohere, Meta (Llama), Mistral AI, and Amazon (Titan).
 * **Enterprise Security & Privacy:** Customer data is encrypted in transit and at rest and **is never used to train the base models**, ensuring absolute corporate intellectual property protection.
-* **Knowledge Bases for Bedrock (RAG):** Connects foundation models securely to internal company data sources (in Amazon S3 or vector stores) to provide context-aware, hallucination-free generative answers without manual model retraining.
+* **Knowledge Bases for Bedrock (RAG):** Connects foundation models securely to internal company data sources (in [Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3) or vector stores) to provide context-aware, hallucination-free generative answers without manual model retraining.
 
 ### 4.2 Custom Machine Learning: Amazon SageMaker
 * **What it is:** A fully managed platform that provides every developer and data scientist with the tools to **build, train, evaluate, tune, and deploy** custom machine learning models at scale.
 * **Components:** SageMaker Studio (unified IDE), SageMaker Autopilot (automated machine learning - AutoML), SageMaker JumpStart (pre-trained model hub), and managed distributed GPU training clusters.
 
 ### 4.3 Turnkey Pre-Trained AI Services (No ML Expertise Required!)
-1. **Amazon Rekognition:** Computer vision service that automatically analyzes images and videos to identify objects, people, faces, text, and inappropriate content.
-2. **Amazon Comprehend:** Natural Language Processing (NLP) service that extracts key phrases, entities, sentiments, and topics from unstructured text (emails, customer reviews).
-3. **Amazon Transcribe:** Automatic Speech Recognition (ASR) service that converts spoken audio into accurate text transcripts.
-4. **Amazon Polly:** Text-to-Speech (TTS) service that turns written text into lifelike synthetic speech in dozens of languages and voices.
-5. **Amazon Textract:** Intelligent document analysis service that automatically extracts typed and handwritten text, form key-value pairs, and tabular data from scanned documents and PDFs (far beyond basic optical character recognition - OCR).
+1. **[Amazon Rekognition](../../AWS_SERVICES_GLOSSARY.md#amazon-rekognition):** Computer vision service that automatically analyzes images and videos to identify objects, people, faces, text, and inappropriate content.
+2. **[Amazon Comprehend](../../AWS_SERVICES_GLOSSARY.md#amazon-comprehend):** Natural Language Processing (NLP) service that extracts key phrases, entities, sentiments, and topics from unstructured text (emails, customer reviews).
+3. **[Amazon Transcribe](../../AWS_SERVICES_GLOSSARY.md#amazon-transcribe):** Automatic Speech Recognition (ASR) service that converts spoken audio into accurate text transcripts.
+4. **[Amazon Polly](../../AWS_SERVICES_GLOSSARY.md#amazon-polly):** Text-to-Speech (TTS) service that turns written text into lifelike synthetic speech in dozens of languages and voices.
+5. **[Amazon Textract](../../AWS_SERVICES_GLOSSARY.md#amazon-textract):** Intelligent document analysis service that automatically extracts typed and handwritten text, form key-value pairs, and tabular data from scanned documents and PDFs (far beyond basic optical character recognition - OCR).
 
 ---
 
@@ -149,12 +149,12 @@ flowchart LR
 
 ### 5.1 AWS Application Migration Service (AWS MGN)
 * **What it is:** The primary, recommended migration service for lifting and shifting physical, virtual, or cloud-based servers to AWS with minimal downtime.
-* **Mechanism:** Installs a lightweight replication agent on source servers that performs non-disruptive, continuous, block-level storage replication directly to an Amazon EC2 staging environment. Cutover takes mere minutes.
+* **Mechanism:** Installs a lightweight replication agent on source servers that performs non-disruptive, continuous, block-level storage replication directly to an [Amazon EC2](../../AWS_SERVICES_GLOSSARY.md#amazon-ec2) staging environment. Cutover takes mere minutes.
 
 ### 5.2 AWS Database Migration Service (AWS DMS)
 * **What it is:** A managed migration engine that helps migrate relational databases, data warehouses, and NoSQL databases to AWS quickly and securely.
-* **Zero Downtime (CDC):** The source database **remains fully operational** during the migration. AWS DMS continuously captures and replicates ongoing changes (Change Data Capture - CDC) until final cutover.
-* **Homogeneous & Heterogeneous Migrations:** Supports migrating between identical engines (e.g., Oracle to Oracle on RDS) or between disparate engines (e.g., Oracle to Amazon Aurora PostgreSQL) when paired with the **AWS Schema Conversion Tool (SCT)**.
+* **Zero Downtime (CDC):** The source database **remains fully operational** during the migration. [AWS DMS](../../AWS_SERVICES_GLOSSARY.md#aws-dms) continuously captures and replicates ongoing changes (Change Data Capture - CDC) until final cutover.
+* **Homogeneous & Heterogeneous Migrations:** Supports migrating between identical engines (e.g., Oracle to Oracle on RDS) or between disparate engines (e.g., Oracle to [Amazon Aurora](../../AWS_SERVICES_GLOSSARY.md#amazon-aurora) PostgreSQL) when paired with the **AWS Schema Conversion Tool (SCT)**.
 
 ---
 
@@ -162,13 +162,13 @@ flowchart LR
 
 | Service | Primary Category | What It Does / Analyzes | Operating Model | Primary Exam Clue Keyword |
 |---|---|---|---|---|
-| **Amazon Athena** | Analytics / Query | Queries S3 files directly using standard ANSI SQL | Serverless (Pay per TB scanned) | *"Query S3 files directly using standard SQL without servers"* |
-| **AWS Glue** | Analytics / ETL | Automated schema discovery & data transformation | Serverless (Managed Spark) | *"Automated ETL, schema crawlers, central Data Catalog"* |
-| **Amazon EMR** | Analytics / Big Data | Runs Apache Spark, Hadoop, Hive, Presto clusters | Managed EC2 Cluster | *"Big data framework, Hadoop, Spark, petabyte processing"* |
-| **Amazon Bedrock** | Generative AI | Access foundation models (Claude, Titan) via API | Fully Serverless API | *"Leading foundation models via API without managing infrastructure"* |
-| **Amazon SageMaker** | Machine Learning | Build, train, evaluate, and deploy custom ML models | Managed ML Platform | *"Complete machine learning lifecycle for data scientists"* |
-| **Amazon Textract** | Specialized AI | Extracts text, forms, and tables from scanned documents | Managed Pre-trained API | *"Extract text, tables, and form fields from PDF documents"* |
-| **AWS Application Migration Service (MGN)** | Cloud Migration | Replicates physical/virtual servers to Amazon EC2 | Block-level replication | *"Lift-and-shift server migration with minimal downtime"* |
+| **[Amazon Athena](../../AWS_SERVICES_GLOSSARY.md#amazon-athena)** | Analytics / Query | Queries S3 files directly using standard ANSI SQL | Serverless (Pay per TB scanned) | *"Query S3 files directly using standard SQL without servers"* |
+| **[AWS Glue](../../AWS_SERVICES_GLOSSARY.md#aws-glue)** | Analytics / ETL | Automated schema discovery & data transformation | Serverless (Managed Spark) | *"Automated ETL, schema crawlers, central Data Catalog"* |
+| **[Amazon EMR](../../AWS_SERVICES_GLOSSARY.md#amazon-emr)** | Analytics / Big Data | Runs Apache Spark, Hadoop, Hive, Presto clusters | Managed EC2 Cluster | *"Big data framework, Hadoop, Spark, petabyte processing"* |
+| **[Amazon Bedrock](../../AWS_SERVICES_GLOSSARY.md#amazon-bedrock)** | Generative AI | Access foundation models (Claude, Titan) via API | Fully Serverless API | *"Leading foundation models via API without managing infrastructure"* |
+| **[Amazon SageMaker](../../AWS_SERVICES_GLOSSARY.md#amazon-sagemaker)** | Machine Learning | Build, train, evaluate, and deploy custom ML models | Managed ML Platform | *"Complete machine learning lifecycle for data scientists"* |
+| **[Amazon Textract](../../AWS_SERVICES_GLOSSARY.md#amazon-textract)** | Specialized AI | Extracts text, forms, and tables from scanned documents | Managed Pre-trained API | *"Extract text, tables, and form fields from PDF documents"* |
+| **[AWS Application Migration Service](../../AWS_SERVICES_GLOSSARY.md#aws-application-migration-service) (MGN)** | Cloud Migration | Replicates physical/virtual servers to [Amazon EC2](../../AWS_SERVICES_GLOSSARY.md#amazon-ec2) | Block-level replication | *"Lift-and-shift server migration with minimal downtime"* |
 | **AWS Database Migration Service (DMS)** | Cloud Migration | Replicates databases to AWS with source running | Continuous CDC replication | *"Migrate database with zero downtime while source remains active"* |
 
 ---
@@ -177,55 +177,55 @@ flowchart LR
 
 | Question Scenario Keyword | Target Service | Exam Trap & Distractor Explanation |
 |---|---|---|
-| *"Serverless interactive query service analyzing data directly in S3 with standard SQL"* | **Amazon Athena** | Trap: Do not choose Amazon Redshift. Redshift requires provisioning a data warehouse cluster; Athena is serverless SQL directly on S3. |
-| *"Central metadata store and automated serverless ETL crawlers"* | **AWS Glue** | Trap: Do not choose Amazon EMR. Glue is serverless ETL and cataloging; EMR runs distributed clusters. |
-| *"Access leading foundation models via an API without managing GPU infrastructure"* | **Amazon Bedrock** | Trap: Do not choose Amazon SageMaker. SageMaker requires managing training and hosting endpoints; Bedrock is a serverless foundation model API. |
-| *"Analyze text to extract sentiment, key phrases, and entities without ML expertise"* | **Amazon Comprehend** | Trap: Do not choose Amazon Rekognition or SageMaker. Comprehend is pre-trained NLP text analysis. |
-| *"Convert audio speech recordings into written text transcripts"* | **Amazon Transcribe** | Trap: Do not confuse with Amazon Polly. Transcribe converts Speech-to-Text; Polly converts Text-to-Speech. |
-| *"Migrate on-premises physical or virtual servers to Amazon EC2 with minimal downtime"* | **AWS Application Migration Service (MGN)** | Trap: Do not choose AWS Database Migration Service (DMS). MGN is for servers; DMS is for databases. |
-| *"Migrate relational databases to AWS while keeping the source database operational"* | **AWS Database Migration Service (DMS)** | Trap: Do not choose AWS DataSync. DataSync moves files/storage; DMS migrates transactional database records. |
+| *"Serverless interactive query service analyzing data directly in S3 with standard SQL"* | **[Amazon Athena](../../AWS_SERVICES_GLOSSARY.md#amazon-athena)** | Trap: Do not choose [Amazon Redshift](../../AWS_SERVICES_GLOSSARY.md#amazon-redshift). Redshift requires provisioning a data warehouse cluster; Athena is serverless SQL directly on S3. |
+| *"Central metadata store and automated serverless ETL crawlers"* | **[AWS Glue](../../AWS_SERVICES_GLOSSARY.md#aws-glue)** | Trap: Do not choose [Amazon EMR](../../AWS_SERVICES_GLOSSARY.md#amazon-emr). Glue is serverless ETL and cataloging; EMR runs distributed clusters. |
+| *"Access leading foundation models via an API without managing GPU infrastructure"* | **[Amazon Bedrock](../../AWS_SERVICES_GLOSSARY.md#amazon-bedrock)** | Trap: Do not choose [Amazon SageMaker](../../AWS_SERVICES_GLOSSARY.md#amazon-sagemaker). SageMaker requires managing training and hosting endpoints; Bedrock is a serverless foundation model API. |
+| *"Analyze text to extract sentiment, key phrases, and entities without ML expertise"* | **[Amazon Comprehend](../../AWS_SERVICES_GLOSSARY.md#amazon-comprehend)** | Trap: Do not choose [Amazon Rekognition](../../AWS_SERVICES_GLOSSARY.md#amazon-rekognition) or SageMaker. Comprehend is pre-trained NLP text analysis. |
+| *"Convert audio speech recordings into written text transcripts"* | **[Amazon Transcribe](../../AWS_SERVICES_GLOSSARY.md#amazon-transcribe)** | Trap: Do not confuse with [Amazon Polly](../../AWS_SERVICES_GLOSSARY.md#amazon-polly). Transcribe converts Speech-to-Text; Polly converts Text-to-Speech. |
+| *"Migrate on-premises physical or virtual servers to [Amazon EC2](../../AWS_SERVICES_GLOSSARY.md#amazon-ec2) with minimal downtime"* | **[AWS Application Migration Service](../../AWS_SERVICES_GLOSSARY.md#aws-application-migration-service) (MGN)** | Trap: Do not choose AWS Database Migration Service (DMS). MGN is for servers; DMS is for databases. |
+| *"Migrate relational databases to AWS while keeping the source database operational"* | **AWS Database Migration Service (DMS)** | Trap: Do not choose [AWS DataSync](../../AWS_SERVICES_GLOSSARY.md#aws-datasync). DataSync moves files/storage; DMS migrates transactional database records. |
 
 ---
 
 ## 8. Post-Topic Question Simulation & Retention Check
 
 ### Question 1
-**Which serverless interactive query service enables business intelligence analysts to query unstructured and semi-structured files stored directly in Amazon S3 using standard ANSI SQL without managing or provisioning database infrastructure?**
-- A) Amazon Redshift
-- B) Amazon Athena
-- C) Amazon EMR
-- D) AWS Glue
+**Which serverless interactive query service enables business intelligence analysts to query unstructured and semi-structured files stored directly in [Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3) using standard ANSI SQL without managing or provisioning database infrastructure?**
+- A) [Amazon Redshift](../../AWS_SERVICES_GLOSSARY.md#amazon-redshift)
+- B) [Amazon Athena](../../AWS_SERVICES_GLOSSARY.md#amazon-athena)
+- C) [Amazon EMR](../../AWS_SERVICES_GLOSSARY.md#amazon-emr)
+- D) [AWS Glue](../../AWS_SERVICES_GLOSSARY.md#aws-glue)
 
 <details>
 <summary><b>Click to View Answer & Detailed Distractor Analysis</b></summary>
 
-**Correct Answer:** **B) Amazon Athena**
+**Correct Answer:** **B) [Amazon Athena](../../AWS_SERVICES_GLOSSARY.md#amazon-athena)**
 
-* **Why it's correct:** Amazon Athena is an interactive, serverless SQL query engine that allows users to analyze data directly inside Amazon S3 buckets using standard ANSI SQL queries, charging strictly per Terabyte of data scanned with zero server infrastructure to provision or manage.
+* **Why it's correct:** [Amazon Athena](../../AWS_SERVICES_GLOSSARY.md#amazon-athena) is an interactive, serverless SQL query engine that allows users to analyze data directly inside [Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3) buckets using standard ANSI SQL queries, charging strictly per Terabyte of data scanned with zero server infrastructure to provision or manage.
 * **Distractor Analysis:**
-  - *A is incorrect:* Amazon Redshift is a managed columnar data warehouse that requires provisioning a cluster of compute nodes and loading data into relational tables.
-  - *C is incorrect:* Amazon EMR is a managed cluster framework for running distributed big data engines (such as Apache Spark and Hadoop), requiring cluster node management.
-  - *D is incorrect:* AWS Glue is a serverless data integration and ETL service that catalogs and transforms data, but does not provide an interactive ad-hoc SQL query interface.
+  - *A is incorrect:* [Amazon Redshift](../../AWS_SERVICES_GLOSSARY.md#amazon-redshift) is a managed columnar data warehouse that requires provisioning a cluster of compute nodes and loading data into relational tables.
+  - *C is incorrect:* [Amazon EMR](../../AWS_SERVICES_GLOSSARY.md#amazon-emr) is a managed cluster framework for running distributed big data engines (such as Apache Spark and Hadoop), requiring cluster node management.
+  - *D is incorrect:* [AWS Glue](../../AWS_SERVICES_GLOSSARY.md#aws-glue) is a serverless data integration and ETL service that catalogs and transforms data, but does not provide an interactive ad-hoc SQL query interface.
 </details>
 
 ---
 
 ### Question 2
 **Which AWS service provides serverless API access to a broad selection of industry-leading foundation models (such as Anthropic Claude, Meta Llama, and Amazon Titan) to build generative AI applications without managing GPU servers?**
-- A) Amazon SageMaker Studio
-- B) Amazon Bedrock
-- C) Amazon Comprehend
+- A) [Amazon SageMaker](../../AWS_SERVICES_GLOSSARY.md#amazon-sagemaker) Studio
+- B) [Amazon Bedrock](../../AWS_SERVICES_GLOSSARY.md#amazon-bedrock)
+- C) [Amazon Comprehend](../../AWS_SERVICES_GLOSSARY.md#amazon-comprehend)
 - D) AWS Deep Learning AMIs
 
 <details>
 <summary><b>Click to View Answer & Detailed Distractor Analysis</b></summary>
 
-**Correct Answer:** **B) Amazon Bedrock**
+**Correct Answer:** **B) [Amazon Bedrock](../../AWS_SERVICES_GLOSSARY.md#amazon-bedrock)**
 
-* **Why it's correct:** Amazon Bedrock is a fully managed serverless service that provides choice of high-performing foundation models (FMs) from leading AI companies through a single API, along with a broad set of capabilities to build generative AI applications with security, privacy, and responsible AI guardrails.
+* **Why it's correct:** [Amazon Bedrock](../../AWS_SERVICES_GLOSSARY.md#amazon-bedrock) is a fully managed serverless service that provides choice of high-performing foundation models (FMs) from leading AI companies through a single API, along with a broad set of capabilities to build generative AI applications with security, privacy, and responsible AI guardrails.
 * **Distractor Analysis:**
-  - *A is incorrect:* Amazon SageMaker Studio is a fully featured machine learning IDE for building, training, and deploying custom models, which requires configuring compute instances and hosting endpoints.
-  - *C is incorrect:* Amazon Comprehend is a specialized pre-trained natural language processing (NLP) service for sentiment analysis and entity extraction, not a general foundation model platform.
+  - *A is incorrect:* [Amazon SageMaker](../../AWS_SERVICES_GLOSSARY.md#amazon-sagemaker) Studio is a fully featured machine learning IDE for building, training, and deploying custom models, which requires configuring compute instances and hosting endpoints.
+  - *C is incorrect:* [Amazon Comprehend](../../AWS_SERVICES_GLOSSARY.md#amazon-comprehend) is a specialized pre-trained natural language processing (NLP) service for sentiment analysis and entity extraction, not a general foundation model platform.
   - *D is incorrect:* AWS Deep Learning AMIs provide customized virtual machine images pre-installed with deep learning frameworks (PyTorch, TensorFlow) for manual server configuration on EC2.
 </details>
 
@@ -233,63 +233,63 @@ flowchart LR
 
 ### Question 3
 **A customer service application needs to automatically analyze inbound customer feedback emails to detect sentiment (Positive, Negative, Neutral) and extract key language entities without requiring the engineering team to build custom machine learning models. Which AWS service should be used?**
-- A) Amazon Rekognition
-- B) Amazon Comprehend
-- C) Amazon Transcribe
-- D) Amazon Polly
+- A) [Amazon Rekognition](../../AWS_SERVICES_GLOSSARY.md#amazon-rekognition)
+- B) [Amazon Comprehend](../../AWS_SERVICES_GLOSSARY.md#amazon-comprehend)
+- C) [Amazon Transcribe](../../AWS_SERVICES_GLOSSARY.md#amazon-transcribe)
+- D) [Amazon Polly](../../AWS_SERVICES_GLOSSARY.md#amazon-polly)
 
 <details>
 <summary><b>Click to View Answer & Detailed Distractor Analysis</b></summary>
 
-**Correct Answer:** **B) Amazon Comprehend**
+**Correct Answer:** **B) [Amazon Comprehend](../../AWS_SERVICES_GLOSSARY.md#amazon-comprehend)**
 
-* **Why it's correct:** Amazon Comprehend is a pre-trained Natural Language Processing (NLP) service that uses machine learning to uncover valuable insights, sentiment, key phrases, and entity relationships in unstructured text documents without requiring machine learning expertise.
+* **Why it's correct:** [Amazon Comprehend](../../AWS_SERVICES_GLOSSARY.md#amazon-comprehend) is a pre-trained Natural Language Processing (NLP) service that uses machine learning to uncover valuable insights, sentiment, key phrases, and entity relationships in unstructured text documents without requiring machine learning expertise.
 * **Distractor Analysis:**
-  - *A is incorrect:* Amazon Rekognition is a computer vision service that analyzes images and video files.
-  - *C is incorrect:* Amazon Transcribe is a speech-to-text service that converts spoken audio into written text.
-  - *D is incorrect:* Amazon Polly is a text-to-speech service that converts written text into lifelike synthetic voice audio.
+  - *A is incorrect:* [Amazon Rekognition](../../AWS_SERVICES_GLOSSARY.md#amazon-rekognition) is a computer vision service that analyzes images and video files.
+  - *C is incorrect:* [Amazon Transcribe](../../AWS_SERVICES_GLOSSARY.md#amazon-transcribe) is a speech-to-text service that converts spoken audio into written text.
+  - *D is incorrect:* [Amazon Polly](../../AWS_SERVICES_GLOSSARY.md#amazon-polly) is a text-to-speech service that converts written text into lifelike synthetic voice audio.
 </details>
 
 ---
 
 ### Question 4
-**An enterprise is migrating 300 on-premises virtual machines to Amazon EC2. The company wants to minimize cutover downtime and perform non-disruptive, continuous block-level replication of server disks while applications remain online. Which AWS service should they utilize?**
+**An enterprise is migrating 300 on-premises virtual machines to [Amazon EC2](../../AWS_SERVICES_GLOSSARY.md#amazon-ec2). The company wants to minimize cutover downtime and perform non-disruptive, continuous block-level replication of server disks while applications remain online. Which AWS service should they utilize?**
 - A) AWS Database Migration Service (DMS)
-- B) AWS Application Migration Service (MGN)
-- C) AWS DataSync
-- D) AWS Storage Gateway
+- B) [AWS Application Migration Service](../../AWS_SERVICES_GLOSSARY.md#aws-application-migration-service) (MGN)
+- C) [AWS DataSync](../../AWS_SERVICES_GLOSSARY.md#aws-datasync)
+- D) [AWS Storage Gateway](../../AWS_SERVICES_GLOSSARY.md#aws-storage-gateway)
 
 <details>
 <summary><b>Click to View Answer & Detailed Distractor Analysis</b></summary>
 
-**Correct Answer:** **B) AWS Application Migration Service (MGN)**
+**Correct Answer:** **B) [AWS Application Migration Service](../../AWS_SERVICES_GLOSSARY.md#aws-application-migration-service) (MGN)**
 
-* **Why it's correct:** AWS Application Migration Service (AWS MGN) is the primary AWS tool for migrating physical, virtual, or cloud-based servers to AWS. It utilizes non-disruptive, continuous block-level data replication into an AWS staging area, enabling quick cutovers with near-zero application downtime.
+* **Why it's correct:** [AWS Application Migration Service](../../AWS_SERVICES_GLOSSARY.md#aws-application-migration-service) (AWS MGN) is the primary AWS tool for migrating physical, virtual, or cloud-based servers to AWS. It utilizes non-disruptive, continuous block-level data replication into an AWS staging area, enabling quick cutovers with near-zero application downtime.
 * **Distractor Analysis:**
   - *A is incorrect:* AWS Database Migration Service (DMS) is designed specifically for migrating database engines and transactional data, not complete operating system server disks.
-  - *C is incorrect:* AWS DataSync is an online automated file and object transfer service, not a block-level server OS migration tool.
-  - *D is incorrect:* AWS Storage Gateway is a hybrid storage bridge providing on-premises servers with access to cloud storage, not a server migration tool.
+  - *C is incorrect:* [AWS DataSync](../../AWS_SERVICES_GLOSSARY.md#aws-datasync) is an online automated file and object transfer service, not a block-level server OS migration tool.
+  - *D is incorrect:* [AWS Storage Gateway](../../AWS_SERVICES_GLOSSARY.md#aws-storage-gateway) is a hybrid storage bridge providing on-premises servers with access to cloud storage, not a server migration tool.
 </details>
 
 ---
 
 ### Question 5
-**An organization needs to migrate a production on-premises Oracle database to Amazon Aurora PostgreSQL. The primary requirement is that the source database must remain fully operational and continue processing transactions throughout the migration process. Which AWS service should be used?**
-- A) AWS Database Migration Service (AWS DMS)
+**An organization needs to migrate a production on-premises Oracle database to [Amazon Aurora](../../AWS_SERVICES_GLOSSARY.md#amazon-aurora) PostgreSQL. The primary requirement is that the source database must remain fully operational and continue processing transactions throughout the migration process. Which AWS service should be used?**
+- A) AWS Database Migration Service ([AWS DMS](../../AWS_SERVICES_GLOSSARY.md#aws-dms))
 - B) AWS Snowball Edge
-- C) AWS Application Migration Service (AWS MGN)
-- D) AWS DataSync
+- C) [AWS Application Migration Service](../../AWS_SERVICES_GLOSSARY.md#aws-application-migration-service) (AWS MGN)
+- D) [AWS DataSync](../../AWS_SERVICES_GLOSSARY.md#aws-datasync)
 
 <details>
 <summary><b>Click to View Answer & Detailed Distractor Analysis</b></summary>
 
-**Correct Answer:** **A) AWS Database Migration Service (AWS DMS)**
+**Correct Answer:** **A) AWS Database Migration Service ([AWS DMS](../../AWS_SERVICES_GLOSSARY.md#aws-dms))**
 
-* **Why it's correct:** AWS Database Migration Service (AWS DMS) enables seamless database migrations to AWS while the source database remains completely operational and online. Using Change Data Capture (CDC), DMS continuously replicates ongoing changes until the final production cutover.
+* **Why it's correct:** AWS Database Migration Service ([AWS DMS](../../AWS_SERVICES_GLOSSARY.md#aws-dms)) enables seamless database migrations to AWS while the source database remains completely operational and online. Using Change Data Capture (CDC), DMS continuously replicates ongoing changes until the final production cutover.
 * **Distractor Analysis:**
   - *B is incorrect:* AWS Snowball Edge is a physical data transport appliance used for offline bulk file transfer, which cannot replicate real-time transactional database changes.
-  - *C is incorrect:* AWS Application Migration Service (MGN) is designed to lift and shift complete server virtual machines, not perform transactional database engine translations.
-  - *D is incorrect:* AWS DataSync is an automated file and object transfer service for filesystems and S3, not a database replication engine.
+  - *C is incorrect:* [AWS Application Migration Service](../../AWS_SERVICES_GLOSSARY.md#aws-application-migration-service) (MGN) is designed to lift and shift complete server virtual machines, not perform transactional database engine translations.
+  - *D is incorrect:* [AWS DataSync](../../AWS_SERVICES_GLOSSARY.md#aws-datasync) is an automated file and object transfer service for filesystems and S3, not a database replication engine.
 </details>
 
 ---
@@ -303,26 +303,26 @@ When reading a question scenario, search for these exact phrasing triggers:
 
 | If You See This Trigger Phrase in the Question Stem... | The Correct Analytics / AI / Migration Service Is... | Trap Distractor to Immediately Discard |
 |---|---|---|
-| *"Serverless interactive ad-hoc SQL queries directly on files in Amazon S3; pay per query"* | **Amazon Athena** | *Amazon Redshift* (Redshift requires provisioning clusters) |
-| *"Automated ETL (Extract, Transform, Load) service; crawls data and creates a central Data Catalog"* | **AWS Glue** | *Amazon Athena* (Athena queries data, it does not clean/catalog it) |
-| *"Distributed big data frameworks (Apache Spark, Hadoop, Presto) on managed clusters"* | **Amazon EMR** | *Amazon Athena* or *AWS Glue* |
-| *"Cloud-native Business Intelligence (BI) service; builds visual dashboards with ML insights"* | **Amazon QuickSight** | *Amazon CloudWatch* (CloudWatch is for operational metrics, not business BI) |
-| *"Access leading Foundation Models (Anthropic Claude, Meta Llama, Titan) via a single API (Generative AI)"* | **Amazon Bedrock** | *Amazon SageMaker* (SageMaker is for training custom models from scratch) |
-| *"Complete end-to-end platform for data scientists to build, train, tune, and deploy custom ML models"* | **Amazon SageMaker** | *Amazon Bedrock* (Bedrock uses pre-trained serverless models) |
-| *"Computer vision; identify objects, people, text, and scenes in images and video"* | **Amazon Rekognition** | *Amazon Textract* (Textract is specifically for documents/forms) |
-| *"Natural Language Processing (NLP); analyze text documents for customer sentiment and entities"* | **Amazon Comprehend** | *Amazon Transcribe* (Transcribe converts spoken voice, not text sentiment) |
-| *"Convert spoken speech audio files into written text (Speech-to-Text)"* | **Amazon Transcribe** | *Amazon Polly* (Polly is text-to-speech) |
-| *"Convert written text into lifelike synthetic speech audio (Text-to-Speech)"* | **Amazon Polly** | *Amazon Transcribe* |
-| *"Extract printed text, handwriting, and structured table fields from scanned PDFs and forms"* | **Amazon Textract** | *Amazon Rekognition* |
-| *"Build conversational voice and text AI chatbots (powers Amazon Alexa)"* | **Amazon Lex** | *Amazon Polly* |
-| *"Lift and shift physical/virtual server OS disks to Amazon EC2 with near-zero downtime"* | **AWS Application Migration Service (MGN)** | *AWS Database Migration Service (DMS)* |
+| *"Serverless interactive ad-hoc SQL queries directly on files in [Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3); pay per query"* | **[Amazon Athena](../../AWS_SERVICES_GLOSSARY.md#amazon-athena)** | *[Amazon Redshift](../../AWS_SERVICES_GLOSSARY.md#amazon-redshift)* (Redshift requires provisioning clusters) |
+| *"Automated ETL (Extract, Transform, Load) service; crawls data and creates a central Data Catalog"* | **[AWS Glue](../../AWS_SERVICES_GLOSSARY.md#aws-glue)** | *[Amazon Athena](../../AWS_SERVICES_GLOSSARY.md#amazon-athena)* (Athena queries data, it does not clean/catalog it) |
+| *"Distributed big data frameworks (Apache Spark, Hadoop, Presto) on managed clusters"* | **[Amazon EMR](../../AWS_SERVICES_GLOSSARY.md#amazon-emr)** | *[Amazon Athena](../../AWS_SERVICES_GLOSSARY.md#amazon-athena)* or *[AWS Glue](../../AWS_SERVICES_GLOSSARY.md#aws-glue)* |
+| *"Cloud-native Business Intelligence (BI) service; builds visual dashboards with ML insights"* | **[Amazon QuickSight](../../AWS_SERVICES_GLOSSARY.md#amazon-quicksight)** | *[Amazon CloudWatch](../../AWS_SERVICES_GLOSSARY.md#amazon-cloudwatch)* (CloudWatch is for operational metrics, not business BI) |
+| *"Access leading Foundation Models (Anthropic Claude, Meta Llama, Titan) via a single API (Generative AI)"* | **[Amazon Bedrock](../../AWS_SERVICES_GLOSSARY.md#amazon-bedrock)** | *[Amazon SageMaker](../../AWS_SERVICES_GLOSSARY.md#amazon-sagemaker)* (SageMaker is for training custom models from scratch) |
+| *"Complete end-to-end platform for data scientists to build, train, tune, and deploy custom ML models"* | **[Amazon SageMaker](../../AWS_SERVICES_GLOSSARY.md#amazon-sagemaker)** | *[Amazon Bedrock](../../AWS_SERVICES_GLOSSARY.md#amazon-bedrock)* (Bedrock uses pre-trained serverless models) |
+| *"Computer vision; identify objects, people, text, and scenes in images and video"* | **[Amazon Rekognition](../../AWS_SERVICES_GLOSSARY.md#amazon-rekognition)** | *[Amazon Textract](../../AWS_SERVICES_GLOSSARY.md#amazon-textract)* (Textract is specifically for documents/forms) |
+| *"Natural Language Processing (NLP); analyze text documents for customer sentiment and entities"* | **[Amazon Comprehend](../../AWS_SERVICES_GLOSSARY.md#amazon-comprehend)** | *[Amazon Transcribe](../../AWS_SERVICES_GLOSSARY.md#amazon-transcribe)* (Transcribe converts spoken voice, not text sentiment) |
+| *"Convert spoken speech audio files into written text (Speech-to-Text)"* | **[Amazon Transcribe](../../AWS_SERVICES_GLOSSARY.md#amazon-transcribe)** | *[Amazon Polly](../../AWS_SERVICES_GLOSSARY.md#amazon-polly)* (Polly is text-to-speech) |
+| *"Convert written text into lifelike synthetic speech audio (Text-to-Speech)"* | **[Amazon Polly](../../AWS_SERVICES_GLOSSARY.md#amazon-polly)** | *[Amazon Transcribe](../../AWS_SERVICES_GLOSSARY.md#amazon-transcribe)* |
+| *"Extract printed text, handwriting, and structured table fields from scanned PDFs and forms"* | **[Amazon Textract](../../AWS_SERVICES_GLOSSARY.md#amazon-textract)** | *[Amazon Rekognition](../../AWS_SERVICES_GLOSSARY.md#amazon-rekognition)* |
+| *"Build conversational voice and text AI chatbots (powers Amazon Alexa)"* | **[Amazon Lex](../../AWS_SERVICES_GLOSSARY.md#amazon-lex)** | *[Amazon Polly](../../AWS_SERVICES_GLOSSARY.md#amazon-polly)* |
+| *"Lift and shift physical/virtual server OS disks to [Amazon EC2](../../AWS_SERVICES_GLOSSARY.md#amazon-ec2) with near-zero downtime"* | **[AWS Application Migration Service](../../AWS_SERVICES_GLOSSARY.md#aws-application-migration-service) (MGN)** | *AWS Database Migration Service (DMS)* |
 | *"Migrate live databases while source database remains online and operational"* | **AWS Database Migration Service (DMS)** | *AWS MGN* (MGN migrates entire server disks, not databases) |
 
 ### 2. The 3-Step Rapid Elimination Heuristic
 When evaluating an Analytics, AI, or Migration question:
 1. **Step 1: Check the AI Category (Generative AI vs. Custom ML vs. Pre-trained APIs):**
-   - Access **Foundation Models (LLMs) via an API** without managing infrastructure $\to$ **Amazon Bedrock**.
-   - Data scientists writing custom algorithms, training weights, GPU clusters $\to$ **Amazon SageMaker**.
+   - Access **Foundation Models (LLMs) via an API** without managing infrastructure $\to$ **[Amazon Bedrock](../../AWS_SERVICES_GLOSSARY.md#amazon-bedrock)**.
+   - Data scientists writing custom algorithms, training weights, GPU clusters $\to$ **[Amazon SageMaker](../../AWS_SERVICES_GLOSSARY.md#amazon-sagemaker)**.
    - Ready-to-use human sense APIs:
      - Eyes / Vision $\to$ **Rekognition**.
      - Ears / Hearing (Speech $\to$ Text) $\to$ **Transcribe**.
@@ -330,23 +330,23 @@ When evaluating an Analytics, AI, or Migration question:
      - Brain / Language comprehension $\to$ **Comprehend**.
      - Reading tables & forms $\to$ **Textract**.
 2. **Step 2: Analytics (Query vs. ETL vs. Big Data Engine):**
-   - Quick serverless SQL on raw CSV/JSON/Parquet in S3 $\to$ **Amazon Athena**.
-   - Data pipeline extraction, cataloging, and transformation $\to$ **AWS Glue**.
-   - Petabyte-scale Spark/Hadoop clusters $\to$ **Amazon EMR**.
+   - Quick serverless SQL on raw CSV/JSON/Parquet in S3 $\to$ **[Amazon Athena](../../AWS_SERVICES_GLOSSARY.md#amazon-athena)**.
+   - Data pipeline extraction, cataloging, and transformation $\to$ **[AWS Glue](../../AWS_SERVICES_GLOSSARY.md#aws-glue)**.
+   - Petabyte-scale Spark/Hadoop clusters $\to$ **[Amazon EMR](../../AWS_SERVICES_GLOSSARY.md#amazon-emr)**.
 3. **Step 3: Migration Target (Server OS vs. Database):**
    - Migrating **whole virtual machines or physical servers** $\to$ **AWS MGN**.
-   - Migrating **relational/NoSQL databases with ongoing replication** $\to$ **AWS DMS**.
+   - Migrating **relational/NoSQL databases with ongoing replication** $\to$ **[AWS DMS](../../AWS_SERVICES_GLOSSARY.md#aws-dms)**.
 
 ### 3. High-Frequency Decoy Autopsy: Why AWS Tries to Trick You
-* **Decoy #1: "Amazon Bedrock" vs. "Amazon SageMaker"**
+* **Decoy #1: "[Amazon Bedrock](../../AWS_SERVICES_GLOSSARY.md#amazon-bedrock)" vs. "[Amazon SageMaker](../../AWS_SERVICES_GLOSSARY.md#amazon-sagemaker)"**
   - *The Trap:* A company wants to build a generative AI application that generates customer email replies.
-  - *The Autopsy:* If the requirement is to **leverage foundation models via a managed API without training a model from scratch**, choose **Amazon Bedrock**. If the requirement is **building, training, and tuning proprietary deep learning algorithms**, choose **Amazon SageMaker**.
-* **Decoy #2: "Amazon Polly" vs. "Amazon Transcribe"**
+  - *The Autopsy:* If the requirement is to **leverage foundation models via a managed API without training a model from scratch**, choose **[Amazon Bedrock](../../AWS_SERVICES_GLOSSARY.md#amazon-bedrock)**. If the requirement is **building, training, and tuning proprietary deep learning algorithms**, choose **[Amazon SageMaker](../../AWS_SERVICES_GLOSSARY.md#amazon-sagemaker)**.
+* **Decoy #2: "[Amazon Polly](../../AWS_SERVICES_GLOSSARY.md#amazon-polly)" vs. "[Amazon Transcribe](../../AWS_SERVICES_GLOSSARY.md#amazon-transcribe)"**
   - *The Trap:* The scenario describes converting audio recordings of customer calls into text transcripts, or converting text into speech.
   - *The Autopsy:* Remember the phonetic trigger: **Polly the Parrot speaks** (Text-to-Speech). **Transcribe writes a transcript** (Speech-to-Text).
-* **Decoy #3: "AWS MGN" vs. "AWS DMS"**
+* **Decoy #3: "AWS MGN" vs. "[AWS DMS](../../AWS_SERVICES_GLOSSARY.md#aws-dms)"**
   - *The Trap:* A question says: "A company wants to migrate an on-premises application server and database to AWS."
-  - *The Autopsy:* Check what is being migrated! If it is the **application server (VM/disk)**, use **AWS Application Migration Service (MGN)**. If it is the **database engine and live SQL data**, use **AWS Database Migration Service (DMS)**.
+  - *The Autopsy:* Check what is being migrated! If it is the **application server (VM/disk)**, use **[AWS Application Migration Service](../../AWS_SERVICES_GLOSSARY.md#aws-application-migration-service) (MGN)**. If it is the **database engine and live SQL data**, use **AWS Database Migration Service (DMS)**.
 
 ### 4. 10-Second Visual Decision Flowchart
 

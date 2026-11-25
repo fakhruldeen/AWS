@@ -9,11 +9,11 @@
 ## 💡 The Real-World Analogy (ELI5)
 
 > **Information Management Systems in Everyday Life:**
-> - **Amazon RDS / Aurora (Relational OLTP):** A meticulously organized, strict financial accounting ledger. Every row has exact columns (Invoice Number, Date, Amount), entries are mathematically linked by foreign key relationships, and transactions are strictly balanced (ACID compliance). Ideal for core banking, inventory orders, and billing.
-> - **Amazon DynamoDB (NoSQL Key-Value / Document):** A vast wall of automated electronic luggage lockers at an international transit hub. You scan your barcode ticket (Partition Key), the corresponding door pops open in 2 milliseconds, and you grab your bag. Whether the station has 50 lockers or 50 million lockers, the door opens at the exact same speed.
-> - **Amazon ElastiCache (In-Memory Caching):** A dry-erase whiteboard mounted next to the cashier's register. Instead of walking back to the library file cabinet every time a customer asks for the price of bread, the cashier reads it off the whiteboard in microseconds.
-> - **Amazon Redshift (Columnar Data Warehouse - OLAP):** The corporate central archives room. Used by business intelligence analysts to run massive computational queries summarizing 10 years of worldwide product sales to forecast next year's corporate strategy.
-> - **Amazon Neptune (Graph Database):** A social network detective's corkboard covered with photographs (nodes) connected by crisscrossing colored strings (edges) to trace complex relationships, fraud rings, and influencer networks.
+> - **[Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds) / Aurora (Relational OLTP):** A meticulously organized, strict financial accounting ledger. Every row has exact columns (Invoice Number, Date, Amount), entries are mathematically linked by foreign key relationships, and transactions are strictly balanced (ACID compliance). Ideal for core banking, inventory orders, and billing.
+> - **[Amazon DynamoDB](../../AWS_SERVICES_GLOSSARY.md#amazon-dynamodb) (NoSQL Key-Value / Document):** A vast wall of automated electronic luggage lockers at an international transit hub. You scan your barcode ticket (Partition Key), the corresponding door pops open in 2 milliseconds, and you grab your bag. Whether the station has 50 lockers or 50 million lockers, the door opens at the exact same speed.
+> - **[Amazon ElastiCache](../../AWS_SERVICES_GLOSSARY.md#amazon-elasticache) (In-Memory Caching):** A dry-erase whiteboard mounted next to the cashier's register. Instead of walking back to the library file cabinet every time a customer asks for the price of bread, the cashier reads it off the whiteboard in microseconds.
+> - **[Amazon Redshift](../../AWS_SERVICES_GLOSSARY.md#amazon-redshift) (Columnar Data Warehouse - OLAP):** The corporate central archives room. Used by business intelligence analysts to run massive computational queries summarizing 10 years of worldwide product sales to forecast next year's corporate strategy.
+> - **[Amazon Neptune](../../AWS_SERVICES_GLOSSARY.md#amazon-neptune) (Graph Database):** A social network detective's corkboard covered with photographs (nodes) connected by crisscrossing colored strings (edges) to trace complex relationships, fraud rings, and influencer networks.
 
 ---
 
@@ -44,11 +44,11 @@ flowchart TD
 * **Online Transaction Processing (OLTP):**
   - *Workload Nature:* High volume of fast, concurrent, atomic read/write transactions executed by end users (e-commerce checkout, updating a user profile, transferring bank funds).
   - *Data Structure:* Highly normalized relational tables with primary/foreign keys.
-  - *Primary AWS Engines:* **Amazon RDS** and **Amazon Aurora**.
+  - *Primary AWS Engines:* **[Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds)** and **[Amazon Aurora](../../AWS_SERVICES_GLOSSARY.md#amazon-aurora)**.
 * **Online Analytical Processing (OLAP):**
   - *Workload Nature:* Complex, read-heavy analytical queries scanning millions or billions of historical rows to aggregate business metrics (`SUM`, `AVG`, `GROUP BY`).
   - *Data Structure:* Star or snowflake schemas with columnar storage.
-  - *Primary AWS Engine:* **Amazon Redshift**.
+  - *Primary AWS Engine:* **[Amazon Redshift](../../AWS_SERVICES_GLOSSARY.md#amazon-redshift)**.
 
 ### 1.2 ACID vs. BASE (CAP Theorem in Databases)
 * **ACID (Relational):** Guarantees **Atomicity** (all-or-nothing transactions), **Consistency** (valid state constraints), **Isolation** (concurrent transactions do not interfere), and **Durability** (committed writes survive power loss). 
@@ -62,10 +62,10 @@ Before fully managed cloud database services, operating relational database engi
 
 | Traditional Database Challenge | Traditional On-Premises Reality | AWS Managed Database Paradigm |
 |---|---|---|
-| **Commercial Licensing Traps** | Legacy proprietary database vendors (Oracle, Microsoft) charged tens of thousands of dollars per CPU core, with aggressive audit penalties. | **Open-Source & Cloud-Native Engines**. Run MySQL, PostgreSQL, or **Amazon Aurora** (3–5x open source performance) with zero punitive licensing lock-in. |
-| **Manual Failover & Unplanned Downtime** | Setting up an active-passive database replica required custom cluster scripts. Failover took **15 to 30 minutes of downtime** while database administrators manually changed DNS records. | **Automated Multi-AZ Synchronous Failover**. Amazon RDS and Aurora automatically detect primary failure and flip DNS endpoints to healthy replicas in **60–120 seconds**. |
-| **Manual Schema Sharding for Scale** | When an on-premise relational database exceeded server disk or CPU capacity, engineers spent months writing complex custom application code to "shard" data across servers. | **Serverless Horizontal Scaling**. **Amazon DynamoDB** automatically partitions and scales storage and throughput elastically with zero code rewrites. |
-| **Backup Corruption & Point-in-Time Restore** | Taking full database dumps locked table locks and degraded production performance. Point-in-time recovery was notoriously unreliable. | **Automated Continuous Backups**. RDS automatically streams transaction logs to Amazon S3, allowing point-in-time recovery to any second within the retention window. |
+| **Commercial Licensing Traps** | Legacy proprietary database vendors (Oracle, Microsoft) charged tens of thousands of dollars per CPU core, with aggressive audit penalties. | **Open-Source & Cloud-Native Engines**. Run MySQL, PostgreSQL, or **[Amazon Aurora](../../AWS_SERVICES_GLOSSARY.md#amazon-aurora)** (3–5x open source performance) with zero punitive licensing lock-in. |
+| **Manual Failover & Unplanned Downtime** | Setting up an active-passive database replica required custom cluster scripts. Failover took **15 to 30 minutes of downtime** while database administrators manually changed DNS records. | **Automated Multi-AZ Synchronous Failover**. [Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds) and Aurora automatically detect primary failure and flip DNS endpoints to healthy replicas in **60–120 seconds**. |
+| **Manual Schema Sharding for Scale** | When an on-premise relational database exceeded server disk or CPU capacity, engineers spent months writing complex custom application code to "shard" data across servers. | **Serverless Horizontal Scaling**. **[Amazon DynamoDB](../../AWS_SERVICES_GLOSSARY.md#amazon-dynamodb)** automatically partitions and scales storage and throughput elastically with zero code rewrites. |
+| **Backup Corruption & Point-in-Time Restore** | Taking full database dumps locked table locks and degraded production performance. Point-in-time recovery was notoriously unreliable. | **Automated Continuous Backups**. RDS automatically streams transaction logs to [Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3), allowing point-in-time recovery to any second within the retention window. |
 
 ---
 
@@ -88,7 +88,7 @@ graph TD
   3. MariaDB
   4. Oracle (Commercial enterprise)
   5. Microsoft SQL Server (Commercial enterprise)
-  6. Amazon Aurora (Cloud-native proprietary)
+  6. [Amazon Aurora](../../AWS_SERVICES_GLOSSARY.md#amazon-aurora) (Cloud-native proprietary)
 * **What AWS Automates for You:**
   - Operating system installation and security patching.
   - Database engine minor version updates.
@@ -120,7 +120,7 @@ flowchart TD
     end
 ```
 
-| Dimension | Amazon RDS Multi-AZ | Amazon RDS Read Replicas |
+| Dimension | [Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds) Multi-AZ | [Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds) Read Replicas |
 |---|---|---|
 | **Primary Purpose** | **High Availability & Disaster Recovery** | **Read Performance & Query Scalability** |
 | **Replication Type** | **Synchronous** (Zero data loss; RPO = 0) | **Asynchronous** (Minor replication lag) |
@@ -172,8 +172,8 @@ graph TD
   - *Massively Parallel Processing (MPP):* Distributes data and query execution across a cluster of compute nodes to analyze petabytes of structured and semi-structured data in seconds.
 
 ### 4.4 Specialty Purpose-Built Databases
-1. **Amazon Neptune:** Graph database optimized for navigating highly connected graph relationships (social graphs, fraud detection, identity resolution). Supports Apache TinkerPop Gremlin and SPARQL.
-2. **Amazon DocumentDB:** Fully managed JSON document database compatible with existing MongoDB workloads.
+1. **[Amazon Neptune](../../AWS_SERVICES_GLOSSARY.md#amazon-neptune):** Graph database optimized for navigating highly connected graph relationships (social graphs, fraud detection, identity resolution). Supports Apache TinkerPop Gremlin and SPARQL.
+2. **[Amazon DocumentDB](../../AWS_SERVICES_GLOSSARY.md#amazon-documentdb):** Fully managed JSON document database compatible with existing MongoDB workloads.
 3. **Amazon Timestream:** Serverless time-series database optimized for storing and analyzing events that change over time (IoT device telemetry, industrial sensors, stock market ticks).
 4. **Amazon QLDB (Quantum Ledger Database):** Cryptographically verifiable, immutable append-only ledger database owned by a central trusted authority.
 
@@ -183,12 +183,12 @@ graph TD
 
 | Database Service | Primary Data Model | Typical Use Case | Scaling Paradigm | Latency Target | High Availability Mechanism |
 |---|---|---|---|---|---|
-| **Amazon RDS** | Relational (SQL) | Traditional ERP, CRM, transactional e-commerce | Vertical compute; auto-scaling storage | Single-digit ms | Multi-AZ synchronous standby |
-| **Amazon Aurora** | Relational (SQL) | High-performance enterprise OLTP applications | Vertical compute; auto-scaling storage up to 128 TiB | Single-digit ms | 6-way storage replication across 3 AZs |
-| **Amazon DynamoDB** | NoSQL (Key-Value/Doc) | High-scale mobile backends, gaming leaderboards, cart | **Horizontal auto-scaling** (Serverless) | **Single-digit ms (Microseconds with DAX)** | Multi-AZ automated replication; Global Tables |
-| **Amazon ElastiCache** | In-Memory Key-Value | Read acceleration, user session stores | Vertical and horizontal cluster sharding | **Sub-millisecond (Microseconds)** | Redis Multi-AZ replication with auto-failover |
-| **Amazon Redshift** | Columnar Relational | Business intelligence, enterprise data warehouse | Horizontal node clustering (MPP) | Seconds to minutes (Complex OLAP) | Multi-node cluster with automated S3 snapshots |
-| **Amazon Neptune** | Graph (Nodes & Edges) | Fraud detection networks, social media connections | Read replicas; decoupled storage | Single-digit ms | Multi-AZ replicas |
+| **[Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds)** | Relational (SQL) | Traditional ERP, CRM, transactional e-commerce | Vertical compute; auto-scaling storage | Single-digit ms | Multi-AZ synchronous standby |
+| **[Amazon Aurora](../../AWS_SERVICES_GLOSSARY.md#amazon-aurora)** | Relational (SQL) | High-performance enterprise OLTP applications | Vertical compute; auto-scaling storage up to 128 TiB | Single-digit ms | 6-way storage replication across 3 AZs |
+| **[Amazon DynamoDB](../../AWS_SERVICES_GLOSSARY.md#amazon-dynamodb)** | NoSQL (Key-Value/Doc) | High-scale mobile backends, gaming leaderboards, cart | **Horizontal auto-scaling** (Serverless) | **Single-digit ms (Microseconds with DAX)** | Multi-AZ automated replication; Global Tables |
+| **[Amazon ElastiCache](../../AWS_SERVICES_GLOSSARY.md#amazon-elasticache)** | In-Memory Key-Value | Read acceleration, user session stores | Vertical and horizontal cluster sharding | **Sub-millisecond (Microseconds)** | Redis Multi-AZ replication with auto-failover |
+| **[Amazon Redshift](../../AWS_SERVICES_GLOSSARY.md#amazon-redshift)** | Columnar Relational | Business intelligence, enterprise data warehouse | Horizontal node clustering (MPP) | Seconds to minutes (Complex OLAP) | Multi-node cluster with automated S3 snapshots |
+| **[Amazon Neptune](../../AWS_SERVICES_GLOSSARY.md#amazon-neptune)** | Graph (Nodes & Edges) | Fraud detection networks, social media connections | Read replicas; decoupled storage | Single-digit ms | Multi-AZ replicas |
 
 ---
 
@@ -196,13 +196,13 @@ graph TD
 
 | Question Scenario Keyword | Target Database Service | Exam Trap & Distractor Explanation |
 |---|---|---|
-| *"Relational database with automated Multi-AZ failover and read scaling"* | **Amazon RDS** | Trap: Do not choose DynamoDB. Relational data with SQL joins requires RDS or Aurora. |
-| *"Cloud-native database, up to 5x throughput of MySQL, 6 copies of data across 3 AZs"* | **Amazon Aurora** | Trap: Do not choose standard RDS MySQL. The 5x throughput and 6-way storage is exclusive to Aurora. |
-| *"Fully managed serverless NoSQL key-value database with single-digit millisecond latency"* | **Amazon DynamoDB** | Trap: Do not choose Amazon RDS. RDS is relational and requires instance provisioning; DynamoDB is serverless NoSQL. |
-| *"In-memory cache to reduce database read latency to microseconds"* | **Amazon ElastiCache** | Trap: Do not choose Amazon RDS Read Replicas. Read replicas reduce load on the primary DB, but only in-memory ElastiCache achieves microsecond latency. |
-| *"Petabyte-scale columnar data warehouse for complex analytical reporting (OLAP)"* | **Amazon Redshift** | Trap: Do not choose Amazon RDS. RDS is designed for transactional OLTP; Redshift is built for columnar OLAP. |
-| *"Graph database for fraud detection rings and social network relationships"* | **Amazon Neptune** | Trap: Do not choose DynamoDB or RDS. Highly interconnected relationship networks require Neptune. |
-| *"Continuous, zero-downtime database migration between on-prem and AWS"* | **AWS Database Migration Service (DMS)** | Trap: Do not choose AWS DataSync. DataSync migrates files/objects; AWS DMS migrates live relational and NoSQL databases. |
+| *"Relational database with automated Multi-AZ failover and read scaling"* | **[Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds)** | Trap: Do not choose DynamoDB. Relational data with SQL joins requires RDS or Aurora. |
+| *"Cloud-native database, up to 5x throughput of MySQL, 6 copies of data across 3 AZs"* | **[Amazon Aurora](../../AWS_SERVICES_GLOSSARY.md#amazon-aurora)** | Trap: Do not choose standard RDS MySQL. The 5x throughput and 6-way storage is exclusive to Aurora. |
+| *"Fully managed serverless NoSQL key-value database with single-digit millisecond latency"* | **[Amazon DynamoDB](../../AWS_SERVICES_GLOSSARY.md#amazon-dynamodb)** | Trap: Do not choose [Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds). RDS is relational and requires instance provisioning; DynamoDB is serverless NoSQL. |
+| *"In-memory cache to reduce database read latency to microseconds"* | **[Amazon ElastiCache](../../AWS_SERVICES_GLOSSARY.md#amazon-elasticache)** | Trap: Do not choose [Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds) Read Replicas. Read replicas reduce load on the primary DB, but only in-memory ElastiCache achieves microsecond latency. |
+| *"Petabyte-scale columnar data warehouse for complex analytical reporting (OLAP)"* | **[Amazon Redshift](../../AWS_SERVICES_GLOSSARY.md#amazon-redshift)** | Trap: Do not choose [Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds). RDS is designed for transactional OLTP; Redshift is built for columnar OLAP. |
+| *"Graph database for fraud detection rings and social network relationships"* | **[Amazon Neptune](../../AWS_SERVICES_GLOSSARY.md#amazon-neptune)** | Trap: Do not choose DynamoDB or RDS. Highly interconnected relationship networks require Neptune. |
+| *"Continuous, zero-downtime database migration between on-prem and AWS"* | **AWS Database Migration Service (DMS)** | Trap: Do not choose [AWS DataSync](../../AWS_SERVICES_GLOSSARY.md#aws-datasync). DataSync migrates files/objects; [AWS DMS](../../AWS_SERVICES_GLOSSARY.md#aws-dms) migrates live relational and NoSQL databases. |
 
 ---
 
@@ -210,105 +210,105 @@ graph TD
 
 ### Question 1
 **Which AWS database service provides a fully managed serverless NoSQL key-value and document database engine that delivers predictable single-digit millisecond latency at any scale with automated multi-AZ replication?**
-- A) Amazon RDS for PostgreSQL
-- B) Amazon DynamoDB
-- C) Amazon Redshift
-- D) Amazon DocumentDB
+- A) [Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds) for PostgreSQL
+- B) [Amazon DynamoDB](../../AWS_SERVICES_GLOSSARY.md#amazon-dynamodb)
+- C) [Amazon Redshift](../../AWS_SERVICES_GLOSSARY.md#amazon-redshift)
+- D) [Amazon DocumentDB](../../AWS_SERVICES_GLOSSARY.md#amazon-documentdb)
 
 <details>
 <summary><b>Click to View Answer & Detailed Distractor Analysis</b></summary>
 
-**Correct Answer:** **B) Amazon DynamoDB**
+**Correct Answer:** **B) [Amazon DynamoDB](../../AWS_SERVICES_GLOSSARY.md#amazon-dynamodb)**
 
-* **Why it's correct:** Amazon DynamoDB is a fully managed, serverless NoSQL database service that provides consistent, predictable single-digit millisecond latency, automated horizontal partition scaling, built-in multi-AZ data replication, and high throughput for key-value and document data structures.
+* **Why it's correct:** [Amazon DynamoDB](../../AWS_SERVICES_GLOSSARY.md#amazon-dynamodb) is a fully managed, serverless NoSQL database service that provides consistent, predictable single-digit millisecond latency, automated horizontal partition scaling, built-in multi-AZ data replication, and high throughput for key-value and document data structures.
 * **Distractor Analysis:**
-  - *A is incorrect:* Amazon RDS for PostgreSQL is a managed relational (SQL) database service that requires provisioning underlying instance compute sizes, not a serverless NoSQL key-value engine.
-  - *C is incorrect:* Amazon Redshift is a petabyte-scale columnar data warehouse optimized for complex analytical business intelligence queries (OLAP), not a low-latency NoSQL transactional database.
-  - *D is incorrect:* Amazon DocumentDB is a managed document database compatible with MongoDB, but requires cluster instance provisioning and does not operate as AWS's flagship serverless key-value engine.
+  - *A is incorrect:* [Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds) for PostgreSQL is a managed relational (SQL) database service that requires provisioning underlying instance compute sizes, not a serverless NoSQL key-value engine.
+  - *C is incorrect:* [Amazon Redshift](../../AWS_SERVICES_GLOSSARY.md#amazon-redshift) is a petabyte-scale columnar data warehouse optimized for complex analytical business intelligence queries (OLAP), not a low-latency NoSQL transactional database.
+  - *D is incorrect:* [Amazon DocumentDB](../../AWS_SERVICES_GLOSSARY.md#amazon-documentdb) is a managed document database compatible with MongoDB, but requires cluster instance provisioning and does not operate as AWS's flagship serverless key-value engine.
 </details>
 
 ---
 
 ### Question 2
 **An enterprise is migrating a production MySQL database to AWS. The company requires a cloud-native relational database engine that delivers up to 5 times the throughput of standard MySQL, replicates 6 copies of data across 3 Availability Zones, and supports up to 15 low-latency read replicas. Which database service should they choose?**
-- A) Amazon DynamoDB
-- B) Amazon Aurora
-- C) Amazon Redshift
-- D) Amazon Neptune
+- A) [Amazon DynamoDB](../../AWS_SERVICES_GLOSSARY.md#amazon-dynamodb)
+- B) [Amazon Aurora](../../AWS_SERVICES_GLOSSARY.md#amazon-aurora)
+- C) [Amazon Redshift](../../AWS_SERVICES_GLOSSARY.md#amazon-redshift)
+- D) [Amazon Neptune](../../AWS_SERVICES_GLOSSARY.md#amazon-neptune)
 
 <details>
 <summary><b>Click to View Answer & Detailed Distractor Analysis</b></summary>
 
-**Correct Answer:** **B) Amazon Aurora**
+**Correct Answer:** **B) [Amazon Aurora](../../AWS_SERVICES_GLOSSARY.md#amazon-aurora)**
 
-* **Why it's correct:** Amazon Aurora is AWS's cloud-native, high-performance relational database engine compatible with MySQL and PostgreSQL. It delivers up to 5x the throughput of standard MySQL by decoupling compute from storage, maintaining 6 copies of data across 3 Availability Zones, and supporting up to 15 read replicas.
+* **Why it's correct:** [Amazon Aurora](../../AWS_SERVICES_GLOSSARY.md#amazon-aurora) is AWS's cloud-native, high-performance relational database engine compatible with MySQL and PostgreSQL. It delivers up to 5x the throughput of standard MySQL by decoupling compute from storage, maintaining 6 copies of data across 3 Availability Zones, and supporting up to 15 read replicas.
 * **Distractor Analysis:**
-  - *A is incorrect:* Amazon DynamoDB is a non-relational (NoSQL) key-value database, incompatible with traditional relational MySQL schemas.
-  - *C is incorrect:* Amazon Redshift is an analytical data warehouse (OLAP), not an operational online transaction processing (OLTP) engine for relational applications.
-  - *D is incorrect:* Amazon Neptune is a graph database designed for interconnected relationship mapping, not relational SQL workloads.
+  - *A is incorrect:* [Amazon DynamoDB](../../AWS_SERVICES_GLOSSARY.md#amazon-dynamodb) is a non-relational (NoSQL) key-value database, incompatible with traditional relational MySQL schemas.
+  - *C is incorrect:* [Amazon Redshift](../../AWS_SERVICES_GLOSSARY.md#amazon-redshift) is an analytical data warehouse (OLAP), not an operational online transaction processing (OLTP) engine for relational applications.
+  - *D is incorrect:* [Amazon Neptune](../../AWS_SERVICES_GLOSSARY.md#amazon-neptune) is a graph database designed for interconnected relationship mapping, not relational SQL workloads.
 </details>
 
 ---
 
 ### Question 3
-**An e-commerce website experiences extreme read traffic on its Amazon RDS database during flash sale events. Which architectural modification should the team implement to reduce database read latency to microseconds without re-architecting the application database schema?**
+**An e-commerce website experiences extreme read traffic on its [Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds) database during flash sale events. Which architectural modification should the team implement to reduce database read latency to microseconds without re-architecting the application database schema?**
 - A) Upgrade the EC2 web server instance types
-- B) Implement an Amazon ElastiCache in-memory caching cluster in front of the database
-- C) Migrate the database tables to Amazon Redshift
-- D) Enable Object Versioning on the Amazon S3 static website bucket
+- B) Implement an [Amazon ElastiCache](../../AWS_SERVICES_GLOSSARY.md#amazon-elasticache) in-memory caching cluster in front of the database
+- C) Migrate the database tables to [Amazon Redshift](../../AWS_SERVICES_GLOSSARY.md#amazon-redshift)
+- D) Enable Object Versioning on the [Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3) static website bucket
 
 <details>
 <summary><b>Click to View Answer & Detailed Distractor Analysis</b></summary>
 
-**Correct Answer:** **B) Implement an Amazon ElastiCache in-memory caching cluster in front of the database**
+**Correct Answer:** **B) Implement an [Amazon ElastiCache](../../AWS_SERVICES_GLOSSARY.md#amazon-elasticache) in-memory caching cluster in front of the database**
 
-* **Why it's correct:** Amazon ElastiCache (running Redis or Memcached) is an in-memory caching engine that stores frequently requested database query results directly in RAM, allowing applications to retrieve hot data with microsecond latency and offloading high read traffic from the backend relational database.
+* **Why it's correct:** [Amazon ElastiCache](../../AWS_SERVICES_GLOSSARY.md#amazon-elasticache) (running Redis or Memcached) is an in-memory caching engine that stores frequently requested database query results directly in RAM, allowing applications to retrieve hot data with microsecond latency and offloading high read traffic from the backend relational database.
 * **Distractor Analysis:**
   - *A is incorrect:* Scaling the EC2 web instances does not resolve backend database bottlenecks and will increase connection contention on RDS.
-  - *C is incorrect:* Amazon Redshift is a columnar data warehouse for analytical reporting, completely unsuitable for high-concurrency, low-latency e-commerce transactions.
-  - *D is incorrect:* S3 Versioning protects against accidental object deletion in storage buckets, providing zero performance benefits to an Amazon RDS database.
+  - *C is incorrect:* [Amazon Redshift](../../AWS_SERVICES_GLOSSARY.md#amazon-redshift) is a columnar data warehouse for analytical reporting, completely unsuitable for high-concurrency, low-latency e-commerce transactions.
+  - *D is incorrect:* S3 Versioning protects against accidental object deletion in storage buckets, providing zero performance benefits to an [Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds) database.
 </details>
 
 ---
 
 ### Question 4
 **Which AWS database service is purpose-built for Online Analytical Processing (OLAP), utilizing columnar data storage and Massively Parallel Processing (MPP) to execute complex business intelligence queries across petabytes of historical structured data?**
-- A) Amazon RDS for MySQL
-- B) Amazon Redshift
-- C) Amazon DynamoDB
-- D) Amazon MemoryDB for Redis
+- A) [Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds) for MySQL
+- B) [Amazon Redshift](../../AWS_SERVICES_GLOSSARY.md#amazon-redshift)
+- C) [Amazon DynamoDB](../../AWS_SERVICES_GLOSSARY.md#amazon-dynamodb)
+- D) [Amazon MemoryDB](../../AWS_SERVICES_GLOSSARY.md#amazon-memorydb) for Redis
 
 <details>
 <summary><b>Click to View Answer & Detailed Distractor Analysis</b></summary>
 
-**Correct Answer:** **B) Amazon Redshift**
+**Correct Answer:** **B) [Amazon Redshift](../../AWS_SERVICES_GLOSSARY.md#amazon-redshift)**
 
-* **Why it's correct:** Amazon Redshift is a fully managed, petabyte-scale cloud data warehouse designed specifically for OLAP business intelligence workloads. It uses columnar storage and massively parallel processing (MPP) architectures to query massive analytical datasets at high speeds.
+* **Why it's correct:** [Amazon Redshift](../../AWS_SERVICES_GLOSSARY.md#amazon-redshift) is a fully managed, petabyte-scale cloud data warehouse designed specifically for OLAP business intelligence workloads. It uses columnar storage and massively parallel processing (MPP) architectures to query massive analytical datasets at high speeds.
 * **Distractor Analysis:**
-  - *A is incorrect:* Amazon RDS for MySQL uses row-oriented storage optimized for transactional processing (OLTP), not petabyte-scale analytical aggregation.
-  - *C is incorrect:* Amazon DynamoDB is a NoSQL key-value database optimized for fast individual item lookups, not complex multi-table analytical queries across historical archives.
-  - *D is incorrect:* Amazon MemoryDB is an ultra-fast, transactional in-memory database for Redis workloads, not a petabyte-scale data warehouse.
+  - *A is incorrect:* [Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds) for MySQL uses row-oriented storage optimized for transactional processing (OLTP), not petabyte-scale analytical aggregation.
+  - *C is incorrect:* [Amazon DynamoDB](../../AWS_SERVICES_GLOSSARY.md#amazon-dynamodb) is a NoSQL key-value database optimized for fast individual item lookups, not complex multi-table analytical queries across historical archives.
+  - *D is incorrect:* [Amazon MemoryDB](../../AWS_SERVICES_GLOSSARY.md#amazon-memorydb) is an ultra-fast, transactional in-memory database for Redis workloads, not a petabyte-scale data warehouse.
 </details>
 
 ---
 
 ### Question 5
 **A security analytics team needs to construct a fraud detection platform that analyzes complex, highly interconnected relationships between bank account holders, shared phone numbers, physical addresses, and device fingerprints. Which AWS purpose-built database is ideal for this workload?**
-- A) Amazon Neptune
+- A) [Amazon Neptune](../../AWS_SERVICES_GLOSSARY.md#amazon-neptune)
 - B) Amazon Timestream
-- C) Amazon DocumentDB
-- D) Amazon RDS for SQL Server
+- C) [Amazon DocumentDB](../../AWS_SERVICES_GLOSSARY.md#amazon-documentdb)
+- D) [Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds) for SQL Server
 
 <details>
 <summary><b>Click to View Answer & Detailed Distractor Analysis</b></summary>
 
-**Correct Answer:** **A) Amazon Neptune**
+**Correct Answer:** **A) [Amazon Neptune](../../AWS_SERVICES_GLOSSARY.md#amazon-neptune)**
 
-* **Why it's correct:** Amazon Neptune is a purpose-built graph database engine engineered specifically to store and navigate highly interconnected relationship graphs (nodes, edges, and properties) with sub-second query speeds, making it ideal for fraud rings, social networks, and recommendation engines.
+* **Why it's correct:** [Amazon Neptune](../../AWS_SERVICES_GLOSSARY.md#amazon-neptune) is a purpose-built graph database engine engineered specifically to store and navigate highly interconnected relationship graphs (nodes, edges, and properties) with sub-second query speeds, making it ideal for fraud rings, social networks, and recommendation engines.
 * **Distractor Analysis:**
   - *B is incorrect:* Amazon Timestream is a purpose-built time-series database designed for sequential IoT sensor metrics and server logs over time.
-  - *C is incorrect:* Amazon DocumentDB is a JSON document database compatible with MongoDB, optimized for nested semi-structured documents rather than graph relationship traversals.
-  - *D is incorrect:* Amazon RDS for SQL Server is a traditional relational database where traversing multi-level recursive relationships requires complex, resource-heavy SQL joins that do not scale well for deep graph queries.
+  - *C is incorrect:* [Amazon DocumentDB](../../AWS_SERVICES_GLOSSARY.md#amazon-documentdb) is a JSON document database compatible with MongoDB, optimized for nested semi-structured documents rather than graph relationship traversals.
+  - *D is incorrect:* [Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds) for SQL Server is a traditional relational database where traversing multi-level recursive relationships requires complex, resource-heavy SQL joins that do not scale well for deep graph queries.
 </details>
 
 ---
@@ -322,41 +322,41 @@ When reading a question scenario, search for these exact phrasing triggers:
 
 | If You See This Trigger Phrase in the Question Stem... | The Correct Database Service Is... | Trap Distractor to Immediately Discard |
 |---|---|---|
-| *"Managed relational database; traditional SQL; Multi-AZ automated failover; read replicas"* | **Amazon RDS** | *Amazon DynamoDB* (DynamoDB is NoSQL, not relational SQL) |
-| *"Cloud-native relational database; 5x MySQL performance; 6 copies across 3 AZs; up to 15 read replicas"* | **Amazon Aurora** | *Amazon RDS for MySQL* (Aurora is the 5x cloud-native engine) |
-| *"Serverless NoSQL key-value and document store; single-digit millisecond latency at any scale"* | **Amazon DynamoDB** | *Amazon RDS* (RDS does not scale automatically with sub-10ms key-value lookups) |
-| *"In-memory caching layer (Redis / Memcached); microsecond read latency; offloads read-heavy DB"* | **Amazon ElastiCache** | *Amazon CloudFront* (CloudFront caches web assets at edge; ElastiCache caches DB data) |
-| *"Columnar data warehouse; Online Analytical Processing (OLAP); petabyte scale; BI queries"* | **Amazon Redshift** | *Amazon RDS* (RDS is row-oriented OLTP, not an OLAP data warehouse) |
-| *"Graph database for navigating complex relationships; social networks, fraud detection, recommendation engines"* | **Amazon Neptune** | *Amazon RDS* or *Amazon DocumentDB* |
-| *"Time-series database for sequential IoT telemetry and time-stamped server metrics"* | **Amazon Timestream** | *Amazon DynamoDB* |
-| *"Serverless query service to analyze data directly in Amazon S3 using standard SQL without provisioning a database"* | **Amazon Athena** | *Amazon Redshift* (Redshift requires provisioning clusters/workgroups) |
+| *"Managed relational database; traditional SQL; Multi-AZ automated failover; read replicas"* | **[Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds)** | *[Amazon DynamoDB](../../AWS_SERVICES_GLOSSARY.md#amazon-dynamodb)* (DynamoDB is NoSQL, not relational SQL) |
+| *"Cloud-native relational database; 5x MySQL performance; 6 copies across 3 AZs; up to 15 read replicas"* | **[Amazon Aurora](../../AWS_SERVICES_GLOSSARY.md#amazon-aurora)** | *[Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds) for MySQL* (Aurora is the 5x cloud-native engine) |
+| *"Serverless NoSQL key-value and document store; single-digit millisecond latency at any scale"* | **[Amazon DynamoDB](../../AWS_SERVICES_GLOSSARY.md#amazon-dynamodb)** | *[Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds)* (RDS does not scale automatically with sub-10ms key-value lookups) |
+| *"In-memory caching layer (Redis / Memcached); microsecond read latency; offloads read-heavy DB"* | **[Amazon ElastiCache](../../AWS_SERVICES_GLOSSARY.md#amazon-elasticache)** | *[Amazon CloudFront](../../AWS_SERVICES_GLOSSARY.md#amazon-cloudfront)* (CloudFront caches web assets at edge; ElastiCache caches DB data) |
+| *"Columnar data warehouse; Online Analytical Processing (OLAP); petabyte scale; BI queries"* | **[Amazon Redshift](../../AWS_SERVICES_GLOSSARY.md#amazon-redshift)** | *[Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds)* (RDS is row-oriented OLTP, not an OLAP data warehouse) |
+| *"Graph database for navigating complex relationships; social networks, fraud detection, recommendation engines"* | **[Amazon Neptune](../../AWS_SERVICES_GLOSSARY.md#amazon-neptune)** | *[Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds)* or *[Amazon DocumentDB](../../AWS_SERVICES_GLOSSARY.md#amazon-documentdb)* |
+| *"Time-series database for sequential IoT telemetry and time-stamped server metrics"* | **Amazon Timestream** | *[Amazon DynamoDB](../../AWS_SERVICES_GLOSSARY.md#amazon-dynamodb)* |
+| *"Serverless query service to analyze data directly in [Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3) using standard SQL without provisioning a database"* | **[Amazon Athena](../../AWS_SERVICES_GLOSSARY.md#amazon-athena)** | *[Amazon Redshift](../../AWS_SERVICES_GLOSSARY.md#amazon-redshift)* (Redshift requires provisioning clusters/workgroups) |
 
 ### 2. The 3-Step Rapid Elimination Heuristic
 When evaluating an AWS Database question:
 1. **Step 1: Check the Data Model & Query Pattern:**
-   - **Relational Tables & SQL (OLTP):** ACID compliance, foreign keys, users, orders $\to$ **Amazon RDS** or **Amazon Aurora**.
-   - **Key-Value / JSON Documents (NoSQL):** Unstructured, massive scale, partition keys $\to$ **Amazon DynamoDB**.
-   - **In-Memory RAM (Microseconds):** Session stores, leaderboards, hot query cache $\to$ **Amazon ElastiCache** (or **DynamoDB DAX**).
-   - **Columnar Analytical Warehouse (OLAP):** Aggregating millions of historical rows $\to$ **Amazon Redshift**.
-   - **Graph (Nodes & Edges):** Tracing who knows whom, fraud rings $\to$ **Amazon Neptune**.
+   - **Relational Tables & SQL (OLTP):** ACID compliance, foreign keys, users, orders $\to$ **[Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds)** or **[Amazon Aurora](../../AWS_SERVICES_GLOSSARY.md#amazon-aurora)**.
+   - **Key-Value / JSON Documents (NoSQL):** Unstructured, massive scale, partition keys $\to$ **[Amazon DynamoDB](../../AWS_SERVICES_GLOSSARY.md#amazon-dynamodb)**.
+   - **In-Memory RAM (Microseconds):** Session stores, leaderboards, hot query cache $\to$ **[Amazon ElastiCache](../../AWS_SERVICES_GLOSSARY.md#amazon-elasticache)** (or **DynamoDB DAX**).
+   - **Columnar Analytical Warehouse (OLAP):** Aggregating millions of historical rows $\to$ **[Amazon Redshift](../../AWS_SERVICES_GLOSSARY.md#amazon-redshift)**.
+   - **Graph (Nodes & Edges):** Tracing who knows whom, fraud rings $\to$ **[Amazon Neptune](../../AWS_SERVICES_GLOSSARY.md#amazon-neptune)**.
 2. **Step 2: Check Operational Latency Requirement:**
-   - **Microsecond latency:** $\to$ **Amazon ElastiCache** (or **DAX** for DynamoDB).
-   - **Single-digit millisecond latency:** $\to$ **Amazon DynamoDB**.
-   - **Standard millisecond latency:** $\to$ **Amazon RDS / Aurora**.
-   - **Seconds to minutes (complex analytical aggregations):** $\to$ **Amazon Redshift / Athena**.
+   - **Microsecond latency:** $\to$ **[Amazon ElastiCache](../../AWS_SERVICES_GLOSSARY.md#amazon-elasticache)** (or **DAX** for DynamoDB).
+   - **Single-digit millisecond latency:** $\to$ **[Amazon DynamoDB](../../AWS_SERVICES_GLOSSARY.md#amazon-dynamodb)**.
+   - **Standard millisecond latency:** $\to$ **[Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds) / Aurora**.
+   - **Seconds to minutes (complex analytical aggregations):** $\to$ **[Amazon Redshift](../../AWS_SERVICES_GLOSSARY.md#amazon-redshift) / Athena**.
 3. **Step 3: Check Aurora Differentiators:**
-   - If the prompt specifically highlights **"5x performance of MySQL"**, **"6 storage copies replicated across 3 AZs"**, or **"storage that auto-grows up to 128 TiB"**, select **Amazon Aurora**.
+   - If the prompt specifically highlights **"5x performance of MySQL"**, **"6 storage copies replicated across 3 AZs"**, or **"storage that auto-grows up to 128 TiB"**, select **[Amazon Aurora](../../AWS_SERVICES_GLOSSARY.md#amazon-aurora)**.
 
 ### 3. High-Frequency Decoy Autopsy: Why AWS Tries to Trick You
-* **Decoy #1: "Amazon RDS" vs. "Amazon Redshift"**
+* **Decoy #1: "[Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds)" vs. "[Amazon Redshift](../../AWS_SERVICES_GLOSSARY.md#amazon-redshift)"**
   - *The Trap:* A retail company wants to analyze 5 years of historical sales transactions across 100 million records.
-  - *The Autopsy:* Candidates see "sales transactions" and choose RDS. But the goal is **historical analysis across 100 million records (OLAP)**, not processing live checkout transactions (OLTP). Massive analytical aggregations belong in **Amazon Redshift**.
-* **Decoy #2: "Amazon ElastiCache" vs. "Amazon CloudFront"**
+  - *The Autopsy:* Candidates see "sales transactions" and choose RDS. But the goal is **historical analysis across 100 million records (OLAP)**, not processing live checkout transactions (OLTP). Massive analytical aggregations belong in **[Amazon Redshift](../../AWS_SERVICES_GLOSSARY.md#amazon-redshift)**.
+* **Decoy #2: "[Amazon ElastiCache](../../AWS_SERVICES_GLOSSARY.md#amazon-elasticache)" vs. "[Amazon CloudFront](../../AWS_SERVICES_GLOSSARY.md#amazon-cloudfront)"**
   - *The Trap:* Improving response time for user requests using caching.
   - *The Autopsy:* If you are caching **HTML pages, static images, videos, or API responses at global edge locations**, use **CloudFront**. If you are caching **database query results or user session tokens inside a VPC**, use **ElastiCache**.
-* **Decoy #3: "Amazon Athena" vs. "Amazon Redshift"**
-  - *The Trap:* Running SQL queries on data stored in Amazon S3.
-  - *The Autopsy:* If you want an **interactive, serverless, pay-per-query ad-hoc SQL tool** directly on files in S3 without managing any infrastructure, select **Amazon Athena**. If you need a **dedicated, high-performance enterprise data warehouse cluster**, select **Amazon Redshift**.
+* **Decoy #3: "[Amazon Athena](../../AWS_SERVICES_GLOSSARY.md#amazon-athena)" vs. "[Amazon Redshift](../../AWS_SERVICES_GLOSSARY.md#amazon-redshift)"**
+  - *The Trap:* Running SQL queries on data stored in [Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3).
+  - *The Autopsy:* If you want an **interactive, serverless, pay-per-query ad-hoc SQL tool** directly on files in S3 without managing any infrastructure, select **[Amazon Athena](../../AWS_SERVICES_GLOSSARY.md#amazon-athena)**. If you need a **dedicated, high-performance enterprise data warehouse cluster**, select **[Amazon Redshift](../../AWS_SERVICES_GLOSSARY.md#amazon-redshift)**.
 
 ### 4. 10-Second Visual Decision Flowchart
 
