@@ -36,8 +36,8 @@ graph TD
             OP["AWS Outposts\n(Customer On-Premises Racks)"]
         end
         
-        RegionA <====|Private High-Speed Global Backbone|====> EdgeLayer
-        RegionA <====|Private High-Speed Global Backbone|====> LowLatencyExtensions
+        RegionA <-->|Private High-Speed Global Backbone| EdgeLayer
+        RegionA <-->|Private High-Speed Global Backbone| LowLatencyExtensions
     end
 ```
 

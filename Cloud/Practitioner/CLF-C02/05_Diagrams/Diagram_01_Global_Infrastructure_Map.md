@@ -17,9 +17,9 @@ flowchart TD
 (Isolated Data Centers)"]
             AZ3["Availability Zone 1C
 (Isolated Data Centers)"]
-            AZ1 <==|Low-Latency Ultra-High Speed Fiber (<1ms)|==> AZ2
-            AZ2 <==|Low-Latency Ultra-High Speed Fiber (<1ms)|==> AZ3
-            AZ1 <==|Low-Latency Ultra-High Speed Fiber (<1ms)|==> AZ3
+            AZ1 <-->|Low-Latency Ultra-High Speed Fiber sub-1ms| AZ2
+            AZ2 <-->|Low-Latency Ultra-High Speed Fiber sub-1ms| AZ3
+            AZ1 <-->|Low-Latency Ultra-High Speed Fiber sub-1ms| AZ3
         end
 
         subgraph EdgeLayer ["Global Edge Network (600+ Points of Presence)"]

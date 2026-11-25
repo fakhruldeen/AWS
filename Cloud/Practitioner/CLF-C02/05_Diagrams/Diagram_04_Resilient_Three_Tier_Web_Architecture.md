@@ -38,7 +38,7 @@ flowchart TD
             subgraph RDS ["Amazon RDS Aurora Multi-AZ"]
                 PrimaryDB["Aurora Primary Writer (AZ 1A)"]
                 ReplicaDB["Aurora Read Replica / Standby (AZ 1B)"]
-                PrimaryDB <==|Synchronous Block Replication|==> ReplicaDB
+                PrimaryDB <-->|Synchronous Block Replication| ReplicaDB
             end
             Cache["Amazon ElastiCache Redis
 (In-Memory Session & Query Cache)"]
