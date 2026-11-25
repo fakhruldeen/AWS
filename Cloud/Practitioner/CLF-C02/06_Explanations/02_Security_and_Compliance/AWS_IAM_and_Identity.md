@@ -23,7 +23,7 @@ Access management in distributed computing is governed by two distinct cryptogra
 
 ```mermaid
 flowchart LR
-    Principal["Principal (User / Service)"] -->|1. Authentication (AuthN)| Authn["Who are you?<br/>(Username/Password, Access Key, MFA Token)"]
+    Principal["Principal (User / Service)"] -->|"1. Authentication (AuthN)"| Authn["Who are you?<br/>(Username/Password, Access Key, MFA Token)"]
     Authn -->|Identity Confirmed| Authz["2. Authorization (AuthZ)<br/>What are you allowed to do?<br/>(IAM Policy Evaluation Engine)"]
     Authz -->|Explicit Allow & No Explicit Deny| Resource["AWS Target Resource (e.g., S3 Bucket, EC2 Instance)"]
     Authz -->|Implicit or Explicit Deny| Denied["HTTP 403 Access Denied"]

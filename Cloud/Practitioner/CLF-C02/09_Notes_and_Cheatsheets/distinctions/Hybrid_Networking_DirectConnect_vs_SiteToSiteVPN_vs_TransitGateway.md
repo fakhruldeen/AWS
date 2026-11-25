@@ -27,7 +27,7 @@ flowchart TD
     end
 
     Router -->|Physical Private 1Gbps / 10Gbps / 100Gbps| DXLocation --> TGW
-    Router -->|Encrypted IPsec Tunnel (Public Internet)| VGW --> TGW
+    Router -->|"Encrypted IPsec Tunnel (Public Internet)"| VGW --> TGW
 
     TGW --> VPC1
     TGW --> VPC2

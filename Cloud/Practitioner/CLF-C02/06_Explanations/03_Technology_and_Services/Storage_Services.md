@@ -134,7 +134,7 @@ flowchart LR
     
     MigrationDemand -->|Direct Online Sync via Network| DataSync["AWS DataSync<br/>(10x faster online automated transfer agent)"]
     MigrationDemand -->|Local Caching to S3 via NFS/SMB| StorageGW["AWS Storage Gateway<br/>(S3 File Gateway, Volume Gateway, Tape Gateway)"]
-    MigrationDemand -->|Petabytes with Slow Internet (< 1 Gbps)| SnowFam["AWS Snow Family (Physical Appliances)"]
+    MigrationDemand -->|"Petabytes with Slow Internet (< 1 Gbps)"| SnowFam["AWS Snow Family (Physical Appliances)"]
     
     SnowFam --> Snowcone["AWS Snowcone (8 TB SSD)"]
     SnowFam --> Snowball["AWS Snowball Edge (80 TB)"]

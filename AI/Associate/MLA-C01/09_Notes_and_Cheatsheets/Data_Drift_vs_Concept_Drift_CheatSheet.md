@@ -13,11 +13,11 @@ In production ML systems, model accuracy decays over time. Understanding the exa
 flowchart TD
     Drift["Production Model Performance Degradation"]
 
-    Drift -->|Shift in Input Feature Distribution: P(X)| DataDrift["1. Data Drift (Covariate Shift)<br/>• Input feature distributions change over time<br/>• Relationship P(y|X) remains constant<br/>• Detected without ground-truth labels!"]
+    Drift -->|"Shift in Input Feature Distribution: P(X)"| DataDrift["1. Data Drift (Covariate Shift)<br/>• Input feature distributions change over time<br/>• Relationship P(y|X) remains constant<br/>• Detected without ground-truth labels!"]
 
-    Drift -->|Shift in Target Relationship: P(y|X)| ConceptDrift["2. Concept Drift<br/>• Relationship between features and target changes<br/>• Input features X look normal, but predictions fail<br/>• Strictly requires ground-truth labels to detect!"]
+    Drift -->|"Shift in Target Relationship: P(y given X)"| ConceptDrift["2. Concept Drift<br/>• Relationship between features and target changes<br/>• Input features X look normal, but predictions fail<br/>• Strictly requires ground-truth labels to detect!"]
 
-    Drift -->|Shift in Target Distribution: P(y)| PriorShift["3. Prior Probability Shift (Label Shift)<br/>• Distribution of target labels changes<br/>• e.g., Fraud rate jumps from 0.1% to 15%"]
+    Drift -->|"Shift in Target Distribution: P(y)"| PriorShift["3. Prior Probability Shift (Label Shift)<br/>• Distribution of target labels changes<br/>• e.g., Fraud rate jumps from 0.1% to 15%"]
 
     Drift -->|Shift in Feature Importance Ranking| AttribDrift["4. Feature Attribution Drift<br/>• The relative SHAP importance of features shifts<br/>• Monitored via SageMaker Clarify"]
 ```

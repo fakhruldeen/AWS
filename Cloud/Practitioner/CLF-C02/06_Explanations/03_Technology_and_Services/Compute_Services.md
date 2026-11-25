@@ -97,8 +97,8 @@ Choosing the right purchasing option is the primary mechanism for optimizing clo
 flowchart TD
     Start{"Workload Duration & Predictability?"}
     Start -->|Short-term, irregular, dev/test| OD["On-Demand Instances\n(Highest flexibility, pay by second, zero commitment)"]
-    Start -->|Steady-state predictable usage (1 or 3 Years)| Plan{"Commitment Preference?"}
-    Plan -->|Flexible compute spend ($/hr) across EC2/Fargate/Lambda| SP["Compute Savings Plans\n(Up to 72% discount)"]
+    Start -->|"Steady-state predictable usage (1 or 3 Years)"| Plan{"Commitment Preference?"}
+    Plan -->|"Flexible compute spend ($/hr) across EC2/Fargate/Lambda"| SP["Compute Savings Plans\n(Up to 72% discount)"]
     Plan -->|Specific instance family in specific region| RI["Standard Reserved Instances\n(Up to 72% discount, capacity reservation)"]
     Start -->|Stateless, fault-tolerant batch jobs| Spot["Spot Instances\n(Up to 90% discount, spare capacity, 2-minute notice)"]
     Start -->|BYOL software licenses tied to physical sockets/cores| DH["Dedicated Hosts\n(Dedicated physical server, full socket/core visibility)"]

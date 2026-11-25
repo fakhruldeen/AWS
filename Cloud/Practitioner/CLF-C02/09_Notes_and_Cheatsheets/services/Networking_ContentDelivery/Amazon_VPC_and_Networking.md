@@ -36,7 +36,7 @@ graph TD
 
     Internet((Public Internet)) <===> IGW
     IGW <===> PublicSubnet
-    NAT <===>|Outbound Only (Updates)| PrivateAppSubnet
+    NAT <===>|"Outbound Only (Updates)"| PrivateAppSubnet
     PublicSubnet --> PrivateAppSubnet
     PrivateAppSubnet --> PrivateDBSubnet
 ```

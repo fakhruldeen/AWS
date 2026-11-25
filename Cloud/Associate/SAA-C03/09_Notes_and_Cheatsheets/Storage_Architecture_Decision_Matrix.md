@@ -13,7 +13,7 @@ flowchart TD
 
     Req -->|Key-Value Objects, Static Web, Data Lake, Backups| S3["Amazon S3<br/>• Unlimited object storage<br/>• Up to 5 TB per object<br/>• S3 Intelligent-Tiering, Glacier"]
     Req -->|Single EC2 Instance Boot / High-IOPS Block Storage| EBS["Amazon EBS<br/>• AZ-locked block storage<br/>• gp3 (general) / io2 Block Express (mission-critical)"]
-    Req -->|Multi-AZ Concurrent Shared File Access (Linux NFS)| EFS["Amazon EFS<br/>• POSIX-compliant Linux file system<br/>• Multi-AZ concurrent mounting<br/>• Burstable / Elastic throughput"]
+    Req -->|"Multi-AZ Concurrent Shared File Access (Linux NFS)"| EFS["Amazon EFS<br/>• POSIX-compliant Linux file system<br/>• Multi-AZ concurrent mounting<br/>• Burstable / Elastic throughput"]
     Req -->|High-Performance Windows SMB / HPC Lustre| FSx["Amazon FSx Family<br/>• FSx for Windows (SMB/Active Directory)<br/>• FSx for Lustre (Sub-ms HPC / ML training)"]
 ```
 

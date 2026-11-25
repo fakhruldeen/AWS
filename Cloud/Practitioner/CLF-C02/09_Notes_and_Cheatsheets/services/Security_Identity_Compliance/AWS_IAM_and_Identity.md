@@ -84,7 +84,7 @@ flowchart TD
     
     User -->|Sign in / Sign up| UP
     UP -->|JWT Token| IP
-    IP -->|Temporary AWS Credentials (STS)| User
+    IP -->|"Temporary AWS Credentials (STS)"| User
     User -->|Secure Direct Access| S3
     User -->|Secure Direct Access| DDB
 ```

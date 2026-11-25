@@ -45,7 +45,7 @@ flowchart TD
         FinalAnswer["Cited Grounded Response\n('Per Section 4.2: $75/day [1]')"]
         
         UserQuery --> BedrockKB
-        BedrockKB -->|Vector Lookup (k-NN / BM25)| VectorDB
+        BedrockKB -->|"Vector Lookup (k-NN / BM25)"| VectorDB
         VectorDB -->|Top-K Context Chunks| BedrockKB
         BedrockKB -->|Prompt + Context Chunks| LLM
         LLM --> FinalAnswer

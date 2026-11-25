@@ -72,7 +72,7 @@ flowchart TD
     S3Std -->|After 30 Days of Inactivity| S3IA["S3 Standard-IA (Save ~50% cost)"]
     S3IA -->|After 90 Days of Inactivity| S3G["S3 Glacier Flexible (Save ~80% cost)"]
     S3G -->|After 365 Days| S3DA["S3 Glacier Deep Archive (Lowest Cost)"]
-    S3DA -->|After 7 Years (2555 Days)| Expire["Object Expired / Automatically Deleted"]
+    S3DA -->|"After 7 Years (2555 Days)"| Expire["Object Expired / Automatically Deleted"]
 ```
 
 ---

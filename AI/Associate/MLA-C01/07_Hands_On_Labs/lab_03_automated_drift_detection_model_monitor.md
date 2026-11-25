@@ -27,7 +27,7 @@ flowchart TD
         S3_Capture --> Monitor_Job
         Baseline --> Monitor_Job
 
-        Monitor_Job -->|Compare Distributions (K-L Divergence / KS Test)| Analysis["Violations Report (constraint_violations.json)"]
+        Monitor_Job -->|"Compare Distributions (K-L Divergence / KS Test)"| Analysis["Violations Report (constraint_violations.json)"]
     end
 
     subgraph Alerting ["Observability & Automated Retraining"]

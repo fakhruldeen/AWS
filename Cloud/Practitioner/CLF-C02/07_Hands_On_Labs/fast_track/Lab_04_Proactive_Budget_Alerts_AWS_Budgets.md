@@ -36,7 +36,7 @@ flowchart LR
     
     BillingEngine --> Budgets
     BillingEngine --> CW
-    Budgets -->|Spend reaches 80% ($8.00)| Email
+    Budgets -->|"Spend reaches 80% ($8.00)"| Email
     CW -->|Estimated Charge > $5.00| SNS --> Email
 ```
 

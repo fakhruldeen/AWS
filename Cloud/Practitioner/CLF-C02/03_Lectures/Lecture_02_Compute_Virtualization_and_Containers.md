@@ -76,7 +76,7 @@ Draw this high-yield matrix on the classroom board:
 flowchart TD
     Start{"Workload Nature?"}
     Start -->|Short-term, unpredictable, dev/test| OD["On-Demand Instances\n(Pay by second/hour, zero commitment)"]
-    Start -->|Steady-state predictable usage (1-3 yrs)| Commit{"Commitment Type?"}
+    Start -->|"Steady-state predictable usage (1-3 yrs)"| Commit{"Commitment Type?"}
     Commit -->|Consistent $/hr compute spend| SP["Savings Plans\n(Up to 72% discount, flexible across EC2/Fargate/Lambda)"]
     Commit -->|Specific instance type & region| RI["Reserved Instances (RIs)\n(Up to 72% discount, capacity reservation option)"]
     Start -->|Fault-tolerant, stateless batch jobs| Spot["Spot Instances\n(Up to 90% discount, spare capacity, 2-min warning)"]
