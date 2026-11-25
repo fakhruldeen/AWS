@@ -20,6 +20,12 @@ flowchart TD
         end
     end
 
+    subgraph Phases ["The Four Phases of AWS CAF Transformation Journey"]
+        Ph1["1. Envision<br/>Align Cloud to Business Outcomes"] --> Ph2["2. Align<br/>Identify Capability Gaps across 6 Perspectives"]
+        Ph2 --> Ph3["3. Launch<br/>Deliver Production Pilot Workloads"]
+        Ph3 --> Ph4["4. Scale<br/>Expand Pilots Enterprise-Wide"]
+    end
+
     subgraph SevenRs ["The 7 Migration Strategies (7 Rs)"]
         R1["1. Rehost (Lift-and-Shift -> AWS MGN)"]
         R2["2. Replatform (Lift, Tinker & Shift -> Managed RDS)"]
@@ -30,5 +36,6 @@ flowchart TD
         R7["7. Relocate (Hypervisor shift -> VMware Cloud on AWS)"]
     end
 
-    CAF -.->|Guides Application Strategy| SevenRs
+    CAF -.->|Executed Through| Phases
+    Phases -.->|Guides Application Strategy| SevenRs
 ```

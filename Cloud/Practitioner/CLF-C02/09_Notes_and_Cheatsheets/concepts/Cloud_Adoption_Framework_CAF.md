@@ -61,6 +61,26 @@ graph TD
 
 ---
 
+## 2.5 The Four Phases of AWS CAF (`Envision → Align → Launch → Scale`)
+
+AWS CAF 3.0 structures every organization's cloud transformation journey into **four sequential phases**:
+
+```mermaid
+flowchart LR
+    P1["1. Envision<br/>Align cloud to business outcomes"] --> P2["2. Align<br/>Identify capability gaps across 6 Perspectives"]
+    P2 --> P3["3. Launch<br/>Deliver production pilot initiatives"]
+    P3 --> P4["4. Scale<br/>Expand pilots enterprise-wide"]
+```
+
+| Phase | Core Objective | Key Activities & Exam Clues |
+| :--- | :--- | :--- |
+| **1. Envision** | **Demonstrate how cloud accelerates business outcomes** | Identify high-impact transformation opportunities, link them to the **4 Business Outcomes** (*Reduced Business Risk, Improved ESG, Increased Revenue, Increased Operational Efficiency*), and secure executive sponsorship. |
+| **2. Align** | **Identify capability gaps across all 6 Perspectives** | Assess readiness across Business, People, Governance, Platform, Security, and Operations; resolve cross-organizational dependencies and build an actionable roadmap. |
+| **3. Launch** | **Deliver pilot initiatives in production** | Deploy initial production pilot workloads to demonstrate incremental business value quickly, learn from real-world feedback, and refine processes before mass migration. |
+| **4. Scale** | **Expand production pilots to enterprise scale** | Replicate validated patterns across the organization, automate landing zones and governance, and realize full business value at scale. |
+
+---
+
 ## 3. The 7 Rs of Cloud Migration
 
 When migrating existing on-premises workloads to AWS, organizations classify each application into one of the **7 Migration Strategies ("7 Rs")**:

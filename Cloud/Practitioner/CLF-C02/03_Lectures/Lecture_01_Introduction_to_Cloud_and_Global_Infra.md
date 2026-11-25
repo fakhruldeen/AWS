@@ -134,6 +134,12 @@ When applications cannot tolerate the transit latency back to a full AWS Region:
 5. **Security:** Compliance auditing (HIPAA, PCI-DSS, GDPR), IAM least privilege, and automated guardrails.
 6. **Operations:** Meeting business SLAs, incident management, observability, and disaster recovery.
 
+#### The Four Phases of AWS CAF Transformation Journey:
+1. **Envision:** Demonstrate how cloud accelerates business outcomes and align executive sponsors around prioritized transformation opportunities.
+2. **Align:** Identify capability gaps across all 6 CAF perspectives, resolve cross-organizational dependencies, and build an actionable roadmap.
+3. **Launch:** Deliver production pilot initiatives to demonstrate incremental business value quickly and refine processes before scaling.
+4. **Scale:** Expand validated production pilots enterprise-wide to realize full business value at scale.
+
 #### The 7 Rs of Cloud Migration:
 1. **Rehost ("Lift and Shift"):** Move applications to EC2 without code changes using **AWS Application Migration Service (MGN)**. Fastest migration with lowest risk.
 2. **Replatform ("Lift, Tinker and Shift"):** Make small core optimizations without changing application code (e.g., moving self-hosted MySQL to Amazon RDS).
