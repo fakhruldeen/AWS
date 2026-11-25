@@ -35,8 +35,8 @@ flowchart LR
     Users -->|"1. Query DNS"| DNS
     DNS -->|"2. Resolve to Closest Edge"| Edge
     Users -->|"3. HTTPS Request"| Edge
-    Edge --"Cache Hit (95%)"-->|"4a. Instant Response (< 20ms)"| Users
-    Edge --"Cache Miss (5%)"-->|"4b. Signed OAC Request over AWS Backbone"| S3
+    Edge -->|"4a. Cache Hit (95%): Instant Response (< 20ms)"| Users
+    Edge -->|"4b. Cache Miss (5%): Signed OAC Request over AWS Backbone"| S3
     S3 -->|"5. Return Asset to Edge"| Edge
 ```
 

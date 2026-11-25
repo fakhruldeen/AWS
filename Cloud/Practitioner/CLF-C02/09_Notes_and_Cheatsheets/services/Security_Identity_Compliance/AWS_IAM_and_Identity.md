@@ -12,7 +12,7 @@
 
 ```mermaid
 graph TD
-    IAM[AWS IAM Service (Global)]
+    IAM["AWS IAM Service (Global)"]
     
     IAM --> Root["1. Root User\nComplete unrestricted admin access\nLock away after setup!"]
     IAM --> Users["2. IAM Users\nIndividual human identity\n(e.g., Alice, Bob)"]

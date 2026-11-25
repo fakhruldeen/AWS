@@ -106,15 +106,15 @@ This is one of the most frequently tested distinctions on the CLF-C02 exam:
 flowchart TD
     subgraph MultiAZ ["Multi-AZ Deployment (High Availability / Disaster Recovery)"]
         direction LR
-        PrimaryDB["Primary DB Instance<br/>(AZ-A / Read-Write)"] ==="Synchronous Block Replication < 1ms"===> StandbyDB["Standby Replica<br/>(AZ-B / Passive)"]
+        PrimaryDB["Primary DB Instance<br/>(AZ-A / Read-Write)"] ==>|"Synchronous Block Replication < 1ms"| StandbyDB["Standby Replica<br/>(AZ-B / Passive)"]
         ClientApp["Application"] -->|Normal Traffic| PrimaryDB
         PrimaryDB -.->|"Fails Over on Crash"| StandbyDB
     end
 
     subgraph ReadReplica ["Read Replicas (Scalability & Performance)"]
         direction LR
-        MasterDB["Primary DB Instance<br/>(Read-Write)"] -.->"Asynchronous Log Shipping"-.-> RR1["Read Replica 1<br/>(Read-Only)"]
-        MasterDB -.->"Asynchronous Log Shipping"-.-> RR2["Read Replica 2<br/>(Read-Only)"]
+        MasterDB["Primary DB Instance<br/>(Read-Write)"] -.->|"Asynchronous Log Shipping"| RR1["Read Replica 1<br/>(Read-Only)"]
+        MasterDB -.->|"Asynchronous Log Shipping"| RR2["Read Replica 2<br/>(Read-Only)"]
         WebTraffic["Read-Heavy Web Traffic"] --> RR1
         WebTraffic --> RR2
     end

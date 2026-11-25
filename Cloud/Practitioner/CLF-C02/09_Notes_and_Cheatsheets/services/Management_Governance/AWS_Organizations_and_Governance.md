@@ -86,7 +86,7 @@ mindmap
     Performance
       High EC2 utilization, Service limits approaching threshold
     Security
-      MFA on root account, open Security Group ports (0.0.0.0/0 on port 22/3389), S3 public bucket permissions
+      MFA on root account, open Security Group ports 0.0.0.0/0 on port 22/3389, S3 public bucket permissions
     Fault Tolerance
       Unbacked-up EBS volumes, single-AZ RDS deployments, Route 53 health checks
     Service Limits

@@ -37,7 +37,7 @@ flowchart LR
     Client -->|"HTTPS Request (Edge Latency)"| Edge
     Edge -->|Cache Hit| Client
     Edge -.->|"Cache Miss (Private OAC)"| S3
-    Client x--|Direct Public HTTP Access Blocked| S3
+    Client --x|"Direct Public HTTP Access Blocked"| S3
 ```
 
 ---
