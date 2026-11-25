@@ -95,7 +95,7 @@ overhead?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `A`
 
 Adding a department tag to each resource and configuring cost allocation tags is an action
 that can help you accomplish the goal of billing each department for its resource usage
@@ -222,7 +222,7 @@ system?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `B`
 
 Amazon Redshift is a fully managed, petabyte-scale data warehouse service in the cloud.
 You can start with just a few hundred gigabytes of data and scale to a petabyte or more.
@@ -306,7 +306,7 @@ Which AWS service can generate information that can be used by external auditors
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C`
 
 AWS Config enables users to assess, audit, and evaluate the configurations of AWS
 resources. It provides information that can be used by external auditors to ensure
@@ -356,7 +356,7 @@ Which AWS service or feature should be used to host the application in the AWS C
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `B`
 
 Amazon EC2 On-Demand Instances are instances that let you pay for compute capacity
 by the hour or second (minimum of 60 seconds) with no long-term commitments. This
@@ -456,7 +456,7 @@ What should the company use to accomplish this goal?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C`
 
 A VPC endpoint enables private connections between an Amazon VPC and AWS services,
 like Amazon S3, without requiring internet access. This allows secure access to S3 from
@@ -505,7 +505,7 @@ Which service can the company use to access AWS compliance documentation?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `B`
 
 The correct answer is B because AWS Artifact is a service that provides access to AWS
 compliance documentation, such as audit reports, security certifications, and agreements.
@@ -655,7 +655,7 @@ responsibility model?(Select TWO.)
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C, D`
 
 Customers are responsible for configuring and maintaining guest operating systems and
 applications on services where the customer controls those components, such as Amazon
@@ -720,7 +720,7 @@ responsibility?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C`
 
 The customer is responsible for configuring the logical networking resources inside its
 Amazon VPC. This includes creating and associating route tables and defining routes that
@@ -753,7 +753,7 @@ Which activity can companies complete by using AWS Organizations?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `B`
 
 Managing service control policies (SCPs) is an activity that companies can complete by
 using AWS Organizations. AWS Organizations is a service that enables the user to
@@ -784,7 +784,7 @@ Which AWS database service should the company choose?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C`
 
 Amazon Neptune is a service that provides a fully managed graph database that supports
 property graphs and RDF graphs. It can be used to build applications that work with highly
@@ -1025,7 +1025,7 @@ requirements MOST cost effectively?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `A`
 
 EFS Standard-Infrequent Access (EFS Standard-IA) is the storage class that meets the
 requirements of storing data across multiple Availability Zones in an AWS Region, that will
@@ -1084,7 +1084,7 @@ Control (SOC) reports.
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `D`
 
 Verified authentic candidate practice response from the November 2026 revision pool.
 
@@ -1106,7 +1106,7 @@ operational excellence in the AWS Cloud?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `B`
 
 Making frequent, small, reversible changes is one of the design principles for operational
 excellence in the AWS Cloud, as defined by the AWS Well-Architected Framework. This
@@ -1133,7 +1133,7 @@ What is a benefit of using AWS serverless computing?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `D`
 
 AWS serverless computing is a way of building and running applications without thinking
 about servers. AWS manages the infrastructure for you, so you don't have to provision,
@@ -1194,7 +1194,7 @@ employees with virtual desktops?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `D`
 
 The AWS service that should be used when a company needs to provide its remote
 employees with virtual desktops is Amazon WorkSpaces. Amazon WorkSpaces is a fully
@@ -1344,7 +1344,7 @@ Which AWS service or tool can a company use to set up consolidated billing?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `B`
 
 AWS Organizations Overview:
 AWS Organizations allows a company to manage multiple AWS accounts under a single
@@ -1420,7 +1420,7 @@ Which AWS service should the company use for the data warehouse?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `D`
 
 The AWS service that the company should use for the data warehouse is Amazon
 Redshift. Amazon Redshift is a fully managed, petabyte-scale data warehouse service that
@@ -1447,7 +1447,7 @@ plan?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `A`
 
 TheAWS Developer Forumsare always free to use, regardless of the user's AWS Support
 plan. They provide a platform for users to ask questions, share knowledge, and collaborate
@@ -1528,7 +1528,7 @@ model?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `A`
 
 The customer is responsible for selecting and configuring the encryption options used for
 its Amazon RDS database. When creating an encrypted DB instance, the customer
@@ -1617,7 +1617,7 @@ Which AWS service or feature can be used to create a private connection between 
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C`
 
 AWS Direct Connect is a service that establishes a dedicated network connection between
 your on-premises network and one or more AWS Regions. AWS Direct Connect can be
@@ -1708,7 +1708,7 @@ traffic in and out of subnets?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C`
 
 A network access control list (network ACL) is a feature that acts as a firewall for
 controlling traffic in and out of one or more subnets in a virtual private cloud (VPC).
@@ -1802,7 +1802,7 @@ meet this requirement?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `D`
 
 AWS Cloud Development Kit (AWS CDK) is an open source software development
 framework that allows you to model and provision your cloud infrastructure using familiar
@@ -1835,7 +1835,7 @@ Which AWS service can the company use to meet this requirement?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C`
 
 Amazon EventBridge Overview:
 EventBridge is a serverless event bus that enables applications to react to changes in
@@ -1905,7 +1905,7 @@ What is the MOST operationally efficient way to meet these requirements?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `D`
 
 Verified authentic candidate practice response from the November 2026 revision pool.
 
@@ -2139,7 +2139,7 @@ Which AWS service should the company use?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C`
 
 AWS Shield Advanced is a service that provides high levels of detection and near-real-time
 (NRT) mitigation against large and sophisticated distributed denial of service (DDoS)
@@ -2170,7 +2170,7 @@ responsibility model?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C`
 
 According to the AWS shared responsibility model, AWS is responsible for the security of
 the cloud, while the customer is responsible for the security in the cloud. This means that
@@ -2297,7 +2297,7 @@ Which of the following are advantages of the AWS Cloud? (Select TWO.)
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `B, C`
 
 The correct answers are B and C because they are advantages of the AWS Cloud. High
 economies of scale means that AWS can achieve lower variable costs than customers can
@@ -2350,7 +2350,7 @@ responsibility model?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `D`
 
 Physical and environmental controls are entirely the responsibility of AWS, according to
 the AWS shared responsibility model. The AWS shared responsibility model defines the
@@ -2513,7 +2513,7 @@ Which AWS service is a highly available and scalable DNS web service?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C`
 
 Amazon Route 53 is a highly available and scalable DNS web service. It is designed to
 give developers and businesses an extremely reliable and cost-effective way to route end
@@ -2570,7 +2570,7 @@ Which Amazon S3 storage class is the MOST cost-effective for long-term storage?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `A`
 
 Amazon S3 Glacier Deep Archive is the lowest-cost storage class in the cloud. It is
 designed for long-term data archiving that is rarely accessed. It offers a retrieval time of 12
@@ -2632,7 +2632,7 @@ Which AWS service will meet these requirements?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `A`
 
 AWS Outposts is an AWS service that extends AWS infrastructure, services, APIs, and
 tools to virtually any datacenter, co-location space, or on-premises facility. AWS Outposts
@@ -2661,7 +2661,7 @@ requirements?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `A`
 
 AWS Cloud Adoption Framework (AWS CAF) is a set of best practices, tools, and
 guidance that helps organizations get started with cloud technologies. AWS CAF helps
@@ -2796,7 +2796,7 @@ Which AWS service will support this application MOST cost-effectively?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `B`
 
 AWS Lambda is a serverless compute service that is ideal for applications with shortrunning processes and low-frequency invocation, as it only charges for the compute time
 consumed. Since the application is invoked only a few times a day and runs for less than 5
@@ -2885,7 +2885,7 @@ Which AWS service or resource must the company use to meet these requirements?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `D`
 
 AWS Shield Advanced provides enhanced protection against DDoS attacks and includes
 access to the AWS DDoS Response Team (DRT) to help mitigate complex DDoS events.
@@ -2976,7 +2976,7 @@ Which AWS service will meet this requirement?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C`
 
 According to AWS official documentation, theAWS Pricing Calculatoris designed to
 estimate and compare the cost of running workloads on AWS versus on-premises
@@ -3034,7 +3034,7 @@ operational overhead?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `B`
 
 IAM roles are a way of granting temporary permissions to entities that need to access
 AWS resources, such as users, applications, or services. IAM roles allow customers to
@@ -3165,7 +3165,7 @@ How does AWS provide agility for users?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `B`
 
 Verified authentic candidate practice response from the November 2026 revision pool.
 
@@ -3186,7 +3186,7 @@ Which of the following is an advantage of AWS Cloud computing?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C`
 
 The correct answer is C because AWS Cloud computing allows customers to trade fixed
 expenses for variable expenses. This means that customers only pay for the resources
@@ -3216,7 +3216,7 @@ What is the MOST secure way to store passwords on AWS?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `A`
 
 AWS Secrets Manageris the most secure way to store and manage sensitive information,
 such as passwords, database credentials, and API keys. Secrets Manager allows you to:
@@ -3252,7 +3252,7 @@ Which task requires the use of AWS account root user credentials?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C`
 
 The creation of an organization in AWS Organizations requires the use of AWS account
 root user credentials. The AWS account root user is the email address that was used to
@@ -3313,7 +3313,7 @@ scalable network environment in the AWS Cloud?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C`
 
 Verified authentic candidate practice response from the November 2026 revision pool.
 
@@ -3396,7 +3396,7 @@ Which AWS service will meet this requirement?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `A`
 
 Amazon Neptuneis a fully managed graph database service optimized for storing and
 querying highly connected data. It supports popular graph models such as Property Graph
@@ -3583,7 +3583,7 @@ Which AWS service will meet this requirement?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C`
 
 Verified authentic candidate practice response from the November 2026 revision pool.
 
@@ -3608,7 +3608,7 @@ Which AWS service will meet these requirements'?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `A`
 
 AWS Identity and Access Management (IAM) is a service that helps you securely control
 access to AWS resources for your users. You use IAM to control who can use your AWS
@@ -3638,7 +3638,7 @@ this plan?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `D`
 
 The company is following the best practice of implementing loosely coupled dependencies
 by migrating the application to AWS and dividing the application into microservices.
@@ -3702,7 +3702,7 @@ Which AWS service will help protect applications running on AWS from DDoS attack
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C`
 
 AWS Shield is a managed Distributed Denial of Service (DDoS) protection service that
 safeguards applications running on AWS. AWS Shield provides always-on detection and
@@ -3781,7 +3781,7 @@ Which AWS service or device should the company use to meet this requirement?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `B`
 
 Amazon Elastic File System (Amazon EFS) is a service that provides a scalable and
 elastic file system for Linux-based workloads. It can be mounted on multiple Amazon EC2
@@ -3812,7 +3812,7 @@ Which AWS service will meet this requirement?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `A`
 
 Amazon Cognito is a service that provides identity management for mobile and web
 applications, allowing users to sign up, sign in, and access AWS resources with different
@@ -3840,7 +3840,7 @@ overhead?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `B`
 
 Rightsizing involves adjusting instance types based on actual utilization to optimize costs
 and performance. Changing the size and type of EC2 instances according to utilization
@@ -3992,7 +3992,7 @@ Which solution will meet these requirements?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `A`
 
 Reserved Instances (RIs)offer a significant discount (up to 75%) compared to On-Demand
 pricing in exchange for committing to use AWS for a period of 1 or 3 years. This pricing
@@ -4122,7 +4122,7 @@ TWO.)
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `D, E`
 
 Verified authentic candidate practice response from the November 2026 revision pool.
 
@@ -4238,7 +4238,7 @@ Which strategy can the company use to optimize costs?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C`
 
 Verified authentic candidate practice response from the November 2026 revision pool.
 
@@ -4384,7 +4384,7 @@ Which credentials or keys does the application need for authentication?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C`
 
 IAM access keys are long-term credentials that consist of an access key ID and a secret
 access key. You use access keys to sign programmatic requests that you make to AWS. If
@@ -4562,7 +4562,7 @@ How should the company obtain these reports?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `B`
 
 AWS Artifact is a service provided by AWS that offers on-demand access to AWS
 compliance reports, including the Payment Card Industry (PCI) reports. It is the primary
@@ -4717,7 +4717,7 @@ Which option presents a benefit of using Amazon RDS?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C`
 
 Amazon Relational Database Service reduces database administration work by managing
 common operational tasks. AWS documentation states that Amazon RDS manages
@@ -4751,7 +4751,7 @@ Which AWS service or infrastructure component will provide this functionality?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C`
 
 Edge locations are sites that Amazon CloudFront uses to cache copies of your content for
 faster delivery to users at any location. You can use Amazon CloudFront to deliver your
@@ -4851,7 +4851,7 @@ How does the AWS Enterprise Support Concierge team help users?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C`
 
 The AWS Enterprise Support Concierge team is a group of billing and account experts who
 specialize in working with enterprise customers. They can help customers with questions
@@ -4884,7 +4884,7 @@ Which S3 storage class will meet this requirement MOST cost-effectively?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C`
 
 S3 Glacier Deep Archive is Amazon S3's lowest-cost storage class and supports long-term
 retention and digital preservation for data that may be accessed once or twice in a year. It
@@ -5005,7 +5005,7 @@ Which AWS service or feature enables users to encrypt data at rest in Amazon S3?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `B`
 
 Server-side encryption is an encryption option that Amazon S3 provides to encrypt data at
 rest in Amazon S3. With server-side encryption, Amazon S3 encrypts an object before
@@ -5066,7 +5066,7 @@ responsibility model?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `D`
 
 According to the AWS shared responsibility model, customers are responsible for
 managing their data, applications, operating systems, security groups, and other aspects
@@ -5191,7 +5191,7 @@ What should the company do to make the application highly available?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `A`
 
 Provisioning additional EC2 instances in other Availability Zones is a way to make the
 application highly available, as it reduces the impact of failures and increases fault
@@ -5223,7 +5223,7 @@ instance type is required?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C`
 
 The correct answer is C because Dedicated Hosts are Amazon EC2 instances that are
 required when a user wants to utilize their existing per-socket, per-core, or per-virtual
@@ -5286,7 +5286,7 @@ Which AWS purchasing option should the company choose to meet these requirements
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `B`
 
 Compute Savings Plans are a flexible and cost-effective way to optimize long-term
 compute costs of AWS Lambda functions and Amazon EC2 instances. With Compute
@@ -5373,7 +5373,7 @@ company use to meet this requirement?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C`
 
 Verified authentic candidate practice response from the November 2026 revision pool.
 
@@ -5395,7 +5395,7 @@ transaction processing (OLTP)?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C`
 
 Amazon RDS is a fully managed relational database service that supports several
 database engines, including PostgreSQL. Amazon RDS can run a managed PostgreSQL
@@ -5428,7 +5428,7 @@ Which AWS service is appropriate for this use case?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `A`
 
 Amazon EventBridge (formerly CloudWatch Events) allows users to respond to changes in
 the state of AWS resources. It can be configured to invoke an AWS Lambda function when
@@ -5453,7 +5453,7 @@ Which AWS service or tool does AWS Control Tower use to create resources?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `A`
 
 AWS Control Tower uses AWS CloudFormation to create resources in your landing zone.
 AWS CloudFormation is a service that helps you model and set up your AWS resources
@@ -5516,7 +5516,7 @@ Which AWS service should the company use to meet these requirements?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `A`
 
 A is correct because Amazon RDS is the AWS service that provides a managed relational
 database service that supports various database engines, such as MySQL, PostgreSQL,
@@ -5544,7 +5544,7 @@ maximum security?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `B`
 
 AWS Secrets Manager is the AWS service where database credentials should be stored
 for maximum security. AWS Secrets Manager helps to protect the secrets, such as
@@ -5635,7 +5635,7 @@ Which AWS service will meet these requirements?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `A`
 
 Amazon Kendra is a highly accurate and easy to use intelligent search service powered by
 machine learning. It enables users to easily find the content they are looking for, even
@@ -5700,7 +5700,7 @@ Which AWS service will meet these requirements?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `B`
 
 AWS Fargateis a serverless compute engine for containers that allows users to run
 containers without having to manage the underlying infrastructure. Fargate eliminates the
@@ -6002,7 +6002,7 @@ failover between those Regions.
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `B`
 
 Reliability is the cloud concept that this architecture represents. Reliability is the ability of a
 system to recover from infrastructure or service disruptions, dynamically acquire computing
@@ -6030,7 +6030,7 @@ Which AWS service will store this data MOST cost-effectively?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `D`
 
 Amazon S3 is an AWS service that provides scalable, durable, and cost-effective object
 storage in the cloud. Amazon S3 can store any amount and type of data, such as server
@@ -6151,7 +6151,7 @@ manager (TAM)?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `D`
 
 The correct answer is D because AWS Enterprise Support is the support plan that provides
 customers with access to an AWS technical account manager (TAM). AWS Enterprise
@@ -6183,7 +6183,7 @@ threats?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C`
 
 AWS Network Firewall is a managed service that makes it easy to deploy essential
 network protections for all of your Amazon Virtual Private Clouds (VPCs). The service can
@@ -6212,7 +6212,7 @@ model? (Select TWO.)
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `A, C`
 
 The correct answers are A and C because patching AWS network devices and providing
 physical security for compute resources are tasks that are the responsibility of AWS,
@@ -6388,7 +6388,7 @@ Which AWS service should the company use to run these queries MOST cost-effectiv
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `B`
 
 Verified authentic candidate practice response from the November 2026 revision pool.
 
@@ -6500,7 +6500,7 @@ AWS CloudTrail?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `A`
 
 By implementingAWS CloudTrail, a company is adhering to the AWS Cloud design
 principle ofactivating traceability. AWS CloudTrail provides detailed logs of all API calls
@@ -6538,7 +6538,7 @@ Which AWS service can the company use to meet this requirement?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `B`
 
 Amazon Lexis a service for building conversational interfaces into any application using
 voice and text. It provides the tools necessary to create, test, and publish intelligent
@@ -6571,7 +6571,7 @@ Which AWS service should the company use to meet these requirements?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `D`
 
 AWS Service Catalog enables companies to create, manage, and distribute catalogs of
 approved infrastructure as code (IaC) templates and software configurations. This service
@@ -6760,7 +6760,7 @@ point. Which pillar of the AWS Well-Architected Framework includes these goals?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `D`
 
 Verified authentic candidate practice response from the November 2026 revision pool.
 
@@ -6809,7 +6809,7 @@ between Amazon EC2 instances?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C`
 
 VPC Flow Logs is the AWS service or feature that is used to troubleshoot network
 connectivity issues between Amazon EC2 instances. VPC Flow Logs is a feature that
@@ -6837,7 +6837,7 @@ Which AWS services can a company use to achieve a loosely coupled architecture?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `B, E`
 
 Amazon Simple Queue Service (Amazon SQS) and AWS Step Functions are AWS
 services that can be used to achieve a loosely coupled architecture. Amazon SQS is a fully
@@ -7061,7 +7061,7 @@ responsibility model?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `A`
 
 According to the AWS shared responsibility model, AWS is responsible for the security of
 the cloud, while customers are responsible for the security in the cloud. This means that
@@ -7091,7 +7091,7 @@ microservices?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `D`
 
 Amazon Simple Queue Service (Amazon SQS) is a service that provides fully managed
 message queues for asynchronous communication between microservices. It helps
@@ -7122,7 +7122,7 @@ web applications?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `D`
 
 AWS WAF is the AWS service or feature that offers HTTP attack protection to users
 running public-facing web applications. AWS WAF is a web application firewall that helps
@@ -7184,7 +7184,7 @@ overhead?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `B`
 
 AWS Secrets Manager is a service that helps you protect access to your applications,
 services, and IT resources. This service enables you to easily rotate, manage, and retrieve
@@ -7251,7 +7251,7 @@ Which AWS service will meet these requirements?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `B`
 
 The AWS service that will meet the requirements of the company that wants to create a
 chatbot and integrate the chatbot with its current web application is Amazon Lex. Amazon
@@ -7377,7 +7377,7 @@ customer?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C`
 
 Under the AWS shared responsibility model, AWS is responsible for the security "of" the
 cloud, which includes the physical infrastructure, networking, and hypervisor layer. The
@@ -7431,7 +7431,7 @@ LOWEST cost?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `B`
 
 The AWS Support plan that provides the full set of AWS Trusted Advisor checks at the
 lowest cost is the AWS Business Support plan. The AWS Business Support plan includes
@@ -7462,7 +7462,7 @@ Which AWS service can identify when an Amazon EC2 instance was terminated?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `B`
 
 AWS CloudTrail is the AWS service that can identify when an Amazon EC2 instance was
 terminated. AWS CloudTrail is a service that records API calls and events for AWS
@@ -7597,7 +7597,7 @@ What is the total amount of storage offered by Amazon S3?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `D`
 
 Amazon S3 offers unlimited storage for any amount of data. You can store as many
 objects as you want, and each object can be as large as 5 terabytes. You pay only for the
@@ -7876,7 +7876,7 @@ How can the company take advantage of the Standard RIs that it no longer needs?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `B`
 
 The Amazon EC2 Reserved Instance Marketplace allows customers to sell unused
 Standard Reserved Instances to other AWS users. This enables companies to recoup
@@ -7939,7 +7939,7 @@ large scale?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `A`
 
 The correct answer is A because Amazon DynamoDB is a key-value database that
 provides sub-millisecond latency on a large scale. Amazon DynamoDB is a fully managed,
@@ -8025,7 +8025,7 @@ Which AWS service or tool will meet these requirements?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `D`
 
 Migration Evaluator is an AWS service that provides a customized assessment of your
 current on-premises environment and helps you build a data-driven business case for
@@ -8059,7 +8059,7 @@ Which AWS service will meet these requirements?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `A`
 
 AWS Marketplaceis an online store where independent software vendors (ISVs) can list
 and sell their software products, including custom Amazon Machine Images (AMIs). It
@@ -8093,7 +8093,7 @@ Which AWS service or tool should the company use to meet this requirement?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C`
 
 AWS Pricing Calculator is the AWS service or tool that the company should use to
 estimate its future AWS service costs before the migration. AWS Pricing Calculator is a
@@ -8192,7 +8192,7 @@ How should the company respond to the auditor's request?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `D`
 
 AWS Artifact is your go-to, central resource for compliance-related information that matters
 to you. It provides on-demand access to AWS' security and compliance reports and select
@@ -8248,7 +8248,7 @@ Which AWS service will meet this requirement?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C`
 
 The AWS service that will meet this requirement is C. AWS Backup.
 AWS Backup is a service that allows you to define a central data protection policy that
@@ -8283,7 +8283,7 @@ Which design principle should the company use to meet this requirement?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `D`
 
 Loose coupling is a design principle that involves reducing dependencies between
 application components so that they can operate independently. This approach ensures
@@ -8340,7 +8340,7 @@ Framework?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C`
 
 The correct answer is C because learning to improve from operational failures is a
 recommended design principle of the AWS Well-Architected Framework. The AWS WellArchitected Framework is a set of best practices and guidelines for designing and
@@ -8479,7 +8479,7 @@ developer use to meet these requirements?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `D`
 
 AWS CloudFormation is a service that allows developers to model and provision their AWS
 infrastructure in a repeatable and declarative way, using code and templates. AWS
@@ -8538,7 +8538,7 @@ Framework (AWS CAF)?(Select TWO.)
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `A, E`
 
 Comprehensive and Detailed Explanation From AWS Cloud Documentation:
 The AWS Cloud Adoption Framework Operations perspective focuses on delivering cloud
@@ -8645,7 +8645,7 @@ customer?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `B`
 
 According to the AWS shared responsibility model, the customer is responsible for
 configuring logical access controls for resources, and protecting account credentials. This
@@ -8675,7 +8675,7 @@ Which of the following are AWS Cloud design principles? (Select TWO.)
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `B, D`
 
 The correct answers are B and D because making data-driven decisions to determine
 cloud architectural design and testing systems at production scale are AWS Cloud design
@@ -8768,7 +8768,7 @@ model? (Select TWO.)
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C, D`
 
 Verified authentic candidate practice response from the November 2026 revision pool.
 
@@ -8789,7 +8789,7 @@ Which AWS service can a company use to manage encryption keys in the cloud?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C`
 
 AWS CloudHSM provides cloud-based hardware security modules that securely generate,
 store, and use cryptographic keys. Customers have control over the HSM users and keys
@@ -8821,7 +8821,7 @@ and resources?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `B`
 
 Customers share responsibility with AWS for security and compliance of AWS accounts
 and resources. This is part of the AWS shared responsibility model, which defines the
@@ -8851,7 +8851,7 @@ Which AWS service should a cloud engineer use to view API calls to AWS services?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `B`
 
 The correct answer is B because AWS CloudTrail is an AWS service that a cloud engineer
 can use to view API calls to AWS services. AWS CloudTrail is a service that enables
@@ -8949,7 +8949,7 @@ access key instead of a user name and password. What is the access key used for?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C`
 
 An access key is a pair of long-term credentials that consists of an access key ID and a
 secret access key. An access key is used to sign programmatic requests to the AWS CLI
@@ -9017,7 +9017,7 @@ Which AWS service can the company use to meet these requirements?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `B`
 
 AWS Systems Manager is a service that enables users to centralize and automate the
 management of their AWS resources. It provides a unified user interface to view
@@ -9085,7 +9085,7 @@ Which AWS service or resource will meet these requirements?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `A`
 
 AWS Online Tech Talks are online presentations that cover a broad range of topics at
 varying technical levels and provide a live Q&A session with AWS experts. They are a
@@ -9467,7 +9467,7 @@ Which of the following are advantages of moving to the AWS Cloud? (Select TWO.)
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `B, D`
 
 The advantages of moving to the AWS Cloud are the ability to use the pay-as-you-go
 model and no longer having to guess what capacity will be required. The pay-as-you-go
@@ -9494,7 +9494,7 @@ Which AWS service or feature meets these requirements?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C`
 
 Verified authentic candidate practice response from the November 2026 revision pool.
 
@@ -9517,7 +9517,7 @@ Which AWS service will meet this requirement?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `D`
 
 Verified authentic candidate practice response from the November 2026 revision pool.
 
@@ -9540,7 +9540,7 @@ Which AWS service will meet these requirements MOST cost-effectively?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C`
 
 Amazon Elastic File System (Amazon EFS) provides a simple, scalable, fully managed
 elastic NFS file system for use with AWS Cloud services and on-premises resources. It is
@@ -9634,7 +9634,7 @@ Which pillar of the AWS Well-Architected Framework is supported by these goals?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `B`
 
 The pillar of the AWS Well-Architected Framework that is supported by the goals of
 protecting AWS Cloud information, systems, and assets while performing risk assessment
@@ -9698,7 +9698,7 @@ Which AWS service will provide this information?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `A`
 
 AWS Artifact is the service that will provide the information about whether a specific AWS
 service is compliant with specific compliance frameworks. AWS Artifact is a self-service
@@ -9725,7 +9725,7 @@ Which AWS service or feature can meet this requirement?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `A`
 
 AWS WAF is a web application firewall that helps protect web applications from common
 web exploits, such as SQL injection attacks. It allows customers to create custom rules
@@ -9809,7 +9809,7 @@ latency from on premises to the AWS Cloud?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C`
 
 AWS Direct Connect is a service that provides a dedicated network connection from on
 premises to the AWS Cloud. It can reduce network costs, increase bandwidth throughput,
@@ -9959,7 +9959,7 @@ retrieve objects in Amazon S3?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C`
 
 AWS Storage Gateway file gateway allows companies to use protocols such as NFS and
 SMB to store and retrieve objects in Amazon S3. File gateway provides a seamless
@@ -10232,7 +10232,7 @@ development of well- architected, cloud-focused applications?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `A`
 
 Verified authentic candidate practice response from the November 2026 revision pool.
 
@@ -10255,7 +10255,7 @@ TWO.)
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `A, D`
 
 The duties that are the responsibility of a company that is using AWS Lambda are security
 inside of code and writing and updating of code. AWS Lambda is a serverless compute
@@ -10354,7 +10354,7 @@ Which AWS service will meet these requirements?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `B`
 
 Amazon Inspector is the AWS service that can be used to perform vulnerability scans on
 AWS EC2 instances for software vulnerabilities automatically in a periodic fashion.
@@ -10556,7 +10556,7 @@ to the S3 bucket?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `D`
 
 ACLs are an AWS service or feature that the developer can use to restrict read and write
 access to the S3 bucket. ACLs are access control lists that grant basic permissions to
@@ -10655,7 +10655,7 @@ Which EC2 instance purchasing option will meet these requirements?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C`
 
 Verified authentic candidate practice response from the November 2026 revision pool.
 
@@ -10847,7 +10847,7 @@ Which EC2 instance purchasing option is MOST cost-effective for this use case?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `B`
 
 Spot Instances are instances that use spare EC2 capacity that is available for up to 90%
 off the On-Demand price. Because Spot Instances can be interrupted by EC2 with two
@@ -10879,7 +10879,7 @@ Which AWS tool or feature acts as a VPC firewall at the subnet level?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `B`
 
 Network ACLs (NACLs) are subnet-level firewalls in AWS, controlling inbound and
 outbound traffic for VPC subnets. They provide an additional layer of security by allowing
@@ -10907,7 +10907,7 @@ management overhead?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `D`
 
 Amazon Aurora Serverless is an on-demand, auto-scaling configuration for Amazon
 Aurora PostgreSQL-Compatible Edition. It is a fully managed service that automatically
@@ -11032,7 +11032,7 @@ How should the company deploy the EC2 instances to meet these requirements?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C`
 
 The company should deploy the EC2 instances across multiple Availability Zones to design
 a highly available application. Availability Zones are isolated locations within an AWS
@@ -11193,7 +11193,7 @@ Which AWS service or tool should a company use to forecast AWS spending?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `D`
 
 Cost Explorer is an AWS service or tool that can be used to forecast AWS spending. It
 allows users to analyze their AWS costs and usage using interactive graphs and tables. It
@@ -11263,7 +11263,7 @@ requirement?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C`
 
 AWS Regions are geographic areas around the world where AWS has clusters of data
 centers. Each AWS Region consists of multiple, isolated, and physically separate AZ's
@@ -11475,7 +11475,7 @@ Which IT operation will the company still be responsible for after the migration
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `A`
 
 AWS Elastic Beanstalk, Amazon Aurora, and AWS Auto Scaling are managed services
 that reduce the operational overhead for the customers. AWS is responsible for security
@@ -11506,7 +11506,7 @@ from its on- premises data center to the AWS Cloud.
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `B`
 
 AWS DataSync is designed for large-scale data transfers, especially involving large
 datasets with millions of files from on-premises to AWS. It provides fast and efficient
@@ -11729,7 +11729,7 @@ overhead?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C`
 
 The AWS service that will meet the requirements of the company that needs to host a
 highly available application in the AWS Cloud that runs infrequently for short periods of
@@ -11797,7 +11797,7 @@ LEAST effort? (Select TWO.)
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `B, C`
 
 Rehosting ("lift and shift") is a migration strategy where applications are moved to the
 cloud with minimal changes, making it the least effort-intensive method for applications
@@ -11828,7 +11828,7 @@ Which AWS service or tool will meet this requirement?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C`
 
 Verified authentic candidate practice response from the November 2026 revision pool.
 
@@ -11851,7 +11851,7 @@ Which AWS service or tool can the company use to meet these requirements?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `B`
 
 AWS customer carbon footprint tool is a tool that helps customers measure and manage
 their carbon emissions from their AWS usage. It provides data on the carbon intensity,
@@ -11881,7 +11881,7 @@ on network interfaces in a VPC?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `C`
 
 VPC Flow Logs is a feature that enables you to capture information about the IP traffic
 going to and from network interfaces in your VPC. Flow log data can be published to the
@@ -11942,7 +11942,7 @@ TWO.)
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** ``
+**Correct Answer:** `B, D`
 
 AnIAM useris created when the company needs to provide unique credentials (username
 and password) to individuals who need access to the AWS Management Console or

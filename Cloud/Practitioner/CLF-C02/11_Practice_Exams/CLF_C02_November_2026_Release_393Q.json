@@ -61,7 +61,7 @@
       "C": "Move each department resource to its own AWS account.",
       "D": "Use AWS Organizations to get a billing report for each department."
     },
-    "answer": "",
+    "answer": "A",
     "explanation": "Adding a department tag to each resource and configuring cost allocation tags is an action\nthat can help you accomplish the goal of billing each department for its resource usage\nwith the least operational overhead. Tags are simple labels consisting of a key and an\noptional value that you can assign to AWS resources. You can use tags to organize your\nresources and track your AWS costs on a detailed level. Cost allocation tags enable you to\ntrack your AWS costs on a detailed level. After you activate cost allocation tags, AWS uses\nthe cost allocation tags to organize your resource costs on your cost allocation report, to\nmake it easier for you to categorize and track your AWS costs2. Moving each department\nresource to its own VPC or its own AWS account is an action that can help you isolate and\ncontrol the resources for each department, but it would incur more operational overhead\nthan using tags. Using AWS Organizations to get a billing report for each department is an\nac",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -161,7 +161,7 @@
       "C": "Amazon S3 Select",
       "D": "Amazon Kinesis Data Streams"
     },
-    "answer": "",
+    "answer": "B",
     "explanation": "Amazon Redshift is a fully managed, petabyte-scale data warehouse service in the cloud.\nYou can start with just a few hundred gigabytes of data and scale to a petabyte or more.\nThis enables you to use your data to acquire new insights for your business and\ncustomers. Amazon Redshift is a relational database management system (RDBMS), so it\nis compatible with other RDBMS applications. You can use standard SQL to query the\ndata.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -236,7 +236,7 @@
       "C": "AWS Config",
       "D": "Amazon Inspector"
     },
-    "answer": "",
+    "answer": "C",
     "explanation": "AWS Config enables users to assess, audit, and evaluate the configurations of AWS\nresources. It provides information that can be used by external auditors to ensure\ncompliance with various regulatory requirements by tracking changes and maintaining\nconfiguration history. Amazon Cognito, FSx, and Inspector do not provide detailed\nconfiguration tracking for audit purposes.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -284,7 +284,7 @@
       "C": "AWS Wavelength",
       "D": "Application Load Balancer"
     },
-    "answer": "",
+    "answer": "B",
     "explanation": "Amazon EC2 On-Demand Instances are instances that let you pay for compute capacity\nby the hour or second (minimum of 60 seconds) with no long-term commitments. This\nfrees you from the costs and complexities of planning, purchasing, and maintaining\nhardware and transforms what are commonly large fixed costs into much smaller variable\ncosts. On-Demand Instances are suitable for applications with short-term, irregular, or\nunpredictable workloads that cannot be interrupted, such as periodic applications that run\nfor a few hours most days, but run for 8 hours a day for a week at the end of each month2.\nAmazon EC2 Standard Reserved Instances are instances that provide you with a\nsignificant discount (up to 75%) compared to On-Demand Instance pricing. In exchange,\nyou select a term and make an upfront payment to reserve a certain amount of compute\ncapacity for that term. Reserved Instances are suitable for applications with steady state or\npredictable usage that require reserved",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -357,7 +357,7 @@
       "C": "VPC endpoint",
       "D": "NAT gateway"
     },
-    "answer": "",
+    "answer": "C",
     "explanation": "A VPC endpoint enables private connections between an Amazon VPC and AWS services,\nlike Amazon S3, without requiring internet access. This allows secure access to S3 from\nan EC2 instance within the same VPC, reducing latency and improving security. VPN\nconnections and NAT gateways do not eliminate internet traffic, and an internet gateway\nwould expose the VPC to the public internet.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -405,7 +405,7 @@
       "C": "AWS Trusted Advisor",
       "D": "Amazon Inspector"
     },
-    "answer": "",
+    "answer": "B",
     "explanation": "The correct answer is B because AWS Artifact is a service that provides access to AWS\ncompliance documentation, such as audit reports, security certifications, and agreements.\nAWS Artifact allows customers to download, review, and accept the documents that are\nrelevant to their use of AWS services. The other options are incorrect because they are not\nservices that provide access to AWS compliance documentation. Amazon Cloud Directory\nis a service that enables customers to create flexible cloud-native directories for organizing\nhierarchies of data. AWS Trusted Advisor is a service that provides real-time guidance to\nhelp customers follow AWS best practices for security, performance, cost optimization, and\nfault tolerance. Amazon Inspector is a service that helps customers find security\nvulnerabilities and deviations from best practices in their Amazon EC2 instances.\nReference: [AWS Artifact FAQs]",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -481,7 +481,7 @@
       "D": "Choose Amazon ElastiCache for Redis"
     },
     "answer": "A",
-    "explanation": "Amazon RDS for MySQL is a fully managed, open-source cloud database service that\nallows you to easily operate and scale your relational database of choice, including\nMySQL. With Amazon RDS for MySQL, you don't have to worry about the hardware,\nresiliency, and replication of your database, as Amazon RDS handles these tasks for you.\nAmazon RDS for MySQL also provides features such as automated backups, multi-AZ\n\n\fdeployments, read replicas, encryption, monitoring, and more. Amazon RDS for MySQL is\ncompatible with the MySQL Community Edition versions 5.7 and 8.0, which means that\nyou can use the same code, applications, andtools that you already use with MySQL4567.\nReference: 4: Hosted MySQL - Amazon RDS for MySQL - AWS, 5: Amazon RDS for\nMySQL - Amazon Relational Database Service, 6: Amazon RDS for MySQL -\n\n\u4e91\u79d1\n\n\u6280, 7: Managed SQL Database - Amazon Relational Database Service (RDS) - AWS",
+    "explanation": "Amazon RDS for MySQL is a fully managed, open-source cloud database service that\nallows you to easily operate and scale your relational database of choice, including\nMySQL. With Amazon RDS for MySQL, you don't have to worry about the hardware,\nresiliency, and replication of your database, as Amazon RDS handles these tasks for you.\nAmazon RDS for MySQL also provides features such as automated backups, multi-AZ\n\n\fdeployments, read replicas, encryption, monitoring, and more. Amazon RDS for MySQL is\ncompatible with the MySQL Community Edition versions 5.7 and 8.0, which means that\nyou can use the same code, applications, andtools that you already use with MySQL4567.\nReference: 4: Hosted MySQL - Amazon RDS for MySQL - AWS, 5: Amazon RDS for\nMySQL - Amazon Relational Database Service, 6: Amazon RDS for MySQL -\n\n云科\n\n技, 7: Managed SQL Database - Amazon Relational Database Service (RDS) - AWS",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
       "Consensus_Aligned"
@@ -531,7 +531,7 @@
       "D": "Manage decisions involving encryption options.",
       "E": "Maintain infrastructure hardware."
     },
-    "answer": "",
+    "answer": "C, D",
     "explanation": "Customers are responsible for configuring and maintaining guest operating systems and\napplications on services where the customer controls those components, such as Amazon\nEC2. This includes security settings, software updates, application configuration, and guest\noperating system patching. Customers are also responsible for managing their data,\nincluding choosing and configuring appropriate encryption options. Therefore, options C\nand D are correct. AWS is responsible for maintaining the configuration of its underlying\ninfrastructure devices, patching and updating the physical and foundational infrastructure,\nand maintaining the servers, storage devices, networking equipment, and facilities that\noperate AWS services. These AWS responsibilities are collectively described as\nsecurityofthe cloud. Customer responsibilities vary according to the service selected. For\nhighly abstracted services such as Amazon S3, AWS also manages the operating system\nand platform, while the cu",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -582,7 +582,7 @@
       "C": "Configuring route tables to direct traffic to an internet gateway",
       "D": "Encrypting traffic between Availability Zones"
     },
-    "answer": "",
+    "answer": "C",
     "explanation": "The customer is responsible for configuring the logical networking resources inside its\nAmazon VPC. This includes creating and associating route tables and defining routes that\ndetermine where subnet traffic is directed. A subnet is considered public when its\nassociated route table contains a route to an internet gateway and the relevant resources\nhave suitable public addressing and security configuration. Therefore, configuring a route\ntable to direct internet-bound traffic to an internet gateway is the company's responsibility,\nmaking option C correct. AWS is responsible for the physical routers, backbone networks,\ndata centers, and networking infrastructure that provide communication within and\n\n\fbetween AWS Regions. Customers do not maintain or physically secure that equipment.\nAWS also provides infrastructure-level protection for traffic across its global network, while\ncustomers remain responsible for application-level encryption where required by their\nsecurity pol",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -607,7 +607,7 @@
       "C": "Migrate applications to microservices.",
       "D": "Monitor the performance of applications."
     },
-    "answer": "",
+    "answer": "B",
     "explanation": "Managing service control policies (SCPs) is an activity that companies can complete by\nusing AWS Organizations. AWS Organizations is a service that enables the user to\nconsolidate multiple AWS accounts into an organization that can be managed as a single\nunit. AWS Organizations allows the user to create groups of accounts and apply policies to\nthem, such as service control policies (SCPs) that specify the services and actions that\nusers and roles can access in the accounts. AWS Organizations also enables the user to\nuse consolidated billing, which combines the usage and charges from all the accounts in\nthe organization into a single bill3.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -632,7 +632,7 @@
       "C": "Amazon Neptune",
       "D": "Amazon DocumentDB (with MongoDB compatibility)"
     },
-    "answer": "",
+    "answer": "C",
     "explanation": "Amazon Neptune is a service that provides a fully managed graph database that supports\nproperty graphs and RDF graphs. It can be used to build applications that work with highly\nconnected datasets, such as shopping recommendations, social networks, fraud detection,\nand knowledge graphs2. Amazon DynamoDB is a service that provides a fully managed\nNoSQL database that delivers fast and consistent performance at any scale. Amazon\nAurora is a service that provides a fully managed relational database that is compatible\n\n\fwith MySQL and PostgreSQL. Amazon DocumentDB (with MongoDB compatibility) is a\nservice that provides a fully managed document database that is compatible with\nMongoDB.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -829,7 +829,7 @@
       "B": "EFS Standard-Infrequent Access(EFS Standard-IA)",
       "C": "EFS One Zone  \fD. EFS One Zone-Infrequent Access (EFS One Zone-IA)"
     },
-    "answer": "",
+    "answer": "A",
     "explanation": "EFS Standard-Infrequent Access (EFS Standard-IA) is the storage class that meets the\nrequirements of storing data across multiple Availability Zones in an AWS Region, that will\nnot be accessed regularly but must be immediately retrievable, most cost-effectively. EFS\nStandard-IA is designed for files that are accessed less frequently, but still require the\nsame high performance, low latency, and high availability as EFS Standard. EFS\nStandard-IA has a lower storage cost than EFS Standard, but charges a small additional\nfee for each access. EFS One Zone and EFS One Zone-IA store data in a single\nAvailability Zone, which reduces the availability and durability compared to EFS Standard\nand EFS Standard-IA.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -878,8 +878,8 @@
       "C": "AWS Config",
       "D": "AWS Artifact"
     },
-    "answer": "",
-    "explanation": "",
+    "answer": "D",
+    "explanation": "AWS Artifact provides on-demand, self-service access to AWS security and compliance reports (such as SOC, ISO, and PCI-DSS reports) for auditors.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
       "Consensus_Aligned"
@@ -903,7 +903,7 @@
       "C": "Implement a strong foundation of identity and access management",
       "D": "Stop spending money on hardware infrastructure for data center operations"
     },
-    "answer": "",
+    "answer": "B",
     "explanation": "Making frequent, small, reversible changes is one of the design principles for operational\nexcellence in the AWS Cloud, as defined by the AWS Well-Architected Framework. This\nprinciple means that you should design your workloads to allow for rapid and safe\nchanges, such as deploying updates, rolling back failures, and experimenting with new\nfeatures. By making small and reversible changes, you can reduce the risk of errors,\nminimize the impact of failures, and increase the speed of recovery2. Reference: 2: AWS\nDocumentation - AWS Well-Architected Framework - Operational Excellence Pillar",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -928,7 +928,7 @@
       "C": "Monitoring and logging are not needed",
       "D": "Management of infrastructure is offloaded to AWS"
     },
-    "answer": "",
+    "answer": "D",
     "explanation": "AWS serverless computing is a way of building and running applications without thinking\nabout servers. AWS manages the infrastructure for you, so you don't have to provision,\nscale, patch, or monitor servers. You only pay for the compute time you consume, and you\ncan focus on your application logic instead of managing servers12. Reference: Serverless\nComputing - Amazon Web Services, AWS Serverless Computing, Benefits, Architecture\nand Use-cases - XenonStack",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -978,7 +978,7 @@
       "C": "AWS IAM Identity Center (AWS Single Sign-On)",
       "D": "Amazon Workspaces"
     },
-    "answer": "",
+    "answer": "D",
     "explanation": "The AWS service that should be used when a company needs to provide its remote\nemployees with virtual desktops is Amazon WorkSpaces. Amazon WorkSpaces is a fully\nmanaged, secure desktop-as-a-service (DaaS) solution that runs on AWS. Amazon\nWorkSpaces allows users to provision cloud-based virtual desktops and provide their end\nusers access to the documents, applications, and resources they need from any supported\ndevice, including Windows and Mac computers, Chromebooks, iPads, Fire tablets, and\nAndroid tablets4. Amazon Identity and Access Management (IAM), AWS Directory Service,\nand AWS IAM Identity Center (AWS Single Sign-On) are other AWS services related to\nidentity and access management, but they do not provide virtual desktops.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -1105,7 +1105,7 @@
       "C": "AWS Cost and Usage Report",
       "D": "AWS Systems Manager"
     },
-    "answer": "",
+    "answer": "B",
     "explanation": "AWS Organizations Overview:\nAWS Organizations allows a company to manage multiple AWS accounts under a single\norganization.\nThrough the feature of consolidated billing, a company can receive a single bill for all\nlinked accounts.\nKey Features of Consolidated Billing in AWS Organizations:\nAggregates usage across accounts to take advantage of volume pricing discounts.\nProvides detailed cost reports for individual linked accounts.\nSimplifies payment processing by centralizing billing.\nWhy Other Options Are Incorrect:\nA . AWS Billing and Cost Management console:Used for managing budgets and payments\nbut does not set up consolidated billing.\n\n\fC . AWS Cost and Usage Report:Provides detailed cost and usage reports but does not\nset up consolidated billing.\nD . AWS Systems Manager:Focuses on operational management, not billing.\nReference:\nAWS Organizations Documentation",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -1157,7 +1157,7 @@
       "C": "Amazon RDS",
       "D": "Amazon Redshift"
     },
-    "answer": "",
+    "answer": "D",
     "explanation": "The AWS service that the company should use for the data warehouse is Amazon\nRedshift. Amazon Redshift is a fully managed, petabyte-scale data warehouse service that\nis optimized for analytical queries. It can integrate with various data sources and business\nintelligence tools to provide fast and cost-effective insights. Amazon Redshift also offers\nhigh availability, scalability, security, and compliance features. [Amazon Redshift\nOverview]",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -1182,7 +1182,7 @@
       "C": "Programmatic case management",
       "D": "AWS technical account manager (TAM)"
     },
-    "answer": "",
+    "answer": "A",
     "explanation": "TheAWS Developer Forumsare always free to use, regardless of the user's AWS Support\nplan. They provide a platform for users to ask questions, share knowledge, and collaborate\nwith the AWS community.\nA . AWS Developer Support: Incorrect, as it is a paid support plan option.\nC . Programmatic case management: Incorrect, as this feature is available only with certain\nAWS Support plans (Business and Enterprise).\nD . AWS Technical Account Manager (TAM): Incorrect, as a TAM is provided only under\nthe AWS Enterprise Support plan, which is a paid support option.\nAWS Cloud Reference:\nAWS Support Plans",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -1257,7 +1257,7 @@
       "C": "Apply patches to the underlying operating system.",
       "D": "Apply minor patches to the database."
     },
-    "answer": "",
+    "answer": "A",
     "explanation": "The customer is responsible for selecting and configuring the encryption options used for\nits Amazon RDS database. When creating an encrypted DB instance, the customer\nenables encryption and can select an AWS managed KMS key or an eligible customer\nmanaged KMS key. The customer must also manage permissions and policies for\ncustomer managed keys. Therefore, option A is correct. Amazon RDS is a managed\ndatabase service, so AWS manages the underlying server hardware and the operating\nsystem used to run standard RDS DB instances. RDS also manages routine database\nsoftware patching, including applicable minor-version maintenance according to the\nconfigured maintenance and upgrade settings. The exact division can differ for specialized\nproducts such as RDS Custom or engines enrolled in Extended Support, but the\nfoundational-level question refers to standard Amazon RDS. AWS protects and maintains\nthe managed infrastructure, while customers remain responsible for their data, data",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -1334,7 +1334,7 @@
       "C": "AWS Direct Connect",
       "D": "AWS PrivaleLink"
     },
-    "answer": "",
+    "answer": "C",
     "explanation": "AWS Direct Connect is a service that establishes a dedicated network connection between\nyour on-premises network and one or more AWS Regions. AWS Direct Connect can be\nused to create a private connection between an on-premises workload and an AWS Cloud\nworkload, bypassing the public internet and reducing network costs, latency, and\nbandwidth issues. AWS Direct Connect can also provide increased security and reliability\nfor your hybrid cloud applications and data transfers. Reference:\nAWS Direct Connect\nWhat is AWS Direct Connect?\nAWS Direct Connect User Guide",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -1409,7 +1409,7 @@
       "C": "Network ACL",
       "D": "AWSWAF"
     },
-    "answer": "",
+    "answer": "C",
     "explanation": "A network access control list (network ACL) is a feature that acts as a firewall for\ncontrolling traffic in and out of one or more subnets in a virtual private cloud (VPC).\nNetwork ACLs can be configured with rules that allow or deny traffic based on the source\nand destination IP addresses, ports, and protocols1. AWS Security Hub is a service that\nprovides a comprehensive view of the security posture of AWS accounts and resources2.\nSecurity groups are features that act as firewalls for controlling traffic at the instance\nlevel3. AWS WAF is a web application firewall that helps protect web applications from\ncommon web exploits4.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -1484,7 +1484,7 @@
       "C": "AWSCLI",
       "D": "AWS Cloud Development Kit (AWS CDK)"
     },
-    "answer": "",
+    "answer": "D",
     "explanation": "AWS Cloud Development Kit (AWS CDK) is an open source software development\nframework that allows you to model and provision your cloud infrastructure using familiar\nprogramming languages such as TypeScript, Python, Java, and .NET. AWS CDK enables\nyou to use the expressive power of your favorite language to define your cloud resources,\nsuch as compute, storage, network, and application services. AWS CDK also provides a\nlibrary of high-level constructs that represent AWS services and best practices. AWS CDK\n\n\fuses AWS CloudFormation in the background to deploy your resources in a safe and\nrepeatable manner12. Reference:\nAWS Cloud Development Kit (CDK) - TypeScript and Python are Now Generally Available\nAWS Cloud Development Kit (AWS CDK) - Introduction to DevOps on AWS",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -1509,7 +1509,7 @@
       "C": "Amazon EventBridge",
       "D": "AWS Fargate"
     },
-    "answer": "",
+    "answer": "C",
     "explanation": "Amazon EventBridge Overview:\nEventBridge is a serverless event bus that enables applications to react to changes in\nAWS resources.\nIt supports routing events such as EC2 state changes to various targets, including AWS\nStep Functions.\nHow EventBridge Meets the Requirement:\nEventBridge can capture the EC2 instance state change event and trigger the execution of\na Step Functions workflow.\nThe integration is seamless and supports workflows triggered by multiple event sources.\nWhy Other Options Are Incorrect:\nA . Amazon SageMaker:Used for building, training, and deploying machine learning\nmodels; not related to event triggers.\nB . Amazon Connect:A cloud-based contact center service; unrelated to event triggers.\nD . AWS Fargate:A compute engine for containers; does not manage events or invoke\nworkflows.\nReference:\nAmazon EventBridge Documentation",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -1559,8 +1559,8 @@
       "C": "Add additional EC2 instances to the database cluster.",
       "D": "Migrate the database to Amazon DynamoDB."
     },
-    "answer": "",
-    "explanation": "",
+    "answer": "D",
+    "explanation": "Amazon DynamoDB is a fully managed, serverless key-value NoSQL database with built-in scaling, Multi-AZ failover, and automated backups.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
       "Consensus_Aligned"
@@ -1759,7 +1759,7 @@
       "C": "AWS Shield Advanced",
       "D": "Amazon Macie"
     },
-    "answer": "",
+    "answer": "C",
     "explanation": "AWS Shield Advanced is a service that provides high levels of detection and near-real-time\n(NRT) mitigation against large and sophisticated distributed denial of service (DDoS)\nattacks on applications running on AWS. AWS Shield Advanced also provides you with\n24x7 access to the AWS DDoS Response Team (DRT) and protection against DDoS\nattacks of any size or duration1. Amazon GuardDuty is a service that provides threat\ndetection for your AWS accounts and workloads, but it does not offer DDoS protection3.\nAmazon Inspector is a service that helps you improve the security and compliance of your\napplications deployed on AWS by automatically assessing them for vulnerabilities and\ndeviations from best practices. Amazon Macie is a service that uses machine learning and\npattern matching to discover and protect your sensitive data in AWS.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -1784,7 +1784,7 @@
       "C": "Physical and environmental controls",
       "D": "Awareness and training"
     },
-    "answer": "",
+    "answer": "C",
     "explanation": "According to the AWS shared responsibility model, AWS is responsible for the security of\nthe cloud, while the customer is responsible for the security in the cloud. This means that\nAWS provides the physical and environmental controls, the service and communications\nprotection, and the awareness and training for its employees, while the customer provides\nthe patch and configuration management, the identity and access management, the data\nencryption, and the firewall configuration for its resources3.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -1883,7 +1883,7 @@
       "D": "Focus on managing hardware infrastructure",
       "E": "Overprovision to ensure capacity"
     },
-    "answer": "",
+    "answer": "B, C",
     "explanation": "The correct answers are B and C because they are advantages of the AWS Cloud. High\neconomies of scale means that AWS can achieve lower variable costs than customers can\nget on their own. Launch globally in minutes means that AWS has a global infrastructure\nthat allows customers to deploy their applications and data across multiple regions and\navailability zones. The other options are incorrect because they are not advantages of the\nAWS Cloud. Trade variable expenses for capital expenses means that customers have to\ninvest heavily in data centers and servers before they know how they will use them. Focus\non managing hardware infrastructure means that customers have to spend time and\nmoney on maintaining and upgrading their physical resources. Overprovision to ensure\ncapacity means that customers have to pay for more resources than they actually need to\navoid performance issues. Reference: What is Cloud Computing?",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -1934,7 +1934,7 @@
       "C": "Patching of the guest operating system",
       "D": "Physical and environmental controls"
     },
-    "answer": "",
+    "answer": "D",
     "explanation": "Physical and environmental controls are entirely the responsibility of AWS, according to\nthe AWS shared responsibility model. The AWS shared responsibility model defines the\ndivision of responsibilities between AWS and the customer for security and compliance.\nAWS is responsible for the security of the cloud, which includes the physical and\nenvironmental controls of the AWS global infrastructure, such as power, cooling, fire\nsuppression, and physical access. The customer is responsible for the security in the\ncloud, which includes the configuration and management of the AWS resources and\napplications. For more information, see [AWS Shared Responsibility Model] and [AWS\nCloud Security].",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -2061,7 +2061,7 @@
       "C": "Amazon Route 53",
       "D": "Amazon Connect"
     },
-    "answer": "",
+    "answer": "C",
     "explanation": "Amazon Route 53 is a highly available and scalable DNS web service. It is designed to\ngive developers and businesses an extremely reliable and cost-effective way to route end\nusers to Internet applications by translating domain names into the numeric IP addresses\nthat computers use to connect to each other2. Amazon Route 53 also offers other features\nsuch as health checks, traffic management, domain name registration, and DNSSEC3.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -2113,7 +2113,7 @@
       "C": "S3 Standard-Infrequent Access (S3 Standard-IA)",
       "D": "S3 One Zone-Infrequent Access (S3 One Zone-IA)"
     },
-    "answer": "",
+    "answer": "A",
     "explanation": "Amazon S3 Glacier Deep Archive is the lowest-cost storage class in the cloud. It is\ndesigned for long-term data archiving that is rarely accessed. It offers a retrieval time of 12\nhours and a durability of 99.999999999% (11 9's). It is ideal for data that must be retained\nfor 7 years or longer to meet regulatory compliance requirements.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -2163,7 +2163,7 @@
       "C": "AWS DataSync",
       "D": "AWS OpsWorks"
     },
-    "answer": "",
+    "answer": "A",
     "explanation": "AWS Outposts is an AWS service that extends AWS infrastructure, services, APIs, and\ntools to virtually any datacenter, co-location space, or on-premises facility. AWS Outposts\nenables you to run Amazon EC2 instances and other AWS services locally, while\nmaintaining a consistent and seamless connection to the AWS Cloud. AWS Outposts is\nideal for workloads that require low latency, local data processing, or data residency. By\nusing AWS Outposts, the company can process personally identifiable information (PII)\nand keep data in the country where it was generated, while leveraging the benefits of AWS",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -2187,7 +2187,7 @@
       "B": "AWS Managed Services (AMS)  \fC. AWS Well-Architected Framework",
       "D": "AWS Migration Hub"
     },
-    "answer": "",
+    "answer": "A",
     "explanation": "AWS Cloud Adoption Framework (AWS CAF) is a set of best practices, tools, and\nguidance that helps organizations get started with cloud technologies. AWS CAF helps\norganizations identify and prioritize transformation opportunities, evaluate and improve\ntheir cloud readiness, and iteratively evolve their transformation roadmap. AWS CAF\ngroups its capabilities in six perspectives: Business, People, Governance, Platform,\nSecurity, and Operations. Each perspective comprises a set of capabilities that functionally\nrelated stakeholders own or manage in the cloud transformation journey1 AWS Managed\nServices (AMS) is a service that operates AWS infrastructure on behalf of customers,\nproviding a secure AWS Landing Zone, features that help meet various compliance\nprogram requirements, a proven enterprise operating model, on-going cost optimization,\nand day-to-day infrastructure management. AMS does not help customers identify and\nprioritize business transformation opportunities or e",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -2286,7 +2286,7 @@
       "C": "Amazon Elastic Kubernetes Service (Amazon EKS)",
       "D": "Amazon EC2"
     },
-    "answer": "",
+    "answer": "B",
     "explanation": "AWS Lambda is a serverless compute service that is ideal for applications with shortrunning processes and low-frequency invocation, as it only charges for the compute time\nconsumed. Since the application is invoked only a few times a day and runs for less than 5\nminutes, Lambda is the most cost-effective option. ECS, EKS, and EC2 are better suited\nfor more persistent workloads and would be more costly in this use case.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -2360,7 +2360,7 @@
       "C": "AWS WAF",
       "D": "AWS Shield Advanced"
     },
-    "answer": "",
+    "answer": "D",
     "explanation": "AWS Shield Advanced provides enhanced protection against DDoS attacks and includes\naccess to the AWS DDoS Response Team (DRT) to help mitigate complex DDoS events.\nAWS Shield Standard offers basic DDoS protection, which is included with AWS services,\nbut does not provide access to the DRT. AWS WAF is a web application firewall, and AWS\nEnterprise Support is a premium support plan but does not specifically provide DDoS\nmitigation services or access to the DRT.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -2434,7 +2434,7 @@
       "C": "AWS Pricing Calculator",
       "D": "AWS Trusted Advisor"
     },
-    "answer": "",
+    "answer": "C",
     "explanation": "According to AWS official documentation, theAWS Pricing Calculatoris designed to\nestimate and compare the cost of running workloads on AWS versus on-premises\nenvironments. This service allows customers to model their existing infrastructure,\nincluding compute, storage, and data transfer requirements, and then estimate AWS costs\nbefore migrating. AWS Pricing Calculator supports detailed cost breakdowns for individual\nservices and helps organizations make informed financial decisions during cloud adoption\nplanning.\nAWS Cost Explorer and AWS Budgets are used onlyafter workloads are already running\non AWSto analyze and manage existing AWS costs. AWS Trusted Advisor provides bestpractice recommendations related to cost optimization, security, fault tolerance, and\nperformance, but it does not perform cost comparisons with on-premises environments.\nAWS documentation explicitly states that the AWS Pricing Calculator is intended forpremigration cost estimation and comparison, maki",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -2484,7 +2484,7 @@
       "C": "IAM instance profiles",
       "D": "IAM policies for individual users"
     },
-    "answer": "",
+    "answer": "B",
     "explanation": "IAM roles are a way of granting temporary permissions to entities that need to access\nAWS resources, such as users, applications, or services. IAM roles allow customers to\nassign permissions to entities without having to create or manage IAM users or credentials\nfor them. IAM roles can be assumed by different entities depending on the trust policy\nattached to the role. For example, IAM roles can be assumed by IAM users in the same or\ndifferent AWS accounts, AWS services such as EC2 or Lambda, or external identities such\nas federated users or web identities. IAM roles can also be switched by IAM users to\ntemporarily change their permissions. IAM roles are recommended for managing\npermissions for employees who often change teams, because they allow customers to\ndefine permissions based on job roles and responsibilities, and easily assign or revoke\nthem as needed. IAM roles also reduce the operational overhead of creating, updating, or\ndeleting IAM users or credentials for e",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -2586,8 +2586,8 @@
       "C": "The ability the ensure high availability by deploying workloads to multiple regions.",
       "D": "The ability to transfer infrastructure management to the AWS Cloud"
     },
-    "answer": "",
-    "explanation": "",
+    "answer": "B",
+    "explanation": "Cloud agility refers to the ability to provision and deprovision IT resources rapidly with minimal effort, accelerating experimentation and time to market.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
       "Consensus_Aligned"
@@ -2611,7 +2611,7 @@
       "C": "Trade fixed expenses for variable expenses.",
       "D": "Trade elasticity for performance."
     },
-    "answer": "",
+    "answer": "C",
     "explanation": "The correct answer is C because AWS Cloud computing allows customers to trade fixed\nexpenses for variable expenses. This means that customers only pay for the resources\nthey use, and can scale up or down as needed. The other options are incorrect because\nthey are not advantages of AWS Cloud computing. Trade security for elasticity means that\ncustomers have to compromise on the protection of their data and applications in order to\nadjust their capacity quickly. Trade operational excellence for agility means that customers\nhave to sacrifice the quality and reliability of their operations in order to respond to\nchanging needs faster. Trade elasticity for performance means that customers have to limit\ntheir ability to scale up or down in order to achieve higher speed and efficiency. Reference:\nWhat is Cloud Computing?",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -2636,7 +2636,7 @@
       "C": "Store passwords in AWS Storage Gateway.",
       "D": "Store passwords in AWS Secrets Manager."
     },
-    "answer": "",
+    "answer": "A",
     "explanation": "AWS Secrets Manageris the most secure way to store and manage sensitive information,\nsuch as passwords, database credentials, and API keys. Secrets Manager allows you to:\nSecurely store and rotate secrets.\nAutomatically manage secret rotation without disrupting applications.\nIntegrate with AWS services and third-party applications to retrieve secrets securely.\nWhy other options are not suitable:\n\n\fA . Store passwords in an Amazon S3 bucket: Although S3 is secure, it is not designed for\nsecret management. It lacks built-in secret rotation and fine-grained access control for\nsensitive data.\nB . Store passwords as AWS CloudFormation parameters: CloudFormation is used for\nmanaging infrastructure as code, not for securely storing passwords.\nC . Store passwords in AWS Storage Gateway: A service for hybrid storage integration, not\nsuitable for storing secrets or passwords.\nReference:\nAWS Secrets Manager Documentation",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -2661,7 +2661,7 @@
       "C": "The creation of an organization in AWS Organizations",
       "D": "The deletion of Amazon EC2 instances"
     },
-    "answer": "",
+    "answer": "C",
     "explanation": "The creation of an organization in AWS Organizations requires the use of AWS account\nroot user credentials. The AWS account root user is the email address that was used to\ncreate the AWS account. The root user has complete access to all AWS services and\nresources in the account, and can perform sensitive tasks such as changing the account\nsettings, closing the account, or creating an organization. The root user credentials should\nbe used sparingly and securely, and only for tasks that cannot be performed by IAM users\nor roles4",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -2709,8 +2709,8 @@
       "C": "Amazon VPC",
       "D": "Route tables"
     },
-    "answer": "",
-    "explanation": "",
+    "answer": "C",
+    "explanation": "Amazon VPC lets you provision a logically isolated, private, secure, and scalable virtual network in the AWS Cloud.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
       "Consensus_Aligned"
@@ -2786,7 +2786,7 @@
       "C": "Amazon Timestream",
       "D": "Amazon Forecast"
     },
-    "answer": "",
+    "answer": "A",
     "explanation": "Amazon Neptuneis a fully managed graph database service optimized for storing and\nquerying highly connected data. It supports popular graph models such as Property Graph\nand W3C's RDF, making it ideal for building graph queries for real-time fraud pattern\ndetection and other applications that require complex relationships and data traversal.\nB . Amazon DynamoDB: Incorrect, as it is a NoSQL database service that is not optimized\nfor graph queries.\nC . Amazon Timestream: Incorrect, as it is a time-series database service designed for\nstoring and analyzing time-series data, not graph data.\n\n\fD . Amazon Forecast: Incorrect, as it is a fully managed service that provides time-series\nforecasting capabilities, not for graph queries.\nAWS Cloud Reference:\nAmazon Neptune",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -2934,8 +2934,8 @@
       "C": "AWS Transit Gateway",
       "D": "Amazon GuardDuty"
     },
-    "answer": "",
-    "explanation": "",
+    "answer": "C",
+    "explanation": "AWS Transit Gateway acts as a central hub-and-spoke cloud router to connect multiple VPCs and on-premises networks.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
       "Consensus_Aligned"
@@ -2958,7 +2958,7 @@
       "C": "Amazon Macie",
       "D": "Amazon GuardDuty"
     },
-    "answer": "",
+    "answer": "A",
     "explanation": "AWS Identity and Access Management (IAM) is a service that helps you securely control\naccess to AWS resources for your users. You use IAM to control who can use your AWS\nresources (authentication) and what resources they can use and in what ways\n(authorization). IAM also enables you to follow the principle of least privilege, which means\ngranting only the permissions that are necessary to perform a task1. Reference: AWS\nIdentity and Access Management (IAM) - AWS Documentation",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -2982,7 +2982,7 @@
       "C": "Deploy the application to multiple locations.",
       "D": "Implement loosely coupled dependencies."
     },
-    "answer": "",
+    "answer": "D",
     "explanation": "The company is following the best practice of implementing loosely coupled dependencies\nby migrating the application to AWS and dividing the application into microservices.\nLoosely coupled dependencies are a design principle of the AWS Well-Architected\nFramework that helps to reduce the interdependencies between components and improve\nthe scalability, reliability, and performance of the system. By breaking down the monolithic\napplication into smaller, independent, and modular services, the company can reduce the\ncomplexity and maintenance costs, increase the agility and flexibility, and enable faster\nand more frequent deployments. AWS CloudFormation is an AWS service that provides\nthe ability to manage infrastructure as code. Infrastructure as code is a process of defining\nand provisioning AWS resources using code or templates, rather than manual actions or\nscripts. AWS CloudFormation allows users to create and update stacks of AWS resources\nbased on predefined templates",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -3032,7 +3032,7 @@
       "C": "AWS Shield",
       "D": "Amazon Inspector"
     },
-    "answer": "",
+    "answer": "C",
     "explanation": "AWS Shield is a managed Distributed Denial of Service (DDoS) protection service that\nsafeguards applications running on AWS. AWS Shield provides always-on detection and\nautomatic inline mitigations that minimize application downtime and latency, so there is no\nneed to engage AWS Support to benefit from DDoS protection3.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -3107,7 +3107,7 @@
       "C": "Amazon Elastic Block Store (Amazon EBS)",
       "D": "AWS Snowball Edge Storage Optimized"
     },
-    "answer": "",
+    "answer": "B",
     "explanation": "Amazon Elastic File System (Amazon EFS) is a service that provides a scalable and\nelastic file system for Linux-based workloads. It can be mounted on multiple Amazon EC2\ninstances across different Availability Zones within a region, allowing applications to\n\n\faccess a common set of files1. AWS Backup is a service that provides a centralized and\nautomated way to back up data across AWS services. Amazon Elastic Block Store\n(Amazon EBS) is a service that provides persistent block storage volumes for Amazon\nEC2 instances. AWS Snowball Edge Storage Optimized is a device that provides a\npetabyte-scale data transport and edge computing solution.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -3132,7 +3132,7 @@
       "C": "AWS Shield",
       "D": "AWS WAF"
     },
-    "answer": "",
+    "answer": "A",
     "explanation": "Amazon Cognito is a service that provides identity management for mobile and web\napplications, allowing users to sign up, sign in, and access AWS resources with different\nidentity providers. AWS Security Hub is a service that provides a comprehensive view of\nthe security posture of AWS accounts and resources. AWS Shield is a service that\nprovides protection against distributed denial of service (DDoS) attacks. AWS WAF is a\nweb application firewall that helps protect web applications from common web exploits.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -3157,7 +3157,7 @@
       "C": "Convert the payment method from On-Demand to Savings Plans.",
       "D": "Reprovision the EC2 instances with a larger instance type."
     },
-    "answer": "",
+    "answer": "B",
     "explanation": "Rightsizing involves adjusting instance types based on actual utilization to optimize costs\nand performance. Changing the size and type of EC2 instances according to utilization\ndata achieves this with minimal operational overhead. Adding instances or changing\npayment methods does not directly address instance resizing, and reprovisioning with\nlarger instances may not be optimal based on actual usage.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -3277,7 +3277,7 @@
       "C": "Spot Instances",
       "D": "AWS Free Tier"
     },
-    "answer": "",
+    "answer": "A",
     "explanation": "Reserved Instances (RIs)offer a significant discount (up to 75%) compared to On-Demand\npricing in exchange for committing to use AWS for a period of 1 or 3 years. This pricing\nmodel is ideal for applications with predictable usage patterns or long-term commitments,\nsuch as critical production systems that will be running for at least 3 years.\nA . On-Demand Instances: Incorrect, as they provide flexibility without commitment but are\nmore expensive over the long term.\nC . Spot Instances: Incorrect, as they offer the lowest cost for non-critical, interruptible\nworkloads but are not suitable for critical production systems due to their potential for\nsudden termination.\nD . AWS Free Tier: Incorrect, as it provides limited free usage for certain AWS services for\na short period (typically one year) and is not intended for long-term production workloads.\nAWS Cloud Reference:\nAmazon EC2 Reserved Instances",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -3377,8 +3377,8 @@
       "D": "Users can launch preconfigured software in only a few steps.",
       "E": "The software has been evaluated by vendors to ensure that it will run on AWS."
     },
-    "answer": "",
-    "explanation": "",
+    "answer": "D, E",
+    "explanation": "AWS Marketplace provides preconfigured third-party software evaluated to run on AWS that can be launched in just a few steps and billed on your AWS invoice.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
       "Consensus_Aligned"
@@ -3476,8 +3476,8 @@
       "C": "Rightsizing",
       "D": "Horizontal scaling"
     },
-    "answer": "",
-    "explanation": "",
+    "answer": "C",
+    "explanation": "Rightsizing matches instance types and sizes to actual workload utilization to eliminate over-provisioned capacity and reduce cloud costs.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
       "Consensus_Aligned"
@@ -3603,7 +3603,7 @@
       "C": "Amazon EC2 key pairs",
       "D": "AWS Key Management Service (AWS KMS) keys"
     },
-    "answer": "",
+    "answer": "C",
     "explanation": "IAM access keys are long-term credentials that consist of an access key ID and a secret\naccess key. You use access keys to sign programmatic requests that you make to AWS. If\nyou need to access AWS services from an on-premises application, you can use IAM\naccess keys to authenticate your requests. AWS account user name and password are\nused to sign in to the AWS Management Console. Amazon EC2 key pairs are used to\nconnect to your EC2 instances using SSH. AWS Key Management Service (AWS KMS)\nkeys are used to encrypt and decrypt your data using the AWS Encryption SDK or the\nAWS CLI.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -3756,7 +3756,7 @@
       "C": "Download reports from AWS Security Hub.",
       "D": "Contact an AWS technical account manager (TAM)."
     },
-    "answer": "",
+    "answer": "B",
     "explanation": "AWS Artifact is a service provided by AWS that offers on-demand access to AWS\ncompliance reports, including the Payment Card Industry (PCI) reports. It is the primary\ntool for retrieving compliance reports such as Service Organization Control (SOC) reports,\nISO certifications, and Payment Card Industry Data Security Standard (PCI DSS) reports.\nTo obtain these reports:\nThe company should log into the AWS Management Console and navigate to AWS\nArtifact.\nFrom there, they can select and download the necessary compliance reports.\nWhy other options are not suitable:\nA . Contact AWS Support: AWS Support is not needed to obtain these reports; they are\nreadily available through AWS Artifact.\nC . Download reports from AWS Security Hub: AWS Security Hub is a service that\nprovides a comprehensive view of security alerts and compliance status, but it does not\nhost or provide compliance reports like PCI DSS.\nD . Contact an AWS technical account manager (TAM): While a TAM may assist in",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -3880,7 +3880,7 @@
       "C": "Automatically handles database backups and software patching",
       "D": "Provides automatic horizontal scaling for read and write workloads"
     },
-    "answer": "",
+    "answer": "C",
     "explanation": "Amazon Relational Database Service reduces database administration work by managing\ncommon operational tasks. AWS documentation states that Amazon RDS manages\nactivities including database backups, software patching, automatic failure detection, and\nrecovery. Customers can configure settings such as backup retention periods and\nmaintenance windows, while RDS performs the underlying managed operations.\nTherefore, option C is correct. Amazon RDS does not automatically guarantee better query\nperformance than a self-managed database. Query performance depends on database\ndesign, indexing, SQL queries, instance sizing, data distribution, and workload\ncharacteristics, and customers remain responsible for query tuning. RDS also supports a\ndefined set of database engines rather than necessarily supporting more engines than any\nself-managed environment. Automatic horizontal scaling for both read and write workloads\nis not a general feature of every RDS engine or configuration. S",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -3905,7 +3905,7 @@
       "C": "Edge locations",
       "D": "AWS Direct Connect"
     },
-    "answer": "",
+    "answer": "C",
     "explanation": "Edge locations are sites that Amazon CloudFront uses to cache copies of your content for\nfaster delivery to users at any location. You can use Amazon CloudFront to deliver your\nentire website, including dynamic, static, streaming, and interactive content using a global\nnetwork of edge locations. Requests for your content are automatically routed to the\nnearest edge location, so content is delivered with the best possible performance3. Edge\nlocations can also host AWS Lambda functions to perform compute operations for your\nweb application as close to end users as possible4.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -4007,7 +4007,7 @@
       "C": "Answering billing and account inquiries",
       "D": "Answering questions regarding technical support cases"
     },
-    "answer": "",
+    "answer": "C",
     "explanation": "The AWS Enterprise Support Concierge team is a group of billing and account experts who\nspecialize in working with enterprise customers. They can help customers with questions\nabout billing, account management, cost optimization, and other non-technical issues.\nThey can also assist customers with navigating and optimizing their AWS environment,\nsuch as setting up consolidated billing, applying for service limit increases, or requesting\nrefunds.\nReference:\nAWS Support Plan Comparison\nAWS Enterprise Support Plan\nAnswer Explained: Which AWS Support plan provides access to AWS Concierge Support\nteam for account assistance?",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -4032,7 +4032,7 @@
       "C": "S3 Glacier Deep Archive",
       "D": "S3 One Zone-Infrequent Access (S3 One Zone-IA)"
     },
-    "answer": "",
+    "answer": "C",
     "explanation": "S3 Glacier Deep Archive is Amazon S3's lowest-cost storage class and supports long-term\nretention and digital preservation for data that may be accessed once or twice in a year. It\nis designed for customers - particularly those in highly-regulated industries, such as the\nFinancial Services, Healthcare, and Public Sectors - that retain data sets for 7-10 years or\nlonger to meet regulatory compliance requirements. Customers can store large amounts of\ndata at a very low cost, and reliably access it with a wait time of 12 hours3.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -4136,7 +4136,7 @@
       "C": "Amazon GuardDuty",
       "D": "Client-side encryption"
     },
-    "answer": "",
+    "answer": "B",
     "explanation": "Server-side encryption is an encryption option that Amazon S3 provides to encrypt data at\nrest in Amazon S3. With server-side encryption, Amazon S3 encrypts an object before\nsaving it to disk in its data centers and decrypts it when you download the objects. You\nhave three server-side encryption options to choose from: SSE-S3, SSE-C, and SSE-KMS.\nSSE-S3 uses keys that are managed by Amazon S3. SSE-C allows you to manage your\nown encryption keys. SSE-KMS uses keys that are managed by AWS Key Management\nService (AWS KMS)5.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -4186,7 +4186,7 @@
       "C": "Hardware updates and firmware patches",
       "D": "Amazon EC2 updates and security patches"
     },
-    "answer": "",
+    "answer": "D",
     "explanation": "According to the AWS shared responsibility model, customers are responsible for\nmanaging their data, applications, operating systems, security groups, and other aspects\nof their AWS environment. This includes installing updates and security patches of the\nguest operating system and any application software or utilities installed by the customer\non the instances. AWS is responsible for protecting the infrastructure that runs all of the\nservices offered in the AWS Cloud, such as data centers, hardware, software, networking,\nand facilities. This includes the physical connectivity among Availability Zones, the network\nswitch maintenance, and the hardware updates and firmware patches. Therefore, option D\nis the correct answer, and options A, B, and C are AWS responsibilities, not customer\nresponsibilities. Reference: : AWS Well-Architected Framework - Elasticity; : Reactive\nSystems on AWS - Elastic",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -4286,7 +4286,7 @@
       "C": "Use an Amazon Machine Image (AMI) to create the EC2 instance.",
       "D": "Provision the application by using an EC2 Spot Instance."
     },
-    "answer": "",
+    "answer": "A",
     "explanation": "Provisioning additional EC2 instances in other Availability Zones is a way to make the\napplication highly available, as it reduces the impact of failures and increases fault\ntolerance. Configuring an Application Load Balancer and assigning the EC2 instance as\nthe ALB's target is a way to distribute traffic among multiple instances, but it does not\nmake the application highly available if there is only one instance. Using an Amazon\nMachine Image to create the EC2 instance is a way to launch a virtual server with a\npreconfigured operating system and software, but it does not make the application highly\navailable by itself. Provisioning the application by using an EC2 Spot Instance is a way to\nuse spare EC2 capacity at up to 90% off the On-Demand price, but it does not make the\napplication highly available, as Spot Instances can be interrupted by EC2 with a twominute notification.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -4311,7 +4311,7 @@
       "C": "Dedicated Hosts",
       "D": "Reserved Instances"
     },
-    "answer": "",
+    "answer": "C",
     "explanation": "The correct answer is C because Dedicated Hosts are Amazon EC2 instances that are\nrequired when a user wants to utilize their existing per-socket, per-core, or per-virtual\nmachine software licenses for a Microsoft Windows server running on AWS. Dedicated\nHosts are physical servers that are dedicated to a single customer. Dedicated Hosts allow\ncustomers to use their existing server-bound software licenses, such as Windows Server,\nSQL Server, and SUSE Linux Enterprise Server, subject to their license terms. The other\noptions are incorrect because they are not Amazon EC2 instances that are required when\na user wants to utilize their existing per-socket, per-core, or per-virtual machine software\nlicenses for a Microsoft Windows server running on AWS. Spot Instances are spare\nAmazon EC2 instances that are available at up to 90% discount compared to On-Demand\nprices. Spot Instances are suitable for stateless, fault-tolerant, and flexible workloads that\n\n\fcan recover from interr",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -4361,7 +4361,7 @@
       "C": "Reserved Instances",
       "D": "Spot Instances"
     },
-    "answer": "",
+    "answer": "B",
     "explanation": "Compute Savings Plans are a flexible and cost-effective way to optimize long-term\ncompute costs of AWS Lambda functions and Amazon EC2 instances. With Compute\nSavings Plans, customers can commit to a consistent amount of compute usage\n(measured in $/hour) for a 1-year or 3-year term and receive a discount of up to 66%\ncompared to On-Demand prices3. Dedicated Hosts are physical servers with EC2 instance\ncapacity fully dedicated to the customer's use. They are suitable for customers who have\nspecific server-bound software licenses or compliance requirements4. Reserved Instances\n\n\fare a pricing model that provides a significant discount (up to 75%) compared to OnDemand pricing and a capacity reservation for EC2 instances. They are available in 1-year\nor 3-year terms and different payment options5. Spot Instances are spare EC2 instances\nthat are available at up to 90% discount compared to On-Demand prices. They are suitable\nfor customers who have flexible start and end times,",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -4437,8 +4437,8 @@
       "C": "Zonal Reserved Instances",
       "D": "Regional Reserved Instances"
     },
-    "answer": "",
-    "explanation": "",
+    "answer": "C",
+    "explanation": "Zonal Reserved Instances provide a capacity reservation for Amazon EC2 instances in a specific Availability Zone within an AWS Region.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
       "Consensus_Aligned"
@@ -4461,7 +4461,7 @@
       "C": "Amazon RDS",
       "D": "Amazon EMR"
     },
-    "answer": "",
+    "answer": "C",
     "explanation": "Amazon RDS is a fully managed relational database service that supports several\ndatabase engines, including PostgreSQL. Amazon RDS can run a managed PostgreSQL\ndatabase that provides online transaction processing (OLTP), which is a type of database\nworkload that handles frequent read and write operations on small amounts of data.\nAmazon RDS for PostgreSQL offers high performance, availability, scalability, security,\nand compatibility with the PostgreSQL community edition. Amazon RDS also provides\nautomated backups, point-in-time recovery, encryption, monitoring, and maintenance for\nPostgreSQL databases. Reference:\nHosted PostgreSQL - Amazon RDS for PostgreSQL\nOLTP Database, MySQL And PostgreSQL Managed Database - Amazon Aurora\nPostgreSQL options on AWS: Self- managed, managed, and serverless",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -4486,7 +4486,7 @@
       "C": "Amazon Simple Notification Service (Amazon SNS)",
       "D": "AWS CloudFormation"
     },
-    "answer": "",
+    "answer": "A",
     "explanation": "Amazon EventBridge (formerly CloudWatch Events) allows users to respond to changes in\nthe state of AWS resources. It can be configured to invoke an AWS Lambda function when\nan EC2 instance enters the \"stopping\" state, providing a serverless way to automate\nresponses to changes in EC2 instance states. AWS Config, SNS, and CloudFormation do\nnot provide direct triggering for specific instance state changes.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -4511,7 +4511,7 @@
       "C": "AWS Directory Service",
       "D": "AWS Cost Explorer"
     },
-    "answer": "",
+    "answer": "A",
     "explanation": "AWS Control Tower uses AWS CloudFormation to create resources in your landing zone.\nAWS CloudFormation is a service that helps you model and set up your AWS resources\nusing templates. AWS Control Tower supports creating\nAWS::ControlTower::EnabledControl resources in AWS CloudFormation. Therefore, the\ncorrect answer is A. You can learn more about AWS Control Tower and AWS\nCloudFormation",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -4561,7 +4561,7 @@
       "C": "Amazon ElastiCache",
       "D": "Amazon Neptune"
     },
-    "answer": "",
+    "answer": "A",
     "explanation": "A is correct because Amazon RDS is the AWS service that provides a managed relational\ndatabase service that supports various database engines, such as MySQL, PostgreSQL,\nOracle, and SQL Server. B is incorrect because Amazon Redshift is the AWS service that\nprovides a managed data warehouse service that is optimized for analytical queries. C is\nincorrect because Amazon ElastiCache is the AWS service that provides a managed inmemory data store service that supports Redis and Memcached. D is incorrect because\nAmazon Neptune is the AWS service that provides a managed graph database service\nthat supports property graph and RDF models.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -4586,7 +4586,7 @@
       "C": "Amazon S3",
       "D": "AWS Key Management Service (AWS KMS)"
     },
-    "answer": "",
+    "answer": "B",
     "explanation": "AWS Secrets Manager is the AWS service where database credentials should be stored\nfor maximum security. AWS Secrets Manager helps to protect the secrets, such as\ndatabase credentials, passwords, API keys, and tokens, that are used to access\napplications, services, and resources. AWS Secrets Manager enables secure storage,\nencryption, rotation, and retrieval of the secrets. AWS Secrets Manager also integrates\nwith other AWS services, such as AWS Identity and Access Management (IAM), AWS Key\nManagement Service (AWS KMS), and AWS Lambda. For more information, see [What is\nAWS Secrets Manager?] and [Getting Started with AWS Secrets Manager].",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -4661,7 +4661,7 @@
       "C": "Amazon Polly",
       "D": "Amazon Lex"
     },
-    "answer": "",
+    "answer": "A",
     "explanation": "Amazon Kendra is a highly accurate and easy to use intelligent search service powered by\nmachine learning. It enables users to easily find the content they are looking for, even\nwhen it is scattered across multiple locations and content repositories within their\norganization. Amazon Kendra supports natural language queries, and can search for text\nin documents stored in Amazon S3, as well as other sources such as SharePoint,\nOneDrive, Salesforce, ServiceNow, and more1.\nAmazon Rekognition is a computer vision service that makes it easy to add image and\nvideo analysis to applications. It can detect objects, faces, text, scenes, activities, and\nemotions in images and videos. However, it is not designed for searching for text in\ndocuments stored in Amazon S32.\nAmazon Polly is a text-to-speech service that turns text into lifelike speech. It can create\naudio versions of books, articles, podcasts, and more. However, it is not designed for\nsearching for text in documents stored",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -4711,7 +4711,7 @@
       "C": "Amazon Lightsail",
       "D": "Amazon EC2"
     },
-    "answer": "",
+    "answer": "B",
     "explanation": "AWS Fargateis a serverless compute engine for containers that allows users to run\ncontainers without having to manage the underlying infrastructure. Fargate eliminates the\nneed for managing servers and reduces operational overhead, providing a fully managed,\nserverless approach to containerized applications. It helps avoid unplanned administration\nand operational costs and is ideal for companies migrating from on-premises container\ninfrastructure.\nWhy other options are not suitable:\nA . Amazon Connect: A service for cloud-based contact centers, not for container\nmanagement.\nC . Amazon Lightsail: Simplifies virtual private server (VPS) management but is not\nserverless or specialized for containers.\nD . Amazon EC2: Provides virtual servers but requires more manual administration and is\nnot serverless.\nReference:\nAWS Fargate Documentation",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -4965,7 +4965,7 @@
       "C": "Scalability",
       "D": "Cost optimization"
     },
-    "answer": "",
+    "answer": "B",
     "explanation": "Reliability is the cloud concept that this architecture represents. Reliability is the ability of a\nsystem to recover from infrastructure or service disruptions, dynamically acquire computing\nresources to meet demand, and mitigate disruptions such as misconfigurations or transient\nnetwork issues. Deploying an application to multiple AWS Regions and configuring\nautomatic failover between those Regions enhances the reliability of the application by\nreducing the impact of regional failures and increasing the availability of the application4",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -4990,7 +4990,7 @@
       "C": "Amazon Elastic Block Store (Amazon EBS)",
       "D": "Amazon S3"
     },
-    "answer": "",
+    "answer": "D",
     "explanation": "Amazon S3 is an AWS service that provides scalable, durable, and cost-effective object\nstorage in the cloud. Amazon S3 can store any amount and type of data, such as server\nlogs, and offers various storage classes with different performance and pricing\ncharacteristics. Amazon S3 is the most cost-effective option for storing server logs, as it\noffers low-cost storage classes, such as S3 Standard-Infrequent Access (S3 Standard-IA)\nand S3 Intelligent-Tiering, that are suitable for infrequently accessed or changing access\npatterns data. Amazon S3 also integrates with other AWS services, such as Amazon\nAthena and Amazon OpenSearch Service, that can query the server logs directly from S3\nwithout requiring any additional data loading or transformation. Reference: Amazon S3,\nAmazon S3 Storage Classes, Querying Data in Amazon S3",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -5090,7 +5090,7 @@
       "C": "AWS Business Support",
       "D": "AWS Enterprise Support"
     },
-    "answer": "",
+    "answer": "D",
     "explanation": "The correct answer is D because AWS Enterprise Support is the support plan that provides\ncustomers with access to an AWS technical account manager (TAM). AWS Enterprise\nSupport is the highest level of support plan offered by AWS, and it provides customers with\nthe most comprehensive and personalized support experience. An AWS TAM is a\ndedicated technical resource who works closely with customers to understand their\nbusiness and technical needs, provide proactive guidance, and coordinate support across\nAWS teams. The other options are incorrect because they are not support plans that\nprovide customers with access to an AWS TAM. AWS Basic Support is the default and\nfree support plan that provides customers with access to online documentation, forums,\nand account information. AWS Developer Support is the lowest level of paid support plan\nthat provides customers with access to technical support during business hours, general\nguidance, and best practice recommendations. AWS Bu",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -5114,7 +5114,7 @@
       "C": "AWS Network Firewall",
       "D": "AWS FirewallManager"
     },
-    "answer": "",
+    "answer": "C",
     "explanation": "AWS Network Firewall is a managed service that makes it easy to deploy essential\nnetwork protections for all of your Amazon Virtual Private Clouds (VPCs). The service can\nbe set up with just a few clicks from the AWS console or using APIs. AWS Network\nFirewall automatically scales with your network traffic, so you don't have to worry about\ndeploying and managing any infrastructure. AWS Network Firewall provides protection\nfrom common network threats such as SQL injection, cross-site scripting, and DDoS\nattacks1.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -5139,7 +5139,7 @@
       "D": "Configure security groups.",
       "E": "Patch the operating system of an Amazon EC2 instance."
     },
-    "answer": "",
+    "answer": "A, C",
     "explanation": "The correct answers are A and C because patching AWS network devices and providing\nphysical security for compute resources are tasks that are the responsibility of AWS,\naccording to the AWS shared responsibility model. The AWS shared responsibility model\nis a framework that defines the division of responsibilities between AWS and the customer\nfor security and compliance. AWS is responsible for the security of the cloud, which\nincludes the global infrastructure, such as the regions, availability zones, and edge\nlocations; the hardware, software, networking, and facilities that run the AWS services; and\nthe virtualization layer that separates the customer instances and storage. The customer is\nresponsible for the security in the cloud, which includes the customer data, the guest\noperating systems, the applications, the identity and access management, the firewall\nconfiguration, and the encryption. The other options are incorrect because they are tasks\nthat are the responsib",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -5265,8 +5265,8 @@
       "C": "Amazon RDS",
       "D": "Amazon Redshift"
     },
-    "answer": "",
-    "explanation": "",
+    "answer": "B",
+    "explanation": "Amazon Athena is a serverless interactive SQL query service that analyzes data directly in Amazon S3, paying only for the data scanned per query.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
       "Consensus_Aligned"
@@ -5365,7 +5365,7 @@
       "C": "Perform operations as code.",
       "D": "Go global in minutes."
     },
-    "answer": "",
+    "answer": "A",
     "explanation": "By implementingAWS CloudTrail, a company is adhering to the AWS Cloud design\nprinciple ofactivating traceability. AWS CloudTrail provides detailed logs of all API calls\nmade in an AWS account, which helps monitor, troubleshoot, and detect unusual activity,\nthereby improving security and compliance. This supports the principle of \"activating\ntraceability\" by enabling continuous monitoring and auditing of all actions and changes\nwithin the AWS environment.\nB . Use serverless compute architectures: Incorrect, as this principle encourages the use\nof managed services that handle infrastructure, such as AWS Lambda, and is not directly\nrelated to CloudTrail.\n\n\fC . Perform operations as code: Incorrect, as this principle emphasizes the use of code\nand automation for infrastructure management.\nD . Go global in minutes: Incorrect, as this principle relates to the global deployment of\napplications and services.\nAWS Cloud Reference:\nAWS Well-Architected Framework\nAWS CloudTrail",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -5390,7 +5390,7 @@
       "C": "AWS Glue",
       "D": "Amazon Rekognition"
     },
-    "answer": "",
+    "answer": "B",
     "explanation": "Amazon Lexis a service for building conversational interfaces into any application using\nvoice and text. It provides the tools necessary to create, test, and publish intelligent\nchatbots that can be integrated with web applications to provide a conversational\nexperience.\nA . Amazon Textract: Incorrect, as it is a service for extracting text and data from\ndocuments, not for creating chatbots.\nC . AWS Glue: Incorrect, as it is a data integration service used for preparing and\ntransforming data.\nD . Amazon Rekognition: Incorrect, as it is an image and video analysis service.\nAWS Cloud Reference:\nAmazon Lex",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -5415,7 +5415,7 @@
       "C": "AWS License Manager",
       "D": "AWS Service Catalog"
     },
-    "answer": "",
+    "answer": "D",
     "explanation": "AWS Service Catalog enables companies to create, manage, and distribute catalogs of\napproved infrastructure as code (IaC) templates and software configurations. This service\nsupports infrastructure automation by allowing users to deploy resources using predefined\ntemplates, which align with the company's policies and best practices. It helps in managing\n\n\fcloud resources at scale by utilizing IaC principles, enabling consistent deployments, and\nenforcing governance across AWS resources. AWS Service Catalog is an excellent choice\nfor organizations implementing IaC.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -5565,8 +5565,8 @@
       "C": "Security",
       "D": "Cost optimization"
     },
-    "answer": "",
-    "explanation": "",
+    "answer": "D",
+    "explanation": "The Cost Optimization pillar of the AWS Well-Architected Framework focuses on avoiding unnecessary costs and running workloads at the lowest price point.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
       "Consensus_Aligned"
@@ -5613,7 +5613,7 @@
       "C": "VPC Flow Logs",
       "D": "AWS CloudHSM"
     },
-    "answer": "",
+    "answer": "C",
     "explanation": "VPC Flow Logs is the AWS service or feature that is used to troubleshoot network\nconnectivity issues between Amazon EC2 instances. VPC Flow Logs is a feature that\nenables users to capture information about the IP traffic going to and from network\ninterfaces in their VPC. VPC Flow Logs can help users monitor and diagnose networkrelated issues, such as traffic not reaching an instance, or an instance not responding to\nrequests. VPC Flow Logs can be published to Amazon CloudWatch Logs, Amazon S3, or\nAmazon Kinesis Data Firehose for analysis and storage.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -5639,7 +5639,7 @@
       "D": "AWS Trusted Advisor",
       "E": "AWS Step Functions"
     },
-    "answer": "",
+    "answer": "B, E",
     "explanation": "Amazon Simple Queue Service (Amazon SQS) and AWS Step Functions are AWS\nservices that can be used to achieve a loosely coupled architecture. Amazon SQS is a fully\nmanaged message queuing service that enables you to decouple and scale microservices,\ndistributed systems, and serverless applications. AWS Step Functions lets you coordinate\nmultiple AWS services into serverless workflows so you can build and update apps quickly.\nUsing Step Functions, you can design and run workflows that stitch together services such\n\n\fas AWS Lambda and Amazon SNS into feature-rich applications. Reference: Amazon\nSQS, AWS Step Functions",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -5817,7 +5817,7 @@
       "C": "Patching the operating system",
       "D": "Shutting down Lambda functions when they are no longer in use"
     },
-    "answer": "",
+    "answer": "A",
     "explanation": "According to the AWS shared responsibility model, AWS is responsible for the security of\nthe cloud, while customers are responsible for the security in the cloud. This means that\nAWS is responsible for the physical servers, networking, and operating system that run\nLambda functions, while customers are responsible for the security of their code and AWS\nIAM to the Lambda service and within their function1. Customers need to manage the code\nwithin the Lambda function, such as writing, testing, debugging, deploying, and updating\nthe code, as well as ensuring that the code does not contain any vulnerabilities or\nmalicious code that could compromise the security or performance of the function23.\nReference: 2: AWS Lambda - Amazon Web Services (AWS), 3: AWS Lambda\nDocumentation, 1: Amazon CLF-C02: What is customer responsibility under AWS ... PUPUWEB",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -5841,7 +5841,7 @@
       "B": "Amazon Simple Notification Service (Amazon SNS)  \fC. Amazon CloudFront",
       "D": "Amazon Simple Queue Service (Amazon SQS)"
     },
-    "answer": "",
+    "answer": "D",
     "explanation": "Amazon Simple Queue Service (Amazon SQS) is a service that provides fully managed\nmessage queues for asynchronous communication between microservices. It helps\ndevelopers use loose coupling and reliable messaging by allowing them to send, store,\nand receive messages between distributed components without losing them or requiring\neach component to be always available1. Elastic Load Balancing is a service that\ndistributes incoming traffic across multiple targets, such as Amazon EC2 instances,\ncontainers, and IP addresses. Amazon Simple Notification Service (Amazon SNS) is a\nservice that provides fully managed pub/sub messaging for event-driven and push-based\ncommunication between microservices. Amazon CloudFront is a service that provides a\nfast and secure content delivery network (CDN) for web applications.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -5865,7 +5865,7 @@
       "C": "AWS Shield Standard",
       "D": "AWS WAF"
     },
-    "answer": "",
+    "answer": "D",
     "explanation": "AWS WAF is the AWS service or feature that offers HTTP attack protection to users\nrunning public-facing web applications. AWS WAF is a web application firewall that helps\nusers protect their web applications from common web exploits, such as SQL injection,\ncross-site scripting, and bot attacks. Users can create custom rules to define the web\ntraffic that they want to allow, block, or count. Users can also use AWS Managed Rules,\nwhich are pre-configured rules that are curated and maintained by AWS or AWS\nMarketplace Sellers. AWS WAF can be integrated with other AWS services, such as\nAmazon CloudFront, Amazon API Gateway, and Application Load Balancer, to provide\ncomprehensive security for web applications. [AWS WAF Overview] AWS Certified Cloud\nPractitioner - aws.amazon.com",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -5915,7 +5915,7 @@
       "C": "AWS License Manager",
       "D": "AWS Managed Services"
     },
-    "answer": "",
+    "answer": "B",
     "explanation": "AWS Secrets Manager is a service that helps you protect access to your applications,\nservices, and IT resources. This service enables you to easily rotate, manage, and retrieve\ndatabase credentials, API keys, and other secrets throughout their lifecycle. Users and\napplications retrieve secrets with a call to Secrets Manager APIs, eliminating the need to\nhardcode sensitive information in plain text. Secrets Manager offers secret rotation with\nbuilt-in integration for Amazon RDS, Amazon Redshift, Amazon DocumentDB, and other\nAWS services1. You can also extend Secrets Manager to rotate other types of secrets,\nsuch as credentials for Oracle, SQL Server, or MongoDB databases, by using custom\nAWS Lambda functions2. Secrets Manager enables you to control access to secrets using\nfine-grained permissions and audit secret rotation centrally for resources in the AWS\nCloud, third-party services, and on-premises3. Therefore, AWS Secrets Manager supports\nthe requirement of rotating dat",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -5963,7 +5963,7 @@
       "C": "AmazonTextract",
       "D": "AmazonPolly"
     },
-    "answer": "",
+    "answer": "B",
     "explanation": "The AWS service that will meet the requirements of the company that wants to create a\nchatbot and integrate the chatbot with its current web application is Amazon Lex. Amazon\nLex is a service that helps customers build conversational interfaces using voice and text.\nThe company can use Amazon Lex to create a chatbot that can understand natural\nlanguage and respond to user requests, using the same deep learning technologies that\npower Amazon Alexa. Amazon Lex also provides easy integration with other AWS\nservices, such as Amazon Comprehend, Amazon Polly, and AWS Lambda, as well as\npopular platforms, such as Facebook Messenger, Slack, and Twilio. Amazon Lex helps\ncustomers create engaging and interactive chatbots for their web applications. Amazon\nKendra, Amazon Textract, and Amazon Polly are not the best services to use for this\npurpose. Amazon Kendra is a service that helps customers provide accurate and natural\n\n\fanswers to natural language queries using machine learning",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -6063,7 +6063,7 @@
       "C": "Patch the guest operating system with the latest security patches.",
       "D": "Maintain security systems that provide physical monitoring of data centers."
     },
-    "answer": "",
+    "answer": "C",
     "explanation": "Under the AWS shared responsibility model, AWS is responsible for the security \"of\" the\ncloud, which includes the physical infrastructure, networking, and hypervisor layer. The\ncustomer, however, is responsible for security \"in\" the cloud, which includes managing the\nsecurity of their data, patching and maintaining their guest operating system and\napplications, and managing identity and access. The responsibilities of shredding disk\ndrives, preventing packet capture at the hypervisor level, and physical monitoring are\nhandled by AWS as part of its responsibility for security \"of\" the cloud.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -6113,7 +6113,7 @@
       "C": "AWS Enterprise On-Ramp Support",
       "D": "AWS Enterprise Support"
     },
-    "answer": "",
+    "answer": "B",
     "explanation": "The AWS Support plan that provides the full set of AWS Trusted Advisor checks at the\nlowest cost is the AWS Business Support plan. The AWS Business Support plan includes\naccess to the complete set of Trusted Advisor checks, which cover areas such as cost\noptimization, security, performance, fault tolerance, and service limits. This plan is\nspecifically designed to support production workloads and includes 24/7 access to cloud\nsupport engineers, response times for impaired systems, and other enhanced technical\nsupport features.\nAWS Developer Support, while more affordable, only provides limited Trusted Advisor\nchecks, specifically around Service Limits and basic Security checks. Full access to all\nTrusted Advisor checks is only available with Business Support and higher-tier plans, such\nas Enterprise On-Ramp and Enterprise Support",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -6138,7 +6138,7 @@
       "C": "AWS Compute Optimizer",
       "D": "Amazon EventBridge"
     },
-    "answer": "",
+    "answer": "B",
     "explanation": "AWS CloudTrail is the AWS service that can identify when an Amazon EC2 instance was\nterminated. AWS CloudTrail is a service that records API calls and events for AWS\naccounts and resources. AWS CloudTrail can capture the TerminateInstances event,\nwhich is triggered when an EC2 instance is terminated by a user or an AWS service. The\nevent contains information such as the instance ID, the user identity, the source IP\naddress, the time, and the reason for the termination12. Customers can use the CloudTrail\nconsole, the AWS CLI, or the AWS SDKs to view and search for the TerminateInstances\nevents in their event history or in their S3 buckets where they store their CloudTrail logs13.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -6266,7 +6266,7 @@
       "C": "5 TB",
       "D": "Unlimited"
     },
-    "answer": "",
+    "answer": "D",
     "explanation": "Amazon S3 offers unlimited storage for any amount of data. You can store as many\nobjects as you want, and each object can be as large as 5 terabytes. You pay only for the\nstorage space that you actually use, and there are no minimum commitments or upfront\nfees. Amazon S3 also provides high durability, availability, scalability, and security for your\ndata.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -6515,7 +6515,7 @@
       "C": "Sell the Standard RIs as a third-party seller on the AWS Marketplace.",
       "D": "Convert the Standard RIs to Savings Plans."
     },
-    "answer": "",
+    "answer": "B",
     "explanation": "The Amazon EC2 Reserved Instance Marketplace allows customers to sell unused\nStandard Reserved Instances to other AWS users. This enables companies to recoup\nsome of the costs if they no longer need certain RIs. Standard RIs cannot be converted to\nSavings Plans, and AWS Support does not facilitate the resale of RIs directly.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -6565,7 +6565,7 @@
       "C": "Amazon DocumentDB (with MongoDB compatibility)",
       "D": "Amazon Neptune"
     },
-    "answer": "",
+    "answer": "A",
     "explanation": "The correct answer is A because Amazon DynamoDB is a key-value database that\nprovides sub-millisecond latency on a large scale. Amazon DynamoDB is a fully managed,\nserverless, and scalable NoSQL database service that supports both key-value and\ndocument data models. The other options are incorrect because they are not key-value\ndatabases. Amazon Aurora is a relational database that is compatible with MySQL and\nPostgreSQL. Amazon DocumentDB (with MongoDB compatibility) is a document database\nthat is compatible with MongoDB. Amazon Neptune is a graph database that supports\nproperty graph and RDF models. Reference: Amazon DynamoDB FAQs",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -6638,7 +6638,7 @@
       "C": "AWS Control Tower",
       "D": "Migration Evaluator"
     },
-    "answer": "",
+    "answer": "D",
     "explanation": "Migration Evaluator is an AWS service that provides a customized assessment of your\ncurrent on-premises environment and helps you build a data-driven business case for\nmigration to AWS. Migration Evaluator collects and analyzes data from your on-premises\nservers, such as CPU, memory, disk, network, and utilization metrics, and compares them\nwith the most cost-effective AWS alternatives. Migration Evaluator also helps you\nunderstand your existing software licenses and running costs, and provides\nrecommendations for Bring Your Own License (BYOL) and License Included (LI) options in\nAWS. Migration Evaluator generates a detailed report that shows your projected running\ncosts in the AWS Cloud, along with potential savings and benefits. You can use this report\nto support your decision-making and planning for cloud migration. Reference: Cloud\nBusiness Case & Migration Plan - Amazon Migration Evaluator - AWS, Getting started with\nMigration Evaluator",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -6663,7 +6663,7 @@
       "C": "Amazon EC2",
       "D": "AWS Organizations"
     },
-    "answer": "",
+    "answer": "A",
     "explanation": "AWS Marketplaceis an online store where independent software vendors (ISVs) can list\nand sell their software products, including custom Amazon Machine Images (AMIs). It\nallows vendors to share, distribute, and monetize their AMIs with a broad audience of AWS\ncustomers.\nB . AWS Data Exchange: Incorrect, as it is a service for finding, subscribing to, and using\nthird-party data in the cloud, not for delivering custom AMIs.\nC . Amazon EC2: Incorrect, as it is the service for running instances, but it does not\nprovide a marketplace for distributing AMIs.\nD . AWS Organizations: Incorrect, as it is a service for managing multiple AWS accounts,\nnot for distributing software products like AMIs.\nAWS Cloud Reference:\nAWS Marketplace",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -6688,7 +6688,7 @@
       "C": "AWS Pricing Calculator",
       "D": "AWS Cost Explorer"
     },
-    "answer": "",
+    "answer": "C",
     "explanation": "AWS Pricing Calculator is the AWS service or tool that the company should use to\nestimate its future AWS service costs before the migration. AWS Pricing Calculator is a\nweb-based tool that allows the company to create cost estimates for various AWS services\nand scenarios. AWS Pricing Calculator helps the company to compare the costs of running\nthe workload on premises versus on AWS, and to optimize the costs by choosing the best\noptions for the workload. AWS Pricing Calculator also provides a detailed breakdown of\nthe cost components and a downloadable report. For more information, see [AWS Pricing\nCalculator] and [Getting Started with AWS Pricing Calculator].",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -6761,7 +6761,7 @@
       "C": "Explain to the auditor that AWS does not need to be audited because the company's application is hosted in multiple Availability Zones.",
       "D": "Use AWS Artifact to download the applicable report for AWS security controls. Provide the report to the auditor."
     },
-    "answer": "",
+    "answer": "D",
     "explanation": "AWS Artifact is your go-to, central resource for compliance-related information that matters\nto you. It provides on-demand access to AWS' security and compliance reports and select\nonline agreements. Reports available in AWS Artifact include our Service Organization\nControl (SOC) reports, Payment Card Industry (PCI) reports, and certifications from\naccreditation bodies across geographies and compliance verticals that validate the\nimplementation and operating effectiveness of AWS security controls. Agreements\navailable in AWS Artifact include the Business Associate Addendum (BAA) and the\nNondisclosure Agreement (NDA). You can use AWS Artifact to download the applicable\nreport for AWS security controls and provide it to the auditor.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -6809,7 +6809,7 @@
       "C": "AWS Backup",
       "D": "Amazon FSx"
     },
-    "answer": "",
+    "answer": "C",
     "explanation": "The AWS service that will meet this requirement is C. AWS Backup.\nAWS Backup is a service that allows you to define a central data protection policy that\nworks across AWS services for compute, storage, and database resources. You can use\nAWS Backup to create backup plans that specify the frequency, retention, and lifecycle of\nyour backups, and apply them to your AWS resources using tags or resource IDs. AWS\nBackup supports various AWS services, such as Amazon EC2, Amazon EBS, Amazon\nRDS, Amazon DynamoDB, Amazon EFS, Amazon FSx, and AWS Storage Gateway12.\nAWS Batch is a service that allows you to run batch computing workloads on AWS. AWS\nBatch does not provide a central data protection policy, but rather enables you to optimize\nthe allocation and utilization of your compute resources3.\nAWS Elastic Disaster Recovery is a service that allows you to prepare for and recover from\ndisasters using AWS. AWS Elastic Disaster Recovery does not provide a central data\nprotection polic",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -6834,7 +6834,7 @@
       "C": "Rightsizing",
       "D": "Loose coupling"
     },
-    "answer": "",
+    "answer": "D",
     "explanation": "Loose coupling is a design principle that involves reducing dependencies between\napplication components so that they can operate independently. This approach ensures\nthat the failure of one component does not affect the availability of the others, thereby\nimproving the application's fault tolerance and resilience. Disposable resources,\nautomation, and rightsizing are valuable principles in cloud architecture, but they do not\ndirectly address the requirement of remaining available despite the failure of an individual\ncomponent like loose coupling does.\nReference:\nAWS Well-Architected Framework - Design Principles",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -6883,7 +6883,7 @@
       "C": "Learn to improve from operational failures.",
       "D": "Use monolithic application design for centralization."
     },
-    "answer": "",
+    "answer": "C",
     "explanation": "The correct answer is C because learning to improve from operational failures is a\nrecommended design principle of the AWS Well-Architected Framework. The AWS WellArchitected Framework is a set of best practices and guidelines for designing and\noperating reliable, secure, efficient, and cost-effective systems in the cloud. The AWS\nWell-Architected Framework consists of five pillars: operational excellence, security,\nreliability, performance efficiency, and cost optimization. Each pillar has a set of design\nprinciples that describe the characteristics of a well-architected system. Learning to\nimprove from operational failures is a design principle of the operational excellence pillar,\nwhich focuses on running and monitoring systems to deliver business value and\ncontinually improve supporting processes and procedures. The other options are incorrect\nbecause they are not recommended design principles of the AWS Well-Architected\nFramework. Reducing downtime by making infrastr",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -6984,7 +6984,7 @@
       "C": "AWS loT Device Defender",
       "D": "AWS CloudFormation"
     },
-    "answer": "",
+    "answer": "D",
     "explanation": "AWS CloudFormation is a service that allows developers to model and provision their AWS\ninfrastructure in a repeatable and declarative way, using code and templates. AWS\nCloudFormation enables developers to define the resources they need for their\ndevelopment and production environments, such as compute, storage, network, and\napplication services, and automate their creation and configuration. AWS CloudFormation\nalso provides features such as change sets, nested stacks, and rollback triggers to help\ndevelopers manage and update their infrastructure safely and efficiently12. Reference:\nAWS CloudFormation\nWhat is AWS CloudFormation?",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -7035,7 +7035,7 @@
       "D": "Portfolio management",
       "E": "Configuration management"
     },
-    "answer": "",
+    "answer": "A, E",
     "explanation": "Comprehensive and Detailed Explanation From AWS Cloud Documentation:\nThe AWS Cloud Adoption Framework Operations perspective focuses on delivering cloud\nservices at an agreed level and improving workload reliability through effective operations.\nAWS lists observability as an Operations capability because teams need metrics, logs,\ntraces, endpoint monitoring, and alerts to understand workload health and identify\nproblems. AWS also lists configuration management as an Operations capability because\n\n\forganizations need an accurate record of workloads, relationships, settings, and\nconfiguration changes, and must control configuration drift. Therefore, options A and E are\ncorrect. The other choices belong to different AWS CAF perspectives. Data governance is\na Governance perspective capability concerned with authority, ownership, standards,\nquality, and control over organizational data. Platform architecture is a Platform\nperspective capability that establishes architectural g",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -7111,7 +7111,7 @@
       "C": "Configure the security used by managed services.",
       "D": "Patch and back up Amazon Aurora."
     },
-    "answer": "",
+    "answer": "B",
     "explanation": "According to the AWS shared responsibility model, the customer is responsible for\nconfiguring logical access controls for resources, and protecting account credentials. This\nincludes managing IAM user permissions, security group rules, network ACLs, encryption\nkeys, and other aspects of access management1. AWS is responsible for protecting the\nglobal infrastructure that runs all of the services offered in the AWS Cloud, such as the\nhardware, software, networking, and facilities. AWS is also responsible for configuring the\nsecurity used by managed services, such as Amazon RDS, Amazon DynamoDB, and\nAmazon Aurora2.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -7136,7 +7136,7 @@
       "D": "Test systems at production scale.",
       "E": "Refine operational procedures infrequently."
     },
-    "answer": "",
+    "answer": "B, D",
     "explanation": "The correct answers are B and D because making data-driven decisions to determine\ncloud architectural design and testing systems at production scale are AWS Cloud design\nprinciples. Making data-driven decisions to determine cloud architectural design means\nthat users should collect and analyze data from their AWS resources and applications to\noptimize their performance, availability, security, and cost. Testing systems at production\nscale means that users should simulate real-world scenarios and load conditions to\nvalidate the functionality, reliability, and scalability of their systems. The other options are\nincorrect because they are not AWS Cloud design principles. Paying for compute\nresources in advance means that users have to invest heavily in data centers and servers\nbefore they know how they will use them. This is not a cloud design principle, but rather a\ntraditional IT model. Emphasizing manual processes to allow for changes means that\nusers have to rely on huma",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -7212,8 +7212,8 @@
       "D": "Configure a security group on deployed EC2 instances.",
       "E": "Maintain the network infrastructure."
     },
-    "answer": "",
-    "explanation": "",
+    "answer": "C, D",
+    "explanation": "Under the AWS Shared Responsibility Model for Amazon EC2, the customer is responsible for patching the guest OS and configuring EC2 Security Groups.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
       "Consensus_Aligned"
@@ -7238,7 +7238,7 @@
       "C": "AWS CloudHSM",
       "D": "AWS Directory Service"
     },
-    "answer": "",
+    "answer": "C",
     "explanation": "AWS CloudHSM provides cloud-based hardware security modules that securely generate,\nstore, and use cryptographic keys. Customers have control over the HSM users and keys\nin their CloudHSM clusters and can use supported interfaces and libraries to perform\ncryptographic operations and manage key material. Therefore, option C is correct among\nthe supplied choices. AWS License Manager helps organizations track and manage\nsoftware licenses and licensing rules. AWS Certificate Manager provisions, manages, and\ndeploys public and private TLS certificates, but it is not the general-purpose customercontrolled encryption-key management service described here. AWS Directory Service\nprovides managed directory capabilities such as Microsoft Active Directory integration and\nis unrelated to cryptographic key storage. In many normal AWS architectures, AWS Key\nManagement Service would be the primary managed service used to create and control\nencryption keys; however, AWS KMS is not include",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -7263,7 +7263,7 @@
       "C": "Reseller partners",
       "D": "Internet providers"
     },
-    "answer": "",
+    "answer": "B",
     "explanation": "Customers share responsibility with AWS for security and compliance of AWS accounts\nand resources. This is part of the AWS shared responsibility model, which defines the\ndivision of responsibilities between AWS and the customer for security and compliance.\nAWS is responsible for the security of the cloud, which includes the physical and\nenvironmental controls of the AWS global infrastructure, such as power, cooling, fire\nsuppression, and physical access. The customer is responsible for the security in the\ncloud, which includes the configuration and management of the AWS resources and\n\n\fapplications, such as identity and access management, encryption, firewall, and backup.\nFor more information, see AWS Shared Responsibility Model and AWS Cloud Security.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -7288,7 +7288,7 @@
       "C": "AWS Config",
       "D": "AWS Artifact"
     },
-    "answer": "",
+    "answer": "B",
     "explanation": "The correct answer is B because AWS CloudTrail is an AWS service that a cloud engineer\ncan use to view API calls to AWS services. AWS CloudTrail is a service that enables\ncustomers to track user activity and API usage across their AWS account. AWS CloudTrail\nrecords the details of every API call made to AWS services, such as the identity of the\ncaller, the time of the call, the source IP address of the caller, the parameters and\nresponses of the call, and more. Customers can use AWS CloudTrail to audit, monitor, and\ntroubleshoot their AWS resources and actions. The other options are incorrect because\nthey are not AWS services that a cloud engineer can use to view API calls to AWS\nservices. Amazon CloudWatch is an AWS service that enables customers to collect,\nanalyze, and visualize metrics, logs, and events from their AWS resources and\napplications. AWS Config is an AWS service that enables customers to assess, audit, and\nevaluate the configurations of their AWS resources",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -7362,7 +7362,7 @@
       "C": "To access the AWS account through a CLI",
       "D": "To access all of a company's AWS accounts"
     },
-    "answer": "",
+    "answer": "C",
     "explanation": "An access key is a pair of long-term credentials that consists of an access key ID and a\nsecret access key. An access key is used to sign programmatic requests to the AWS CLI\nor AWS API (directly or using the AWS SDK). An access key allows a user to access the\nAWS account through a CLI, which is a tool that enables users to interact with AWS\nservices using commands in a terminal or a script12.\nThe other options are not correct, because:\nTo access the AWS account as the AWS account root user, a user needs the email\naddress and password associated with the account. The root user has complete access to\nall AWS resources and services in the account. However, it is not recommended to use the\nroot user for everyday tasks3.\nTo access the AWS account through the AWS Management Console, a user needs a user\nname and password. The console is a web-based interface that allows users to manage\ntheir AWS resources and services using a graphical user interface4.\nTo access all of a compan",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -7411,7 +7411,7 @@
       "C": "AWS CodeDeploy",
       "D": "AWS Elastic Beanstalk"
     },
-    "answer": "",
+    "answer": "B",
     "explanation": "AWS Systems Manager is a service that enables users to centralize and automate the\nmanagement of their AWS resources. It provides a unified user interface to view\noperational data, such as inventory, patch compliance, and performance metrics. It also\nallows users to automate common and repetitive tasks, such as patching, backup, and\nconfiguration management, across all of their Amazon EC2 instances1. AWS Trusted\nAdvisor is a service that provides best practices and recommendations to optimize the\nperformance, security, and cost of AWS resources2. AWS CodeDeploy is a service that\nautomates the deployment of code and applications to Amazon EC2 instances or other\ncompute services3. AWS Elastic Beanstalk is a service that simplifies the deployment and\nmanagement of web applications using popular platforms, such as Java, PHP, and\nNode.js4.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -7461,7 +7461,7 @@
       "C": "AWS Marketplace",
       "D": "AWS Health Dashboard"
     },
-    "answer": "",
+    "answer": "A",
     "explanation": "AWS Online Tech Talks are online presentations that cover a broad range of topics at\nvarying technical levels and provide a live Q&A session with AWS experts. They are a\ngreat resource for new AWS users who want to learn how to implement specific AWS\nservices from other customer examples and ask questions to AWS experts. AWS\ndocumentation, AWS Marketplace, and AWS Health Dashboard do not offer the same\nlevel of interactivity and guidance as AWS Online Tech Talks. Source: AWS Online Tech\nTalks",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -7789,7 +7789,7 @@
       "D": "No longer having to guess what capacity will be required.",
       "E": "No longer worrying about users access controls."
     },
-    "answer": "",
+    "answer": "B, D",
     "explanation": "The advantages of moving to the AWS Cloud are the ability to use the pay-as-you-go\nmodel and no longer having to guess what capacity will be required. The pay-as-you-go\nmodel allows the user to pay only for the resources they use, without any upfront or longterm commitments. This reduces the cost and risk of over-provisioning or underprovisioning resources. No longer having to guess what capacity will be required means\nthat the user can scale their resources up or down according to the demand, without\nwasting money on idle resources or losing customers due to insufficient capacity4.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -7815,8 +7815,8 @@
       "C": "AWSWAF",
       "D": "AWS Shield"
     },
-    "answer": "",
-    "explanation": "",
+    "answer": "C",
+    "explanation": "AWS WAF is a Layer 7 web application firewall that protects against common web exploits including SQL injection and cross-site scripting (XSS).",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
       "Consensus_Aligned"
@@ -7839,8 +7839,8 @@
       "C": "AWS Application Migration Service",
       "D": "AWS Database Migration Service (AWS DMS)"
     },
-    "answer": "",
-    "explanation": "",
+    "answer": "D",
+    "explanation": "AWS Database Migration Service (AWS DMS) migrates on-premises relational and NoSQL databases to AWS targets such as Amazon DynamoDB.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
       "Consensus_Aligned"
@@ -7863,7 +7863,7 @@
       "C": "Amazon Elastic File System (Amazon EFS)",
       "D": "AWS Storage Gateway"
     },
-    "answer": "",
+    "answer": "C",
     "explanation": "Amazon Elastic File System (Amazon EFS) provides a simple, scalable, fully managed\nelastic NFS file system for use with AWS Cloud services and on-premises resources. It is\nbuilt to scale on demand to petabytes without disrupting applications, growing and\nshrinking automatically as you add and remove files, eliminating the need to provision and\nmanage capacity to accommodate growth. Amazon EFS offers two storage classes: the\nStandard storage class, and the Infrequent Access storage class (EFS IA). EFS IA\nprovides price/performance that is cost-optimized for files not accessed every day.\nAmazon EFS encrypts data at rest and in transit, and supports direct access over the\ninternet4.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -7940,7 +7940,7 @@
       "C": "Operational excellence",
       "D": "Performance efficiency"
     },
-    "answer": "",
+    "answer": "B",
     "explanation": "The pillar of the AWS Well-Architected Framework that is supported by the goals of\nprotecting AWS Cloud information, systems, and assets while performing risk assessment\nand mitigation tasks is security. Security is the ability to protect information, systems, and\nassets while delivering business value through risk assessments and mitigation strategies.\nThe security pillar covers topics such as identity and access management, data protection,\ninfrastructure protection, detective controls, incident response, and compliance",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -7992,7 +7992,7 @@
       "C": "Amazon GuardDuty",
       "D": "AWS Certificate Manager (ACM)"
     },
-    "answer": "",
+    "answer": "A",
     "explanation": "AWS Artifact is the service that will provide the information about whether a specific AWS\nservice is compliant with specific compliance frameworks. AWS Artifact is a self-service\nportal that allows you to access, review, and download AWS security and compliance\nreports and agreements. You can use AWS Artifact to verify the compliance status of AWS\nservices across various regions and compliance programs, such as ISO, PCI, SOC,\nFedRAMP, HIPAA, and more12",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -8017,7 +8017,7 @@
       "C": "Network ACLs",
       "D": "Security groups"
     },
-    "answer": "",
+    "answer": "A",
     "explanation": "AWS WAF is a web application firewall that helps protect web applications from common\nweb exploits, such as SQL injection attacks. It allows customers to create custom rules\nthat block malicious requests. AWS Shield is a managed service that protects against\ndistributed denial of service (DDoS) attacks, not SQL injection attacks. Network ACLs and\nsecurity groups are network-level security features that filter traffic based on IP addresses\nand ports, not web requests or SQL queries. Reference: [AWS WAF], [AWS Shield],\n[Network ACLs], [Security groups]",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -8092,7 +8092,7 @@
       "C": "AWS Direct Connect",
       "D": "Amazon OpenSearch Service"
     },
-    "answer": "",
+    "answer": "C",
     "explanation": "AWS Direct Connect is a service that provides a dedicated network connection from on\npremises to the AWS Cloud. It can reduce network costs, increase bandwidth throughput,\nand provide a more consistent network experience than internet-based connections. It can\nalso provide low latency for applications that require real-time data transfer4. Amazon VPC\nis a service that provides a logically isolated section of the AWS Cloud where users can\nlaunch AWS resources in a virtual network that they define. Amazon Kinesis Data Streams\nis a service that provides a scalable and durable stream of data records for real-time data\nprocessing. Amazon OpenSearch Service is a service that provides a fully managed,\nscalable, and secure search and analytics solution that is compatible with Elasticsearch.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -8221,7 +8221,7 @@
       "C": "AWS Storage Gateway file gateway",
       "D": "Amazon Elastic File System (Amazon EFS)"
     },
-    "answer": "",
+    "answer": "C",
     "explanation": "AWS Storage Gateway file gateway allows companies to use protocols such as NFS and\nSMB to store and retrieve objects in Amazon S3. File gateway provides a seamless\nintegration between on-premises applications and Amazon S3, and enables low-latency\naccess to data through local caching. File gateway also supports encryption, compression,\nand lifecycle management of the objects in Amazon S3. For more information, see What is\nAWS Storage Gateway? and File Gateway.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -8446,8 +8446,8 @@
       "C": "Governance",
       "D": "Security"
     },
-    "answer": "",
-    "explanation": "",
+    "answer": "A",
+    "explanation": "The AWS CAF Platform perspective focuses on designing and implementing well-architected, cloud-native applications and landing zones.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
       "Consensus_Aligned"
@@ -8472,7 +8472,7 @@
       "D": "Writing and updating of code",
       "E": "Security of underlying infrastructure"
     },
-    "answer": "",
+    "answer": "A, D",
     "explanation": "The duties that are the responsibility of a company that is using AWS Lambda are security\ninside of code and writing and updating of code. AWS Lambda is a serverless compute\nservice that allows you to run code without provisioning or managing servers, scaling, or\npatching. AWS Lambda takes care of the security of the underlying infrastructure, such as\nthe operating system, the network, and the firewall. However, the company is still\nresponsible for the security of the code itself, such as encrypting sensitive data, validating\ninput, and handling errors. The company is also responsible for writing and updating the\ncode that defines the Lambda function, and choosing the runtime environment, such as\nNode.js, Python, or Java. AWS Lambda does not require the selection of CPU resources,\nas it automatically allocates them based on the memory configuration34",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -8546,7 +8546,7 @@
       "C": "Amazon Detective",
       "D": "Amazon Cognito"
     },
-    "answer": "",
+    "answer": "B",
     "explanation": "Amazon Inspector is the AWS service that can be used to perform vulnerability scans on\nAWS EC2 instances for software vulnerabilities automatically in a periodic fashion.\nAmazon Inspector automatically discovers EC2 instances and scans them for software\nvulnerabilities and unintended network exposure. Amazon Inspector uses AWS Systems\nManager (SSM) and the SSM Agent to collect information about the software application\ninventory of the EC2 instances. This data is then scanned by Amazon Inspector for\nsoftware vulnerabilities12. Amazon Inspector also integrates with other AWS services,\nsuch as Amazon EventBridge and AWS Security Hub, to automate discovery, expedite\nvulnerability routing, and shorten mean time to remediate (MTTR) vulnerabilities2.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -8723,7 +8723,7 @@
       "C": "AWS CloudTrail",
       "D": "ACLs"
     },
-    "answer": "",
+    "answer": "D",
     "explanation": "ACLs are an AWS service or feature that the developer can use to restrict read and write\naccess to the S3 bucket. ACLs are access control lists that grant basic permissions to\nother AWS accounts or predefined groups. They can be used to grant read or write access\nto an S3 bucket or an object3. Security groups are virtual firewalls that control the inbound\nand outbound traffic for Amazon EC2 instances. They are not a service or feature that can\nbe used to restrict access to an S3 bucket. Amazon CloudWatch is a service that provides\nmonitoring and observability for AWS resources and applications. It can be used to collect\nand analyze metrics, logs, events, and alarms. It is not a service or feature that can be\nused to restrict access to an S3 bucket. AWS CloudTrail is a service that provides\ngovernance, compliance, and audit for AWS accounts and resources. It can be used to\ntrack and record the API calls and user activity in AWS. It is not a service or feature that\ncan be u",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -8800,8 +8800,8 @@
       "C": "Dedicated Hosts",
       "D": "Spot Instances"
     },
-    "answer": "",
-    "explanation": "",
+    "answer": "C",
+    "explanation": "Amazon EC2 Dedicated Hosts provide physical servers dedicated to your use, supporting bring-your-own-license (BYOL) bound to physical sockets/cores.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
       "Consensus_Aligned"
@@ -8977,7 +8977,7 @@
       "C": "Dedicated Instances",
       "D": "On-Demand Instances"
     },
-    "answer": "",
+    "answer": "B",
     "explanation": "Spot Instances are instances that use spare EC2 capacity that is available for up to 90%\noff the On-Demand price. Because Spot Instances can be interrupted by EC2 with two\nminutes of notification when EC2 needs the capacity back, you can use them for\napplications that have flexible start and end times, or that can withstand interruptions5.\nThis option is most cost-effective for the use case described in the question. Reserved\nInstances are instances that you purchase for a one-year or three-year term, and pay a\nlower hourly rate compared to On-Demand Instances. This option is suitable for\napplications that have steady state or predictable usage. Dedicated Instances are\ninstances that run on hardware that's dedicated to a single customer within an Amazon\nVPC. This option is suitable for applications that have stringent regulatory or compliance\nrequirements. On-Demand Instances are instances that you pay for by the second, with no\nlong-term commitments or upfront payments",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -9002,7 +9002,7 @@
       "C": "Traffic Mirroring",
       "D": "Internet gateway"
     },
-    "answer": "",
+    "answer": "B",
     "explanation": "Network ACLs (NACLs) are subnet-level firewalls in AWS, controlling inbound and\noutbound traffic for VPC subnets. They provide an additional layer of security by allowing\nor denying traffic based on IP protocol, source and destination IP, and port. Security\ngroups operate at the instance level, while Traffic Mirroring and Internet Gateways do not\nfunction as firewalls at the subnet level.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -9027,7 +9027,7 @@
       "C": "Amazon Aurora PostgreSQL-Compatible Edition",
       "D": "Amazon Aurora Serverless"
     },
-    "answer": "",
+    "answer": "D",
     "explanation": "Amazon Aurora Serverless is an on-demand, auto-scaling configuration for Amazon\nAurora PostgreSQL-Compatible Edition. It is a fully managed service that automatically\nscales up and down based on the application's actual needs. Amazon Aurora Serverless is\nsuitable for applications that have infrequent, intermittent, or unpredictable database\n\n\fworkloads, and that do not require the full power and range of options provided by\nprovisioned Aurora clusters. Amazon Aurora Serverless eliminates the need to provision\nand manage database instances, and reduces the management overhead associated with\ndatabase administration tasks such as scaling, patching, backup, and recovery. Reference:\nAmazon Aurora Serverless, Choosing between Aurora Serverless and provisioned Aurora\nDB clusters, [AWS Cloud Practitioner Essentials: Module 4 - Databases in the Cloud]",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -9127,7 +9127,7 @@
       "C": "Across multiple Availability Zones",
       "D": "Across multiple AWS accounts"
     },
-    "answer": "",
+    "answer": "C",
     "explanation": "The company should deploy the EC2 instances across multiple Availability Zones to design\na highly available application. Availability Zones are isolated locations within an AWS\nRegion that are engineered to be fault-tolerant and operate independently of each other.\nBy deploying the EC2 instances across multiple Availability Zones, the company can\nensure that their application can withstand the failure of an entire Availability Zone and\ncontinue to operate with minimal disruption. Deploying the EC2 instances across multiple\nedge locations, VPCs, or AWS accounts will not provide the same level of availability and\nfault tolerance as Availability Zones. Edge locations are part of the Amazon CloudFront\nservice, which is a content delivery network (CDN) that caches and serves web content to\nusers. VPCs are virtual networks that isolate the AWS resources within an AWS Region.\nAWS accounts are the primary units of ownership and access control for AWS\nresources12",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -9252,7 +9252,7 @@
       "C": "AWS Trusted Advisor",
       "D": "Cost Explorer"
     },
-    "answer": "",
+    "answer": "D",
     "explanation": "Cost Explorer is an AWS service or tool that can be used to forecast AWS spending. It\nallows users to analyze their AWS costs and usage using interactive graphs and tables. It\nalso provides features such as filtering, grouping, and forecasting to help users plan their\nfuture spending. Amazon DevPay is an AWS service that allows developers to sell\napplications that are built on AWS services. It handles the billing and metering for the\ncustomers of the applications and collects payments from them. It is not a tool for\nforecasting AWS spending. AWS Organizations is an AWS service that allows users to\ncentrally manage and govern their AWS accounts. It provides features such as creating\ngroups of accounts, applying policies, and automating account creation. It is not a tool for\nforecasting AWS spending. AWS Trusted Advisor is an AWS service that provides best\npractices and recommendations to optimize the performance, security, and cost of AWS\nresources. It can help users ident",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -9300,7 +9300,7 @@
       "C": "AWS Regions",
       "D": "Placement groups"
     },
-    "answer": "",
+    "answer": "C",
     "explanation": "AWS Regions are geographic areas around the world where AWS has clusters of data\ncenters. Each AWS Region consists of multiple, isolated, and physically separate AZ's\nwithin a geographic area. By hosting the customer's data in a specific AWS Region, the\ncompany can meet the requirement of hosting the data in the customer's country. AWS\nShield is a service that provides always-on detection and automatic inline mitigations that\n\n\fminimize application downtime and latency, so there is no need to engage AWS Support to\nbenefit from DDoS protection. Amazon S3 Object Lock is a feature that allows you to store\nobjects using a write-once-read-many (WORM) model. You can use it to prevent an object\nfrom being deleted or overwritten for a fixed amount of time or indefinitely. Placement\ngroups are logical grouping of instances within a single Availability Zone. Placement\ngroups enable applications to participate in a low-latency, 10 Gbps network. None of these\nservices or infrastructu",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -9450,7 +9450,7 @@
       "C": "Termination of Amazon EC2 instances that are managed by AWS Auto Scaling",
       "D": "Configuration of IAM access controls"
     },
-    "answer": "",
+    "answer": "A",
     "explanation": "AWS Elastic Beanstalk, Amazon Aurora, and AWS Auto Scaling are managed services\nthat reduce the operational overhead for the customers. AWS is responsible for security\npatching, backups, and termination of these services. However, the customers are still\nresponsible for configuring IAM access controls to manage the permissions and policies for\ntheir AWS resources. This is part of the AWS shared responsibility model, which defines\nthe security and compliance responsibilities of AWS and the customers. You can learn\nmore about the AWS shared responsibility model from this whitepaper or this digital\ncourse.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -9475,7 +9475,7 @@
       "C": "AWS Migration Hub",
       "D": "AWS Application Migration Service"
     },
-    "answer": "",
+    "answer": "B",
     "explanation": "AWS DataSync is designed for large-scale data transfers, especially involving large\ndatasets with millions of files from on-premises to AWS. It provides fast and efficient\ntransfer capabilities, and supports a one-time migration. AWS DMS is specific to\ndatabases, while Migration Hub is for tracking migrations, and Application Migration\nService is for continuous replication rather than one-time file migrations.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -9650,7 +9650,7 @@
       "C": "AWS Lambda",
       "D": "Amazon Aurora"
     },
-    "answer": "",
+    "answer": "C",
     "explanation": "The AWS service that will meet the requirements of the company that needs to host a\nhighly available application in the AWS Cloud that runs infrequently for short periods of\ntime with the least amount of operational overhead is AWS Lambda. AWS Lambda is a\nserverless compute service that allows customers to run code without provisioning or\nmanaging servers. The company can use AWS Lambda to create and deploy their\napplication as functions that are triggered by events, such as API calls, messages, or\nschedules. AWS Lambda automatically scales the compute resources based on the\ndemand, and customers only pay for the compute time they consume. AWS Lambda also\nsimplifies the management and maintenance of the application, as customers do not need\nto worry about the underlying infrastructure, security, or availability. Amazon EC2, AWS\nFargate, and Amazon Aurora are not the best services to use for this purpose. Amazon\nEC2 is a service that provides scalable compute capacity in t",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -9701,7 +9701,7 @@
       "D": "Replatform",
       "E": "Refactor"
     },
-    "answer": "",
+    "answer": "B, C",
     "explanation": "Rehosting (\"lift and shift\") is a migration strategy where applications are moved to the\ncloud with minimal changes, making it the least effort-intensive method for applications\nincompatible with the cloud. Repurchasing involves moving to a different product, often a\nSaaS solution, which can also minimize migration effort by avoiding the need for\napplication-level changes. Retiring, replatforming, and refactoring require significant effort\neither in terms of analyzing and shutting down the application, making changes to the\nunderlying platform, or redesigning the application architecture, respectively.\nReference:\nAWS Migration Strategies",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -9727,8 +9727,8 @@
       "C": "AWS CLI",
       "D": "Amazon Elastic Container Service (Amazon ECS)"
     },
-    "answer": "",
-    "explanation": "",
+    "answer": "C",
+    "explanation": "The AWS Command Line Interface (AWS CLI) is a unified tool providing a consistent method to manage and interact with AWS services.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
       "Consensus_Aligned"
@@ -9752,7 +9752,7 @@
       "C": "AWS Support Center",
       "D": "Amazon QuickSight"
     },
-    "answer": "",
+    "answer": "B",
     "explanation": "AWS customer carbon footprint tool is a tool that helps customers measure and manage\ntheir carbon emissions from their AWS usage. It provides data on the carbon intensity,\nenergy consumption, and estimated emissions of AWS services across regions and time\nperiods. It also enables customers to review and forecast their emissions, and compare\nthem with industry benchmarks. AWS Health Dashboard is a service that provides\npersonalized information about the health and performance of AWS services and\nresources. AWS Support Center is a service that provides access to AWS support\nresources, such as cases, forums, and documentation. Amazon QuickSight is a service\nthat provides business intelligence and analytics for AWS data sources.",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -9777,7 +9777,7 @@
       "C": "VPC Flow Logs",
       "D": "AWS Identity and Access Management (IAM)"
     },
-    "answer": "",
+    "answer": "C",
     "explanation": "VPC Flow Logs is a feature that enables you to capture information about the IP traffic\ngoing to and from network interfaces in your VPC. Flow log data can be published to the\nfollowing locations: Amazon CloudWatch Logs, Amazon S3, or Amazon Kinesis Data\nFirehose. You can use VPC Flow Logs to monitor network traffic, diagnose security issues,\ntroubleshoot connectivity problems, and perform network forensics1. Reference:\nLogging IP traffic using VPC Flow Logs - Amazon Virtual Private Cloud",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -9827,7 +9827,7 @@
       "D": "When the company needs to add users to 1AM groups",
       "E": "When users are authenticated in the corporate network and want to be able to use AWS without having to sign in a second time"
     },
-    "answer": "",
+    "answer": "B, D",
     "explanation": "AnIAM useris created when the company needs to provide unique credentials (username\nand password) to individuals who need access to the AWS Management Console or\nprogrammatic access (using access keys) to AWS services.\nB . When the company creates AWS access credentials for individuals: Correct, as an IAM\nuser is created to provide credentials for specific individuals.\nD . When the company needs to add users to IAM groups: Correct, as IAM users can be\nadded to groups to apply permissions and policies at a group level.\nA . When an application that runs on Amazon EC2 instances requires access to other\nAWS services: Incorrect, as an IAM role is more appropriate for applications running on\nEC2 to assume temporary credentials.\nC . When the company creates an application that runs on a mobile phone that makes\nrequests to AWS: Incorrect, as using Cognito or a role with temporary credentials is more\nsuitable.\nE . When users are authenticated in the corporate network and want to b",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
