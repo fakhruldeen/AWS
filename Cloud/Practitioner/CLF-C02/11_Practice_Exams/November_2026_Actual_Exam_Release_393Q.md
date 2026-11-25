@@ -122,7 +122,8 @@ TWO.)
 
 - **A)** Client-side data encryption
 - **B)** Amazon EC2 guest operating systems
-- **C)** The compute infrastructure  D. Availability Zones
+- **C)** The compute infrastructure
+- **D)** Availability Zones
 - **E)** Customer data
 
 <details>
@@ -255,7 +256,7 @@ storage, and memory when needed, which enables users to scale their applications
 resources up or down based on demand. This also helps users optimize their costs and
 performance. The ability to migrate on-premises network devices to the AWS Cloud, the
 
-ability to host custom hardware in the AWS Cloud, and the ability to customize the
+ ability to host custom hardware in the AWS Cloud, and the ability to customize the
 underlying hypervisor layer for Amazon EC2 are not benefits of operating in the AWS
 Cloud, as they are either not possible or not recommended by AWS .
 
@@ -326,7 +327,8 @@ the ability to scale up and scale down with only a few minutes of notice.
 Which benefit of the AWS Cloud describes these abilities?
 
 - **A)** Reliability
-- **B)** Pay-as-you-go pricing  C. Elasticity
+- **B)** Pay-as-you-go pricing
+- **C)** Elasticity
 - **D)** Economy of scale
 
 <details>
@@ -382,7 +384,8 @@ A company wants its Amazon EC2 instances to share the same geographic area but u
 multiple independent underlying power sources.
 Which solution achieves this goal?
 
-- **A)** Use EC2 instances in a single Availability Zone.  B. Use EC2 instances in multiple AWS Regions.
+- **A)** Use EC2 instances in a single Availability Zone.
+- **B)** Use EC2 instances in multiple AWS Regions.
 - **C)** Use EC2 instances in multiple Availability Zones in the same AWS Region.
 - **D)** Use EC2 instances in the same edge location and the same AWS Region.
 
@@ -477,7 +480,8 @@ Which benefit of the AWS Cloud does this scenario describe?
 
 - **A)** Elasticity
 - **B)** Cost savings
-- **C)** Agility  D. Global deployment in minutes
+- **C)** Agility
+- **D)** Global deployment in minutes
 
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
@@ -601,7 +605,7 @@ MySQL. With Amazon RDS for MySQL, you don't have to worry about the hardware,
 resiliency, and replication of your database, as Amazon RDS handles these tasks for you.
 Amazon RDS for MySQL also provides features such as automated backups, multi-AZ
 
-deployments, read replicas, encryption, monitoring, and more. Amazon RDS for MySQL is
+ deployments, read replicas, encryption, monitoring, and more. Amazon RDS for MySQL is
 compatible with the MySQL Community Edition versions 5.7 and 8.0, which means that
 you can use the same code, applications, andtools that you already use with MySQL4567.
 Reference: 4: Hosted MySQL - Amazon RDS for MySQL - AWS, 5: Amazon RDS for
@@ -731,7 +735,7 @@ table to direct internet-bound traffic to an internet gateway is the company's r
 making option C correct. AWS is responsible for the physical routers, backbone networks,
 data centers, and networking infrastructure that provide communication within and
 
-between AWS Regions. Customers do not maintain or physically secure that equipment.
+ between AWS Regions. Customers do not maintain or physically secure that equipment.
 AWS also provides infrastructure-level protection for traffic across its global network, while
 customers remain responsible for application-level encryption where required by their
 security pol
@@ -793,7 +797,7 @@ and knowledge graphs2. Amazon DynamoDB is a service that provides a fully manage
 NoSQL database that delivers fast and consistent performance at any scale. Amazon
 Aurora is a service that provides a fully managed relational database that is compatible
 
-with MySQL and PostgreSQL. Amazon DocumentDB (with MongoDB compatibility) is a
+ with MySQL and PostgreSQL. Amazon DocumentDB (with MongoDB compatibility) is a
 service that provides a fully managed document database that is compatible with
 MongoDB.
 
@@ -865,7 +869,7 @@ A company has a client that uses an Amazon RDS database. The client requests
 Information about operating system-level upgrades on the AWS resources that host the
 RDS database. The company employs a third-party provider to monitor the RDS database.
 
-Who is responsible for upgrading the operating systems for Amazon RDS under the AWS
+ Who is responsible for upgrading the operating systems for Amazon RDS under the AWS
 shared responsibility model?
 
 - **A)** The client
@@ -926,7 +930,7 @@ A company has set up a VPC on AWS. The company needs a dedicated connection
 between the VPC and the company's on-premises network.
 Which action should the company take to meet this requirement?
 
-A. Establish a VPN connection between the VPC and the company's on-premises network.
+ A. Establish a VPN connection between the VPC and the company's on-premises network.
 
 - **B)** Establish an AWS Direct Connect connection between the VPC and the company's onpremises network.
 - **C)** Attach an internet gateway to the VPC. Use the AWS public endpoints for connectivity.
@@ -958,7 +962,8 @@ dedicated connection, as it uses the public internet as the transport mechan
 A company runs Amazon EC2 instances in a research lab. The instances run for 3 hours
 each week and cannot be interrupted.
 
-- **A)** Convertible Reserved Instances  B. Compute Savings Plan
+- **A)** Convertible Reserved Instances
+- **B)** Compute Savings Plan
 - **C)** Spot Instances
 - **D)** On-Demand Instances
 
@@ -1020,7 +1025,8 @@ requirements MOST cost effectively?
 
 - **A)** EFS Standard
 - **B)** EFS Standard-Infrequent Access(EFS Standard-IA)
-- **C)** EFS One Zone  D. EFS One Zone-Infrequent Access (EFS One Zone-IA)
+- **C)** EFS One Zone
+- **D)** EFS One Zone-Infrequent Access (EFS One Zone-IA)
 
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
@@ -1167,7 +1173,7 @@ of web applications on AWS. Users can upload their application code and Elastic
 Beanstalk automatically handles the provisioning, scaling, load balancing, monitoring, and
 health checking of the resources needed to run the application. Users can also retain full
 
-control and access to the underlying resources and customize their configuration settings.
+ control and access to the underlying resources and customize their configuration settings.
 Elastic Beanstalk supports multiple platforms, such as Java, .NET, PHP, Node.js, Python,
 Ruby, Go, and Docker. [AWS Elastic Beanstalk Overview] AWS Certified Cloud
 Practitioner - aws.amazon.com AWS OpsWorks. This is a service that provides
@@ -1293,7 +1299,7 @@ AWS CloudFormation is a service that allows you to model and provision your AWS
 resources using templates. You can define your infrastructure as code and automate the
 creation and update of your resources. AWS CloudFormation also supports nested stacks,
 
-change sets, and rollback features to help you manage complex and dynamic
+ change sets, and rollback features to help you manage complex and dynamic
 environments34. Reference:
 AWS CloudFormation
 AWS Certified Cloud Practitioner Exam Guide
@@ -1359,7 +1365,7 @@ Why Other Options Are Incorrect:
 A . AWS Billing and Cost Management console:Used for managing budgets and payments
 but does not set up consolidated billing.
 
-C . AWS Cost and Usage Report:Provides detailed cost and usage reports but does not
+ C . AWS Cost and Usage Report:Provides detailed cost and usage reports but does not
 set up consolidated billing.
 D . AWS Systems Manager:Focuses on operational management, not billing.
 Reference:
@@ -1470,7 +1476,7 @@ AWS Support Plans
 A company migrated its core application onto multiple workloads in the AWS Cloud. The
 company wants to improve the application's reliability.
 
-Which cloud design principle should the company implement to achieve this goal?
+ Which cloud design principle should the company implement to achieve this goal?
 
 - **A)** Maximize utilization.
 - **B)** Decouple the components.
@@ -1811,7 +1817,7 @@ you to use the expressive power of your favorite language to define your cloud r
 such as compute, storage, network, and application services. AWS CDK also provides a
 library of high-level constructs that represent AWS services and best practices. AWS CDK
 
-uses AWS CloudFormation in the background to deploy your resources in a safe and
+ uses AWS CloudFormation in the background to deploy your resources in a safe and
 repeatable manner12. Reference:
 AWS Cloud Development Kit (CDK) - TypeScript and Python are Now Generally Available
 AWS Cloud Development Kit (AWS CDK) - Introduction to DevOps on AWS
@@ -1991,7 +1997,7 @@ automatically moves data between two access tiers (frequent and infrequent) base
 access patterns, which is suitable for data accessed daily or infrequently. S3 Glacier Deep
 Archive is for archival data accessed infrequently, and S3 One Zone-IA is for infrequent
 
-access data stored in a single availability zone, which may not be ideal for data accessed
+ access data stored in a single availability zone, which may not be ideal for data accessed
 daily.
 
 </details>
@@ -2063,7 +2069,7 @@ the specific functionality of product recommendation.
 
 A company needs a graph database service that is scalable and highly available.
 
-Which AWS service meets these requirements?
+ Which AWS service meets these requirements?
 
 - **A)** Amazon Aurora
 - **B)** Amazon Redshift
@@ -2190,7 +2196,8 @@ A company wants to use the AWS Cloud to deploy an application globally.
 Which architecture deployment model should the company use to meet this requirement?
 
 - **A)** Multi-Region
-- **B)** Single-Region  C. Multi-AZ
+- **B)** Single-Region
+- **C)** Multi-AZ
 - **D)** Single-AZ
 
 <details>
@@ -2386,7 +2393,7 @@ AWS Shield is a managed DDoS protection service that safeguards applications run
 on AWS from distributed denial of service (DDoS) attacks. DDoS attacks are malicious
 attempts to disrupt the normal functioning of a website or application by overwhelming it
 
-with a large volume of traffic from multiple sources. AWS Shield provides two tiers of
+ with a large volume of traffic from multiple sources. AWS Shield provides two tiers of
 protection: Standard and Advanced. AWS Shield Standard is automatically enabled for all
 AWS customers at no additional cost. It protects your AWS resources, such as Amazon
 CloudFront, AWS Global Accelerator, and Amazon Route 53, from the most common and
@@ -2490,7 +2497,7 @@ allows. This way, you do not have tostore any long-term credentials or access ke
 instance, which reduces the risk of compromise or misuse12.
 The other options are not correct, because:
 
-Security groups are virtual firewalls that control the inbound and outbound traffic for your
+ Security groups are virtual firewalls that control the inbound and outbound traffic for your
 EC2 instances. Security groups do not grant permissions to access other AWS services,
 but rather filter the network traffic based on rules that you define3.
 AWS Firewall Manager is a service that helps you centrally configure and manage firewall
@@ -2608,7 +2615,7 @@ The other options are not correct for the following reasons:
 AWS Application Discovery Service is a service that helps you plan your migration projects
 by automatically identifying servers, applications, and dependencies in your on-premises
 
-data centers2. It does not track the progress of application migrations, but rather provides
+ data centers2. It does not track the progress of application migrations, but rather provides
 information to help you plan and scope your migrations.
 AWS Application Migration Service is a servi
 
@@ -2655,7 +2662,8 @@ Cloud readiness. Which AWS service or tool should the company use to meet these
 requirements?
 
 - **A)** AWS Cloud Adoption Framework (AWS CAF)
-- **B)** AWS Managed Services (AMS)  C. AWS Well-Architected Framework
+- **B)** AWS Managed Services (AMS)
+- **C)** AWS Well-Architected Framework
 - **D)** AWS Migration Hub
 
 <details>
@@ -2703,7 +2711,7 @@ and meet the requirements. Spot Instances are spare EC2 instances that are avail
 up to 90% discount compared to On-Demand prices. Spot Instances are suitable for
 stateless, fault-tolerant, and flexible applications that can run for any duration. The other
 
-options are incorrect because they do not enable the company to optimize costs and meet
+ options are incorrect because they do not enable the company to optimize costs and meet
 the requirements. Reserved Instances are EC2 instances that are reserved for a specific
 period of time (one or three years) in exchange for a lower hourly rate. Reserved Instances
 are suitable for steady-state or predictable workloads that run for a long duration. OnDemand Instances are EC2 instances that are launched and billed at a fixed hourly rate.
@@ -2766,7 +2774,7 @@ Consolidated billing is an AWS feature that allows users to combine the usage an
 multiple AWS accounts into a single bill. This enables users to obtain billing discounts that
 are based on the company's use of AWS services, such as volume pricing tiers, Reserved
 
-Instance discounts, and Savings Plans discounts5. Resource tagging is an AWS feature
+ Instance discounts, and Savings Plans discounts5. Resource tagging is an AWS feature
 that allows users to assign metadata to AWS resources, such as EC2 instances, S3
 buckets, and Lambda functions. This enables users to organize, track, and manage their
 AWS resources, such as filtering, grouping, and reporting. Pay-as-you-go pricing is an
@@ -2813,7 +2821,7 @@ for more persistent workloads and would be more costly in this use case.
 A company moves its infrastructure from on premises to the AWS Cloud. The company
 can now provision additional Amazon EC2 instances whenever the instances are required.
 
-With this ability, the company can launch new marketing campaigns in 3 days instead of 3
+ With this ability, the company can launch new marketing campaigns in 3 days instead of 3
 weeks.
 Which benefit of the AWS Cloud does this scenario demonstrate?
 
@@ -2878,7 +2886,8 @@ A company has an AWS Business Support plan. The company needs to gain access to 
 AWS DDoS Response Team (DRT) to help mitigate DDoS events.
 Which AWS service or resource must the company use to meet these requirements?
 
-- **A)** AWS Shield Standard  B. AWS Enterprise Support
+- **A)** AWS Shield Standard
+- **B)** AWS Enterprise Support
 - **C)** AWS WAF
 - **D)** AWS Shield Advanced
 
@@ -3077,7 +3086,7 @@ auditing. Amazon CloudWatch is a service that collects and tracks metrics, colle
 monitors log files, and sets alarms. AWS CloudTrail is a service that enables governance,
 compliance, operational auditing, and risk auditing of your AWS account. Amazon
 
-GuardDuty, AWS Shield, and AWS WAF are AWS services that provide security and
+ GuardDuty, AWS Shield, and AWS WAF are AWS services that provide security and
 protection for AWS resources, but they do not monitor and retain records of account
 activities. These concepts are explained in the AWS Cloud Practitioner Essentials course3.
 
@@ -3143,7 +3152,7 @@ used during the migration process, and you can minimize the downtime and data lo
 Multi-AZ and ongoing replication12 To migrate a PostgreSQL database from on-premises
 to Amazon RDS using AWS DMS, you need to perform the following steps:
 
-Create an AWS DMS replication instance in the same AWS Region as your target Amazon
+ Create an AWS DMS replication instance in the same AWS Region as your target Amazon
 RDS
 
 </details>
@@ -3225,7 +3234,7 @@ Automatically manage secret rotation without disrupting applications.
 Integrate with AWS services and third-party applications to retrieve secrets securely.
 Why other options are not suitable:
 
-A . Store passwords in an Amazon S3 bucket: Although S3 is secure, it is not designed for
+ A . Store passwords in an Amazon S3 bucket: Although S3 is secure, it is not designed for
 secret management. It lacks built-in secret rotation and fine-grained access control for
 sensitive data.
 B . Store passwords as AWS CloudFormation parameters: CloudFormation is used for
@@ -3275,7 +3284,8 @@ Which AWS service will meet these requirements?
 
 - **A)** AWS Database Migration Service (AWS DMS)
 - **B)** AWS Application Migration Service
-- **C)** AWS Storage Gateway Volume Gateway  D. AWS Direct Connect
+- **C)** AWS Storage Gateway Volume Gateway
+- **D)** AWS Direct Connect
 
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
@@ -3407,7 +3417,7 @@ for graph queries.
 C . Amazon Timestream: Incorrect, as it is a time-series database service designed for
 storing and analyzing time-series data, not graph data.
 
-D . Amazon Forecast: Incorrect, as it is a fully managed service that provides time-series
+ D . Amazon Forecast: Incorrect, as it is a fully managed service that provides time-series
 forecasting capabilities, not for graph queries.
 AWS Cloud Reference:
 Amazon Neptune
@@ -3478,7 +3488,8 @@ Which option is a perspective that includes foundational capabilities of the AWS
 Adoption Framework (AWS CAF)?
 
 - **A)** Sustainability
-- **B)** Operations  C. Performance efficiency
+- **B)** Operations
+- **C)** Performance efficiency
 - **D)** Reliability
 
 <details>
@@ -3599,7 +3610,7 @@ wants to ensure that the applications are assigned only the minimum permissions 
 needed to perform all operations.
 Which AWS service will meet these requirements'?
 
-A. AWS Identity and Access Management (IAM)
+ A. AWS Identity and Access Management (IAM)
 
 - **B)** Amazon CloudWatch
 - **C)** Amazon Macie
@@ -3787,7 +3798,7 @@ Amazon Elastic File System (Amazon EFS) is a service that provides a scalable an
 elastic file system for Linux-based workloads. It can be mounted on multiple Amazon EC2
 instances across different Availability Zones within a region, allowing applications to
 
-access a common set of files1. AWS Backup is a service that provides a centralized and
+ access a common set of files1. AWS Backup is a service that provides a centralized and
 automated way to back up data across AWS services. Amazon Elastic Block Store
 (Amazon EBS) is a service that provides persistent block storage volumes for Amazon
 EC2 instances. AWS Snowball Edge Storage Optimized is a device that provides a
@@ -3858,7 +3869,8 @@ larger instances may not be optimal based on actual usage.
 At what support level do users receive access to a support concierge?
 
 - **A)** Basic Support
-- **B)** Developer Support  C. Business Support
+- **B)** Developer Support
+- **C)** Business Support
 - **D)** Enterprise Support
 
 <details>
@@ -3923,7 +3935,7 @@ A company needs to identify who accessed an AWS service and what action was
 performed for a given time period.
 Which AWS service should the company use to meet this requirement?
 
-A. Amazon CloudWatch
+ A. Amazon CloudWatch
 
 - **B)** AWS CloudTrail
 - **C)** AWS Security Hub
@@ -3985,7 +3997,8 @@ instances. The production instances will be used for at least 3 years. The compa
 a pricing option that will minimize cost.
 Which solution will meet these requirements?
 
-- **A)** On-Demand Instances  B. Reserved Instances
+- **A)** On-Demand Instances
+- **B)** Reserved Instances
 - **C)** Spot Instances
 - **D)** AWS Free Tier
 
@@ -4166,7 +4179,8 @@ Which AWS service should the company use to meet these requirements?
 
 - **A)** Amazon Route 53
 - **B)** Amazon CloudFront
-- **C)** Elastic Load Balancing  D. AWS Lambda
+- **C)** Elastic Load Balancing
+- **D)** AWS Lambda
 
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
@@ -4362,7 +4376,7 @@ company to run its existing custom, nonproduction workloads in the AWS Cloud qui
 and cost-effectively. Reserved Instances are Amazon EC2 instances that are reserved for
 a specific period of time (one or three years) in exchange for a lower hourly rate. Reserved
 
-Instances are suitable for steady-state or predictable workloads that run for a long
+ Instances are suitable for steady-state or predictable workloads that run for a long
 duration. On-Demand Instances are Amazon EC2 instances that are launched and billed at
 a fixed hourly rate. On-Demand Insta
 
@@ -4555,7 +4569,8 @@ A company is requesting Payment Card Industry (PCI) reports that validate the op
 effectiveness of AWS security controls.
 How should the company obtain these reports?
 
-- **A)** Contact AWS Support  B. Download reports from AWS Artifact.
+- **A)** Contact AWS Support
+- **B)** Download reports from AWS Artifact.
 - **C)** Download reports from AWS Security Hub.
 - **D)** Contact an AWS technical account manager (TAM).
 
@@ -4593,7 +4608,8 @@ architecture to the AWS Cloud? (Select TWO.)
 - **A)** Reduced or eliminated tasks for hardware troubleshooting, capacity planning, and procurement
 - **B)** Elimination of the need for trained IT staff
 - **C)** Automatic security configuration of all applications that are migrated to the cloud
-- **D)** Elimination of the need for disaster recovery planning  E. Faster deployment of new features and applications
+- **D)** Elimination of the need for disaster recovery planning
+- **E)** Faster deployment of new features and applications
 
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
@@ -4649,7 +4665,8 @@ The company wants to use a highly available and scalable DNS web service to conn
 users to the platform.
 Which AWS service will meet these requirements?
 
-- **A)** Amazon EC2  B. Amazon VPC
+- **A)** Amazon EC2
+- **B)** Amazon VPC
 - **C)** Amazon Route 53
 - **D)** Amazon RDS
 
@@ -4919,7 +4936,7 @@ solutions. Agility helps businesses to respond to changing customer demands, mar
 opportunities, and competitive threats, and to innovate faster and cheaper. Agility also
 reduces the risk of failure, as businesses can test and validate their assumptions before
 
-committing to large-scale deployments. Some of the benefits of agility in AWS Cloud
+ committing to large-scale deployments. Some of the benefits of agility in AWS Cloud
 computing are:
 The speed at which AWS resources are implemented: AWS provides a variety of services
 and tools that allow you to create, configure, and launch AWS resources in minutes, using
@@ -5237,7 +5254,7 @@ licenses for a Microsoft Windows server running on AWS. Spot Instances are spare
 Amazon EC2 instances that are available at up to 90% discount compared to On-Demand
 prices. Spot Instances are suitable for stateless, fault-tolerant, and flexible workloads that
 
-can recover from interr
+ can recover from interr
 
 </details>
 
@@ -5296,7 +5313,7 @@ compared to On-Demand prices3. Dedicated Hosts are physical servers with EC2 ins
 capacity fully dedicated to the customer's use. They are suitable for customers who have
 specific server-bound software licenses or compliance requirements4. Reserved Instances
 
-are a pricing model that provides a significant discount (up to 75%) compared to OnDemand pricing and a capacity reservation for EC2 instances. They are available in 1-year
+ are a pricing model that provides a significant discount (up to 75%) compared to OnDemand pricing and a capacity reservation for EC2 instances. They are available in 1-year
 or 3-year terms and different payment options5. Spot Instances are spare EC2 instances
 that are available at up to 90% discount compared to On-Demand prices. They are suitable
 for customers who have flexible start and end times,
@@ -5366,7 +5383,8 @@ A company needs to reserve a certain amount of Amazon EC2 compute resources in a
 specific Availability Zone within an AWS Region. Which purchasing option should the
 company use to meet this requirement?
 
-- **A)** Compute Savings Plans  B. EC2 Instance Savings Plans
+- **A)** Compute Savings Plans
+- **B)** EC2 Instance Savings Plans
 - **C)** Zonal Reserved Instances
 - **D)** Regional Reserved Instances
 
@@ -5494,7 +5512,7 @@ Trusted Advisor can help you improve your AWS environment by reducing costs,
 enhancing performance, increasing security, and ensuring reliability12. The other services
 are not designed to provide best practice recommendations in five categories. AWS Shield
 
-is a service that protects your AWS resources from distributed denial-of-service (DDoS)
+ is a service that protects your AWS resources from distributed denial-of-service (DDoS)
 attacks. AWS WAF is a service that helps you protect you
 
 </details>
@@ -5793,7 +5811,8 @@ readiness for migration?
 
 - **A)** AWS Cloud Adoption Framework (AWS CAF)
 - **B)** AWS Pricing Calculator
-- **C)** AWS Well-Architected Framework  D. AWS Budgets
+- **C)** AWS Well-Architected Framework
+- **D)** AWS Budgets
 
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
@@ -5865,7 +5884,7 @@ fault tolerance, and service limits. AWS Trusted Advisor can help users identify
 underutilized or idle EC2 instances, and suggest ways to reduce costs and improve
 performance. AWS Compute Optimizer is a service that analyzes the configuration and
 
-utilization metrics of EC2 instances and delivers recommendations for optimal instance
+ utilization metrics of EC2 instances and delivers recommendations for optimal instance
 types, sizes, and configurations. AWS Compute Optimizer helps users improve
 performance, reduce costs, and eliminate underutilized resources
 
@@ -5992,7 +6011,7 @@ InfrastructureAWS Certified Cloud Practitioner - aws.amazon.com
 A company deploys its application to multiple AWS Regions and configures automatic
 failover between those Regions.
 
-Which cloud concept does this architecture represent?
+ Which cloud concept does this architecture represent?
 
 - **A)** Security
 - **B)** Reliability
@@ -6176,7 +6195,8 @@ guidance, and best practice recommendations. AWS Bu
 Which AWS service is deployed to VPCs and provides protection from common network
 threats?
 
-- **A)** AWSShield  B. AWSWAF
+- **A)** AWSShield
+- **B)** AWSWAF
 - **C)** AWS Network Firewall
 - **D)** AWS FirewallManager
 
@@ -6238,7 +6258,7 @@ A software engineer wants to launch a virtual machine (VM) and MySQL database on
 AWS.
 Which AWS service will meet these requirements with the LEAST operational effort?
 
-A. Amazon Elastic Container Service (Amazon ECS)
+ A. Amazon Elastic Container Service (Amazon ECS)
 
 - **B)** AWS Elastic Beanstalk
 - **C)** Amazon Lightsail
@@ -6288,7 +6308,7 @@ that AWS can achieve lower costs and higher efficiency by operating at a massive
 and passing the savings to the customers. AWS leverages the aggregate usage of all AWS
 users to negotiate better prices with hardware vendors, optimize power consumption, and
 
-improve operational processes. As a result, AWS can offer lower and more flexible pricing
+ improve operational processes. As a result, AWS can offer lower and more flexible pricing
 options to the customers, such as pay-as-you-go, reserved, and spot pricing models. No
 need to guess capacity, ability to go global in minutes, and increased speed and agility are
 other benefits of the AWS Cloud, but they are not directly related to the aggregate usage of
@@ -6447,7 +6467,7 @@ increase application availability to users in different countries?
 Global reach is a cloud computing advantage that a company can apply when it uses AWS
 Regions to increase application availability to users in different countries. Global reach
 
-refers to the ability to deploy applications and services in multiple geographic locations
+ refers to the ability to deploy applications and services in multiple geographic locations
 around the world, and to serve customers with low latency and high performance. AWS
 has the largest and most reliable global infrastructure of any cloud provider, with 25
 Regions and 81 Availability Zones across the Americas, Europe, Asia Pacific, Africa, and
@@ -6512,7 +6532,7 @@ B . Use serverless compute architectures: Incorrect, as this principle encourage
 of managed services that handle infrastructure, such as AWS Lambda, and is not directly
 related to CloudTrail.
 
-C . Perform operations as code: Incorrect, as this principle emphasizes the use of code
+ C . Perform operations as code: Incorrect, as this principle emphasizes the use of code
 and automation for infrastructure management.
 D . Go global in minutes: Incorrect, as this principle relates to the global deployment of
 applications and services.
@@ -6578,7 +6598,7 @@ approved infrastructure as code (IaC) templates and software configurations. Thi
 supports infrastructure automation by allowing users to deploy resources using predefined
 templates, which align with the company's policies and best practices. It helps in managing
 
-cloud resources at scale by utilizing IaC principles, enabling consistent deployments, and
+ cloud resources at scale by utilizing IaC principles, enabling consistent deployments, and
 enforcing governance across AWS resources. AWS Service Catalog is an excellent choice
 for organizations implementing IaC.
 
@@ -6643,7 +6663,7 @@ A primary benefit of an AWS managed service is that AWS takes responsibility for
 the underlying infrastructure and routine operational work. Depending on the service, AWS
 can handle activities such as hardware provisioning, infrastructure maintenance, service
 
-software patching, availability mechanisms, and scaling of the managed platform. This
+ software patching, availability mechanisms, and scaling of the managed platform. This
 allows customers to concentrate more heavily on application logic, data, business
 requirements, and customer-facing improvements instead of performing undifferentiated
 infrastructure administration. Therefore, option A is the supported general benefit. A
@@ -6776,7 +6796,8 @@ and projections of future AWS costs?
 
 - **A)** AWS Cos! and Usage Report
 - **B)** AWS Budgets
-- **C)** Cost Explorer  D. Amazon CloudWatch
+- **C)** Cost Explorer
+- **D)** Amazon CloudWatch
 
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
@@ -6846,7 +6867,7 @@ distributed systems, and serverless applications. AWS Step Functions lets you co
 multiple AWS services into serverless workflows so you can build and update apps quickly.
 Using Step Functions, you can design and run workflows that stitch together services such
 
-as AWS Lambda and Amazon SNS into feature-rich applications. Reference: Amazon
+ as AWS Lambda and Amazon SNS into feature-rich applications. Reference: Amazon
 SQS, AWS Step Functions
 
 </details>
@@ -7085,7 +7106,8 @@ Which AWS service helps developers use loose coupling and reliable messaging bet
 microservices?
 
 - **A)** Elastic Load Balancing
-- **B)** Amazon Simple Notification Service (Amazon SNS)  C. Amazon CloudFront
+- **B)** Amazon Simple Notification Service (Amazon SNS)
+- **C)** Amazon CloudFront
 - **D)** Amazon Simple Queue Service (Amazon SQS)
 
 <details>
@@ -7210,7 +7232,7 @@ A company needs to migrate all of its development teams to a cloud-based integra
 development environment (IDE).
 Which AWS service should the company use?
 
-A. AWS CodeBuild
+ A. AWS CodeBuild
 
 - **B)** AWS Cloud9
 - **C)** AWS OpsWorks
@@ -7265,7 +7287,7 @@ customers create engaging and interactive chatbots for their web applications. A
 Kendra, Amazon Textract, and Amazon Polly are not the best services to use for this
 purpose. Amazon Kendra is a service that helps customers provide accurate and natural
 
-answers to natural language queries using machine learning
+ answers to natural language queries using machine learning
 
 </details>
 
@@ -7590,7 +7612,8 @@ Direct Connect from [this webpage] or [this digital course].
 
 What is the total amount of storage offered by Amazon S3?
 
-- **A)** WOMB  B. 5 GB
+- **A)** WOMB
+- **B)** 5 GB
 - **C)** 5 TB
 - **D)** Unlimited
 
@@ -7792,7 +7815,7 @@ The AWS Architecture Center provides examples, best practices, and architectural
 blueprints for various AWS Cloud solutions. It includes whitepapers, reference
 architectures, and detailed diagrams to help users design secure, scalable, and reliable
 
-applications on AWS. Other services like AWS Marketplace, Service Catalog, and Trusted
+ applications on AWS. Other services like AWS Marketplace, Service Catalog, and Trusted
 Advisor do not offer solution design examples.
 
 </details>
@@ -7990,7 +8013,8 @@ Permissions to Applications Running on Amazon EC2 Instances].
 Which benefit does Amazon Rekognition provide?
 
 - **A)** The ability to place watermarks on images
-- **B)** The ability to detect objects that appear in pictures  C. The ability to resize millions of images automatically
+- **B)** The ability to detect objects that appear in pictures
+- **C)** The ability to resize millions of images automatically
 - **D)** The ability to bid on object detection jobs
 
 <details>
@@ -8119,7 +8143,8 @@ connectivity as the VPCs increase in number?
 
 - **A)** VPC endpoints
 - **B)** AWS Transit Gateway
-- **C)** Amazon Route 53  D. AWS Secrets Manager
+- **C)** Amazon Route 53
+- **D)** AWS Secrets Manager
 
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
@@ -8215,7 +8240,8 @@ Which AWS service or tool can be used to consolidate payments for a company with
 multiple AWS accounts?
 
 - **A)** AWS Cost and Usage Report
-- **B)** AWS Organizations  C. Cost Explorer
+- **B)** AWS Organizations
+- **C)** Cost Explorer
 - **D)** AWS Budgets
 
 <details>
@@ -8333,7 +8359,8 @@ on-premises environments.
 Which of the following is a recommended design principle of the AWS Well-Architected
 Framework?
 
-- **A)** Reduce downtime by making infrastructure changes infrequently and in large increments.  B. Invest the time to configure infrastructure manually.
+- **A)** Reduce downtime by making infrastructure changes infrequently and in large increments.
+- **B)** Invest the time to configure infrastructure manually.
 - **C)** Learn to improve from operational failures.
 - **D)** Use monolithic application design for centralization.
 
@@ -8380,7 +8407,7 @@ failures for this application?
 The correct answers are A and C because Amazon EC2 Auto Scaling and resources that
 are distributed across multiple Availability Zones are AWS services and features that will
 
-improve availability and reduce the impact of failures for the web application. Amazon EC2
+ improve availability and reduce the impact of failures for the web application. Amazon EC2
 Auto Scaling is a service that enables users to automatically adjust the number of Amazon
 EC2 instances in response to changes in demand or performance. Amazon EC2 Auto
 Scaling helps users to maintain optimal availability and performance of their applications
@@ -8419,7 +8446,7 @@ mechanisms that anticipate, respond to, and prevent failures.
 A . Security: Incorrect, as it focuses on protecting information, systems, and assets while
 delivering business value.
 
-B . Performance efficiency: Incorrect, as it focuses on using IT and computing resources
+ B . Performance efficiency: Incorrect, as it focuses on using IT and computing resources
 efficiently.
 C . Operational excellence: Incorrect, as it focuses on operations in the cloud, including
 monitoring and managing systems.
@@ -8547,7 +8574,7 @@ AWS lists observability as an Operations capability because teams need metrics, 
 traces, endpoint monitoring, and alerts to understand workload health and identify
 problems. AWS also lists configuration management as an Operations capability because
 
-organizations need an accurate record of workloads, relationships, settings, and
+ organizations need an accurate record of workloads, relationships, settings, and
 configuration changes, and must control configuration drift. Therefore, options A and E are
 correct. The other choices belong to different AWS CAF perspectives. Data governance is
 a Governance perspective capability concerned with authority, ownership, standards,
@@ -8599,7 +8626,7 @@ An AWS user wants to proactively detect when an instance or account might be
 compromised or if there are threats from attacks.
 Which AWS service should the user choose?
 
-A. Amazon GuardDuty
+ A. Amazon GuardDuty
 
 - **B)** AWS WAF
 - **C)** AWS Shield
@@ -8665,7 +8692,7 @@ Amazon Aurora2.
 
 Which of the following are AWS Cloud design principles? (Select TWO.)
 
-A. Pay for compute resources in advance.
+ A. Pay for compute resources in advance.
 
 - **B)** Make data-driven decisions to determine cloud architectural design.
 - **C)** Emphasize manual processes to allow for changes.
@@ -8831,7 +8858,7 @@ environmental controls of the AWS global infrastructure, such as power, cooling,
 suppression, and physical access. The customer is responsible for the security in the
 cloud, which includes the configuration and management of the AWS resources and
 
-applications, such as identity and access management, encryption, firewall, and backup.
+ applications, such as identity and access management, encryption, firewall, and backup.
 For more information, see AWS Shared Responsibility Model and AWS Cloud Security.
 
 </details>
@@ -8893,7 +8920,7 @@ contact the AWS Abuse team by filling out the [Report Abuse of AWS Resources for
 sending an email to abuse@amazonaws.com. The company should provide as much
 information as possible, such as the source and destination IP addresses, timestamps, log
 
-files, and screenshots, to help the AWS Abuse team investigate and take appropriate
+ files, and screenshots, to help the AWS Abuse team investigate and take appropriate
 actions. For more information, see [Reporting Abuse] and [AWS Acceptable Use Policy].
 
 </details>
@@ -8942,7 +8969,8 @@ does not scan for software vulnerabilities, but rather provides a comprehensive
 A systems administrator created a new 1AM user for a developer and assigned the user an
 access key instead of a user name and password. What is the access key used for?
 
-- **A)** To access the AWS account as the AWS account root user  B. To access the AWS account through the AWS Management Console
+- **A)** To access the AWS account as the AWS account root user
+- **B)** To access the AWS account through the AWS Management Console
 - **C)** To access the AWS account through a CLI
 - **D)** To access all of a company's AWS accounts
 
@@ -8994,7 +9022,7 @@ account and the status of their various credentials, including passwords, access
 MFA devices. Users can use IAM credential reports to audit the security status of their
 AWS accounts and identify any issues or risks4. AWS Cost and Usage Report, AWS
 
-Artifact, and Amazon CloudFront reports are other AWS services or resources that provide
+ Artifact, and Amazon CloudFront reports are other AWS services or resources that provide
 different types of information, such as billing, compliance, and content delivery, but they do
 not show the MFA status of the users.
 
@@ -9060,7 +9088,7 @@ be grouped by values such as application, project, department, environment, or c
 center. This makes option A the direct match for both "track" and "categorize
 expenditures." Consolidated billing combines billing and usage across accounts in AWS
 
-Organizations, but it is not itself a resource-labeling mechanism. AWS Budgets compares
+ Organizations, but it is not itself a resource-labeling mechanism. AWS Budgets compares
 cost or usage against thresholds and can generate alerts or actions; it does not provide the
 requested detailed categorization method. AWS Marketplace is a catalog and procurement
 channel for third-party and AWS software, data, and
@@ -9124,7 +9152,7 @@ whenever possible. This architecture reduces network delay and improves performa
 geographically distributed audiences. AWS CloudFormation provisions infrastructure from
 templates; it does not distribute website content. Amazon ElastiCache accelerates
 
-application access to frequently used data but is not a global CDN. Amazon DynamoDB is
+ application access to frequently used data but is not a global CDN. Amazon DynamoDB is
 a managed NoSQL database service. Therefore, for worldwide website delivery with lowlatency response times, Amazon CloudFront is the appropriate AWS service.
 
 </details>
@@ -9180,7 +9208,7 @@ C . AWS Elastic Beanstalk: Incorrect, as it is a Platform-as-a-Service (PaaS) th
 involves managing servers, even though it abstracts much of the infrastructure
 management.
 
-D . Elastic Load Balancing: Incorrect, as it is a service for distributing incoming application
+ D . Elastic Load Balancing: Incorrect, as it is a service for distributing incoming application
 or network traffic across multiple targets, not a serverless compute service.
 AWS Cloud Reference:
 AWS Lambda
@@ -9245,7 +9273,7 @@ D . Customer gateway: Incorrect, as it represents the on-premises device or soft
 application that connects to AWS, but it does not provide a central hub.
 AWS Cloud Reference:
 
-AWS Transit Gateway
+ AWS Transit Gateway
 
 </details>
 
@@ -9324,7 +9352,7 @@ According to the AWS shared responsibility model, which task is AWS responsible 
 
 Comprehensive and Detailed Explanation From AWS Cloud Documentation:
 
-For an Amazon RDS Multi-AZ DB instance deployment, Amazon RDS provides the
+ For an Amazon RDS Multi-AZ DB instance deployment, Amazon RDS provides the
 managed high-availability and failover mechanism. If a qualifying planned or unplanned
 outage affects the primary DB instance, RDS automatically switches to the standby replica
 in another Availability Zone. This automatic promotion or failover is performed by AWS as
@@ -9387,7 +9415,7 @@ compute resources you use to run your containers, and you don't need to worry ab
 scaling, patching, securing, or maintaining the underlying infrastructure. AWS Fargate
 simplifies the deployment and management of containerized applications, and enables you
 
-to focus on building and running your applications instead of managing the infrastructure.
+ to focus on building and running your applications instead of managing the infrastructure.
 Reference: AWS Fargate, What is AWS Fargate?
 
 </details>
@@ -9508,7 +9536,7 @@ Verified authentic candidate practice response from the November 2026 revision p
 A company wants to migrate its on-premises NoSQL workload to Amazon DynamoDB.
 Which AWS service will meet this requirement?
 
-A. Migration Evaluator
+ A. Migration Evaluator
 
 - **B)** AWS Migration Hub
 - **C)** AWS Application Migration Service
@@ -9581,7 +9609,7 @@ manage billing and track costs across multiple accounts. Consolidated billing al
 benefits such as volume discounts, Reserved Instance discounts, and Savings Plans
 discounts. Consolidated billing is offered at no additional cost.
 
-Multiple AWS accounts is a feature of AWS Organizations that enables customers to
+ Multiple AWS accounts is a feature of AWS Organizations that enables customers to
 create and manage multiple AWS accounts from a central location. With multiple AWS
 accounts, customers can isolate workloads for different departments, projects, or
 environments, and apply granular access controls and policies to each account. Multiple
@@ -9766,7 +9794,7 @@ allows customers to run code without provisioning or managing servers. Amazon
 OpenSearch Service is a fully managed service that makes it easy to deploy, operate, and
 scale OpenSearch clusters in the AWS Cloud. Amazon ElastiCache is a fully managed
 
-service that provides in-memory data store and cache solutions, such
+ service that provides in-memory data store and cache solutions, such
 
 </details>
 
@@ -9905,7 +9933,7 @@ time series data, and its purpose-built query engine lets you access and analyze
 and historical data together with a single query1. Amazon Timestream has built-in time
 series analytics functions, helping you identify trends and patterns in near real time1.
 
-The other options are not suitable for storing and analyzing trillions of events per day.
+ The other options are not suitable for storing and analyzing trillions of events per day.
 Amazon Neptune is a graph database service that supports highly connected data sets.
 Amazon Forecast is a machine learning service that generates accurate forecasts based
 on historical data. Amazon DocumentDB (with MongoDB compatibility) is a document
@@ -10032,7 +10060,8 @@ managed service or feature that can transfer streaming data from multiple source
 Amazon S3 bucket.
 Which AWS service or feature should the company use to meet these requirements?
 
-- **A)** AWS DataSync  B. Amazon Kinesis Data Firehose
+- **A)** AWS DataSync
+- **B)** Amazon Kinesis Data Firehose
 - **C)** S3 Select
 - **D)** AWS Transfer Family
 
@@ -10101,7 +10130,7 @@ frequently accessed data cached locally. This meets the company's requirement fo
 B . AWS Snowcone: Incorrect, as it is a portable edge computing and storage device, not a
 storage service that provides local caching for cloud storage.
 
-C . AWS Backup: Incorrect, as it is a centralized backup service to automate data
+ C . AWS Backup: Incorrect, as it is a centralized backup service to automate data
 protection across AWS services but does not provide local caching.
 D . Amazon Elastic File System (Amazon EFS): Incorrect, as it provides scalable file
 storage for use with Amazon EC2 but does not offer local caching for on-premises storage
@@ -10209,7 +10238,7 @@ provides various storage classes that offer different levels of performance and 
 optimization, such as S3 Standard, S3 Intelligent-Tiering, S3 Standard-Infrequent Access
 (S3 Standard-IA), S3 One Zone-Infrequent Access (S3 One Zone-IA), and S3 Glacier456.
 
-Amazon S3 is ideal for storing static content, such as images, videos, documents, and web
+ Amazon S3 is ideal for storing static content, such as images, videos, documents, and web
 pages, as well as building data lakes, backup and archive solutions, big data analytics, and
 machine learning applications456. Reference: 4: Cloud Storage on AWS, 5: Object
 Storage - Amazon Simple Storage Service
@@ -10281,7 +10310,8 @@ How can the company increase resilience for this application?
 
 - **A)** Deploy a copy of the application in another AWS account.
 - **B)** Deploy the application by using multiple VPCs.
-- **C)** Deploy the application by using multiple subnets.  D. Deploy the application by using multiple Availability Zones.
+- **C)** Deploy the application by using multiple subnets.
+- **D)** Deploy the application by using multiple Availability Zones.
 
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
@@ -10390,7 +10420,7 @@ Amazon EC2 is a service that provides resizable compute capacity in the cloud. U
 launch and manage virtual servers, known as instances, that run on the AWS
 infrastructure. Users are responsible for maintaining the underlying operating system of the
 
-instances, as well as any applications or software that run on them. Amazon DynamoDB is
+ instances, as well as any applications or software that run on them. Amazon DynamoDB is
 a service that provides a fully managed NoSQL database that delivers fast and consistent
 performance at any scale. Users do not need to manage the underlying operating system
 or the database software. Amazon S3 is a service that provides scalable and durable
@@ -10456,7 +10486,7 @@ Which AWS solution will meet these requirements with the LEAST latency?
 AWS Outposts is a fully managed service that extends AWS infrastructure, AWS services,
 APIs, and tools to virtually any datacenter, co-location space, or on-premises facility for a
 
-truly consistent hybrid experience. AWS Outposts enables you to run AWS services in your
+ truly consistent hybrid experience. AWS Outposts enables you to run AWS services in your
 on-premises data center1.
 
 </details>
@@ -10526,7 +10556,7 @@ The AWS services that are supported by Savings Plans are:
 Amazon EC2: Amazon EC2 is a service that provides scalable computing capacity in the
 AWS cloud. You can use Amazon EC2 to launch virtual servers, configure security and
 
-networking, and manage storage. Amazon EC2 is eligible for both Compute Savings Plans
+ networking, and manage storage. Amazon EC2 is eligible for both Compute Savings Plans
 and EC2 Instance Savings Plans12.
 Amazon SageMaker: Amazon SageMaker is a service that helps you build and deploy
 machine learning models. You can use Amazon SageMaker to access Jupyter notebooks,
@@ -10774,7 +10804,7 @@ Under the AWS Shared Responsibility Model, AWS manages the security of the cloud
 while customers manage security in the cloud. For EC2 instances, it is the customer's
 responsibility to manage the guest operating system, including patching and encrypting
 
-data stored on attached storage volumes. AWS is responsible for the underlying
+ data stored on attached storage volumes. AWS is responsible for the underlying
 infrastructure, including physical security and hypervisor maintenance.
 
 </details>
@@ -10914,7 +10944,7 @@ Aurora PostgreSQL-Compatible Edition. It is a fully managed service that automat
 scales up and down based on the application's actual needs. Amazon Aurora Serverless is
 suitable for applications that have infrequent, intermittent, or unpredictable database
 
-workloads, and that do not require the full power and range of options provided by
+ workloads, and that do not require the full power and range of options provided by
 provisioned Aurora clusters. Amazon Aurora Serverless eliminates the need to provision
 and manage database instances, and reduces the management overhead associated with
 database administration tasks such as scaling, patching, backup, and recovery. Reference:
@@ -11165,7 +11195,7 @@ The AWS tool that will meet the requirements of the company that is planning a m
 to the AWS Cloud and wants to examine the costs that are associated with different
 workloads is AWS Pricing Calculator. AWS Pricing Calculator is a tool that helps
 
-customers estimate the cost of using AWS services based on their requirements and
+ customers estimate the cost of using AWS services based on their requirements and
 preferences. The company can use AWS Pricing Calculator to compare the costs of
 different AWS services and configurations, such as Amazon EC2, Amazon S3, Amazon
 RDS, and more. AWS Pricing Calculator also provides detailed breakdowns of the cost
@@ -11218,7 +11248,8 @@ resources. It can help users ident
 Which task is the responsibility of the customer, according to the AWS shared
 responsibility model?
 
-- **A)** Patch the Amazon DynamoDB operating system.  B. Secure Amazon CloudFront edge locations by allowing physical access according to the principle of least privilege.
+- **A)** Patch the Amazon DynamoDB operating system.
+- **B)** Secure Amazon CloudFront edge locations by allowing physical access according to the principle of least privilege.
 - **C)** Protect the hardware that runs AWS services.
 - **D)** Use AWS Identity and Access Management (1AM) according to the principle of least privilege.
 
@@ -11271,7 +11302,7 @@ within a geographic area. By hosting the customer's data in a specific AWS Regio
 company can meet the requirement of hosting the data in the customer's country. AWS
 Shield is a service that provides always-on detection and automatic inline mitigations that
 
-minimize application downtime and latency, so there is no need to engage AWS Support to
+ minimize application downtime and latency, so there is no need to engage AWS Support to
 benefit from DDoS protection. Amazon S3 Object Lock is a feature that allows you to store
 objects using a write-once-read-many (WORM) model. You can use it to prevent an object
 from being deleted or overwritten for a fixed amount of time or indefinitely. Placement
@@ -11380,7 +11411,7 @@ Security Hub also collects findings from partner security products using a stand
 AWS Security Finding Format, eliminating the need for time-consuming data parsing and
 normalization efforts. Customers can designate an administrator account that can access
 
-all findings across their accounts. Reference: AWS Security Hub Overview, AWS Security
+ all findings across their accounts. Reference: AWS Security Hub Overview, AWS Security
 Hub FAQs
 
 </details>
@@ -11430,7 +11461,7 @@ A company notices suspicious network activity against an application that is run
 fleet of Amazon EC2 instances. The suspicious activity is coming from a single IP address.
 Which AWS service should the company use to block access from this IP address?
 
-A. AWS Shield
+ A. AWS Shield
 
 - **B)** AWS Config
 - **C)** Amazon GuardDuty
@@ -11496,7 +11527,7 @@ course.
 A company plans to perform a one-time migration of a large dataset with millions of files
 from its on- premises data center to the AWS Cloud.
 
-Which AWS service should the company use for the migration?
+ Which AWS service should the company use for the migration?
 
 - **A)** AWS Database Migration Service (AWS DMS)
 - **B)** AWS DataSync
@@ -11558,7 +11589,8 @@ customer's data classification, retention, perm
 Which type of AWS storage is ephemeral and is deleted when an Amazon EC2 instance is
 stopped or terminated?
 
-- **A)** Amazon Elastic Block Store (Amazon EBS)  B. Amazon EC2 instance store
+- **A)** Amazon Elastic Block Store (Amazon EBS)
+- **B)** Amazon EC2 instance store
 - **C)** Amazon Elastic File System (Amazon EFS)
 - **D)** Amazon S3
 
@@ -11606,7 +11638,7 @@ workloads and file systems, including the SMB protocol. It provides features suc
 quotas, end-user file restore, and Microsoft Active Directory integration. Amazon EFS is a
 fully managed file system that supports the NFS protocol, not SMB. Amazon FSx for Lustre
 
-is a fully managed file system that supports high-performance computing workloads, not
+ is a fully managed file system that supports high-performance computing workloads, not
 Microsoft workloads. Amazon EBS is a block storage service that does not provide a file
 system or SMB support. Reference: Amazon FSx for Windows File Server, Amazon FSx
 for Lustre, Amazon EFS, Amazon EBS
@@ -11671,7 +11703,7 @@ them after a certain period) is the customer's responsibility.
 B . Activate S3 Versioning: Incorrect, as enabling S3 Versioning is a customer
 responsibility for managing data protection.
 
-C . Configure S3 bucket policies: Incorrect, as setting and managing S3 bucket policies to
+ C . Configure S3 bucket policies: Incorrect, as setting and managing S3 bucket policies to
 control access is the customer's responsibility.
 AWS Cloud Reference:
 AWS Shared Responsibility Model
@@ -11718,7 +11750,7 @@ Amazon Elastic File System (Amazon EFS) is the AWS service that offers file stor
 A company needs to host a highly available application in the AWS Cloud. The application
 runs infrequently for short periods of time.
 
-Which AWS service will meet these requirements with the LEAST amount of operational
+ Which AWS service will meet these requirements with the LEAST amount of operational
 overhead?
 
 - **A)** Amazon EC2
@@ -11767,7 +11799,7 @@ AWS Artifact is your go-to, central resource for compliance-related information 
 to you. It provides on-demand access to AWS's security and compliance reports and select
 online agreements. Reports available in AWS Artifact include our Service Organization
 
-Control (SOC) reports, Payment Card Industry (PCI) attestation of compliance, and
+ Control (SOC) reports, Payment Card Industry (PCI) attestation of compliance, and
 certifications from accreditation bodies across geographies and compliance verticals that
 validate the implementation and operating effectiveness of AWS security controls.
 Agreements available in AWS Artifact include the Business Associate Addendum (BAA)
@@ -11935,7 +11967,8 @@ In which situations should a company create an 1AM user instead of an 1AM role? 
 TWO.)
 
 - **A)** When an application that runs on Amazon EC2 instances requires access to other AWS services
-- **B)** When the company creates AWS access credentials for individuals  C. When the company creates an application that runs on a mobile phone that makes requests to AWS
+- **B)** When the company creates AWS access credentials for individuals
+- **C)** When the company creates an application that runs on a mobile phone that makes requests to AWS
 - **D)** When the company needs to add users to 1AM groups
 - **E)** When users are authenticated in the corporate network and want to be able to use AWS without having to sign in a second time
 

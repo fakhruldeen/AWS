@@ -284,7 +284,7 @@ Under the AWS Free Tier, which category is NOT one of its three types?
 - **D)** Trials
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 The Free Tier types are Always Free, 12 Months Free, and short-term Trials. 'Interruptible' is not a Free Tier type.
 
@@ -304,7 +304,7 @@ Which support plan offers a response time target of under 1 hour for production-
 - **D)** Free tier only
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 The Business plan targets under 1 hour for production-down issues; Enterprise targets under 15 minutes for business-critical.
 
@@ -393,7 +393,7 @@ overhead?
 - **D)** Use AWS Organizations to get a billing report for each department.
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 Adding a department tag to each resource and configuring cost allocation tags is an action
 that can help you accomplish the goal of billing each department for its resource usage
@@ -459,7 +459,7 @@ Which AWS service will meet this requirement?
 - **D)** AWS Trusted Advisor
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 According to AWS official documentation, theAWS Pricing Calculatoris designed to
 estimate and compare the cost of running workloads on AWS versus on-premises
@@ -491,7 +491,7 @@ Which strategy can the company use to optimize costs?
 - **D)** Horizontal scaling
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 **Correct Answer: ** ()
 
@@ -539,7 +539,7 @@ fault tolerance, and service limits. AWS Trusted Advisor can help users identify
 underutilized or idle EC2 instances, and suggest ways to reduce costs and improve
 performance. AWS Compute Optimizer is a service that analyzes the configuration and
 
-utilization metrics of EC2 instances and delivers recommendations for optimal instance
+ utilization metrics of EC2 instances and delivers recommendations for optimal instance
 types, sizes, and configurations. AWS Compute Optimizer helps users improve
 performance, reduce costs, and eliminate underutilized resources
 
@@ -556,7 +556,8 @@ and projections of future AWS costs?
 
 - **A)** AWS Cos! and Usage Report
 - **B)** AWS Budgets
-- **C)** Cost Explorer D. Amazon CloudWatch
+- **C)** Cost Explorer
+- **D)** Amazon CloudWatch
 
 <details>
 <summary><b>View Answer & Rationale (Answer: C)</b></summary>
@@ -587,7 +588,7 @@ Which AWS service or tool should the company use to meet this requirement?
 - **D)** AWS Cost Explorer
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 AWS Pricing Calculator is the AWS service or tool that the company should use to
 estimate its future AWS service costs before the migration. AWS Pricing Calculator is a
@@ -615,7 +616,7 @@ and resources?
 - **D)** Internet providers
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Customers share responsibility with AWS for security and compliance of AWS accounts
 and resources. This is part of the AWS shared responsibility model, which defines the
@@ -625,7 +626,7 @@ environmental controls of the AWS global infrastructure, such as power, cooling,
 suppression, and physical access. The customer is responsible for the security in the
 cloud, which includes the configuration and management of the AWS resources and
 
-applications, such as identity and access management, encryption, firewall, and backup.
+ applications, such as identity and access management, encryption, firewall, and backup.
 For more information, see AWS Shared Responsibility Model and AWS Cloud Security.
 
 *Sources: Consensus_Aligned, Amazon_CLF_C02_Nov2026_Recall_393Q*
@@ -2198,7 +2199,7 @@ Which tool lets you set a spending threshold and receive an alert when costs exc
 - **D)** AWS Trusted Advisor
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 AWS Budgets sets custom cost/usage thresholds and alerts (or triggers actions) on breach.
 
@@ -2218,7 +2219,7 @@ Which free tool estimates the cost of a proposed AWS architecture before deploym
 - **D)** Amazon CloudWatch
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 The AWS Pricing Calculator builds pre-deployment cost estimates and needs no AWS account.
 
@@ -2238,7 +2239,7 @@ Which Trusted Advisor category checks whether you are approaching AWS account qu
 - **D)** Performance
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 The Service Limits category warns when usage approaches account quotas.
 
@@ -2258,7 +2259,7 @@ Which AWS tool is used to VISUALISE and investigate spend and usage over time, f
 - **D)** Trusted Advisor
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Cost Explorer analyses and visualises spend/usage over time and can forecast future costs.
 
@@ -2278,7 +2279,7 @@ Which feature uses machine learning to automatically flag unusual spending witho
 - **D)** Consolidated billing
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 Cost Anomaly Detection (part of Cost Explorer) uses ML to flag unusual spend automatically.
 
@@ -2298,7 +2299,7 @@ Which free tool (no AWS account needed) lets you build a cost estimate for a pro
 - **D)** Trusted Advisor
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 The AWS Pricing Calculator builds estimates for planned architectures and is free with no account required.
 
@@ -2318,7 +2319,7 @@ Under consolidated billing, how do Reserved Instance and Savings Plans discounts
 - **D)** They expire monthly
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Commitments bought in one account apply to matching usage in any other account, unless sharing is switched off.
 
@@ -2338,7 +2339,7 @@ Activating which feature lets you break down spend by team or project (e.g. Cost
 - **D)** Savings Plans
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 Cost Allocation Tags let you attribute spend to teams/projects for chargeback or showback.
 
@@ -2358,7 +2359,7 @@ Which of these are the five Trusted Advisor check categories? (Choose the comple
 - **D)** Availability, Latency, Cost, Identity, Logging
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 Trusted Advisor covers Cost Optimisation, Performance, Security, Fault Tolerance and Service Limits.
 
@@ -2374,9 +2375,9 @@ Trusted Advisor covers Cost Optimisation, Performance, Security, Fault Tolerance
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Cost Explorer analyzes and forecasts costs in charts, but it is not the service that sends alerts when a threshold is crossed. - **B:** ✅ [CORRECT] AWS Budgets sends notifications by email or Amazon SNS when actual or forecasted costs exceed the budgeted amount. - **C:** ❌ [INCORRECT] Pricing Calculator estimates the cost of a planned solution and does not monitor real spending. - **D:** ❌ [INCORRECT] The Cost and Usage Report delivers detailed billing files to Amazon S3 and does not send alerts. **Official AWS Documentation Reference:** > _"You can set up optional notifications that warn you if you exceed, or are forecasted to exceed, your budgeted amount for cost or usage budgets."_ > — [AWS Documentation](https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Cost Explorer analyzes and forecasts costs in charts, but it is not the service that sends alerts when a threshold is crossed. - **B:** ✅ [CORRECT] AWS Budgets sends notifications by email or Amazon SNS when actual or forecasted costs exceed the budgeted amount. - **C:** ❌ [INCORRECT] Pricing Calculator estimates the cost of a planned solution and does not monitor real spending. - **D:** ❌ [INCORRECT] The Cost and Usage Report delivers detailed billing files to Amazon S3 and does not send alerts. **Official AWS Documentation Reference:** > _"You can set up optional notifications that warn you if you exceed, or are forecasted to exceed, your budgeted amount for cost or usage budgets."_ > — [AWS Documentation](https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html)
 
 *Sources: GustavoFreze_Questions*
 
@@ -2392,7 +2393,7 @@ Trusted Advisor covers Cost Optimisation, Performance, Security, Fault Tolerance
 <details>
 <summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] AWS Budgets tracks spending against a target and alerts, but it is not the tool for exploring the cost history by service in charts. - **B:** ❌ [INCORRECT] Pricing Calculator estimates the cost of services before they are used, not the costs already incurred. - **C:** ✅ [CORRECT] Cost Explorer shows up to the last 13 months of costs and usage, with filters and groupings, and forecasts spending for the coming months. - **D:** ❌ [INCORRECT] Trusted Advisor gives best practice recommendations, including cost savings, but does not chart the cost history. **Official AWS Documentation Reference:** > _"You can view data for up to the last 13 months, forecast how much you're likely to spend for the next 18 months, and get recommendations for what Reserved Instances to purchase."_ > — [AWS Documentation](https://docs.aws.amazon.com/cost-management/latest/userguide/ce-what-is.html) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] AWS Budgets tracks spending against a target and alerts, but it is not the tool for exploring the cost history by service in charts. - **B:** ❌ [INCORRECT] Pricing Calculator estimates the cost of services before they are used, not the costs already incurred. - **C:** ✅ [CORRECT] Cost Explorer shows up to the last 13 months of costs and usage, with filters and groupings, and forecasts spending for the coming months. - **D:** ❌ [INCORRECT] Trusted Advisor gives best practice recommendations, including cost savings, but does not chart the cost history. **Official AWS Documentation Reference:** > _"You can view data for up to the last 13 months, forecast how much you're likely to spend for the next 18 months, and get recommendations for what Reserved Instances to purchase."_ > — [AWS Documentation](https://docs.aws.amazon.com/cost-management/latest/userguide/ce-what-is.html)
 
 *Sources: GustavoFreze_Questions*
 
@@ -2406,9 +2407,9 @@ Trusted Advisor covers Cost Optimisation, Performance, Security, Fault Tolerance
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] Pricing Calculator is a free web tool that models solutions before they are built, and estimates can be saved as a link or exported to CSV or PDF. - **B:** ❌ [INCORRECT] Cost Explorer analyzes the costs of an existing account, so it has no data for a workload that does not run on AWS yet. - **C:** ❌ [INCORRECT] AWS Budgets tracks costs that the account incurs and cannot estimate a workload that is not on AWS. - **D:** ❌ [INCORRECT] The Cost and Usage Report details the usage of an existing account and has no data before the migration. **Official AWS Documentation Reference:** > _"Save your estimates – Save the link to each estimate to share or revisit at a later time."_ > — [AWS Documentation](https://docs.aws.amazon.com/pricing-calculator/latest/userguide/what-is-pricing-calculator.html#features-apc) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] Pricing Calculator is a free web tool that models solutions before they are built, and estimates can be saved as a link or exported to CSV or PDF. - **B:** ❌ [INCORRECT] Cost Explorer analyzes the costs of an existing account, so it has no data for a workload that does not run on AWS yet. - **C:** ❌ [INCORRECT] AWS Budgets tracks costs that the account incurs and cannot estimate a workload that is not on AWS. - **D:** ❌ [INCORRECT] The Cost and Usage Report details the usage of an existing account and has no data before the migration. **Official AWS Documentation Reference:** > _"Save your estimates – Save the link to each estimate to share or revisit at a later time."_ > — [AWS Documentation](https://docs.aws.amazon.com/pricing-calculator/latest/userguide/what-is-pricing-calculator.html#features-apc)
 
 *Sources: GustavoFreze_Questions*
 
@@ -2422,9 +2423,9 @@ Trusted Advisor covers Cost Optimisation, Performance, Security, Fault Tolerance
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] The tag is already applied to the resources. Applying it again does not make it show up in billing reports. - **B:** ❌ [INCORRECT] Budgets track spending against targets, but they do not make a tag appear in billing reports. - **C:** ❌ [INCORRECT] Regions do not split costs by department, and the tag would still not appear in the reports. - **D:** ✅ [CORRECT] User-defined tags must be activated in the Billing and Cost Management console before they appear in Cost Explorer and billing reports. **Official AWS Documentation Reference:** > _"For tags to appear on your billing reports, you must activate them. Your user-defined cost allocation tags represent the tag key, which you activate in the Billing and Cost Management console."_ > — [AWS Documentation](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/activating-tags.html) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] The tag is already applied to the resources. Applying it again does not make it show up in billing reports. - **B:** ❌ [INCORRECT] Budgets track spending against targets, but they do not make a tag appear in billing reports. - **C:** ❌ [INCORRECT] Regions do not split costs by department, and the tag would still not appear in the reports. - **D:** ✅ [CORRECT] User-defined tags must be activated in the Billing and Cost Management console before they appear in Cost Explorer and billing reports. **Official AWS Documentation Reference:** > _"For tags to appear on your billing reports, you must activate them. Your user-defined cost allocation tags represent the tag key, which you activate in the Billing and Cost Management console."_ > — [AWS Documentation](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/activating-tags.html)
 
 *Sources: GustavoFreze_Questions*
 
@@ -2438,9 +2439,9 @@ Trusted Advisor covers Cost Optimisation, Performance, Security, Fault Tolerance
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] AWS Budgets tracks spending against targets and sends alerts, but it does not deliver detailed billing files to Amazon S3. - **B:** ✅ [CORRECT] The Cost and Usage Report contains the most comprehensive cost and usage data, broken down by resource and tags, and delivers it to an S3 bucket for queries with Athena. - **C:** ❌ [INCORRECT] Pricing Calculator estimates future costs and does not report on real usage. - **D:** ❌ [INCORRECT] Trusted Advisor checks the account against best practices and does not produce billing data. **Official AWS Documentation Reference:** > _"AWS Cost and Usage Reports (AWS CUR) contains the most comprehensive set of cost and usage data available. You can use Cost and Usage Reports to publish your AWS billing reports to an Amazon Simple Storage Service (Amazon S3) bucket that you own."_ > — [AWS Documentation](https://docs.aws.amazon.com/cur/latest/userguide/what-is-cur.html) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] AWS Budgets tracks spending against targets and sends alerts, but it does not deliver detailed billing files to Amazon S3. - **B:** ✅ [CORRECT] The Cost and Usage Report contains the most comprehensive cost and usage data, broken down by resource and tags, and delivers it to an S3 bucket for queries with Athena. - **C:** ❌ [INCORRECT] Pricing Calculator estimates future costs and does not report on real usage. - **D:** ❌ [INCORRECT] Trusted Advisor checks the account against best practices and does not produce billing data. **Official AWS Documentation Reference:** > _"AWS Cost and Usage Reports (AWS CUR) contains the most comprehensive set of cost and usage data available. You can use Cost and Usage Reports to publish your AWS billing reports to an Amazon Simple Storage Service (Amazon S3) bucket that you own."_ > — [AWS Documentation](https://docs.aws.amazon.com/cur/latest/userguide/what-is-cur.html)
 
 *Sources: GustavoFreze_Questions*
 
@@ -2454,9 +2455,9 @@ Trusted Advisor covers Cost Optimisation, Performance, Security, Fault Tolerance
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Trusted Advisor checks the account against best practices, but it does not report AWS events that affect the resources. - **B:** ✅ [CORRECT] The AWS Health API gives programmatic access to the same events shown in the AWS Health Dashboard, so other systems can consume them. - **C:** ❌ [INCORRECT] Cost Explorer analyzes costs and usage and does not report service events. - **D:** ❌ [INCORRECT] AWS Budgets sends alerts about spending and usage, not about maintenance or service issues. **Official AWS Documentation Reference:** > _"If you have an AWS Business Support+, AWS Enterprise Support, or AWS Unified Operations plan, you can use the AWS Health API to integrate with in-house and third-party systems."_ > — [AWS Documentation](https://docs.aws.amazon.com/health/latest/ug/what-is-aws-health.html) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Trusted Advisor checks the account against best practices, but it does not report AWS events that affect the resources. - **B:** ✅ [CORRECT] The AWS Health API gives programmatic access to the same events shown in the AWS Health Dashboard, so other systems can consume them. - **C:** ❌ [INCORRECT] Cost Explorer analyzes costs and usage and does not report service events. - **D:** ❌ [INCORRECT] AWS Budgets sends alerts about spending and usage, not about maintenance or service issues. **Official AWS Documentation Reference:** > _"If you have an AWS Business Support+, AWS Enterprise Support, or AWS Unified Operations plan, you can use the AWS Health API to integrate with in-house and third-party systems."_ > — [AWS Documentation](https://docs.aws.amazon.com/health/latest/ug/what-is-aws-health.html)
 
 *Sources: GustavoFreze_Questions*
 
@@ -2470,9 +2471,9 @@ Trusted Advisor covers Cost Optimisation, Performance, Security, Fault Tolerance
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Cost Explorer analyzes costs and usage that the company already has on AWS, not the on-premises environment. - **B:** ❌ [INCORRECT] Budgets alerts when AWS costs or usage exceed a threshold. It does not project the cost of an on-premises environment on AWS. - **C:** ❌ [INCORRECT] Compute Optimizer recommends rightsizing for resources already running on AWS. - **D:** ✅ [CORRECT] Migration Evaluator builds a data-driven business case, finds overprovisioned on-premises servers, and compares BYOL and License Included costs. **Official AWS Documentation Reference:** > _"Efficiently plan your migration by identifying existing licenses and running cost comparisons of Bring Your Own License (BYOL) and License Included (LI) options."_ > — [AWS Documentation](https://aws.amazon.com/migration-evaluator/#benefits) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Cost Explorer analyzes costs and usage that the company already has on AWS, not the on-premises environment. - **B:** ❌ [INCORRECT] Budgets alerts when AWS costs or usage exceed a threshold. It does not project the cost of an on-premises environment on AWS. - **C:** ❌ [INCORRECT] Compute Optimizer recommends rightsizing for resources already running on AWS. - **D:** ✅ [CORRECT] Migration Evaluator builds a data-driven business case, finds overprovisioned on-premises servers, and compares BYOL and License Included costs. **Official AWS Documentation Reference:** > _"Efficiently plan your migration by identifying existing licenses and running cost comparisons of Bring Your Own License (BYOL) and License Included (LI) options."_ > — [AWS Documentation](https://aws.amazon.com/migration-evaluator/#benefits)
 
 *Sources: GustavoFreze_Questions*
 
@@ -2869,12 +2870,13 @@ A company is requesting Payment Card Industry (PCI) reports that validate the op
 effectiveness of AWS security controls.
 How should the company obtain these reports?
 
-- **A)** Contact AWS Support B. Download reports from AWS Artifact.
+- **A)** Contact AWS Support
+- **B)** Download reports from AWS Artifact.
 - **C)** Download reports from AWS Security Hub.
 - **D)** Contact an AWS technical account manager (TAM).
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 AWS Artifact is a service provided by AWS that offers on-demand access to AWS
 compliance reports, including the Payment Card Industry (PCI) reports. It is the primary
@@ -2909,7 +2911,7 @@ manager (TAM)?
 - **D)** AWS Enterprise Support
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
 The correct answer is D because AWS Enterprise Support is the support plan that provides
 customers with access to an AWS technical account manager (TAM). AWS Enterprise
@@ -2967,7 +2969,7 @@ LOWEST cost?
 - **D)** AWS Enterprise Support
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 The AWS Support plan that provides the full set of AWS Trusted Advisor checks at the
 lowest cost is the AWS Business Support plan. The AWS Business Support plan includes
@@ -3031,7 +3033,7 @@ How should the company respond to the auditor's request?
 - **D)** Use AWS Artifact to download the applicable report for AWS security controls. Provide the report to the auditor.
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
 AWS Artifact is your go-to, central resource for compliance-related information that matters
 to you. It provides on-demand access to AWS' security and compliance reports and select
@@ -3069,7 +3071,7 @@ contact the AWS Abuse team by filling out the [Report Abuse of AWS Resources for
 sending an email to abuse@amazonaws.com. The company should provide as much
 information as possible, such as the source and destination IP addresses, timestamps, log
 
-files, and screenshots, to help the AWS Abuse team investigate and take appropriate
+ files, and screenshots, to help the AWS Abuse team investigate and take appropriate
 actions. For more information, see [Reporting Abuse] and [AWS Acceptable Use Policy].
 
 *Sources: Consensus_Aligned, Amazon_CLF_C02_Nov2026_Recall_393Q*
@@ -3120,7 +3122,7 @@ Which AWS service or tool can the company use to meet these requirements?
 - **D)** Amazon QuickSight
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 AWS customer carbon footprint tool is a tool that helps customers measure and manage
 their carbon emissions from their AWS usage. It provides data on the carbon intensity,
@@ -4475,7 +4477,7 @@ Which support plan is required to get the FULL set of Trusted Advisor checks?
 - **D)** Only Enterprise
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 Full Trusted Advisor checks begin at the Business plan; Basic/Developer get only core checks.
 
@@ -4495,7 +4497,7 @@ A dedicated Technical Account Manager (TAM) is included with which AWS Support p
 - **D)** Basic
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 **Correct Answer: 0** (**0**)
 
@@ -4530,7 +4532,7 @@ Which service produces speech-to-text transcripts with timestamps and speaker id
 - **D)** Amazon Textract
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Transcribe converts audio to text with timestamps and speaker ID.
 
@@ -4550,7 +4552,7 @@ Which AWS Support plan is free and included with every account?
 - **D)** Enterprise
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 The Basic plan is free: account/billing support, core Trusted Advisor checks, docs and forums.
 
@@ -4570,7 +4572,7 @@ At which support plan do the FULL set of Trusted Advisor checks (all five catego
 - **D)** Enterprise
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 2)</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 Full Trusted Advisor checks start at the Business plan; Basic/Developer get only core checks.
 
@@ -4590,7 +4592,7 @@ A mission-critical workload needs a dedicated Technical Account Manager (TAM) an
 - **D)** Basic
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 2)</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 A dedicated TAM and Infrastructure Event Management are Enterprise-only.
 
@@ -4624,7 +4626,7 @@ Which benefit does AWS offer exclusively to users who have an AWS Enterprise Sup
 <details>
 <summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] A paid plan is needed only for technical support. Account and billing support is free for all account owners. - **B:** ❌ [INCORRECT] re:Post is a community Q&A site, which is not where AWS handles questions about the charges of a specific account. - **C:** ✅ [CORRECT] All account owners have account and billing support at no cost, and a case in the Support Center reaches an associate directly. - **D:** ❌ [INCORRECT] Trust & Safety handles reports of abuse of AWS resources, not billing questions. **Official AWS Documentation Reference:** > _"Contacting Support is the fastest and most direct method for communicating with an AWS associate about your questions."_ > — [AWS Documentation](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-get-answers.html#billing-support) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] A paid plan is needed only for technical support. Account and billing support is free for all account owners. - **B:** ❌ [INCORRECT] re:Post is a community Q&A site, which is not where AWS handles questions about the charges of a specific account. - **C:** ✅ [CORRECT] All account owners have account and billing support at no cost, and a case in the Support Center reaches an associate directly. - **D:** ❌ [INCORRECT] Trust & Safety handles reports of abuse of AWS resources, not billing questions. **Official AWS Documentation Reference:** > _"Contacting Support is the fastest and most direct method for communicating with an AWS associate about your questions."_ > — [AWS Documentation](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-get-answers.html#billing-support)
 
 *Sources: GustavoFreze_Questions*
 
@@ -4638,9 +4640,9 @@ Which benefit does AWS offer exclusively to users who have an AWS Enterprise Sup
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Basic Support includes customer service for account and billing questions, but not technical support from AWS engineers. - **B:** ✅ [CORRECT] Business Support+ is the entry paid plan, with 24/7 access to AWS experts, and AWS recommends it as the minimum plan for production workloads. - **C:** ❌ [INCORRECT] Enterprise Support meets the requirement but adds a designated TAM and other services at a much higher minimum price. - **D:** ❌ [INCORRECT] Unified Operations is the highest tier, for mission-critical operations, which costs more than the company needs. **Official AWS Documentation Reference:** > _"Minimum recommended plan for production workloads by AWS."_ > — [AWS Documentation](https://aws.amazon.com/premiumsupport/plans/#recommended-for) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Basic Support includes customer service for account and billing questions, but not technical support from AWS engineers. - **B:** ✅ [CORRECT] Business Support+ is the entry paid plan, with 24/7 access to AWS experts, and AWS recommends it as the minimum plan for production workloads. - **C:** ❌ [INCORRECT] Enterprise Support meets the requirement but adds a designated TAM and other services at a much higher minimum price. - **D:** ❌ [INCORRECT] Unified Operations is the highest tier, for mission-critical operations, which costs more than the company needs. **Official AWS Documentation Reference:** > _"Minimum recommended plan for production workloads by AWS."_ > — [AWS Documentation](https://aws.amazon.com/premiumsupport/plans/#recommended-for)
 
 *Sources: GustavoFreze_Questions*
 
@@ -4656,7 +4658,7 @@ Which benefit does AWS offer exclusively to users who have an AWS Enterprise Sup
 <details>
 <summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Basic Support has no technical support cases and no TAM. - **B:** ❌ [INCORRECT] Business Support+ responds within 30 minutes for critical cases and does not include a designated TAM. - **C:** ✅ [CORRECT] Enterprise Support includes a designated TAM and a response within 15 minutes for production-critical issues. - **D:** ❌ [INCORRECT] Professional Services delivers consulting engagements for projects such as migrations, not a support plan with response times. **Official AWS Documentation Reference:** > _"Achieve operational efficiency through your designated Technical Account Manager who leverages AI-powered insights to identify optimization opportunities and guide strategic initiatives. For production-critical issues, get a response within 15 minutes* from support engineers who receive personalized context about your environment."_ > — [AWS Documentation](https://aws.amazon.com/premiumsupport/plans/enterprise/#benefits) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Basic Support has no technical support cases and no TAM. - **B:** ❌ [INCORRECT] Business Support+ responds within 30 minutes for critical cases and does not include a designated TAM. - **C:** ✅ [CORRECT] Enterprise Support includes a designated TAM and a response within 15 minutes for production-critical issues. - **D:** ❌ [INCORRECT] Professional Services delivers consulting engagements for projects such as migrations, not a support plan with response times. **Official AWS Documentation Reference:** > _"Achieve operational efficiency through your designated Technical Account Manager who leverages AI-powered insights to identify optimization opportunities and guide strategic initiatives. For production-critical issues, get a response within 15 minutes* from support engineers who receive personalized context about your environment."_ > — [AWS Documentation](https://aws.amazon.com/premiumsupport/plans/enterprise/#benefits)
 
 *Sources: GustavoFreze_Questions*
 
@@ -4670,9 +4672,9 @@ Which benefit does AWS offer exclusively to users who have an AWS Enterprise Sup
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Basic Support offers customer service and documentation, without technical support or workload monitoring. - **B:** ❌ [INCORRECT] Business Support+ responds within 30 minutes for critical cases and does not include 24/7 workload monitoring. - **C:** ❌ [INCORRECT] Enterprise Support responds within 15 minutes for critical cases, which does not meet the 5 minute requirement. - **D:** ✅ [CORRECT] Unified Operations is the highest tier, with 24/7 monitoring and Incident Management Engineers who respond within 5 minutes. **Official AWS Documentation Reference:** > _"With 24/7 security and performance monitoring, we detect and mitigate incidents early while reducing alert volume. When a critical incident occurs, we respond within five-minutes with context of your environment, to further shorten resolution time and help you maintain peak operational performance."_ > — [AWS Documentation](https://aws.amazon.com/premiumsupport/plans/unified-operations/#operational-excellence-at-scale) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Basic Support offers customer service and documentation, without technical support or workload monitoring. - **B:** ❌ [INCORRECT] Business Support+ responds within 30 minutes for critical cases and does not include 24/7 workload monitoring. - **C:** ❌ [INCORRECT] Enterprise Support responds within 15 minutes for critical cases, which does not meet the 5 minute requirement. - **D:** ✅ [CORRECT] Unified Operations is the highest tier, with 24/7 monitoring and Incident Management Engineers who respond within 5 minutes. **Official AWS Documentation Reference:** > _"With 24/7 security and performance monitoring, we detect and mitigate incidents early while reducing alert volume. When a critical incident occurs, we respond within five-minutes with context of your environment, to further shorten resolution time and help you maintain peak operational performance."_ > — [AWS Documentation](https://aws.amazon.com/premiumsupport/plans/unified-operations/#operational-excellence-at-scale)
 
 *Sources: GustavoFreze_Questions*
 
@@ -4686,9 +4688,9 @@ Which benefit does AWS offer exclusively to users who have an AWS Enterprise Sup
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B, D)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Technical support cases require a paid plan such as Business Support+. - **B:** ✅ [CORRECT] Every plan, including Basic, has 24/7 access to customer service for account and billing questions. - **C:** ❌ [INCORRECT] A designated TAM is part of the Enterprise Support plan. - **D:** ✅ [CORRECT] Basic includes the core Trusted Advisor checks. The full set of checks requires a paid plan. - **E:** ❌ [INCORRECT] The AWS Health API requires Business Support+, Enterprise Support or Unified Operations. Basic includes the AWS Health Dashboard. **Official AWS Documentation Reference:** > _"All AWS customers automatically have 24x7 access to these features of Basic Support: One-on-one responses to account and billing questions"_ > — [AWS Documentation](https://docs.aws.amazon.com/awssupport/latest/user/aws-support-plans.html#features) > _"Core checks and guidance to provision your resources following best practices to increase performance and improve security."_ > — [AWS Documentation](https://aws.amazon.com/premiumsupport/plans/#basic-support-included-for-all-aws-customers) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Technical support cases require a paid plan such as Business Support+. - **B:** ✅ [CORRECT] Every plan, including Basic, has 24/7 access to customer service for account and billing questions. - **C:** ❌ [INCORRECT] A designated TAM is part of the Enterprise Support plan. - **D:** ✅ [CORRECT] Basic includes the core Trusted Advisor checks. The full set of checks requires a paid plan. - **E:** ❌ [INCORRECT] The AWS Health API requires Business Support+, Enterprise Support or Unified Operations. Basic includes the AWS Health Dashboard. **Official AWS Documentation Reference:** > _"All AWS customers automatically have 24x7 access to these features of Basic Support: One-on-one responses to account and billing questions"_ > — [AWS Documentation](https://docs.aws.amazon.com/awssupport/latest/user/aws-support-plans.html#features) > _"Core checks and guidance to provision your resources following best practices to increase performance and improve security."_ > — [AWS Documentation](https://aws.amazon.com/premiumsupport/plans/#basic-support-included-for-all-aws-customers)
 
 *Sources: GustavoFreze_Questions*
 
@@ -4702,9 +4704,9 @@ Which benefit does AWS offer exclusively to users who have an AWS Enterprise Sup
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Knowledge Center has articles written by AWS that answer frequent questions, but it is not where a developer posts a new question. - **B:** ❌ [INCORRECT] Prescriptive Guidance publishes guides and patterns from AWS experts, not community answers to individual questions. - **C:** ❌ [INCORRECT] Trusted Advisor checks the account against best practices and does not answer questions. - **D:** ✅ [CORRECT] re:Post is a community-driven Q&A service where community experts, including AWS customers, Partners, and employees, answer questions. **Official AWS Documentation Reference:** > _"AWS re:Post enables you to ask questions about anything related to designing, building, deploying, and operating workloads on AWS, and get answers from community experts, including AWS customers, Partners, and employees."_ > — [AWS Documentation](https://aws.amazon.com/about-aws/whats-new/2021/12/aws-repost-community-question-answer-service/) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Knowledge Center has articles written by AWS that answer frequent questions, but it is not where a developer posts a new question. - **B:** ❌ [INCORRECT] Prescriptive Guidance publishes guides and patterns from AWS experts, not community answers to individual questions. - **C:** ❌ [INCORRECT] Trusted Advisor checks the account against best practices and does not answer questions. - **D:** ✅ [CORRECT] re:Post is a community-driven Q&A service where community experts, including AWS customers, Partners, and employees, answer questions. **Official AWS Documentation Reference:** > _"AWS re:Post enables you to ask questions about anything related to designing, building, deploying, and operating workloads on AWS, and get answers from community experts, including AWS customers, Partners, and employees."_ > — [AWS Documentation](https://aws.amazon.com/about-aws/whats-new/2021/12/aws-repost-community-question-answer-service/)
 
 *Sources: GustavoFreze_Questions*
 
@@ -4718,9 +4720,9 @@ Which benefit does AWS offer exclusively to users who have an AWS Enterprise Sup
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] Prescriptive Guidance offers guides and patterns from AWS experts with steps, architectures, tools and code for migration, optimization and modernization. - **B:** ❌ [INCORRECT] re:Post is a community Q&A site, which answers individual questions instead of providing planned guidance for a migration. - **C:** ❌ [INCORRECT] Knowledge Center answers frequent questions in short articles and does not provide migration patterns. - **D:** ❌ [INCORRECT] The Health Dashboard shows events that affect AWS services and resources and has no migration guidance. **Official AWS Documentation Reference:** > _"Amazon Web Services (AWS) Prescriptive Guidance patterns provide step-by-step instructions, architecture, tools, and code for implementing specific cloud migration, modernization, and deployment scenarios."_ > — [AWS Documentation](https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/welcome.html) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] Prescriptive Guidance offers guides and patterns from AWS experts with steps, architectures, tools and code for migration, optimization and modernization. - **B:** ❌ [INCORRECT] re:Post is a community Q&A site, which answers individual questions instead of providing planned guidance for a migration. - **C:** ❌ [INCORRECT] Knowledge Center answers frequent questions in short articles and does not provide migration patterns. - **D:** ❌ [INCORRECT] The Health Dashboard shows events that affect AWS services and resources and has no migration guidance. **Official AWS Documentation Reference:** > _"Amazon Web Services (AWS) Prescriptive Guidance patterns provide step-by-step instructions, architecture, tools, and code for implementing specific cloud migration, modernization, and deployment scenarios."_ > — [AWS Documentation](https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/welcome.html)
 
 *Sources: GustavoFreze_Questions*
 
@@ -4736,7 +4738,7 @@ Which benefit does AWS offer exclusively to users who have an AWS Enterprise Sup
 <details>
 <summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] The Health Dashboard reports events that affect AWS services and the resources of the account. It does not list compliance programs. - **B:** ❌ [INCORRECT] Trusted Advisor checks the account against best practices. It does not show which services each compliance program covers. - **C:** ✅ [CORRECT] This AWS page lists the services in scope of each assurance program, such as PCI, SOC and the HIPAA BAA, because coverage varies from one service to another. - **D:** ❌ [INCORRECT] Security Hub can check the resources of the company against the PCI DSS standard, but it does not show which AWS services auditors assessed. **Official AWS Documentation Reference:** > _"This webpage provides a list of AWS Services in Scope of AWS assurance programs."_ > — [AWS Documentation](https://aws.amazon.com/compliance/services-in-scope/) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] The Health Dashboard reports events that affect AWS services and the resources of the account. It does not list compliance programs. - **B:** ❌ [INCORRECT] Trusted Advisor checks the account against best practices. It does not show which services each compliance program covers. - **C:** ✅ [CORRECT] This AWS page lists the services in scope of each assurance program, such as PCI, SOC and the HIPAA BAA, because coverage varies from one service to another. - **D:** ❌ [INCORRECT] Security Hub can check the resources of the company against the PCI DSS standard, but it does not show which AWS services auditors assessed. **Official AWS Documentation Reference:** > _"This webpage provides a list of AWS Services in Scope of AWS assurance programs."_ > — [AWS Documentation](https://aws.amazon.com/compliance/services-in-scope/)
 
 *Sources: GustavoFreze_Questions*
 
@@ -4750,9 +4752,9 @@ Which benefit does AWS offer exclusively to users who have an AWS Enterprise Sup
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A, D)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] The AWS CLI sends signed requests to AWS APIs from a command line or a script, which is programmatic access. - **B:** ❌ [INCORRECT] The console is a graphical web interface. Programmatic access is how users interact with AWS outside the console. - **C:** ❌ [INCORRECT] The mobile application is a graphical interface for people on a phone, not an interface for code or scripts. - **D:** ✅ [CORRECT] The SDKs let application code sign and send requests to AWS APIs, which is programmatic access. - **E:** ❌ [INCORRECT] The Health Dashboard shows events that affect AWS services and accounts. It is not a way to call services. **Official AWS Documentation Reference:** > _"(Recommended) Use console credentials as temporary credentials to sign programmatic requests to the AWS CLI, AWS SDKs, or AWS APIs."_ > — [AWS Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/security-creds-programmatic-access.html#security-creds-programmatic-access) > _"(Recommended) Use console credentials as temporary credentials to sign programmatic requests to the AWS CLI, AWS SDKs, or AWS APIs."_ > — [AWS Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/security-creds-programmatic-access.html#security-creds-programmatic-access) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] The AWS CLI sends signed requests to AWS APIs from a command line or a script, which is programmatic access. - **B:** ❌ [INCORRECT] The console is a graphical web interface. Programmatic access is how users interact with AWS outside the console. - **C:** ❌ [INCORRECT] The mobile application is a graphical interface for people on a phone, not an interface for code or scripts. - **D:** ✅ [CORRECT] The SDKs let application code sign and send requests to AWS APIs, which is programmatic access. - **E:** ❌ [INCORRECT] The Health Dashboard shows events that affect AWS services and accounts. It is not a way to call services. **Official AWS Documentation Reference:** > _"(Recommended) Use console credentials as temporary credentials to sign programmatic requests to the AWS CLI, AWS SDKs, or AWS APIs."_ > — [AWS Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/security-creds-programmatic-access.html#security-creds-programmatic-access) > _"(Recommended) Use console credentials as temporary credentials to sign programmatic requests to the AWS CLI, AWS SDKs, or AWS APIs."_ > — [AWS Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/security-creds-programmatic-access.html#security-creds-programmatic-access)
 
 *Sources: GustavoFreze_Questions*
 
@@ -4766,9 +4768,9 @@ Which benefit does AWS offer exclusively to users who have an AWS Enterprise Sup
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Basic includes customer service, documentation and AWS re:Post, but not technical support from AWS experts. - **B:** ✅ [CORRECT] Business Support+ is the entry paid plan, with 24/7 access to AWS experts and a response in under 30 minutes for critical issues. - **C:** ❌ [INCORRECT] Enterprise adds a designated technical account manager and faster responses, at a much higher cost than needed. - **D:** ❌ [INCORRECT] Unified Operations is the highest tier, with incident management engineers, and costs more than the startup needs. **Official AWS Documentation Reference:** > _"Get instant, contextual troubleshooting across your AWS environment and 24/7 access to AWS experts. For critical production issues, support engineers engage within 30 minutes to accelerate recovery."_ > — [AWS Documentation](https://aws.amazon.com/premiumsupport/plans/business-plus/) </details> --- ## Domain 4: Billing, Pricing, and Support (12%)
+**Option Rationales:** - **A:** ❌ [INCORRECT] Basic includes customer service, documentation and AWS re:Post, but not technical support from AWS experts. - **B:** ✅ [CORRECT] Business Support+ is the entry paid plan, with 24/7 access to AWS experts and a response in under 30 minutes for critical issues. - **C:** ❌ [INCORRECT] Enterprise adds a designated technical account manager and faster responses, at a much higher cost than needed. - **D:** ❌ [INCORRECT] Unified Operations is the highest tier, with incident management engineers, and costs more than the startup needs. **Official AWS Documentation Reference:** > _"Get instant, contextual troubleshooting across your AWS environment and 24/7 access to AWS experts. For critical production issues, support engineers engage within 30 minutes to accelerate recovery."_ > — [AWS Documentation](https://aws.amazon.com/premiumsupport/plans/business-plus/)
 
 *Sources: GustavoFreze_Questions*
 
@@ -4916,7 +4918,7 @@ TWO.)
 - **E)** The software has been evaluated by vendors to ensure that it will run on AWS.
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: D, E)</b></summary>
 
 **Correct Answer: ** ()
 
@@ -4958,7 +4960,7 @@ The AWS Architecture Center provides examples, best practices, and architectural
 blueprints for various AWS Cloud solutions. It includes whitepapers, reference
 architectures, and detailed diagrams to help users design secure, scalable, and reliable
 
-applications on AWS. Other services like AWS Marketplace, Service Catalog, and Trusted
+ applications on AWS. Other services like AWS Marketplace, Service Catalog, and Trusted
 Advisor do not offer solution design examples.
 
 *Sources: Consensus_Aligned, Amazon_CLF_C02_Nov2026_Recall_393Q*
@@ -4980,7 +4982,7 @@ How can the company take advantage of the Standard RIs that it no longer needs?
 - **D)** Convert the Standard RIs to Savings Plans.
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 The Amazon EC2 Reserved Instance Marketplace allows customers to sell unused
 Standard Reserved Instances to other AWS users. This enables companies to recoup
@@ -5006,7 +5008,7 @@ Which AWS service or resource will meet these requirements?
 - **D)** AWS Health Dashboard
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 AWS Online Tech Talks are online presentations that cover a broad range of topics at
 varying technical levels and provide a live Q&A session with AWS experts. They are a
@@ -5443,7 +5445,7 @@ A company wants to detect fraud patterns unique to its own historical transactio
 - **D)** Amazon Polly
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 'Our own historical data / patterns specific to us' signals a custom model built with SageMaker, not a pre-built service.
 
@@ -5459,9 +5461,9 @@ A company wants to detect fraud patterns unique to its own historical transactio
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] The AWS Trust & Safety team receives reports of activity or content on AWS that is suspected to be abusive. - **B:** ❌ [INCORRECT] AWS Support handles questions about your own account and technical issues, and does not handle abuse reports. - **C:** ❌ [INCORRECT] Professional Services delivers consulting engagements and does not investigate abuse. - **D:** ❌ [INCORRECT] The Partner Network is a community of partners that build on AWS and does not receive abuse reports. **Official AWS Documentation Reference:** > _"The AWS Trust & Safety Center provides AWS customers with information on how to report activity or content on AWS that they suspect is abusive, and how to handle abuse notices sent by AWS Trust & Safety."_ > — [AWS Documentation](https://aws.amazon.com/about-aws/whats-new/2024/10/aws-trust-safety-center-re-post/) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] The AWS Trust & Safety team receives reports of activity or content on AWS that is suspected to be abusive. - **B:** ❌ [INCORRECT] AWS Support handles questions about your own account and technical issues, and does not handle abuse reports. - **C:** ❌ [INCORRECT] Professional Services delivers consulting engagements and does not investigate abuse. - **D:** ❌ [INCORRECT] The Partner Network is a community of partners that build on AWS and does not receive abuse reports. **Official AWS Documentation Reference:** > _"The AWS Trust & Safety Center provides AWS customers with information on how to report activity or content on AWS that they suspect is abusive, and how to handle abuse notices sent by AWS Trust & Safety."_ > — [AWS Documentation](https://aws.amazon.com/about-aws/whats-new/2024/10/aws-trust-safety-center-re-post/)
 
 *Sources: GustavoFreze_Questions*
 
@@ -5475,9 +5477,9 @@ A company wants to detect fraud patterns unique to its own historical transactio
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: C, E)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] The seller defines the product and its terms of use. AWS curates the catalog but does not support every third-party product. - **B:** ❌ [INCORRECT] Products can be free or have a charge set by the seller. There is no general 12 month free period. - **C:** ✅ [CORRECT] AWS handles billing and payments, and the charges appear on the AWS bill. - **D:** ❌ [INCORRECT] Running third-party software does not change the shared responsibility model. The customer still secures what it deploys. - **E:** ✅ [CORRECT] Marketplace offers free trial, hourly, monthly, annual, multi-year and Bring Your Own License pricing, all billed from one source. **Official AWS Documentation Reference:** > _"All of these pricing options are billed from one source. AWS handles billing and payments, and charges appear on your AWS bill."_ > — [AWS Documentation](https://docs.aws.amazon.com/marketplace/latest/buyerguide/what-is-marketplace.html) > _"Flexible pricing options include free trial, hourly, monthly, annual, multi-year, and a Bring Your Own License (BYOL) model. All of these pricing options are billed from one source."_ > — [AWS Documentation](https://docs.aws.amazon.com/marketplace/latest/buyerguide/what-is-marketplace.html) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] The seller defines the product and its terms of use. AWS curates the catalog but does not support every third-party product. - **B:** ❌ [INCORRECT] Products can be free or have a charge set by the seller. There is no general 12 month free period. - **C:** ✅ [CORRECT] AWS handles billing and payments, and the charges appear on the AWS bill. - **D:** ❌ [INCORRECT] Running third-party software does not change the shared responsibility model. The customer still secures what it deploys. - **E:** ✅ [CORRECT] Marketplace offers free trial, hourly, monthly, annual, multi-year and Bring Your Own License pricing, all billed from one source. **Official AWS Documentation Reference:** > _"All of these pricing options are billed from one source. AWS handles billing and payments, and charges appear on your AWS bill."_ > — [AWS Documentation](https://docs.aws.amazon.com/marketplace/latest/buyerguide/what-is-marketplace.html) > _"Flexible pricing options include free trial, hourly, monthly, annual, multi-year, and a Bring Your Own License (BYOL) model. All of these pricing options are billed from one source."_ > — [AWS Documentation](https://docs.aws.amazon.com/marketplace/latest/buyerguide/what-is-marketplace.html)
 
 *Sources: GustavoFreze_Questions*
 
@@ -5491,9 +5493,9 @@ A company wants to detect fraud patterns unique to its own historical transactio
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] The AWS Partner Network includes consulting and services partners, such as system integrators, that help customers migrate and build on AWS. - **B:** ❌ [INCORRECT] Professional Services is a team from AWS itself, not a third-party firm. - **C:** ❌ [INCORRECT] Prescriptive Guidance publishes guides and patterns, but it does not provide a firm to carry out the migration. - **D:** ❌ [INCORRECT] re:Post answers questions from the community, but it does not provide a firm to run a migration project. **Official AWS Documentation Reference:** > _"AWS Partners enable cloud transformation with proven expertise in migrating and modernizing mission-critical workloads."_ > — [AWS Documentation](https://aws.amazon.com/migration-and-modernization/partners/#transform-your-cloud-migration-with-aws-partners-and-modernize-with-confidence) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] The AWS Partner Network includes consulting and services partners, such as system integrators, that help customers migrate and build on AWS. - **B:** ❌ [INCORRECT] Professional Services is a team from AWS itself, not a third-party firm. - **C:** ❌ [INCORRECT] Prescriptive Guidance publishes guides and patterns, but it does not provide a firm to carry out the migration. - **D:** ❌ [INCORRECT] re:Post answers questions from the community, but it does not provide a firm to run a migration project. **Official AWS Documentation Reference:** > _"AWS Partners enable cloud transformation with proven expertise in migrating and modernizing mission-critical workloads."_ > — [AWS Documentation](https://aws.amazon.com/migration-and-modernization/partners/#transform-your-cloud-migration-with-aws-partners-and-modernize-with-confidence)
 
 *Sources: GustavoFreze_Questions*
 

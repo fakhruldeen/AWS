@@ -23,7 +23,7 @@ Which AWS service or feature should be used to host the application in the AWS C
 - **D)** Application Load Balancer
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Amazon EC2 On-Demand Instances are instances that let you pay for compute capacity
 by the hour or second (minimum of 60 seconds) with no long-term commitments. This
@@ -56,7 +56,7 @@ responsibility model?(Select TWO.)
 - **E)** Maintain infrastructure hardware.
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: C, D)</b></summary>
 
 Customers are responsible for configuring and maintaining guest operating systems and
 applications on services where the customer controls those components, such as Amazon
@@ -113,7 +113,8 @@ cloud as part of the AWS shared responsibility
 A company runs Amazon EC2 instances in a research lab. The instances run for 3 hours
 each week and cannot be interrupted.
 
-- **A)** Convertible Reserved Instances B. Compute Savings Plan
+- **A)** Convertible Reserved Instances
+- **B)** Compute Savings Plan
 - **C)** Spot Instances
 - **D)** On-Demand Instances
 
@@ -335,7 +336,7 @@ company to run its existing custom, nonproduction workloads in the AWS Cloud qui
 and cost-effectively. Reserved Instances are Amazon EC2 instances that are reserved for
 a specific period of time (one or three years) in exchange for a lower hourly rate. Reserved
 
-Instances are suitable for steady-state or predictable workloads that run for a long
+ Instances are suitable for steady-state or predictable workloads that run for a long
 duration. On-Demand Instances are Amazon EC2 instances that are launched and billed at
 a fixed hourly rate. On-Demand Insta
 
@@ -407,7 +408,7 @@ Which AWS purchasing option should the company choose to meet these requirements
 - **D)** Spot Instances
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Compute Savings Plans are a flexible and cost-effective way to optimize long-term
 compute costs of AWS Lambda functions and Amazon EC2 instances. With Compute
@@ -417,7 +418,7 @@ compared to On-Demand prices3. Dedicated Hosts are physical servers with EC2 ins
 capacity fully dedicated to the customer's use. They are suitable for customers who have
 specific server-bound software licenses or compliance requirements4. Reserved Instances
 
-are a pricing model that provides a significant discount (up to 75%) compared to OnDemand pricing and a capacity reservation for EC2 instances. They are available in 1-year
+ are a pricing model that provides a significant discount (up to 75%) compared to OnDemand pricing and a capacity reservation for EC2 instances. They are available in 1-year
 or 3-year terms and different payment options5. Spot Instances are spare EC2 instances
 that are available at up to 90% discount compared to On-Demand prices. They are suitable
 for customers who have flexible start and end times,
@@ -434,12 +435,13 @@ A company needs to reserve a certain amount of Amazon EC2 compute resources in a
 specific Availability Zone within an AWS Region. Which purchasing option should the
 company use to meet this requirement?
 
-- **A)** Compute Savings Plans B. EC2 Instance Savings Plans
+- **A)** Compute Savings Plans
+- **B)** EC2 Instance Savings Plans
 - **C)** Zonal Reserved Instances
 - **D)** Regional Reserved Instances
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 **Correct Answer: ** ()
 
@@ -450,7 +452,7 @@ Under AWS Well-Architected principles and official CLF-C02 specifications for `p
 In production AWS environments, this architectural pattern ensures compliance, maximum operational efficiency, and least-privilege alignment.
 
 ### 🔍 Detailed Option Breakdown & Distractor Analysis:
-- **Option A (Compute Savings Plans B. EC2 Instance Savings Plans)** ❌ **[INCORRECT]**: Suboptimal or introduces architectural anti-patterns for this specific requirement (either refers to an unrelated service, violates security boundaries, or increases operational overhead).
+- **Option A (Compute Savings Plans B. EC2 Instance Savings Plans)** ❌ **[INCORRECT]**: Suboptimal or introduces architectural anti-patterns for this specific requirement (either refers to an unrelated service, violates security boundaries, or increases operational overhead).
 - **Option C (Zonal Reserved Instances)** ❌ **[INCORRECT]**: Suboptimal or introduces architectural anti-patterns for this specific requirement (either refers to an unrelated service, violates security boundaries, or increases operational overhead).
 - **Option D (Regional Reserved Instances)** ❌ **[INCORRECT]**: Suboptimal or introduces architectural anti-patterns for this specific requirement (either refers to an unrelated service, violates security boundaries, or increases operational overhead).
 
@@ -476,7 +478,7 @@ Which AWS service will meet these requirements?
 - **D)** Amazon EC2
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 AWS Fargateis a serverless compute engine for containers that allows users to run
 containers without having to manage the underlying infrastructure. Fargate eliminates the
@@ -505,7 +507,7 @@ AWS Fargate Documentation
 A software engineer wants to launch a virtual machine (VM) and MySQL database on
 AWS.
 Which AWS service will meet these requirements with the LEAST operational effort?
-A. Amazon Elastic Container Service (Amazon ECS)
+ A. Amazon Elastic Container Service (Amazon ECS)
 
 - **B)** AWS Elastic Beanstalk
 - **C)** Amazon Lightsail
@@ -544,7 +546,7 @@ responsibility model?
 - **D)** Shutting down Lambda functions when they are no longer in use
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 According to the AWS shared responsibility model, AWS is responsible for the security of
 the cloud, while customers are responsible for the security in the cloud. This means that
@@ -703,7 +705,7 @@ model? (Select TWO.)
 - **E)** Maintain the network infrastructure.
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: C, D)</b></summary>
 
 **Correct Answer: ** ()
 
@@ -741,7 +743,7 @@ Which AWS service can the company use to meet these requirements?
 - **D)** AWS Elastic Beanstalk
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 AWS Systems Manager is a service that enables users to centralize and automate the
 management of their AWS resources. It provides a unified user interface to view
@@ -785,7 +787,7 @@ C . AWS Elastic Beanstalk: Incorrect, as it is a Platform-as-a-Service (PaaS) th
 involves managing servers, even though it abstracts much of the infrastructure
 management.
 
-D . Elastic Load Balancing: Incorrect, as it is a service for distributing incoming application
+ D . Elastic Load Balancing: Incorrect, as it is a service for distributing incoming application
 or network traffic across multiple targets, not a serverless compute service.
 AWS Cloud Reference:
 AWS Lambda
@@ -819,7 +821,7 @@ compute resources you use to run your containers, and you don't need to worry ab
 scaling, patching, securing, or maintaining the underlying infrastructure. AWS Fargate
 simplifies the deployment and management of containerized applications, and enables you
 
-to focus on building and running your applications instead of managing the infrastructure.
+ to focus on building and running your applications instead of managing the infrastructure.
 Reference: AWS Fargate, What is AWS Fargate?
 
 *Sources: Consensus_Aligned, Amazon_CLF_C02_Nov2026_Recall_393Q*
@@ -913,7 +915,7 @@ allows customers to run code without provisioning or managing servers. Amazon
 OpenSearch Service is a fully managed service that makes it easy to deploy, operate, and
 scale OpenSearch clusters in the AWS Cloud. Amazon ElastiCache is a fully managed
 
-service that provides in-memory data store and cache solutions, such
+ service that provides in-memory data store and cache solutions, such
 
 *Sources: Consensus_Aligned, Amazon_CLF_C02_Nov2026_Recall_393Q*
 
@@ -933,7 +935,7 @@ TWO.)
 - **E)** Security of underlying infrastructure
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: A, D)</b></summary>
 
 The duties that are the responsibility of a company that is using AWS Lambda are security
 inside of code and writing and updating of code. AWS Lambda is a serverless compute
@@ -969,7 +971,7 @@ Amazon EC2 is a service that provides resizable compute capacity in the cloud. U
 launch and manage virtual servers, known as instances, that run on the AWS
 infrastructure. Users are responsible for maintaining the underlying operating system of the
 
-instances, as well as any applications or software that run on them. Amazon DynamoDB is
+ instances, as well as any applications or software that run on them. Amazon DynamoDB is
 a service that provides a fully managed NoSQL database that delivers fast and consistent
 performance at any scale. Users do not need to manage the underlying operating system
 or the database software. Amazon S3 is a service that provides scalable and durable
@@ -998,7 +1000,7 @@ Which EC2 instance purchasing option will meet these requirements?
 - **D)** Spot Instances
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 **Correct Answer: ** ()
 
@@ -1043,7 +1045,7 @@ Under the AWS Shared Responsibility Model, AWS manages the security of the cloud
 while customers manage security in the cloud. For EC2 instances, it is the customer's
 responsibility to manage the guest operating system, including patching and encrypting
 
-data stored on attached storage volumes. AWS is responsible for the underlying
+ data stored on attached storage volumes. AWS is responsible for the underlying
 infrastructure, including physical security and hypervisor maintenance.
 
 *Sources: Consensus_Aligned, Amazon_CLF_C02_Nov2026_Recall_393Q*
@@ -1065,7 +1067,7 @@ Which EC2 instance purchasing option is MOST cost-effective for this use case?
 - **D)** On-Demand Instances
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Spot Instances are instances that use spare EC2 capacity that is available for up to 90%
 off the On-Demand price. Because Spot Instances can be interrupted by EC2 with two
@@ -1159,7 +1161,7 @@ Which IT operation will the company still be responsible for after the migration
 - **D)** Configuration of IAM access controls
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 AWS Elastic Beanstalk, Amazon Aurora, and AWS Auto Scaling are managed services
 that reduce the operational overhead for the customers. AWS is responsible for security
@@ -5204,7 +5206,7 @@ licenses for a Microsoft Windows server running on AWS. Spot Instances are spare
 Amazon EC2 instances that are available at up to 90% discount compared to On-Demand
 prices. Spot Instances are suitable for stateless, fault-tolerant, and flexible workloads that
 
-can recover from interr
+ can recover from interr
 
 *Sources: Edurely_Questions, Amazon_CLF_C02_Nov2026_Recall_393Q, Consensus_Aligned*
 
@@ -6191,7 +6193,7 @@ Under the AWS shared responsibility model, which describes the split at a high l
 - **D)** There is no security responsibility
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 2)</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 AWS secures the underlying cloud infrastructure; the customer secures what they put in the cloud (data, config, access).
 
@@ -6211,7 +6213,7 @@ Under the shared responsibility model, which task is ALWAYS the customer's respo
 - **D)** Patching the AWS global network hardware
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 2)</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 Customers are always responsible for their data, identities and access management configuration ('security in the cloud').
 
@@ -6231,7 +6233,7 @@ For Amazon EC2 (IaaS), who is responsible for patching the guest operating syste
 - **D)** The AWS Support team
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 For EC2, patching the guest OS and applications is the customer's responsibility; AWS patches the underlying infrastructure.
 
@@ -6251,7 +6253,7 @@ Which AWS service provides resizable virtual servers in the cloud?
 - **D)** AWS Lambda
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 Amazon EC2 provides resizable virtual machine (compute) capacity.
 
@@ -6271,7 +6273,7 @@ Which compute service runs your code without provisioning or managing servers, b
 - **D)** AWS Batch
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 AWS Lambda is serverless — you run code without managing servers and pay only for execution time.
 
@@ -6291,7 +6293,7 @@ Which service distributes incoming application traffic across multiple targets s
 - **D)** Amazon Athena
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 Elastic Load Balancing spreads traffic across targets in one or more AZs for availability and scale.
 
@@ -6311,7 +6313,7 @@ Which service lets you deploy and manage a web application without dealing with 
 - **D)** AWS Direct Connect
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 Elastic Beanstalk handles capacity provisioning, load balancing and scaling for uploaded application code (PaaS).
 
@@ -6331,7 +6333,7 @@ Which service runs serverless SQL queries directly against data stored in Amazon
 - **D)** Amazon EMR
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 Amazon Athena queries S3 data in place using standard SQL, priced per data scanned.
 
@@ -6351,7 +6353,7 @@ Which pricing model gives the biggest discount but can be interrupted with a two
 - **D)** Dedicated Hosts
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 Spot Instances offer up to ~90% off spare capacity but can be reclaimed — for interruption-tolerant workloads.
 
@@ -6371,7 +6373,7 @@ A steady, long-running workload wants savings while staying flexible across inst
 - **D)** Dedicated Hosts
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 Compute Savings Plans commit to $/hour of usage and apply flexibly across families, sizes, Regions, and to Fargate/Lambda.
 
@@ -6391,7 +6393,7 @@ A dev/test database has intermittent, spiky traffic and you want the most cost-e
 - **D)** Instance store on EC2
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 Aurora Serverless v2 scales capacity in fine-grained steps for intermittent/spiky loads — 'intermittent traffic, most cost-effective'.
 
@@ -6411,7 +6413,7 @@ What is the canonical AWS answer for elastic, self-healing, highly available com
 - **D)** A Redshift cluster
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 ASG + Elastic Load Balancer across AZs gives elastic, self-healing, highly available compute.
 
@@ -6431,7 +6433,7 @@ A multi-step workflow needs sequencing, automatic retries with backoff, conditio
 - **D)** Amazon SNS
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Step Functions defines a state machine (Amazon States Language) with built-in sequencing, retries, branching and a visual graph.
 
@@ -6451,7 +6453,7 @@ In a data lake, which service crawls raw S3 data to populate a catalog of schema
 - **D)** Amazon Redshift
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Glue provides the Data Catalog (metadata) and serverless Spark ETL jobs; the data itself stays in S3.
 
@@ -6471,7 +6473,7 @@ Which service runs serverless standard SQL directly against data in S3, priced p
 - **D)** AWS Glue
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Athena queries S3 in place using the Glue Catalog, priced per data scanned — ideal for ad-hoc analysis.
 
@@ -6491,7 +6493,7 @@ Which compute pricing model offers the deepest discount (up to ~90%) but can be 
 - **D)** Spot Instances
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 3)</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
 Spot Instances use spare capacity at up to 90% off but can be reclaimed — only for interruption-tolerant work.
 
@@ -6511,7 +6513,7 @@ A steady workload needs discounts that stay flexible across instance family, siz
 - **D)** On-Demand
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Compute Savings Plans commit to $/hour of compute and apply across families, sizes, Regions, EC2, Fargate and Lambda.
 
@@ -6591,9 +6593,9 @@ A company needs to run a workload for several batch image rendering applications
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] On-Demand Instances allow any change but give no discount for the long, steady commitment the company can make. - **B:** ❌ [INCORRECT] Spot Instances can be interrupted when AWS needs the capacity back, which does not suit a workload that must run 24 hours a day. - **C:** ❌ [INCORRECT] Standard Reserved Instances can be modified but cannot be exchanged, so they do not allow a move to a different instance family and operating system. - **D:** ✅ [CORRECT] Convertible Reserved Instances give a discount for a 1 or 3 year term and can be exchanged for a different instance family, operating system and tenancy. **Official AWS Documentation Reference:** > _"Can be exchanged during the term for another Convertible Reserved Instance with new attributes, including instance family, instance type, platform, scope, or tenancy."_ > — [AWS Documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/reserved-instances-types.html#offering-class-differences) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] On-Demand Instances allow any change but give no discount for the long, steady commitment the company can make. - **B:** ❌ [INCORRECT] Spot Instances can be interrupted when AWS needs the capacity back, which does not suit a workload that must run 24 hours a day. - **C:** ❌ [INCORRECT] Standard Reserved Instances can be modified but cannot be exchanged, so they do not allow a move to a different instance family and operating system. - **D:** ✅ [CORRECT] Convertible Reserved Instances give a discount for a 1 or 3 year term and can be exchanged for a different instance family, operating system and tenancy. **Official AWS Documentation Reference:** > _"Can be exchanged during the term for another Convertible Reserved Instance with new attributes, including instance family, instance type, platform, scope, or tenancy."_ > — [AWS Documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/reserved-instances-types.html#offering-class-differences)
 
 *Sources: GustavoFreze_Questions*
 
@@ -6607,9 +6609,9 @@ A company needs to run a workload for several batch image rendering applications
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] Spot Instances use spare EC2 capacity at steep discounts and suit flexible workloads that can be interrupted, such as batch jobs and data analysis. - **B:** ❌ [INCORRECT] On-Demand Instances are never interrupted by AWS, but they cost more than Spot for a workload that tolerates interruptions. - **C:** ❌ [INCORRECT] Dedicated Instances run on hardware dedicated to one account, which adds cost and solves an isolation need the company does not have. - **D:** ❌ [INCORRECT] Capacity Reservations guarantee capacity in an Availability Zone but give no billing discount, which a flexible job does not need. **Official AWS Documentation Reference:** > _"Spot Instances are a cost-effective choice if you can be flexible about when your applications run and if your applications can be interrupted. For example, Spot Instances are well-suited for data analysis, batch jobs, background processing, and optional tasks."_ > — [AWS Documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] Spot Instances use spare EC2 capacity at steep discounts and suit flexible workloads that can be interrupted, such as batch jobs and data analysis. - **B:** ❌ [INCORRECT] On-Demand Instances are never interrupted by AWS, but they cost more than Spot for a workload that tolerates interruptions. - **C:** ❌ [INCORRECT] Dedicated Instances run on hardware dedicated to one account, which adds cost and solves an isolation need the company does not have. - **D:** ❌ [INCORRECT] Capacity Reservations guarantee capacity in an Availability Zone but give no billing discount, which a flexible job does not need. **Official AWS Documentation Reference:** > _"Spot Instances are a cost-effective choice if you can be flexible about when your applications run and if your applications can be interrupted. For example, Spot Instances are well-suited for data analysis, batch jobs, background processing, and optional tasks."_ > — [AWS Documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html)
 
 *Sources: GustavoFreze_Questions*
 
@@ -6625,7 +6627,7 @@ A company needs to run a workload for several batch image rendering applications
 <details>
 <summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Dedicated Instances run on dedicated hardware but give no visibility of sockets and physical cores, so they do not fit per-core and per-socket licenses. - **B:** ❌ [INCORRECT] Reserved Instances are a billing discount on instances and do not give control of the physical server. - **C:** ✅ [CORRECT] A Dedicated Host is a physical server fully dedicated to the company, with visibility of sockets and cores, which supports per-socket and per-core licenses. - **D:** ❌ [INCORRECT] Compute Savings Plans lower the price of compute usage but do not give visibility of the physical server. **Official AWS Documentation Reference:** > _"Dedicated Hosts provide comprehensive Bring Your Own License (BYOL) support. They allow you to use your existing per-socket, per-core, or per-VM software licenses, including Windows Server, SQL Server, SUSE Linux Enterprise Server, Red Hat Enterprise Linux, or other software licenses that are bound to VMs, sockets, or physical cores, subject to your license terms."_ > — [AWS Documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-overview.html) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Dedicated Instances run on dedicated hardware but give no visibility of sockets and physical cores, so they do not fit per-core and per-socket licenses. - **B:** ❌ [INCORRECT] Reserved Instances are a billing discount on instances and do not give control of the physical server. - **C:** ✅ [CORRECT] A Dedicated Host is a physical server fully dedicated to the company, with visibility of sockets and cores, which supports per-socket and per-core licenses. - **D:** ❌ [INCORRECT] Compute Savings Plans lower the price of compute usage but do not give visibility of the physical server. **Official AWS Documentation Reference:** > _"Dedicated Hosts provide comprehensive Bring Your Own License (BYOL) support. They allow you to use your existing per-socket, per-core, or per-VM software licenses, including Windows Server, SQL Server, SUSE Linux Enterprise Server, Red Hat Enterprise Linux, or other software licenses that are bound to VMs, sockets, or physical cores, subject to your license terms."_ > — [AWS Documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-overview.html)
 
 *Sources: GustavoFreze_Questions*
 
@@ -6639,9 +6641,9 @@ A company needs to run a workload for several batch image rendering applications
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] EC2 Instance Savings Plans commit to one instance family in one Region and do not cover Fargate or Lambda. - **B:** ✅ [CORRECT] Compute Savings Plans apply to EC2 usage in any instance family, size, Region, operating system and tenancy, and also to Fargate and Lambda usage. - **C:** ❌ [INCORRECT] Standard Reserved Instances apply to EC2 only, in one Region, and cannot be exchanged for a different instance family. - **D:** ❌ [INCORRECT] Zonal Reserved Instances are tied to one Availability Zone and one instance type, which is the least flexible choice. **Official AWS Documentation Reference:** > _"Compute Savings Plans provide the most flexibility and prices that are up to 66% off of On-Demand rates."_ > — [AWS Documentation](https://docs.aws.amazon.com/savingsplans/latest/userguide/plan-types.html) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] EC2 Instance Savings Plans commit to one instance family in one Region and do not cover Fargate or Lambda. - **B:** ✅ [CORRECT] Compute Savings Plans apply to EC2 usage in any instance family, size, Region, operating system and tenancy, and also to Fargate and Lambda usage. - **C:** ❌ [INCORRECT] Standard Reserved Instances apply to EC2 only, in one Region, and cannot be exchanged for a different instance family. - **D:** ❌ [INCORRECT] Zonal Reserved Instances are tied to one Availability Zone and one instance type, which is the least flexible choice. **Official AWS Documentation Reference:** > _"Compute Savings Plans provide the most flexibility and prices that are up to 66% off of On-Demand rates."_ > — [AWS Documentation](https://docs.aws.amazon.com/savingsplans/latest/userguide/plan-types.html)
 
 *Sources: GustavoFreze_Questions*
 
@@ -6655,9 +6657,9 @@ A company needs to run a workload for several batch image rendering applications
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A, D)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] AWS protects the infrastructure that runs all of its services, and that includes the facilities where the hardware lives. - **B:** ❌ [INCORRECT] Security groups are firewall rules that the customer configures on its own instances, so they are part of security in the cloud. - **C:** ❌ [INCORRECT] The customer manages its data, including the encryption options, even when AWS provides the encryption features. - **D:** ✅ [CORRECT] The infrastructure that AWS protects is made of the hardware, software, networking and facilities that run AWS services. - **E:** ❌ [INCORRECT] The customer decides who can access its resources and uses IAM to apply the appropriate permissions. **Official AWS Documentation Reference:** > _"AWS is responsible for protecting the infrastructure that runs all of the services offered in the AWS Cloud. This infrastructure is composed of the hardware, software, networking, and facilities that run AWS Cloud services."_ > — [AWS Documentation](https://aws.amazon.com/compliance/shared-responsibility-model/#content-0) > _"AWS is responsible for protecting the infrastructure that runs all of the services offered in the AWS Cloud. This infrastructure is composed of the hardware, software, networking, and facilities that run AWS Cloud services."_ > — [AWS Documentation](https://aws.amazon.com/compliance/shared-responsibility-model/#content-0) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] AWS protects the infrastructure that runs all of its services, and that includes the facilities where the hardware lives. - **B:** ❌ [INCORRECT] Security groups are firewall rules that the customer configures on its own instances, so they are part of security in the cloud. - **C:** ❌ [INCORRECT] The customer manages its data, including the encryption options, even when AWS provides the encryption features. - **D:** ✅ [CORRECT] The infrastructure that AWS protects is made of the hardware, software, networking and facilities that run AWS services. - **E:** ❌ [INCORRECT] The customer decides who can access its resources and uses IAM to apply the appropriate permissions. **Official AWS Documentation Reference:** > _"AWS is responsible for protecting the infrastructure that runs all of the services offered in the AWS Cloud. This infrastructure is composed of the hardware, software, networking, and facilities that run AWS Cloud services."_ > — [AWS Documentation](https://aws.amazon.com/compliance/shared-responsibility-model/#content-0) > _"AWS is responsible for protecting the infrastructure that runs all of the services offered in the AWS Cloud. This infrastructure is composed of the hardware, software, networking, and facilities that run AWS Cloud services."_ > — [AWS Documentation](https://aws.amazon.com/compliance/shared-responsibility-model/#content-0)
 
 *Sources: GustavoFreze_Questions*
 
@@ -6671,9 +6673,9 @@ A company needs to run a workload for several batch image rendering applications
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Host hardware belongs to the infrastructure that AWS operates. The customer never touches the physical servers. - **B:** ✅ [CORRECT] Customers that deploy EC2 instances manage the guest operating system, including updates and security patches, and the software they install on it. - **C:** ❌ [INCORRECT] AWS operates the components from the host operating system and the virtualization layer down to the physical security of the facilities. - **D:** ❌ [INCORRECT] Physical security of the facilities is an AWS responsibility that the customer inherits. **Official AWS Documentation Reference:** > _"Customers that deploy an Amazon EC2 instance are responsible for management of the guest operating system (including updates and security patches), any application software or utilities installed by the customer on the instances, and the configuration of the AWS-provided firewall (called a security group) on each instance."_ > — [AWS Documentation](https://aws.amazon.com/compliance/shared-responsibility-model/#content-1) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Host hardware belongs to the infrastructure that AWS operates. The customer never touches the physical servers. - **B:** ✅ [CORRECT] Customers that deploy EC2 instances manage the guest operating system, including updates and security patches, and the software they install on it. - **C:** ❌ [INCORRECT] AWS operates the components from the host operating system and the virtualization layer down to the physical security of the facilities. - **D:** ❌ [INCORRECT] Physical security of the facilities is an AWS responsibility that the customer inherits. **Official AWS Documentation Reference:** > _"Customers that deploy an Amazon EC2 instance are responsible for management of the guest operating system (including updates and security patches), any application software or utilities installed by the customer on the instances, and the configuration of the AWS-provided firewall (called a security group) on each instance."_ > — [AWS Documentation](https://aws.amazon.com/compliance/shared-responsibility-model/#content-1)
 
 *Sources: GustavoFreze_Questions*
 
@@ -6687,9 +6689,9 @@ A company needs to run a workload for several batch image rendering applications
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B, C)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Physical and environmental controls are inherited controls. The customer fully inherits them from AWS. - **B:** ✅ [CORRECT] AWS patches flaws in its infrastructure, and the customer patches its guest operating systems and applications. - **C:** ✅ [CORRECT] AWS trains its own employees, and the customer must train its own employees. - **D:** ❌ [INCORRECT] Routing or zoning data within security environments is a customer specific control, the sole responsibility of the customer. - **E:** ❌ [INCORRECT] Disposing of hardware in the data centers belongs to the physical infrastructure that AWS alone operates. **Official AWS Documentation Reference:** > _"Patch Management – AWS is responsible for patching and fixing flaws within the infrastructure, but customers are responsible for patching their guest OS and applications."_ > — [AWS Documentation](https://aws.amazon.com/compliance/shared-responsibility-model/#content-3) > _"Awareness & Training - AWS trains AWS employees, but a customer must train their own employees."_ > — [AWS Documentation](https://aws.amazon.com/compliance/shared-responsibility-model/#content-3) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Physical and environmental controls are inherited controls. The customer fully inherits them from AWS. - **B:** ✅ [CORRECT] AWS patches flaws in its infrastructure, and the customer patches its guest operating systems and applications. - **C:** ✅ [CORRECT] AWS trains its own employees, and the customer must train its own employees. - **D:** ❌ [INCORRECT] Routing or zoning data within security environments is a customer specific control, the sole responsibility of the customer. - **E:** ❌ [INCORRECT] Disposing of hardware in the data centers belongs to the physical infrastructure that AWS alone operates. **Official AWS Documentation Reference:** > _"Patch Management – AWS is responsible for patching and fixing flaws within the infrastructure, but customers are responsible for patching their guest OS and applications."_ > — [AWS Documentation](https://aws.amazon.com/compliance/shared-responsibility-model/#content-3) > _"Awareness & Training - AWS trains AWS employees, but a customer must train their own employees."_ > — [AWS Documentation](https://aws.amazon.com/compliance/shared-responsibility-model/#content-3)
 
 *Sources: GustavoFreze_Questions*
 
@@ -6703,9 +6705,9 @@ A company needs to run a workload for several batch image rendering applications
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] Lambda manages the underlying infrastructure, including server maintenance, capacity provisioning, scaling and patching. - **B:** ❌ [INCORRECT] The function code is written and owned by the customer, so its security stays with the customer. - **C:** ❌ [INCORRECT] The customer configures the IAM permissions that the functions use. - **D:** ❌ [INCORRECT] The customer is always responsible for its data, whatever service processes it. **Official AWS Documentation Reference:** > _"Lambda automatically manages the underlying infrastructure – including server maintenance, capacity provisioning, scaling, and patching – so you can focus on your application logic."_ > — [AWS Documentation](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html#welcome) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] Lambda manages the underlying infrastructure, including server maintenance, capacity provisioning, scaling and patching. - **B:** ❌ [INCORRECT] The function code is written and owned by the customer, so its security stays with the customer. - **C:** ❌ [INCORRECT] The customer configures the IAM permissions that the functions use. - **D:** ❌ [INCORRECT] The customer is always responsible for its data, whatever service processes it. **Official AWS Documentation Reference:** > _"Lambda automatically manages the underlying infrastructure – including server maintenance, capacity provisioning, scaling, and patching – so you can focus on your application logic."_ > — [AWS Documentation](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html#welcome)
 
 *Sources: GustavoFreze_Questions*
 
@@ -6719,9 +6721,9 @@ A company needs to run a workload for several batch image rendering applications
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Spot Instances are a pricing option for spare capacity. They do not give visibility into the physical cores needed for per-core licenses. - **B:** ✅ [CORRECT] A Dedicated Host is a physical server fully dedicated to the customer, with visibility of sockets and cores, so it supports existing per-socket, per-core, and per-VM licenses (BYOL). - **C:** ❌ [INCORRECT] Dedicated Instances run on hardware dedicated to one account but give no visibility of sockets and cores, so they do not fit per-core licenses. - **D:** ❌ [INCORRECT] Reserved Instances are a billing discount for a commitment. They do not change the licensing of the instance. **Official AWS Documentation Reference:** > _"They allow you to use your existing per-socket, per-core, or per-VM software licenses, including Windows Server, SQL Server, SUSE Linux Enterprise Server, Red Hat Enterprise Linux, or other software licenses that are bound to VMs, sockets, or physical cores, subject to your license terms."_ > — [AWS Documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-overview.html) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Spot Instances are a pricing option for spare capacity. They do not give visibility into the physical cores needed for per-core licenses. - **B:** ✅ [CORRECT] A Dedicated Host is a physical server fully dedicated to the customer, with visibility of sockets and cores, so it supports existing per-socket, per-core, and per-VM licenses (BYOL). - **C:** ❌ [INCORRECT] Dedicated Instances run on hardware dedicated to one account but give no visibility of sockets and cores, so they do not fit per-core licenses. - **D:** ❌ [INCORRECT] Reserved Instances are a billing discount for a commitment. They do not change the licensing of the instance. **Official AWS Documentation Reference:** > _"They allow you to use your existing per-socket, per-core, or per-VM software licenses, including Windows Server, SQL Server, SUSE Linux Enterprise Server, Red Hat Enterprise Linux, or other software licenses that are bound to VMs, sockets, or physical cores, subject to your license terms."_ > — [AWS Documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-overview.html)
 
 *Sources: GustavoFreze_Questions*
 
@@ -6737,7 +6739,7 @@ A company needs to run a workload for several batch image rendering applications
 <details>
 <summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] With BYOL the company uses Oracle licenses it already owns, and it owns none. - **B:** ❌ [INCORRECT] License Manager tracks licenses the company owns. It does not provide a license. - **C:** ✅ [CORRECT] With License Included, AWS holds the Oracle license and the company does not purchase licenses separately. Amazon RDS supports this model for Standard Edition 2. - **D:** ❌ [INCORRECT] Dedicated Hosts are an Amazon EC2 option for bringing licenses the company already owns, and it owns none. **Official AWS Documentation Reference:** > _"In the License Included model, you don't need to purchase Oracle Database licenses separately. AWS holds the license for the Oracle database software."_ > — [AWS Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Oracle.Concepts.Licensing.html#Oracle.Concepts.Licensing.LicenseIncluded) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] With BYOL the company uses Oracle licenses it already owns, and it owns none. - **B:** ❌ [INCORRECT] License Manager tracks licenses the company owns. It does not provide a license. - **C:** ✅ [CORRECT] With License Included, AWS holds the Oracle license and the company does not purchase licenses separately. Amazon RDS supports this model for Standard Edition 2. - **D:** ❌ [INCORRECT] Dedicated Hosts are an Amazon EC2 option for bringing licenses the company already owns, and it owns none. **Official AWS Documentation Reference:** > _"In the License Included model, you don't need to purchase Oracle Database licenses separately. AWS holds the license for the Oracle database software."_ > — [AWS Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Oracle.Concepts.Licensing.html#Oracle.Concepts.Licensing.LicenseIncluded)
 
 *Sources: GustavoFreze_Questions*
 
@@ -6751,9 +6753,9 @@ A company needs to run a workload for several batch image rendering applications
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B, D)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] With EC2 the customer chooses, launches and manages the virtual servers. - **B:** ✅ [CORRECT] Lambda runs code without provisioning or managing servers, and the customer pays only for what is used. - **C:** ❌ [INCORRECT] Lightsail offers virtual private servers that the customer still manages. - **D:** ✅ [CORRECT] Fargate runs containers without managing servers or clusters of EC2 instances. - **E:** ❌ [INCORRECT] Outposts places AWS hardware in the customer facility, which is the opposite of serverless. **Official AWS Documentation Reference:** > _"AWS Lambda is an event-driven, pay-as-you-go compute service that lets you run code without provisioning or managing servers."_ > — [AWS Documentation](https://aws.amazon.com/serverless/#serverless-services-on-aws) > _"AWS Fargate is a serverless compute engine that works with Amazon Elastic Container Service (ECS) and Amazon Elastic Kubernetes Service (EKS)."_ > — [AWS Documentation](https://aws.amazon.com/serverless/#serverless-services-on-aws) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] With EC2 the customer chooses, launches and manages the virtual servers. - **B:** ✅ [CORRECT] Lambda runs code without provisioning or managing servers, and the customer pays only for what is used. - **C:** ❌ [INCORRECT] Lightsail offers virtual private servers that the customer still manages. - **D:** ✅ [CORRECT] Fargate runs containers without managing servers or clusters of EC2 instances. - **E:** ❌ [INCORRECT] Outposts places AWS hardware in the customer facility, which is the opposite of serverless. **Official AWS Documentation Reference:** > _"AWS Lambda is an event-driven, pay-as-you-go compute service that lets you run code without provisioning or managing servers."_ > — [AWS Documentation](https://aws.amazon.com/serverless/#serverless-services-on-aws) > _"AWS Fargate is a serverless compute engine that works with Amazon Elastic Container Service (ECS) and Amazon Elastic Kubernetes Service (EKS)."_ > — [AWS Documentation](https://aws.amazon.com/serverless/#serverless-services-on-aws)
 
 *Sources: GustavoFreze_Questions*
 
@@ -6769,7 +6771,7 @@ A company needs to run a workload for several batch image rendering applications
 <details>
 <summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] EC2 instances keep running and billing whether or not images arrive, and the company must manage them. - **B:** ❌ [INCORRECT] Lightsail servers run all the time and still need to be managed. - **C:** ✅ [CORRECT] Lambda runs code in response to events such as an S3 upload, manages the infrastructure, and bills per use. - **D:** ❌ [INCORRECT] Elastic Beanstalk deploys applications on EC2 instances that run continuously, not code that runs only per event. **Official AWS Documentation Reference:** > _"Run code in response to events or API calls without managing servers."_ > — [AWS Documentation](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html#welcome) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] EC2 instances keep running and billing whether or not images arrive, and the company must manage them. - **B:** ❌ [INCORRECT] Lightsail servers run all the time and still need to be managed. - **C:** ✅ [CORRECT] Lambda runs code in response to events such as an S3 upload, manages the infrastructure, and bills per use. - **D:** ❌ [INCORRECT] Elastic Beanstalk deploys applications on EC2 instances that run continuously, not code that runs only per event. **Official AWS Documentation Reference:** > _"Run code in response to events or API calls without managing servers."_ > — [AWS Documentation](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html#welcome)
 
 *Sources: GustavoFreze_Questions*
 
@@ -6783,9 +6785,9 @@ A company needs to run a workload for several batch image rendering applications
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A, E)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] A network ACL allows or denies specific inbound or outbound traffic at the subnet level. - **B:** ❌ [INCORRECT] Automatically allowing responses is stateful behavior, which belongs to security groups. - **C:** ❌ [INCORRECT] Network ACL rules can either allow or deny traffic. Allow rules only is a property of security groups. - **D:** ❌ [INCORRECT] Vulnerability scanning is the job of Amazon Inspector, not a network control. - **E:** ✅ [CORRECT] Network ACLs do not save information about previous traffic, so responses are not allowed automatically. **Official AWS Documentation Reference:** > _"A network access control list (ACL) allows or denies specific inbound or outbound traffic at the subnet level."_ > — [AWS Documentation](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html#vpc-network-acls) > _"If, for example, you create a NACL rule to allow specific inbound traffic to a subnet, responses to that traffic are not automatically allowed."_ > — [AWS Documentation](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html#nacl-basics) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] A network ACL allows or denies specific inbound or outbound traffic at the subnet level. - **B:** ❌ [INCORRECT] Automatically allowing responses is stateful behavior, which belongs to security groups. - **C:** ❌ [INCORRECT] Network ACL rules can either allow or deny traffic. Allow rules only is a property of security groups. - **D:** ❌ [INCORRECT] Vulnerability scanning is the job of Amazon Inspector, not a network control. - **E:** ✅ [CORRECT] Network ACLs do not save information about previous traffic, so responses are not allowed automatically. **Official AWS Documentation Reference:** > _"A network access control list (ACL) allows or denies specific inbound or outbound traffic at the subnet level."_ > — [AWS Documentation](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html#vpc-network-acls) > _"If, for example, you create a NACL rule to allow specific inbound traffic to a subnet, responses to that traffic are not automatically allowed."_ > — [AWS Documentation](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html#nacl-basics)
 
 *Sources: GustavoFreze_Questions*
 
@@ -6799,9 +6801,9 @@ A company needs to run a workload for several batch image rendering applications
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] Amplify Hosting provides a Git-based workflow for hosting full-stack web applications with continuous deployment to the AWS global content delivery network. - **B:** ❌ [INCORRECT] Elastic Beanstalk deploys applications to EC2 instances in a Region, not a Git-based frontend hosting workflow on a CDN. - **C:** ❌ [INCORRECT] Lightsail provides virtual servers that the team would configure and deploy to itself. - **D:** ❌ [INCORRECT] CodeBuild compiles and tests code, but it does not host the application. **Official AWS Documentation Reference:** > _"Amplify Hosting provides a Git-based workflow for hosting full-stack serverless web applications with continuous deployment. Amplify deploys your app to the AWS global content delivery network (CDN)."_ > — [AWS Documentation](https://docs.aws.amazon.com/amplify/latest/userguide/welcome.html#welcome) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] Amplify Hosting provides a Git-based workflow for hosting full-stack web applications with continuous deployment to the AWS global content delivery network. - **B:** ❌ [INCORRECT] Elastic Beanstalk deploys applications to EC2 instances in a Region, not a Git-based frontend hosting workflow on a CDN. - **C:** ❌ [INCORRECT] Lightsail provides virtual servers that the team would configure and deploy to itself. - **D:** ❌ [INCORRECT] CodeBuild compiles and tests code, but it does not host the application. **Official AWS Documentation Reference:** > _"Amplify Hosting provides a Git-based workflow for hosting full-stack serverless web applications with continuous deployment. Amplify deploys your app to the AWS global content delivery network (CDN)."_ > — [AWS Documentation](https://docs.aws.amazon.com/amplify/latest/userguide/welcome.html#welcome)
 
 *Sources: GustavoFreze_Questions*
 
@@ -8197,7 +8199,7 @@ Which activity can companies complete by using AWS Organizations?
 - **D)** Monitor the performance of applications.
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Managing service control policies (SCPs) is an activity that companies can complete by
 using AWS Organizations. AWS Organizations is a service that enables the user to
@@ -8316,7 +8318,7 @@ Which AWS service or tool can a company use to set up consolidated billing?
 - **D)** AWS Systems Manager
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 AWS Organizations Overview:
 AWS Organizations allows a company to manage multiple AWS accounts under a single
@@ -8331,7 +8333,7 @@ Why Other Options Are Incorrect:
 A . AWS Billing and Cost Management console:Used for managing budgets and payments
 but does not set up consolidated billing.
 
-C . AWS Cost and Usage Report:Provides detailed cost and usage reports but does not
+ C . AWS Cost and Usage Report:Provides detailed cost and usage reports but does not
 set up consolidated billing.
 D . AWS Systems Manager:Focuses on operational management, not billing.
 Reference:
@@ -8417,7 +8419,7 @@ operational overhead?
 - **D)** IAM policies for individual users
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 IAM roles are a way of granting temporary permissions to entities that need to access
 AWS resources, such as users, applications, or services. IAM roles allow customers to
@@ -8448,7 +8450,7 @@ Which task requires the use of AWS account root user credentials?
 - **D)** The deletion of Amazon EC2 instances
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 The creation of an organization in AWS Organizations requires the use of AWS account
 root user credentials. The AWS account root user is the email address that was used to
@@ -8558,7 +8560,7 @@ Which AWS service or feature enables users to encrypt data at rest in Amazon S3?
 - **D)** Client-side encryption
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Server-side encryption is an encryption option that Amazon S3 provides to encrypt data at
 rest in Amazon S3. With server-side encryption, Amazon S3 encrypts an object before
@@ -8657,7 +8659,7 @@ Which AWS service can identify when an Amazon EC2 instance was terminated?
 - **D)** Amazon EventBridge
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 AWS CloudTrail is the AWS service that can identify when an Amazon EC2 instance was
 terminated. AWS CloudTrail is a service that records API calls and events for AWS
@@ -8748,7 +8750,7 @@ Which AWS service will meet these requirements?
 - **D)** AWS Organizations
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 AWS Marketplaceis an online store where independent software vendors (ISVs) can list
 and sell their software products, including custom Amazon Machine Images (AMIs). It
@@ -8818,7 +8820,7 @@ be grouped by values such as application, project, department, environment, or c
 center. This makes option A the direct match for both "track" and "categorize
 expenditures." Consolidated billing combines billing and usage across accounts in AWS
 
-Organizations, but it is not itself a resource-labeling mechanism. AWS Budgets compares
+ Organizations, but it is not itself a resource-labeling mechanism. AWS Budgets compares
 cost or usage against thresholds and can generate alerts or actions; it does not provide the
 requested detailed categorization method. AWS Marketplace is a catalog and procurement
 channel for third-party and AWS software, data, and
@@ -8938,7 +8940,7 @@ The AWS tool that will meet the requirements of the company that is planning a m
 to the AWS Cloud and wants to examine the costs that are associated with different
 workloads is AWS Pricing Calculator. AWS Pricing Calculator is a tool that helps
 
-customers estimate the cost of using AWS services based on their requirements and
+ customers estimate the cost of using AWS services based on their requirements and
 preferences. The company can use AWS Pricing Calculator to compare the costs of
 different AWS services and configurations, such as Amazon EC2, Amazon S3, Amazon
 RDS, and more. AWS Pricing Calculator also provides detailed breakdowns of the cost
@@ -8965,7 +8967,7 @@ Which AWS service or tool should a company use to forecast AWS spending?
 - **D)** Cost Explorer
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
 Cost Explorer is an AWS service or tool that can be used to forecast AWS spending. It
 allows users to analyze their AWS costs and usage using interactive graphs and tables. It
@@ -12319,9 +12321,9 @@ instead of on premises? (Select TWO.)
 - **E)** EC2 has automatic storage cost optimization.
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: B, D)</b></summary>
 
-**Correct Answer: ** ()
+**Correct Answer:** `B, D`
 
 > **Domain Focus:** Security and Compliance | **Blueprint Area:** Topic 2.2: IAM, Identity & Access Governance
 
@@ -12814,7 +12816,7 @@ What is the recommended way to grant an application running on EC2 access to an 
 - **D)** Make the bucket public
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Attach an IAM role to the instance so temporary credentials are provided automatically — no long-lived keys in code.
 
@@ -12834,7 +12836,7 @@ Which is an AWS security best practice for the root user of an account?
 - **D)** Delete it entirely
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Protect the root user with MFA, lock away its credentials, and use IAM users/roles for daily work.
 
@@ -12854,7 +12856,7 @@ What does the principle of least privilege mean in IAM?
 - **D)** Give all permissions then remove some later
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Least privilege means granting only the minimum permissions necessary for the job.
 
@@ -12874,7 +12876,7 @@ Which IAM entity is best for granting temporary permissions that can be assumed 
 - **D)** A security group
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 IAM roles provide temporary credentials and can be assumed by users, services or federated identities — no long-term keys.
 
@@ -12894,7 +12896,7 @@ An organisation wants to centrally restrict which services member accounts can u
 - **D)** Amazon Macie
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 SCPs in AWS Organizations set permission guardrails that cap what member accounts can do, even for admins.
 
@@ -12914,7 +12916,7 @@ To require a second factor beyond a password when signing in, a user should enab
 - **D)** Public bucket access
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 MFA adds a second authentication factor (e.g. an authenticator app or hardware key) on top of the password.
 
@@ -12934,7 +12936,7 @@ An IAM policy is best described as:
 - **D)** An encryption key
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 IAM policies are JSON documents specifying which actions are allowed or denied on which resources.
 
@@ -12954,7 +12956,7 @@ Which is the correct way to give three new developers the same set of permission
 - **D)** Make an S3 bucket public
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 Attach the policy to an IAM group and add users to the group — permissions are managed centrally.
 
@@ -12974,7 +12976,7 @@ Which capability lets a company receive a single consolidated bill for many AWS 
 - **D)** AWS Support
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 Consolidated billing in AWS Organizations combines accounts into one bill and aggregates volume/commitment discounts.
 
@@ -12994,7 +12996,7 @@ A small team needs business-hours email guidance from Cloud Support Associates f
 - **D)** Enterprise
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 The Developer plan (from $29/mo) gives business-hours email access for small teams and non-production work.
 
@@ -13014,7 +13016,7 @@ A parent company wants ONE invoice covering all its subsidiary accounts, with sh
 - **D)** Trusted Advisor
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Consolidated billing rolls all member accounts into one bill, aggregates volume pricing, and shares RI/Savings Plans discounts.
 
@@ -13034,7 +13036,7 @@ Which Trusted Advisor category checks open security-group ports, root-account MF
 - **D)** Fault Tolerance
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 The Security category checks open ports, root MFA/IAM configuration and S3 permissions.
 
@@ -13082,9 +13084,9 @@ Which AWS service or feature identifies whether an Amazon S3 bucket or an IAM ro
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B, E)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] With discount sharing on, the discount benefits the purchasing account first and then other accounts in the organization. - **B:** ✅ [CORRECT] After the purchasing account is covered, the remaining discount can be shared with matching usage in other accounts of the organization. - **C:** ❌ [INCORRECT] No support case is needed. Discount sharing is controlled in the billing preferences of the Billing and Cost Management console. - **D:** ❌ [INCORRECT] The reservation stays with the account that bought it. Only the discount is shared across the organization. - **E:** ✅ [CORRECT] The management account controls Reserved Instance and Savings Plans discount sharing and can deactivate it for individual member accounts. **Official AWS Documentation Reference:** > _"After satisfying the account owner, remaining benefits can be shared with other organization accounts"_ > — [AWS Documentation](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/ri-turn-off.html#sharing-modes) > _"You can deactivate sharing discounts for individual member accounts."_ > — [AWS Documentation](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/ri-turn-off.html#ri-turn-off-process) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] With discount sharing on, the discount benefits the purchasing account first and then other accounts in the organization. - **B:** ✅ [CORRECT] After the purchasing account is covered, the remaining discount can be shared with matching usage in other accounts of the organization. - **C:** ❌ [INCORRECT] No support case is needed. Discount sharing is controlled in the billing preferences of the Billing and Cost Management console. - **D:** ❌ [INCORRECT] The reservation stays with the account that bought it. Only the discount is shared across the organization. - **E:** ✅ [CORRECT] The management account controls Reserved Instance and Savings Plans discount sharing and can deactivate it for individual member accounts. **Official AWS Documentation Reference:** > _"After satisfying the account owner, remaining benefits can be shared with other organization accounts"_ > — [AWS Documentation](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/ri-turn-off.html#sharing-modes) > _"You can deactivate sharing discounts for individual member accounts."_ > — [AWS Documentation](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/ri-turn-off.html#ri-turn-off-process)
 
 *Sources: GustavoFreze_Questions*
 
@@ -13098,9 +13100,9 @@ Which AWS service or feature identifies whether an Amazon S3 bucket or an IAM ro
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A, C)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] The management account receives one bill and pays the charges of all member accounts. - **B:** ❌ [INCORRECT] Consolidated billing has no extra fee, but it does not include a support plan for the member accounts. - **C:** ✅ [CORRECT] Usage is combined across all accounts, which shares volume pricing discounts, Reserved Instance discounts and Savings Plans. - **D:** ❌ [INCORRECT] The management account pays the charges of all member accounts. Member account bills are for information only. - **E:** ❌ [INCORRECT] Consolidated billing changes how charges are paid and combined, and does not resize any resource. **Official AWS Documentation Reference:** > _"Every organization in AWS Organizations has a management account that pays the charges of all the member accounts"_ > — [AWS Documentation](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/consolidated-billing.html) > _"You can combine the usage across all accounts in the organization. This shares the volume pricing discounts, Reserved Instance discounts, and Savings Plans."_ > — [AWS Documentation](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/consolidated-billing.html) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] The management account receives one bill and pays the charges of all member accounts. - **B:** ❌ [INCORRECT] Consolidated billing has no extra fee, but it does not include a support plan for the member accounts. - **C:** ✅ [CORRECT] Usage is combined across all accounts, which shares volume pricing discounts, Reserved Instance discounts and Savings Plans. - **D:** ❌ [INCORRECT] The management account pays the charges of all member accounts. Member account bills are for information only. - **E:** ❌ [INCORRECT] Consolidated billing changes how charges are paid and combined, and does not resize any resource. **Official AWS Documentation Reference:** > _"Every organization in AWS Organizations has a management account that pays the charges of all the member accounts"_ > — [AWS Documentation](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/consolidated-billing.html) > _"You can combine the usage across all accounts in the organization. This shares the volume pricing discounts, Reserved Instance discounts, and Savings Plans."_ > — [AWS Documentation](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/consolidated-billing.html)
 
 *Sources: GustavoFreze_Questions*
 
@@ -13116,7 +13118,7 @@ Which AWS service or feature identifies whether an Amazon S3 bucket or an IAM ro
 <details>
 <summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] The Health Dashboard reports events that affect AWS services and resources, not unused resources that waste money. - **B:** ❌ [INCORRECT] AWS Budgets alerts when spending crosses a threshold but does not identify the resources that cause the waste. - **C:** ✅ [CORRECT] Trusted Advisor cost optimization checks include idle load balancers, unassociated Elastic IP addresses and low utilization EC2 instances. - **D:** ❌ [INCORRECT] Pricing Calculator estimates the cost of planned services and does not inspect the resources in the account. **Official AWS Documentation Reference:** > _"Checks your Elastic Load Balancing configuration for load balancers that are idle."_ > — [AWS Documentation](https://docs.aws.amazon.com/awssupport/latest/user/cost-optimization-checks.html#idle-load-balancers) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] The Health Dashboard reports events that affect AWS services and resources, not unused resources that waste money. - **B:** ❌ [INCORRECT] AWS Budgets alerts when spending crosses a threshold but does not identify the resources that cause the waste. - **C:** ✅ [CORRECT] Trusted Advisor cost optimization checks include idle load balancers, unassociated Elastic IP addresses and low utilization EC2 instances. - **D:** ❌ [INCORRECT] Pricing Calculator estimates the cost of planned services and does not inspect the resources in the account. **Official AWS Documentation Reference:** > _"Checks your Elastic Load Balancing configuration for load balancers that are idle."_ > — [AWS Documentation](https://docs.aws.amazon.com/awssupport/latest/user/cost-optimization-checks.html#idle-load-balancers)
 
 *Sources: GustavoFreze_Questions*
 
@@ -13130,9 +13132,9 @@ Which AWS service or feature identifies whether an Amazon S3 bucket or an IAM ro
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Organizations manages many accounts centrally. The agreement itself is reviewed and accepted in AWS Artifact, which can apply it to all the accounts of an organization. - **B:** ✅ [CORRECT] AWS Artifact lets customers review, accept and track agreements with AWS, such as the BAA, for one account or for a whole organization. - **C:** ❌ [INCORRECT] Control Tower sets up a governed multi-account environment. It does not handle agreements with AWS. - **D:** ❌ [INCORRECT] Marketplace is a catalog for buying third-party software, not a place to accept agreements with AWS. **Official AWS Documentation Reference:** > _"In the AWS Artifact console, you can review and accept such agreements, and you can designate an AWS account that can legally process PHI."_ > — [AWS Documentation](https://docs.aws.amazon.com/artifact/latest/ug/managing-agreements.html#managing-agreements) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Organizations manages many accounts centrally. The agreement itself is reviewed and accepted in AWS Artifact, which can apply it to all the accounts of an organization. - **B:** ✅ [CORRECT] AWS Artifact lets customers review, accept and track agreements with AWS, such as the BAA, for one account or for a whole organization. - **C:** ❌ [INCORRECT] Control Tower sets up a governed multi-account environment. It does not handle agreements with AWS. - **D:** ❌ [INCORRECT] Marketplace is a catalog for buying third-party software, not a place to accept agreements with AWS. **Official AWS Documentation Reference:** > _"In the AWS Artifact console, you can review and accept such agreements, and you can designate an AWS account that can legally process PHI."_ > — [AWS Documentation](https://docs.aws.amazon.com/artifact/latest/ug/managing-agreements.html#managing-agreements)
 
 *Sources: GustavoFreze_Questions*
 
@@ -13146,9 +13148,9 @@ Which AWS service or feature identifies whether an Amazon S3 bucket or an IAM ro
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] CloudWatch collects metrics, logs and alarms about performance and operational health. It is not the record of who called each API. - **B:** ❌ [INCORRECT] GuardDuty analyzes logs to detect threats, but it is not the record of every API call and its caller. - **C:** ❌ [INCORRECT] Config records how resources were configured over time, not the identity and IP address of the caller that changed them. - **D:** ✅ [CORRECT] CloudTrail records API calls with the identity of the caller, the time of the call, the source IP address and the request parameters. **Official AWS Documentation Reference:** > _"The recorded information includes the identity of the API caller, the time of the API call, the source IP address of the API caller, the request parameters, and the response elements returned by the AWS service."_ > — [AWS Documentation](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/management-governance.html#aws-cloudtrail) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] CloudWatch collects metrics, logs and alarms about performance and operational health. It is not the record of who called each API. - **B:** ❌ [INCORRECT] GuardDuty analyzes logs to detect threats, but it is not the record of every API call and its caller. - **C:** ❌ [INCORRECT] Config records how resources were configured over time, not the identity and IP address of the caller that changed them. - **D:** ✅ [CORRECT] CloudTrail records API calls with the identity of the caller, the time of the call, the source IP address and the request parameters. **Official AWS Documentation Reference:** > _"The recorded information includes the identity of the API caller, the time of the API call, the source IP address of the API caller, the request parameters, and the response elements returned by the AWS service."_ > — [AWS Documentation](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/management-governance.html#aws-cloudtrail)
 
 *Sources: GustavoFreze_Questions*
 
@@ -13162,9 +13164,9 @@ Which AWS service or feature identifies whether an Amazon S3 bucket or an IAM ro
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Event history shows recent API activity, not the current state of the credentials of every user. - **B:** ❌ [INCORRECT] Config records configuration changes of resources, but it does not produce a report of passwords, access keys and MFA status for every user. - **C:** ❌ [INCORRECT] Artifact reports document the controls of AWS, not the credentials in the account of the customer. - **D:** ✅ [CORRECT] The credential report lists all users in the account and the status of their passwords, access keys and MFA devices, and it supports audit and compliance work. **Official AWS Documentation Reference:** > _"You can generate and download a credential report that lists all users in your account and the status of their various credentials, including passwords, access keys, and MFA devices."_ > — [AWS Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_getting-report.html#id_credentials_getting-report) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Event history shows recent API activity, not the current state of the credentials of every user. - **B:** ❌ [INCORRECT] Config records configuration changes of resources, but it does not produce a report of passwords, access keys and MFA status for every user. - **C:** ❌ [INCORRECT] Artifact reports document the controls of AWS, not the credentials in the account of the customer. - **D:** ✅ [CORRECT] The credential report lists all users in the account and the status of their passwords, access keys and MFA devices, and it supports audit and compliance work. **Official AWS Documentation Reference:** > _"You can generate and download a credential report that lists all users in your account and the status of their various credentials, including passwords, access keys, and MFA devices."_ > — [AWS Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_getting-report.html#id_credentials_getting-report)
 
 *Sources: GustavoFreze_Questions*
 
@@ -13178,9 +13180,9 @@ Which AWS service or feature identifies whether an Amazon S3 bucket or an IAM ro
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] Least privilege means granting only the permissions required for the task, as specific actions on specific resources. A custom policy scoped to one bucket does that. - **B:** ❌ [INCORRECT] This policy allows reading every bucket in the account, which is more access than the task needs. - **C:** ❌ [INCORRECT] This policy also allows writing and deleting in every bucket, far beyond reading one bucket. - **D:** ❌ [INCORRECT] This policy grants full access to almost every AWS service, which is the opposite of least privilege. **Official AWS Documentation Reference:** > _"When you set permissions with IAM policies, grant only the permissions required to perform a task."_ > — [AWS Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#grant-least-privilege) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] Least privilege means granting only the permissions required for the task, as specific actions on specific resources. A custom policy scoped to one bucket does that. - **B:** ❌ [INCORRECT] This policy allows reading every bucket in the account, which is more access than the task needs. - **C:** ❌ [INCORRECT] This policy also allows writing and deleting in every bucket, far beyond reading one bucket. - **D:** ❌ [INCORRECT] This policy grants full access to almost every AWS service, which is the opposite of least privilege. **Official AWS Documentation Reference:** > _"When you set permissions with IAM policies, grant only the permissions required to perform a task."_ > — [AWS Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#grant-least-privilege)
 
 *Sources: GustavoFreze_Questions*
 
@@ -13194,9 +13196,9 @@ Which AWS service or feature identifies whether an Amazon S3 bucket or an IAM ro
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Any identity with the right IAM permissions can create users. AWS recommends an administrative user for everyday tasks like this. - **B:** ❌ [INCORRECT] Alternate contacts and contact information can be updated without root user credentials. - **C:** ❌ [INCORRECT] CloudTrail can be configured by IAM users or roles that have the right permissions. - **D:** ✅ [CORRECT] A standalone account that is not part of AWS Organizations requires root user credentials to be closed. **Official AWS Documentation Reference:** > _"Standalone AWS accounts that are not part of AWS Organizations require root credentials to close the account."_ > — [AWS Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html#root-user-tasks) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Any identity with the right IAM permissions can create users. AWS recommends an administrative user for everyday tasks like this. - **B:** ❌ [INCORRECT] Alternate contacts and contact information can be updated without root user credentials. - **C:** ❌ [INCORRECT] CloudTrail can be configured by IAM users or roles that have the right permissions. - **D:** ✅ [CORRECT] A standalone account that is not part of AWS Organizations requires root user credentials to be closed. **Official AWS Documentation Reference:** > _"Standalone AWS accounts that are not part of AWS Organizations require root credentials to close the account."_ > — [AWS Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html#root-user-tasks)
 
 *Sources: GustavoFreze_Questions*
 
@@ -13210,9 +13212,9 @@ Which AWS service or feature identifies whether an Amazon S3 bucket or an IAM ro
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A, C)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] MFA adds a second factor to the email address and password, and AWS lists securing root user sign-in with MFA as a root user best practice. - **B:** ❌ [INCORRECT] AWS recommends not creating root user access keys at all. Storing them anywhere still leaves highly privileged long-term credentials in existence. - **C:** ✅ [CORRECT] The root user has full access to every service and resource, including billing, so AWS strongly recommends not creating access keys for it. - **D:** ❌ [INCORRECT] AWS recommends using the root user only for the tasks that require it and creating an administrative user for everyday work. - **E:** ❌ [INCORRECT] AWS recommends not sharing the root user credentials with anyone except those with a strict business need. **Official AWS Documentation Reference:** > _"Because a root user can perform privileged actions, it's crucial to add MFA for the root user as a second authentication factor in addition to the email address and password as sign-in credentials."_ > — [AWS Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/root-user-best-practices.html#ru-bp-mfa) > _"We strongly recommend that you do not create access keys for your root user because the root user has full access to all AWS services and resources in the account, including billing information."_ > — [AWS Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/root-user-best-practices.html#ru-bp-access) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] MFA adds a second factor to the email address and password, and AWS lists securing root user sign-in with MFA as a root user best practice. - **B:** ❌ [INCORRECT] AWS recommends not creating root user access keys at all. Storing them anywhere still leaves highly privileged long-term credentials in existence. - **C:** ✅ [CORRECT] The root user has full access to every service and resource, including billing, so AWS strongly recommends not creating access keys for it. - **D:** ❌ [INCORRECT] AWS recommends using the root user only for the tasks that require it and creating an administrative user for everyday work. - **E:** ❌ [INCORRECT] AWS recommends not sharing the root user credentials with anyone except those with a strict business need. **Official AWS Documentation Reference:** > _"Because a root user can perform privileged actions, it's crucial to add MFA for the root user as a second authentication factor in addition to the email address and password as sign-in credentials."_ > — [AWS Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/root-user-best-practices.html#ru-bp-mfa) > _"We strongly recommend that you do not create access keys for your root user because the root user has full access to all AWS services and resources in the account, including billing information."_ > — [AWS Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/root-user-best-practices.html#ru-bp-access)
 
 *Sources: GustavoFreze_Questions*
 
@@ -13228,7 +13230,7 @@ Which AWS service or feature identifies whether an Amazon S3 bucket or an IAM ro
 <details>
 <summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] A password policy sets complexity and expiration rules for passwords, but the password stays the only factor. - **B:** ❌ [INCORRECT] Access keys sign programmatic requests. They do not add a factor to console sign-in. - **C:** ✅ [CORRECT] MFA requires a response from a device, such as a passkey, a security key or an authenticator app, in addition to the sign-in credentials. - **D:** ❌ [INCORRECT] Roles provide temporary permissions. They do not add a second factor to the console sign-in of a user. **Official AWS Documentation Reference:** > _"MFA adds extra security that requires users to provide unique authentication from an AWS supported MFA mechanism in addition to their sign-in credentials when they access AWS websites or services."_ > — [AWS Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa.html#id_credentials_mfa) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] A password policy sets complexity and expiration rules for passwords, but the password stays the only factor. - **B:** ❌ [INCORRECT] Access keys sign programmatic requests. They do not add a factor to console sign-in. - **C:** ✅ [CORRECT] MFA requires a response from a device, such as a passkey, a security key or an authenticator app, in addition to the sign-in credentials. - **D:** ❌ [INCORRECT] Roles provide temporary permissions. They do not add a second factor to the console sign-in of a user. **Official AWS Documentation Reference:** > _"MFA adds extra security that requires users to provide unique authentication from an AWS supported MFA mechanism in addition to their sign-in credentials when they access AWS websites or services."_ > — [AWS Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa.html#id_credentials_mfa)
 
 *Sources: GustavoFreze_Questions*
 
@@ -13242,9 +13244,9 @@ Which AWS service or feature identifies whether an Amazon S3 bucket or an IAM ro
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: D, E)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] IAM does not support a lockout policy. AWS recommends combining a strong password policy with MFA instead. - **B:** ❌ [INCORRECT] MFA is configured for each identity separately. It is not a setting of the password policy. - **C:** ❌ [INCORRECT] The IAM password policy does not apply to the root user password. - **D:** ✅ [CORRECT] The custom password policy can require a minimum number of characters for IAM user passwords. - **E:** ✅ [CORRECT] The custom password policy can prevent users from reusing a specified number of previous passwords. **Official AWS Documentation Reference:** > _"Password minimum length – You can specify a minimum of 6 characters and a maximum of 128 characters."_ > — [AWS Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_passwords_account-policy.html#password-policy-details) > _"Prevent password reuse – You can prevent IAM users from reusing a specified number of previous passwords."_ > — [AWS Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_passwords_account-policy.html#password-policy-details) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] IAM does not support a lockout policy. AWS recommends combining a strong password policy with MFA instead. - **B:** ❌ [INCORRECT] MFA is configured for each identity separately. It is not a setting of the password policy. - **C:** ❌ [INCORRECT] The IAM password policy does not apply to the root user password. - **D:** ✅ [CORRECT] The custom password policy can require a minimum number of characters for IAM user passwords. - **E:** ✅ [CORRECT] The custom password policy can prevent users from reusing a specified number of previous passwords. **Official AWS Documentation Reference:** > _"Password minimum length – You can specify a minimum of 6 characters and a maximum of 128 characters."_ > — [AWS Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_passwords_account-policy.html#password-policy-details) > _"Prevent password reuse – You can prevent IAM users from reusing a specified number of previous passwords."_ > — [AWS Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_passwords_account-policy.html#password-policy-details)
 
 *Sources: GustavoFreze_Questions*
 
@@ -13258,9 +13260,9 @@ Which AWS service or feature identifies whether an Amazon S3 bucket or an IAM ro
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] A role delivers temporary credentials to the instance and renews them automatically, so no long-term credentials are distributed. - **B:** ❌ [INCORRECT] AWS recommends never putting access keys in application files, because anyone who reads the code gains the access. - **C:** ❌ [INCORRECT] Long-term keys on the instance must be distributed and updated by hand, and they stay valid until someone revokes them. - **D:** ❌ [INCORRECT] The root user has full access to the account, and AWS recommends not creating root user access keys at all. **Official AWS Documentation Reference:** > _"Instead, you can and should use an IAM role to manage temporary credentials for applications that run on an Amazon EC2 instance. When you use a role, you don't have to distribute long-term credentials (such as sign-in credentials or access keys) to an Amazon EC2 instance."_ > — [AWS Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#id_roles_use_switch-role-ec2) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] A role delivers temporary credentials to the instance and renews them automatically, so no long-term credentials are distributed. - **B:** ❌ [INCORRECT] AWS recommends never putting access keys in application files, because anyone who reads the code gains the access. - **C:** ❌ [INCORRECT] Long-term keys on the instance must be distributed and updated by hand, and they stay valid until someone revokes them. - **D:** ❌ [INCORRECT] The root user has full access to the account, and AWS recommends not creating root user access keys at all. **Official AWS Documentation Reference:** > _"Instead, you can and should use an IAM role to manage temporary credentials for applications that run on an Amazon EC2 instance. When you use a role, you don't have to distribute long-term credentials (such as sign-in credentials or access keys) to an Amazon EC2 instance."_ > — [AWS Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#id_roles_use_switch-role-ec2)
 
 *Sources: GustavoFreze_Questions*
 
@@ -13274,9 +13276,9 @@ Which AWS service or feature identifies whether an Amazon S3 bucket or an IAM ro
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Sharing long-term access keys goes against best practices and still relies on an IAM user in Account B. - **B:** ✅ [CORRECT] A cross-account role in Account B trusts Account A and hands out temporary credentials, so no IAM users are needed in Account B. - **C:** ❌ [INCORRECT] SCPs set the maximum permissions for accounts in an organization. They never grant access by themselves. - **D:** ❌ [INCORRECT] Cognito user pools manage sign-in for the users of web and mobile apps, not workforce access to AWS accounts. **Official AWS Documentation Reference:** > _"You share resources in one account with users in a different account. By setting up cross-account access in this way, you don't have to create individual IAM users in each account."_ > — [AWS Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_cross-account-with-roles.html#tutorial_cross-account-with-roles) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Sharing long-term access keys goes against best practices and still relies on an IAM user in Account B. - **B:** ✅ [CORRECT] A cross-account role in Account B trusts Account A and hands out temporary credentials, so no IAM users are needed in Account B. - **C:** ❌ [INCORRECT] SCPs set the maximum permissions for accounts in an organization. They never grant access by themselves. - **D:** ❌ [INCORRECT] Cognito user pools manage sign-in for the users of web and mobile apps, not workforce access to AWS accounts. **Official AWS Documentation Reference:** > _"You share resources in one account with users in a different account. By setting up cross-account access in this way, you don't have to create individual IAM users in each account."_ > — [AWS Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_cross-account-with-roles.html#tutorial_cross-account-with-roles)
 
 *Sources: GustavoFreze_Questions*
 
@@ -13290,9 +13292,9 @@ Which AWS service or feature identifies whether an Amazon S3 bucket or an IAM ro
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Cognito is designed for the customers of web and mobile apps, not for workforce access to many AWS accounts. - **B:** ❌ [INCORRECT] IAM users in each account mean separate long-term credentials in every account, the opposite of signing in once. - **C:** ❌ [INCORRECT] RAM shares resources such as subnets across accounts. It does not authenticate users. - **D:** ✅ [CORRECT] IAM Identity Center connects to an existing identity provider and gives workforce users access to their assigned AWS accounts from one portal. **Official AWS Documentation Reference:** > _"The AWS access portal is a user-friendly web portal that provides your users with seamless access to all their assigned applications, AWS accounts, or both."_ > — [AWS Documentation](https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html#what-is) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Cognito is designed for the customers of web and mobile apps, not for workforce access to many AWS accounts. - **B:** ❌ [INCORRECT] IAM users in each account mean separate long-term credentials in every account, the opposite of signing in once. - **C:** ❌ [INCORRECT] RAM shares resources such as subnets across accounts. It does not authenticate users. - **D:** ✅ [CORRECT] IAM Identity Center connects to an existing identity provider and gives workforce users access to their assigned AWS accounts from one portal. **Official AWS Documentation Reference:** > _"The AWS access portal is a user-friendly web portal that provides your users with seamless access to all their assigned applications, AWS accounts, or both."_ > — [AWS Documentation](https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html#what-is)
 
 *Sources: GustavoFreze_Questions*
 
@@ -13308,7 +13310,7 @@ Which AWS service or feature identifies whether an Amazon S3 bucket or an IAM ro
 <details>
 <summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Least privilege is about granting only the permissions a task needs, not about where identities are managed. - **B:** ❌ [INCORRECT] Cross-account access lets identities in one account use resources in another. It does not bring in identities from outside AWS. - **C:** ✅ [CORRECT] With federation, an identity provider manages the user identities outside AWS and those identities receive permissions to use AWS resources, so no IAM users are needed. - **D:** ❌ [INCORRECT] SCPs set the maximum permissions for accounts in an organization. They do not authenticate users. **Official AWS Documentation Reference:** > _"With an identity provider (IdP), you can manage your user identities outside of AWS and give these external user identities permissions to use AWS resources in your account. This is useful if your organization already has its own identity system, such as a corporate user directory."_ > — [AWS Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers.html#id_roles_providers) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Least privilege is about granting only the permissions a task needs, not about where identities are managed. - **B:** ❌ [INCORRECT] Cross-account access lets identities in one account use resources in another. It does not bring in identities from outside AWS. - **C:** ✅ [CORRECT] With federation, an identity provider manages the user identities outside AWS and those identities receive permissions to use AWS resources, so no IAM users are needed. - **D:** ❌ [INCORRECT] SCPs set the maximum permissions for accounts in an organization. They do not authenticate users. **Official AWS Documentation Reference:** > _"With an identity provider (IdP), you can manage your user identities outside of AWS and give these external user identities permissions to use AWS resources in your account. This is useful if your organization already has its own identity system, such as a corporate user directory."_ > — [AWS Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers.html#id_roles_providers)
 
 *Sources: GustavoFreze_Questions*
 
@@ -13322,9 +13324,9 @@ Which AWS service or feature identifies whether an Amazon S3 bucket or an IAM ro
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Inline policies are embedded in one identity each, so every change must be repeated for all twenty users. - **B:** ✅ [CORRECT] Every user in a group receives the permissions of the policies attached to the group, and a new developer only needs to be added to it. - **C:** ❌ [INCORRECT] Sharing one IAM user removes individual credentials and makes it impossible to tell who did what. - **D:** ❌ [INCORRECT] SCPs limit the maximum permissions of accounts in an organization. They do not grant permissions to users. **Official AWS Documentation Reference:** > _"You can attach an identity-based policy to a user group so that all of the users in the user group receive the policy's permissions."_ > — [AWS Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_groups.html#id_groups) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Inline policies are embedded in one identity each, so every change must be repeated for all twenty users. - **B:** ✅ [CORRECT] Every user in a group receives the permissions of the policies attached to the group, and a new developer only needs to be added to it. - **C:** ❌ [INCORRECT] Sharing one IAM user removes individual credentials and makes it impossible to tell who did what. - **D:** ❌ [INCORRECT] SCPs limit the maximum permissions of accounts in an organization. They do not grant permissions to users. **Official AWS Documentation Reference:** > _"You can attach an identity-based policy to a user group so that all of the users in the user group receive the policy's permissions."_ > — [AWS Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_groups.html#id_groups)
 
 *Sources: GustavoFreze_Questions*
 
@@ -13338,9 +13340,9 @@ Which AWS service or feature identifies whether an Amazon S3 bucket or an IAM ro
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B, D)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Customers cannot change the permissions in AWS managed policies. They create customer managed policies for that. - **B:** ✅ [CORRECT] An AWS managed policy is a standalone policy that AWS creates and administers, and AWS updates it when new services or actions appear. - **C:** ❌ [INCORRECT] That describes inline policies, which keep a one-to-one relationship with a single identity. - **D:** ✅ [CORRECT] A single AWS managed policy can be attached to many principal entities, in one account or in different accounts. - **E:** ❌ [INCORRECT] AWS managed policies serve every customer, so they might not grant least privilege for a specific use case. **Official AWS Documentation Reference:** > _"An AWS managed policy is a standalone policy that is created and administered by AWS."_ > — [AWS Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html#aws-managed-policies) > _"Notice that a single AWS managed policy can be attached to principal entities in different AWS accounts, and to different principal entities in a single AWS account."_ > — [AWS Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html#aws-managed-policies) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Customers cannot change the permissions in AWS managed policies. They create customer managed policies for that. - **B:** ✅ [CORRECT] An AWS managed policy is a standalone policy that AWS creates and administers, and AWS updates it when new services or actions appear. - **C:** ❌ [INCORRECT] That describes inline policies, which keep a one-to-one relationship with a single identity. - **D:** ✅ [CORRECT] A single AWS managed policy can be attached to many principal entities, in one account or in different accounts. - **E:** ❌ [INCORRECT] AWS managed policies serve every customer, so they might not grant least privilege for a specific use case. **Official AWS Documentation Reference:** > _"An AWS managed policy is a standalone policy that is created and administered by AWS."_ > — [AWS Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html#aws-managed-policies) > _"Notice that a single AWS managed policy can be attached to principal entities in different AWS accounts, and to different principal entities in a single AWS account."_ > — [AWS Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html#aws-managed-policies)
 
 *Sources: GustavoFreze_Questions*
 
@@ -13354,9 +13356,9 @@ Which AWS service or feature identifies whether an Amazon S3 bucket or an IAM ro
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] When an access key might be compromised, AWS recommends updating the access key and deleting the previous one, so the exposed key stops working. - **B:** ❌ [INCORRECT] Access keys are separate from the console password, so changing the password leaves the exposed keys valid. - **C:** ❌ [INCORRECT] MFA protects console sign-in, but the exposed keys can still sign API requests unless policies require MFA. - **D:** ❌ [INCORRECT] CloudTrail helps monitor how the keys are used, but it does not stop anyone from using them. **Official AWS Documentation Reference:** > _"If there is a risk that the access key could be compromised, update the access key and delete the previous access key."_ > — [AWS Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/securing_access-keys.html#iam-user-access-keys) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] When an access key might be compromised, AWS recommends updating the access key and deleting the previous one, so the exposed key stops working. - **B:** ❌ [INCORRECT] Access keys are separate from the console password, so changing the password leaves the exposed keys valid. - **C:** ❌ [INCORRECT] MFA protects console sign-in, but the exposed keys can still sign API requests unless policies require MFA. - **D:** ❌ [INCORRECT] CloudTrail helps monitor how the keys are used, but it does not stop anyone from using them. **Official AWS Documentation Reference:** > _"If there is a risk that the access key could be compromised, update the access key and delete the previous access key."_ > — [AWS Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/securing_access-keys.html#iam-user-access-keys)
 
 *Sources: GustavoFreze_Questions*
 
@@ -13370,9 +13372,9 @@ Which AWS service or feature identifies whether an Amazon S3 bucket or an IAM ro
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Inspector finds software vulnerabilities and network exposure of workloads, but it does not check whether the root user has MFA. - **B:** ❌ [INCORRECT] Macie evaluates S3 buckets and finds sensitive data. It does not check security groups or the root user. - **C:** ❌ [INCORRECT] Detective investigates the root cause of security findings. It does not run best practice checks. - **D:** ✅ [CORRECT] Trusted Advisor security checks include Security Groups Specific Ports Unrestricted and MFA on Root Account. **Official AWS Documentation Reference:** > _"Checks the root user credentials of an account and warns if multi-factor authentication (MFA) is not enabled."_ > — [AWS Documentation](https://docs.aws.amazon.com/awssupport/latest/user/security-checks.html#security-checks) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Inspector finds software vulnerabilities and network exposure of workloads, but it does not check whether the root user has MFA. - **B:** ❌ [INCORRECT] Macie evaluates S3 buckets and finds sensitive data. It does not check security groups or the root user. - **C:** ❌ [INCORRECT] Detective investigates the root cause of security findings. It does not run best practice checks. - **D:** ✅ [CORRECT] Trusted Advisor security checks include Security Groups Specific Ports Unrestricted and MFA on Root Account. **Official AWS Documentation Reference:** > _"Checks the root user credentials of an account and warns if multi-factor authentication (MFA) is not enabled."_ > — [AWS Documentation](https://docs.aws.amazon.com/awssupport/latest/user/security-checks.html#security-checks)
 
 *Sources: GustavoFreze_Questions*
 
@@ -13386,9 +13388,9 @@ Which AWS service or feature identifies whether an Amazon S3 bucket or an IAM ro
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A, D)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] Least privilege and centralized identity management are part of the principle to implement a strong identity foundation. - **B:** ❌ [INCORRECT] This follows the reliability principle to scale horizontally, not a security principle. - **C:** ❌ [INCORRECT] This follows the cost optimization principle to adopt a consumption model. - **D:** ✅ [CORRECT] Monitoring, alerting, and auditing actions and changes in real time is the security principle to maintain traceability. - **E:** ❌ [INCORRECT] This follows the performance efficiency principle to go global in minutes. **Official AWS Documentation Reference:** > _"Implement the principle of least privilege and enforce separation of duties with appropriate authorization for each interaction with your AWS resources. Centralize identity management, and aim to eliminate reliance on long-term static credentials."_ > — [AWS Documentation](https://docs.aws.amazon.com/wellarchitected/latest/framework/sec-design.html) > _"Maintain traceability: Monitor, alert, and audit actions and changes to your environment in real time."_ > — [AWS Documentation](https://docs.aws.amazon.com/wellarchitected/latest/framework/sec-design.html) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] Least privilege and centralized identity management are part of the principle to implement a strong identity foundation. - **B:** ❌ [INCORRECT] This follows the reliability principle to scale horizontally, not a security principle. - **C:** ❌ [INCORRECT] This follows the cost optimization principle to adopt a consumption model. - **D:** ✅ [CORRECT] Monitoring, alerting, and auditing actions and changes in real time is the security principle to maintain traceability. - **E:** ❌ [INCORRECT] This follows the performance efficiency principle to go global in minutes. **Official AWS Documentation Reference:** > _"Implement the principle of least privilege and enforce separation of duties with appropriate authorization for each interaction with your AWS resources. Centralize identity management, and aim to eliminate reliance on long-term static credentials."_ > — [AWS Documentation](https://docs.aws.amazon.com/wellarchitected/latest/framework/sec-design.html) > _"Maintain traceability: Monitor, alert, and audit actions and changes to your environment in real time."_ > — [AWS Documentation](https://docs.aws.amazon.com/wellarchitected/latest/framework/sec-design.html)
 
 *Sources: GustavoFreze_Questions*
 
@@ -13402,9 +13404,9 @@ Which AWS service or feature identifies whether an Amazon S3 bucket or an IAM ro
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] General purpose instances balance compute, memory and networking for common workloads such as web servers. - **B:** ❌ [INCORRECT] Memory optimized instances are for workloads that process large datasets in memory. - **C:** ❌ [INCORRECT] Storage optimized instances are for high I/O to local storage, not for processing power. - **D:** ✅ [CORRECT] Compute optimized instances are for compute-bound applications, with examples such as batch processing, media transcoding and dedicated game servers. **Official AWS Documentation Reference:** > _"Compute optimized instances are ideal for compute bound applications that benefit from high-performance processors. Some examples of workloads for compute instances are batch processing, media transcoding, and dedicated game servers."_ > — [AWS Documentation](https://aws.amazon.com/ec2/instance-types/#instance-categories) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] General purpose instances balance compute, memory and networking for common workloads such as web servers. - **B:** ❌ [INCORRECT] Memory optimized instances are for workloads that process large datasets in memory. - **C:** ❌ [INCORRECT] Storage optimized instances are for high I/O to local storage, not for processing power. - **D:** ✅ [CORRECT] Compute optimized instances are for compute-bound applications, with examples such as batch processing, media transcoding and dedicated game servers. **Official AWS Documentation Reference:** > _"Compute optimized instances are ideal for compute bound applications that benefit from high-performance processors. Some examples of workloads for compute instances are batch processing, media transcoding, and dedicated game servers."_ > — [AWS Documentation](https://aws.amazon.com/ec2/instance-types/#instance-categories)
 
 *Sources: GustavoFreze_Questions*
 
@@ -14680,7 +14682,7 @@ Which AWS service can generate information that can be used by external auditors
 - **D)** Amazon Inspector
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 AWS Config enables users to assess, audit, and evaluate the configurations of AWS
 resources. It provides information that can be used by external auditors to ensure
@@ -14706,7 +14708,7 @@ Which service can the company use to access AWS compliance documentation?
 - **D)** Amazon Inspector
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 The correct answer is B because AWS Artifact is a service that provides access to AWS
 compliance documentation, such as audit reports, security certifications, and agreements.
@@ -14806,7 +14808,7 @@ Which AWS service should the company use?
 - **D)** Amazon Macie
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 AWS Shield Advanced is a service that provides high levels of detection and near-real-time
 (NRT) mitigation against large and sophisticated distributed denial of service (DDoS)
@@ -14860,12 +14862,13 @@ A company has an AWS Business Support plan. The company needs to gain access to 
 AWS DDoS Response Team (DRT) to help mitigate DDoS events.
 Which AWS service or resource must the company use to meet these requirements?
 
-- **A)** AWS Shield Standard B. AWS Enterprise Support
+- **A)** AWS Shield Standard
+- **B)** AWS Enterprise Support
 - **C)** AWS WAF
 - **D)** AWS Shield Advanced
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
 AWS Shield Advanced provides enhanced protection against DDoS attacks and includes
 access to the AWS DDoS Response Team (DRT) to help mitigate complex DDoS events.
@@ -14901,7 +14904,7 @@ auditing. Amazon CloudWatch is a service that collects and tracks metrics, colle
 monitors log files, and sets alarms. AWS CloudTrail is a service that enables governance,
 compliance, operational auditing, and risk auditing of your AWS account. Amazon
 
-GuardDuty, AWS Shield, and AWS WAF are AWS services that provide security and
+ GuardDuty, AWS Shield, and AWS WAF are AWS services that provide security and
 protection for AWS resources, but they do not monitor and retain records of account
 activities. These concepts are explained in the AWS Cloud Practitioner Essentials course3.
 
@@ -14922,7 +14925,7 @@ Which AWS service will meet this requirement?
 - **D)** Amazon GuardDuty
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 **Correct Answer: ** ()
 
@@ -14957,7 +14960,7 @@ Which AWS service will help protect applications running on AWS from DDoS attack
 - **D)** Amazon Inspector
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 AWS Shield is a managed Distributed Denial of Service (DDoS) protection service that
 safeguards applications running on AWS. AWS Shield provides always-on detection and
@@ -15012,7 +15015,7 @@ Which AWS service will meet this requirement?
 - **D)** AWS WAF
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 Amazon Cognito is a service that provides identity management for mobile and web
 applications, allowing users to sign up, sign in, and access AWS resources with different
@@ -15068,7 +15071,7 @@ AWS Security Groups
 A company needs to identify who accessed an AWS service and what action was
 performed for a given time period.
 Which AWS service should the company use to meet this requirement?
-A. Amazon CloudWatch
+ A. Amazon CloudWatch
 
 - **B)** AWS CloudTrail
 - **C)** AWS Security Hub
@@ -15151,12 +15154,13 @@ traffic for specific attack patterns like SQL injection.
 Which AWS service is deployed to VPCs and provides protection from common network
 threats?
 
-- **A)** AWSShield B. AWSWAF
+- **A)** AWSShield
+- **B)** AWSWAF
 - **C)** AWS Network Firewall
 - **D)** AWS FirewallManager
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 AWS Network Firewall is a managed service that makes it easy to deploy essential
 network protections for all of your Amazon Virtual Private Clouds (VPCs). The service can
@@ -15247,7 +15251,7 @@ web applications?
 - **D)** AWS WAF
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
 AWS WAF is the AWS service or feature that offers HTTP attack protection to users
 running public-facing web applications. AWS WAF is a web application firewall that helps
@@ -15309,7 +15313,7 @@ Watch out for distractors testing similar AWS service boundaries. When the quest
 An AWS user wants to proactively detect when an instance or account might be
 compromised or if there are threats from attacks.
 Which AWS service should the user choose?
-A. Amazon GuardDuty
+ A. Amazon GuardDuty
 
 - **B)** AWS WAF
 - **C)** AWS Shield
@@ -15386,7 +15390,7 @@ Which AWS service or feature meets these requirements?
 - **D)** AWS Shield
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 **Correct Answer: ** ()
 
@@ -15459,7 +15463,7 @@ to the S3 bucket?
 - **D)** ACLs
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
 ACLs are an AWS service or feature that the developer can use to restrict read and write
 access to the S3 bucket. ACLs are access control lists that grant basic permissions to
@@ -15485,7 +15489,7 @@ can be u
 A company notices suspicious network activity against an application that is running on a
 fleet of Amazon EC2 instances. The suspicious activity is coming from a single IP address.
 Which AWS service should the company use to block access from this IP address?
-A. AWS Shield
+ A. AWS Shield
 
 - **B)** AWS Config
 - **C)** Amazon GuardDuty
@@ -16987,7 +16991,7 @@ A company is migrating its applications from on-premises to the AWS Cloud. The c
 wants to ensure that the applications are assigned only the minimum permissions that are
 needed to perform all operations.
 Which AWS service will meet these requirements'?
-A. AWS Identity and Access Management (IAM)
+ A. AWS Identity and Access Management (IAM)
 
 - **A)** AWS Identity and Access Management (IAM)
 - **B)** Amazon CloudWatch
@@ -17046,9 +17050,9 @@ Which actions should the company take to meet these requirements? (Select TWO.)
 - **E)** Use AWS Security Hub to certify the compliance of the application.
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: C, D)</b></summary>
 
-**Correct Answer: ** ()
+**Correct Answer:** `C, D`
 
 > **Domain Focus:** Security and Compliance | **Blueprint Area:** Topic 2.3: Perimeter Defense, Threat Detection & Firewalls
 
@@ -17094,7 +17098,7 @@ Security Hub also collects findings from partner security products using a stand
 AWS Security Finding Format, eliminating the need for time-consuming data parsing and
 normalization efforts. Customers can designate an administrator account that can access
 
-all findings across their accounts. Reference: AWS Security Hub Overview, AWS Security
+ all findings across their accounts. Reference: AWS Security Hub Overview, AWS Security
 Hub FAQs
 
 *Sources: Edurely_Questions, Amazon_CLF_C02_Nov2026_Recall_393Q, Consensus_Aligned*
@@ -17138,14 +17142,15 @@ Which AWS services or tools are designed to protect a workload from SQL injectio
 scripting, and DDoS attacks? (Select TWO.)
 
 - **A)** VPC endpoint
-- **B)** Virtual private gatewayQ C. AWS Shield Standard
-- **C)** AWS Config
-- **D)** AWS WAF
+- **B)** Virtual private gateway
+- **C)** AWS Shield Standard
+- **D)** AWS Config
+- **E)** AWS WAF
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: C, E)</b></summary>
 
-**Correct Answer: ** ()
+**Correct Answer:** `C, E`
 
 > **Domain Focus:** Security and Compliance | **Blueprint Area:** Topic 2.3: Perimeter Defense, Threat Detection & Firewalls
 
@@ -17568,7 +17573,7 @@ Which AWS service protects web applications against common exploits such as SQL 
 - **D)** Amazon Macie
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 AWS WAF (Web Application Firewall) filters and blocks common web exploits like SQL injection and XSS.
 
@@ -17588,7 +17593,7 @@ Which AWS service provides managed DDoS protection?
 - **D)** Amazon Macie
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 AWS Shield provides managed protection against Distributed Denial of Service attacks (Standard is automatic; Advanced is paid).
 
@@ -17608,7 +17613,7 @@ Which service is an intelligent threat-detection service that continuously monit
 - **D)** Amazon Macie
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 GuardDuty is a threat-detection service that analyses account and network activity to flag malicious behaviour.
 
@@ -17628,7 +17633,7 @@ Which service uses machine learning to discover and protect sensitive data such 
 - **D)** AWS KMS
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 Amazon Macie uses ML to discover, classify and protect sensitive data (e.g. PII) in S3.
 
@@ -17648,7 +17653,7 @@ Which service performs automated vulnerability assessments of EC2 instances and 
 - **D)** AWS Shield
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 Amazon Inspector automatically scans workloads (EC2, ECR images, Lambda) for software vulnerabilities and network exposure.
 
@@ -17668,7 +17673,7 @@ Which service securely stores database credentials and API keys and can automati
 - **D)** Amazon Inspector
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 AWS Secrets Manager stores secrets like DB credentials and can rotate them automatically.
 
@@ -17688,7 +17693,7 @@ Which pair correctly maps a control to what it protects?
 - **D)** WAF → encryption; Macie → DDoS
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 TLS/HTTPS protects data in transit; server-side/at-rest encryption protects stored data.
 
@@ -17708,7 +17713,7 @@ Which service enables interactive, no-code BI dashboards for business users?
 - **D)** Amazon Inspector
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 Amazon QuickSight is the managed business-intelligence dashboarding service.
 
@@ -17728,7 +17733,7 @@ A gaming company needs global users to reach the nearest healthy application end
 - **D)** Amazon RDS
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 AWS Global Accelerator routes user traffic over the AWS global network to the nearest healthy endpoint, improving performance.
 
@@ -17801,9 +17806,9 @@ A developer needs to maintain a development environment infrastructure and a pro
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: C, D)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Scanning workloads for known software vulnerabilities is the job of Amazon Inspector, which can send its findings to Security Hub CSPM. - **B:** ❌ [INCORRECT] Filtering web requests is the job of AWS WAF. - **C:** ✅ [CORRECT] Security Hub CSPM, the original Security Hub posture service under its current name, runs checks against AWS best practices and external frameworks such as CIS, PCI DSS and NIST. - **D:** ✅ [CORRECT] Security Hub CSPM collects findings from GuardDuty, Inspector, Macie and supported third-party products, which gives a single view of security issues. - **E:** ❌ [INCORRECT] AWS compliance reports such as SOC reports are downloaded from AWS Artifact. **Official AWS Documentation Reference:** > _"These include the AWS Foundational Security Best Practices (FSBP) standard developed by AWS, and external compliance frameworks such as the Center for Internet Security (CIS), the Payment Card Industry Data Security Standard (PCI DSS), and the National Institute of Standards and Technology (NIST)."_ > — [AWS Documentation](https://docs.aws.amazon.com/securityhub/latest/userguide/what-is-securityhub.html#what-is-securityhub) > _"In addition to generating control findings, Security Hub CSPM also receives findings from other AWS services—such as Amazon GuardDuty, Amazon Inspector, and Amazon Macie— and supported third-party products. This gives you a single pane of glass into a variety of security-related issues."_ > — [AWS Documentation](https://docs.aws.amazon.com/securityhub/latest/userguide/what-is-securityhub.html#what-is-securityhub) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Scanning workloads for known software vulnerabilities is the job of Amazon Inspector, which can send its findings to Security Hub CSPM. - **B:** ❌ [INCORRECT] Filtering web requests is the job of AWS WAF. - **C:** ✅ [CORRECT] Security Hub CSPM, the original Security Hub posture service under its current name, runs checks against AWS best practices and external frameworks such as CIS, PCI DSS and NIST. - **D:** ✅ [CORRECT] Security Hub CSPM collects findings from GuardDuty, Inspector, Macie and supported third-party products, which gives a single view of security issues. - **E:** ❌ [INCORRECT] AWS compliance reports such as SOC reports are downloaded from AWS Artifact. **Official AWS Documentation Reference:** > _"These include the AWS Foundational Security Best Practices (FSBP) standard developed by AWS, and external compliance frameworks such as the Center for Internet Security (CIS), the Payment Card Industry Data Security Standard (PCI DSS), and the National Institute of Standards and Technology (NIST)."_ > — [AWS Documentation](https://docs.aws.amazon.com/securityhub/latest/userguide/what-is-securityhub.html#what-is-securityhub) > _"In addition to generating control findings, Security Hub CSPM also receives findings from other AWS services—such as Amazon GuardDuty, Amazon Inspector, and Amazon Macie— and supported third-party products. This gives you a single pane of glass into a variety of security-related issues."_ > — [AWS Documentation](https://docs.aws.amazon.com/securityhub/latest/userguide/what-is-securityhub.html#what-is-securityhub)
 
 *Sources: GustavoFreze_Questions*
 
@@ -17817,9 +17822,9 @@ A developer needs to maintain a development environment infrastructure and a pro
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] GuardDuty detects suspicious activity such as compromised credentials and cryptomining. It does not assess software packages for known vulnerabilities. - **B:** ✅ [CORRECT] Inspector automatically discovers EC2 instances, ECR container images and Lambda functions and scans them for software vulnerabilities and unintended network exposure. - **C:** ❌ [INCORRECT] Macie discovers sensitive data in Amazon S3. It does not scan instances or images. - **D:** ❌ [INCORRECT] Detective helps investigate the root cause of security findings. It does not scan for vulnerabilities. **Official AWS Documentation Reference:** > _"Amazon Inspector is a vulnerability management service that automatically discovers workloads and continually scans them for software vulnerabilities and unintended network exposure."_ > — [AWS Documentation](https://docs.aws.amazon.com/inspector/latest/user/what-is-inspector.html#what-is-inspector) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] GuardDuty detects suspicious activity such as compromised credentials and cryptomining. It does not assess software packages for known vulnerabilities. - **B:** ✅ [CORRECT] Inspector automatically discovers EC2 instances, ECR container images and Lambda functions and scans them for software vulnerabilities and unintended network exposure. - **C:** ❌ [INCORRECT] Macie discovers sensitive data in Amazon S3. It does not scan instances or images. - **D:** ❌ [INCORRECT] Detective helps investigate the root cause of security findings. It does not scan for vulnerabilities. **Official AWS Documentation Reference:** > _"Amazon Inspector is a vulnerability management service that automatically discovers workloads and continually scans them for software vulnerabilities and unintended network exposure."_ > — [AWS Documentation](https://docs.aws.amazon.com/inspector/latest/user/what-is-inspector.html#what-is-inspector)
 
 *Sources: GustavoFreze_Questions*
 
@@ -17833,9 +17838,9 @@ A developer needs to maintain a development environment infrastructure and a pro
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] AWS WAF is a web application firewall that inspects HTTP(S) requests to resources such as CloudFront and can block attack patterns like SQL injection and XSS. - **B:** ❌ [INCORRECT] Shield Standard defends against common network and transport layer DDoS attacks, not against malicious content inside web requests. - **C:** ❌ [INCORRECT] GuardDuty detects threats by analyzing logs. It does not filter requests to the application. - **D:** ❌ [INCORRECT] Inspector scans workloads for software vulnerabilities. It does not block incoming requests. **Official AWS Documentation Reference:** > _"With AWS WAF, you can create security rules that control bot traffic and block common attack patterns such as SQL injection or cross-site scripting (XSS)."_ > — [AWS Documentation](https://aws.amazon.com/waf/#why-aws-waf) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] AWS WAF is a web application firewall that inspects HTTP(S) requests to resources such as CloudFront and can block attack patterns like SQL injection and XSS. - **B:** ❌ [INCORRECT] Shield Standard defends against common network and transport layer DDoS attacks, not against malicious content inside web requests. - **C:** ❌ [INCORRECT] GuardDuty detects threats by analyzing logs. It does not filter requests to the application. - **D:** ❌ [INCORRECT] Inspector scans workloads for software vulnerabilities. It does not block incoming requests. **Official AWS Documentation Reference:** > _"With AWS WAF, you can create security rules that control bot traffic and block common attack patterns such as SQL injection or cross-site scripting (XSS)."_ > — [AWS Documentation](https://aws.amazon.com/waf/#why-aws-waf)
 
 *Sources: GustavoFreze_Questions*
 
@@ -17849,9 +17854,9 @@ A developer needs to maintain a development environment infrastructure and a pro
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Shield Standard is automatic and free, but it does not include the Shield Response Team or cost protection. - **B:** ❌ [INCORRECT] WAF filters web requests with rules. It does not provide DDoS cost protection or a response team. - **C:** ❌ [INCORRECT] Firewall Manager applies protections across accounts centrally. The response team and the cost protection come from Shield Advanced. - **D:** ✅ [CORRECT] Shield Advanced adds protection against larger attacks, 24/7 access to the Shield Response Team with an eligible support plan, and DDoS cost protection against scaling charges. **Official AWS Documentation Reference:** > _"Shield Advanced also gives you 24/7 access to the AWS Shield Response Team (SRT) and protection against DDoS-related spikes in your EC2, ELB, CloudFront, Global Accelerator, and Route 53 charges."_ > — [AWS Documentation](https://aws.amazon.com/shield/features/#aws-shield-advanced--15i3hzr) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Shield Standard is automatic and free, but it does not include the Shield Response Team or cost protection. - **B:** ❌ [INCORRECT] WAF filters web requests with rules. It does not provide DDoS cost protection or a response team. - **C:** ❌ [INCORRECT] Firewall Manager applies protections across accounts centrally. The response team and the cost protection come from Shield Advanced. - **D:** ✅ [CORRECT] Shield Advanced adds protection against larger attacks, 24/7 access to the Shield Response Team with an eligible support plan, and DDoS cost protection against scaling charges. **Official AWS Documentation Reference:** > _"Shield Advanced also gives you 24/7 access to the AWS Shield Response Team (SRT) and protection against DDoS-related spikes in your EC2, ELB, CloudFront, Global Accelerator, and Route 53 charges."_ > — [AWS Documentation](https://aws.amazon.com/shield/features/#aws-shield-advanced--15i3hzr)
 
 *Sources: GustavoFreze_Questions*
 
@@ -17865,9 +17870,9 @@ A developer needs to maintain a development environment infrastructure and a pro
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Shield Advanced protects resources against DDoS attacks. It does not deploy WAF rules across accounts. - **B:** ✅ [CORRECT] Firewall Manager lets the company set up protections such as WAF rules once and applies them across accounts and resources, even as new ones are added. - **C:** ❌ [INCORRECT] Security Hub aggregates findings and checks security posture. It does not deploy firewall rules. - **D:** ❌ [INCORRECT] Config evaluates resource configurations against rules, but it does not deploy WAF rules to accounts. **Official AWS Documentation Reference:** > _"With Firewall Manager, you set up your protections just once and the service automatically applies them across your accounts and resources, even as you add new accounts and resources."_ > — [AWS Documentation](https://docs.aws.amazon.com/waf/latest/developerguide/what-is-aws-waf.html#fms-intro) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Shield Advanced protects resources against DDoS attacks. It does not deploy WAF rules across accounts. - **B:** ✅ [CORRECT] Firewall Manager lets the company set up protections such as WAF rules once and applies them across accounts and resources, even as new ones are added. - **C:** ❌ [INCORRECT] Security Hub aggregates findings and checks security posture. It does not deploy firewall rules. - **D:** ❌ [INCORRECT] Config evaluates resource configurations against rules, but it does not deploy WAF rules to accounts. **Official AWS Documentation Reference:** > _"With Firewall Manager, you set up your protections just once and the service automatically applies them across your accounts and resources, even as you add new accounts and resources."_ > — [AWS Documentation](https://docs.aws.amazon.com/waf/latest/developerguide/what-is-aws-waf.html#fms-intro)
 
 *Sources: GustavoFreze_Questions*
 
@@ -17883,7 +17888,7 @@ A developer needs to maintain a development environment infrastructure and a pro
 <details>
 <summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Inspector scans for software vulnerabilities and network exposure, not for suspicious activity in logs. - **B:** ❌ [INCORRECT] Macie discovers sensitive data in S3. It does not analyze flow logs or DNS logs for threats. - **C:** ✅ [CORRECT] GuardDuty ingests CloudTrail management events, VPC flow logs and DNS logs and uses threat intelligence and machine learning to detect activity such as compromised credentials and cryptomining. - **D:** ❌ [INCORRECT] Trusted Advisor checks configurations against best practices. It does not detect active threats in logs. **Official AWS Documentation Reference:** > _"When you enable GuardDuty in an AWS account, GuardDuty automatically starts ingesting the foundational data sources associated with that account. These data sources include AWS CloudTrail management events, VPC flow logs (from Amazon EC2 instances), and DNS logs."_ > — [AWS Documentation](https://docs.aws.amazon.com/guardduty/latest/ug/what-is-guardduty.html#features-of-guardduty) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Inspector scans for software vulnerabilities and network exposure, not for suspicious activity in logs. - **B:** ❌ [INCORRECT] Macie discovers sensitive data in S3. It does not analyze flow logs or DNS logs for threats. - **C:** ✅ [CORRECT] GuardDuty ingests CloudTrail management events, VPC flow logs and DNS logs and uses threat intelligence and machine learning to detect activity such as compromised credentials and cryptomining. - **D:** ❌ [INCORRECT] Trusted Advisor checks configurations against best practices. It does not detect active threats in logs. **Official AWS Documentation Reference:** > _"When you enable GuardDuty in an AWS account, GuardDuty automatically starts ingesting the foundational data sources associated with that account. These data sources include AWS CloudTrail management events, VPC flow logs (from Amazon EC2 instances), and DNS logs."_ > — [AWS Documentation](https://docs.aws.amazon.com/guardduty/latest/ug/what-is-guardduty.html#features-of-guardduty)
 
 *Sources: GustavoFreze_Questions*
 
@@ -17899,7 +17904,7 @@ A developer needs to maintain a development environment infrastructure and a pro
 <details>
 <summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Artifact provides AWS compliance documents, not third-party products. - **B:** ❌ [INCORRECT] Service Catalog lets an organization manage catalogs of IT services it has already approved. It is not where the company buys software from vendors. - **C:** ✅ [CORRECT] AWS Marketplace is a curated catalog to find, buy and deploy third-party software, including security products, with the charges on the AWS bill. - **D:** ❌ [INCORRECT] Security Hub aggregates security findings, including those from partner products, but it is not a store for buying them. **Official AWS Documentation Reference:** > _"AWS Marketplace is a curated digital catalog that you can use to find, buy, deploy, and manage third-party software, data, and services that you need to build solutions and run your businesses."_ > — [AWS Documentation](https://docs.aws.amazon.com/marketplace/latest/buyerguide/what-is-marketplace.html#what-is-marketplace) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Artifact provides AWS compliance documents, not third-party products. - **B:** ❌ [INCORRECT] Service Catalog lets an organization manage catalogs of IT services it has already approved. It is not where the company buys software from vendors. - **C:** ✅ [CORRECT] AWS Marketplace is a curated catalog to find, buy and deploy third-party software, including security products, with the charges on the AWS bill. - **D:** ❌ [INCORRECT] Security Hub aggregates security findings, including those from partner products, but it is not a store for buying them. **Official AWS Documentation Reference:** > _"AWS Marketplace is a curated digital catalog that you can use to find, buy, deploy, and manage third-party software, data, and services that you need to build solutions and run your businesses."_ > — [AWS Documentation](https://docs.aws.amazon.com/marketplace/latest/buyerguide/what-is-marketplace.html#what-is-marketplace)
 
 *Sources: GustavoFreze_Questions*
 
@@ -17913,9 +17918,9 @@ A developer needs to maintain a development environment infrastructure and a pro
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] Macie uses machine learning and pattern matching to discover sensitive data, including many types of PII, in S3 objects. - **B:** ❌ [INCORRECT] Inspector scans compute workloads for vulnerabilities. It does not inspect the content of S3 objects. - **C:** ❌ [INCORRECT] GuardDuty detects threats and malware, but it does not report which objects contain sensitive data. - **D:** ❌ [INCORRECT] Config records bucket configurations, not the data inside the objects. **Official AWS Documentation Reference:** > _"To discover sensitive data with Macie, you can use built-in criteria and techniques, such as machine learning and pattern matching, to analyze objects in S3 buckets."_ > — [AWS Documentation](https://docs.aws.amazon.com/macie/latest/user/what-is-macie.html#macie-features) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] Macie uses machine learning and pattern matching to discover sensitive data, including many types of PII, in S3 objects. - **B:** ❌ [INCORRECT] Inspector scans compute workloads for vulnerabilities. It does not inspect the content of S3 objects. - **C:** ❌ [INCORRECT] GuardDuty detects threats and malware, but it does not report which objects contain sensitive data. - **D:** ❌ [INCORRECT] Config records bucket configurations, not the data inside the objects. **Official AWS Documentation Reference:** > _"To discover sensitive data with Macie, you can use built-in criteria and techniques, such as machine learning and pattern matching, to analyze objects in S3 buckets."_ > — [AWS Documentation](https://docs.aws.amazon.com/macie/latest/user/what-is-macie.html#macie-features)
 
 *Sources: GustavoFreze_Questions*
 
@@ -17929,9 +17934,9 @@ A developer needs to maintain a development environment infrastructure and a pro
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A, E)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] All AWS customers benefit from the automatic protection of Shield Standard at no additional charge. - **B:** ❌ [INCORRECT] Access to the Shield Response Team is a feature of Shield Advanced. - **C:** ❌ [INCORRECT] Blocking SQL injection is the job of AWS WAF rules. - **D:** ❌ [INCORRECT] Shield Standard needs no subscription. Shield Advanced is the tier that requires subscribing and adding protection to resources. - **E:** ✅ [CORRECT] Shield Standard defends against the most common, frequently occurring network and transport layer DDoS attacks. **Official AWS Documentation Reference:** > _"All AWS customers benefit from the automatic protection of Shield Standard, at no additional charge."_ > — [AWS Documentation](https://docs.aws.amazon.com/waf/latest/developerguide/ddos-standard-summary.html#ddos-standard-summary) > _"Shield Standard defends against the most common, frequently occurring network and transport layer DDoS attacks that target your website or applications."_ > — [AWS Documentation](https://docs.aws.amazon.com/waf/latest/developerguide/ddos-standard-summary.html#ddos-standard-summary) </details> --- ## Domain 3: Cloud Technology and Services (34%)
+**Option Rationales:** - **A:** ✅ [CORRECT] All AWS customers benefit from the automatic protection of Shield Standard at no additional charge. - **B:** ❌ [INCORRECT] Access to the Shield Response Team is a feature of Shield Advanced. - **C:** ❌ [INCORRECT] Blocking SQL injection is the job of AWS WAF rules. - **D:** ❌ [INCORRECT] Shield Standard needs no subscription. Shield Advanced is the tier that requires subscribing and adding protection to resources. - **E:** ✅ [CORRECT] Shield Standard defends against the most common, frequently occurring network and transport layer DDoS attacks. **Official AWS Documentation Reference:** > _"All AWS customers benefit from the automatic protection of Shield Standard, at no additional charge."_ > — [AWS Documentation](https://docs.aws.amazon.com/waf/latest/developerguide/ddos-standard-summary.html#ddos-standard-summary) > _"Shield Standard defends against the most common, frequently occurring network and transport layer DDoS attacks that target your website or applications."_ > — [AWS Documentation](https://docs.aws.amazon.com/waf/latest/developerguide/ddos-standard-summary.html#ddos-standard-summary)
 
 *Sources: GustavoFreze_Questions*
 
@@ -17947,7 +17952,7 @@ A developer needs to maintain a development environment infrastructure and a pro
 <details>
 <summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] GuardDuty detects threats from activity in logs such as VPC flow logs and DNS logs. It does not evaluate security groups and network ACLs for open paths. - **B:** ❌ [INCORRECT] Shield protects against DDoS attacks. It does not report which ports of an instance are reachable. - **C:** ✅ [CORRECT] Inspector network reachability findings show open network paths to EC2 instances from VPC edges such as an internet gateway, and they highlight overly permissive security groups, network ACLs or internet gateways. - **D:** ❌ [INCORRECT] AWS WAF filters HTTP requests to web applications. It does not analyze the network configuration of the VPC. **Official AWS Documentation Reference:** > _"These findings highlight network configurations that may be overly permissive, such as mismanaged security groups, Access Control Lists, or internet gateways, or that may allow for potentially malicious access."_ > — [AWS Documentation](https://docs.aws.amazon.com/inspector/latest/user/findings-types.html#findings-types-network) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] GuardDuty detects threats from activity in logs such as VPC flow logs and DNS logs. It does not evaluate security groups and network ACLs for open paths. - **B:** ❌ [INCORRECT] Shield protects against DDoS attacks. It does not report which ports of an instance are reachable. - **C:** ✅ [CORRECT] Inspector network reachability findings show open network paths to EC2 instances from VPC edges such as an internet gateway, and they highlight overly permissive security groups, network ACLs or internet gateways. - **D:** ❌ [INCORRECT] AWS WAF filters HTTP requests to web applications. It does not analyze the network configuration of the VPC. **Official AWS Documentation Reference:** > _"These findings highlight network configurations that may be overly permissive, such as mismanaged security groups, Access Control Lists, or internet gateways, or that may allow for potentially malicious access."_ > — [AWS Documentation](https://docs.aws.amazon.com/inspector/latest/user/findings-types.html#findings-types-network)
 
 *Sources: GustavoFreze_Questions*
 
@@ -18752,7 +18757,7 @@ What is the MOST secure way to store passwords on AWS?
 - **D)** Store passwords in AWS Secrets Manager.
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 AWS Secrets Manageris the most secure way to store and manage sensitive information,
 such as passwords, database credentials, and API keys. Secrets Manager allows you to:
@@ -18761,7 +18766,7 @@ Automatically manage secret rotation without disrupting applications.
 Integrate with AWS services and third-party applications to retrieve secrets securely.
 Why other options are not suitable:
 
-A . Store passwords in an Amazon S3 bucket: Although S3 is secure, it is not designed for
+ A . Store passwords in an Amazon S3 bucket: Although S3 is secure, it is not designed for
 secret management. It lacks built-in secret rotation and fine-grained access control for
 sensitive data.
 B . Store passwords as AWS CloudFormation parameters: CloudFormation is used for
@@ -18788,7 +18793,7 @@ Which credentials or keys does the application need for authentication?
 - **D)** AWS Key Management Service (AWS KMS) keys
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 IAM access keys are long-term credentials that consist of an access key ID and a secret
 access key. You use access keys to sign programmatic requests that you make to AWS. If
@@ -18816,7 +18821,7 @@ maximum security?
 - **D)** AWS Key Management Service (AWS KMS)
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 AWS Secrets Manager is the AWS service where database credentials should be stored
 for maximum security. AWS Secrets Manager helps to protect the secrets, such as
@@ -18845,7 +18850,7 @@ overhead?
 - **D)** AWS Managed Services
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 AWS Secrets Manager is a service that helps you protect access to your applications,
 services, and IT resources. This service enables you to easily rotate, manage, and retrieve
@@ -18904,7 +18909,7 @@ Which AWS service can a company use to manage encryption keys in the cloud?
 - **D)** AWS Directory Service
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 AWS CloudHSM provides cloud-based hardware security modules that securely generate,
 store, and use cryptographic keys. Customers have control over the HSM users and keys
@@ -18936,7 +18941,7 @@ Which AWS service will provide this information?
 - **D)** AWS Certificate Manager (ACM)
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 AWS Artifact is the service that will provide the information about whether a specific AWS
 service is compliant with specific compliance frameworks. AWS Artifact is a self-service
@@ -19518,7 +19523,7 @@ Which service creates and manages cryptographic keys and integrates with many AW
 - **D)** AWS Config
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 AWS KMS creates and controls encryption keys and integrates with services to encrypt data.
 
@@ -19538,7 +19543,7 @@ Which statement about AWS-managed encryption at rest is correct by default for m
 - **D)** Encryption requires the Enterprise support plan
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Many services offer encryption at rest with AWS-managed keys by default, and customer-managed KMS keys as an option.
 
@@ -19554,9 +19559,9 @@ Many services offer encryption at rest with AWS-managed keys by default, and cus
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A, E)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] TLS encrypts the traffic between the clients and the load balancer while it travels over the network. - **B:** ❌ [INCORRECT] Default bucket encryption protects objects while they are stored, which is encryption at rest. - **C:** ❌ [INCORRECT] EBS encryption protects the data stored on the volumes, which is encryption at rest. - **D:** ❌ [INCORRECT] Encrypting snapshots protects backup data while it is stored, which is encryption at rest. - **E:** ✅ [CORRECT] An IPsec VPN encrypts the traffic between the two networks, which protects the data while it moves between them. **Official AWS Documentation Reference:** > _"Elastic Load Balancing simplifies the process of building secure web applications by terminating HTTPS and TLS traffic from clients at the load balancer. The load balancer performs the work of encrypting and decrypting the traffic, instead of requiring each EC2 instance to handle the work for TLS termination."_ > — [AWS Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/data-protection.html#encryption-transit) > _"An encrypted link where data can pass from the customer network to or from AWS."_ > — [AWS Documentation](https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html#concepts) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] TLS encrypts the traffic between the clients and the load balancer while it travels over the network. - **B:** ❌ [INCORRECT] Default bucket encryption protects objects while they are stored, which is encryption at rest. - **C:** ❌ [INCORRECT] EBS encryption protects the data stored on the volumes, which is encryption at rest. - **D:** ❌ [INCORRECT] Encrypting snapshots protects backup data while it is stored, which is encryption at rest. - **E:** ✅ [CORRECT] An IPsec VPN encrypts the traffic between the two networks, which protects the data while it moves between them. **Official AWS Documentation Reference:** > _"Elastic Load Balancing simplifies the process of building secure web applications by terminating HTTPS and TLS traffic from clients at the load balancer. The load balancer performs the work of encrypting and decrypting the traffic, instead of requiring each EC2 instance to handle the work for TLS termination."_ > — [AWS Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/data-protection.html#encryption-transit) > _"An encrypted link where data can pass from the customer network to or from AWS."_ > — [AWS Documentation](https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html#concepts)
 
 *Sources: GustavoFreze_Questions*
 
@@ -19570,9 +19575,9 @@ Many services offer encryption at rest with AWS-managed keys by default, and cus
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] ACM creates, stores and renews public and private SSL/TLS certificates for integrated services such as Elastic Load Balancing and CloudFront. - **B:** ❌ [INCORRECT] KMS creates and controls the keys that encrypt and sign data. It does not issue TLS certificates for websites. - **C:** ❌ [INCORRECT] Secrets Manager stores and rotates secrets such as database credentials. For certificates, AWS recommends ACM. - **D:** ❌ [INCORRECT] CloudHSM provides dedicated hardware security modules that the customer manages. It does not issue and renew website certificates. **Official AWS Documentation Reference:** > _"AWS Certificate Manager (ACM) handles the complexity of creating, storing, and renewing public and private SSL/TLS X.509 certificates and keys that protect your AWS websites and applications."_ > — [AWS Documentation](https://docs.aws.amazon.com/acm/latest/userguide/acm-overview.html#acm-overview) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] ACM creates, stores and renews public and private SSL/TLS certificates for integrated services such as Elastic Load Balancing and CloudFront. - **B:** ❌ [INCORRECT] KMS creates and controls the keys that encrypt and sign data. It does not issue TLS certificates for websites. - **C:** ❌ [INCORRECT] Secrets Manager stores and rotates secrets such as database credentials. For certificates, AWS recommends ACM. - **D:** ❌ [INCORRECT] CloudHSM provides dedicated hardware security modules that the customer manages. It does not issue and renew website certificates. **Official AWS Documentation Reference:** > _"AWS Certificate Manager (ACM) handles the complexity of creating, storing, and renewing public and private SSL/TLS X.509 certificates and keys that protect your AWS websites and applications."_ > — [AWS Documentation](https://docs.aws.amazon.com/acm/latest/userguide/acm-overview.html#acm-overview)
 
 *Sources: GustavoFreze_Questions*
 
@@ -19586,9 +19591,9 @@ Many services offer encryption at rest with AWS-managed keys by default, and cus
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] KMS creates and controls the keys that encrypt data, protects them in validated hardware security modules and uses key policies so only trusted users can use them. - **B:** ❌ [INCORRECT] ACM manages SSL/TLS certificates for encryption in transit, not keys for data at rest. - **C:** ❌ [INCORRECT] Macie discovers sensitive data in S3. It does not create or manage encryption keys. - **D:** ❌ [INCORRECT] Secrets Manager stores secrets such as passwords. For encryption keys, AWS recommends KMS. **Official AWS Documentation Reference:** > _"AWS Key Management Service (AWS KMS) is an AWS managed service that makes it easy for you to create and control the keys used to encrypt and sign your data."_ > — [AWS Documentation](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html#overview) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] KMS creates and controls the keys that encrypt data, protects them in validated hardware security modules and uses key policies so only trusted users can use them. - **B:** ❌ [INCORRECT] ACM manages SSL/TLS certificates for encryption in transit, not keys for data at rest. - **C:** ❌ [INCORRECT] Macie discovers sensitive data in S3. It does not create or manage encryption keys. - **D:** ❌ [INCORRECT] Secrets Manager stores secrets such as passwords. For encryption keys, AWS recommends KMS. **Official AWS Documentation Reference:** > _"AWS Key Management Service (AWS KMS) is an AWS managed service that makes it easy for you to create and control the keys used to encrypt and sign your data."_ > — [AWS Documentation](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html#overview)
 
 *Sources: GustavoFreze_Questions*
 
@@ -19604,7 +19609,7 @@ Many services offer encryption at rest with AWS-managed keys by default, and cus
 <details>
 <summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] KMS manages encryption keys. It does not store database passwords or rotate them. - **B:** ❌ [INCORRECT] ACM manages SSL/TLS certificates, not database credentials. - **C:** ✅ [CORRECT] Secrets Manager stores credentials that the application retrieves at runtime instead of hard coding them, and it can rotate them on an automatic schedule. - **D:** ❌ [INCORRECT] Cognito handles sign-up and sign-in for the users of web and mobile apps. It does not store database passwords. **Official AWS Documentation Reference:** > _"With Secrets Manager, you can configure an automatic rotation schedule for your secrets. This enables you to replace long-term secrets with short-term ones, significantly reducing the risk of compromise."_ > — [AWS Documentation](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html#intro) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] KMS manages encryption keys. It does not store database passwords or rotate them. - **B:** ❌ [INCORRECT] ACM manages SSL/TLS certificates, not database credentials. - **C:** ✅ [CORRECT] Secrets Manager stores credentials that the application retrieves at runtime instead of hard coding them, and it can rotate them on an automatic schedule. - **D:** ❌ [INCORRECT] Cognito handles sign-up and sign-in for the users of web and mobile apps. It does not store database passwords. **Official AWS Documentation Reference:** > _"With Secrets Manager, you can configure an automatic rotation schedule for your secrets. This enables you to replace long-term secrets with short-term ones, significantly reducing the risk of compromise."_ > — [AWS Documentation](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html#intro)
 
 *Sources: GustavoFreze_Questions*
 
@@ -19618,9 +19623,9 @@ Many services offer encryption at rest with AWS-managed keys by default, and cus
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Secrets Manager is built for credentials that need automatic rotation and is billed per secret, which is more than this configuration data needs. - **B:** ❌ [INCORRECT] Config records the configuration of AWS resources. It is not a store for application settings. - **C:** ❌ [INCORRECT] KMS creates and manages encryption keys. It can encrypt the values but does not store configuration data. - **D:** ✅ [CORRECT] Parameter Store securely stores, organizes and retrieves configuration data such as AMI IDs and license keys, encrypts `SecureString` values with KMS, and its standard tier is free. **Official AWS Documentation Reference:** > _"Standard tier free; advanced tier and higher throughput billed"_ > — [AWS Documentation](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html#parameter-store-use-cases) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Secrets Manager is built for credentials that need automatic rotation and is billed per secret, which is more than this configuration data needs. - **B:** ❌ [INCORRECT] Config records the configuration of AWS resources. It is not a store for application settings. - **C:** ❌ [INCORRECT] KMS creates and manages encryption keys. It can encrypt the values but does not store configuration data. - **D:** ✅ [CORRECT] Parameter Store securely stores, organizes and retrieves configuration data such as AMI IDs and license keys, encrypts `SecureString` values with KMS, and its standard tier is free. **Official AWS Documentation Reference:** > _"Standard tier free; advanced tier and higher throughput billed"_ > — [AWS Documentation](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html#parameter-store-use-cases)
 
 *Sources: GustavoFreze_Questions*
 
@@ -19969,7 +19974,7 @@ Control (SOC) reports.
 - **D)** AWS Artifact
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
 **Correct Answer: ** ()
 
@@ -20012,7 +20017,7 @@ of web applications on AWS. Users can upload their application code and Elastic
 Beanstalk automatically handles the provisioning, scaling, load balancing, monitoring, and
 health checking of the resources needed to run the application. Users can also retain full
 
-control and access to the underlying resources and customize their configuration settings.
+ control and access to the underlying resources and customize their configuration settings.
 Elastic Beanstalk supports multiple platforms, such as Java, .NET, PHP, Node.js, Python,
 Ruby, Go, and Docker. [AWS Elastic Beanstalk Overview] AWS Certified Cloud
 Practitioner - aws.amazon.com AWS OpsWorks. This is a service that provides
@@ -20038,7 +20043,7 @@ responsibility model?
 - **D)** Awareness and training
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 According to the AWS shared responsibility model, AWS is responsible for the security of
 the cloud, while the customer is responsible for the security in the cloud. This means that
@@ -20126,7 +20131,7 @@ What should the company do to make the application highly available?
 - **D)** Provision the application by using an EC2 Spot Instance.
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 Provisioning additional EC2 instances in other Availability Zones is a way to make the
 application highly available, as it reduces the impact of failures and increases fault
@@ -20181,14 +20186,14 @@ Which AWS service should the company use to meet these requirements?
 - **D)** AWS Service Catalog
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
 AWS Service Catalog enables companies to create, manage, and distribute catalogs of
 approved infrastructure as code (IaC) templates and software configurations. This service
 supports infrastructure automation by allowing users to deploy resources using predefined
 templates, which align with the company's policies and best practices. It helps in managing
 
-cloud resources at scale by utilizing IaC principles, enabling consistent deployments, and
+ cloud resources at scale by utilizing IaC principles, enabling consistent deployments, and
 enforcing governance across AWS resources. AWS Service Catalog is an excellent choice
 for organizations implementing IaC.
 
@@ -20208,7 +20213,7 @@ Which AWS service should a cloud engineer use to view API calls to AWS services?
 - **D)** AWS Artifact
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 The correct answer is B because AWS CloudTrail is an AWS service that a cloud engineer
 can use to view API calls to AWS services. AWS CloudTrail is a service that enables
@@ -22358,7 +22363,7 @@ Which service records API calls and account activity for auditing and governance
 - **D)** Amazon Macie
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 CloudTrail logs API activity across the account for auditing; CloudWatch is for performance metrics/monitoring.
 
@@ -22378,7 +22383,7 @@ Which service continuously records resource configurations and evaluates them ag
 - **D)** AWS Shield
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 AWS Config tracks resource configuration over time and evaluates compliance against rules.
 
@@ -22398,7 +22403,7 @@ Where can you download AWS compliance reports such as SOC and ISO certifications
 - **D)** AWS Trusted Advisor
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 AWS Artifact is the self-service portal for on-demand access to AWS compliance reports and agreements.
 
@@ -22418,7 +22423,7 @@ Which service automatically adjusts the number of EC2 instances to match demand?
 - **D)** AWS CloudTrail
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 EC2 Auto Scaling adds/removes instances based on demand, keeping capacity between min/max/desired.
 
@@ -22438,7 +22443,7 @@ Which service collects metrics, logs and alarms to monitor AWS resources and app
 - **D)** Amazon Macie
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 Amazon CloudWatch is the monitoring and observability service (metrics, logs, alarms, dashboards).
 
@@ -22458,7 +22463,7 @@ Which service orchestrates multi-step, serverless workflows as visual state mach
 - **D)** AWS Config
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 AWS Step Functions coordinates multi-step workflows with sequencing, retries and a visual view.
 
@@ -22478,7 +22483,7 @@ Which service helps you visualise, understand and investigate your past and curr
 - **D)** AWS Config
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 Cost Explorer visualises and analyses spend/usage over time and forecasts future costs.
 
@@ -22498,7 +22503,7 @@ In an AWS CI/CD pipeline, which service compiles code, runs tests and produces d
 - **D)** CodePipeline
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 CodeBuild builds/compiles/tests and outputs artifacts in auto-scaling, temporary environments — no build server to maintain.
 
@@ -22518,7 +22523,7 @@ A team with no data scientists wants to build a custom model from tabular data w
 - **D)** Neptune
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 SageMaker Autopilot and Canvas automatically build and tune models from tabular data with minimal ML expertise.
 
@@ -22538,7 +22543,7 @@ Which tool lets you set a cost or usage threshold and get alerted (or trigger an
 - **D)** CloudTrail
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 AWS Budgets sets thresholds and notifies via SNS/email, and can trigger automated actions on breach.
 
@@ -22556,7 +22561,7 @@ AWS Budgets sets thresholds and notifies via SNS/email, and can trigger automate
 <details>
 <summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] S3 is an abstracted service. AWS operates the infrastructure, the operating system and the platform, and the customer manages its data and access. - **B:** ❌ [INCORRECT] With Lambda, AWS manages the servers, their operating system and the patching, which leaves less to the customer. - **C:** ✅ [CORRECT] EC2 is infrastructure as a service. The customer manages the guest operating system, the software it installs and the security groups of each instance. - **D:** ❌ [INCORRECT] DynamoDB is an abstracted service. AWS operates the infrastructure and the platform, and the customer manages its data and permissions. **Official AWS Documentation Reference:** > _"For example, a service such as Amazon Elastic Compute Cloud (Amazon EC2) is categorized as Infrastructure as a Service (IaaS) and, as such, requires the customer to perform all of the necessary security configuration and management tasks."_ > — [AWS Documentation](https://aws.amazon.com/compliance/shared-responsibility-model/#content-1) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] S3 is an abstracted service. AWS operates the infrastructure, the operating system and the platform, and the customer manages its data and access. - **B:** ❌ [INCORRECT] With Lambda, AWS manages the servers, their operating system and the patching, which leaves less to the customer. - **C:** ✅ [CORRECT] EC2 is infrastructure as a service. The customer manages the guest operating system, the software it installs and the security groups of each instance. - **D:** ❌ [INCORRECT] DynamoDB is an abstracted service. AWS operates the infrastructure and the platform, and the customer manages its data and permissions. **Official AWS Documentation Reference:** > _"For example, a service such as Amazon Elastic Compute Cloud (Amazon EC2) is categorized as Infrastructure as a Service (IaaS) and, as such, requires the customer to perform all of the necessary security configuration and management tasks."_ > — [AWS Documentation](https://aws.amazon.com/compliance/shared-responsibility-model/#content-1)
 
 *Sources: GustavoFreze_Questions*
 
@@ -22570,9 +22575,9 @@ AWS Budgets sets thresholds and notifies via SNS/email, and can trigger automate
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Trusted Advisor checks the account of the customer against best practices. It does not provide AWS audit reports. - **B:** ❌ [INCORRECT] Security Hub assesses the resources of the customer against security standards. It does not publish the reports that auditors wrote about AWS. - **C:** ❌ [INCORRECT] Config records and evaluates the configuration of the resources of the customer, not the controls of AWS. - **D:** ✅ [CORRECT] AWS Artifact provides on demand downloads of AWS security and compliance documents, such as SOC reports and ISO certifications, at no cost. **Official AWS Documentation Reference:** > _"AWS Artifact provides on-demand downloads of AWS security and compliance documents. For example, reports on compliance with International Organization for Standardization (ISO) standards and Payment Card Industry (PCI) Security Standards, and System and Organization Controls (SOC) reports."_ > — [AWS Documentation](https://docs.aws.amazon.com/artifact/latest/ug/what-is-aws-artifact.html#what-is-aws-artifact) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Trusted Advisor checks the account of the customer against best practices. It does not provide AWS audit reports. - **B:** ❌ [INCORRECT] Security Hub assesses the resources of the customer against security standards. It does not publish the reports that auditors wrote about AWS. - **C:** ❌ [INCORRECT] Config records and evaluates the configuration of the resources of the customer, not the controls of AWS. - **D:** ✅ [CORRECT] AWS Artifact provides on demand downloads of AWS security and compliance documents, such as SOC reports and ISO certifications, at no cost. **Official AWS Documentation Reference:** > _"AWS Artifact provides on-demand downloads of AWS security and compliance documents. For example, reports on compliance with International Organization for Standardization (ISO) standards and Payment Card Industry (PCI) Security Standards, and System and Organization Controls (SOC) reports."_ > — [AWS Documentation](https://docs.aws.amazon.com/artifact/latest/ug/what-is-aws-artifact.html#what-is-aws-artifact)
 
 *Sources: GustavoFreze_Questions*
 
@@ -22586,9 +22591,9 @@ AWS Budgets sets thresholds and notifies via SNS/email, and can trigger automate
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] CloudTrail records the API calls that changed resources, but it does not keep a configuration history or evaluate resources against rules. - **B:** ✅ [CORRECT] Config keeps the configuration history of resources, including security group rules, and its rules flag noncompliant resources and send notifications. - **C:** ❌ [INCORRECT] Inspector scans workloads for software vulnerabilities and network exposure. It does not keep configuration history. - **D:** ❌ [INCORRECT] Trusted Advisor runs best practice checks, but it does not record the past configuration of each resource for audits. **Official AWS Documentation Reference:** > _"You can use AWS Config rules to evaluate the configuration settings of your AWS resources. When AWS Config detects that a resource violates the conditions in one of your rules, AWS Config flags the resource as noncompliant and sends a notification."_ > — [AWS Documentation](https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html#scenarios-resource-administration) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] CloudTrail records the API calls that changed resources, but it does not keep a configuration history or evaluate resources against rules. - **B:** ✅ [CORRECT] Config keeps the configuration history of resources, including security group rules, and its rules flag noncompliant resources and send notifications. - **C:** ❌ [INCORRECT] Inspector scans workloads for software vulnerabilities and network exposure. It does not keep configuration history. - **D:** ❌ [INCORRECT] Trusted Advisor runs best practice checks, but it does not record the past configuration of each resource for audits. **Official AWS Documentation Reference:** > _"You can use AWS Config rules to evaluate the configuration settings of your AWS resources. When AWS Config detects that a resource violates the conditions in one of your rules, AWS Config flags the resource as noncompliant and sends a notification."_ > — [AWS Documentation](https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html#scenarios-resource-administration)
 
 *Sources: GustavoFreze_Questions*
 
@@ -22604,7 +22609,7 @@ AWS Budgets sets thresholds and notifies via SNS/email, and can trigger automate
 <details>
 <summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] CloudTrail records API activity in the account. It does not collect application log files from instances. - **B:** ❌ [INCORRECT] Config records resource configurations, not application logs. - **C:** ✅ [CORRECT] CloudWatch Logs centralizes logs from systems, applications and AWS services, lets the team search them and turns log patterns into metrics that can trigger alarms. - **D:** ❌ [INCORRECT] Detective helps investigate security findings. It is not a central store for application logs. **Official AWS Documentation Reference:** > _"CloudWatch Logs enables you to centralize the logs from all of your systems, applications, and AWS services that you use, in a single, highly scalable service. You can then easily view them, search them for specific error codes or patterns, filter them based on specific fields, or archive them securely for future analysis."_ > — [AWS Documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/WhatIsCloudWatchLogs.html#WhatIsCloudWatchLogs) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] CloudTrail records API activity in the account. It does not collect application log files from instances. - **B:** ❌ [INCORRECT] Config records resource configurations, not application logs. - **C:** ✅ [CORRECT] CloudWatch Logs centralizes logs from systems, applications and AWS services, lets the team search them and turns log patterns into metrics that can trigger alarms. - **D:** ❌ [INCORRECT] Detective helps investigate security findings. It is not a central store for application logs. **Official AWS Documentation Reference:** > _"CloudWatch Logs enables you to centralize the logs from all of your systems, applications, and AWS services that you use, in a single, highly scalable service. You can then easily view them, search them for specific error codes or patterns, filter them based on specific fields, or archive them securely for future analysis."_ > — [AWS Documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/WhatIsCloudWatchLogs.html#WhatIsCloudWatchLogs)
 
 *Sources: GustavoFreze_Questions*
 
@@ -22618,9 +22623,9 @@ AWS Budgets sets thresholds and notifies via SNS/email, and can trigger automate
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B, E)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Inspector finds software vulnerabilities. It does not record changes or configurations. - **B:** ✅ [CORRECT] CloudTrail records the identity of the API caller, the time and the request parameters, which shows who made each change. - **C:** ❌ [INCORRECT] Artifact provides AWS compliance documents, not records of activity in the account. - **D:** ❌ [INCORRECT] Macie discovers sensitive data in S3. It does not track configuration changes. - **E:** ✅ [CORRECT] Config keeps a configuration history, so the company can see the details of a resource at any point in time. **Official AWS Documentation Reference:** > _"The recorded information includes the identity of the API caller, the time of the API call, the source IP address of the API caller, the request parameters, and the response elements returned by the AWS service."_ > — [AWS Documentation](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/management-governance.html#aws-cloudtrail) > _"With AWS Config, you can discover existing and deleted AWS resources, determine your overall compliance against rules, and dive into configuration details of a resource at any point in time."_ > — [AWS Documentation](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/management-governance.html#aws-config) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Inspector finds software vulnerabilities. It does not record changes or configurations. - **B:** ✅ [CORRECT] CloudTrail records the identity of the API caller, the time and the request parameters, which shows who made each change. - **C:** ❌ [INCORRECT] Artifact provides AWS compliance documents, not records of activity in the account. - **D:** ❌ [INCORRECT] Macie discovers sensitive data in S3. It does not track configuration changes. - **E:** ✅ [CORRECT] Config keeps a configuration history, so the company can see the details of a resource at any point in time. **Official AWS Documentation Reference:** > _"The recorded information includes the identity of the API caller, the time of the API call, the source IP address of the API caller, the request parameters, and the response elements returned by the AWS service."_ > — [AWS Documentation](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/management-governance.html#aws-cloudtrail) > _"With AWS Config, you can discover existing and deleted AWS resources, determine your overall compliance against rules, and dive into configuration details of a resource at any point in time."_ > — [AWS Documentation](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/management-governance.html#aws-config)
 
 *Sources: GustavoFreze_Questions*
 
@@ -22634,9 +22639,9 @@ AWS Budgets sets thresholds and notifies via SNS/email, and can trigger automate
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Artifact provides compliance reports and agreements, not articles about security features. - **B:** ✅ [CORRECT] The AWS Security Blog publishes posts about AWS security services, features and best practices. - **C:** ❌ [INCORRECT] The Health Dashboard shows events that affect AWS services and the resources of the account, not best practice articles. - **D:** ❌ [INCORRECT] Trusted Advisor runs checks on the account. It does not publish articles. **Official AWS Documentation Reference:** > _"The new AWS Security Blog is your one-stop shop for best practices, how-to guides, customer stories, and more."_ > — [AWS Documentation](https://aws.amazon.com/blogs/aws/the-new-aws-security-blog/) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Artifact provides compliance reports and agreements, not articles about security features. - **B:** ✅ [CORRECT] The AWS Security Blog publishes posts about AWS security services, features and best practices. - **C:** ❌ [INCORRECT] The Health Dashboard shows events that affect AWS services and the resources of the account, not best practice articles. - **D:** ❌ [INCORRECT] Trusted Advisor runs checks on the account. It does not publish articles. **Official AWS Documentation Reference:** > _"The new AWS Security Blog is your one-stop shop for best practices, how-to guides, customer stories, and more."_ > — [AWS Documentation](https://aws.amazon.com/blogs/aws/the-new-aws-security-blog/)
 
 *Sources: GustavoFreze_Questions*
 
@@ -22650,9 +22655,9 @@ AWS Budgets sets thresholds and notifies via SNS/email, and can trigger automate
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Trusted Advisor runs automated checks on the account and recommends improvements, but it does not run a review of a workload against the framework. - **B:** ✅ [CORRECT] The Well-Architected Tool, available in the AWS Management Console, evaluates workloads against the framework best practices and gives an action plan, with milestones to track progress. - **C:** ❌ [INCORRECT] Config records resource configurations and evaluates them against rules, not against the best practices of the framework. - **D:** ❌ [INCORRECT] Compute Optimizer recommends rightsizing for resources based on utilization. It does not review a workload against the framework. **Official AWS Documentation Reference:** > _"You can use AWS WA Tool to document and measure your workload using the best practices from the AWS Well-Architected Framework."_ > — [AWS Documentation](https://docs.aws.amazon.com/wellarchitected/latest/userguide/tool.html) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Trusted Advisor runs automated checks on the account and recommends improvements, but it does not run a review of a workload against the framework. - **B:** ✅ [CORRECT] The Well-Architected Tool, available in the AWS Management Console, evaluates workloads against the framework best practices and gives an action plan, with milestones to track progress. - **C:** ❌ [INCORRECT] Config records resource configurations and evaluates them against rules, not against the best practices of the framework. - **D:** ❌ [INCORRECT] Compute Optimizer recommends rightsizing for resources based on utilization. It does not review a workload against the framework. **Official AWS Documentation Reference:** > _"You can use AWS WA Tool to document and measure your workload using the best practices from the AWS Well-Architected Framework."_ > — [AWS Documentation](https://docs.aws.amazon.com/wellarchitected/latest/userguide/tool.html)
 
 *Sources: GustavoFreze_Questions*
 
@@ -22666,9 +22671,9 @@ AWS Budgets sets thresholds and notifies via SNS/email, and can trigger automate
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Config records and evaluates resource configurations. It does not count license usage against entitlements. - **B:** ❌ [INCORRECT] Budgets tracks spending against a threshold, not license usage. - **C:** ❌ [INCORRECT] Artifact provides AWS compliance reports and agreements. It does not track software licenses. - **D:** ✅ [CORRECT] License Manager tracks software licenses across accounts and Regions and sets hard or soft limits that stop non-compliant usage before it happens. **Official AWS Documentation Reference:** > _"With rule-based controls on the consumption of licenses, administrators can set hard or soft limits on new and existing cloud deployments. Based on these limits, License Manager helps stop non-compliant server usage before it happens."_ > — [AWS Documentation](https://docs.aws.amazon.com/license-manager/latest/userguide/license-manager.html) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Config records and evaluates resource configurations. It does not count license usage against entitlements. - **B:** ❌ [INCORRECT] Budgets tracks spending against a threshold, not license usage. - **C:** ❌ [INCORRECT] Artifact provides AWS compliance reports and agreements. It does not track software licenses. - **D:** ✅ [CORRECT] License Manager tracks software licenses across accounts and Regions and sets hard or soft limits that stop non-compliant usage before it happens. **Official AWS Documentation Reference:** > _"With rule-based controls on the consumption of licenses, administrators can set hard or soft limits on new and existing cloud deployments. Based on these limits, License Manager helps stop non-compliant server usage before it happens."_ > — [AWS Documentation](https://docs.aws.amazon.com/license-manager/latest/userguide/license-manager.html)
 
 *Sources: GustavoFreze_Questions*
 
@@ -22682,9 +22687,9 @@ AWS Budgets sets thresholds and notifies via SNS/email, and can trigger automate
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] Compute Optimizer analyzes configuration and utilization metrics to recommend rightsizing and to find idle resources, which reduces cost. - **B:** ❌ [INCORRECT] Budgets alerts when costs or usage exceed a threshold. It does not analyze resource utilization. - **C:** ❌ [INCORRECT] CloudTrail records API activity in the account. It does not recommend resource sizes. - **D:** ❌ [INCORRECT] Cost and Usage Reports deliver detailed billing data, but they do not analyze utilization or recommend sizes. **Official AWS Documentation Reference:** > _"AWS Compute Optimizer is a service that analyzes your AWS resources' configuration and utilization metrics to provide you with rightsizing recommendations and identify idle resources."_ > — [AWS Documentation](https://docs.aws.amazon.com/compute-optimizer/latest/ug/what-is-compute-optimizer.html) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] Compute Optimizer analyzes configuration and utilization metrics to recommend rightsizing and to find idle resources, which reduces cost. - **B:** ❌ [INCORRECT] Budgets alerts when costs or usage exceed a threshold. It does not analyze resource utilization. - **C:** ❌ [INCORRECT] CloudTrail records API activity in the account. It does not recommend resource sizes. - **D:** ❌ [INCORRECT] Cost and Usage Reports deliver detailed billing data, but they do not analyze utilization or recommend sizes. **Official AWS Documentation Reference:** > _"AWS Compute Optimizer is a service that analyzes your AWS resources' configuration and utilization metrics to provide you with rightsizing recommendations and identify idle resources."_ > — [AWS Documentation](https://docs.aws.amazon.com/compute-optimizer/latest/ug/what-is-compute-optimizer.html)
 
 *Sources: GustavoFreze_Questions*
 
@@ -22698,9 +22703,9 @@ AWS Budgets sets thresholds and notifies via SNS/email, and can trigger automate
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A, D)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] CodeBuild is a fully managed build service that compiles source code, runs unit tests and produces artifacts ready to deploy. - **B:** ❌ [INCORRECT] X-Ray traces requests through a running application. It does not build or release code. - **C:** ❌ [INCORRECT] CloudTrail records API activity for auditing. - **D:** ✅ [CORRECT] CodePipeline is a continuous delivery service that automates the steps required to release code, and it can use CodeBuild in its build stage. - **E:** ❌ [INCORRECT] AWS Config records and evaluates resource configurations, not code releases. **Official AWS Documentation Reference:** > _"AWS CodeBuild is a fully managed build service in the cloud. CodeBuild compiles your source code, runs unit tests, and produces artifacts that are ready to deploy."_ > — [AWS Documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/welcome.html#welcome) > _"AWS CodePipeline is a continuous delivery service you can use to model, visualize, and automate the steps required to release your software."_ > — [AWS Documentation](https://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html#welcome) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] CodeBuild is a fully managed build service that compiles source code, runs unit tests and produces artifacts ready to deploy. - **B:** ❌ [INCORRECT] X-Ray traces requests through a running application. It does not build or release code. - **C:** ❌ [INCORRECT] CloudTrail records API activity for auditing. - **D:** ✅ [CORRECT] CodePipeline is a continuous delivery service that automates the steps required to release code, and it can use CodeBuild in its build stage. - **E:** ❌ [INCORRECT] AWS Config records and evaluates resource configurations, not code releases. **Official AWS Documentation Reference:** > _"AWS CodeBuild is a fully managed build service in the cloud. CodeBuild compiles your source code, runs unit tests, and produces artifacts that are ready to deploy."_ > — [AWS Documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/welcome.html#welcome) > _"AWS CodePipeline is a continuous delivery service you can use to model, visualize, and automate the steps required to release your software."_ > — [AWS Documentation](https://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html#welcome)
 
 *Sources: GustavoFreze_Questions*
 
@@ -22714,9 +22719,9 @@ AWS Budgets sets thresholds and notifies via SNS/email, and can trigger automate
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] CloudTrail records who called which AWS API, not the path of a request through the application. - **B:** ✅ [CORRECT] X-Ray collects data about the requests the application serves and builds a trace map that shows bottlenecks and latency spikes. - **C:** ❌ [INCORRECT] CodeBuild compiles and tests code before deployment. It does not observe the running application. - **D:** ❌ [INCORRECT] AWS Config tracks resource configuration changes, not request latency. **Official AWS Documentation Reference:** > _"The trace map shows the client, your front-end service, and backend services that your front-end service calls to process requests and persist data. Use the trace map to identify bottlenecks, latency spikes, and other issues to solve to improve the performance of your applications."_ > — [AWS Documentation](https://docs.aws.amazon.com/xray/latest/devguide/aws-xray.html#aws-xray) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] CloudTrail records who called which AWS API, not the path of a request through the application. - **B:** ✅ [CORRECT] X-Ray collects data about the requests the application serves and builds a trace map that shows bottlenecks and latency spikes. - **C:** ❌ [INCORRECT] CodeBuild compiles and tests code before deployment. It does not observe the running application. - **D:** ❌ [INCORRECT] AWS Config tracks resource configuration changes, not request latency. **Official AWS Documentation Reference:** > _"The trace map shows the client, your front-end service, and backend services that your front-end service calls to process requests and persist data. Use the trace map to identify bottlenecks, latency spikes, and other issues to solve to improve the performance of your applications."_ > — [AWS Documentation](https://docs.aws.amazon.com/xray/latest/devguide/aws-xray.html#aws-xray)
 
 *Sources: GustavoFreze_Questions*
 

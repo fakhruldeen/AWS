@@ -27,7 +27,7 @@ storage, and memory when needed, which enables users to scale their applications
 resources up or down based on demand. This also helps users optimize their costs and
 performance. The ability to migrate on-premises network devices to the AWS Cloud, the
 
-ability to host custom hardware in the AWS Cloud, and the ability to customize the
+ ability to host custom hardware in the AWS Cloud, and the ability to customize the
 underlying hypervisor layer for Amazon EC2 are not benefits of operating in the AWS
 Cloud, as they are either not possible or not recommended by AWS .
 
@@ -84,7 +84,7 @@ Which AWS service can the company use to meet this requirement?
 - **D)** AWS Fargate
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 Amazon EventBridge Overview:
 EventBridge is a serverless event bus that enables applications to react to changes in
@@ -134,7 +134,7 @@ The other options are not correct for the following reasons:
 AWS Application Discovery Service is a service that helps you plan your migration projects
 by automatically identifying servers, applications, and dependencies in your on-premises
 
-data centers2. It does not track the progress of application migrations, but rather provides
+ data centers2. It does not track the progress of application migrations, but rather provides
 information to help you plan and scope your migrations.
 AWS Application Migration Service is a servi
 
@@ -316,7 +316,7 @@ A primary benefit of an AWS managed service is that AWS takes responsibility for
 the underlying infrastructure and routine operational work. Depending on the service, AWS
 can handle activities such as hardware provisioning, infrastructure maintenance, service
 
-software patching, availability mechanisms, and scaling of the managed platform. This
+ software patching, availability mechanisms, and scaling of the managed platform. This
 allows customers to concentrate more heavily on application logic, data, business
 requirements, and customer-facing improvements instead of performing undifferentiated
 infrastructure administration. Therefore, option A is the supported general benefit. A
@@ -381,7 +381,7 @@ between Amazon EC2 instances?
 - **D)** AWS CloudHSM
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 VPC Flow Logs is the AWS service or feature that is used to troubleshoot network
 connectivity issues between Amazon EC2 instances. VPC Flow Logs is a feature that
@@ -401,7 +401,7 @@ Amazon Kinesis Data Firehose for analysis and storage.
 A company needs to migrate all of its development teams to a cloud-based integrated
 development environment (IDE).
 Which AWS service should the company use?
-A. AWS CodeBuild
+ A. AWS CodeBuild
 
 - **B)** AWS Cloud9
 - **C)** AWS OpsWorks
@@ -465,7 +465,7 @@ customer?
 - **D)** Patch and back up Amazon Aurora.
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 According to the AWS shared responsibility model, the customer is responsible for
 configuring logical access controls for resources, and protecting account credentials. This
@@ -498,7 +498,7 @@ According to the AWS shared responsibility model, which task is AWS responsible 
 
 Comprehensive and Detailed Explanation From AWS Cloud Documentation:
 
-For an Amazon RDS Multi-AZ DB instance deployment, Amazon RDS provides the
+ For an Amazon RDS Multi-AZ DB instance deployment, Amazon RDS provides the
 managed high-availability and failover mechanism. If a qualifying planned or unplanned
 outage affects the primary DB instance, RDS automatically switches to the standby replica
 in another Availability Zone. This automatic promotion or failover is performed by AWS as
@@ -522,12 +522,13 @@ In which situations should a company create an 1AM user instead of an 1AM role? 
 TWO.)
 
 - **A)** When an application that runs on Amazon EC2 instances requires access to other AWS services
-- **B)** When the company creates AWS access credentials for individuals C. When the company creates an application that runs on a mobile phone that makes requests to AWS
+- **B)** When the company creates AWS access credentials for individuals
+- **C)** When the company creates an application that runs on a mobile phone that makes requests to AWS
 - **D)** When the company needs to add users to 1AM groups
 - **E)** When users are authenticated in the corporate network and want to be able to use AWS without having to sign in a second time
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: B, D)</b></summary>
 
 AnIAM useris created when the company needs to provide unique credentials (username
 and password) to individuals who need access to the AWS Management Console or
@@ -3889,7 +3890,7 @@ Which cloud characteristic lets you provision and release computing resources wi
 - **D)** Fixed capacity
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 On-demand self-service means users can provision resources automatically without manual provider intervention.
 
@@ -3909,7 +3910,7 @@ A workload needs a message queue to decouple components so consumers process at 
 - **D)** Amazon EC2
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 Amazon SQS is a managed message queue used to decouple and buffer between components.
 
@@ -3929,7 +3930,7 @@ A developer wants a simple, low-cost way to run a small website or app with pred
 - **D)** AWS Batch
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 Amazon Lightsail offers easy, low-cost virtual servers with bundled resources and predictable pricing for simple workloads.
 
@@ -3949,7 +3950,7 @@ Which statement about On-Demand pricing is correct?
 - **D)** It cannot be interrupted only because it is reserved
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 On-Demand has no commitment and bills per second/hour — maximum flexibility at the highest unit price.
 
@@ -3969,7 +3970,7 @@ An EC2 instance is named m5.large. What does the letter 'm' indicate?
 - **D)** The Region
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 In m5.large, 'm' is the family (general purpose), '5' is the generation, and 'large' is the size.
 
@@ -3989,7 +3990,7 @@ A workload does sustained, consistently heavy CPU processing (media transcoding)
 - **D)** I family (storage optimised)
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Sustained high CPU maps to the Compute-optimised C family; the T family is for bursty, mostly-idle workloads.
 
@@ -4009,7 +4010,7 @@ An in-memory database such as Redis or SAP HANA needs a large amount of RAM per 
 - **D)** Accelerated (P, G)
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 2)</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 Memory-optimised families (R, X, z1d) offer a high memory-to-CPU ratio for large caches and in-memory databases.
 
@@ -4029,7 +4030,7 @@ A small web app is mostly idle but occasionally spikes. Which EC2 family is the 
 - **D)** P family
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 T-family burstable instances earn CPU credits while idle and spend them to burst — ideal for unpredictable spikes with low average utilisation.
 
@@ -4049,7 +4050,7 @@ How do burstable (T family) instances handle CPU above their baseline?
 - **D)** They add more vCPUs permanently
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 T instances accumulate CPU credits during idle periods and consume them to burst above baseline.
 
@@ -4069,7 +4070,7 @@ Which statement about Amazon S3 durability is correct?
 - **D)** Objects are stored on a single disk
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 S3 provides eleven 9s (99.999999999%) of durability by replicating objects across multiple AZs.
 
@@ -4089,7 +4090,7 @@ Which Auto Scaling policy works like a thermostat — you set a metric target (e
 - **D)** Manual scaling
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Target tracking maintains a chosen metric at a target value; it is the most common ASG policy.
 
@@ -4109,7 +4110,7 @@ You know traffic peaks every weekday at 9 a.m. and want to raise capacity just b
 - **D)** Spot scaling
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 2)</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 Scheduled scaling changes capacity at known times, ahead of predictable peaks.
 
@@ -4129,7 +4130,7 @@ Which service automates deployments to EC2, Lambda or ECS using in-place, blue/g
 - **D)** CloudFormation
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 2)</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 CodeDeploy handles the deployment stage with in-place, blue/green and canary strategies.
 
@@ -4149,7 +4150,7 @@ Which service orchestrates the overall CI/CD workflow (Source → Build → Test
 - **D)** CodeCommit
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 2)</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 CodePipeline defines the stages, invokes the other tools in order, and adds approval gates.
 
@@ -4169,7 +4170,7 @@ What is the CloudWatch automation chain that lets a system react to problems wit
 - **D)** Metric → snapshot → archive
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 A metric feeds an alarm which triggers SNS, Auto Scaling, or an EventBridge/Lambda action — automated reaction.
 
@@ -4189,7 +4190,7 @@ You must give administrators shell access to EC2 instances without opening port 
 - **D)** EventBridge
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 SSM Session Manager provides shell access via IAM with no open inbound ports or key pairs — a frequently tested fact.
 
@@ -4209,7 +4210,7 @@ Which scenario is best served by a single plain Lambda function rather than Step
 - **D)** A long-running process exceeding Lambda's duration limit
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 A single function reacting to a single event is plain Lambda; multi-step orchestrated workflows call for Step Functions.
 
@@ -4229,7 +4230,7 @@ You need to extract text, forms and tables (key-value pairs) from scanned or han
 - **D)** Amazon Lex
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Textract extracts text, forms and tables from documents — the classic distractor against Rekognition (general images).
 
@@ -4249,7 +4250,7 @@ In SageMaker, what do you pay for during model training?
 - **D)** Nothing — training is free
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 SageMaker provisions compute for training, then tears it down; you pay only for training duration.
 
@@ -4269,7 +4270,7 @@ You are moving from Oracle to PostgreSQL (a heterogeneous migration). Which tool
 - **D)** QuickSight
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 The Schema Conversion Tool partners with DMS on heterogeneous moves, converting schema/code and flagging manual work.
 
@@ -4289,7 +4290,7 @@ Which pricing model is the flexible baseline with no commitment and the highest 
 - **D)** Spot
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 On-Demand has no commitment and the highest unit price; all savings are measured against it.
 
@@ -4309,7 +4310,7 @@ Reserved Instances require what kind of commitment?
 - **D)** A per-request fee
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 RIs commit for 1 or 3 years to family/size/Region (Standard) or with in-family flexibility (Convertible).
 
@@ -4329,7 +4330,7 @@ Which Trusted Advisor category flags idle/underutilised EC2 instances and unatta
 - **D)** Fault Tolerance
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 2)</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 Cost Optimisation checks surface idle resources and RI/Savings Plans opportunities.
 
@@ -4349,7 +4350,7 @@ On the exam, qualifying phrases like 'LEAST operational overhead' or 'MOST cost-
 - **D)** A sign to pick the cheapest service always
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 These qualifiers are the actual selection criteria; CLF-C02 rewards the managed/serverless, least-effort option.
 
@@ -4397,9 +4398,9 @@ A company needs to create a portfolio that provides central management of approv
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Application and query optimization stay with the customer on EC2 and on RDS alike. - **B:** ❌ [INCORRECT] The customer still controls access to the database, through database users, IAM and security groups. - **C:** ❌ [INCORRECT] The customer remains responsible for its data and for deciding how sensitive it is. - **D:** ✅ [CORRECT] On EC2 the customer patches the operating system and the database engine. Amazon RDS takes over software patching, backups and high availability. **Official AWS Documentation Reference:** > _"Amazon RDS manages backups, software patching, automatic failure detection, and recovery."_ > — [AWS Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html#Welcome.Concepts.on-prem) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Application and query optimization stay with the customer on EC2 and on RDS alike. - **B:** ❌ [INCORRECT] The customer still controls access to the database, through database users, IAM and security groups. - **C:** ❌ [INCORRECT] The customer remains responsible for its data and for deciding how sensitive it is. - **D:** ✅ [CORRECT] On EC2 the customer patches the operating system and the database engine. Amazon RDS takes over software patching, backups and high availability. **Official AWS Documentation Reference:** > _"Amazon RDS manages backups, software patching, automatic failure detection, and recovery."_ > — [AWS Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html#Welcome.Concepts.on-prem)
 
 *Sources: GustavoFreze_Questions*
 
@@ -4413,9 +4414,9 @@ A company needs to create a portfolio that provides central management of approv
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] With EC2, AWS takes over server maintenance, the hardware lifecycle, and the power, network and cooling that the company handled on premises. - **B:** ❌ [INCORRECT] On EC2 the customer still patches the operating system, as it did on premises. - **C:** ❌ [INCORRECT] The customer still installs and updates the software that runs on its instances. - **D:** ❌ [INCORRECT] Backups of an application on EC2 remain with the customer, unlike on a managed service such as Amazon RDS. **Official AWS Documentation Reference:** > _"AWS manages the hardware layers, which eliminates some of the burden of managing an on-premises database server."_ > — [AWS Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html#Welcome.Concepts.comparison) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] With EC2, AWS takes over server maintenance, the hardware lifecycle, and the power, network and cooling that the company handled on premises. - **B:** ❌ [INCORRECT] On EC2 the customer still patches the operating system, as it did on premises. - **C:** ❌ [INCORRECT] The customer still installs and updates the software that runs on its instances. - **D:** ❌ [INCORRECT] Backups of an application on EC2 remain with the customer, unlike on a managed service such as Amazon RDS. **Official AWS Documentation Reference:** > _"AWS manages the hardware layers, which eliminates some of the burden of managing an on-premises database server."_ > — [AWS Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html#Welcome.Concepts.comparison)
 
 *Sources: GustavoFreze_Questions*
 
@@ -4431,7 +4432,7 @@ A company needs to create a portfolio that provides central management of approv
 <details>
 <summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] This performance efficiency principle is about matching the technology to how the workload uses it, not about reducing the impact of failures. - **B:** ❌ [INCORRECT] This sustainability principle is about moving to more efficient hardware and software as it becomes available, not about availability. - **C:** ✅ [CORRECT] This reliability principle replaces one large resource with multiple small ones so that a single failure does not affect the whole workload. - **D:** ❌ [INCORRECT] This security principle is about least privilege and centralized identity management. **Official AWS Documentation Reference:** > _"Replace one large resource with multiple small resources to reduce the impact of a single failure on the overall workload."_ > — [AWS Documentation](https://docs.aws.amazon.com/wellarchitected/latest/framework/rel-dp.html) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] This performance efficiency principle is about matching the technology to how the workload uses it, not about reducing the impact of failures. - **B:** ❌ [INCORRECT] This sustainability principle is about moving to more efficient hardware and software as it becomes available, not about availability. - **C:** ✅ [CORRECT] This reliability principle replaces one large resource with multiple small ones so that a single failure does not affect the whole workload. - **D:** ❌ [INCORRECT] This security principle is about least privilege and centralized identity management. **Official AWS Documentation Reference:** > _"Replace one large resource with multiple small resources to reduce the impact of a single failure on the overall workload."_ > — [AWS Documentation](https://docs.aws.amazon.com/wellarchitected/latest/framework/rel-dp.html)
 
 *Sources: GustavoFreze_Questions*
 
@@ -4445,9 +4446,9 @@ A company needs to create a portfolio that provides central management of approv
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: D, E)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] On Amazon EC2 the customer still installs and patches the operating system. - **B:** ❌ [INCORRECT] On Amazon EC2 the customer still manages database backups. A managed service such as Amazon RDS would take this over. - **C:** ❌ [INCORRECT] Application optimization stays with the customer in every model, on premises, on EC2, and on RDS. - **D:** ✅ [CORRECT] On premises the company pays for power, network, and cooling. On Amazon EC2, AWS takes care of them. - **E:** ✅ [CORRECT] On premises the company manages the hardware lifecycle. On Amazon EC2, AWS manages the servers and their replacement. **Official AWS Documentation Reference:** > _"AWS manages the hardware layers, which eliminates some of the burden of managing an on-premises database server."_ > — [AWS Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html#Welcome.Concepts.comparison) > _"AWS manages the hardware layers, which eliminates some of the burden of managing an on-premises database server."_ > — [AWS Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html#Welcome.Concepts.comparison) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] On Amazon EC2 the customer still installs and patches the operating system. - **B:** ❌ [INCORRECT] On Amazon EC2 the customer still manages database backups. A managed service such as Amazon RDS would take this over. - **C:** ❌ [INCORRECT] Application optimization stays with the customer in every model, on premises, on EC2, and on RDS. - **D:** ✅ [CORRECT] On premises the company pays for power, network, and cooling. On Amazon EC2, AWS takes care of them. - **E:** ✅ [CORRECT] On premises the company manages the hardware lifecycle. On Amazon EC2, AWS manages the servers and their replacement. **Official AWS Documentation Reference:** > _"AWS manages the hardware layers, which eliminates some of the burden of managing an on-premises database server."_ > — [AWS Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html#Welcome.Concepts.comparison) > _"AWS manages the hardware layers, which eliminates some of the burden of managing an on-premises database server."_ > — [AWS Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html#Welcome.Concepts.comparison)
 
 *Sources: GustavoFreze_Questions*
 
@@ -4461,9 +4462,9 @@ A company needs to create a portfolio that provides central management of approv
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Horizontal scaling changes the number of instances, not the size of each instance. - **B:** ✅ [CORRECT] Rightsizing matches the type and size of each resource to its real utilization, which lowers cost while still meeting performance requirements. - **C:** ❌ [INCORRECT] Replatforming is a migration strategy that changes the platform of a workload during the move to the cloud. - **D:** ❌ [INCORRECT] Overprovisioning is the problem the company found, paying for capacity that sits idle. **Official AWS Documentation Reference:** > _"Right-sizing allows organizations to operate their cloud infrastructure in an efficient and cost-effective manner while addressing their business needs."_ > — [AWS Documentation](https://docs.aws.amazon.com/wellarchitected/latest/framework/perf_compute_hardware_configure_and_right_size_compute_resources.html#implementation-guidance) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Horizontal scaling changes the number of instances, not the size of each instance. - **B:** ✅ [CORRECT] Rightsizing matches the type and size of each resource to its real utilization, which lowers cost while still meeting performance requirements. - **C:** ❌ [INCORRECT] Replatforming is a migration strategy that changes the platform of a workload during the move to the cloud. - **D:** ❌ [INCORRECT] Overprovisioning is the problem the company found, paying for capacity that sits idle. **Official AWS Documentation Reference:** > _"Right-sizing allows organizations to operate their cloud infrastructure in an efficient and cost-effective manner while addressing their business needs."_ > — [AWS Documentation](https://docs.aws.amazon.com/wellarchitected/latest/framework/perf_compute_hardware_configure_and_right_size_compute_resources.html#implementation-guidance)
 
 *Sources: GustavoFreze_Questions*
 
@@ -4477,9 +4478,9 @@ A company needs to create a portfolio that provides central management of approv
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Creating the environment by hand every sprint is exactly the process that produces the differences. The console fits one-time tasks, not repeatable ones. - **B:** ✅ [CORRECT] A template describes every resource once, and CloudFormation provisions the same stack in a consistent and repeatable way each time. Deleting the stack removes all of its resources. - **C:** ❌ [INCORRECT] AWS Config records and evaluates resource configurations, but it does not create the environment. - **D:** ❌ [INCORRECT] CloudTrail records API activity for auditing. It shows who changed what, but it does not build the resources. **Official AWS Documentation Reference:** > _"Reuse your CloudFormation template to create your resources in a consistent and repeatable manner. To reuse your template, describe your resources once and then provision the same resources over and over in multiple regions."_ > — [AWS Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html#welcome-quickly-replicate-your-infrastructure) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Creating the environment by hand every sprint is exactly the process that produces the differences. The console fits one-time tasks, not repeatable ones. - **B:** ✅ [CORRECT] A template describes every resource once, and CloudFormation provisions the same stack in a consistent and repeatable way each time. Deleting the stack removes all of its resources. - **C:** ❌ [INCORRECT] AWS Config records and evaluates resource configurations, but it does not create the environment. - **D:** ❌ [INCORRECT] CloudTrail records API activity for auditing. It shows who changed what, but it does not build the resources. **Official AWS Documentation Reference:** > _"Reuse your CloudFormation template to create your resources in a consistent and repeatable manner. To reuse your template, describe your resources once and then provision the same resources over and over in multiple regions."_ > — [AWS Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html#welcome-quickly-replicate-your-infrastructure)
 
 *Sources: GustavoFreze_Questions*
 
@@ -4493,9 +4494,9 @@ A company needs to create a portfolio that provides central management of approv
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] A script is useful for tasks that repeat, but writing one for a single action adds work. - **B:** ❌ [INCORRECT] A template describes infrastructure to provision repeatedly. It is not a tool for stopping one instance once. - **C:** ❌ [INCORRECT] Scheduling suits recurring tasks. For one action it adds setup that brings no benefit. - **D:** ✅ [CORRECT] The console is a web interface with access to every service console, so the administrator can stop the instance with a few clicks and nothing to build. **Official AWS Documentation Reference:** > _"The AWS Management Console is a web-based application that contains and provides centralized access to all individual AWS service consoles."_ > — [AWS Documentation](https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/what-is.html#what-is) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] A script is useful for tasks that repeat, but writing one for a single action adds work. - **B:** ❌ [INCORRECT] A template describes infrastructure to provision repeatedly. It is not a tool for stopping one instance once. - **C:** ❌ [INCORRECT] Scheduling suits recurring tasks. For one action it adds setup that brings no benefit. - **D:** ✅ [CORRECT] The console is a web interface with access to every service console, so the administrator can stop the instance with a few clicks and nothing to build. **Official AWS Documentation Reference:** > _"The AWS Management Console is a web-based application that contains and provides centralized access to all individual AWS service consoles."_ > — [AWS Documentation](https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/what-is.html#what-is)
 
 *Sources: GustavoFreze_Questions*
 
@@ -4509,9 +4510,9 @@ A company needs to create a portfolio that provides central management of approv
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Compute optimized instances favor processor performance, not local storage I/O. - **B:** ✅ [CORRECT] Storage optimized instances deliver high I/O to local storage, with millions of low-latency random I/O operations per second. - **C:** ❌ [INCORRECT] Memory optimized instances are for datasets processed in memory, not for local disk I/O. - **D:** ❌ [INCORRECT] General purpose instances balance resources and do not target very high local storage I/O. **Official AWS Documentation Reference:** > _"Storage optimized instances deliver millions of low-latency, random I/O operations per second to applications. They’re designed for workloads that require high, sequential read and write access to very large data sets on local storage."_ > — [AWS Documentation](https://aws.amazon.com/ec2/instance-types/#instance-categories) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Compute optimized instances favor processor performance, not local storage I/O. - **B:** ✅ [CORRECT] Storage optimized instances deliver high I/O to local storage, with millions of low-latency random I/O operations per second. - **C:** ❌ [INCORRECT] Memory optimized instances are for datasets processed in memory, not for local disk I/O. - **D:** ❌ [INCORRECT] General purpose instances balance resources and do not target very high local storage I/O. **Official AWS Documentation Reference:** > _"Storage optimized instances deliver millions of low-latency, random I/O operations per second to applications. They’re designed for workloads that require high, sequential read and write access to very large data sets on local storage."_ > — [AWS Documentation](https://aws.amazon.com/ec2/instance-types/#instance-categories)
 
 *Sources: GustavoFreze_Questions*
 
@@ -4527,7 +4528,7 @@ A company needs to create a portfolio that provides central management of approv
 <details>
 <summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] On EC2, the company still installs the database, patches the operating system and the database, and manages backups. - **B:** ❌ [INCORRECT] On premises, the company is responsible for everything, from the hardware to the database software. - **C:** ✅ [CORRECT] Amazon RDS is a managed relational database service that handles backups, software patching, automatic failure detection and recovery. - **D:** ❌ [INCORRECT] DynamoDB is a NoSQL database, so it is not MySQL and the application would need to change. **Official AWS Documentation Reference:** > _"Amazon RDS manages backups, software patching, automatic failure detection, and recovery."_ > — [AWS Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html#Welcome.Concepts.on-prem) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] On EC2, the company still installs the database, patches the operating system and the database, and manages backups. - **B:** ❌ [INCORRECT] On premises, the company is responsible for everything, from the hardware to the database software. - **C:** ✅ [CORRECT] Amazon RDS is a managed relational database service that handles backups, software patching, automatic failure detection and recovery. - **D:** ❌ [INCORRECT] DynamoDB is a NoSQL database, so it is not MySQL and the application would need to change. **Official AWS Documentation Reference:** > _"Amazon RDS manages backups, software patching, automatic failure detection, and recovery."_ > — [AWS Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html#Welcome.Concepts.on-prem)
 
 *Sources: GustavoFreze_Questions*
 
@@ -4541,9 +4542,9 @@ A company needs to create a portfolio that provides central management of approv
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B, C)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Persisting independently of the instance is a property of Amazon EBS volumes, not of instance store. - **B:** ✅ [CORRECT] Instance store is temporary block storage, ideal for buffers, caches and scratch data. - **C:** ✅ [CORRECT] The storage comes from disks physically attached to the host computer of the instance. - **D:** ❌ [INCORRECT] Shared access by many instances describes Amazon EFS. - **E:** ❌ [INCORRECT] Objects addressed by URL describe Amazon S3. **Official AWS Documentation Reference:** > _"An instance store provides temporary block-level storage for your EC2 instance."_ > — [AWS Documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStorage) > _"This storage is provided by disks that are physically attached to the host computer."_ > — [AWS Documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStorage) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Persisting independently of the instance is a property of Amazon EBS volumes, not of instance store. - **B:** ✅ [CORRECT] Instance store is temporary block storage, ideal for buffers, caches and scratch data. - **C:** ✅ [CORRECT] The storage comes from disks physically attached to the host computer of the instance. - **D:** ❌ [INCORRECT] Shared access by many instances describes Amazon EFS. - **E:** ❌ [INCORRECT] Objects addressed by URL describe Amazon S3. **Official AWS Documentation Reference:** > _"An instance store provides temporary block-level storage for your EC2 instance."_ > — [AWS Documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStorage) > _"This storage is provided by disks that are physically attached to the host computer."_ > — [AWS Documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStorage)
 
 *Sources: GustavoFreze_Questions*
 
@@ -4559,7 +4560,7 @@ A company needs to create a portfolio that provides central management of approv
 <details>
 <summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] WorkSpaces provides full virtual desktops, which is more than the company wants. - **B:** ❌ [INCORRECT] WorkSpaces Secure Browser gives access to internal websites and web applications from a browser, not to desktop applications. - **C:** ✅ [CORRECT] AppStream 2.0 is a fully managed application streaming service that gives users access to desktop applications from a browser. AWS now calls it Amazon WorkSpaces Applications. - **D:** ❌ [INCORRECT] Lightsail provides virtual servers. It does not stream applications to users. **Official AWS Documentation Reference:** > _"Amazon WorkSpaces Applications is a fully managed application streaming service that provides users with instant access to their desktop applications from anywhere."_ > — [AWS Documentation](https://docs.aws.amazon.com/appstream2/latest/developerguide/what-is-appstream.html#what-is-appstream) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] WorkSpaces provides full virtual desktops, which is more than the company wants. - **B:** ❌ [INCORRECT] WorkSpaces Secure Browser gives access to internal websites and web applications from a browser, not to desktop applications. - **C:** ✅ [CORRECT] AppStream 2.0 is a fully managed application streaming service that gives users access to desktop applications from a browser. AWS now calls it Amazon WorkSpaces Applications. - **D:** ❌ [INCORRECT] Lightsail provides virtual servers. It does not stream applications to users. **Official AWS Documentation Reference:** > _"Amazon WorkSpaces Applications is a fully managed application streaming service that provides users with instant access to their desktop applications from anywhere."_ > — [AWS Documentation](https://docs.aws.amazon.com/appstream2/latest/developerguide/what-is-appstream.html#what-is-appstream)
 
 *Sources: GustavoFreze_Questions*
 
@@ -5248,7 +5249,7 @@ Which AWS service will support this application MOST cost-effectively?
 - **D)** Amazon EC2
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 AWS Lambda is a serverless compute service that is ideal for applications with shortrunning processes and low-frequency invocation, as it only charges for the compute time
 consumed. Since the application is invoked only a few times a day and runs for less than 5
@@ -5272,7 +5273,7 @@ scalable network environment in the AWS Cloud?
 - **D)** Route tables
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 **Correct Answer: ** ()
 
@@ -5754,7 +5755,7 @@ A team wants to run Docker containers without managing the underlying servers. W
 - **D)** Amazon Redshift
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 AWS Fargate is a serverless compute engine for containers (with ECS/EKS) — no server management.
 
@@ -5774,7 +5775,7 @@ What problem does Amazon SQS primarily solve?
 - **D)** It runs container images
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 SQS breaks tight coupling: producers send and move on; consumers process at their own pace; messages wait safely.
 
@@ -5794,7 +5795,7 @@ A petabyte-scale dataset must reach AWS but the network would take weeks. Which 
 - **D)** Kinesis Firehose
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 When network transfer would take too long, ship a Snow Family device; DataSync is for transfers the network can finish in time.
 
@@ -5810,9 +5811,9 @@ When network transfer would take too long, ship a Snow Family device; DataSync i
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] Amazon EKS is a managed Kubernetes service in which AWS manages the Kubernetes control plane, and it is Kubernetes conformant, so existing applications run without refactoring. - **B:** ❌ [INCORRECT] Amazon ECS is an AWS container orchestration service, but it does not run Kubernetes. - **C:** ❌ [INCORRECT] Amazon ECR stores container images. It does not run or orchestrate containers. - **D:** ❌ [INCORRECT] Lambda runs functions in response to events. It is not a Kubernetes platform. **Official AWS Documentation Reference:** > _"AWS manages the Kubernetes control plane when you create a cluster with EKS."_ > — [AWS Documentation](https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html#_amazon_eks_simplified_kubernetes_management) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] Amazon EKS is a managed Kubernetes service in which AWS manages the Kubernetes control plane, and it is Kubernetes conformant, so existing applications run without refactoring. - **B:** ❌ [INCORRECT] Amazon ECS is an AWS container orchestration service, but it does not run Kubernetes. - **C:** ❌ [INCORRECT] Amazon ECR stores container images. It does not run or orchestrate containers. - **D:** ❌ [INCORRECT] Lambda runs functions in response to events. It is not a Kubernetes platform. **Official AWS Documentation Reference:** > _"AWS manages the Kubernetes control plane when you create a cluster with EKS."_ > — [AWS Documentation](https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html#_amazon_eks_simplified_kubernetes_management)
 
 *Sources: GustavoFreze_Questions*
 
@@ -5983,10 +5984,11 @@ requirements MOST cost effectively?
 
 - **A)** EFS Standard
 - **B)** EFS Standard-Infrequent Access(EFS Standard-IA)
-- **C)** EFS One Zone D. EFS One Zone-Infrequent Access (EFS One Zone-IA)
+- **C)** EFS One Zone
+- **D)** EFS One Zone-Infrequent Access (EFS One Zone-IA)
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 EFS Standard-Infrequent Access (EFS Standard-IA) is the storage class that meets the
 requirements of storing data across multiple Availability Zones in an AWS Region, that will
@@ -6014,7 +6016,7 @@ Which Amazon S3 storage class is the MOST cost-effective for long-term storage?
 - **D)** S3 One Zone-Infrequent Access (S3 One Zone-IA)
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 Amazon S3 Glacier Deep Archive is the lowest-cost storage class in the cloud. It is
 designed for long-term data archiving that is rarely accessed. It offers a retrieval time of 12
@@ -6035,7 +6037,8 @@ Which AWS service will meet these requirements?
 
 - **A)** AWS Database Migration Service (AWS DMS)
 - **B)** AWS Application Migration Service
-- **C)** AWS Storage Gateway Volume Gateway D. AWS Direct Connect
+- **C)** AWS Storage Gateway Volume Gateway
+- **D)** AWS Direct Connect
 
 <details>
 <summary><b>View Answer & Rationale (Answer: C)</b></summary>
@@ -6135,13 +6138,13 @@ Which AWS service or device should the company use to meet this requirement?
 - **D)** AWS Snowball Edge Storage Optimized
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Amazon Elastic File System (Amazon EFS) is a service that provides a scalable and
 elastic file system for Linux-based workloads. It can be mounted on multiple Amazon EC2
 instances across different Availability Zones within a region, allowing applications to
 
-access a common set of files1. AWS Backup is a service that provides a centralized and
+ access a common set of files1. AWS Backup is a service that provides a centralized and
 automated way to back up data across AWS services. Amazon Elastic Block Store
 (Amazon EBS) is a service that provides persistent block storage volumes for Amazon
 EC2 instances. AWS Snowball Edge Storage Optimized is a device that provides a
@@ -6165,7 +6168,7 @@ Which S3 storage class will meet this requirement MOST cost-effectively?
 - **D)** S3 One Zone-Infrequent Access (S3 One Zone-IA)
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 S3 Glacier Deep Archive is Amazon S3's lowest-cost storage class and supports long-term
 retention and digital preservation for data that may be accessed once or twice in a year. It
@@ -6215,7 +6218,7 @@ Which AWS service can the company use to meet this requirement?
 - **D)** Amazon Rekognition
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Amazon Lexis a service for building conversational interfaces into any application using
 voice and text. It provides the tools necessary to create, test, and publish intelligent
@@ -6239,12 +6242,13 @@ Amazon Lex
 
 What is the total amount of storage offered by Amazon S3?
 
-- **A)** WOMB B. 5 GB
+- **A)** WOMB
+- **B)** 5 GB
 - **C)** 5 TB
 - **D)** Unlimited
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
 Amazon S3 offers unlimited storage for any amount of data. You can store as many
 objects as you want, and each object can be as large as 5 terabytes. You pay only for the
@@ -6295,7 +6299,7 @@ Which AWS service will meet these requirements MOST cost-effectively?
 - **D)** AWS Storage Gateway
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 Amazon Elastic File System (Amazon EFS) provides a simple, scalable, fully managed
 elastic NFS file system for use with AWS Cloud services and on-premises resources. It is
@@ -6324,7 +6328,7 @@ retrieve objects in Amazon S3?
 - **D)** Amazon Elastic File System (Amazon EFS)
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 AWS Storage Gateway file gateway allows companies to use protocols such as NFS and
 SMB to store and retrieve objects in Amazon S3. File gateway provides a seamless
@@ -6346,7 +6350,8 @@ managed service or feature that can transfer streaming data from multiple source
 Amazon S3 bucket.
 Which AWS service or feature should the company use to meet these requirements?
 
-- **A)** AWS DataSync B. Amazon Kinesis Data Firehose
+- **A)** AWS DataSync
+- **B)** Amazon Kinesis Data Firehose
 - **C)** S3 Select
 - **D)** AWS Transfer Family
 
@@ -6420,7 +6425,7 @@ workloads and file systems, including the SMB protocol. It provides features suc
 quotas, end-user file restore, and Microsoft Active Directory integration. Amazon EFS is a
 fully managed file system that supports the NFS protocol, not SMB. Amazon FSx for Lustre
 
-is a fully managed file system that supports high-performance computing workloads, not
+ is a fully managed file system that supports high-performance computing workloads, not
 Microsoft workloads. Amazon EBS is a block storage service that does not provide a file
 system or SMB support. Reference: Amazon FSx for Windows File Server, Amazon FSx
 for Lustre, Amazon EFS, Amazon EBS
@@ -9237,7 +9242,7 @@ By default, how is data in a new Amazon S3 bucket exposed to the public internet
 - **D)** It is deleted after 24 hours
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 S3 buckets and objects are private by default; you must explicitly grant access.
 
@@ -9257,7 +9262,7 @@ Which network control acts as a stateful virtual firewall at the instance level,
 - **D)** IAM policy
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 Security groups are stateful instance-level firewalls; return traffic is automatically allowed. NACLs are stateless at the subnet level.
 
@@ -9277,7 +9282,7 @@ Which service is object storage for virtually unlimited data, accessed over HTTP
 - **D)** Instance store
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Amazon S3 is object storage accessed via API with 11-nines durability and effectively unlimited capacity.
 
@@ -9297,7 +9302,7 @@ A shared file system that many EC2 instances can mount simultaneously across AZs
 - **D)** Instance store
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 Amazon EFS is the managed elastic file system mountable by many instances across AZs.
 
@@ -9317,7 +9322,7 @@ Which storage option provides the highest IOPS and lowest latency but loses its 
 - **D)** Amazon S3
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Instance store is local NVMe on the host — fastest, but ephemeral: data is lost on stop/terminate (it survives a reboot).
 
@@ -9337,7 +9342,7 @@ A single EC2 instance needs a persistent boot volume that survives reboots and c
 - **D)** Amazon S3
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 EBS is network-attached block storage that persists independently of the instance and snapshots to S3.
 
@@ -9357,7 +9362,7 @@ Data is temporary, already replicated elsewhere, and needs the absolute fastest 
 - **D)** S3 Standard
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 When data is disposable/replicated and needs maximum I/O, instance store is chosen despite being ephemeral.
 
@@ -9377,7 +9382,7 @@ Which S3 storage class automatically moves objects between access tiers as usage
 - **D)** S3 Glacier Deep Archive
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 S3 Intelligent-Tiering auto-moves objects between tiers based on changing access patterns — ideal for unknown/changing patterns.
 
@@ -9397,7 +9402,7 @@ Archived data is rarely accessed (e.g. quarterly) but must still be retrievable 
 - **D)** S3 Glacier Deep Archive
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 'Instantly/immediately' + 'rarely accessed' points to Glacier Instant Retrieval, which keeps millisecond retrieval.
 
@@ -9417,7 +9422,7 @@ Which S3 storage class is the cheapest and is designed for 7–10+ year complian
 - **D)** S3 Intelligent-Tiering
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 2)</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 Glacier Deep Archive is the lowest-cost class, with retrieval up to ~12 hours — for long-term compliance archives.
 
@@ -9437,7 +9442,7 @@ What do S3 Lifecycle policies let you do without writing any application code?
 - **D)** Serve objects through a CDN
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Lifecycle rules configured on a bucket/prefix transition objects between classes and expire them based on age — no code.
 
@@ -9457,7 +9462,7 @@ Which service provides automated, online transfer between on-prem NFS/SMB and S3
 - **D)** AWS DMS
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 DataSync automates online file transfer between on-prem storage and AWS with built-in scheduling and validation.
 
@@ -9489,9 +9494,9 @@ A company has a centralized group of users with large file storage requirements 
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] S3 Standard-IA charges a retrieval fee and does not move objects automatically when their access pattern changes. - **B:** ❌ [INCORRECT] S3 One Zone-IA stores data in a single Availability Zone, charges for retrievals and does not adapt to changing access patterns. - **C:** ❌ [INCORRECT] S3 Glacier Flexible Retrieval is for archives and requires a retrieval before the data can be read, which does not fit unpredictable access. - **D:** ✅ [CORRECT] S3 Intelligent-Tiering moves objects to lower-cost access tiers when they are not accessed and has no retrieval charges, for a small monitoring fee. **Official AWS Documentation Reference:** > _"S3 Intelligent-Tiering is the ideal storage class when you want to optimize storage costs for data that has unknown or changing access patterns. There are no retrieval fees for S3 Intelligent-Tiering."_ > — [AWS Documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html#sc-dynamic-data-access) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] S3 Standard-IA charges a retrieval fee and does not move objects automatically when their access pattern changes. - **B:** ❌ [INCORRECT] S3 One Zone-IA stores data in a single Availability Zone, charges for retrievals and does not adapt to changing access patterns. - **C:** ❌ [INCORRECT] S3 Glacier Flexible Retrieval is for archives and requires a retrieval before the data can be read, which does not fit unpredictable access. - **D:** ✅ [CORRECT] S3 Intelligent-Tiering moves objects to lower-cost access tiers when they are not accessed and has no retrieval charges, for a small monitoring fee. **Official AWS Documentation Reference:** > _"S3 Intelligent-Tiering is the ideal storage class when you want to optimize storage costs for data that has unknown or changing access patterns. There are no retrieval fees for S3 Intelligent-Tiering."_ > — [AWS Documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html#sc-dynamic-data-access)
 
 *Sources: GustavoFreze_Questions*
 
@@ -9507,7 +9512,7 @@ A company has a centralized group of users with large file storage requirements 
 <details>
 <summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] The console is a web interface for people. Application code cannot use it to upload files. - **B:** ❌ [INCORRECT] CloudFormation provisions infrastructure from templates. It creates the bucket, not the uploads an application makes at run time. - **C:** ✅ [CORRECT] The AWS SDKs give application code language-specific APIs for AWS services, and they handle request signing, retries and errors. - **D:** ❌ [INCORRECT] Transfer Acceleration speeds up transfers to a bucket over long distances, but the application still needs a way to call Amazon S3. **Official AWS Documentation Reference:** > _"you can skip the signature process, as the SDK and CLI clients authenticate your requests by using the access keys that you provide."_ > — [AWS Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_sigv.html#reference_sigv) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] The console is a web interface for people. Application code cannot use it to upload files. - **B:** ❌ [INCORRECT] CloudFormation provisions infrastructure from templates. It creates the bucket, not the uploads an application makes at run time. - **C:** ✅ [CORRECT] The AWS SDKs give application code language-specific APIs for AWS services, and they handle request signing, retries and errors. - **D:** ❌ [INCORRECT] Transfer Acceleration speeds up transfers to a bucket over long distances, but the application still needs a way to call Amazon S3. **Official AWS Documentation Reference:** > _"you can skip the signature process, as the SDK and CLI clients authenticate your requests by using the access keys that you provide."_ > — [AWS Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_sigv.html#reference_sigv)
 
 *Sources: GustavoFreze_Questions*
 
@@ -9521,9 +9526,9 @@ A company has a centralized group of users with large file storage requirements 
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] EBS volumes attach to EC2 instances. A mobile application cannot download from them directly. - **B:** ✅ [CORRECT] Amazon S3 is object storage for any amount of data, and each object is addressable by a URL, which fits mobile applications and websites. - **C:** ❌ [INCORRECT] Instance store is temporary block storage on the host of one instance and loses data with the instance. - **D:** ❌ [INCORRECT] EFS is a file system that compute instances mount over NFS, not a store a mobile application reads over HTTPS. **Official AWS Documentation Reference:** > _"Customers of all sizes and industries can use Amazon S3 to store and protect any amount of data for a range of use cases, such as data lakes, websites, mobile applications, backup and restore, archive, enterprise applications, IoT devices, and big data analytics."_ > — [AWS Documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html#Welcome) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] EBS volumes attach to EC2 instances. A mobile application cannot download from them directly. - **B:** ✅ [CORRECT] Amazon S3 is object storage for any amount of data, and each object is addressable by a URL, which fits mobile applications and websites. - **C:** ❌ [INCORRECT] Instance store is temporary block storage on the host of one instance and loses data with the instance. - **D:** ❌ [INCORRECT] EFS is a file system that compute instances mount over NFS, not a store a mobile application reads over HTTPS. **Official AWS Documentation Reference:** > _"Customers of all sizes and industries can use Amazon S3 to store and protect any amount of data for a range of use cases, such as data lakes, websites, mobile applications, backup and restore, archive, enterprise applications, IoT devices, and big data analytics."_ > — [AWS Documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html#Welcome)
 
 *Sources: GustavoFreze_Questions*
 
@@ -9539,7 +9544,7 @@ A company has a centralized group of users with large file storage requirements 
 <details>
 <summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] S3 Standard-IA charges a retrieval fee, which costs more if the data turns out to be accessed often. - **B:** ❌ [INCORRECT] S3 One Zone-IA also charges retrieval fees and keeps data in a single Availability Zone. - **C:** ✅ [CORRECT] S3 Intelligent-Tiering moves objects between access tiers automatically when access patterns change, and it has no retrieval fees. - **D:** ❌ [INCORRECT] Deep Archive is for data accessed less than once a year, with retrieval times of hours and retrieval fees. **Official AWS Documentation Reference:** > _"S3 Intelligent-Tiering is the ideal storage class when you want to optimize storage costs for data that has unknown or changing access patterns. There are no retrieval fees for S3 Intelligent-Tiering."_ > — [AWS Documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html#sc-dynamic-data-access) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] S3 Standard-IA charges a retrieval fee, which costs more if the data turns out to be accessed often. - **B:** ❌ [INCORRECT] S3 One Zone-IA also charges retrieval fees and keeps data in a single Availability Zone. - **C:** ✅ [CORRECT] S3 Intelligent-Tiering moves objects between access tiers automatically when access patterns change, and it has no retrieval fees. - **D:** ❌ [INCORRECT] Deep Archive is for data accessed less than once a year, with retrieval times of hours and retrieval fees. **Official AWS Documentation Reference:** > _"S3 Intelligent-Tiering is the ideal storage class when you want to optimize storage costs for data that has unknown or changing access patterns. There are no retrieval fees for S3 Intelligent-Tiering."_ > — [AWS Documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html#sc-dynamic-data-access)
 
 *Sources: GustavoFreze_Questions*
 
@@ -9553,9 +9558,9 @@ A company has a centralized group of users with large file storage requirements 
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] An S3 Lifecycle configuration uses transition actions to move objects to another storage class and expiration actions to delete them after a period. - **B:** ❌ [INCORRECT] Versioning keeps multiple versions of each object. It does not move or delete objects on a schedule. - **C:** ❌ [INCORRECT] Replication copies objects to other buckets. It does not change storage classes over time. - **D:** ❌ [INCORRECT] Object Lock prevents objects from being deleted or overwritten. It does not transition them. **Official AWS Documentation Reference:** > _"S3 Lifecycle helps you store objects cost effectively throughout their lifecycle by transitioning them to lower-cost storage classes, or, deleting expired objects on your behalf."_ > — [AWS Documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lifecycle-mgmt.html#object-lifecycle-mgmt) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] An S3 Lifecycle configuration uses transition actions to move objects to another storage class and expiration actions to delete them after a period. - **B:** ❌ [INCORRECT] Versioning keeps multiple versions of each object. It does not move or delete objects on a schedule. - **C:** ❌ [INCORRECT] Replication copies objects to other buckets. It does not change storage classes over time. - **D:** ❌ [INCORRECT] Object Lock prevents objects from being deleted or overwritten. It does not transition them. **Official AWS Documentation Reference:** > _"S3 Lifecycle helps you store objects cost effectively throughout their lifecycle by transitioning them to lower-cost storage classes, or, deleting expired objects on your behalf."_ > — [AWS Documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lifecycle-mgmt.html#object-lifecycle-mgmt)
 
 *Sources: GustavoFreze_Questions*
 
@@ -9569,9 +9574,9 @@ A company has a centralized group of users with large file storage requirements 
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] An EBS volume is block storage for an instance in a single Availability Zone, not a shared NFS file system. - **B:** ✅ [CORRECT] EFS is serverless, elastic file storage that supports NFS, grows and shrinks automatically, and is accessible from instances across Availability Zones. - **C:** ❌ [INCORRECT] FSx for Windows File Server uses the SMB protocol and fits Windows workloads. - **D:** ❌ [INCORRECT] Glacier Flexible Retrieval is an archive storage class, not a mounted file system. **Official AWS Documentation Reference:** > _"Amazon EFS is built to scale on demand to petabytes without disrupting applications, growing and shrinking automatically as you add and remove files."_ > — [AWS Documentation](https://docs.aws.amazon.com/efs/latest/ug/whatisefs.html#whatisefs) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] An EBS volume is block storage for an instance in a single Availability Zone, not a shared NFS file system. - **B:** ✅ [CORRECT] EFS is serverless, elastic file storage that supports NFS, grows and shrinks automatically, and is accessible from instances across Availability Zones. - **C:** ❌ [INCORRECT] FSx for Windows File Server uses the SMB protocol and fits Windows workloads. - **D:** ❌ [INCORRECT] Glacier Flexible Retrieval is an archive storage class, not a mounted file system. **Official AWS Documentation Reference:** > _"Amazon EFS is built to scale on demand to petabytes without disrupting applications, growing and shrinking automatically as you add and remove files."_ > — [AWS Documentation](https://docs.aws.amazon.com/efs/latest/ug/whatisefs.html#whatisefs)
 
 *Sources: GustavoFreze_Questions*
 
@@ -9587,7 +9592,7 @@ A company has a centralized group of users with large file storage requirements 
 <details>
 <summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] EFS uses NFS, and AWS does not support it on Windows instances. - **B:** ❌ [INCORRECT] An EBS volume is block storage for one instance, not a managed file server with shares. - **C:** ✅ [CORRECT] FSx for Windows File Server provides fully managed Windows file servers with SMB access and Microsoft Active Directory integration. - **D:** ❌ [INCORRECT] Storage Gateway connects on-premises environments to cloud storage. It is not the managed file server in AWS. **Official AWS Documentation Reference:** > _"Amazon FSx for Windows File Server provides fully managed Microsoft Windows file servers, backed by a fully native Windows file system."_ > — [AWS Documentation](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/what-is.html#what-is) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] EFS uses NFS, and AWS does not support it on Windows instances. - **B:** ❌ [INCORRECT] An EBS volume is block storage for one instance, not a managed file server with shares. - **C:** ✅ [CORRECT] FSx for Windows File Server provides fully managed Windows file servers with SMB access and Microsoft Active Directory integration. - **D:** ❌ [INCORRECT] Storage Gateway connects on-premises environments to cloud storage. It is not the managed file server in AWS. **Official AWS Documentation Reference:** > _"Amazon FSx for Windows File Server provides fully managed Microsoft Windows file servers, backed by a fully native Windows file system."_ > — [AWS Documentation](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/what-is.html#what-is)
 
 *Sources: GustavoFreze_Questions*
 
@@ -9601,9 +9606,9 @@ A company has a centralized group of users with large file storage requirements 
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Direct Connect is a network connection. It does not present file shares or cache data. - **B:** ❌ [INCORRECT] EFS is a file system in AWS for NFS clients. It does not store files as S3 objects with a local cache on premises. - **C:** ❌ [INCORRECT] AWS Backup automates backup policies. It does not serve file shares to applications. - **D:** ✅ [CORRECT] Storage Gateway, with an S3 File Gateway, stores files as objects in S3 through NFS and SMB and provides low-latency access through local caching. **Official AWS Documentation Reference:** > _"A S3 File Gateway simplifies file storage in Amazon S3, integrates to existing applications through industry-standard file system protocols, and provides a cost-effective alternative to on-premises storage. It also provides low-latency access to data through transparent local caching."_ > — [AWS Documentation](https://docs.aws.amazon.com/filegateway/latest/files3/what-is-file-s3.html#what-is-file-s3) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Direct Connect is a network connection. It does not present file shares or cache data. - **B:** ❌ [INCORRECT] EFS is a file system in AWS for NFS clients. It does not store files as S3 objects with a local cache on premises. - **C:** ❌ [INCORRECT] AWS Backup automates backup policies. It does not serve file shares to applications. - **D:** ✅ [CORRECT] Storage Gateway, with an S3 File Gateway, stores files as objects in S3 through NFS and SMB and provides low-latency access through local caching. **Official AWS Documentation Reference:** > _"A S3 File Gateway simplifies file storage in Amazon S3, integrates to existing applications through industry-standard file system protocols, and provides a cost-effective alternative to on-premises storage. It also provides low-latency access to data through transparent local caching."_ > — [AWS Documentation](https://docs.aws.amazon.com/filegateway/latest/files3/what-is-file-s3.html#what-is-file-s3)
 
 *Sources: GustavoFreze_Questions*
 
@@ -9617,9 +9622,9 @@ A company has a centralized group of users with large file storage requirements 
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Polly turns text into lifelike speech, but it does not understand what the customer wants. - **B:** ✅ [CORRECT] Lex builds conversational interfaces with voice and text, combining speech recognition with natural language understanding. - **C:** ❌ [INCORRECT] Transcribe converts speech to text, but it does not hold a conversation. - **D:** ❌ [INCORRECT] Comprehend finds insights such as sentiment in text, but it does not build a chatbot. **Official AWS Documentation Reference:** > _"Amazon Lex is a fully managed artificial intelligence (AI) service to design, build, test, and deploy conversational interfaces into any application using voice and text."_ > — [AWS Documentation](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/machine-learning.html#amazon-lex) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Polly turns text into lifelike speech, but it does not understand what the customer wants. - **B:** ✅ [CORRECT] Lex builds conversational interfaces with voice and text, combining speech recognition with natural language understanding. - **C:** ❌ [INCORRECT] Transcribe converts speech to text, but it does not hold a conversation. - **D:** ❌ [INCORRECT] Comprehend finds insights such as sentiment in text, but it does not build a chatbot. **Official AWS Documentation Reference:** > _"Amazon Lex is a fully managed artificial intelligence (AI) service to design, build, test, and deploy conversational interfaces into any application using voice and text."_ > — [AWS Documentation](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/machine-learning.html#amazon-lex)
 
 *Sources: GustavoFreze_Questions*
 
@@ -10789,7 +10794,7 @@ system?
 - **D)** Amazon Kinesis Data Streams
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Amazon Redshift is a fully managed, petabyte-scale data warehouse service in the cloud.
 You can start with just a few hundred gigabytes of data and scale to a petabyte or more.
@@ -10817,7 +10822,7 @@ Which AWS database service should the company choose?
 - **D)** Amazon DocumentDB (with MongoDB compatibility)
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 Amazon Neptune is a service that provides a fully managed graph database that supports
 property graphs and RDF graphs. It can be used to build applications that work with highly
@@ -10826,7 +10831,7 @@ and knowledge graphs2. Amazon DynamoDB is a service that provides a fully manage
 NoSQL database that delivers fast and consistent performance at any scale. Amazon
 Aurora is a service that provides a fully managed relational database that is compatible
 
-with MySQL and PostgreSQL. Amazon DocumentDB (with MongoDB compatibility) is a
+ with MySQL and PostgreSQL. Amazon DocumentDB (with MongoDB compatibility) is a
 service that provides a fully managed document database that is compatible with
 MongoDB.
 
@@ -10841,7 +10846,7 @@ MongoDB.
 A company has a client that uses an Amazon RDS database. The client requests
 Information about operating system-level upgrades on the AWS resources that host the
 RDS database. The company employs a third-party provider to monitor the RDS database.
-Who is responsible for upgrading the operating systems for Amazon RDS under the AWS
+ Who is responsible for upgrading the operating systems for Amazon RDS under the AWS
 shared responsibility model?
 
 - **A)** The client
@@ -10875,7 +10880,7 @@ Which AWS service should the company use for the data warehouse?
 - **D)** Amazon Redshift
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
 The AWS service that the company should use for the data warehouse is Amazon
 Redshift. Amazon Redshift is a fully managed, petabyte-scale data warehouse service that
@@ -10902,7 +10907,7 @@ model?
 - **D)** Apply minor patches to the database.
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 The customer is responsible for selecting and configuring the encryption options used for
 its Amazon RDS database. When creating an encrypted DB instance, the customer
@@ -10936,7 +10941,7 @@ What is the MOST operationally efficient way to meet these requirements?
 - **D)** Migrate the database to Amazon DynamoDB.
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
 **Correct Answer: ** ()
 
@@ -10964,7 +10969,7 @@ Watch out for distractors testing similar AWS service boundaries. When the quest
 ### Question 463 (`ACTUAL-393-Q069`) [point:db_dynamodb_nosql_serverless]
 
 A company needs a graph database service that is scalable and highly available.
-Which AWS service meets these requirements?
+ Which AWS service meets these requirements?
 
 - **A)** Amazon Aurora
 - **B)** Amazon Redshift
@@ -11160,7 +11165,7 @@ Which option presents a benefit of using Amazon RDS?
 - **D)** Provides automatic horizontal scaling for read and write workloads
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 Amazon Relational Database Service reduces database administration work by managing
 common operational tasks. AWS documentation states that Amazon RDS manages
@@ -11193,7 +11198,7 @@ Which AWS service should the company use to meet these requirements?
 - **D)** Amazon Neptune
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 A is correct because Amazon RDS is the AWS service that provides a managed relational
 database service that supports various database engines, such as MySQL, PostgreSQL,
@@ -11251,7 +11256,7 @@ Which AWS service should the company use to run these queries MOST cost-effectiv
 - **D)** Amazon Redshift
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 **Correct Answer: ** ()
 
@@ -11309,14 +11314,14 @@ Responsibility Model - Amazon Web Services (AWS), 2: Security in Amazon DynamoDB
 
 A company wants to migrate its on-premises NoSQL workload to Amazon DynamoDB.
 Which AWS service will meet this requirement?
-A. Migration Evaluator
+ A. Migration Evaluator
 
 - **B)** AWS Migration Hub
 - **C)** AWS Application Migration Service
 - **D)** AWS Database Migration Service (AWS DMS)
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
 Community Most Voted: B (100%). Contributor Answer: B.
 
@@ -13388,7 +13393,7 @@ Which service is a managed relational database supporting engines like MySQL and
 - **D)** Amazon ElastiCache
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Amazon RDS is the managed relational database service.
 
@@ -13408,7 +13413,7 @@ Which service is a fully managed NoSQL key-value database with single-digit-mill
 - **D)** Amazon Redshift
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 DynamoDB is serverless NoSQL delivering consistent single-digit-ms performance at scale.
 
@@ -13428,7 +13433,7 @@ Which service is a petabyte-scale data warehouse for complex analytical (OLAP) q
 - **D)** Amazon S3
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 Amazon Redshift is the columnar data-warehouse service for large-scale analytics.
 
@@ -13448,7 +13453,7 @@ Which AWS database service is a relational engine supporting MySQL, PostgreSQL, 
 - **D)** Amazon ElastiCache
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Amazon RDS is the managed relational service supporting those five engines.
 
@@ -13468,7 +13473,7 @@ A workload needs massive, key-based throughput with single-digit-millisecond lat
 - **D)** Amazon Redshift
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 2)</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 DynamoDB is a serverless NoSQL key-value/document store delivering single-digit-ms latency at any scale.
 
@@ -13488,7 +13493,7 @@ Analysts need to run complex analytical queries across years of historical data.
 - **D)** Amazon RDS
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Redshift is a columnar data-warehouse (OLAP) service for complex analytics over large historical datasets.
 
@@ -13508,7 +13513,7 @@ You want to reduce load on a relational database by serving repeated reads from 
 - **D)** Amazon S3
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 ElastiCache (Redis/Memcached) provides a sub-millisecond caching layer that shields the primary database from repeated reads.
 
@@ -13528,7 +13533,7 @@ Which is an advantage of Amazon Aurora over standard Amazon RDS?
 - **D)** It requires no storage at all
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Aurora supports up to 15 read replicas (RDS: 5) with single-digit-ms replication lag and faster failover.
 
@@ -13548,7 +13553,7 @@ Analytics differ mainly by where the data lives. Which fits 'data stays in S3, q
 - **D)** DynamoDB
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Athena: data in S3, occasional/ad-hoc queries, per-scan pricing. Redshift = loaded warehouse; EMR = cluster frameworks.
 
@@ -13568,7 +13573,7 @@ Which migration service performs a lift-and-shift 'rehost' by continuously repli
 - **D)** DataSync
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 MGN continuously replicates whole servers (physical/virtual/other-cloud) for a minimal-downtime rehost to EC2.
 
@@ -13588,7 +13593,7 @@ Which service migrates databases with a full load plus Change Data Capture, keep
 - **D)** Snowball
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 DMS does a full load then CDC to keep the target synced with the live source until cutover; supports homogeneous and heterogeneous moves.
 
@@ -13606,7 +13611,7 @@ DMS does a full load then CDC to keep the target synced with the live source unt
 <details>
 <summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] For abstracted services such as DynamoDB, AWS operates the infrastructure layer, the operating system and the platform, including the database software. - **B:** ❌ [INCORRECT] Storage hardware is part of the infrastructure that AWS protects and maintains. - **C:** ✅ [CORRECT] For abstracted services, customers manage their data, including encryption options and classification, and use IAM to apply the appropriate permissions. - **D:** ❌ [INCORRECT] DynamoDB is a managed service, so AWS operates the servers behind the tables. **Official AWS Documentation Reference:** > _"Customers are responsible for managing their data (including encryption options), classifying their assets, and using IAM tools to apply the appropriate permissions."_ > — [AWS Documentation](https://aws.amazon.com/compliance/shared-responsibility-model/#content-1) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] For abstracted services such as DynamoDB, AWS operates the infrastructure layer, the operating system and the platform, including the database software. - **B:** ❌ [INCORRECT] Storage hardware is part of the infrastructure that AWS protects and maintains. - **C:** ✅ [CORRECT] For abstracted services, customers manage their data, including encryption options and classification, and use IAM to apply the appropriate permissions. - **D:** ❌ [INCORRECT] DynamoDB is a managed service, so AWS operates the servers behind the tables. **Official AWS Documentation Reference:** > _"Customers are responsible for managing their data (including encryption options), classifying their assets, and using IAM tools to apply the appropriate permissions."_ > — [AWS Documentation](https://aws.amazon.com/compliance/shared-responsibility-model/#content-1)
 
 *Sources: GustavoFreze_Questions*
 
@@ -13620,9 +13625,9 @@ DMS does a full load then CDC to keep the target synced with the live source unt
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] AWS SCT converts a database schema from one engine to another. It does not replicate ongoing changes. - **B:** ❌ [INCORRECT] Migration Evaluator builds the business case for migrating. It does not move data. - **C:** ❌ [INCORRECT] AWS Backup centralizes backups of AWS resources. It does not keep a source and a target database in sync. - **D:** ✅ [CORRECT] AWS DMS performs one-time migrations or replicates ongoing changes to keep the source and the target in sync until cutover. **Official AWS Documentation Reference:** > _"You can perform one-time migrations or replicate ongoing changes to keep sources and targets in sync."_ > — [AWS Documentation](https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] AWS SCT converts a database schema from one engine to another. It does not replicate ongoing changes. - **B:** ❌ [INCORRECT] Migration Evaluator builds the business case for migrating. It does not move data. - **C:** ❌ [INCORRECT] AWS Backup centralizes backups of AWS resources. It does not keep a source and a target database in sync. - **D:** ✅ [CORRECT] AWS DMS performs one-time migrations or replicates ongoing changes to keep the source and the target in sync until cutover. **Official AWS Documentation Reference:** > _"You can perform one-time migrations or replicate ongoing changes to keep sources and targets in sync."_ > — [AWS Documentation](https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html)
 
 *Sources: GustavoFreze_Questions*
 
@@ -13636,9 +13641,9 @@ DMS does a full load then CDC to keep the target synced with the live source unt
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B, C)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] AWS Application Migration Service, now named AWS Transform MGN, rehosts whole servers. It does not convert a database to a different engine. - **B:** ✅ [CORRECT] AWS SCT converts the schema from one database engine to another, and Oracle to Aurora PostgreSQL is a supported conversion. - **C:** ✅ [CORRECT] After the schema is converted, AWS DMS migrates the data. AWS SCT can even create the AWS DMS endpoints and tasks. - **D:** ❌ [INCORRECT] AWS Backup protects data with backups. It does not convert schemas between engines. - **E:** ❌ [INCORRECT] Storage Gateway gives on-premises applications access to cloud storage. It does not migrate databases between engines. **Official AWS Documentation Reference:** > _"When you convert an Oracle database to RDS for PostgreSQL or Amazon Aurora PostgreSQL, be aware of the following."_ > — [AWS Documentation](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_Source.Oracle.ToPostgreSQL.html) > _"After you convert your source schemas and apply the converted code to your target database, you can use AWS DMS to migrate your data."_ > — [AWS Documentation](https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] AWS Application Migration Service, now named AWS Transform MGN, rehosts whole servers. It does not convert a database to a different engine. - **B:** ✅ [CORRECT] AWS SCT converts the schema from one database engine to another, and Oracle to Aurora PostgreSQL is a supported conversion. - **C:** ✅ [CORRECT] After the schema is converted, AWS DMS migrates the data. AWS SCT can even create the AWS DMS endpoints and tasks. - **D:** ❌ [INCORRECT] AWS Backup protects data with backups. It does not convert schemas between engines. - **E:** ❌ [INCORRECT] Storage Gateway gives on-premises applications access to cloud storage. It does not migrate databases between engines. **Official AWS Documentation Reference:** > _"When you convert an Oracle database to RDS for PostgreSQL or Amazon Aurora PostgreSQL, be aware of the following."_ > — [AWS Documentation](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_Source.Oracle.ToPostgreSQL.html) > _"After you convert your source schemas and apply the converted code to your target database, you can use AWS DMS to migrate your data."_ > — [AWS Documentation](https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html)
 
 *Sources: GustavoFreze_Questions*
 
@@ -13652,9 +13657,9 @@ DMS does a full load then CDC to keep the target synced with the live source unt
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Patching by AWS is a reason to choose RDS, where AWS patches the database software. - **B:** ✅ [CORRECT] On EC2 the customer installs and patches the operating system and the database, which gives full control at the cost of more management. - **C:** ❌ [INCORRECT] Managed backups are a feature of RDS, not of a database the company runs itself on EC2. - **D:** ❌ [INCORRECT] With RDS, AWS manages high availability. On EC2 the company must build it. **Official AWS Documentation Reference:** > _"You need full control over the database and access to its underlying operating system."_ > — [AWS Documentation](https://docs.aws.amazon.com/prescriptive-guidance/latest/migration-oracle-database/ec2-oracle.html#ec2-oracle-choosing) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Patching by AWS is a reason to choose RDS, where AWS patches the database software. - **B:** ✅ [CORRECT] On EC2 the customer installs and patches the operating system and the database, which gives full control at the cost of more management. - **C:** ❌ [INCORRECT] Managed backups are a feature of RDS, not of a database the company runs itself on EC2. - **D:** ❌ [INCORRECT] With RDS, AWS manages high availability. On EC2 the company must build it. **Official AWS Documentation Reference:** > _"You need full control over the database and access to its underlying operating system."_ > — [AWS Documentation](https://docs.aws.amazon.com/prescriptive-guidance/latest/migration-oracle-database/ec2-oracle.html#ec2-oracle-choosing)
 
 *Sources: GustavoFreze_Questions*
 
@@ -13668,9 +13673,9 @@ DMS does a full load then CDC to keep the target synced with the live source unt
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Aurora is a relational database engine, not a key-value store. - **B:** ❌ [INCORRECT] RDS runs relational database engines on DB instances that the customer sizes. - **C:** ❌ [INCORRECT] Redshift is a data warehouse for analytic queries, not for serving session data to a game. - **D:** ✅ [CORRECT] DynamoDB is a serverless NoSQL database that supports key-value and document data with single-digit millisecond performance at any scale. **Official AWS Documentation Reference:** > _"DynamoDB was purpose-built to improve upon the performance and scalability of relational databases to deliver single-digit millisecond performance at any scale."_ > — [AWS Documentation](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html#ddb-characteristics) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Aurora is a relational database engine, not a key-value store. - **B:** ❌ [INCORRECT] RDS runs relational database engines on DB instances that the customer sizes. - **C:** ❌ [INCORRECT] Redshift is a data warehouse for analytic queries, not for serving session data to a game. - **D:** ✅ [CORRECT] DynamoDB is a serverless NoSQL database that supports key-value and document data with single-digit millisecond performance at any scale. **Official AWS Documentation Reference:** > _"DynamoDB was purpose-built to improve upon the performance and scalability of relational databases to deliver single-digit millisecond performance at any scale."_ > — [AWS Documentation](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html#ddb-characteristics)
 
 *Sources: GustavoFreze_Questions*
 
@@ -13684,9 +13689,9 @@ DMS does a full load then CDC to keep the target synced with the live source unt
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] ElastiCache is a managed in-memory data store and cache that keeps hot data close to the application and reduces reads on the database. - **B:** ❌ [INCORRECT] DynamoDB is a separate NoSQL database. Moving the catalog there is a migration, not a cache in front of RDS. - **C:** ❌ [INCORRECT] Neptune is a graph database for highly connected data, not an in-memory cache. - **D:** ❌ [INCORRECT] Redshift is a data warehouse for analytics and does not cache application reads. **Official AWS Documentation Reference:** > _"The primary purpose of an in-memory key-value store is to provide ultrafast (submillisecond latency) and inexpensive access to copies of data. Most data stores have areas of data that are frequently accessed but seldom updated."_ > — [AWS Documentation](https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/elasticache-use-cases.html#elasticache-use-cases-data-store) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] ElastiCache is a managed in-memory data store and cache that keeps hot data close to the application and reduces reads on the database. - **B:** ❌ [INCORRECT] DynamoDB is a separate NoSQL database. Moving the catalog there is a migration, not a cache in front of RDS. - **C:** ❌ [INCORRECT] Neptune is a graph database for highly connected data, not an in-memory cache. - **D:** ❌ [INCORRECT] Redshift is a data warehouse for analytics and does not cache application reads. **Official AWS Documentation Reference:** > _"The primary purpose of an in-memory key-value store is to provide ultrafast (submillisecond latency) and inexpensive access to copies of data. Most data stores have areas of data that are frequently accessed but seldom updated."_ > — [AWS Documentation](https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/elasticache-use-cases.html#elasticache-use-cases-data-store)
 
 *Sources: GustavoFreze_Questions*
 
@@ -13700,9 +13705,9 @@ DMS does a full load then CDC to keep the target synced with the live source unt
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] DocumentDB is a document database, not a MySQL or PostgreSQL compatible engine. - **B:** ❌ [INCORRECT] DynamoDB is a NoSQL key-value and document database. - **C:** ❌ [INCORRECT] Neptune is a graph database. - **D:** ✅ [CORRECT] Aurora is a fully managed relational engine compatible with MySQL and PostgreSQL, and its storage grows automatically as needed. **Official AWS Documentation Reference:** > _"Its MySQL- and PostgreSQL-compatible database engines are customized to take advantage of that fast distributed storage. The underlying storage grows automatically as needed."_ > — [AWS Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html#CHAP_AuroraOverview) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] DocumentDB is a document database, not a MySQL or PostgreSQL compatible engine. - **B:** ❌ [INCORRECT] DynamoDB is a NoSQL key-value and document database. - **C:** ❌ [INCORRECT] Neptune is a graph database. - **D:** ✅ [CORRECT] Aurora is a fully managed relational engine compatible with MySQL and PostgreSQL, and its storage grows automatically as needed. **Official AWS Documentation Reference:** > _"Its MySQL- and PostgreSQL-compatible database engines are customized to take advantage of that fast distributed storage. The underlying storage grows automatically as needed."_ > — [AWS Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html#CHAP_AuroraOverview)
 
 *Sources: GustavoFreze_Questions*
 
@@ -14523,7 +14528,7 @@ What should the company use to accomplish this goal?
 - **D)** NAT gateway
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 A VPC endpoint enables private connections between an Amazon VPC and AWS services,
 like Amazon S3, without requiring internet access. This allows secure access to S3 from
@@ -14549,7 +14554,7 @@ responsibility?
 - **D)** Encrypting traffic between Availability Zones
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 The customer is responsible for configuring the logical networking resources inside its
 Amazon VPC. This includes creating and associating route tables and defining routes that
@@ -14560,7 +14565,7 @@ table to direct internet-bound traffic to an internet gateway is the company's r
 making option C correct. AWS is responsible for the physical routers, backbone networks,
 data centers, and networking infrastructure that provide communication within and
 
-between AWS Regions. Customers do not maintain or physically secure that equipment.
+ between AWS Regions. Customers do not maintain or physically secure that equipment.
 AWS also provides infrastructure-level protection for traffic across its global network, while
 customers remain responsible for application-level encryption where required by their
 security pol
@@ -14576,7 +14581,7 @@ security pol
 A company has set up a VPC on AWS. The company needs a dedicated connection
 between the VPC and the company's on-premises network.
 Which action should the company take to meet this requirement?
-A. Establish a VPN connection between the VPC and the company's on-premises network.
+ A. Establish a VPN connection between the VPC and the company's on-premises network.
 
 - **B)** Establish an AWS Direct Connect connection between the VPC and the company's onpremises network.
 - **C)** Attach an internet gateway to the VPC. Use the AWS public endpoints for connectivity.
@@ -14613,7 +14618,7 @@ traffic in and out of subnets?
 - **D)** AWSWAF
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 A network access control list (network ACL) is a feature that acts as a firewall for
 controlling traffic in and out of one or more subnets in a virtual private cloud (VPC).
@@ -14681,7 +14686,7 @@ D . Customer gateway: Incorrect, as it represents the on-premises device or soft
 application that connects to AWS, but it does not provide a central hub.
 AWS Cloud Reference:
 
-AWS Transit Gateway
+ AWS Transit Gateway
 
 *Sources: Amazon_CLF_C02_Nov2026_Recall_393Q, Consensus_Aligned*
 
@@ -14700,7 +14705,7 @@ latency from on premises to the AWS Cloud?
 - **D)** Amazon OpenSearch Service
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 AWS Direct Connect is a service that provides a dedicated network connection from on
 premises to the AWS Cloud. It can reduce network costs, increase bandwidth throughput,
@@ -14728,7 +14733,7 @@ Which AWS tool or feature acts as a VPC firewall at the subnet level?
 - **D)** Internet gateway
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Network ACLs (NACLs) are subnet-level firewalls in AWS, controlling inbound and
 outbound traffic for VPC subnets. They provide an additional layer of security by allowing
@@ -15806,9 +15811,9 @@ Which of the following are components of an AWS Site-to-Site VPN connection? (Se
 - **E)** Internet gateway
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: B, D)</b></summary>
 
-**Correct Answer: ** ()
+**Correct Answer:** `B, D`
 
 > **Domain Focus:** Cloud Technology and Services | **Blueprint Area:** Topic 3.5: Networking & Content Delivery (VPC, Route 53, CloudFront)
 
@@ -15845,9 +15850,9 @@ Which AWS features should the company use to meet this requirement? (Select TWO.
 - **E)** Amazon EC2 security groups
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: A, C)</b></summary>
 
-**Correct Answer: ** ()
+**Correct Answer:** `A, C`
 
 > **Domain Focus:** Cloud Technology and Services | **Blueprint Area:** Topic 3.5: Networking & Content Delivery (VPC, Route 53, CloudFront)
 
@@ -16053,9 +16058,9 @@ Which AWS service gives users the ability to provision a dedicated and private n
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] A NAT gateway lets instances in private subnets start outbound connections. It is not what makes a subnet public. - **B:** ✅ [CORRECT] An internet gateway allows communication between the VPC and the internet, and a subnet with a route to it is a public subnet. - **C:** ❌ [INCORRECT] A virtual private gateway is the AWS side of a Site-to-Site VPN connection, not a path to the internet. - **D:** ❌ [INCORRECT] A security group filters traffic to an instance, but it does not provide a route to the internet. **Official AWS Documentation Reference:** > _"An internet gateway enables resources in your public subnets (such as EC2 instances) to connect to the internet if the resource has a public IPv4 address or an IPv6 address."_ > — [AWS Documentation](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html#VPC_Internet_Gateway) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] A NAT gateway lets instances in private subnets start outbound connections. It is not what makes a subnet public. - **B:** ✅ [CORRECT] An internet gateway allows communication between the VPC and the internet, and a subnet with a route to it is a public subnet. - **C:** ❌ [INCORRECT] A virtual private gateway is the AWS side of a Site-to-Site VPN connection, not a path to the internet. - **D:** ❌ [INCORRECT] A security group filters traffic to an instance, but it does not provide a route to the internet. **Official AWS Documentation Reference:** > _"An internet gateway enables resources in your public subnets (such as EC2 instances) to connect to the internet if the resource has a public IPv4 address or an IPv6 address."_ > — [AWS Documentation](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html#VPC_Internet_Gateway)
 
 *Sources: GustavoFreze_Questions*
 
@@ -16069,9 +16074,9 @@ Which AWS service gives users the ability to provision a dedicated and private n
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] Direct Connect links the internal network to a Direct Connect location over a standard Ethernet fiber cable, bypassing internet service providers. - **B:** ❌ [INCORRECT] Site-to-Site VPN encrypts traffic between the data center and the VPC, but the tunnels travel over the internet. - **C:** ❌ [INCORRECT] Client VPN connects individual users to AWS, not a data center through a dedicated link. - **D:** ❌ [INCORRECT] Transit Gateway is a hub that interconnects VPCs and on-premises networks. It is not a physical connection to the data center. **Official AWS Documentation Reference:** > _"With this connection, you can create virtual interfaces directly to public AWS services (for example, to Amazon S3) or to Amazon VPC, bypassing internet service providers in your network path."_ > — [AWS Documentation](https://docs.aws.amazon.com/directconnect/latest/UserGuide/Welcome.html#Welcome) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] Direct Connect links the internal network to a Direct Connect location over a standard Ethernet fiber cable, bypassing internet service providers. - **B:** ❌ [INCORRECT] Site-to-Site VPN encrypts traffic between the data center and the VPC, but the tunnels travel over the internet. - **C:** ❌ [INCORRECT] Client VPN connects individual users to AWS, not a data center through a dedicated link. - **D:** ❌ [INCORRECT] Transit Gateway is a hub that interconnects VPCs and on-premises networks. It is not a physical connection to the data center. **Official AWS Documentation Reference:** > _"With this connection, you can create virtual interfaces directly to public AWS services (for example, to Amazon S3) or to Amazon VPC, bypassing internet service providers in your network path."_ > — [AWS Documentation](https://docs.aws.amazon.com/directconnect/latest/UserGuide/Welcome.html#Welcome)
 
 *Sources: GustavoFreze_Questions*
 
@@ -16085,9 +16090,9 @@ Which AWS service gives users the ability to provision a dedicated and private n
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Direct Connect is the dedicated physical connection that the company does not want to wait for. - **B:** ❌ [INCORRECT] Client VPN connects the devices of individual users, not a whole on-premises network. - **C:** ❌ [INCORRECT] VPC peering connects two VPCs, not an on-premises network to a VPC. - **D:** ✅ [CORRECT] Site-to-Site VPN creates IPsec VPN connections between the on-premises network and the VPC, each with two encrypted tunnels. **Official AWS Documentation Reference:** > _"Site-to-Site VPN supports Internet Protocol security (IPsec) VPN connections."_ > — [AWS Documentation](https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html#VPC_VPN) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Direct Connect is the dedicated physical connection that the company does not want to wait for. - **B:** ❌ [INCORRECT] Client VPN connects the devices of individual users, not a whole on-premises network. - **C:** ❌ [INCORRECT] VPC peering connects two VPCs, not an on-premises network to a VPC. - **D:** ✅ [CORRECT] Site-to-Site VPN creates IPsec VPN connections between the on-premises network and the VPC, each with two encrypted tunnels. **Official AWS Documentation Reference:** > _"Site-to-Site VPN supports Internet Protocol security (IPsec) VPN connections."_ > — [AWS Documentation](https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html#VPC_VPN)
 
 *Sources: GustavoFreze_Questions*
 
@@ -16550,7 +16555,7 @@ Which AWS service is appropriate for this use case?
 - **D)** AWS CloudFormation
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 Amazon EventBridge (formerly CloudWatch Events) allows users to respond to changes in
 the state of AWS resources. It can be configured to invoke an AWS Lambda function when
@@ -16574,7 +16579,7 @@ Which AWS service or tool does AWS Control Tower use to create resources?
 - **D)** AWS Cost Explorer
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 AWS Control Tower uses AWS CloudFormation to create resources in your landing zone.
 AWS CloudFormation is a service that helps you model and set up your AWS resources
@@ -16666,11 +16671,12 @@ Which AWS service helps developers use loose coupling and reliable messaging bet
 microservices?
 
 - **A)** Elastic Load Balancing
-- **B)** Amazon Simple Notification Service (Amazon SNS) C. Amazon CloudFront
+- **B)** Amazon Simple Notification Service (Amazon SNS)
+- **C)** Amazon CloudFront
 - **D)** Amazon Simple Queue Service (Amazon SQS)
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
 Amazon Simple Queue Service (Amazon SQS) is a service that provides fully managed
 message queues for asynchronous communication between microservices. It helps
@@ -18303,7 +18309,7 @@ Which is an example of loose coupling improving reliability in a cloud architect
 - **D)** Running everything on one server
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Decoupling components (e.g. via a queue) prevents a failure in one component from cascading — a reliability best practice.
 
@@ -18323,7 +18329,7 @@ Which service delivers one published message to many subscribers (pub/sub fan-ou
 - **D)** Amazon EBS
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 Amazon SNS is the push-based publish/subscribe service delivering a message to all topic subscribers.
 
@@ -18343,7 +18349,7 @@ Which service lets you provision your entire infrastructure from JSON/YAML templ
 - **D)** AWS Artifact
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 AWS CloudFormation provisions and manages infrastructure declaratively from templates.
 
@@ -18363,7 +18369,7 @@ Which service ingests and processes real-time streaming data such as clickstream
 - **D)** AWS Snowball
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 Amazon Kinesis ingests and processes streaming data in real time.
 
@@ -18383,7 +18389,7 @@ Which service provides managed publish/subscribe messaging AND which provides co
 - **D)** Kinesis = pub/sub; SNS = routing
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 SNS is pub/sub fan-out; EventBridge routes events based on their content and supports schedules.
 
@@ -18403,7 +18409,7 @@ A banking workload must process messages exactly once and in strict order within
 - **D)** Priority queue
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 FIFO queues give exactly-once processing and strict first-in-first-out ordering within a message group.
 
@@ -18423,7 +18429,7 @@ A Standard SQS queue offers which delivery and ordering guarantees?
 - **D)** Exactly-once, no ordering
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Standard queues provide at-least-once delivery with best-effort ordering and near-unlimited throughput — make processing idempotent.
 
@@ -18443,7 +18449,7 @@ A malformed 'poison pill' message keeps failing and blocking an SQS queue. What 
 - **D)** An SNS topic
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 A DLQ receives messages that fail a defined number of times, moving them aside so healthy messages keep flowing.
 
@@ -18463,7 +18469,7 @@ What is the SQS visibility timeout?
 - **D)** The delay before a message is first delivered
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 When a consumer retrieves a message SQS hides it for a set period; if not deleted in time it reappears — enabling at-least-once delivery.
 
@@ -18483,7 +18489,7 @@ One 'order placed' event must be delivered simultaneously to a fulfilment queue,
 - **D)** Amazon RDS
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 SNS is push-based pub/sub fan-out: one message to a topic is delivered to every subscriber.
 
@@ -18503,7 +18509,7 @@ You need to route events to different targets based on the content of the event 
 - **D)** Amazon EFS
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 2)</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 EventBridge does content-based routing on an event bus, plus scheduled (cron-like) rules and many AWS integrations.
 
@@ -18523,7 +18529,7 @@ Which messaging service is pull-based (consumers retrieve messages) rather than 
 - **D)** Amazon Polly
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 SQS is point-to-point and pull-based; SNS and EventBridge are push-based.
 
@@ -18543,7 +18549,7 @@ Which AWS-native, declarative Infrastructure-as-Code service uses JSON/YAML temp
 - **D)** AWS CodeBuild
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 2)</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 CloudFormation is the AWS-native declarative IaC service; drift detection flags manual changes that diverge from the template.
 
@@ -18563,7 +18569,7 @@ A team wants to define infrastructure using real programming languages like Pyth
 - **D)** Amazon Athena
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 The AWS CDK lets you define infra in real languages; it synthesises into a CloudFormation template under the hood.
 
@@ -18583,7 +18589,7 @@ Which IaC tool is third-party, cloud-agnostic, uses HCL, and maintains its own s
 - **D)** CodeDeploy
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 2)</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 HashiCorp Terraform uses HCL, works across clouds via providers, and keeps its own state file — best for multi-cloud consistency.
 
@@ -18603,7 +18609,7 @@ Which CloudWatch feature scans centralised logs for a pattern (e.g. 'ERROR') and
 - **D)** A budget
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 A CloudWatch Logs metric filter matches a log pattern and produces a metric that alarms can watch.
 
@@ -18623,7 +18629,7 @@ Which Systems Manager capability provides secure, hierarchical storage for confi
 - **D)** Step Functions
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 SSM Parameter Store holds connection strings, API keys and flags, KMS-encrypted, so credentials aren't hard-coded.
 
@@ -18643,7 +18649,7 @@ Which Systems Manager capability automates OS/application patching against defin
 - **D)** CloudFormation
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 2)</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 SSM Patch Manager automates patching against baselines/maintenance windows — the customer's guest-OS patching duty.
 
@@ -18663,7 +18669,7 @@ A custom, low-latency application must process each streaming record as it arriv
 - **D)** AWS Glue
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Kinesis Data Streams uses shards and lets multiple consumers read the same stream within seconds for custom real-time apps.
 
@@ -18683,7 +18689,7 @@ You need a fully managed 'fire-and-forget' pipeline to load streaming data into 
 - **D)** Amazon Athena
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Firehose is a managed delivery pipeline into S3/Redshift/OpenSearch with optional Lambda transformation and no shards.
 
@@ -18703,7 +18709,7 @@ Which service provides no-code BI dashboards and reports for business users, con
 - **D)** Amazon Comprehend
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 QuickSight is the BI/dashboarding service for business users.
 
@@ -18723,7 +18729,7 @@ A large-scale big-data job needs specific open-source frameworks (Spark, Hive, P
 - **D)** Amazon RDS
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 EMR runs Spark/Hadoop/Hive/Presto on clusters you control — for large custom big-data jobs.
 
@@ -18739,9 +18745,9 @@ EMR runs Spark/Hadoop/Hive/Presto on clusters you control — for large custom b
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Retaining keeps the application running in the source environment, so the company would keep paying to host it. - **B:** ✅ [CORRECT] Retiring decommissions or archives the application and shuts down its servers, which removes the cost of maintaining and hosting it. - **C:** ❌ [INCORRECT] Relocating moves the application to AWS unchanged, so the company would keep paying to host it. - **D:** ❌ [INCORRECT] Rehosting moves the application to AWS unchanged, so the company would keep paying to host it. **Official AWS Documentation Reference:** > _"This is the migration strategy for the applications that you want to decommission or archive. Retiring the application means that you can shut down the servers within that application stack."_ > — [AWS Documentation](https://docs.aws.amazon.com/prescriptive-guidance/latest/large-migration-guide/migration-strategies.html#retire) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Retaining keeps the application running in the source environment, so the company would keep paying to host it. - **B:** ✅ [CORRECT] Retiring decommissions or archives the application and shuts down its servers, which removes the cost of maintaining and hosting it. - **C:** ❌ [INCORRECT] Relocating moves the application to AWS unchanged, so the company would keep paying to host it. - **D:** ❌ [INCORRECT] Rehosting moves the application to AWS unchanged, so the company would keep paying to host it. **Official AWS Documentation Reference:** > _"This is the migration strategy for the applications that you want to decommission or archive. Retiring the application means that you can shut down the servers within that application stack."_ > — [AWS Documentation](https://docs.aws.amazon.com/prescriptive-guidance/latest/large-migration-guide/migration-strategies.html#retire)
 
 *Sources: GustavoFreze_Questions*
 
@@ -18755,9 +18761,9 @@ EMR runs Spark/Hadoop/Hive/Presto on clusters you control — for large custom b
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B, E)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] A resource costs the same however it is created. The savings come from less manual work, not from a lower price. - **B:** ✅ [CORRECT] A template describes every resource once, so the same environment can be provisioned again and again in a consistent and repeatable way. - **C:** ❌ [INCORRECT] The customer still writes the template and decides how each resource is configured. CloudFormation only provisions what the template describes. - **D:** ❌ [INCORRECT] CloudFormation creates what the template describes. Rightsizing recommendations come from services such as AWS Compute Optimizer. - **E:** ✅ [CORRECT] CloudFormation provisions and configures the resources and their dependencies, so the team spends less time managing them and more time on its applications. **Official AWS Documentation Reference:** > _"Reuse your CloudFormation template to create your resources in a consistent and repeatable manner. To reuse your template, describe your resources once and then provision the same resources over and over in multiple regions."_ > — [AWS Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html#welcome-quickly-replicate-your-infrastructure) > _"CloudFormation is a service that helps you model and set up your AWS resources so that you can spend less time managing those resources and more time focusing on your applications that run in AWS."_ > — [AWS Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] A resource costs the same however it is created. The savings come from less manual work, not from a lower price. - **B:** ✅ [CORRECT] A template describes every resource once, so the same environment can be provisioned again and again in a consistent and repeatable way. - **C:** ❌ [INCORRECT] The customer still writes the template and decides how each resource is configured. CloudFormation only provisions what the template describes. - **D:** ❌ [INCORRECT] CloudFormation creates what the template describes. Rightsizing recommendations come from services such as AWS Compute Optimizer. - **E:** ✅ [CORRECT] CloudFormation provisions and configures the resources and their dependencies, so the team spends less time managing them and more time on its applications. **Official AWS Documentation Reference:** > _"Reuse your CloudFormation template to create your resources in a consistent and repeatable manner. To reuse your template, describe your resources once and then provision the same resources over and over in multiple regions."_ > — [AWS Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html#welcome-quickly-replicate-your-infrastructure) > _"CloudFormation is a service that helps you model and set up your AWS resources so that you can spend less time managing those resources and more time focusing on your applications that run in AWS."_ > — [AWS Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html)
 
 *Sources: GustavoFreze_Questions*
 
@@ -18771,9 +18777,9 @@ EMR runs Spark/Hadoop/Hive/Presto on clusters you control — for large custom b
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Glue prepares and catalogs data through ETL jobs. It is not the service that answers ad hoc SQL queries. - **B:** ❌ [INCORRECT] Kinesis collects and processes streaming data in real time, not files already stored in S3. - **C:** ❌ [INCORRECT] Quick Sight builds dashboards for business users. It is not a query engine for files in S3. - **D:** ✅ [CORRECT] Athena is a serverless interactive query service that analyzes data directly in Amazon S3 with standard SQL, and the customer pays only for the queries run. **Official AWS Documentation Reference:** > _"With a few actions in the AWS Management Console, you can point Athena at your data stored in Amazon S3 and begin using standard SQL to run ad-hoc queries and get results in seconds."_ > — [AWS Documentation](https://docs.aws.amazon.com/athena/latest/ug/what-is.html#what-is) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Glue prepares and catalogs data through ETL jobs. It is not the service that answers ad hoc SQL queries. - **B:** ❌ [INCORRECT] Kinesis collects and processes streaming data in real time, not files already stored in S3. - **C:** ❌ [INCORRECT] Quick Sight builds dashboards for business users. It is not a query engine for files in S3. - **D:** ✅ [CORRECT] Athena is a serverless interactive query service that analyzes data directly in Amazon S3 with standard SQL, and the customer pays only for the queries run. **Official AWS Documentation Reference:** > _"With a few actions in the AWS Management Console, you can point Athena at your data stored in Amazon S3 and begin using standard SQL to run ad-hoc queries and get results in seconds."_ > — [AWS Documentation](https://docs.aws.amazon.com/athena/latest/ug/what-is.html#what-is)
 
 *Sources: GustavoFreze_Questions*
 
@@ -18787,9 +18793,9 @@ EMR runs Spark/Hadoop/Hive/Presto on clusters you control — for large custom b
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] Kinesis Data Streams collects and processes large streams of data records in real time, including web clickstream data. - **B:** ❌ [INCORRECT] Athena queries data at rest in S3. It does not ingest streams. - **C:** ❌ [INCORRECT] Glue runs ETL jobs on data that is already stored, not real-time ingestion. - **D:** ❌ [INCORRECT] Quick Sight visualizes data in dashboards. It does not collect streaming data. **Official AWS Documentation Reference:** > _"You can use Kinesis Data Streams for rapid and continuous data intake and aggregation. The type of data used can include IT infrastructure log data, application logs, social media, market data feeds, and web clickstream data."_ > — [AWS Documentation](https://docs.aws.amazon.com/streams/latest/dev/introduction.html#use-service-for-what) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] Kinesis Data Streams collects and processes large streams of data records in real time, including web clickstream data. - **B:** ❌ [INCORRECT] Athena queries data at rest in S3. It does not ingest streams. - **C:** ❌ [INCORRECT] Glue runs ETL jobs on data that is already stored, not real-time ingestion. - **D:** ❌ [INCORRECT] Quick Sight visualizes data in dashboards. It does not collect streaming data. **Official AWS Documentation Reference:** > _"You can use Kinesis Data Streams for rapid and continuous data intake and aggregation. The type of data used can include IT infrastructure log data, application logs, social media, market data feeds, and web clickstream data."_ > — [AWS Documentation](https://docs.aws.amazon.com/streams/latest/dev/introduction.html#use-service-for-what)
 
 *Sources: GustavoFreze_Questions*
 
@@ -18803,9 +18809,9 @@ EMR runs Spark/Hadoop/Hive/Presto on clusters you control — for large custom b
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A, C)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] Glue is a fully managed ETL service that discovers, prepares and loads data for analytics. - **B:** ❌ [INCORRECT] Kinesis ingests streaming data in real time. It is neither the ETL service nor the dashboard tool here. - **C:** ✅ [CORRECT] Quick Sight is a business intelligence service for creating and publishing interactive dashboards. - **D:** ❌ [INCORRECT] SageMaker AI builds and trains machine learning models. It does not publish dashboards. - **E:** ❌ [INCORRECT] Athena runs SQL queries on data in S3, but it does not publish dashboards for business users. **Official AWS Documentation Reference:** > _"AWS Glue is a fully managed extract, transform, and load (ETL) service that makes it easy for customers to prepare and load their data for analytics."_ > — [AWS Documentation](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html#aws-glue) > _"QuickSight lets you create and publish interactive dashboards that can be accessed from browsers or mobile devices."_ > — [AWS Documentation](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html#amazon-quicksight) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] Glue is a fully managed ETL service that discovers, prepares and loads data for analytics. - **B:** ❌ [INCORRECT] Kinesis ingests streaming data in real time. It is neither the ETL service nor the dashboard tool here. - **C:** ✅ [CORRECT] Quick Sight is a business intelligence service for creating and publishing interactive dashboards. - **D:** ❌ [INCORRECT] SageMaker AI builds and trains machine learning models. It does not publish dashboards. - **E:** ❌ [INCORRECT] Athena runs SQL queries on data in S3, but it does not publish dashboards for business users. **Official AWS Documentation Reference:** > _"AWS Glue is a fully managed extract, transform, and load (ETL) service that makes it easy for customers to prepare and load their data for analytics."_ > — [AWS Documentation](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html#aws-glue) > _"QuickSight lets you create and publish interactive dashboards that can be accessed from browsers or mobile devices."_ > — [AWS Documentation](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html#amazon-quicksight)
 
 *Sources: GustavoFreze_Questions*
 
@@ -18819,9 +18825,9 @@ EMR runs Spark/Hadoop/Hive/Presto on clusters you control — for large custom b
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] SNS pushes each message to its subscribers right away. It does not hold messages in a queue until a consumer is ready. - **B:** ✅ [CORRECT] SQS is a hosted queue that decouples components. Messages wait in the queue until a consumer receives and deletes them. - **C:** ❌ [INCORRECT] SES sends and receives email. It is not a queue between application components. - **D:** ❌ [INCORRECT] EventBridge routes events to targets, but it does not provide a queue for consumers to poll at their own pace. **Official AWS Documentation Reference:** > _"Amazon Simple Queue Service (Amazon SQS) offers a secure, durable, and available hosted queue that lets you integrate and decouple distributed software systems and components."_ > — [AWS Documentation](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html#welcome) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] SNS pushes each message to its subscribers right away. It does not hold messages in a queue until a consumer is ready. - **B:** ✅ [CORRECT] SQS is a hosted queue that decouples components. Messages wait in the queue until a consumer receives and deletes them. - **C:** ❌ [INCORRECT] SES sends and receives email. It is not a queue between application components. - **D:** ❌ [INCORRECT] EventBridge routes events to targets, but it does not provide a queue for consumers to poll at their own pace. **Official AWS Documentation Reference:** > _"Amazon Simple Queue Service (Amazon SQS) offers a secure, durable, and available hosted queue that lets you integrate and decouple distributed software systems and components."_ > — [AWS Documentation](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html#welcome)
 
 *Sources: GustavoFreze_Questions*
 
@@ -18837,7 +18843,7 @@ EMR runs Spark/Hadoop/Hive/Presto on clusters you control — for large custom b
 <details>
 <summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] SES sends email from applications, but it does not send SMS messages or subscribe to alarms. - **B:** ❌ [INCORRECT] SQS stores messages for applications to poll. It does not notify people. - **C:** ✅ [CORRECT] SNS sends application and system alerts to people through SMS and email, for example when a CloudWatch metric breaches a threshold. - **D:** ❌ [INCORRECT] Amazon Connect is a contact center service for customer conversations, not an alerting service. **Official AWS Documentation Reference:** > _"Amazon SNS can send these notifications to specified users through SMS and email. For example, you can receive immediate notification when an event occurs, such as a specific change to your Amazon EC2 Auto Scaling group, a new file uploaded to an Amazon S3 bucket, or a metric threshold breached in Amazon CloudWatch."_ > — [AWS Documentation](https://docs.aws.amazon.com/sns/latest/dg/welcome.html#SNSAlertsScenario) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] SES sends email from applications, but it does not send SMS messages or subscribe to alarms. - **B:** ❌ [INCORRECT] SQS stores messages for applications to poll. It does not notify people. - **C:** ✅ [CORRECT] SNS sends application and system alerts to people through SMS and email, for example when a CloudWatch metric breaches a threshold. - **D:** ❌ [INCORRECT] Amazon Connect is a contact center service for customer conversations, not an alerting service. **Official AWS Documentation Reference:** > _"Amazon SNS can send these notifications to specified users through SMS and email. For example, you can receive immediate notification when an event occurs, such as a specific change to your Amazon EC2 Auto Scaling group, a new file uploaded to an Amazon S3 bucket, or a metric threshold breached in Amazon CloudWatch."_ > — [AWS Documentation](https://docs.aws.amazon.com/sns/latest/dg/welcome.html#SNSAlertsScenario)
 
 *Sources: GustavoFreze_Questions*
 
@@ -18851,9 +18857,9 @@ EMR runs Spark/Hadoop/Hive/Presto on clusters you control — for large custom b
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] Amazon Connect is the AWS contact center service that connects customers to agents across channels such as voice and chat. AWS now calls the product Amazon Connect Customer. - **B:** ❌ [INCORRECT] SES sends and receives email. It does not route calls to agents. - **C:** ❌ [INCORRECT] Lex can add a chatbot to a contact center, but it is not the contact center itself. - **D:** ❌ [INCORRECT] SNS sends notifications. It does not connect customers to agents. **Official AWS Documentation Reference:** > _"Connect Customer is a self-service, omnichannel cloud contact center service that makes it easy for any business to deliver better customer service at lower cost."_ > — [AWS Documentation](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/business-applications.html#amazon-connect) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] Amazon Connect is the AWS contact center service that connects customers to agents across channels such as voice and chat. AWS now calls the product Amazon Connect Customer. - **B:** ❌ [INCORRECT] SES sends and receives email. It does not route calls to agents. - **C:** ❌ [INCORRECT] Lex can add a chatbot to a contact center, but it is not the contact center itself. - **D:** ❌ [INCORRECT] SNS sends notifications. It does not connect customers to agents. **Official AWS Documentation Reference:** > _"Connect Customer is a self-service, omnichannel cloud contact center service that makes it easy for any business to deliver better customer service at lower cost."_ > — [AWS Documentation](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/business-applications.html#amazon-connect)
 
 *Sources: GustavoFreze_Questions*
 
@@ -18867,9 +18873,9 @@ EMR runs Spark/Hadoop/Hive/Presto on clusters you control — for large custom b
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] SNS can send email to the subscribers of a topic, but it is not an email platform for marketing and transactional email from the company domain. - **B:** ❌ [INCORRECT] Amazon Connect runs a contact center for conversations with customers. - **C:** ❌ [INCORRECT] SQS queues messages between application components and sends no email. - **D:** ✅ [CORRECT] SES is an email platform for sending marketing and transactional email using your own email addresses and domains. **Official AWS Documentation Reference:** > _"Amazon Simple Email Service (SES) is an email platform that provides an easy, cost-effective way for you to send and receive email using your own email addresses and domains."_ > — [AWS Documentation](https://docs.aws.amazon.com/ses/latest/dg/Welcome.html#Welcome) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] SNS can send email to the subscribers of a topic, but it is not an email platform for marketing and transactional email from the company domain. - **B:** ❌ [INCORRECT] Amazon Connect runs a contact center for conversations with customers. - **C:** ❌ [INCORRECT] SQS queues messages between application components and sends no email. - **D:** ✅ [CORRECT] SES is an email platform for sending marketing and transactional email using your own email addresses and domains. **Official AWS Documentation Reference:** > _"Amazon Simple Email Service (SES) is an email platform that provides an easy, cost-effective way for you to send and receive email using your own email addresses and domains."_ > — [AWS Documentation](https://docs.aws.amazon.com/ses/latest/dg/Welcome.html#Welcome)
 
 *Sources: GustavoFreze_Questions*
 
@@ -18885,7 +18891,7 @@ EMR runs Spark/Hadoop/Hive/Presto on clusters you control — for large custom b
 <details>
 <summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Kinesis ingests streaming data, but it does not provide a message broker for devices that use MQTT. - **B:** ❌ [INCORRECT] SQS queues messages between applications. Devices cannot publish to it over MQTT. - **C:** ✅ [CORRECT] AWS IoT Core connects IoT devices to AWS services, and its message broker supports devices that publish and subscribe over MQTT. - **D:** ❌ [INCORRECT] EventBridge routes events between applications and services, not messages from devices over MQTT. **Official AWS Documentation Reference:** > _"The AWS IoT Core message broker supports devices and clients that use MQTT and MQTT over WSS protocols to publish and subscribe to messages."_ > — [AWS Documentation](https://docs.aws.amazon.com/iot/latest/developerguide/what-is-aws-iot.html#what-is-aws-iot) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Kinesis ingests streaming data, but it does not provide a message broker for devices that use MQTT. - **B:** ❌ [INCORRECT] SQS queues messages between applications. Devices cannot publish to it over MQTT. - **C:** ✅ [CORRECT] AWS IoT Core connects IoT devices to AWS services, and its message broker supports devices that publish and subscribe over MQTT. - **D:** ❌ [INCORRECT] EventBridge routes events between applications and services, not messages from devices over MQTT. **Official AWS Documentation Reference:** > _"The AWS IoT Core message broker supports devices and clients that use MQTT and MQTT over WSS protocols to publish and subscribe to messages."_ > — [AWS Documentation](https://docs.aws.amazon.com/iot/latest/developerguide/what-is-aws-iot.html#what-is-aws-iot)
 
 *Sources: GustavoFreze_Questions*
 

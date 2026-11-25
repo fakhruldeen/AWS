@@ -17,7 +17,8 @@ the ability to scale up and scale down with only a few minutes of notice.
 Which benefit of the AWS Cloud describes these abilities?
 
 - **A)** Reliability
-- **B)** Pay-as-you-go pricing C. Elasticity
+- **B)** Pay-as-you-go pricing
+- **C)** Elasticity
 - **D)** Economy of scale
 
 <details>
@@ -33,7 +34,7 @@ In production AWS environments, this architectural pattern ensures compliance, m
 
 ### 🔍 Detailed Option Breakdown & Distractor Analysis:
 - **Option A (Reliability)** ❌ **[INCORRECT]**: Suboptimal or introduces architectural anti-patterns for this specific requirement (either refers to an unrelated service, violates security boundaries, or increases operational overhead).
-- **Option B (Pay-as-you-go pricing C. Elasticity)** ❌ **[INCORRECT]**: Suboptimal or introduces architectural anti-patterns for this specific requirement (either refers to an unrelated service, violates security boundaries, or increases operational overhead).
+- **Option B (Pay-as-you-go pricing C. Elasticity)** ❌ **[INCORRECT]**: Suboptimal or introduces architectural anti-patterns for this specific requirement (either refers to an unrelated service, violates security boundaries, or increases operational overhead).
 - **Option D (Economy of scale)** ❌ **[INCORRECT]**: Suboptimal or introduces architectural anti-patterns for this specific requirement (either refers to an unrelated service, violates security boundaries, or increases operational overhead).
 
 ### ⚠️ Exam Trap & Heuristic Decryption:
@@ -53,7 +54,8 @@ Which benefit of the AWS Cloud does this scenario describe?
 
 - **A)** Elasticity
 - **B)** Cost savings
-- **C)** Agility D. Global deployment in minutes
+- **C)** Agility
+- **D)** Global deployment in minutes
 
 <details>
 <summary><b>View Answer & Rationale (Answer: A)</b></summary>
@@ -80,7 +82,7 @@ Which of the following are advantages of the AWS Cloud? (Select TWO.)
 - **E)** Overprovision to ensure capacity
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: B, C)</b></summary>
 
 The correct answers are B and C because they are advantages of the AWS Cloud. High
 economies of scale means that AWS can achieve lower variable costs than customers can
@@ -110,7 +112,7 @@ Which of the following is an advantage of AWS Cloud computing?
 - **D)** Trade elasticity for performance.
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 The correct answer is C because AWS Cloud computing allows customers to trade fixed
 expenses for variable expenses. This means that customers only pay for the resources
@@ -203,7 +205,7 @@ that AWS can achieve lower costs and higher efficiency by operating at a massive
 and passing the savings to the customers. AWS leverages the aggregate usage of all AWS
 users to negotiate better prices with hardware vendors, optimize power consumption, and
 
-improve operational processes. As a result, AWS can offer lower and more flexible pricing
+ improve operational processes. As a result, AWS can offer lower and more flexible pricing
 options to the customers, such as pay-as-you-go, reserved, and spot pricing models. No
 need to guess capacity, ability to go global in minutes, and increased speed and agility are
 other benefits of the AWS Cloud, but they are not directly related to the aggregate usage of
@@ -228,7 +230,7 @@ AWS CloudTrail?
 - **D)** Go global in minutes.
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 By implementingAWS CloudTrail, a company is adhering to the AWS Cloud design
 principle ofactivating traceability. AWS CloudTrail provides detailed logs of all API calls
@@ -240,7 +242,7 @@ B . Use serverless compute architectures: Incorrect, as this principle encourage
 of managed services that handle infrastructure, such as AWS Lambda, and is not directly
 related to CloudTrail.
 
-C . Perform operations as code: Incorrect, as this principle emphasizes the use of code
+ C . Perform operations as code: Incorrect, as this principle emphasizes the use of code
 and automation for infrastructure management.
 D . Go global in minutes: Incorrect, as this principle relates to the global deployment of
 applications and services.
@@ -2075,7 +2077,7 @@ Which is a core financial benefit of cloud computing over a traditional data cen
 - **D)** Owning all physical hardware
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 The cloud lets you trade large up-front capital expense (CapEx) for pay-as-you-go variable expense (OpEx).
 
@@ -2095,7 +2097,7 @@ The cloud lets you trade large up-front capital expense (CapEx) for pay-as-you-g
 - **D)** A discount pricing model
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Elasticity is the ability to acquire resources as you need them and release them when you don't — scaling with demand.
 
@@ -2115,7 +2117,7 @@ Which benefit describes AWS's ability to deploy to new geographic Regions quickl
 - **D)** Increasing speed and agility
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 'Go global in minutes' is the benefit of deploying an application in multiple Regions around the world with a few clicks.
 
@@ -2135,7 +2137,7 @@ A company runs part of its workload on-premises and part in AWS, connected toget
 - **D)** Multi-cloud
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 2)</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 A hybrid deployment connects on-premises infrastructure with cloud resources.
 
@@ -2155,7 +2157,7 @@ Which is an example of increased agility in the cloud?
 - **D)** Owning a data centre
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Agility means provisioning resources on demand in minutes, enabling faster experimentation.
 
@@ -2175,7 +2177,7 @@ Agility means provisioning resources on demand in minutes, enabling faster exper
 - **D)** Prices are fixed regardless of usage
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 AWS aggregates usage across many customers, achieving higher economies of scale and passing lower prices on.
 
@@ -2195,7 +2197,7 @@ A start-up wants to avoid large up-front spending on servers it may not need. Wh
 - **D)** Guaranteed uptime of 100%
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 Pay-as-you-go lets you pay only for what you consume, avoiding large up-front investments.
 
@@ -2227,9 +2229,9 @@ A company moves its infrastructure from on premises to the AWS Cloud. The compan
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Economies of scale lower the price AWS charges for every unit, but they do not stop the company from paying for idle servers. - **B:** ✅ [CORRECT] The company provisions for the peak because it cannot predict demand. In the cloud it uses the capacity it needs and scales when demand changes. - **C:** ❌ [INCORRECT] Going global is about deploying in more Regions with a few clicks, not about matching capacity to demand. - **D:** ❌ [INCORRECT] This removes the work of racking and powering servers, but the company could still overprovision in the cloud if it kept guessing capacity. **Official AWS Documentation Reference:** > _"When you make a capacity decision prior to deploying an application, you often end up either sitting on expensive idle resources or dealing with limited capacity. With cloud computing, these problems go away."_ > — [AWS Documentation](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/six-advantages-of-cloud-computing.html) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Economies of scale lower the price AWS charges for every unit, but they do not stop the company from paying for idle servers. - **B:** ✅ [CORRECT] The company provisions for the peak because it cannot predict demand. In the cloud it uses the capacity it needs and scales when demand changes. - **C:** ❌ [INCORRECT] Going global is about deploying in more Regions with a few clicks, not about matching capacity to demand. - **D:** ❌ [INCORRECT] This removes the work of racking and powering servers, but the company could still overprovision in the cloud if it kept guessing capacity. **Official AWS Documentation Reference:** > _"When you make a capacity decision prior to deploying an application, you often end up either sitting on expensive idle resources or dealing with limited capacity. With cloud computing, these problems go away."_ > — [AWS Documentation](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/six-advantages-of-cloud-computing.html)
 
 *Sources: GustavoFreze_Questions*
 
@@ -2243,9 +2245,9 @@ A company moves its infrastructure from on premises to the AWS Cloud. The compan
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] The company can deploy its application in an AWS Region close to its new customers with a few clicks, which gives them lower latency at minimal cost. - **B:** ❌ [INCORRECT] Economies of scale explain why AWS prices are low, not how the company reaches customers in another country. - **C:** ❌ [INCORRECT] This advantage is about paying for consumption instead of investing upfront, not about reaching users in a new geography. - **D:** ❌ [INCORRECT] This advantage is about matching capacity to demand, not about deploying close to users in another country. **Official AWS Documentation Reference:** > _"Easily deploy your application in multiple regions around the world with just a few clicks. This means you can provide lower latency and a better experience for your customers at minimal cost."_ > — [AWS Documentation](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/six-advantages-of-cloud-computing.html) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] The company can deploy its application in an AWS Region close to its new customers with a few clicks, which gives them lower latency at minimal cost. - **B:** ❌ [INCORRECT] Economies of scale explain why AWS prices are low, not how the company reaches customers in another country. - **C:** ❌ [INCORRECT] This advantage is about paying for consumption instead of investing upfront, not about reaching users in a new geography. - **D:** ❌ [INCORRECT] This advantage is about matching capacity to demand, not about deploying close to users in another country. **Official AWS Documentation Reference:** > _"Easily deploy your application in multiple regions around the world with just a few clicks. This means you can provide lower latency and a better experience for your customers at minimal cost."_ > — [AWS Documentation](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/six-advantages-of-cloud-computing.html)
 
 *Sources: GustavoFreze_Questions*
 
@@ -2261,7 +2263,7 @@ A company moves its infrastructure from on premises to the AWS Cloud. The compan
 <details>
 <summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Economies of scale lower unit prices, but the scenario is about how fast the team gets resources and how cheap it is to experiment. - **B:** ❌ [INCORRECT] The team is not deploying to new geographies. It is shortening the time to get resources. - **C:** ✅ [CORRECT] New resources are a click away, so the time to make them available drops from weeks to minutes and experimenting costs much less. - **D:** ❌ [INCORRECT] Stopping capacity guesses is about sizing for demand. The scenario is about the time and cost of trying new ideas. **Official AWS Documentation Reference:** > _"In a cloud computing environment, new IT resources are only a click away, which means that you reduce the time to make those resources available to your developers from weeks to just minutes."_ > — [AWS Documentation](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/six-advantages-of-cloud-computing.html) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Economies of scale lower unit prices, but the scenario is about how fast the team gets resources and how cheap it is to experiment. - **B:** ❌ [INCORRECT] The team is not deploying to new geographies. It is shortening the time to get resources. - **C:** ✅ [CORRECT] New resources are a click away, so the time to make them available drops from weeks to minutes and experimenting costs much less. - **D:** ❌ [INCORRECT] Stopping capacity guesses is about sizing for demand. The scenario is about the time and cost of trying new ideas. **Official AWS Documentation Reference:** > _"In a cloud computing environment, new IT resources are only a click away, which means that you reduce the time to make those resources available to your developers from weeks to just minutes."_ > — [AWS Documentation](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/six-advantages-of-cloud-computing.html)
 
 *Sources: GustavoFreze_Questions*
 
@@ -2275,9 +2277,9 @@ A company moves its infrastructure from on premises to the AWS Cloud. The compan
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Agility is about getting resources in minutes to experiment faster, not about removing the work of operating data centers. - **B:** ❌ [INCORRECT] Going global is about deploying in more Regions, not about the physical work of running servers. - **C:** ❌ [INCORRECT] Economies of scale lower prices through aggregated usage, but they do not describe where the staff spends its time. - **D:** ✅ [CORRECT] With the cloud, the company focuses on its customers instead of the heavy lifting of racking, stacking, and powering servers. **Official AWS Documentation Reference:** > _"Focus on projects that differentiate your business, not the infrastructure. Cloud computing lets you focus on your own customers, rather than on the heavy lifting of racking, stacking, and powering servers."_ > — [AWS Documentation](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/six-advantages-of-cloud-computing.html) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Agility is about getting resources in minutes to experiment faster, not about removing the work of operating data centers. - **B:** ❌ [INCORRECT] Going global is about deploying in more Regions, not about the physical work of running servers. - **C:** ❌ [INCORRECT] Economies of scale lower prices through aggregated usage, but they do not describe where the staff spends its time. - **D:** ✅ [CORRECT] With the cloud, the company focuses on its customers instead of the heavy lifting of racking, stacking, and powering servers. **Official AWS Documentation Reference:** > _"Focus on projects that differentiate your business, not the infrastructure. Cloud computing lets you focus on your own customers, rather than on the heavy lifting of racking, stacking, and powering servers."_ > — [AWS Documentation](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/six-advantages-of-cloud-computing.html)
 
 *Sources: GustavoFreze_Questions*
 
@@ -2291,9 +2293,9 @@ A company moves its infrastructure from on premises to the AWS Cloud. The compan
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A, E)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] Aggregated usage from hundreds of thousands of customers lets AWS achieve higher economies of scale, which means lower pay-as-you-go prices. - **B:** ❌ [INCORRECT] The advantage goes the other way. The cloud trades fixed expense for variable expense, so the company pays only for what it consumes. - **C:** ❌ [INCORRECT] Provisioning for the peak is the on-premises problem the cloud removes. In the cloud the company stops guessing capacity. - **D:** ❌ [INCORRECT] In the cloud AWS owns and operates the physical hardware. The advantage is no longer having to run data centers. - **E:** ✅ [CORRECT] New resources are a click away, which reduces the time to make them available from weeks to minutes. **Official AWS Documentation Reference:** > _"Because usage from hundreds of thousands of customers is aggregated in the cloud, providers such as AWS can achieve higher economies of scale, which translates into lower pay as-you-go prices."_ > — [AWS Documentation](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/six-advantages-of-cloud-computing.html) > _"In a cloud computing environment, new IT resources are only a click away, which means that you reduce the time to make those resources available to your developers from weeks to just minutes."_ > — [AWS Documentation](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/six-advantages-of-cloud-computing.html) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] Aggregated usage from hundreds of thousands of customers lets AWS achieve higher economies of scale, which means lower pay-as-you-go prices. - **B:** ❌ [INCORRECT] The advantage goes the other way. The cloud trades fixed expense for variable expense, so the company pays only for what it consumes. - **C:** ❌ [INCORRECT] Provisioning for the peak is the on-premises problem the cloud removes. In the cloud the company stops guessing capacity. - **D:** ❌ [INCORRECT] In the cloud AWS owns and operates the physical hardware. The advantage is no longer having to run data centers. - **E:** ✅ [CORRECT] New resources are a click away, which reduces the time to make them available from weeks to minutes. **Official AWS Documentation Reference:** > _"Because usage from hundreds of thousands of customers is aggregated in the cloud, providers such as AWS can achieve higher economies of scale, which translates into lower pay as-you-go prices."_ > — [AWS Documentation](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/six-advantages-of-cloud-computing.html) > _"In a cloud computing environment, new IT resources are only a click away, which means that you reduce the time to make those resources available to your developers from weeks to just minutes."_ > — [AWS Documentation](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/six-advantages-of-cloud-computing.html)
 
 *Sources: GustavoFreze_Questions*
 
@@ -2307,9 +2309,9 @@ A company moves its infrastructure from on premises to the AWS Cloud. The compan
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] Instead of investing heavily in data centers and servers before knowing how they will be used, the company pays only when it consumes resources and only for how much it consumes. - **B:** ❌ [INCORRECT] The change goes the other way. The upfront investment was the fixed expense, and consumption-based billing is variable. - **C:** ❌ [INCORRECT] The change goes the other way. Upfront hardware purchases are capital expenses, and paying for consumption is an operating expense. - **D:** ❌ [INCORRECT] With pay-as-you-go pricing, the cost follows consumption. Using more costs more and using less costs less. **Official AWS Documentation Reference:** > _"Instead of having to invest heavily in data centers and servers before you know how you’re going to use them, you can pay only when you consume computing resources, and pay only for how much you consume."_ > — [AWS Documentation](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/six-advantages-of-cloud-computing.html) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] Instead of investing heavily in data centers and servers before knowing how they will be used, the company pays only when it consumes resources and only for how much it consumes. - **B:** ❌ [INCORRECT] The change goes the other way. The upfront investment was the fixed expense, and consumption-based billing is variable. - **C:** ❌ [INCORRECT] The change goes the other way. Upfront hardware purchases are capital expenses, and paying for consumption is an operating expense. - **D:** ❌ [INCORRECT] With pay-as-you-go pricing, the cost follows consumption. Using more costs more and using less costs less. **Official AWS Documentation Reference:** > _"Instead of having to invest heavily in data centers and servers before you know how you’re going to use them, you can pay only when you consume computing resources, and pay only for how much you consume."_ > — [AWS Documentation](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/six-advantages-of-cloud-computing.html)
 
 *Sources: GustavoFreze_Questions*
 
@@ -2325,7 +2327,7 @@ A company moves its infrastructure from on premises to the AWS Cloud. The compan
 <details>
 <summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Aggregated usage means customers share the infrastructure. Dedicated hardware is a separate option that costs more. - **B:** ❌ [INCORRECT] Economies of scale lower prices. They do not freeze a price for the life of an account. - **C:** ✅ [CORRECT] The aggregated usage gives AWS higher economies of scale, which translate into lower pay-as-you-go prices than a company could achieve on its own. - **D:** ❌ [INCORRECT] Outbound data transfer is still charged. Economies of scale lower prices but do not make services free. **Official AWS Documentation Reference:** > _"By using cloud computing, you can achieve a lower variable cost than you can get on your own. Because usage from hundreds of thousands of customers is aggregated in the cloud, providers such as AWS can achieve higher economies of scale, which translates into lower pay as-you-go prices."_ > — [AWS Documentation](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/six-advantages-of-cloud-computing.html) </details> --- ## Domain 2: Security and Compliance (30%)
+**Option Rationales:** - **A:** ❌ [INCORRECT] Aggregated usage means customers share the infrastructure. Dedicated hardware is a separate option that costs more. - **B:** ❌ [INCORRECT] Economies of scale lower prices. They do not freeze a price for the life of an account. - **C:** ✅ [CORRECT] The aggregated usage gives AWS higher economies of scale, which translate into lower pay-as-you-go prices than a company could achieve on its own. - **D:** ❌ [INCORRECT] Outbound data transfer is still charged. Economies of scale lower prices but do not make services free. **Official AWS Documentation Reference:** > _"By using cloud computing, you can achieve a lower variable cost than you can get on your own. Because usage from hundreds of thousands of customers is aggregated in the cloud, providers such as AWS can achieve higher economies of scale, which translates into lower pay as-you-go prices."_ > — [AWS Documentation](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/six-advantages-of-cloud-computing.html)
 
 *Sources: GustavoFreze_Questions*
 
@@ -2339,9 +2341,9 @@ A company moves its infrastructure from on premises to the AWS Cloud. The compan
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] EC2 Auto Scaling launches or terminates instances as demand increases or decreases, within the minimum and maximum the company sets. - **B:** ❌ [INCORRECT] A load balancer distributes traffic across the instances that exist, but it does not add or remove them. - **C:** ❌ [INCORRECT] CloudWatch collects metrics and raises alarms. Something else must act on them to change the number of instances. - **D:** ❌ [INCORRECT] Compute Optimizer recommends better instance types and sizes. It does not change capacity as traffic changes. **Official AWS Documentation Reference:** > _"If you specify scaling policies, then Amazon EC2 Auto Scaling can launch or terminate instances as demand on your application increases or decreases."_ > — [AWS Documentation](https://docs.aws.amazon.com/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html#what-is-amazon-ec2-auto-scaling) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] EC2 Auto Scaling launches or terminates instances as demand increases or decreases, within the minimum and maximum the company sets. - **B:** ❌ [INCORRECT] A load balancer distributes traffic across the instances that exist, but it does not add or remove them. - **C:** ❌ [INCORRECT] CloudWatch collects metrics and raises alarms. Something else must act on them to change the number of instances. - **D:** ❌ [INCORRECT] Compute Optimizer recommends better instance types and sizes. It does not change capacity as traffic changes. **Official AWS Documentation Reference:** > _"If you specify scaling policies, then Amazon EC2 Auto Scaling can launch or terminate instances as demand on your application increases or decreases."_ > — [AWS Documentation](https://docs.aws.amazon.com/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html#what-is-amazon-ec2-auto-scaling)
 
 *Sources: GustavoFreze_Questions*
 
@@ -2946,7 +2948,8 @@ readiness for migration?
 
 - **A)** AWS Cloud Adoption Framework (AWS CAF)
 - **B)** AWS Pricing Calculator
-- **C)** AWS Well-Architected Framework D. AWS Budgets
+- **C)** AWS Well-Architected Framework
+- **D)** AWS Budgets
 
 <details>
 <summary><b>View Answer & Rationale (Answer: A)</b></summary>
@@ -2981,7 +2984,7 @@ Framework (AWS CAF)?(Select TWO.)
 - **E)** Configuration management
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: A, E)</b></summary>
 
 Comprehensive and Detailed Explanation From AWS Cloud Documentation:
 The AWS Cloud Adoption Framework Operations perspective focuses on delivering cloud
@@ -2990,7 +2993,7 @@ AWS lists observability as an Operations capability because teams need metrics, 
 traces, endpoint monitoring, and alerts to understand workload health and identify
 problems. AWS also lists configuration management as an Operations capability because
 
-organizations need an accurate record of workloads, relationships, settings, and
+ organizations need an accurate record of workloads, relationships, settings, and
 configuration changes, and must control configuration drift. Therefore, options A and E are
 correct. The other choices belong to different AWS CAF perspectives. Data governance is
 a Governance perspective capability concerned with authority, ownership, standards,
@@ -3018,7 +3021,7 @@ LEAST effort? (Select TWO.)
 - **E)** Refactor
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: B, C)</b></summary>
 
 Rehosting ("lift and shift") is a migration strategy where applications are moved to the
 cloud with minimal changes, making it the least effort-intensive method for applications
@@ -4283,7 +4286,7 @@ The AWS Cloud Adoption Framework (CAF) is used to:
 - **D)** Replace IAM
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 The AWS CAF organises guidance across perspectives (Business, People, Governance, Platform, Security, Operations) to plan cloud adoption.
 
@@ -4303,7 +4306,7 @@ When several answers technically work on CLF-C02, which framework is the intende
 - **D)** The MoSCoW method
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 The Well-Architected Framework is the tiebreaker: prefer the answer reflecting best practice (e.g. Parameter Store over hard-coded creds).
 
@@ -4350,9 +4353,9 @@ Watch out for distractors testing similar AWS service boundaries. When the quest
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Replatforming introduces some optimization during the move, such as switching to a managed database, which the company does not want. - **B:** ❌ [INCORRECT] Refactoring redesigns the application to use cloud-native features. It is the most complex and costly strategy and does not fit a fast move without changes. - **C:** ❌ [INCORRECT] Repurchasing replaces the application with a different product, such as a SaaS offering. - **D:** ✅ [CORRECT] Rehosting, also called lift and shift, moves applications to AWS without changes and handles large numbers of servers. **Official AWS Documentation Reference:** > _"Using this strategy, you move your applications from your source environment to the AWS Cloud without making any changes to the application."_ > — [AWS Documentation](https://docs.aws.amazon.com/prescriptive-guidance/latest/large-migration-guide/migration-strategies.html#rehost) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Replatforming introduces some optimization during the move, such as switching to a managed database, which the company does not want. - **B:** ❌ [INCORRECT] Refactoring redesigns the application to use cloud-native features. It is the most complex and costly strategy and does not fit a fast move without changes. - **C:** ❌ [INCORRECT] Repurchasing replaces the application with a different product, such as a SaaS offering. - **D:** ✅ [CORRECT] Rehosting, also called lift and shift, moves applications to AWS without changes and handles large numbers of servers. **Official AWS Documentation Reference:** > _"Using this strategy, you move your applications from your source environment to the AWS Cloud without making any changes to the application."_ > — [AWS Documentation](https://docs.aws.amazon.com/prescriptive-guidance/latest/large-migration-guide/migration-strategies.html#rehost)
 
 *Sources: GustavoFreze_Questions*
 
@@ -4366,9 +4369,9 @@ Watch out for distractors testing similar AWS service boundaries. When the quest
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] Replatforming moves the application and adds some optimization, such as a fully managed service. Moving SQL Server to Amazon RDS for SQL Server is the example AWS gives. - **B:** ❌ [INCORRECT] Rehosting moves the servers as they are. The company would still manage the database software itself. - **C:** ❌ [INCORRECT] Refactoring changes the architecture of the application to use cloud-native features, which the company does not plan to do. - **D:** ❌ [INCORRECT] Relocating moves a whole virtualization platform, or resources between VPCs, Regions, or accounts, without changing the platform the workload runs on. **Official AWS Documentation Reference:** > _"Using this migration strategy, you move the application to the cloud, and you introduce some level of optimization in order to operate the application efficiently, to reduce costs, or to take advantage of cloud capabilities. For example, you might replatform a Microsoft SQL Server database to Amazon RDS for SQL Server."_ > — [AWS Documentation](https://docs.aws.amazon.com/prescriptive-guidance/latest/large-migration-guide/migration-strategies.html#replatform) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] Replatforming moves the application and adds some optimization, such as a fully managed service. Moving SQL Server to Amazon RDS for SQL Server is the example AWS gives. - **B:** ❌ [INCORRECT] Rehosting moves the servers as they are. The company would still manage the database software itself. - **C:** ❌ [INCORRECT] Refactoring changes the architecture of the application to use cloud-native features, which the company does not plan to do. - **D:** ❌ [INCORRECT] Relocating moves a whole virtualization platform, or resources between VPCs, Regions, or accounts, without changing the platform the workload runs on. **Official AWS Documentation Reference:** > _"Using this migration strategy, you move the application to the cloud, and you introduce some level of optimization in order to operate the application efficiently, to reduce costs, or to take advantage of cloud capabilities. For example, you might replatform a Microsoft SQL Server database to Amazon RDS for SQL Server."_ > — [AWS Documentation](https://docs.aws.amazon.com/prescriptive-guidance/latest/large-migration-guide/migration-strategies.html#replatform)
 
 *Sources: GustavoFreze_Questions*
 
@@ -4384,7 +4387,7 @@ Watch out for distractors testing similar AWS service boundaries. When the quest
 <details>
 <summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Rehosting would move the same custom application to AWS, so the company would keep maintaining it. - **B:** ❌ [INCORRECT] Retaining keeps the application where it is, but the company wants to replace it. - **C:** ✅ [CORRECT] Repurchasing, also called drop and shop, replaces the application with a different product, such as moving from a custom or licensed application to SaaS. - **D:** ❌ [INCORRECT] Refactoring would redesign the custom application for the cloud, which means the company would keep maintaining it. **Official AWS Documentation Reference:** > _"Replacing a custom application – You can avoid recoding and re-architecting a custom application by repurchasing a vendor-based SaaS or cloud-based application."_ > — [AWS Documentation](https://docs.aws.amazon.com/prescriptive-guidance/latest/large-migration-guide/migration-strategies.html#repurchase) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Rehosting would move the same custom application to AWS, so the company would keep maintaining it. - **B:** ❌ [INCORRECT] Retaining keeps the application where it is, but the company wants to replace it. - **C:** ✅ [CORRECT] Repurchasing, also called drop and shop, replaces the application with a different product, such as moving from a custom or licensed application to SaaS. - **D:** ❌ [INCORRECT] Refactoring would redesign the custom application for the cloud, which means the company would keep maintaining it. **Official AWS Documentation Reference:** > _"Replacing a custom application – You can avoid recoding and re-architecting a custom application by repurchasing a vendor-based SaaS or cloud-based application."_ > — [AWS Documentation](https://docs.aws.amazon.com/prescriptive-guidance/latest/large-migration-guide/migration-strategies.html#repurchase)
 
 *Sources: GustavoFreze_Questions*
 
@@ -4398,9 +4401,9 @@ Watch out for distractors testing similar AWS service boundaries. When the quest
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] The People perspective bridges technology and business, with a focus on culture, organizational structure, leadership, and workforce, including cloud fluency and change acceleration. - **B:** ❌ [INCORRECT] The Governance perspective orchestrates cloud initiatives and manages risk, benefits, and cloud spend. - **C:** ❌ [INCORRECT] The Operations perspective makes sure cloud services are delivered at the level the business needs. - **D:** ❌ [INCORRECT] The Platform perspective builds a scalable hybrid cloud platform and modernizes workloads. **Official AWS Documentation Reference:** > _"The people perspective serves as a bridge between technology and business, accelerating the cloud journey to help organizations more rapidly evolve to a culture of continuous growth, learning, and where change becomes business-as-normal, with focus on culture, organizational structure, leadership, and workforce."_ > — [AWS Documentation](https://docs.aws.amazon.com/whitepapers/latest/overview-aws-cloud-adoption-framework/people-perspective.html) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] The People perspective bridges technology and business, with a focus on culture, organizational structure, leadership, and workforce, including cloud fluency and change acceleration. - **B:** ❌ [INCORRECT] The Governance perspective orchestrates cloud initiatives and manages risk, benefits, and cloud spend. - **C:** ❌ [INCORRECT] The Operations perspective makes sure cloud services are delivered at the level the business needs. - **D:** ❌ [INCORRECT] The Platform perspective builds a scalable hybrid cloud platform and modernizes workloads. **Official AWS Documentation Reference:** > _"The people perspective serves as a bridge between technology and business, accelerating the cloud journey to help organizations more rapidly evolve to a culture of continuous growth, learning, and where change becomes business-as-normal, with focus on culture, organizational structure, leadership, and workforce."_ > — [AWS Documentation](https://docs.aws.amazon.com/whitepapers/latest/overview-aws-cloud-adoption-framework/people-perspective.html)
 
 *Sources: GustavoFreze_Questions*
 
@@ -4416,7 +4419,7 @@ Watch out for distractors testing similar AWS service boundaries. When the quest
 <details>
 <summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Reducing business risk is about improved reliability, performance, and security. - **B:** ❌ [INCORRECT] Improving ESG performance is about sustainability and corporate transparency. - **C:** ✅ [CORRECT] Growing revenue means creating new products and services, reaching new customers, and entering new market segments. - **D:** ❌ [INCORRECT] Increasing operational efficiency is about lower operating costs and higher productivity. **Official AWS Documentation Reference:** > _"Create new products and services, reach new customers, and enter new market segments."_ > — [AWS Documentation](https://aws.amazon.com/cloud-adoption-framework/#benefits) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Reducing business risk is about improved reliability, performance, and security. - **B:** ❌ [INCORRECT] Improving ESG performance is about sustainability and corporate transparency. - **C:** ✅ [CORRECT] Growing revenue means creating new products and services, reaching new customers, and entering new market segments. - **D:** ❌ [INCORRECT] Increasing operational efficiency is about lower operating costs and higher productivity. **Official AWS Documentation Reference:** > _"Create new products and services, reach new customers, and enter new market segments."_ > — [AWS Documentation](https://aws.amazon.com/cloud-adoption-framework/#benefits)
 
 *Sources: GustavoFreze_Questions*
 
@@ -4901,7 +4904,7 @@ This question (# 287) is directly sourced from authentic **Community Consensus P
 
 A company migrated its core application onto multiple workloads in the AWS Cloud. The
 company wants to improve the application's reliability.
-Which cloud design principle should the company implement to achieve this goal?
+ Which cloud design principle should the company implement to achieve this goal?
 
 - **A)** Maximize utilization.
 - **B)** Decouple the components.
@@ -4991,7 +4994,7 @@ point. Which pillar of the AWS Well-Architected Framework includes these goals?
 - **D)** Cost optimization
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
 **Correct Answer: ** ()
 
@@ -5028,7 +5031,7 @@ Which design principle should the company use to meet this requirement?
 - **D)** Loose coupling
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
 Loose coupling is a design principle that involves reducing dependencies between
 application components so that they can operate independently. This approach ensures
@@ -5051,12 +5054,13 @@ AWS Well-Architected Framework - Design Principles
 Which of the following is a recommended design principle of the AWS Well-Architected
 Framework?
 
-- **A)** Reduce downtime by making infrastructure changes infrequently and in large increments. B. Invest the time to configure infrastructure manually.
+- **A)** Reduce downtime by making infrastructure changes infrequently and in large increments.
+- **B)** Invest the time to configure infrastructure manually.
 - **C)** Learn to improve from operational failures.
 - **D)** Use monolithic application design for centralization.
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 The correct answer is C because learning to improve from operational failures is a
 recommended design principle of the AWS Well-Architected Framework. The AWS WellArchitected Framework is a set of best practices and guidelines for designing and
@@ -5097,7 +5101,7 @@ mechanisms that anticipate, respond to, and prevent failures.
 A . Security: Incorrect, as it focuses on protecting information, systems, and assets while
 delivering business value.
 
-B . Performance efficiency: Incorrect, as it focuses on using IT and computing resources
+ B . Performance efficiency: Incorrect, as it focuses on using IT and computing resources
 efficiently.
 C . Operational excellence: Incorrect, as it focuses on operations in the cloud, including
 monitoring and managing systems.
@@ -6343,7 +6347,7 @@ How many pillars does the AWS Well-Architected Framework have, and which is NOT 
 - **D)** Three pillars; 'Cost' is not one
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 The Well-Architected Framework has six pillars: Operational Excellence, Security, Reliability, Performance Efficiency, Cost Optimisation and Sustainability. Marketing is not a pillar.
 
@@ -6363,7 +6367,7 @@ Which Well-Architected pillar focuses on running and monitoring systems and cont
 - **D)** Security
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 Operational Excellence covers running, monitoring and continuously improving systems and processes.
 
@@ -6383,7 +6387,7 @@ Which Well-Architected pillar is specifically about using energy efficiently and
 - **D)** Performance Efficiency
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 Sustainability, added as the sixth pillar, focuses on minimising the environmental impact of running cloud workloads.
 
@@ -6403,7 +6407,7 @@ Reliability, as a Well-Architected pillar, primarily ensures a workload can:
 - **D)** Avoid all encryption
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Reliability is about a workload performing its function correctly and recovering quickly from failures.
 
@@ -6419,9 +6423,9 @@ Reliability is about a workload performing its function correctly and recovering
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A, C)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] Monitoring the workload for key performance indicators and starting automation when a threshold is breached is a reliability design principle. - **B:** ❌ [INCORRECT] This is a design principle of the security pillar. - **C:** ✅ [CORRECT] Testing how the workload fails and validating recovery procedures is a reliability design principle. - **D:** ❌ [INCORRECT] This is a design principle of the cost optimization pillar. - **E:** ❌ [INCORRECT] This is a design principle of the performance efficiency pillar. **Official AWS Documentation Reference:** > _"Automatically recover from failure: By monitoring a workload for key performance indicators (KPIs), you can run automation when a threshold is breached."_ > — [AWS Documentation](https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/design-principles.html) > _"In the cloud, you can test how your workload fails, and you can validate your recovery procedures."_ > — [AWS Documentation](https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/design-principles.html) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] Monitoring the workload for key performance indicators and starting automation when a threshold is breached is a reliability design principle. - **B:** ❌ [INCORRECT] This is a design principle of the security pillar. - **C:** ✅ [CORRECT] Testing how the workload fails and validating recovery procedures is a reliability design principle. - **D:** ❌ [INCORRECT] This is a design principle of the cost optimization pillar. - **E:** ❌ [INCORRECT] This is a design principle of the performance efficiency pillar. **Official AWS Documentation Reference:** > _"Automatically recover from failure: By monitoring a workload for key performance indicators (KPIs), you can run automation when a threshold is breached."_ > — [AWS Documentation](https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/design-principles.html) > _"In the cloud, you can test how your workload fails, and you can validate your recovery procedures."_ > — [AWS Documentation](https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/design-principles.html)
 
 *Sources: GustavoFreze_Questions*
 
@@ -6435,9 +6439,9 @@ Reliability is about a workload performing its function correctly and recovering
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] The reliability pillar covers performing the intended function correctly and consistently, and operating and testing the workload through its total lifecycle. - **B:** ❌ [INCORRECT] Performance efficiency is about using resources efficiently to meet performance requirements as demand changes. - **C:** ❌ [INCORRECT] Operational excellence is about organizing teams, designing, operating at scale, and evolving the workload over time. - **D:** ❌ [INCORRECT] Security is about protecting data, systems, and assets. **Official AWS Documentation Reference:** > _"The Reliability pillar encompasses the ability of a workload to perform its intended function correctly and consistently when it’s expected to. This includes the ability to operate and test the workload through its total lifecycle."_ > — [AWS Documentation](https://docs.aws.amazon.com/wellarchitected/latest/framework/reliability.html) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] The reliability pillar covers performing the intended function correctly and consistently, and operating and testing the workload through its total lifecycle. - **B:** ❌ [INCORRECT] Performance efficiency is about using resources efficiently to meet performance requirements as demand changes. - **C:** ❌ [INCORRECT] Operational excellence is about organizing teams, designing, operating at scale, and evolving the workload over time. - **D:** ❌ [INCORRECT] Security is about protecting data, systems, and assets. **Official AWS Documentation Reference:** > _"The Reliability pillar encompasses the ability of a workload to perform its intended function correctly and consistently when it’s expected to. This includes the ability to operate and test the workload through its total lifecycle."_ > — [AWS Documentation](https://docs.aws.amazon.com/wellarchitected/latest/framework/reliability.html)
 
 *Sources: GustavoFreze_Questions*
 
@@ -6453,7 +6457,7 @@ Reliability is about a workload performing its function correctly and recovering
 <details>
 <summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Cost optimization is about delivering business value at the lowest price point. The goals here are about resource use and energy, which is environmental impact. - **B:** ❌ [INCORRECT] Performance efficiency is about meeting performance requirements, not about reducing environmental impact. - **C:** ✅ [CORRECT] The sustainability pillar focuses on environmental impact, especially energy consumption and efficiency, and its principles include establishing goals such as fewer resources per transaction. - **D:** ❌ [INCORRECT] Operational excellence is about running and improving the workload, not about its energy use. **Official AWS Documentation Reference:** > _"Establish sustainability goals: For each cloud workload, establish long-term sustainability goals such as reducing the compute and storage resources required per transaction."_ > — [AWS Documentation](https://docs.aws.amazon.com/wellarchitected/latest/framework/sus-design-principles.html) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Cost optimization is about delivering business value at the lowest price point. The goals here are about resource use and energy, which is environmental impact. - **B:** ❌ [INCORRECT] Performance efficiency is about meeting performance requirements, not about reducing environmental impact. - **C:** ✅ [CORRECT] The sustainability pillar focuses on environmental impact, especially energy consumption and efficiency, and its principles include establishing goals such as fewer resources per transaction. - **D:** ❌ [INCORRECT] Operational excellence is about running and improving the workload, not about its energy use. **Official AWS Documentation Reference:** > _"Establish sustainability goals: For each cloud workload, establish long-term sustainability goals such as reducing the compute and storage resources required per transaction."_ > — [AWS Documentation](https://docs.aws.amazon.com/wellarchitected/latest/framework/sus-design-principles.html)
 
 *Sources: GustavoFreze_Questions*
 
@@ -6467,9 +6471,9 @@ Reliability is about a workload performing its function correctly and recovering
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] This is a design principle of the reliability pillar. - **B:** ❌ [INCORRECT] This is a design principle of the performance efficiency pillar. - **C:** ❌ [INCORRECT] This is a design principle of the operational excellence pillar. - **D:** ✅ [CORRECT] Applying defense in depth with controls at every layer, from the network edge to the application code, is a security design principle. **Official AWS Documentation Reference:** > _"Apply security at all layers: Apply a defense in depth approach with multiple security controls."_ > — [AWS Documentation](https://docs.aws.amazon.com/wellarchitected/latest/framework/sec-design.html) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] This is a design principle of the reliability pillar. - **B:** ❌ [INCORRECT] This is a design principle of the performance efficiency pillar. - **C:** ❌ [INCORRECT] This is a design principle of the operational excellence pillar. - **D:** ✅ [CORRECT] Applying defense in depth with controls at every layer, from the network edge to the application code, is a security design principle. **Official AWS Documentation Reference:** > _"Apply security at all layers: Apply a defense in depth approach with multiple security controls."_ > — [AWS Documentation](https://docs.aws.amazon.com/wellarchitected/latest/framework/sec-design.html)
 
 *Sources: GustavoFreze_Questions*
 
@@ -6483,9 +6487,9 @@ Reliability is about a workload performing its function correctly and recovering
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] This reliability principle replaces one large resource with several small ones to reduce the impact of a failure. It is not about turning resources off. - **B:** ✅ [CORRECT] This cost optimization principle says to pay only for the resources you require. Stopping environments used only during work hours is the example the framework gives. - **C:** ❌ [INCORRECT] This performance efficiency principle is about consuming complex technologies as services. - **D:** ❌ [INCORRECT] This security principle is about monitoring, alerting, and auditing actions and changes. **Official AWS Documentation Reference:** > _"For example, development and test environments are typically only used for eight hours a day during the work week. You can stop these resources when they are not in use for a potential cost savings of 75% (40 hours versus 168 hours)."_ > — [AWS Documentation](https://docs.aws.amazon.com/wellarchitected/latest/framework/cost-dp.html) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] This reliability principle replaces one large resource with several small ones to reduce the impact of a failure. It is not about turning resources off. - **B:** ✅ [CORRECT] This cost optimization principle says to pay only for the resources you require. Stopping environments used only during work hours is the example the framework gives. - **C:** ❌ [INCORRECT] This performance efficiency principle is about consuming complex technologies as services. - **D:** ❌ [INCORRECT] This security principle is about monitoring, alerting, and auditing actions and changes. **Official AWS Documentation Reference:** > _"For example, development and test environments are typically only used for eight hours a day during the work week. You can stop these resources when they are not in use for a potential cost savings of 75% (40 hours versus 168 hours)."_ > — [AWS Documentation](https://docs.aws.amazon.com/wellarchitected/latest/framework/cost-dp.html)
 
 *Sources: GustavoFreze_Questions*
 
@@ -6499,9 +6503,9 @@ Reliability is about a workload performing its function correctly and recovering
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] This principle is about defining the workload and its operations as code, automating them in response to events, and adding guardrails to limit human error. - **B:** ❌ [INCORRECT] This is a performance efficiency principle about removing the need to run servers. - **C:** ❌ [INCORRECT] This is a security principle about encryption, tokenization, and access control. - **D:** ❌ [INCORRECT] This is a cost optimization principle about comparing business output with its cost. **Official AWS Documentation Reference:** > _"You can then automate your workload’s operations by initiating them in response to events. In the cloud, you can employ automation safety by configuring guardrails, including rate control, error thresholds, and approvals."_ > — [AWS Documentation](https://docs.aws.amazon.com/wellarchitected/latest/framework/oe-design-principles.html) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] This principle is about defining the workload and its operations as code, automating them in response to events, and adding guardrails to limit human error. - **B:** ❌ [INCORRECT] This is a performance efficiency principle about removing the need to run servers. - **C:** ❌ [INCORRECT] This is a security principle about encryption, tokenization, and access control. - **D:** ❌ [INCORRECT] This is a cost optimization principle about comparing business output with its cost. **Official AWS Documentation Reference:** > _"You can then automate your workload’s operations by initiating them in response to events. In the cloud, you can employ automation safety by configuring guardrails, including rate control, error thresholds, and approvals."_ > — [AWS Documentation](https://docs.aws.amazon.com/wellarchitected/latest/framework/oe-design-principles.html)
 
 *Sources: GustavoFreze_Questions*
 
@@ -6515,9 +6519,9 @@ Reliability is about a workload performing its function correctly and recovering
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] This principle is about deploying in multiple Regions to lower latency, not about how the team adopts a new technology. - **B:** ❌ [INCORRECT] This principle is about choosing the technology that matches how the workload uses it, such as its data access patterns. - **C:** ❌ [INCORRECT] This principle is about quickly comparing instance types, storage, or configurations. - **D:** ✅ [CORRECT] Consuming a complex technology such as machine learning as a service lets the team focus on the product instead of learning to host it. **Official AWS Documentation Reference:** > _"Rather than asking your IT team to learn about hosting and running a new technology, consider consuming the technology as a service. For example, NoSQL databases, media transcoding, and machine learning are all technologies that require specialized expertise."_ > — [AWS Documentation](https://docs.aws.amazon.com/wellarchitected/latest/framework/perf-dp.html) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] This principle is about deploying in multiple Regions to lower latency, not about how the team adopts a new technology. - **B:** ❌ [INCORRECT] This principle is about choosing the technology that matches how the workload uses it, such as its data access patterns. - **C:** ❌ [INCORRECT] This principle is about quickly comparing instance types, storage, or configurations. - **D:** ✅ [CORRECT] Consuming a complex technology such as machine learning as a service lets the team focus on the product instead of learning to host it. **Official AWS Documentation Reference:** > _"Rather than asking your IT team to learn about hosting and running a new technology, consider consuming the technology as a service. For example, NoSQL databases, media transcoding, and machine learning are all technologies that require specialized expertise."_ > — [AWS Documentation](https://docs.aws.amazon.com/wellarchitected/latest/framework/perf-dp.html)
 
 *Sources: GustavoFreze_Questions*
 
@@ -6531,9 +6535,9 @@ Reliability is about a workload performing its function correctly and recovering
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: C, E)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] This is a design principle of the security pillar. - **B:** ❌ [INCORRECT] This is a design principle of the reliability pillar. - **C:** ✅ [CORRECT] Small, incremental changes that can be reversed reduce the blast radius and allow faster reversal when failures occur. - **D:** ❌ [INCORRECT] This is a design principle of the cost optimization pillar. - **E:** ✅ [CORRECT] Driving failure scenarios and testing procedures against them is an operational excellence design principle. **Official AWS Documentation Reference:** > _"Automated deployment techniques together with smaller, incremental changes reduces the blast radius and allows for faster reversal when failures occur."_ > — [AWS Documentation](https://docs.aws.amazon.com/wellarchitected/latest/framework/oe-design-principles.html) > _"Anticipate failure: Maximize operational success by driving failure scenarios to understand the workload’s risk profile and its impact on your business outcomes."_ > — [AWS Documentation](https://docs.aws.amazon.com/wellarchitected/latest/framework/oe-design-principles.html) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] This is a design principle of the security pillar. - **B:** ❌ [INCORRECT] This is a design principle of the reliability pillar. - **C:** ✅ [CORRECT] Small, incremental changes that can be reversed reduce the blast radius and allow faster reversal when failures occur. - **D:** ❌ [INCORRECT] This is a design principle of the cost optimization pillar. - **E:** ✅ [CORRECT] Driving failure scenarios and testing procedures against them is an operational excellence design principle. **Official AWS Documentation Reference:** > _"Automated deployment techniques together with smaller, incremental changes reduces the blast radius and allows for faster reversal when failures occur."_ > — [AWS Documentation](https://docs.aws.amazon.com/wellarchitected/latest/framework/oe-design-principles.html) > _"Anticipate failure: Maximize operational success by driving failure scenarios to understand the workload’s risk profile and its impact on your business outcomes."_ > — [AWS Documentation](https://docs.aws.amazon.com/wellarchitected/latest/framework/oe-design-principles.html)
 
 *Sources: GustavoFreze_Questions*
 
@@ -6962,7 +6966,8 @@ TWO.)
 
 - **A)** Client-side data encryption
 - **B)** Amazon EC2 guest operating systems
-- **C)** The compute infrastructure D. Availability Zones
+- **C)** The compute infrastructure
+- **D)** Availability Zones
 - **E)** Customer data
 
 <details>
@@ -7025,7 +7030,8 @@ A company wants its Amazon EC2 instances to share the same geographic area but u
 multiple independent underlying power sources.
 Which solution achieves this goal?
 
-- **A)** Use EC2 instances in a single Availability Zone. B. Use EC2 instances in multiple AWS Regions.
+- **A)** Use EC2 instances in a single Availability Zone.
+- **B)** Use EC2 instances in multiple AWS Regions.
 - **C)** Use EC2 instances in multiple Availability Zones in the same AWS Region.
 - **D)** Use EC2 instances in the same edge location and the same AWS Region.
 
@@ -7226,7 +7232,7 @@ Which AWS service is a highly available and scalable DNS web service?
 - **D)** Amazon Connect
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 Amazon Route 53 is a highly available and scalable DNS web service. It is designed to
 give developers and businesses an extremely reliable and cost-effective way to route end
@@ -7253,7 +7259,7 @@ Which AWS service will meet these requirements?
 - **D)** AWS OpsWorks
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 AWS Outposts is an AWS service that extends AWS infrastructure, services, APIs, and
 tools to virtually any datacenter, co-location space, or on-premises facility. AWS Outposts
@@ -7315,7 +7321,7 @@ overhead?
 - **D)** Reprovision the EC2 instances with a larger instance type.
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Rightsizing involves adjusting instance types based on actual utilization to optimize costs
 and performance. Changing the size and type of EC2 instances according to utilization
@@ -7337,7 +7343,8 @@ Which AWS service should the company use to meet these requirements?
 
 - **A)** Amazon Route 53
 - **B)** Amazon CloudFront
-- **C)** Elastic Load Balancing D. AWS Lambda
+- **C)** Elastic Load Balancing
+- **D)** AWS Lambda
 
 <details>
 <summary><b>View Answer & Rationale (Answer: B)</b></summary>
@@ -7373,7 +7380,7 @@ Which AWS service or infrastructure component will provide this functionality?
 - **D)** AWS Direct Connect
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 Edge locations are sites that Amazon CloudFront uses to cache copies of your content for
 faster delivery to users at any location. You can use Amazon CloudFront to deliver your
@@ -7393,7 +7400,7 @@ web application as close to end users as possible4.
 
 A company deploys its application to multiple AWS Regions and configures automatic
 failover between those Regions.
-Which cloud concept does this architecture represent?
+ Which cloud concept does this architecture represent?
 
 - **A)** Security
 - **B)** Reliability
@@ -7401,7 +7408,7 @@ failover between those Regions.
 - **D)** Cost optimization
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Reliability is the cloud concept that this architecture represents. Reliability is the ability of a
 system to recover from infrastructure or service disruptions, dynamically acquire computing
@@ -7485,7 +7492,7 @@ Which AWS service will meet these requirements?
 - **D)** AmazonPolly
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 The AWS service that will meet the requirements of the company that wants to create a
 chatbot and integrate the chatbot with its current web application is Amazon Lex. Amazon
@@ -7499,7 +7506,7 @@ customers create engaging and interactive chatbots for their web applications. A
 Kendra, Amazon Textract, and Amazon Polly are not the best services to use for this
 purpose. Amazon Kendra is a service that helps customers provide accurate and natural
 
-answers to natural language queries using machine learning
+ answers to natural language queries using machine learning
 
 *Sources: Consensus_Aligned, Amazon_CLF_C02_Nov2026_Recall_393Q*
 
@@ -7571,7 +7578,8 @@ their applications and store their data1.
 Which benefit does Amazon Rekognition provide?
 
 - **A)** The ability to place watermarks on images
-- **B)** The ability to detect objects that appear in pictures C. The ability to resize millions of images automatically
+- **B)** The ability to detect objects that appear in pictures
+- **C)** The ability to resize millions of images automatically
 - **D)** The ability to bid on object detection jobs
 
 <details>
@@ -7601,7 +7609,8 @@ connectivity as the VPCs increase in number?
 
 - **A)** VPC endpoints
 - **B)** AWS Transit Gateway
-- **C)** Amazon Route 53 D. AWS Secrets Manager
+- **C)** Amazon Route 53
+- **D)** AWS Secrets Manager
 
 <details>
 <summary><b>View Answer & Rationale (Answer: B)</b></summary>
@@ -7638,7 +7647,7 @@ Which AWS service will meet this requirement?
 - **D)** Amazon FSx
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 The AWS service that will meet this requirement is C. AWS Backup.
 AWS Backup is a service that allows you to define a central data protection policy that
@@ -7679,7 +7688,7 @@ failures for this application?
 The correct answers are A and C because Amazon EC2 Auto Scaling and resources that
 are distributed across multiple Availability Zones are AWS services and features that will
 
-improve availability and reduce the impact of failures for the web application. Amazon EC2
+ improve availability and reduce the impact of failures for the web application. Amazon EC2
 Auto Scaling is a service that enables users to automatically adjust the number of Amazon
 EC2 instances in response to changes in demand or performance. Amazon EC2 Auto
 Scaling helps users to maintain optimal availability and performance of their applications
@@ -7751,7 +7760,7 @@ whenever possible. This architecture reduces network delay and improves performa
 geographically distributed audiences. AWS CloudFormation provisions infrastructure from
 templates; it does not distribute website content. Amazon ElastiCache accelerates
 
-application access to frequently used data but is not a global CDN. Amazon DynamoDB is
+ application access to frequently used data but is not a global CDN. Amazon DynamoDB is
 a managed NoSQL database service. Therefore, for worldwide website delivery with lowlatency response times, Amazon CloudFront is the appropriate AWS service.
 
 *Sources: Consensus_Aligned, Amazon_CLF_C02_Nov2026_Recall_393Q*
@@ -7862,7 +7871,8 @@ How can the company increase resilience for this application?
 
 - **A)** Deploy a copy of the application in another AWS account.
 - **B)** Deploy the application by using multiple VPCs.
-- **C)** Deploy the application by using multiple subnets. D. Deploy the application by using multiple Availability Zones.
+- **C)** Deploy the application by using multiple subnets.
+- **D)** Deploy the application by using multiple Availability Zones.
 
 <details>
 <summary><b>View Answer & Rationale (Answer: D)</b></summary>
@@ -7902,7 +7912,7 @@ Which AWS solution will meet these requirements with the LEAST latency?
 AWS Outposts is a fully managed service that extends AWS infrastructure, AWS services,
 APIs, and tools to virtually any datacenter, co-location space, or on-premises facility for a
 
-truly consistent hybrid experience. AWS Outposts enables you to run AWS services in your
+ truly consistent hybrid experience. AWS Outposts enables you to run AWS services in your
 on-premises data center1.
 
 *Sources: Consensus_Aligned, Amazon_CLF_C02_Nov2026_Recall_393Q*
@@ -7959,7 +7969,7 @@ How should the company deploy the EC2 instances to meet these requirements?
 - **D)** Across multiple AWS accounts
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 The company should deploy the EC2 instances across multiple Availability Zones to design
 a highly available application. Availability Zones are isolated locations within an AWS
@@ -7985,7 +7995,8 @@ resources12
 Which task is the responsibility of the customer, according to the AWS shared
 responsibility model?
 
-- **A)** Patch the Amazon DynamoDB operating system. B. Secure Amazon CloudFront edge locations by allowing physical access according to the principle of least privilege.
+- **A)** Patch the Amazon DynamoDB operating system.
+- **B)** Secure Amazon CloudFront edge locations by allowing physical access according to the principle of least privilege.
 - **C)** Protect the hardware that runs AWS services.
 - **D)** Use AWS Identity and Access Management (1AM) according to the principle of least privilege.
 
@@ -8027,7 +8038,7 @@ requirement?
 - **D)** Placement groups
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 AWS Regions are geographic areas around the world where AWS has clusters of data
 centers. Each AWS Region consists of multiple, isolated, and physically separate AZ's
@@ -8035,7 +8046,7 @@ within a geographic area. By hosting the customer's data in a specific AWS Regio
 company can meet the requirement of hosting the data in the customer's country. AWS
 Shield is a service that provides always-on detection and automatic inline mitigations that
 
-minimize application downtime and latency, so there is no need to engage AWS Support to
+ minimize application downtime and latency, so there is no need to engage AWS Support to
 benefit from DDoS protection. Amazon S3 Object Lock is a feature that allows you to store
 objects using a write-once-read-many (WORM) model. You can use it to prevent an object
 from being deleted or overwritten for a fixed amount of time or indefinitely. Placement
@@ -13006,13 +13017,15 @@ Which of the following are customer responsibilities under the AWS shared respon
 (Select TWO.)
 
 - **A)** Physical security of AWS facilities
-- **B)** Configuration of security groupsQ C. Encryption of customer data on AWS
-- **C)** Management of AWS Lambda infrastructureQ E. Management of network throughput of each AWS Region
+- **B)** Configuration of security groups
+- **C)** Encryption of customer data on AWS
+- **D)** Management of AWS Lambda infrastructure
+- **E)** Management of network throughput of each AWS Region
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: B, C)</b></summary>
 
-**Correct Answer: ** ()
+**Correct Answer:** `B, C`
 
 > **Domain Focus:** Cloud Concepts | **Blueprint Area:** Topic 1.4: AWS Global Infrastructure
 
@@ -13173,9 +13186,9 @@ In the AWS shared responsibility model, which tasks are the responsibility of AW
 - **E)** Manage access to the data in an Amazon S3 bucket
 
 <details>
-<summary><b>View Answer & Rationale (Answer: )</b></summary>
+<summary><b>View Answer & Rationale (Answer: C, D)</b></summary>
 
-**Correct Answer: ** ()
+**Correct Answer:** `C, D`
 
 > **Domain Focus:** Cloud Concepts | **Blueprint Area:** Topic 1.4: AWS Global Infrastructure
 
@@ -13734,7 +13747,7 @@ What is an AWS Availability Zone?
 - **D)** A type of EC2 instance
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 An AZ is one or more discrete data centres with redundant power, networking and connectivity inside a Region.
 
@@ -13754,7 +13767,7 @@ To build a highly available architecture, across what should you distribute your
 - **D)** Multiple edge locations
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 Spreading resources across multiple AZs protects against the failure of any single data centre.
 
@@ -13774,7 +13787,7 @@ What is the primary purpose of AWS edge locations / Amazon CloudFront?
 - **D)** Manage IAM users
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Edge locations serve the CloudFront CDN, caching content near users to lower latency.
 
@@ -13794,7 +13807,7 @@ Which statement about AWS Regions is correct?
 - **D)** You cannot choose your Region
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 A Region is a physical geographic area that contains multiple, isolated Availability Zones.
 
@@ -13814,7 +13827,7 @@ Which is a valid reason to choose a particular AWS Region for a workload? (Choos
 - **D)** Regions have identical service availability and price everywhere
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 Region choice is driven by compliance/data residency, latency to users, service availability and price.
 
@@ -13834,7 +13847,7 @@ Which security service acts as a single dashboard aggregating and prioritising s
 - **D)** Amazon CloudFront
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 AWS Security Hub aggregates, organises and prioritises security findings across multiple AWS security services.
 
@@ -13854,7 +13867,7 @@ Which service is a content delivery network (CDN) that caches content at edge lo
 - **D)** Amazon VPC
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 Amazon CloudFront is the CDN that delivers content from edge locations near users.
 
@@ -13874,7 +13887,7 @@ Which service is a scalable Domain Name System (DNS) web service?
 - **D)** AWS Global Accelerator
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 Amazon Route 53 is AWS's managed, scalable DNS and domain registration service.
 
@@ -13894,7 +13907,7 @@ What is an Amazon VPC?
 - **D)** A billing tool
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 A Virtual Private Cloud is your own logically isolated network within AWS where you launch resources.
 
@@ -13914,7 +13927,7 @@ Which service provides a dedicated, private physical network connection between 
 - **D)** Amazon Route 53
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 AWS Direct Connect establishes a dedicated private connection from on-premises to AWS, bypassing the public internet.
 
@@ -13934,7 +13947,7 @@ Which pre-built AI service extracts text and data from scanned documents?
 - **D)** Amazon Lex
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 Amazon Textract extracts text, forms and tables from documents; Rekognition analyses images/video.
 
@@ -13954,7 +13967,7 @@ Which fully managed platform is used to build, train and deploy custom machine-l
 - **D)** Amazon Transcribe
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 Amazon SageMaker is the managed platform for building, training and deploying custom ML models.
 
@@ -13974,7 +13987,7 @@ Which physical device transfers very large datasets to AWS when the network woul
 - **D)** AWS Lambda
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 AWS Snowball (Snow Family) ships physical storage devices for large offline data transfer.
 
@@ -13994,7 +14007,7 @@ Which storage option provides persistent block storage for a single EC2 instance
 - **D)** Amazon CloudFront
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 Amazon EBS provides persistent block volumes attached to a single instance.
 
@@ -14014,7 +14027,7 @@ Thousands of EC2 instances across multiple Availability Zones must read and writ
 - **D)** Amazon S3
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 2)</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 EFS is a managed shared file system mounted by many instances across AZs, scaling capacity automatically.
 
@@ -14034,7 +14047,7 @@ Aurora stores how many copies of your data, and across how many Availability Zon
 - **D)** 10 copies across 5 AZs
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Aurora's shared distributed storage layer keeps 6 copies of data across 3 Availability Zones.
 
@@ -14054,7 +14067,7 @@ Which AWS AI service analyses images and video for objects, faces, scenes and co
 - **D)** Amazon Polly
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Rekognition handles general image/video content analysis, including content moderation.
 
@@ -14074,7 +14087,7 @@ Which service performs NLP tasks such as sentiment analysis, entity and key-phra
 - **D)** Amazon Forecast
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 Comprehend is the NLP service for sentiment, entities, key phrases and language detection.
 
@@ -14094,7 +14107,7 @@ Which service converts written text into lifelike speech (text-to-speech)?
 - **D)** Amazon Comprehend
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Polly is text-to-speech; Transcribe is the reverse (speech-to-text).
 
@@ -14114,7 +14127,7 @@ Which service is used to build the conversation flow of a voice/text chatbot?
 - **D)** Amazon Personalize
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 0)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
 Lex builds conversational chatbots (the conversation flow); add Translate and Polly for multilingual voice.
 
@@ -14134,7 +14147,7 @@ Which service gives real-time product recommendations on an e-commerce site?
 - **D)** Amazon Rekognition
 
 <details>
-<summary><b>View Answer & Rationale (Answer: 1)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 Personalize provides real-time recommendations; Forecast does time-series prediction.
 
@@ -14214,9 +14227,9 @@ Which AWS service enables users to create copies of resources across AWS Regions
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A, D)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] Inbound data transfer from the internet has no charge across all services in all Regions. - **B:** ❌ [INCORRECT] Data transfer from AWS to the internet is charged per service, with rates specific to the source Region. - **C:** ❌ [INCORRECT] Data transfer across Regions is charged, with a rate that depends on the source and destination Regions. - **D:** ✅ [CORRECT] Data transfer within the same Availability Zone is free. - **E:** ❌ [INCORRECT] Traffic that crosses an Availability Zone boundary typically incurs a data transfer charge. **Official AWS Documentation Reference:** > _"There is no charge for inbound data transfer across all services in all Regions."_ > — [AWS Documentation](https://aws.amazon.com/blogs/architecture/overview-of-data-transfer-costs-for-common-architectures/) > _"Data transferred between Amazon EC2, Amazon RDS, Amazon Redshift, Amazon ElastiCache instances, and Elastic Network Interfaces in the same Availability Zone is free."_ > — [AWS Documentation](https://aws.amazon.com/ec2/pricing/on-demand/#Data_Transfer_within_the_same_AWS_Region) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] Inbound data transfer from the internet has no charge across all services in all Regions. - **B:** ❌ [INCORRECT] Data transfer from AWS to the internet is charged per service, with rates specific to the source Region. - **C:** ❌ [INCORRECT] Data transfer across Regions is charged, with a rate that depends on the source and destination Regions. - **D:** ✅ [CORRECT] Data transfer within the same Availability Zone is free. - **E:** ❌ [INCORRECT] Traffic that crosses an Availability Zone boundary typically incurs a data transfer charge. **Official AWS Documentation Reference:** > _"There is no charge for inbound data transfer across all services in all Regions."_ > — [AWS Documentation](https://aws.amazon.com/blogs/architecture/overview-of-data-transfer-costs-for-common-architectures/) > _"Data transferred between Amazon EC2, Amazon RDS, Amazon Redshift, Amazon ElastiCache instances, and Elastic Network Interfaces in the same Availability Zone is free."_ > — [AWS Documentation](https://aws.amazon.com/ec2/pricing/on-demand/#Data_Transfer_within_the_same_AWS_Region)
 
 *Sources: GustavoFreze_Questions*
 
@@ -14230,9 +14243,9 @@ Which AWS service enables users to create copies of resources across AWS Regions
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Edge locations cache content for low latency delivery. They are not a way to keep data within a jurisdiction. - **B:** ✅ [CORRECT] Customers choose the Regions where their content is stored, and AWS does not move or replicate it outside those Regions without their agreement. - **C:** ❌ [INCORRECT] Shield protects against DDoS attacks. It does not control where data is stored. - **D:** ❌ [INCORRECT] Artifact provides compliance reports and agreements. It does not store or move customer data. **Official AWS Documentation Reference:** > _"You choose the AWS Region(s) in which your content is stored."_ > — [AWS Documentation](https://aws.amazon.com/compliance/data-privacy-faq/#commitments--1yvnqhg) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Edge locations cache content for low latency delivery. They are not a way to keep data within a jurisdiction. - **B:** ✅ [CORRECT] Customers choose the Regions where their content is stored, and AWS does not move or replicate it outside those Regions without their agreement. - **C:** ❌ [INCORRECT] Shield protects against DDoS attacks. It does not control where data is stored. - **D:** ❌ [INCORRECT] Artifact provides compliance reports and agreements. It does not store or move customer data. **Official AWS Documentation Reference:** > _"You choose the AWS Region(s) in which your content is stored."_ > — [AWS Documentation](https://aws.amazon.com/compliance/data-privacy-faq/#commitments--1yvnqhg)
 
 *Sources: GustavoFreze_Questions*
 
@@ -14246,9 +14259,9 @@ Which AWS service enables users to create copies of resources across AWS Regions
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] A larger instance still runs in one Availability Zone, so the failure of that location still takes the application down. - **B:** ❌ [INCORRECT] CloudFront caches content close to users, but the application itself still runs in a single Availability Zone. - **C:** ❌ [INCORRECT] Snapshots help restore data after a failure, but the application stops until the company restores it somewhere else. - **D:** ✅ [CORRECT] Availability Zones are isolated and physically separate, with independent power and networking, so spreading instances across them keeps the application available when one fails. **Official AWS Documentation Reference:** > _"Each AZ has independent power, cooling, and physical security and is connected via redundant, ultra-low-latency networks. AWS customers focused on high availability can design their applications to run in multiple AZs to achieve even greater fault-tolerance."_ > — [AWS Documentation](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/#aws-infrastructure-offerings) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] A larger instance still runs in one Availability Zone, so the failure of that location still takes the application down. - **B:** ❌ [INCORRECT] CloudFront caches content close to users, but the application itself still runs in a single Availability Zone. - **C:** ❌ [INCORRECT] Snapshots help restore data after a failure, but the application stops until the company restores it somewhere else. - **D:** ✅ [CORRECT] Availability Zones are isolated and physically separate, with independent power and networking, so spreading instances across them keeps the application available when one fails. **Official AWS Documentation Reference:** > _"Each AZ has independent power, cooling, and physical security and is connected via redundant, ultra-low-latency networks. AWS customers focused on high availability can design their applications to run in multiple AZs to achieve even greater fault-tolerance."_ > — [AWS Documentation](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/#aws-infrastructure-offerings)
 
 *Sources: GustavoFreze_Questions*
 
@@ -14262,9 +14275,9 @@ Which AWS service enables users to create copies of resources across AWS Regions
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B, D)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Availability Zones belong to a Region. A Region is made of several Availability Zones in the same geographic area. - **B:** ✅ [CORRECT] An Availability Zone is one or more discrete data centers with redundant power, networking, and connectivity. - **C:** ❌ [INCORRECT] Availability Zones are physically separated by a meaningful distance, so they do not share a data center or single points of failure. - **D:** ✅ [CORRECT] All Availability Zones in a Region are interconnected with high-bandwidth, low-latency networking. - **E:** ❌ [INCORRECT] Each AWS Region has a minimum of three isolated and physically separate Availability Zones. **Official AWS Documentation Reference:** > _"An Availability Zone (AZ) is one or more discrete data centers with redundant power, networking, and connectivity in an AWS Region."_ > — [AWS Documentation](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/#aws-infrastructure-offerings) > _"All AZs in an AWS Region are interconnected with high-bandwidth, low-latency networking, over fully redundant, dedicated metro fiber providing high-throughput, low-latency networking between AZs."_ > — [AWS Documentation](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/#aws-infrastructure-offerings) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Availability Zones belong to a Region. A Region is made of several Availability Zones in the same geographic area. - **B:** ✅ [CORRECT] An Availability Zone is one or more discrete data centers with redundant power, networking, and connectivity. - **C:** ❌ [INCORRECT] Availability Zones are physically separated by a meaningful distance, so they do not share a data center or single points of failure. - **D:** ✅ [CORRECT] All Availability Zones in a Region are interconnected with high-bandwidth, low-latency networking. - **E:** ❌ [INCORRECT] Each AWS Region has a minimum of three isolated and physically separate Availability Zones. **Official AWS Documentation Reference:** > _"An Availability Zone (AZ) is one or more discrete data centers with redundant power, networking, and connectivity in an AWS Region."_ > — [AWS Documentation](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/#aws-infrastructure-offerings) > _"All AZs in an AWS Region are interconnected with high-bandwidth, low-latency networking, over fully redundant, dedicated metro fiber providing high-throughput, low-latency networking between AZs."_ > — [AWS Documentation](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/#aws-infrastructure-offerings)
 
 *Sources: GustavoFreze_Questions*
 
@@ -14278,9 +14291,9 @@ Which AWS service enables users to create copies of resources across AWS Regions
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] CloudFront delivers content through a worldwide network of edge locations and routes each request to the location with the lowest latency. - **B:** ❌ [INCORRECT] Direct Connect is a dedicated network connection between a data center and AWS. It does not deliver content to viewers around the world. - **C:** ❌ [INCORRECT] Outposts runs AWS infrastructure inside the customer data center. It does not bring content close to viewers on other continents. - **D:** ❌ [INCORRECT] Auto Scaling adjusts the number of instances in a Region. It does not place content close to viewers worldwide. **Official AWS Documentation Reference:** > _"CloudFront delivers your content through a worldwide network of data centers called edge locations. When a user requests content that you're serving with CloudFront, the request is routed to the edge location that provides the lowest latency (time delay), so that content is delivered with the best possible performance."_ > — [AWS Documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] CloudFront delivers content through a worldwide network of edge locations and routes each request to the location with the lowest latency. - **B:** ❌ [INCORRECT] Direct Connect is a dedicated network connection between a data center and AWS. It does not deliver content to viewers around the world. - **C:** ❌ [INCORRECT] Outposts runs AWS infrastructure inside the customer data center. It does not bring content close to viewers on other continents. - **D:** ❌ [INCORRECT] Auto Scaling adjusts the number of instances in a Region. It does not place content close to viewers worldwide. **Official AWS Documentation Reference:** > _"CloudFront delivers your content through a worldwide network of data centers called edge locations. When a user requests content that you're serving with CloudFront, the request is routed to the edge location that provides the lowest latency (time delay), so that content is delivered with the best possible performance."_ > — [AWS Documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html)
 
 *Sources: GustavoFreze_Questions*
 
@@ -14296,7 +14309,7 @@ Which AWS service enables users to create copies of resources across AWS Regions
 <details>
 <summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] A one-year commitment would charge the startup for far longer than the three days it needs. - **B:** ❌ [INCORRECT] Outposts installs AWS hardware in the customer facility, which does not fit a short test in an AWS Region. - **C:** ✅ [CORRECT] Cloud computing delivers IT resources on demand with pay-as-you-go pricing, so the startup pays only for the three days and stops paying when it deletes them. - **D:** ❌ [INCORRECT] A Dedicated Host is a whole physical server reserved for one customer, which costs more than needed for a short test. **Official AWS Documentation Reference:** > _"Cloud computing is the on-demand delivery of IT resources over the Internet with pay-as-you-go pricing."_ > — [AWS Documentation](https://aws.amazon.com/what-is-cloud-computing/) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] A one-year commitment would charge the startup for far longer than the three days it needs. - **B:** ❌ [INCORRECT] Outposts installs AWS hardware in the customer facility, which does not fit a short test in an AWS Region. - **C:** ✅ [CORRECT] Cloud computing delivers IT resources on demand with pay-as-you-go pricing, so the startup pays only for the three days and stops paying when it deletes them. - **D:** ❌ [INCORRECT] A Dedicated Host is a whole physical server reserved for one customer, which costs more than needed for a short test. **Official AWS Documentation Reference:** > _"Cloud computing is the on-demand delivery of IT resources over the Internet with pay-as-you-go pricing."_ > — [AWS Documentation](https://aws.amazon.com/what-is-cloud-computing/)
 
 *Sources: GustavoFreze_Questions*
 
@@ -14310,9 +14323,9 @@ Which AWS service enables users to create copies of resources across AWS Regions
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Multiple Availability Zones protect against the failure of one location, but all of them are in the same Region, which is the failure in this scenario. - **B:** ✅ [CORRECT] If the application also runs in another Region, it is still available when one Region becomes unavailable. - **C:** ❌ [INCORRECT] Edge locations cache content, but the application still depends on its origin in a single Region. - **D:** ❌ [INCORRECT] Reserved Instances are a billing discount. They do not add any protection against the loss of a Region. **Official AWS Documentation Reference:** > _"If you replicate data and resources across Regions, you can recover service in another Region."_ > — [AWS Documentation](https://docs.aws.amazon.com/wellarchitected/latest/framework/rel_fault_isolation_multiaz_region_system.html#implementation-steps) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Multiple Availability Zones protect against the failure of one location, but all of them are in the same Region, which is the failure in this scenario. - **B:** ✅ [CORRECT] If the application also runs in another Region, it is still available when one Region becomes unavailable. - **C:** ❌ [INCORRECT] Edge locations cache content, but the application still depends on its origin in a single Region. - **D:** ❌ [INCORRECT] Reserved Instances are a billing discount. They do not add any protection against the loss of a Region. **Official AWS Documentation Reference:** > _"If you replicate data and resources across Regions, you can recover service in another Region."_ > — [AWS Documentation](https://docs.aws.amazon.com/wellarchitected/latest/framework/rel_fault_isolation_multiaz_region_system.html#implementation-steps)
 
 *Sources: GustavoFreze_Questions*
 
@@ -14326,9 +14339,9 @@ Which AWS service enables users to create copies of resources across AWS Regions
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] A hybrid deployment connects cloud resources with existing resources that are not in the cloud, most often on-premises infrastructure. - **B:** ❌ [INCORRECT] When all parts of the applications run in the cloud, the deployment model is cloud, not hybrid. - **C:** ❌ [INCORRECT] Virtualized resources on premises are an on-premises deployment, sometimes called a private cloud. - **D:** ❌ [INCORRECT] Using two Regions is still a cloud deployment, because nothing runs outside AWS. **Official AWS Documentation Reference:** > _"A hybrid deployment is a way to connect infrastructure and applications between cloud-based resources and existing resources that are not located in the cloud."_ > — [AWS Documentation](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/types-of-cloud-computing.html#hybrid) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] A hybrid deployment connects cloud resources with existing resources that are not in the cloud, most often on-premises infrastructure. - **B:** ❌ [INCORRECT] When all parts of the applications run in the cloud, the deployment model is cloud, not hybrid. - **C:** ❌ [INCORRECT] Virtualized resources on premises are an on-premises deployment, sometimes called a private cloud. - **D:** ❌ [INCORRECT] Using two Regions is still a cloud deployment, because nothing runs outside AWS. **Official AWS Documentation Reference:** > _"A hybrid deployment is a way to connect infrastructure and applications between cloud-based resources and existing resources that are not located in the cloud."_ > — [AWS Documentation](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/types-of-cloud-computing.html#hybrid)
 
 *Sources: GustavoFreze_Questions*
 
@@ -14342,9 +14355,9 @@ Which AWS service enables users to create copies of resources across AWS Regions
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Direct Connect is a network link from the premises to AWS. The instances would still run in the Region, not in the factory. - **B:** ✅ [CORRECT] Outposts extends AWS infrastructure, services and APIs to customer premises, and supports resources such as EC2 instances and RDS databases for low-latency local workloads. - **C:** ❌ [INCORRECT] Storage Gateway gives on-premises applications access to cloud storage. It does not run EC2 instances or RDS databases on premises. - **D:** ❌ [INCORRECT] Lightsail offers simple virtual servers in AWS Regions, not inside the customer facility. **Official AWS Documentation Reference:** > _"AWS Outposts is a fully managed service that extends AWS infrastructure, services, APIs, and tools to customer premises."_ > — [AWS Documentation](https://docs.aws.amazon.com/outposts/latest/userguide/what-is-outposts.html#what-is-outposts) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Direct Connect is a network link from the premises to AWS. The instances would still run in the Region, not in the factory. - **B:** ✅ [CORRECT] Outposts extends AWS infrastructure, services and APIs to customer premises, and supports resources such as EC2 instances and RDS databases for low-latency local workloads. - **C:** ❌ [INCORRECT] Storage Gateway gives on-premises applications access to cloud storage. It does not run EC2 instances or RDS databases on premises. - **D:** ❌ [INCORRECT] Lightsail offers simple virtual servers in AWS Regions, not inside the customer facility. **Official AWS Documentation Reference:** > _"AWS Outposts is a fully managed service that extends AWS infrastructure, services, APIs, and tools to customer premises."_ > — [AWS Documentation](https://docs.aws.amazon.com/outposts/latest/userguide/what-is-outposts.html#what-is-outposts)
 
 *Sources: GustavoFreze_Questions*
 
@@ -14358,9 +14371,9 @@ Which AWS service enables users to create copies of resources across AWS Regions
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] It is the other way around. A Region is a physical location that contains multiple Availability Zones. - **B:** ❌ [INCORRECT] This describes an edge location, which CloudFront uses to deliver content with low latency. - **C:** ❌ [INCORRECT] This describes an Amazon VPC, which can span the Availability Zones of a Region. - **D:** ✅ [CORRECT] An Availability Zone is one or more discrete data centers, each with redundant power, networking and connectivity, housed in separate facilities. **Official AWS Documentation Reference:** > _"Availability Zones consist of one or more discrete data centers, each with redundant power, networking, and connectivity, housed in separate facilities."_ > — [AWS Documentation](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/global-infrastructure.html#global-infrastructure) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] It is the other way around. A Region is a physical location that contains multiple Availability Zones. - **B:** ❌ [INCORRECT] This describes an edge location, which CloudFront uses to deliver content with low latency. - **C:** ❌ [INCORRECT] This describes an Amazon VPC, which can span the Availability Zones of a Region. - **D:** ✅ [CORRECT] An Availability Zone is one or more discrete data centers, each with redundant power, networking and connectivity, housed in separate facilities. **Official AWS Documentation Reference:** > _"Availability Zones consist of one or more discrete data centers, each with redundant power, networking, and connectivity, housed in separate facilities."_ > — [AWS Documentation](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/global-infrastructure.html#global-infrastructure)
 
 *Sources: GustavoFreze_Questions*
 
@@ -14376,7 +14389,7 @@ Which AWS service enables users to create copies of resources across AWS Regions
 <details>
 <summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] A larger instance in the same Availability Zone fails together with that Availability Zone. - **B:** ❌ [INCORRECT] Snapshots help restore data after a failure, but the application is down until someone recovers it. - **C:** ✅ [CORRECT] Instances in multiple Availability Zones protect the application from the failure of a single location, and the load balancer sends requests to the healthy instances. - **D:** ❌ [INCORRECT] Edge locations cache content for CloudFront. They do not run the application instances. **Official AWS Documentation Reference:** > _"If one Availability Zone becomes unavailable or has no healthy targets, the load balancer can route traffic to the healthy targets in another Availability Zone."_ > — [AWS Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/how-elastic-load-balancing-works.html#availability-zones) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] A larger instance in the same Availability Zone fails together with that Availability Zone. - **B:** ❌ [INCORRECT] Snapshots help restore data after a failure, but the application is down until someone recovers it. - **C:** ✅ [CORRECT] Instances in multiple Availability Zones protect the application from the failure of a single location, and the load balancer sends requests to the healthy instances. - **D:** ❌ [INCORRECT] Edge locations cache content for CloudFront. They do not run the application instances. **Official AWS Documentation Reference:** > _"If one Availability Zone becomes unavailable or has no healthy targets, the load balancer can route traffic to the healthy targets in another Availability Zone."_ > — [AWS Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/how-elastic-load-balancing-works.html#availability-zones)
 
 *Sources: GustavoFreze_Questions*
 
@@ -14390,9 +14403,9 @@ Which AWS service enables users to create copies of resources across AWS Regions
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A, C)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] Data residency rules can require a Region in a specific country. Regions are isolated, and AWS does not replicate resources across them automatically. - **B:** ❌ [INCORRECT] The workload already runs in multiple Availability Zones, which protects it from the failure of one of them. - **C:** ✅ [CORRECT] Choosing a Region close to specific customers reduces the latency those users experience. - **D:** ❌ [INCORRECT] Traffic between Regions is a data transfer cost in itself, so a second Region does not lower it. - **E:** ❌ [INCORRECT] IAM is a global service, so the company can create users without deploying in another Region. **Official AWS Documentation Reference:** > _"When you launch an instance, select a Region that puts your instances close to specific customers, or that meets the legal or other requirements that you have."_ > — [AWS Documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions) > _"When you launch an instance, select a Region that puts your instances close to specific customers, or that meets the legal or other requirements that you have."_ > — [AWS Documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] Data residency rules can require a Region in a specific country. Regions are isolated, and AWS does not replicate resources across them automatically. - **B:** ❌ [INCORRECT] The workload already runs in multiple Availability Zones, which protects it from the failure of one of them. - **C:** ✅ [CORRECT] Choosing a Region close to specific customers reduces the latency those users experience. - **D:** ❌ [INCORRECT] Traffic between Regions is a data transfer cost in itself, so a second Region does not lower it. - **E:** ❌ [INCORRECT] IAM is a global service, so the company can create users without deploying in another Region. **Official AWS Documentation Reference:** > _"When you launch an instance, select a Region that puts your instances close to specific customers, or that meets the legal or other requirements that you have."_ > — [AWS Documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions) > _"When you launch an instance, select a Region that puts your instances close to specific customers, or that meets the legal or other requirements that you have."_ > — [AWS Documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions)
 
 *Sources: GustavoFreze_Questions*
 
@@ -14406,9 +14419,9 @@ Which AWS service enables users to create copies of resources across AWS Regions
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] CloudFront delivers content through a worldwide network of edge locations and routes each request to the one with the lowest latency. - **B:** ❌ [INCORRECT] Direct Connect links a private network to AWS. It does not bring content closer to internet users. - **C:** ❌ [INCORRECT] Transit Gateway connects VPCs and on-premises networks through a central hub, not end users through edge locations. - **D:** ❌ [INCORRECT] A load balancer distributes traffic across targets inside a Region, so distant users still reach that Region. **Official AWS Documentation Reference:** > _"When a user requests content that you're serving with CloudFront, the request is routed to the edge location that provides the lowest latency (time delay), so that content is delivered with the best possible performance."_ > — [AWS Documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html#Introduction) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] CloudFront delivers content through a worldwide network of edge locations and routes each request to the one with the lowest latency. - **B:** ❌ [INCORRECT] Direct Connect links a private network to AWS. It does not bring content closer to internet users. - **C:** ❌ [INCORRECT] Transit Gateway connects VPCs and on-premises networks through a central hub, not end users through edge locations. - **D:** ❌ [INCORRECT] A load balancer distributes traffic across targets inside a Region, so distant users still reach that Region. **Official AWS Documentation Reference:** > _"When a user requests content that you're serving with CloudFront, the request is routed to the edge location that provides the lowest latency (time delay), so that content is delivered with the best possible performance."_ > — [AWS Documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html#Introduction)
 
 *Sources: GustavoFreze_Questions*
 
@@ -14422,9 +14435,9 @@ Which AWS service enables users to create copies of resources across AWS Regions
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Edge locations serve cached content. They do not run the compute of an Availability Zone. - **B:** ❌ [INCORRECT] AWS does not move instances between Regions. Regions are isolated from each other. - **C:** ❌ [INCORRECT] Availability Zones do not copy all data automatically. Each service or design decides what is replicated. - **D:** ✅ [CORRECT] Availability Zones are physically separated and each has its own power, cooling and physical security, so they do not share a single point of failure. **Official AWS Documentation Reference:** > _"Each AZ has independent power, cooling, and physical security and is connected via redundant, ultra-low-latency networks."_ > — [AWS Documentation](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/#aws-infrastructure-offerings) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Edge locations serve cached content. They do not run the compute of an Availability Zone. - **B:** ❌ [INCORRECT] AWS does not move instances between Regions. Regions are isolated from each other. - **C:** ❌ [INCORRECT] Availability Zones do not copy all data automatically. Each service or design decides what is replicated. - **D:** ✅ [CORRECT] Availability Zones are physically separated and each has its own power, cooling and physical security, so they do not share a single point of failure. **Official AWS Documentation Reference:** > _"Each AZ has independent power, cooling, and physical security and is connected via redundant, ultra-low-latency networks."_ > — [AWS Documentation](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/#aws-infrastructure-offerings)
 
 *Sources: GustavoFreze_Questions*
 
@@ -14438,9 +14451,9 @@ Which AWS service enables users to create copies of resources across AWS Regions
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B, E)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Regions are isolated, and data stays in its Region unless the customer replicates or moves it. - **B:** ✅ [CORRECT] A Region is a physical location in the world with multiple Availability Zones. - **C:** ❌ [INCORRECT] An Availability Zone is part of exactly one Region. - **D:** ❌ [INCORRECT] Edge locations run a smaller set of services, such as CloudFront caching, not the full catalog. - **E:** ✅ [CORRECT] AWS has hundreds of edge locations (points of presence), many more than its Regions. **Official AWS Documentation Reference:** > _"An AWS Region is a physical location in the world where we have multiple Availability Zones."_ > — [AWS Documentation](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/global-infrastructure.html#global-infrastructure) > _"Reduce latency by delivering data through 750+ globally dispersed Points of Presence (PoPs) with automated network mapping and intelligent routing."_ > — [AWS Documentation](https://aws.amazon.com/cloudfront/) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Regions are isolated, and data stays in its Region unless the customer replicates or moves it. - **B:** ✅ [CORRECT] A Region is a physical location in the world with multiple Availability Zones. - **C:** ❌ [INCORRECT] An Availability Zone is part of exactly one Region. - **D:** ❌ [INCORRECT] Edge locations run a smaller set of services, such as CloudFront caching, not the full catalog. - **E:** ✅ [CORRECT] AWS has hundreds of edge locations (points of presence), many more than its Regions. **Official AWS Documentation Reference:** > _"An AWS Region is a physical location in the world where we have multiple Availability Zones."_ > — [AWS Documentation](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/global-infrastructure.html#global-infrastructure) > _"Reduce latency by delivering data through 750+ globally dispersed Points of Presence (PoPs) with automated network mapping and intelligent routing."_ > — [AWS Documentation](https://aws.amazon.com/cloudfront/)
 
 *Sources: GustavoFreze_Questions*
 
@@ -14454,9 +14467,9 @@ Which AWS service enables users to create copies of resources across AWS Regions
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: C, E)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Caching at edge locations is what Amazon CloudFront does. - **B:** ❌ [INCORRECT] Translating domain names into IP addresses is what Amazon Route 53 does. - **C:** ✅ [CORRECT] Elastic Load Balancing distributes incoming traffic across targets such as EC2 instances and containers in one or more Availability Zones. - **D:** ❌ [INCORRECT] Adding instances is the job of EC2 Auto Scaling, which then registers them with the load balancer. - **E:** ✅ [CORRECT] The load balancer monitors the health of its registered targets and routes traffic only to the healthy ones. **Official AWS Documentation Reference:** > _"Elastic Load Balancing automatically distributes your incoming traffic across multiple targets, such as EC2 instances, containers, and IP addresses, in one or more Availability Zones."_ > — [AWS Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html#what-is-load-balancing) > _"It monitors the health of its registered targets, and routes traffic only to the healthy targets."_ > — [AWS Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html#what-is-load-balancing) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Caching at edge locations is what Amazon CloudFront does. - **B:** ❌ [INCORRECT] Translating domain names into IP addresses is what Amazon Route 53 does. - **C:** ✅ [CORRECT] Elastic Load Balancing distributes incoming traffic across targets such as EC2 instances and containers in one or more Availability Zones. - **D:** ❌ [INCORRECT] Adding instances is the job of EC2 Auto Scaling, which then registers them with the load balancer. - **E:** ✅ [CORRECT] The load balancer monitors the health of its registered targets and routes traffic only to the healthy ones. **Official AWS Documentation Reference:** > _"Elastic Load Balancing automatically distributes your incoming traffic across multiple targets, such as EC2 instances, containers, and IP addresses, in one or more Availability Zones."_ > — [AWS Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html#what-is-load-balancing) > _"It monitors the health of its registered targets, and routes traffic only to the healthy targets."_ > — [AWS Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html#what-is-load-balancing)
 
 *Sources: GustavoFreze_Questions*
 
@@ -14470,9 +14483,9 @@ Which AWS service enables users to create copies of resources across AWS Regions
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] CloudFront delivers content from edge locations. It does not register domains. - **B:** ❌ [INCORRECT] A load balancer checks the health of its targets, but it does not register domains or answer DNS queries. - **C:** ❌ [INCORRECT] Global Accelerator routes traffic over the AWS global network through static IP addresses, not through DNS or domain registration. - **D:** ✅ [CORRECT] Route 53 is a DNS service with three main functions: domain registration, DNS routing and health checking. **Official AWS Documentation Reference:** > _"You can use Route 53 to perform three main functions in any combination: domain registration, DNS routing, and health checking."_ > — [AWS Documentation](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html#Welcome) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] CloudFront delivers content from edge locations. It does not register domains. - **B:** ❌ [INCORRECT] A load balancer checks the health of its targets, but it does not register domains or answer DNS queries. - **C:** ❌ [INCORRECT] Global Accelerator routes traffic over the AWS global network through static IP addresses, not through DNS or domain registration. - **D:** ✅ [CORRECT] Route 53 is a DNS service with three main functions: domain registration, DNS routing and health checking. **Official AWS Documentation Reference:** > _"You can use Route 53 to perform three main functions in any combination: domain registration, DNS routing, and health checking."_ > — [AWS Documentation](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html#Welcome)
 
 *Sources: GustavoFreze_Questions*
 
@@ -14486,9 +14499,9 @@ Which AWS service enables users to create copies of resources across AWS Regions
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: A)</b></summary>
 
-**Option Rationales:** - **A:** ✅ [CORRECT] AWS Backup centralizes and automates data protection across AWS services, with backup plans applied to resources such as EBS, RDS, DynamoDB and EFS. - **B:** ❌ [INCORRECT] S3 Lifecycle transitions and expires objects in S3 buckets. It does not back up other services. - **C:** ❌ [INCORRECT] Storage Gateway connects on-premises applications to cloud storage. It does not manage backup plans across services. - **D:** ❌ [INCORRECT] Elastic Disaster Recovery replicates servers so they can be recovered in AWS. It is not a central backup policy service. **Official AWS Documentation Reference:** > _"AWS Backup is a fully-managed service that makes it easy to centralize and automate data protection across AWS services, in the cloud, and on premises. Using this service, you can configure backup policies and monitor activity for your AWS resources in one place."_ > — [AWS Documentation](https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#whatisbackup) </details> ---
+**Option Rationales:** - **A:** ✅ [CORRECT] AWS Backup centralizes and automates data protection across AWS services, with backup plans applied to resources such as EBS, RDS, DynamoDB and EFS. - **B:** ❌ [INCORRECT] S3 Lifecycle transitions and expires objects in S3 buckets. It does not back up other services. - **C:** ❌ [INCORRECT] Storage Gateway connects on-premises applications to cloud storage. It does not manage backup plans across services. - **D:** ❌ [INCORRECT] Elastic Disaster Recovery replicates servers so they can be recovered in AWS. It is not a central backup policy service. **Official AWS Documentation Reference:** > _"AWS Backup is a fully-managed service that makes it easy to centralize and automate data protection across AWS services, in the cloud, and on premises. Using this service, you can configure backup policies and monitor activity for your AWS resources in one place."_ > — [AWS Documentation](https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#whatisbackup)
 
 *Sources: GustavoFreze_Questions*
 
@@ -14502,9 +14515,9 @@ Which AWS service enables users to create copies of resources across AWS Regions
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B, D)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Polly converts text into speech, the opposite direction. - **B:** ✅ [CORRECT] Transcribe is an automatic speech recognition service that converts speech to text. - **C:** ❌ [INCORRECT] Translate converts text from one language to another. It does not measure sentiment. - **D:** ✅ [CORRECT] Comprehend uses natural language processing to understand how positive or negative a text is. - **E:** ❌ [INCORRECT] Rekognition analyzes images and videos, not audio or text. **Official AWS Documentation Reference:** > _"Amazon Transcribe is an automatic speech recognition (ASR) service that makes it easy for customers to automatically convert speech to text."_ > — [AWS Documentation](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/machine-learning.html#amazon-transcribe) > _"The service identifies the language of the text; extracts key phrases, places, people, brands, or events; understands how positive or negative the text is; analyzes text using tokenization and parts of speech; and automatically organizes a collection of text files by topic."_ > — [AWS Documentation](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/machine-learning.html#amazon-comprehend) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Polly converts text into speech, the opposite direction. - **B:** ✅ [CORRECT] Transcribe is an automatic speech recognition service that converts speech to text. - **C:** ❌ [INCORRECT] Translate converts text from one language to another. It does not measure sentiment. - **D:** ✅ [CORRECT] Comprehend uses natural language processing to understand how positive or negative a text is. - **E:** ❌ [INCORRECT] Rekognition analyzes images and videos, not audio or text. **Official AWS Documentation Reference:** > _"Amazon Transcribe is an automatic speech recognition (ASR) service that makes it easy for customers to automatically convert speech to text."_ > — [AWS Documentation](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/machine-learning.html#amazon-transcribe) > _"The service identifies the language of the text; extracts key phrases, places, people, brands, or events; understands how positive or negative the text is; analyzes text using tokenization and parts of speech; and automatically organizes a collection of text files by topic."_ > — [AWS Documentation](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/machine-learning.html#amazon-comprehend)
 
 *Sources: GustavoFreze_Questions*
 
@@ -14520,7 +14533,7 @@ Which AWS service enables users to create copies of resources across AWS Regions
 <details>
 <summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] Rekognition offers ready-made image and video analysis, not a platform to train custom models. - **B:** ❌ [INCORRECT] Textract extracts text and data from documents with a pretrained service. - **C:** ✅ [CORRECT] SageMaker AI is a fully managed machine learning service for data scientists and developers to build, train and deploy models. - **D:** ❌ [INCORRECT] Amazon Q is a generative AI assistant, not a platform for training custom models. **Official AWS Documentation Reference:** > _"Amazon SageMaker AI is a fully managed machine learning (ML) service. With SageMaker AI, data scientists and developers can quickly and confidently build, train, and deploy ML models into a production-ready hosted environment."_ > — [AWS Documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/whatis.html#whatis) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] Rekognition offers ready-made image and video analysis, not a platform to train custom models. - **B:** ❌ [INCORRECT] Textract extracts text and data from documents with a pretrained service. - **C:** ✅ [CORRECT] SageMaker AI is a fully managed machine learning service for data scientists and developers to build, train and deploy models. - **D:** ❌ [INCORRECT] Amazon Q is a generative AI assistant, not a platform for training custom models. **Official AWS Documentation Reference:** > _"Amazon SageMaker AI is a fully managed machine learning (ML) service. With SageMaker AI, data scientists and developers can quickly and confidently build, train, and deploy ML models into a production-ready hosted environment."_ > — [AWS Documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/whatis.html#whatis)
 
 *Sources: GustavoFreze_Questions*
 
@@ -16318,9 +16331,9 @@ Multi-site active-active runs full production capacity at multiple sites simulta
 
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
-**Option Rationales:** - **A:** ❌ [INCORRECT] High availability keeps the application running when a component fails. It does not adjust capacity to traffic. - **B:** ✅ [CORRECT] Elasticity is the ability to scale resources up or down to grow and shrink capacity as demand changes, without buying for the peak. - **C:** ❌ [INCORRECT] Durability is about not losing stored data, not about adjusting capacity. - **D:** ❌ [INCORRECT] Fault tolerance is about continuing to operate when components fail, not about matching capacity to changes in traffic. **Official AWS Documentation Reference:** > _"Instead, you provision the amount of resources that you actually need. You can scale these resources up or down to instantly grow and shrink capacity as your business needs change."_ > — [AWS Documentation](https://aws.amazon.com/what-is-cloud-computing/#benefits-of-cloud-computing) </details> ---
+**Option Rationales:** - **A:** ❌ [INCORRECT] High availability keeps the application running when a component fails. It does not adjust capacity to traffic. - **B:** ✅ [CORRECT] Elasticity is the ability to scale resources up or down to grow and shrink capacity as demand changes, without buying for the peak. - **C:** ❌ [INCORRECT] Durability is about not losing stored data, not about adjusting capacity. - **D:** ❌ [INCORRECT] Fault tolerance is about continuing to operate when components fail, not about matching capacity to changes in traffic. **Official AWS Documentation Reference:** > _"Instead, you provision the amount of resources that you actually need. You can scale these resources up or down to instantly grow and shrink capacity as your business needs change."_ > — [AWS Documentation](https://aws.amazon.com/what-is-cloud-computing/#benefits-of-cloud-computing)
 
 *Sources: GustavoFreze_Questions*
 
