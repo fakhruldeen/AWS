@@ -107,7 +107,7 @@ What are dense vector embeddings, and what mathematical operation is commonly us
 
 ### Question 10 (Multiple Response)
 Which TWO statements correctly describe the ReAct (Reason + Act) prompting framework used by autonomous agents? (Select TWO.)
-- [ ] A) The agent executes a continuous loop: Thought $\rightarrow$ Action $\rightarrow$ Observation $\rightarrow$ Thought
+- [ ] A) The agent executes a continuous loop: Thought → Action → Observation → Thought
 - [ ] B) The agent updates the foundational weights of the underlying model during every interaction
 - [ ] C) The agent decomposes complex goals into intermediate reasoning steps and tool invocations
 - [ ] D) The agent disables temperature and forces greedy token decoding

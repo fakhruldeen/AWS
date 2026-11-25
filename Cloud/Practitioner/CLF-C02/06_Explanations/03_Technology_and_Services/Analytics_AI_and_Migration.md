@@ -45,7 +45,7 @@ flowchart TD
 ### 1.2 Columnar Storage Compression Mechanics (Apache Parquet / ORC)
 When querying a 1 Terabyte dataset of user transactions in [Amazon Athena](../../AWS_SERVICES_GLOSSARY.md#amazon-athena):
 * If the data is stored as uncompressed CSV, Athena must physically scan all **1,000 GB**, costing $\$5.00$ ($1\text{ TB} \times \$5/\text{TB}$).
-* If converted by **[AWS Glue](../../AWS_SERVICES_GLOSSARY.md#aws-glue)** into columnar **Apache Parquet**, queries requesting only `TotalAmount` scan **less than 20 GB** (a $98\%$ reduction in disk I/O and query cost).
+* If converted by **[AWS Glue](../../AWS_SERVICES_GLOSSARY.md#aws-glue)** into columnar **Apache Parquet**, queries requesting only `TotalAmount` scan **less than 20 GB** (a 98% reduction in disk I/O and query cost).
 
 ---
 
@@ -321,21 +321,21 @@ When reading a question scenario, search for these exact phrasing triggers:
 ### 2. The 3-Step Rapid Elimination Heuristic
 When evaluating an Analytics, AI, or Migration question:
 1. **Step 1: Check the AI Category (Generative AI vs. Custom ML vs. Pre-trained APIs):**
-   - Access **Foundation Models (LLMs) via an API** without managing infrastructure $\to$ **[Amazon Bedrock](../../AWS_SERVICES_GLOSSARY.md#amazon-bedrock)**.
-   - Data scientists writing custom algorithms, training weights, GPU clusters $\to$ **[Amazon SageMaker](../../AWS_SERVICES_GLOSSARY.md#amazon-sagemaker)**.
+   - Access **Foundation Models (LLMs) via an API** without managing infrastructure → **[Amazon Bedrock](../../AWS_SERVICES_GLOSSARY.md#amazon-bedrock)**.
+   - Data scientists writing custom algorithms, training weights, GPU clusters → **[Amazon SageMaker](../../AWS_SERVICES_GLOSSARY.md#amazon-sagemaker)**.
    - Ready-to-use human sense APIs:
-     - Eyes / Vision $\to$ **Rekognition**.
-     - Ears / Hearing (Speech $\to$ Text) $\to$ **Transcribe**.
-     - Mouth / Voice (Text $\to$ Speech) $\to$ **Polly**.
-     - Brain / Language comprehension $\to$ **Comprehend**.
-     - Reading tables & forms $\to$ **Textract**.
+     - Eyes / Vision → **Rekognition**.
+     - Ears / Hearing (Speech → Text) → **Transcribe**.
+     - Mouth / Voice (Text → Speech) → **Polly**.
+     - Brain / Language comprehension → **Comprehend**.
+     - Reading tables & forms → **Textract**.
 2. **Step 2: Analytics (Query vs. ETL vs. Big Data Engine):**
-   - Quick serverless SQL on raw CSV/JSON/Parquet in S3 $\to$ **[Amazon Athena](../../AWS_SERVICES_GLOSSARY.md#amazon-athena)**.
-   - Data pipeline extraction, cataloging, and transformation $\to$ **[AWS Glue](../../AWS_SERVICES_GLOSSARY.md#aws-glue)**.
-   - Petabyte-scale Spark/Hadoop clusters $\to$ **[Amazon EMR](../../AWS_SERVICES_GLOSSARY.md#amazon-emr)**.
+   - Quick serverless SQL on raw CSV/JSON/Parquet in S3 → **[Amazon Athena](../../AWS_SERVICES_GLOSSARY.md#amazon-athena)**.
+   - Data pipeline extraction, cataloging, and transformation → **[AWS Glue](../../AWS_SERVICES_GLOSSARY.md#aws-glue)**.
+   - Petabyte-scale Spark/Hadoop clusters → **[Amazon EMR](../../AWS_SERVICES_GLOSSARY.md#amazon-emr)**.
 3. **Step 3: Migration Target (Server OS vs. Database):**
-   - Migrating **whole virtual machines or physical servers** $\to$ **AWS MGN**.
-   - Migrating **relational/NoSQL databases with ongoing replication** $\to$ **[AWS DMS](../../AWS_SERVICES_GLOSSARY.md#aws-dms)**.
+   - Migrating **whole virtual machines or physical servers** → **AWS MGN**.
+   - Migrating **relational/NoSQL databases with ongoing replication** → **[AWS DMS](../../AWS_SERVICES_GLOSSARY.md#aws-dms)**.
 
 ### 3. High-Frequency Decoy Autopsy: Why AWS Tries to Trick You
 * **Decoy #1: "[Amazon Bedrock](../../AWS_SERVICES_GLOSSARY.md#amazon-bedrock)" vs. "[Amazon SageMaker](../../AWS_SERVICES_GLOSSARY.md#amazon-sagemaker)"**

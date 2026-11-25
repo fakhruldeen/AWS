@@ -92,7 +92,7 @@ $$\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{Q K^T}{\sqrt{d_k}}\right
 * **The Analogy (The Library Catalog):**  
   * Query ($Q$) = Your search term in the library catalog.  
   * Key ($K$) = The book titles on the index cards.  
-  * Softmax($QK^T$) = The relevance score ranking the best matching books.  
+  * Softmax(QKᵀ) = The relevance score ranking the best matching books.  
   * Value ($V$) = The actual text inside the matched books.
 
 ### 1.2 Multi-Head Attention (MHA)
@@ -128,12 +128,12 @@ flowchart LR
 
 ### 3.1 Subword Tokenization (BPE & WordPiece)
 Large Language Models do not read whole words or raw characters; they break text into **tokens** using algorithms like Byte-Pair Encoding (BPE).
-* Common words form single tokens: `apple` $\rightarrow$ `apple`
-* Rare or compound words split into subwords: `unbreakable` $\rightarrow$ `un` + `break` + `able`
+* Common words form single tokens: `apple` → `apple`
+* Rare or compound words split into subwords: `unbreakable` → `un` + `break` + `able`
 * **Rule of Thumb for Capacity Planning:**
-  * **1 token $\approx 0.75$ English words**
-  * **1,000 tokens $\approx 750$ English words**
-  * **100 tokens $\approx 75$ English words**
+  * **1 token ≈ 0.75 English words**
+  * **1,000 tokens ≈ 750 English words**
+  * **100 tokens ≈ 75 English words**
 
 ### 3.2 Context Windows & KV Caching
 The **Context Window** represents the maximum memory span an LLM can process in a single invocation, encompassing both the input prompt and the output completion.
@@ -160,8 +160,8 @@ An **Embedding** is a learned, dense numerical vector representing the semantic 
 ### Vector Distance / Similarity Metrics:
 1. **Cosine Similarity:** Measures the cosine of the angle between two vectors. Normalized between -1.0 and +1.0 (1.0 = identical direction). Independent of vector magnitude; the gold standard for text semantic search.
    $$\text{Cosine Similarity} = \frac{A \cdot B}{\|A\| \|B\|}$$
-2. **Dot Product:** Measures both angle and magnitude. Extremely fast to compute when vectors are pre-normalized to unit length ($\|A\| = 1$).
-3. **Euclidean Distance ($L_2$ Distance):** Measures the straight-line geometric distance between two vector coordinates in Euclidean space. Lower distance indicates higher similarity.
+2. **Dot Product:** Measures both angle and magnitude. Extremely fast to compute when vectors are pre-normalized to unit length (‖A‖ = 1).
+3. **Euclidean Distance (L2 Distance):** Measures the straight-line geometric distance between two vector coordinates in Euclidean space. Lower distance indicates higher similarity.
 
 ---
 
@@ -179,9 +179,9 @@ flowchart LR
 
 | Hyperparameter | Value Range | Technical Mechanism | Low Value Effect | High Value Effect | Exam Clue / Use Case |
 | :--- | :---: | :--- | :--- | :--- | :--- |
-| **Temperature** | $0.0 - 1.0$ | Scales the logits prior to Softmax: $\frac{z_i}{T}$. | **Deterministic & Focused:** Sharpens distribution; selects highest-probability tokens. | **Creative & Diverse:** Flattens distribution; allows lower-probability tokens to emerge. | $T=0.0$: SQL, Code, Math, Financial audits.<br>$T=0.8$: Creative writing, Marketing slogans. |
+| **Temperature** | $0.0 - 1.0$ | Scales the logits prior to Softmax: $\frac{z_i}{T}$. | **Deterministic & Focused:** Sharpens distribution; selects highest-probability tokens. | **Creative & Diverse:** Flattens distribution; allows lower-probability tokens to emerge. | T=0.0: SQL, Code, Math, Financial audits.<br>T=0.8: Creative writing, Marketing slogans. |
 | **Top-P (Nucleus Sampling)** | $0.0 - 1.0$ | Dynamically sorts tokens and truncates candidates once cumulative probability reaches $P$. | Narrow candidate pool; eliminates tail tokens. | Wide candidate pool; considers diverse synonyms. | Recommended default: $0.90$. Adapts dynamically to distribution steepness. |
-| **Top-K** | $1 - 500+$ | Statically restricts candidate sampling strictly to the top $K$ most probable tokens. | Extreme focus (e.g., $K=1$ is greedy decoding). | Considers up to $K$ alternatives. | Eliminates absurd low-probability hallucinations. |
+| **Top-K** | $1 - 500+$ | Statically restricts candidate sampling strictly to the top $K$ most probable tokens. | Extreme focus (e.g., K=1 is greedy decoding). | Considers up to $K$ alternatives. | Eliminates absurd low-probability hallucinations. |
 | **Stop Sequences** | Strings | Pre-defined character patterns that signal the inference engine to halt generation immediately. | N/A | N/A | Prevents conversational runaway (e.g., `User:`, `\n\n`, `Observation:`). |
 | **Max Tokens** | Integer | Hard upper bound on the maximum number of output tokens generated in the completion. | Truncated responses. | Full long-form responses. | Prevents unbounded compute and cost consumption. |
 
@@ -234,9 +234,9 @@ flowchart TD
 ```
 
 * **Core Decision Heuristic for the Exam:**
-  * **Dynamic / Frequently Changing Enterprise Data:** $\rightarrow$ **RAG (Bedrock Knowledge Bases)**. Zero retraining required.
-  * **Specialized Jargon, Consistent Tone, or Strict JSON Output Schema:** $\rightarrow$ **Fine-Tuning / PEFT (LoRA)**.
-  * **Vast Unlabeled Internal Company Archive:** $\rightarrow$ **Continued Pre-Training**.
+  * **Dynamic / Frequently Changing Enterprise Data:** → **RAG (Bedrock Knowledge Bases)**. Zero retraining required.
+  * **Specialized Jargon, Consistent Tone, or Strict JSON Output Schema:** → **Fine-Tuning / PEFT (LoRA)**.
+  * **Vast Unlabeled Internal Company Archive:** → **Continued Pre-Training**.
 
 ---
 
@@ -296,7 +296,7 @@ When reading a question scenario, search for these exact phrasing triggers:
 | *"Process all tokens in parallel; self-attention; scaled dot-product attention"* | **Transformer Architecture** | *Recurrent Neural Network (RNN)* |
 | *"Dense numerical vector capturing semantic meaning in high-dimensional space"* | **Vector Embeddings (Titan Embeddings)** | *One-Hot Encoding* |
 | *"Control creativity, randomness, and diversity of generated text"* | **Temperature** | *Max Tokens* |
-| *"Sample from the smallest pool of tokens whose cumulative probability $\ge P$"* | **Top-P (Nucleus Sampling)** | *Top-K* (Top-K is a fixed count of tokens!) |
+| *"Sample from the smallest pool of tokens whose cumulative probability ≥ P"* | **Top-P (Nucleus Sampling)** | *Top-K* (Top-K is a fixed count of tokens!) |
 | *"Restrict next-token sampling to a fixed count of top candidate tokens"* | **Top-K** | *Top-P* |
 | *"Halt text generation when a specific character sequence is encountered"* | **Stop Sequences** | *Temperature* |
 | *"Provide model with real-time, dynamic proprietary data without retraining"* | **Retrieval-Augmented Generation (RAG)** | *Fine-Tuning* (Fine-tuning modifies weights!) |
@@ -307,17 +307,17 @@ When reading a question scenario, search for these exact phrasing triggers:
 ### 2. The 3-Step Rapid Elimination Heuristic
 When evaluating a Generative AI question:
 1. **Step 1: Check the Adaptation Spectrum:**
-   - Need **dynamic, daily-changing factual knowledge with source citations**? $\to$ **RAG (Bedrock Knowledge Bases)**. Zero weight modification!
-   - Need **consistent tone, specialized format, or JSON output schema**? $\to$ **Fine-Tuning / PEFT (LoRA)**.
-   - Need to teach the model an entirely **new domain language from scratch**? $\to$ **Continued Pre-Training**.
+   - Need **dynamic, daily-changing factual knowledge with source citations**? → **RAG (Bedrock Knowledge Bases)**. Zero weight modification!
+   - Need **consistent tone, specialized format, or JSON output schema**? → **Fine-Tuning / PEFT (LoRA)**.
+   - Need to teach the model an entirely **new domain language from scratch**? → **Continued Pre-Training**.
 2. **Step 2: Check Sampling Parameters (Temperature vs. Top-P vs. Top-K):**
-   - High precision, math, code, SQL, zero hallucinations? $\to$ **Low Temperature ($T \le 0.2$)**.
-   - Brainstorming, poetry, marketing campaigns? $\to$ **High Temperature ($T \ge 0.7$)**.
-   - Cumulative probability threshold? $\to$ **Top-P**.
-   - Fixed integer token count? $\to$ **Top-K**.
+   - High precision, math, code, SQL, zero hallucinations? → **Low Temperature (T ≤ 0.2)**.
+   - Brainstorming, poetry, marketing campaigns? → **High Temperature (T ≥ 0.7)**.
+   - Cumulative probability threshold? → **Top-P**.
+   - Fixed integer token count? → **Top-K**.
 3. **Step 3: Differentiate Evaluation Metrics:**
-   - Text Summarization $\to$ **ROUGE** (*Recall-Oriented Understudy for Gisting Evaluation*).
-   - Machine Translation $\to$ **BLEU** (*Bilingual Evaluation Understudy*).
+   - Text Summarization → **ROUGE** (*Recall-Oriented Understudy for Gisting Evaluation*).
+   - Machine Translation → **BLEU** (*Bilingual Evaluation Understudy*).
 
 ### 3. High-Frequency Decoy Autopsy: Why AWS Tries to Trick You
 * **Decoy #1: "RAG" vs. "Fine-Tuning"**

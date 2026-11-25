@@ -243,14 +243,14 @@ flowchart TD
 ```
 
 1. **Step 1: Check Input Modality:**
-   - Scanned image/PDF with tables? $\to$ **Amazon Textract**.
-   - Text strings needing sentiment/entity analysis? $\to$ **Amazon Comprehend**.
-   - Spoken audio files? $\to$ **Amazon Transcribe**.
+   - Scanned image/PDF with tables? → **Amazon Textract**.
+   - Text strings needing sentiment/entity analysis? → **Amazon Comprehend**.
+   - Spoken audio files? → **Amazon Transcribe**.
 2. **Step 2: Check Processing Goal:**
-   - Extraction of existing facts? $\to$ **Textract**.
-   - Synthesis of new summaries or answers? $\to$ **Bedrock**.
+   - Extraction of existing facts? → **Textract**.
+   - Synthesis of new summaries or answers? → **Bedrock**.
 3. **Step 3: Human Oversight Trigger:**
-   - Mentions low-confidence predictions or compliance audit? $\to$ **Amazon A2I**.
+   - Mentions low-confidence predictions or compliance audit? → **Amazon A2I**.
 
 ---
 

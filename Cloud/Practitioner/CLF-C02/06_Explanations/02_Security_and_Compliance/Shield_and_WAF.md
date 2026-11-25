@@ -40,8 +40,8 @@ flowchart TD
 ### 1.1 Layer 3 and Layer 4 Network & Transport Attacks
 * **Volumetric Network Floods (Layer 3):** Attackers saturate incoming network bandwidth using raw data volume (e.g., ICMP Echo floods or fragmented IP packets) until the target router or link collapses.
 * **State-Exhaustion Attacks (Layer 4):**
-  - **TCP SYN Floods:** Exploits the standard TCP three-way handshake ($SYN \to SYN\text{-}ACK \to ACK$). The attacker transmits millions of $SYN$ packets from spoofed IP addresses but never replies with $ACK$. The server allocates memory for half-open connection tables until RAM is exhausted and new legitimate connections are rejected.
-  - **UDP Reflection & Amplification:** Attackers send tiny requests with spoofed victim IP addresses to publicly exposed DNS or NTP servers, causing the external servers to reply with massive response payloads ($50\times$ to $100\times$ larger) directed at the victim.
+  - **TCP SYN Floods:** Exploits the standard TCP three-way handshake (SYN → SYN-ACK → ACK). The attacker transmits millions of $SYN$ packets from spoofed IP addresses but never replies with $ACK$. The server allocates memory for half-open connection tables until RAM is exhausted and new legitimate connections are rejected.
+  - **UDP Reflection & Amplification:** Attackers send tiny requests with spoofed victim IP addresses to publicly exposed DNS or NTP servers, causing the external servers to reply with massive response payloads (50× to 100× larger) directed at the victim.
 * **AWS Defense:** **[AWS Shield](../../AWS_SERVICES_GLOSSARY.md#aws-shield)** mitigates these attacks at the global edge using Anycast network routing and automated packet scrubbing centers without degrading customer server performance.
 
 ### 1.2 Layer 7 Application Exploits
@@ -302,13 +302,13 @@ When reading a question scenario, search for these exact phrasing triggers:
 ### 2. The 3-Step Rapid Elimination Heuristic
 When evaluating a Perimeter Security or DDoS question:
 1. **Step 1: Check the OSI Attack Layer:**
-   - Mentions **SQL injection, cross-site scripting, HTTP header inspection, rate limiting web requests, bots** $\to$ **[AWS WAF](../../AWS_SERVICES_GLOSSARY.md#aws-waf)** (Layer 7).
-   - Mentions **SYN floods, UDP reflection, ICMP packets, bandwidth saturation, DDoS** $\to$ **[AWS Shield](../../AWS_SERVICES_GLOSSARY.md#aws-shield)** (Layers 3 & 4).
+   - Mentions **SQL injection, cross-site scripting, HTTP header inspection, rate limiting web requests, bots** → **[AWS WAF](../../AWS_SERVICES_GLOSSARY.md#aws-waf)** (Layer 7).
+   - Mentions **SYN floods, UDP reflection, ICMP packets, bandwidth saturation, DDoS** → **[AWS Shield](../../AWS_SERVICES_GLOSSARY.md#aws-shield)** (Layers 3 & 4).
 2. **Step 2: Check Free vs. Enterprise DDoS Tier:**
-   - Is it the **default protection active for all AWS customers at \$0 cost**? $\to$ **[AWS Shield](../../AWS_SERVICES_GLOSSARY.md#aws-shield) Standard**.
+   - Is it the **default protection active for all AWS customers at \$0 cost**? → **[AWS Shield](../../AWS_SERVICES_GLOSSARY.md#aws-shield) Standard**.
    - Does it mention **$3,000/month, 24/7 human response team (SRT), or DDoS billing spike reimbursement**? $\to$ **[AWS Shield](../../AWS_SERVICES_GLOSSARY.md#aws-shield) Advanced**.
 3. **Step 3: Multi-Account Management Check:**
-   - If the goal is **orchestrating rules across multiple accounts in [AWS Organizations](../../AWS_SERVICES_GLOSSARY.md#aws-organizations)** $\to$ **[AWS Firewall Manager](../../AWS_SERVICES_GLOSSARY.md#aws-firewall-manager)**.
+   - If the goal is **orchestrating rules across multiple accounts in [AWS Organizations](../../AWS_SERVICES_GLOSSARY.md#aws-organizations)** → **[AWS Firewall Manager](../../AWS_SERVICES_GLOSSARY.md#aws-firewall-manager)**.
    - Note: [AWS Firewall Manager](../../AWS_SERVICES_GLOSSARY.md#aws-firewall-manager) **requires** [AWS Organizations](../../AWS_SERVICES_GLOSSARY.md#aws-organizations) and [AWS Config](../../AWS_SERVICES_GLOSSARY.md#aws-config) to be enabled!
 
 ### 3. High-Frequency Decoy Autopsy: Why AWS Tries to Trick You

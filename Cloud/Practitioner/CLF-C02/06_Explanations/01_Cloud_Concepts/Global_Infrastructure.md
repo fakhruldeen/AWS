@@ -56,15 +56,15 @@ graph TD
 
 ### 1.1 The Beginner's Guide to Network Latency & Speed of Light
 * **What is Latency in Plain English?** Latency is simply the travel time (lag) it takes for a message to leave your laptop, travel across optical glass cables to a server, and return with an answer.
-* **Why Can't One Supercomputer in California Serve the Whole World?** Even though light travels fast ($300{,}000\text{ km/s}$ in a vacuum), inside standard glass fiber optic cables, light slows down to roughly $204{,}000\text{ km/s}$.
+* **Why Can't One Supercomputer in California Serve the Whole World?** Even though light travels fast (300{,}000 km/s in a vacuum), inside standard glass fiber optic cables, light slows down to roughly 204{,}000 km/s.
   - Traveling from London to Tokyo and back takes at least **150 milliseconds** of raw light transit time.
   - While 150 ms sounds fast to a human, to a database running 50,000 transactions per second, that lag causes applications to freeze and fail.
-* **The Engineering Consequence:** You cannot keep databases synchronously in sync across continents. This is why **Availability Zones** are clustered close together (within tens of kilometers) to guarantee $< 1\text{–}2\text{ ms}$ latency, while **Regions** are placed around the globe to serve local populations with low latency.
+* **The Engineering Consequence:** You cannot keep databases synchronously in sync across continents. This is why **Availability Zones** are clustered close together (within tens of kilometers) to guarantee < 1–2 ms latency, while **Regions** are placed around the globe to serve local populations with low latency.
 
 ### 1.2 What is a "Fault Domain"?
 In computer science, a **fault domain** is a group of hardware components that share a single point of failure:
 * **The Danger of Shared Infrastructure:** If two computer rooms are connected to the exact same electrical power substation on the street, a lightning strike or transformer explosion knocks out both rooms at once.
-* **AWS's Fault Domain Isolation:** Every AWS Availability Zone is engineered on completely independent municipal power feeds, separate flood plain maps, dedicated backup diesel turbine fuel lines, and isolated cooling systems. If a flash flood destroys AZ-A, AZ-B and AZ-C remain $100\%$ operational.
+* **AWS's Fault Domain Isolation:** Every AWS Availability Zone is engineered on completely independent municipal power feeds, separate flood plain maps, dedicated backup diesel turbine fuel lines, and isolated cooling systems. If a flash flood destroys AZ-A, AZ-B and AZ-C remain 100% operational.
 
 ---
 
@@ -109,7 +109,7 @@ An **AWS Region** is a physical geographical area in the world where AWS cluster
 ### 3.2 Availability Zones (AZs)
 An **Availability Zone (AZ)** consists of one or more discrete physical data centers, each equipped with independent redundant power (utility feeds and 48-hour diesel reserves), networking, and cooling, housed in physically separate buildings.
 * **Separation Distance:** AZs within a single Region are separated by meaningful physical distance (typically tens of kilometers) to guarantee fault isolation from floods, earthquakes, and power substation blackouts.
-* **Low-Latency Interconnect:** All AZs in a Region are interconnected through redundant, private, high-capacity dark-fiber optical links delivering single-digit millisecond latency ($< 1\text{–}2\text{ ms}$). This enables real-time synchronous data replication across multi-AZ databases (e.g., [Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds) Multi-AZ).
+* **Low-Latency Interconnect:** All AZs in a Region are interconnected through redundant, private, high-capacity dark-fiber optical links delivering single-digit millisecond latency (< 1–2 ms). This enables real-time synchronous data replication across multi-AZ databases (e.g., [Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds) Multi-AZ).
 * **AZ Randomization / Mapping:** To prevent all customers from launching resources in `az1` and creating unbalanced load, AWS maps physical AZ identifiers randomly to account-specific AZ letters. Account A's `us-east-1a` may correspond to Account B's `us-east-1b`.
 
 ### 3.3 Edge Locations and Points of Presence (PoPs)
@@ -139,10 +139,10 @@ graph TD
 
 1. **[AWS Local Zones](../../AWS_SERVICES_GLOSSARY.md#aws-local-zones):**
    * Places AWS compute, storage, and databases in major metropolitan, industrial, and digital centers where no full AWS Region exists (e.g., Los Angeles, Boston, Hamburg, Taipei).
-   * Delivers single-digit millisecond latency ($< 10\text{ ms}$) for local end users executing video rendering, real-time CAD simulations, high-frequency trading, and local healthcare imaging.
+   * Delivers single-digit millisecond latency (< 10 ms) for local end users executing video rendering, real-time CAD simulations, high-frequency trading, and local healthcare imaging.
 2. **[AWS Wavelength](../../AWS_SERVICES_GLOSSARY.md#aws-wavelength):**
    * Embeds AWS compute and storage hardware directly inside telecommunications providers' 5G mobile network data centers (e.g., Verizon, Vodafone, KDDI, SK Telecom).
-   * Application traffic from 5G mobile devices reaches the Wavelength server directly from the cell tower without leaving the carrier's private network, eliminating internet routing hops and delivering $< 10\text{ ms}$ latency for autonomous vehicles, mobile AR/VR gaming, and smart factory robotics.
+   * Application traffic from 5G mobile devices reaches the Wavelength server directly from the cell tower without leaving the carrier's private network, eliminating internet routing hops and delivering < 10 ms latency for autonomous vehicles, mobile AR/VR gaming, and smart factory robotics.
 3. **[AWS Outposts](../../AWS_SERVICES_GLOSSARY.md#aws-outposts):**
    * Physical, fully assembled 42U server racks built and shipped by AWS, installed directly inside a customer's on-premises datacenter or colocation facility.
    * Customers run EC2, EBS, and container workloads on physical local hardware with local microsecond LAN access to existing on-prem mainframes and manufacturing plant-floor systems.
@@ -154,10 +154,10 @@ graph TD
 
 | Infrastructure Dimension | Scope / Footprint | Latency Target | Typical Workloads | Failure Blast Radius | Management Ownership |
 |---|---|---|---|---|---|
-| **AWS Region** | Autonomous geographic cluster ($\ge 3$ AZs) | 20–100 ms global | Full AWS catalog, primary database engines, enterprise storage | Confined to that Region; zero cross-region impact | AWS manages physical; Customer configures resources |
-| **Availability Zone (AZ)** | 1+ isolated datacenters within a Region | $< 1\text{–}2\text{ ms}$ intra-AZ | EC2, VPC subnets, RDS Multi-AZ, EFS, EKS clusters | Isolated to single AZ; survive via Multi-AZ | AWS manages physical facilities and dark fiber |
-| **Edge Location (PoP)** | 600+ metro points of presence | $< 10\text{ ms}$ to end users | CloudFront caching, Route 53 DNS, WAF/Shield perimeter security | Single PoP failure routes traffic to nearest alternate PoP | 100% managed by AWS |
-| **AWS Local Zone** | Urban metro extension of a parent Region | Single-digit ms ($< 10\text{ ms}$) | Video editing, local healthcare apps, live media production | Localized to metro zone; connected to parent Region | Fully managed by AWS hardware engineering |
+| **AWS Region** | Autonomous geographic cluster (≥ 3 AZs) | 20–100 ms global | Full AWS catalog, primary database engines, enterprise storage | Confined to that Region; zero cross-region impact | AWS manages physical; Customer configures resources |
+| **Availability Zone (AZ)** | 1+ isolated datacenters within a Region | < 1–2 ms intra-AZ | EC2, VPC subnets, RDS Multi-AZ, EFS, EKS clusters | Isolated to single AZ; survive via Multi-AZ | AWS manages physical facilities and dark fiber |
+| **Edge Location (PoP)** | 600+ metro points of presence | < 10 ms to end users | CloudFront caching, Route 53 DNS, WAF/Shield perimeter security | Single PoP failure routes traffic to nearest alternate PoP | 100% managed by AWS |
+| **AWS Local Zone** | Urban metro extension of a parent Region | Single-digit ms (< 10 ms) | Video editing, local healthcare apps, live media production | Localized to metro zone; connected to parent Region | Fully managed by AWS hardware engineering |
 | **[AWS Wavelength](../../AWS_SERVICES_GLOSSARY.md#aws-wavelength)** | Embedded in telco 5G mobile edge | Single-digit ms to 5G devices | Connected autonomous vehicles (V2X), mobile gaming, drone control | Carrier network dependent; paired with parent Region | AWS manages compute; Carrier manages 5G network |
 | **[AWS Outposts](../../AWS_SERVICES_GLOSSARY.md#aws-outposts)** | Customer on-premise computer room | Sub-millisecond LAN speed | Manufacturing execution systems, strict data sovereignty | Customer facility power/cooling failure | AWS owns & patches hardware; Customer provides power/space |
 
@@ -280,7 +280,7 @@ When reading a question scenario, search for these exact phrasing triggers:
 | If You See This Trigger Phrase in the Question Stem... | The Correct Answer Is Almost Always... | Trap Distractor to Immediately Discard |
 |---|---|---|
 | *"One or more discrete data centers with redundant power, networking, and flood isolation"* | **Availability Zone (AZ)** | *Data Center* (An AZ can contain multiple data centers, never just one!). |
-| *"Geographical location in the world with $\ge 3$ isolated fault domains"* | **AWS Region** | *Edge Location* (Edge locations do not contain AZs). |
+| *"Geographical location in the world with ≥ 3 isolated fault domains"* | **AWS Region** | *Edge Location* (Edge locations do not contain AZs). |
 | *"Most critical factor when selecting an AWS Region for healthcare or government"* | **Compliance & Data Sovereignty** | *Cost / Pricing* or *Proximity / Latency* (Legal mandates always overrule price!). |
 | *"Cache web content, videos, APIs closer to global users with low latency"* | **Edge Location / CloudFront PoP** | *Availability Zone* (You cannot launch web servers in Edge Locations). |
 | *"Single-digit millisecond latency in large metropolitan cities with NO AWS Region"* | **[AWS Local Zones](../../AWS_SERVICES_GLOSSARY.md#aws-local-zones)** | *[AWS Outposts](../../AWS_SERVICES_GLOSSARY.md#aws-outposts)* (Local Zones are owned by AWS in cities; Outposts is on-premises). |
@@ -291,15 +291,15 @@ When reading a question scenario, search for these exact phrasing triggers:
 ### 2. The 3-Step Rapid Elimination Heuristic
 When faced with an infrastructure question:
 1. **Step 1: Check the Physical Boundary:**
-   - Is it on **customer premises**? $\to$ Instantly select **[AWS Outposts](../../AWS_SERVICES_GLOSSARY.md#aws-outposts)**.
-   - Is it inside a **telecom 5G network**? $\to$ Instantly select **[AWS Wavelength](../../AWS_SERVICES_GLOSSARY.md#aws-wavelength)**.
-   - Is it in a **metropolitan city without a full Region**? $\to$ Instantly select **[AWS Local Zones](../../AWS_SERVICES_GLOSSARY.md#aws-local-zones)**.
-   - Is it for **global edge caching and DNS**? $\to$ Instantly select **Edge Location / CloudFront**.
+   - Is it on **customer premises**? → Instantly select **[AWS Outposts](../../AWS_SERVICES_GLOSSARY.md#aws-outposts)**.
+   - Is it inside a **telecom 5G network**? → Instantly select **[AWS Wavelength](../../AWS_SERVICES_GLOSSARY.md#aws-wavelength)**.
+   - Is it in a **metropolitan city without a full Region**? → Instantly select **[AWS Local Zones](../../AWS_SERVICES_GLOSSARY.md#aws-local-zones)**.
+   - Is it for **global edge caching and DNS**? → Instantly select **Edge Location / CloudFront**.
 2. **Step 2: Check Compute Capabilities:**
    - If the scenario asks where you can **launch an EC2 instance or RDS database**, **ELIMINATE Edge Locations immediately**. Compute runs in AZs, Local Zones, Wavelength, or Outposts—never in Edge PoPs!
 3. **Step 3: Check Failure Scope:**
-   - Survives localized power grid failure or flooding? $\to$ **Multi-AZ**.
-   - Survives catastrophic regional destruction or war? $\to$ **Multi-Region**.
+   - Survives localized power grid failure or flooding? → **Multi-AZ**.
+   - Survives catastrophic regional destruction or war? → **Multi-Region**.
 
 ### 3. High-Frequency Decoy Autopsy: Why AWS Tries to Trick You
 * **Decoy #1: "Availability Zone" vs. "Single Data Center"**

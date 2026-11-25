@@ -63,9 +63,9 @@
 
 10. **Which metric is the harmonic mean of Precision and Recall, providing a balanced evaluation on imbalanced datasets?**
     - A) AUC-ROC
-    - B) $F_1$-Score
+    - B) F1-Score
     - C) Mean Squared Error (MSE)
-    - D) R-squared ($R^2$)
+    - D) R-squared (R²)
 
 ---
 
@@ -82,4 +82,4 @@
 | **7** | **B** | Unsupervised Learning | Unsupervised clustering groups unlabelled data instances based on geometric proximity without ground truth targets. |
 | **8** | **B** | SageMaker Data Wrangler | Data Wrangler provides a visual point-and-click interface for cleaning, transforming, and analyzing tabular/image data. |
 | **9** | **B** | Type I Error | A False Positive occurs when the model predicts positive, but the actual true ground state is negative (e.g., flagging valid email as spam). |
-| **10** | **B** | $F_1$-Score | The $F_1$-score balances Precision and Recall: $2 \times (\text{Precision} \times \text{Recall}) / (\text{Precision} + \text{Recall})$. |
+| **10** | **B** | F1-Score | The F1-score balances Precision and Recall: $2 \times (\text{Precision} \times \text{Recall}) / (\text{Precision} + \text{Recall})$. |

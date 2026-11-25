@@ -84,16 +84,16 @@ Choosing the correct inference option based on traffic patterns, latency, and pa
 
 | Inference Option | Ideal Use Case | Traffic Pattern | Scaling Behavior | Max Payload | Processing Time | Cost Structure |
 |---|---|---|---|---|---|---|
-| **Real-Time Inference** | Interactive web/mobile apps requiring immediate sub-second responses. | Sustained, predictable, continuous traffic. | Auto-scales instances based on CloudWatch metrics (CPU/GPU, invocation count). | 6 MB | $\le 60\text{ seconds}$ | Billed per instance-hour running 24/7. |
-| **Serverless Inference** | Microservices or APIs with sporadic, intermittent, or unpredictable traffic. | Spiky traffic with prolonged idle periods. | Automatically scales down to **zero** when idle; scales up on demand. Note: May incur **cold starts**. | 4 MB | $\le 60\text{ seconds}$ | Billed per compute second and data processed. |
+| **Real-Time Inference** | Interactive web/mobile apps requiring immediate sub-second responses. | Sustained, predictable, continuous traffic. | Auto-scales instances based on CloudWatch metrics (CPU/GPU, invocation count). | 6 MB | ≤ 60 seconds | Billed per instance-hour running 24/7. |
+| **Serverless Inference** | Microservices or APIs with sporadic, intermittent, or unpredictable traffic. | Spiky traffic with prolonged idle periods. | Automatically scales down to **zero** when idle; scales up on demand. Note: May incur **cold starts**. | 4 MB | ≤ 60 seconds | Billed per compute second and data processed. |
 | **Batch Transform** | Scoring offline datasets; generating weekly risk ratings or daily recommendations. | Bulk offline batches; no real-time interactive user waiting. | Provisions compute instances, processes the entire S3 dataset, writes output to S3, and shuts down compute. | Gigabytes (splits files) | Hours to Days | Billed only for the duration of the transform job. |
 | **Asynchronous Inference** | Workloads with large payloads (high-res images, video, audio) or long-running inference tasks (up to 1 hour). | Heavy processing requirements; queuing requests. | Incoming requests placed in an Amazon SQS queue. Scales down to zero when queue is empty. | 1 GB | Up to 15 minutes (or 1 hour) | Billed per instance-hour active; zero when idle. |
 
 ### Decision Guide:
-* *"Sub-second response for customer credit card validation"* $\rightarrow$ **Real-Time Inference**.
-* *"Sporadic endpoint used during business hours with overnight silence"* $\rightarrow$ **Serverless Inference**.
-* *"Score 50 million customer records every Sunday night"* $\rightarrow$ **Batch Transform**.
-* *"Process a 500 MB video file for deepfake analysis that takes 8 minutes"* $\rightarrow$ **Asynchronous Inference**.
+* *"Sub-second response for customer credit card validation"* → **Real-Time Inference**.
+* *"Sporadic endpoint used during business hours with overnight silence"* → **Serverless Inference**.
+* *"Score 50 million customer records every Sunday night"* → **Batch Transform**.
+* *"Process a 500 MB video file for deepfake analysis that takes 8 minutes"* → **Asynchronous Inference**.
 
 ---
 

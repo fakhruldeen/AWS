@@ -39,7 +39,7 @@
 
 6. **What is the approximate rule of thumb for token estimation in English text for typical Large Language Models?**
    - A) 1 token = 10 words
-   - B) 1 token $\approx$ 0.75 words (or 1,000 tokens $\approx$ 750 words)
+   - B) 1 token ≈ 0.75 words (or 1,000 tokens ≈ 750 words)
    - C) 1 token = 1 sentence
    - D) 1 token = 1 character
 
@@ -78,7 +78,7 @@
 | **3** | **B** | Temperature 0.0 | Lowering temperature concentrates probability around the argmax token, producing greedy, deterministic responses. |
 | **4** | **B** | Top-P (Nucleus Sampling) | Top-P sums probabilities dynamically until $P$ is reached, cutting off the long tail of low-probability words. |
 | **5** | **B** | Model Context Protocol (MCP) | MCP is the open standardized protocol for models to discover and execute tools and read resources over JSON-RPC. |
-| **6** | **B** | Token Sizing | In English, 1,000 tokens represent approximately 750 words (or 1 token $\approx 0.75$ words). |
+| **6** | **B** | Token Sizing | In English, 1,000 tokens represent approximately 750 words (or 1 token ≈ 0.75 words). |
 | **7** | **B** | Titan Image Generator | Titan Image Generator produces high-resolution images and embeds tamper-resistant invisible watermarks. |
 | **8** | **B** | Positional Encodings | Self-attention has no innate awareness of sequential order; positional encodings inject word sequence geometry into embeddings. |
 | **9** | **B** | Hallucination | Hallucination occurs when an LLM generates fabricated or non-factual information with high linguistic confidence. |

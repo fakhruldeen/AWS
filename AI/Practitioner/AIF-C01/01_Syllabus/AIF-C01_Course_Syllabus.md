@@ -53,9 +53,9 @@ flowchart LR
 * **Core Topics:**
   * The Russian Doll Hierarchy: Artificial Intelligence vs. Machine Learning vs. Deep Learning vs. Generative AI.
   * Learning Paradigms: Supervised (Classification, Regression), Unsupervised (Clustering, Dimensionality Reduction), Reinforcement Learning.
-  * The 6-Stage Machine Learning Lifecycle: Ingestion $\rightarrow$ Feature Engineering $\rightarrow$ Training $\rightarrow$ Hyperparameter Tuning $\rightarrow$ Deployment $\rightarrow$ MLOps Monitoring.
-  * Overfitting vs Underfitting, Bias-Variance Tradeoff, Regularization ($L_1/L_2$), Validation Splitting.
-  * Classical Evaluation Metrics: Confusion Matrix, Precision, Recall, $F_1$-Score, Specificity, ROC-AUC, RMSE, MAE, $R^2$.
+  * The 6-Stage Machine Learning Lifecycle: Ingestion → Feature Engineering → Training → Hyperparameter Tuning → Deployment → MLOps Monitoring.
+  * Overfitting vs Underfitting, Bias-Variance Tradeoff, Regularization (L1/L2), Validation Splitting.
+  * Classical Evaluation Metrics: Confusion Matrix, Precision, Recall, F1-Score, Specificity, ROC-AUC, RMSE, MAE, R².
   * AWS Pre-Trained AI Services: Rekognition, Polly, Transcribe, Translate, Comprehend, Textract, Lex, Personalize, Forecast.
 * **Target Hands-On Labs:**
   * `labs/Lab_06_No_Code_Predictive_ML_with_Amazon_SageMaker_Canvas.md`
@@ -72,7 +72,7 @@ flowchart LR
   * Model Architectures: Encoder-Only (BERT), Decoder-Only (GPT, Llama, Claude), Encoder-Decoder (T5, Titan Text Express).
   * Tokens, Tokenization (subword units, BPE), Context Windows, and KV Caching.
   * Foundation Model Families: Amazon Titan, Amazon Nova (Micro, Lite, Pro, Reel, Canvas), Anthropic Claude, Meta Llama, Mistral AI, Cohere, AI21 Labs, Stability AI.
-  * Decoding Hyperparameters: Temperature ($0.0 \le T \le 1.0$), Top-P (Nucleus Sampling), Top-K, Max Tokens, Stop Sequences.
+  * Decoding Hyperparameters: Temperature (0.0 ≤ T ≤ 1.0), Top-P (Nucleus Sampling), Top-K, Max Tokens, Stop Sequences.
   * Amazon Bedrock Serverless Architecture: Unified API (`InvokeModel`, `Converse`), zero-retention data privacy guarantee, KMS encryption.
   * Pricing Models: On-Demand token consumption vs. Provisioned Throughput (Model Units - MUs).
 * **Target Hands-On Labs:**
@@ -88,9 +88,9 @@ flowchart LR
 * **Core Topics:**
   * Prompt Engineering Anatomy: Role/Persona, Task Directives, Contextual Grounding, Delimiters, Schema Constraints.
   * Prompting Techniques: Zero-Shot, Few-Shot (In-Context Learning), Chain-of-Thought (CoT), Step-Back, ReAct.
-  * Retrieval-Augmented Generation (RAG): S3 Ingestion $\rightarrow$ Chunking (Fixed, Hierarchical, Semantic) $\rightarrow$ Titan Embeddings $\rightarrow$ Vector DB.
+  * Retrieval-Augmented Generation (RAG): S3 Ingestion → Chunking (Fixed, Hierarchical, Semantic) → Titan Embeddings → Vector DB.
   * Vector Databases: Amazon OpenSearch Serverless Vector Search, Aurora PostgreSQL (`pgvector`), Neptune Analytics.
-  * Distance Metrics: Cosine Similarity, Dot Product, Euclidean ($L_2$) Distance, Hybrid Search (Vector + BM25).
+  * Distance Metrics: Cosine Similarity, Dot Product, Euclidean (L2) Distance, Hybrid Search (Vector + BM25).
   * Autonomous Agents for Bedrock: ReAct reasoning engine, OpenAPI 3.0 schemas, AWS Lambda Action Groups, Knowledge Base sync.
   * Model Customization Spectrum: Prompting vs RAG vs Fine-Tuning (Full vs PEFT/LoRA) vs Continued Pre-Training.
   * GenAI Evaluation Metrics: ROUGE (1, 2, L), BLEU, Perplexity, BERTScore, LLM-as-a-Judge.
@@ -162,9 +162,9 @@ Before taking the official AWS Certified AI Practitioner (AIF-C01) exam:
 - [ ] Read all 5 Domain Explanations in `06_Explanations/`.
 - [ ] Review the Marp slide decks and complete all embedded review quizzes in `04_Slides/`.
 - [ ] Complete the 12 hands-on labs and follow `labs/LAB_SAFETY_AND_VERIFICATION_GUIDE.md` for teardown.
-- [ ] Complete all 5 Module Diagnostic Knowledge Checks (10 questions each) in `10_Knowledge_Checks/` with $\ge 80\%$.
+- [ ] Complete all 5 Module Diagnostic Knowledge Checks (10 questions each) in `10_Knowledge_Checks/` with ≥ 80%.
 - [ ] Complete all 5 Domain Revision Question sets (15 questions each) in `11_Practice_Exams/`.
-- [ ] Complete the 65-question timed mock exam `revision_questions/AIF_C01_Full_Length_Mock_Exam.md` scoring $\ge 700$ scaled score ($\ge 46/65$).
+- [ ] Complete the 65-question timed mock exam `revision_questions/AIF_C01_Full_Length_Mock_Exam.md` scoring ≥ 700 scaled score (≥ 46/65).
 - [ ] Review the high-yield distinction tables in `notes/06_AIF-C01_Exam_CheatSheet.md`.
 - [ ] Review all 10 pairwise comparison guides in `notes/distinctions/` (Prompting vs. RAG vs. Fine-Tuning, ROUGE vs. BLEU, 4 SageMaker Deployment Modes, Decoding Parameters, etc.).
 - [ ] Drill with the **Master Unique Revision Question Banks** (1,814 vetted, deduplicated questions across all 5 domains in the Vault at `Questions_Bank/Unique_Revision_Banks/AI_Practitioner_AIF-C01/`).

@@ -294,12 +294,12 @@ flowchart TD
 ```
 
 1. **Step 1: Protocol & Traffic Type Triage:**
-   - Web assets, images, video streaming, API caching? $\to$ **Amazon CloudFront**.
-   - Gaming, VoIP, TCP/UDP requiring 2 fixed static Anycast IPs? $\to$ **AWS Global Accelerator**.
+   - Web assets, images, video streaming, API caching? → **Amazon CloudFront**.
+   - Gaming, VoIP, TCP/UDP requiring 2 fixed static Anycast IPs? → **AWS Global Accelerator**.
 2. **Step 2: DNS Routing Policy Triage:**
-   - Lowest network delay? $\to$ **Latency Routing**.
-   - Legal/regulatory compliance (keep EU users in EU)? $\to$ **Geolocation Routing**.
-   - Active-Passive Disaster Recovery? $\to$ **Failover Routing**.
+   - Lowest network delay? → **Latency Routing**.
+   - Legal/regulatory compliance (keep EU users in EU)? → **Geolocation Routing**.
+   - Active-Passive Disaster Recovery? → **Failover Routing**.
 3. **Step 3: Edge Security Standards:**
    - Always pair CloudFront with **AWS WAF** (Layer 7 filtering) and **Origin Access Control (OAC)** for private S3 origins.
 

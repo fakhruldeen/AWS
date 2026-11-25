@@ -21,7 +21,7 @@
 
 ## 🎯 How to Use These Diagnostic Quizzes
 1. Complete each 10-question check immediately after reviewing the corresponding Domain Explanation or Lecture.
-2. Target achieving $\ge 80\%$ (8/10 correct) before proceeding to the next module.
+2. Target achieving ≥ 80% (8/10 correct) before proceeding to the next module.
 3. Review the detailed rationales for any missed questions to solidify conceptual boundaries.
 4. **Community Consensus Pool Focused Practice:** Run `python3 scripts/aws_revision_runner.py --cert AIF --community_consensus --mode practice` to drill on authentic community questions.
 5. **Deep Drilling in Unique Revision Banks:** For comprehensive question practice beyond the diagnostic checks, drill with the **1,814 Master Unique Questions** in the Vault:

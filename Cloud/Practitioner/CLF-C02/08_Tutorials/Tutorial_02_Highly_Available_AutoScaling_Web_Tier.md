@@ -198,11 +198,11 @@ flowchart TD
 ```
 
 1. **Step 1: Check Scaling Direction:**
-   - Mentions "scale in / scale out", "elasticity", "add/remove instances"? $\to$ **Horizontal Auto Scaling**.
-   - Mentions "scale up / scale down", "more RAM/CPU on existing server"? $\to$ **Vertical Scaling**.
+   - Mentions "scale in / scale out", "elasticity", "add/remove instances"? → **Horizontal Auto Scaling**.
+   - Mentions "scale up / scale down", "more RAM/CPU on existing server"? → **Vertical Scaling**.
 2. **Step 2: Check Load Balancer Type:**
-   - Web application, URL routing, microservices, containerized targets? $\to$ **ALB**.
-   - Millisecond gaming, extreme millions of requests/sec, static IP required? $\to$ **NLB**.
+   - Web application, URL routing, microservices, containerized targets? → **ALB**.
+   - Millisecond gaming, extreme millions of requests/sec, static IP required? → **NLB**.
 3. **Step 3: Check Fault Tolerance Requirement:**
    - High availability mandates spreading targets across at least **2 Availability Zones** within a Region.
 

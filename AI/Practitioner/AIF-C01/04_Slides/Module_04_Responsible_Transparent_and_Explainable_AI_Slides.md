@@ -93,17 +93,17 @@ style: |
   * Serves as compliance audit evidence for regulators.
 * **Amazon SageMaker Model Registry:**
   * Catalogs versioned model packages.
-  * Manages approval workflow: `PendingManualApproval` $\rightarrow$ `Approved`.
+  * Manages approval workflow: `PendingManualApproval` → `Approved`.
   * Integrates with CI/CD deployment pipelines.
 
 ---
 
 # Domain 4 Exam Highlights
 
-* ⚡ **Detecting Bias in Unprocessed Training Data?** $\rightarrow$ SageMaker Clarify (Class Imbalance, DPL).
-* ⚡ **Explaining Single-Applicant Loan Rejections?** $\rightarrow$ Local SHAP Feature Attribution.
-* ⚡ **Masking PII across Multiple LLMs?** $\rightarrow$ Amazon Bedrock Guardrails Sensitive Info Policy.
-* ⚡ **Standardized Compliance Documentation?** $\rightarrow$ SageMaker Model Cards.
+* ⚡ **Detecting Bias in Unprocessed Training Data?** → SageMaker Clarify (Class Imbalance, DPL).
+* ⚡ **Explaining Single-Applicant Loan Rejections?** → Local SHAP Feature Attribution.
+* ⚡ **Masking PII across Multiple LLMs?** → Amazon Bedrock Guardrails Sensitive Info Policy.
+* ⚡ **Standardized Compliance Documentation?** → SageMaker Model Cards.
 
 ---
 

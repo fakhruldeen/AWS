@@ -127,14 +127,14 @@ flowchart TD
 ## 📁 Pillar 4: File Storage in AWS: Amazon EFS & Amazon FSx
 
 ### 1. What is File Storage?
-File storage organizes data in a hierarchical directory tree (Folders $\rightarrow$ Sub-folders $\rightarrow$ Files). Applications access files using standard operating system file sharing protocols:
+File storage organizes data in a hierarchical directory tree (Folders → Sub-folders → Files). Applications access files using standard operating system file sharing protocols:
 - **NFS (Network File System):** Standard protocol for Linux / Unix environments.
 - **SMB (Server Message Block):** Standard protocol for Microsoft Windows environments.
 
 ```mermaid
 flowchart TD
     subgraph MultiAZ_EFS["Amazon Elastic File System (Amazon EFS)"]
-        EFS_Core["Amazon EFS Storage Core\n(Automatically replicated across $\ge 3$ AZs)"]
+        EFS_Core["Amazon EFS Storage Core\n(Automatically replicated across ≥ 3 AZs)"]
     end
 
     EC2_AZ1["EC2 Instance in AZ-A"] <-->|NFSv4 Mount| EFS_Core
@@ -172,7 +172,7 @@ Unlike EBS or EFS, you do not "mount" Amazon S3 to an operating system drive let
 - `PUT /my-bucket/invoice.pdf` (Upload an object)
 - `DELETE /my-bucket/temp.log` (Delete an object)
 
-### 3. Extreme Scale & $99.999999999\%$ (11 9s) Durability
+### 3. Extreme Scale & 99.999999999% (11 9s) Durability
 Amazon S3 is designed for **11 9s of data durability**:
 - What does 11 9s mean? If you store 10,000,000 objects in Amazon S3, you can expect on average to lose a single object once every 10,000 years!
 - How does AWS achieve this? S3 automatically synchronously replicates every object across **a minimum of 3 geographically separated physical Availability Zones** within the AWS Region.
@@ -187,7 +187,7 @@ flowchart LR
     end
 
     subgraph WarmData["Warm / Infrequent Access"]
-        S3_IA["S3 Standard-IA\nStored in $\ge 3$ AZs, retrieval fee"]
+        S3_IA["S3 Standard-IA\nStored in ≥ 3 AZs, retrieval fee"]
         S3_OZ["S3 One Zone-IA\nStored in 1 AZ only, 20% cheaper"]
     end
 
@@ -202,13 +202,13 @@ flowchart LR
 
 | S3 Storage Class | Durability | Availability | Availability Zones | Retrieval Time | Best Used For |
 |:---|:---:|:---:|:---:|:---|:---|
-| **S3 Standard** | 11 9s | 99.99% | $\ge 3$ AZs | Milliseconds | Active web assets, dynamic websites, frequent data access. |
-| **S3 Intelligent-Tiering** | 11 9s | 99.9% | $\ge 3$ AZs | Milliseconds | Data with unknown or unpredictable access patterns (zero retrieval fee). |
-| **S3 Standard-IA** | 11 9s | 99.9% | $\ge 3$ AZs | Milliseconds | Long-term backups, disaster recovery files accessed less than once a month. |
+| **S3 Standard** | 11 9s | 99.99% | ≥ 3 AZs | Milliseconds | Active web assets, dynamic websites, frequent data access. |
+| **S3 Intelligent-Tiering** | 11 9s | 99.9% | ≥ 3 AZs | Milliseconds | Data with unknown or unpredictable access patterns (zero retrieval fee). |
+| **S3 Standard-IA** | 11 9s | 99.9% | ≥ 3 AZs | Milliseconds | Long-term backups, disaster recovery files accessed less than once a month. |
 | **S3 One Zone-IA** | 11 9s | 99.5% | **Only 1 AZ** | Milliseconds | Secondary, reproducible backup copies that do not require multi-AZ resilience. |
-| **S3 Glacier Instant** | 11 9s | 99.9% | $\ge 3$ AZs | Milliseconds | Medical records, news archives accessed quarterly but needed instantly. |
-| **S3 Glacier Flexible** | 11 9s | 99.9% | $\ge 3$ AZs | 1 min to 12 hours | Traditional tape replacement, annual regulatory archives. |
-| **S3 Glacier Deep Archive** | 11 9s | 99.9% | $\ge 3$ AZs | 12 to 48 hours | 7-10 year compliance records (financial/healthcare) where retrieval delay is acceptable. Lowest cost cloud storage. |
+| **S3 Glacier Instant** | 11 9s | 99.9% | ≥ 3 AZs | Milliseconds | Medical records, news archives accessed quarterly but needed instantly. |
+| **S3 Glacier Flexible** | 11 9s | 99.9% | ≥ 3 AZs | 1 min to 12 hours | Traditional tape replacement, annual regulatory archives. |
+| **S3 Glacier Deep Archive** | 11 9s | 99.9% | ≥ 3 AZs | 12 to 48 hours | 7-10 year compliance records (financial/healthcare) where retrieval delay is acceptable. Lowest cost cloud storage. |
 
 ---
 
@@ -251,7 +251,7 @@ flowchart LR
 
 **Detailed Answer Rationale:**
 - **Correct Answer: [C] Amazon Simple Storage Service (Amazon S3)**  
-  *Why:* Amazon S3 is an object storage service designed specifically for web-accessible media assets via HTTPS APIs. It provides infinite elasticity to petabytes and natively guarantees $99.999999999\%$ (11 9s) of durability by replicating across multiple physical facilities (Availability Zones).
+  *Why:* Amazon S3 is an object storage service designed specifically for web-accessible media assets via HTTPS APIs. It provides infinite elasticity to petabytes and natively guarantees 99.999999999% (11 9s) of durability by replicating across multiple physical facilities (Availability Zones).
 - **Why [A] is Wrong:** EBS is block storage locked to a single Availability Zone, formatted with a private OS filesystem, and not accessible directly over HTTPS by external web clients.
 - **Why [B] is Wrong:** EFS is a POSIX network file system mounted by Linux instances via NFS. It is significantly more expensive per gigabyte than S3 and is not meant for direct public internet streaming.
 - **Why [D] is Wrong:** Instance Store is ephemeral block storage physically tied to a single server chassis; data is erased if the host stops.

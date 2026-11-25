@@ -286,16 +286,16 @@ When reading a question scenario, search for these exact phrasing triggers:
 ### 2. The 3-Step Rapid Elimination Heuristic
 When evaluating a Compute question:
 1. **Step 1: Check the Operational Abstraction Layer:**
-   - Full OS control, root access, long-running processes $\to$ **[Amazon EC2](../../AWS_SERVICES_GLOSSARY.md#amazon-ec2)**.
-   - Platform as a Service (PaaS): Upload code, let AWS handle servers $\to$ **[AWS Elastic Beanstalk](../../AWS_SERVICES_GLOSSARY.md#aws-elastic-beanstalk)**.
-   - Containerized workloads $\to$ **ECS / EKS** (with **Fargate** if serverless).
-   - Serverless functions, event-driven, $\le 15$ minutes $\to$ **[AWS Lambda](../../AWS_SERVICES_GLOSSARY.md#aws-lambda)**.
+   - Full OS control, root access, long-running processes → **[Amazon EC2](../../AWS_SERVICES_GLOSSARY.md#amazon-ec2)**.
+   - Platform as a Service (PaaS): Upload code, let AWS handle servers → **[AWS Elastic Beanstalk](../../AWS_SERVICES_GLOSSARY.md#aws-elastic-beanstalk)**.
+   - Containerized workloads → **ECS / EKS** (with **Fargate** if serverless).
+   - Serverless functions, event-driven, ≤ 15 minutes → **[AWS Lambda](../../AWS_SERVICES_GLOSSARY.md#aws-lambda)**.
 2. **Step 2: Check EC2 Purchasing Model:**
-   - Short-term, unpredictable, development, cannot be terminated unexpectedly $\to$ **On-Demand**.
-   - Fault-tolerant, stateless batch, background data jobs, can tolerate 2-minute shutdown notice $\to$ **Spot**.
-   - Steady 24/7 production server running for 1 or 3 years $\to$ **Savings Plans / Reserved Instances**.
-   - Strict physical hardware isolation for regulatory compliance $\to$ **Dedicated Instances**.
-   - Dedicated physical server + per-core software licensing (BYOL) $\to$ **Dedicated Hosts**.
+   - Short-term, unpredictable, development, cannot be terminated unexpectedly → **On-Demand**.
+   - Fault-tolerant, stateless batch, background data jobs, can tolerate 2-minute shutdown notice → **Spot**.
+   - Steady 24/7 production server running for 1 or 3 years → **Savings Plans / Reserved Instances**.
+   - Strict physical hardware isolation for regulatory compliance → **Dedicated Instances**.
+   - Dedicated physical server + per-core software licensing (BYOL) → **Dedicated Hosts**.
 3. **Step 3: Check Duration Limits:**
    - Does the batch task take **more than 15 minutes** (e.g., 30 minutes, 2 hours)?
    - **INSTANTLY ELIMINATE [AWS Lambda](../../AWS_SERVICES_GLOSSARY.md#aws-lambda)**. Lambda will crash at minute 15. Choose **[AWS Fargate](../../AWS_SERVICES_GLOSSARY.md#aws-fargate)**, **EC2**, or **[AWS Batch](../../AWS_SERVICES_GLOSSARY.md#aws-batch)**.

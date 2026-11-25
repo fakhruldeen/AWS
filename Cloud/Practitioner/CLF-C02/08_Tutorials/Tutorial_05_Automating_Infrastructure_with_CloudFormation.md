@@ -267,13 +267,13 @@ flowchart TD
 ```
 
 1. **Step 1: Check Abstraction Level:**
-   - "Upload code and run" $\to$ **AWS Elastic Beanstalk**.
-   - "Model infrastructure in declarative template" $\to$ **AWS CloudFormation**.
-   - "Author infrastructure in imperative programming languages" $\to$ **AWS CDK**.
+   - "Upload code and run" → **AWS Elastic Beanstalk**.
+   - "Model infrastructure in declarative template" → **AWS CloudFormation**.
+   - "Author infrastructure in imperative programming languages" → **AWS CDK**.
 2. **Step 2: Check Cost Model:**
    - CloudFormation and Elastic Beanstalk have **no additional service fees**; you only pay for the underlying resources created.
 3. **Step 3: Check Environmental Portability:**
-   - Creating identical environments across multiple regions or accounts? $\to$ **CloudFormation Stacks / StackSets**.
+   - Creating identical environments across multiple regions or accounts? → **CloudFormation Stacks / StackSets**.
 
 ---
 

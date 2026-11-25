@@ -21,11 +21,11 @@ flowchart TD
 
 ### Step 1: The Inverted Read (Read the Last Sentence First)
 Identify the primary constraint before getting distracted by the business story:
-- *"Without updating the base model weights"* $\implies$ Reject Fine-Tuning and Pre-training; look for **Prompt Engineering** or **RAG (Retrieval Augmented Generation)**.
-- *"To reduce hallucinations and provide verifiable source citations"* $\implies$ Look for **RAG / Amazon Bedrock Knowledge Bases**.
-- *"To automate multi-step API actions across backend systems"* $\implies$ Look for **Amazon Bedrock Agents**.
-- *"To prevent toxic content, mask PII, and block prompt injection"* $\implies$ Look for **Amazon Bedrock Guardrails**.
-- *"To explain feature importance and model bias"* $\implies$ Look for **Amazon SageMaker Clarify (SHAP values)**.
+- *"Without updating the base model weights"* ⇒ Reject Fine-Tuning and Pre-training; look for **Prompt Engineering** or **RAG (Retrieval Augmented Generation)**.
+- *"To reduce hallucinations and provide verifiable source citations"* ⇒ Look for **RAG / Amazon Bedrock Knowledge Bases**.
+- *"To automate multi-step API actions across backend systems"* ⇒ Look for **Amazon Bedrock Agents**.
+- *"To prevent toxic content, mask PII, and block prompt injection"* ⇒ Look for **Amazon Bedrock Guardrails**.
+- *"To explain feature importance and model bias"* ⇒ Look for **Amazon SageMaker Clarify (SHAP values)**.
 
 ### Step 2: Scan for AI Trigger Keywords (Fingerprinting)
 Match the technical scenario cue directly to the correct model technique or AWS service (see the [AIF-C01 Trigger Keyword Master Index](#-the-aif-c01-trigger-keyword-master-index) below).
@@ -59,9 +59,9 @@ $$\text{Lowest Cost / Frozen Weights} \quad \xrightarrow{\hspace{6cm}} \quad \te
 
 * **Memory Peg:** *"**P**lease **R**ead **F**ine **C**ode."*
 * **Decision Framework:**
-  - Need external/fresh data with source links? $\implies$ **RAG**.
-  - Need specific tone, syntax, or concise JSON format? $\implies$ **Fine-Tuning**.
-  - Need deep medical/legal jargon vocabulary? $\implies$ **Continued Pre-training**.
+  - Need external/fresh data with source links? ⇒ **RAG**.
+  - Need specific tone, syntax, or concise JSON format? ⇒ **Fine-Tuning**.
+  - Need deep medical/legal jargon vocabulary? ⇒ **Continued Pre-training**.
 
 ---
 
@@ -124,8 +124,8 @@ $$\text{Lowest Cost / Frozen Weights} \quad \xrightarrow{\hspace{6cm}} \quad \te
 ```
 
 * **Memory Clue:**
-  - *"Large payload up to 1 GB or processing takes 20 minutes"* $\implies$ **Asynchronous Inference**.
-  - *"Intermittent traffic that drops to 0 at night, lowest cost"* $\implies$ **Serverless Inference**.
+  - *"Large payload up to 1 GB or processing takes 20 minutes"* ⇒ **Asynchronous Inference**.
+  - *"Intermittent traffic that drops to 0 at night, lowest cost"* ⇒ **Serverless Inference**.
 
 ---
 

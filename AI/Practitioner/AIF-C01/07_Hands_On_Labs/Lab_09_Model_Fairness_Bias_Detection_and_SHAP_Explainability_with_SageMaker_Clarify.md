@@ -15,7 +15,7 @@ Responsible AI is a central pillar of the AIF-C01 blueprint. Regulatory framewor
 By completing this guided lab, you will master:
 1. **Pre-Training Bias Metrics:** Using **Amazon SageMaker Clarify** to calculate **Class Imbalance (CI)** and **Difference in Positive Proportions in Labels (DPL)** on raw training datasets.
 2. **Post-Training Bias Metrics:** Auditing trained models using **Difference in Positive Proportions in Predicted Labels (DPPL)** and **Disparate Impact (DI)**.
-3. **The 80% Rule for Disparate Impact:** Evaluating whether $0.80 \le DI \le 1.25$ to confirm regulatory fairness compliance.
+3. **The 80% Rule for Disparate Impact:** Evaluating whether 0.80 ≤ DI ≤ 1.25 to confirm regulatory fairness compliance.
 4. **SHAP (Shapley Additive exPlanations) Explainability:** Differentiating between **Global Feature Attribution** (overall model mechanics) and **Local Feature Attribution** (individual decision explanations).
 5. **Foundation Model Evaluation (FMEval):** Using Clarify to benchmark LLMs on **toxicity**, **factual knowledge**, and **stereotyping**.
 
@@ -52,7 +52,7 @@ flowchart TD
 Measures whether one demographic group is underrepresented in the training data:
 $$CI = \frac{n_a - n_d}{n_a + n_d}$$
 - Where $n_a$ is the count of privileged facet members (e.g. `Age >= 40`), and $n_d$ is the unprivileged group (`Age < 40`).
-- If $CI > 0$, the privileged group dominates the training data. A value near $0.0$ indicates perfect balance.
+- If CI > 0, the privileged group dominates the training data. A value near $0.0$ indicates perfect balance.
 
 ### 2. Difference in Positive Proportions in Labels ($DPL$)
 Measures the historical difference in positive outcomes between groups:
@@ -65,7 +65,7 @@ The ratio of positive prediction rates:
 $$DI = \frac{q_d}{q_a}$$
 - **The Legal 80% Rule:** Under US Federal EEOC guidelines, a selection rate for any group which is less than four-fifths (80%) of the rate for the group with the highest rate is evidence of adverse impact:
   $$0.80 \le DI \le 1.25$$
-  - If $DI < 0.80$: Severe disparate adverse impact against the unprivileged group.
+  - If DI < 0.80: Severe disparate adverse impact against the unprivileged group.
 
 ---
 
@@ -126,14 +126,14 @@ Clarify needs to know which demographic attribute to evaluate for disparate trea
 Once the Clarify analysis job completes, open the generated **Clarify Report** tab:
 
 #### 1. Inspecting Pre-Training Bias
-- **Class Imbalance (CI):** Observe $CI = 0.20$.
+- **Class Imbalance (CI):** Observe CI = 0.20.
   - *Analysis:* Males represent 60% of the sample, while Females represent 40%. The dataset exhibits mild class representation imbalance.
-- **Difference in Positive Proportions (DPL):** Observe $DPL = 0.45$.
+- **Difference in Positive Proportions (DPL):** Observe DPL = 0.45.
   - *Analysis:* 83% of male applicants in the historical training set were approved, compared to only 38% of female applicants. This flags severe historical training data bias!
 
 #### 2. Inspecting Post-Training Disparate Impact ($DI$)
-- **Disparate Impact Score:** $DI = 0.62$.
-- *Regulatory Assessment:* Because $0.62 < 0.80$, the model fails the 80% rule of thumb! It exhibits disparate adverse impact against female applicants. Remediation (re-weighting or collecting balanced data) is required before production deployment.
+- **Disparate Impact Score:** DI = 0.62.
+- *Regulatory Assessment:* Because 0.62 < 0.80, the model fails the 80% rule of thumb! It exhibits disparate adverse impact against female applicants. Remediation (re-weighting or collecting balanced data) is required before production deployment.
 
 #### 3. Analyzing SHAP Feature Attribution (Explainability)
 - **Global SHAP Chart:**

@@ -222,11 +222,11 @@ flowchart TD
 ```
 
 1. **Step 1: Multi-AZ vs. Read Replica Triage:**
-   - Mentions "disaster recovery", "automatic failover", "high availability", "zero data loss"? $\to$ **Multi-AZ**.
-   - Mentions "reporting queries slowing down primary", "read performance", "read scaling"? $\to$ **Read Replicas**.
+   - Mentions "disaster recovery", "automatic failover", "high availability", "zero data loss"? → **Multi-AZ**.
+   - Mentions "reporting queries slowing down primary", "read performance", "read scaling"? → **Read Replicas**.
 2. **Step 2: Secrets Manager vs. Parameter Store Triage:**
-   - Mentions "automated password rotation"? $\to$ **AWS Secrets Manager**.
-   - Mentions "hierarchical configuration strings, license keys, free tier"? $\to$ **Parameter Store**.
+   - Mentions "automated password rotation"? → **AWS Secrets Manager**.
+   - Mentions "hierarchical configuration strings, license keys, free tier"? → **Parameter Store**.
 3. **Step 3: Shared Responsibility Verification:**
    - AWS manages: OS installation, OS security patches, physical hardware, automated backups.
    - Customer manages: DB user permissions, table indexes, database firewall (Security Groups), encryption keys.

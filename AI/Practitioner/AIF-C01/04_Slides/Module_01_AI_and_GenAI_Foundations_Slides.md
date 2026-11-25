@@ -65,7 +65,7 @@ style: |
 
 | Traditional / Discriminative AI | Generative AI |
 |---|---|
-| Estimates $P(Y \mid X)$ (Conditional probability) | Estimates $P(X)$ or generates $Y$ conditioned on prompt |
+| Estimates P(Y \| X) (Conditional probability) | Estimates $P(X)$ or generates $Y$ conditioned on prompt |
 | Answers: *"Is this transaction fraudulent?"* | Answers: *"Draft an executive summary of this audit"* |
 | Fixed tabular or categorical outputs | Open-ended, creative, synthesized outputs |
 | Examples: Random Forest, XGBoost | Examples: Anthropic Claude, Amazon Titan |
@@ -90,11 +90,11 @@ style: |
 * Language models do not read characters or words—they read **Tokens**.
 * Tokens are sub-word numerical chunks (e.g., Byte-Pair Encoding).
 * **Rule of Thumb (English):**
-  * $1 \text{ token} \approx 0.75 \text{ words}$ (or $\approx 4 \text{ characters}$).
-  * $1,000 \text{ tokens} \approx 750 \text{ words}$.
+  * 1 token ≈ 0.75 words (or ≈ 4 characters).
+  * 1,000 tokens ≈ 750 words.
 * **Why Tokens Matter:**
   1. **Context Window Limits:** Models have strict token capacities per call.
-  2. **Billing:** In Amazon Bedrock, you pay per $1,000$ (or $1\text{M}$) input and output tokens. Output tokens cost more due to auto-regressive generation.
+  2. **Billing:** In Amazon Bedrock, you pay per $1,000$ (or 1M) input and output tokens. Output tokens cost more due to auto-regressive generation.
 
 ---
 
@@ -104,7 +104,7 @@ style: |
 * Everything needed to generate an answer must fit within the context window (system instructions + conversation history + retrieved docs + question).
 * **Evolution of Context Windows:**
   * Early LLMs: $2,048 - 4,096$ tokens.
-  * Modern FMs: Claude 3.5 Sonnet supports **200,000 tokens** ($\approx 150,000$ words).
+  * Modern FMs: Claude 3.5 Sonnet supports **200,000 tokens** (≈ 150,000 words).
 * **Watch Out:** *"Lost in the Middle"* effect—information placed in the exact middle of very long contexts can sometimes be overlooked.
 
 ---

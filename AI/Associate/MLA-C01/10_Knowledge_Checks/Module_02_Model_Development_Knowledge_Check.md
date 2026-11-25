@@ -25,7 +25,7 @@ An ML engineer is fine-tuning a 7-billion parameter Foundation Model for special
 **Correct Answer:** **A**
 
 **Explanation:**
-**LoRA (Low-Rank Adaptation)** freezes the pre-trained model weights $W_0$ and decomposes the weight update $\Delta W$ into two low-rank matrices $B \times A$. This slashes trainable parameters by $>99\%$, avoids catastrophic forgetting, and produces tiny, portable adapter weights.
+**LoRA (Low-Rank Adaptation)** freezes the pre-trained model weights W₀ and decomposes the weight update ΔW into two low-rank matrices B × A. This slashes trainable parameters by >99%, avoids catastrophic forgetting, and produces tiny, portable adapter weights.
 </details>
 
 ---
@@ -129,9 +129,9 @@ When training loss drops while validation loss increases, the model has begun me
 What is the mathematical formulation of the **F1-Score**, and why is it preferred over raw Accuracy for fraud detection models?
 
 - **A.** $F_1 = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}$; it represents the harmonic mean of precision and recall and is sensitive to class imbalance.
-- **B.** $F_1 = \text{Accuracy} \times \text{MAE}$.
-- **C.** $F_1 = \text{True Positives} / \text{False Positives}$.
-- **D.** $F_1$ is only used for unsupervised clustering.
+- **B.** F1 = Accuracy × MAE.
+- **C.** F1 = True Positives / False Positives.
+- **D.** F1 is only used for unsupervised clustering.
 
 <details>
 <summary><b>Click to View Answer & Explanation</b></summary>

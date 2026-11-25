@@ -52,7 +52,7 @@ flowchart TD
 ### 1.1 The Mathematics of CIDR Subnetting & The 5 Reserved AWS IPs
 In IPv4 Classless Inter-Domain Routing (CIDR), network sizes are designated by bitmasks:
 $$\text{Total IP Addresses} = 2^{32 - \text{Prefix Length}}$$
-For a standard `/24` subnet: $2^{32 - 24} = 2^8 = \mathbf{256\text{ total addresses}}$.
+For a standard `/24` subnet: 2^(32 − 24) = 2⁸ = **256 total addresses**.
 * **The 5 Reserved AWS IP Addresses (High-Yield Exam Trap!):** In *every* AWS VPC subnet, AWS reserves exactly **5 IP addresses** for internal infrastructure routing; they cannot be assigned to customer resources:
   1. `10.0.0.0`: **Network address** (first IP).
   2. `10.0.0.1`: **VPC router** (default gateway).
@@ -77,7 +77,7 @@ Before software-defined cloud networking (SDN), establishing enterprise networks
 | **Physical Cabling & Switch Configuration** | Network engineers ran physical copper and fiber cables between racks, configuring physical Cisco switches and VLAN tags. Adding a network took weeks. | **[Amazon VPC](../../AWS_SERVICES_GLOSSARY.md#amazon-vpc) Software-Defined Networking**. Create private isolated virtual networks, subnets, and route tables in seconds via console or API. |
 | **Public IP Address Exhaustion** | Enterprises purchased expensive public IPv4 blocks from regional registries (ARIN/RIPE), managing complex public IP NAT pools. | **Elastic IPs & Managed NAT Gateways**. AWS provides on-demand public IPs and fully managed, auto-scaling NAT Gateways handling up to 100 Gbps. |
 | **Point-to-Point VPN Internet Jitter** | Remote office connections traversed congested public internet hops, suffering packet loss, latency spikes, and ISP carrier cuts. | **[AWS Direct Connect](../../AWS_SERVICES_GLOSSARY.md#aws-direct-connect) & Global Accelerator**. Traffic bypasses the public internet, routing directly across AWS's private, congestion-free global fiber backbone. |
-| **Full-Mesh Peering Complexity** | Interconnecting 20 corporate VPCs or datacenters required $N(N-1)/2 = 190$ individual point-to-point peering connections. | **[AWS Transit Gateway](../../AWS_SERVICES_GLOSSARY.md#aws-transit-gateway)**. A single central cloud hub-and-spoke router that scales to connect thousands of VPCs and on-premises offices. |
+| **Full-Mesh Peering Complexity** | Interconnecting 20 corporate VPCs or datacenters required N(N-1)/2 = 190 individual point-to-point peering connections. | **[AWS Transit Gateway](../../AWS_SERVICES_GLOSSARY.md#aws-transit-gateway)**. A single central cloud hub-and-spoke router that scales to connect thousands of VPCs and on-premises offices. |
 
 ---
 
@@ -353,15 +353,15 @@ When reading a question scenario, search for these exact phrasing triggers:
 When evaluating an AWS Networking question:
 1. **Step 1: Security Group vs. Network ACL (NACL):**
    - Did the question mention **"Block a single malicious IP address"**?
-     - $\to$ **Network ACL (NACL)**! (Security Groups have NO Deny rules; only NACLs support explicit DENY!).
+     - → **Network ACL (NACL)**! (Security Groups have NO Deny rules; only NACLs support explicit DENY!).
    - Did the question mention **"Return traffic is automatically allowed"**?
-     - $\to$ **Security Group**! (Stateful connection tracking).
+     - → **Security Group**! (Stateful connection tracking).
 2. **Step 2: Internet Inbound vs. Outbound:**
-   - Need **two-way internet traffic** for web servers? $\to$ **Internet Gateway (IGW)**.
-   - Need **one-way outbound internet traffic** for private EC2 instances to download Linux security updates? $\to$ **NAT Gateway** (placed in the public subnet).
+   - Need **two-way internet traffic** for web servers? → **Internet Gateway (IGW)**.
+   - Need **one-way outbound internet traffic** for private EC2 instances to download Linux security updates? → **NAT Gateway** (placed in the public subnet).
 3. **Step 3: Direct Connect vs. VPN:**
-   - Bypasses public internet + dedicated physical line + high consistent bandwidth + takes weeks/months $\to$ **[AWS Direct Connect](../../AWS_SERVICES_GLOSSARY.md#aws-direct-connect)**.
-   - Encrypted over public internet + quick setup in hours + low cost $\to$ **[AWS Site-to-Site VPN](../../AWS_SERVICES_GLOSSARY.md#aws-site-to-site-vpn)**.
+   - Bypasses public internet + dedicated physical line + high consistent bandwidth + takes weeks/months → **[AWS Direct Connect](../../AWS_SERVICES_GLOSSARY.md#aws-direct-connect)**.
+   - Encrypted over public internet + quick setup in hours + low cost → **[AWS Site-to-Site VPN](../../AWS_SERVICES_GLOSSARY.md#aws-site-to-site-vpn)**.
 
 ### 3. High-Frequency Decoy Autopsy: Why AWS Tries to Trick You
 * **Decoy #1: "Security Group" vs. "Network ACL (NACL)"**
@@ -372,7 +372,7 @@ When evaluating an AWS Networking question:
   - *The Autopsy:* **CloudFront** is a CDN that **caches** HTTP/HTTPS files (HTML, images, videos) at edge locations. **Global Accelerator** does **not cache** data; it provides two static Anycast IP addresses to route non-HTTP (TCP/UDP, VoIP, gaming) traffic directly onto AWS's private high-speed global fiber backbone.
 * **Decoy #3: "VPC Peering" vs. "[AWS Transit Gateway](../../AWS_SERVICES_GLOSSARY.md#aws-transit-gateway)"**
   - *The Trap:* Connecting 50 VPCs together.
-  - *The Autopsy:* VPC Peering is non-transitive (VPC A $\to$ B and B $\to$ C does NOT mean A can talk to C). Connecting 50 VPCs with peering requires $50 \times 49 / 2 = 1{,}225$ peerings! For hub-and-spoke interconnectivity across many VPCs, the answer is **[AWS Transit Gateway](../../AWS_SERVICES_GLOSSARY.md#aws-transit-gateway)**.
+  - *The Autopsy:* VPC Peering is non-transitive (VPC A → B and B → C does NOT mean A can talk to C). Connecting 50 VPCs with peering requires 50 × 49 / 2 = 1{,}225 peerings! For hub-and-spoke interconnectivity across many VPCs, the answer is **[AWS Transit Gateway](../../AWS_SERVICES_GLOSSARY.md#aws-transit-gateway)**.
 
 ### 4. 10-Second Visual Decision Flowchart
 

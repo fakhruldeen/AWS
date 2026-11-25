@@ -52,7 +52,7 @@ flowchart LR
 ## 🏛️ Historical AI Pain Points: The Tool Integration Chaos
 
 Before standardized Agentic protocols, connecting Large Language Models to enterprise software was notoriously fragile:
-* **The $M \times N$ Integration Nightmare:** If an enterprise had 5 different AI models and 10 internal tools (Slack, Jira, GitHub, Postgres, Salesforce), engineers had to write and maintain $5 \times 10 = 50$ custom connector adapters.
+* **The M × N Integration Nightmare:** If an enterprise had 5 different AI models and 10 internal tools (Slack, Jira, GitHub, Postgres, Salesforce), engineers had to write and maintain 5 × 10 = 50 custom connector adapters.
 * **Hallucinated API Parameters:** Models frequently invented non-existent API parameters or returned invalid JSON schemas that crashed downstream microservices.
 * **The Solution (Bedrock Action Groups & Model Context Protocol):** By establishing formal OpenAPI schemas, AWS Lambda runtimes, and the open **Model Context Protocol (MCP)**, models discover and invoke standardized tools with guaranteed deterministic schemas and least-privilege security boundaries.
 
@@ -104,8 +104,8 @@ Agents cannot perform arithmetic, query live stock levels, or execute infrastruc
 
 ## 🌐 2. The Model Context Protocol (MCP)
 
-### 2.1 The Problem: The $M \times N$ Tool Integration Explosion
-Historically, every AI platform (LangChain, AutoGen, Bedrock Agents, OpenAI Assistants) implemented its own proprietary format for connecting models to data sources and developer tools. Connecting $M$ models to $N$ tools required $M \times N$ distinct custom integrations.
+### 2.1 The Problem: The M × N Tool Integration Explosion
+Historically, every AI platform (LangChain, AutoGen, Bedrock Agents, OpenAI Assistants) implemented its own proprietary format for connecting models to data sources and developer tools. Connecting $M$ models to $N$ tools required M × N distinct custom integrations.
 
 ```mermaid
 graph LR
@@ -223,14 +223,14 @@ In AWS Certified AI Practitioner v1.2, agent governance and identity are critica
 ### Question 2
 **What is the core architectural advantage of the Model Context Protocol (MCP) in multi-agent and tool-augmented AI systems?**
 - A) It eliminates the need for foundation models to use token embeddings
-- B) It provides an open, standardized protocol that reduces the tool integration complexity from $M \times N$ custom adapters to an open standard ($M + N$) over JSON-RPC
+- B) It provides an open, standardized protocol that reduces the tool integration complexity from M × N custom adapters to an open standard ($M + N$) over JSON-RPC
 - C) It automatically replaces all AWS Lambda functions with physical servers
 - D) It bypasses IAM permissions to allow agents unrestricted root database access
 
 <details>
 <summary><b>Click to View Answer & Detailed Distractor Analysis</b></summary>
 
-**Correct Answer:** **B) It provides an open, standardized protocol that reduces the tool integration complexity from $M \times N$ custom adapters to an open standard ($M + N$) over JSON-RPC**
+**Correct Answer:** **B) It provides an open, standardized protocol that reduces the tool integration complexity from M × N custom adapters to an open standard ($M + N$) over JSON-RPC**
 
 * **Why it's correct:** The Model Context Protocol (MCP) establishes a universal, open standard for AI models to discover tools, access resources, and execute functions. By standardizing communication over JSON-RPC 2.0 (via `stdio` or HTTP `SSE`), any MCP client can seamlessly interface with any MCP server, eliminating the need to write custom point-to-point connectors for every combination of model and tool.
 * **Distractor Analysis:**
@@ -254,18 +254,18 @@ When reading a question scenario, search for these exact phrasing triggers:
 | *"Connect Bedrock Agents to external enterprise systems using OpenAPI schemas and AWS Lambda"* | **Bedrock Action Groups** | *Prompt Engineering* |
 | *"Open, universal standard for AI models to discover tools, resources, and prompts over JSON-RPC"* | **Model Context Protocol (MCP)** | *LangChain* or *REST API Gateway* |
 | *"Dynamic factual knowledge injection without executing external transactional API actions"* | **Bedrock Knowledge Bases (RAG)** | *Bedrock Agents* (Agents are for taking actions!) |
-| *"Agent cognitive loop: Thought $\to$ Action $\to$ Observation $\to$ Thought"* | **ReAct Framework** | *Chain-of-Thought* (CoT reasons, but does not act on tools) |
+| *"Agent cognitive loop: Thought → Action → Observation → Thought"* | **ReAct Framework** | *Chain-of-Thought* (CoT reasons, but does not act on tools) |
 | *"Supervisor agent coordinates multiple specialized sub-agents and synthesizes results"* | **Hierarchical Multi-Agent Collaboration** | *Peer-to-Peer Swarm* |
 | *"Intercept user inputs and model outputs in agent workflows to mask PII and block toxic content"* | **Amazon Bedrock Guardrails** | *AWS WAF* (WAF inspects HTTP packets, not semantic AI toxicity) |
 
 ### 2. The 3-Step Rapid Elimination Heuristic
 When evaluating an Agentic AI or Bedrock Agent question:
 1. **Step 1: Action vs. Information Retrieval:**
-   - Does the workload need to **execute side-effects** (e.g. create a Jira ticket, book a hotel, execute a SQL update)? $\to$ **Amazon Bedrock Agents with Action Groups**.
-   - Does the workload strictly need to **look up answers from internal PDF/Word documents**? $\to$ **Amazon Bedrock Knowledge Bases (RAG)**.
+   - Does the workload need to **execute side-effects** (e.g. create a Jira ticket, book a hotel, execute a SQL update)? → **Amazon Bedrock Agents with Action Groups**.
+   - Does the workload strictly need to **look up answers from internal PDF/Word documents**? → **Amazon Bedrock Knowledge Bases (RAG)**.
 2. **Step 2: Check Tool Protocol:**
-   - Proprietary AWS OpenAPI + Lambda integration $\to$ **Bedrock Action Groups**.
-   - Universal open standard connecting models to developer tools & local processes $\to$ **Model Context Protocol (MCP)**.
+   - Proprietary AWS OpenAPI + Lambda integration → **Bedrock Action Groups**.
+   - Universal open standard connecting models to developer tools & local processes → **Model Context Protocol (MCP)**.
 3. **Step 3: Security & Governance Boundary:**
    - Agents require a dedicated **IAM execution role** with least privilege.
    - All tool calls and intermediate agent reasoning steps are audited via **Amazon CloudWatch** and **AWS CloudTrail**.

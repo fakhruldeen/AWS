@@ -43,7 +43,7 @@ python3 scripts/aws_revision_runner.py --cert AIF --community --mode mock
 ## 🏆 Full-Length Mock Exam Simulation Parameters
 * **Time Limit:** 90 Minutes.
 * **Scored vs Unscored:** 50 Scored Questions + 15 Unscored Experimental Questions = 65 Total.
-* **Passing Score:** 700 / 1000 Scaled Score (Target $\ge 46/65$ correct answers).
+* **Passing Score:** 700 / 1000 Scaled Score (Target ≥ 46/65 correct answers).
 * **Question Formats Included:**
   1. Multiple Choice (1 correct out of 4)
   2. Multiple Response (2 correct out of 5)

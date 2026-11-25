@@ -109,7 +109,7 @@ flowchart TD
    - Scheme: Internet-facing.
    - VPC: `production-vpc`, subnets: Public Subnet 1a and Public Subnet 1b.
    - Security group: `alb-sg` (inbound HTTP 80 from `0.0.0.0/0`).
-   - Listeners: HTTP :80 $\rightarrow$ Forward to `web-app-tg`.
+   - Listeners: HTTP :80 → Forward to `web-app-tg`.
 
 ---
 

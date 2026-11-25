@@ -114,10 +114,10 @@ Every cloud practitioner must memorize and understand the official **6 Advantage
 
 ```mermaid
 flowchart TD
-    Adv1["1. Trade Fixed Capital Expense for Variable Expense\n(Eliminate Upfront CapEx $\rightarrow$ Shift to Low OpEx)"]
-    Adv2["2. Benefit from Massive Economies of Scale\n(Millions of Customers Aggregated $\rightarrow$ 130+ Price Reductions)"]
-    Adv3["3. Stop Guessing Capacity\n(Auto-Scale to Exact Demand $\rightarrow$ Zero Waste or Outages)"]
-    Adv4["4. Increase Speed and Agility\n(New Resources in 60 Seconds $\rightarrow$ Rapid Experimentation)"]
+    Adv1["1. Trade Fixed Capital Expense for Variable Expense\n(Eliminate Upfront CapEx → Shift to Low OpEx)"]
+    Adv2["2. Benefit from Massive Economies of Scale\n(Millions of Customers Aggregated → 130+ Price Reductions)"]
+    Adv3["3. Stop Guessing Capacity\n(Auto-Scale to Exact Demand → Zero Waste or Outages)"]
+    Adv4["4. Increase Speed and Agility\n(New Resources in 60 Seconds → Rapid Experimentation)"]
     Adv5["5. Stop Spending Money Running Datacenters\n(Eliminate 'Undifferentiated Heavy Lifting')"]
     Adv6["6. Go Global in Minutes\n(Deploy Worldwide with Single-Digit Millisecond Latency)"]
 ```

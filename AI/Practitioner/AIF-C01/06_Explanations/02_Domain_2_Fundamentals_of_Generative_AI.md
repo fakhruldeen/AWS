@@ -71,7 +71,7 @@ flowchart TD
    * **Encoder-Decoder (e.g., T5, BART):** Sequence-to-sequence translation and abstractive summarization.
 
 ### 2. Tokens, Embeddings, and Context Windows
-* **Tokens:** The fundamental unit of text processed by an LLM. On average, $1\text{ token} \approx 0.75\text{ words}$ (or 1,000 tokens $\approx$ 750 words in English).
+* **Tokens:** The fundamental unit of text processed by an LLM. On average, 1 token ≈ 0.75 words (or 1,000 tokens ≈ 750 words in English).
 * **Vector Embeddings:** High-dimensional dense numerical vectors (e.g., 1,536 dimensions for Amazon Titan Text Embeddings v2) where semantic similarity corresponds to geometric proximity (measured via Cosine Similarity or Euclidean Distance).
 * **Context Window:** The maximum number of tokens (prompt input + generated output) an LLM can retain and process in a single inference call. Exceeding the context window results in truncation.
 * **Hallucination:** An error mode where an LLM generates syntactically convincing, authoritative text that is factually false or ungrounded in source data. Mitigated by low temperature, Grounding via RAG, and Amazon Bedrock Guardrails.
@@ -151,7 +151,7 @@ When invoking a Foundation Model via the Amazon Bedrock API (`InvokeModel` or `C
 |---|---|---|---|
 | **Temperature** | Float ($0.0$ to $1.0$) | Controls randomness. Lower values ($0.0 - 0.2$) make the output deterministic and focused; higher values ($0.7 - 1.0$) encourage creative divergence. | Use $0.0$ for factual Q&A, code generation, and financial extraction. Use $0.8$ for brainstorming. |
 | **Top-P (Nucleus Sampling)** | Float ($0.0$ to $1.0$) | Restricts token selection to the smallest cumulative probability set exceeding threshold $P$. | Top-P of $0.9$ cuts off the long tail of bizarre tokens while preserving natural fluency. |
-| **Top-K** | Integer ($\ge 1$) | Restricts selection to the top $K$ most likely next tokens. | Top-K of $1$ is equivalent to Greedy Decoding (argmax). |
+| **Top-K** | Integer (≥ 1) | Restricts selection to the top $K$ most likely next tokens. | Top-K of $1$ is equivalent to Greedy Decoding (argmax). |
 | **Max Tokens** | Integer | Caps the maximum number of tokens generated in the output response. | Cost control and preventing infinite runaway generations. |
 | **Stop Sequences** | Array of Strings | Specifies characters or strings (e.g., `["\n\n", "User:"]`) that immediately halt token generation. | Formatting chat transcripts and multi-turn turn enforcement. |
 
@@ -384,8 +384,8 @@ Test your mastery of Domain 2 with these 10 exam-style practice questions:
 | :--- | :--- | :--- | :--- |
 | **"Parallel training across GPUs / Self-attention"** | **Transformer Architecture** | Self-attention processes all sequence tokens concurrently using Query, Key, and Value matrices. | RNN/LSTM (which processed tokens sequentially, creating bottlenecks). |
 | **"Synthesize high-fidelity images by reversing noise"** | **Diffusion Model** | Inverts a Gaussian noise schedule (e.g., Stable Diffusion, Titan Image Generator). | Large Language Models (autoregressive token predictors). |
-| **"Make model responses deterministic and factual"** | **Low Temperature ($\approx 0.0 - 0.2$)** | Concentrates probability distribution on greedy, high-probability tokens. | High Temperature (which flattens distribution, increasing creative hallucinations). |
-| **"Generate creative, novel, varied marketing copy"** | **High Temperature ($\approx 0.7 - 1.0$)** | Flattens token probability distribution, allowing diverse lexical selection. | Low Temperature (which produces repetitive, dry, deterministic outputs). |
+| **"Make model responses deterministic and factual"** | **Low Temperature (≈ 0.0 - 0.2)** | Concentrates probability distribution on greedy, high-probability tokens. | High Temperature (which flattens distribution, increasing creative hallucinations). |
+| **"Generate creative, novel, varied marketing copy"** | **High Temperature (≈ 0.7 - 1.0)** | Flattens token probability distribution, allowing diverse lexical selection. | Low Temperature (which produces repetitive, dry, deterministic outputs). |
 | **"Dynamically limit pool to tokens totaling cumulative probability"** | **Top-P (Nucleus Sampling)** | Dynamically scales the selection pool based on cumulative softmax mass. | Top-K (which limits to a rigid, fixed integer number of tokens). |
 | **"Limit candidate pool to a fixed integer number of top tokens"** | **Top-K Sampling** | Hard integer cutoff (e.g. top 50 tokens) regardless of probability mass. | Top-P (which is a dynamic probability percentage threshold). |
 | **"Provide 2 to 5 exemplary input-output pairs in prompt"** | **Few-Shot Prompting** | In-context conditioning that guides output format and logic without weight updates. | Zero-shot prompting (no examples provided). |
@@ -433,8 +433,8 @@ flowchart TD
    - Is it measuring model accuracy? (Evaluation Metrics)
    - Is it picking an Amazon model? (Nova family)
 2. **Step 2: Apply the Mathematical Polarities:**
-   - *Factual/Legal/Medical:* Temperature $\to 0.0$.
-   - *Marketing/Storytelling:* Temperature $\to 0.9$.
+   - *Factual/Legal/Medical:* Temperature → 0.0.
+   - *Marketing/Storytelling:* Temperature → 0.9.
    - *Summarization:* ROUGE.
    - *Translation:* BLEU.
 3. **Step 3: Eliminate Unnecessary Cost & Compute:**

@@ -52,8 +52,8 @@ Before delivering or attending this lecture, review the assigned chapters:
   * Generative AI models do not "think" or "understand" in a human sense; they are master probability engines.
   * When given a sequence of tokens (*"The capital of France is..."*), the transformer computes the probability distribution over its entire vocabulary and predicts the next most probable token (*"Paris"*).
 * **Tokens vs. Words:**
-  * 1 token $\approx$ 0.75 English words (or 1,000 tokens $\approx$ 750 words).
-  * Words are broken into subword units (e.g., "unbreakable" $\rightarrow$ `un`, `break`, `able`).
+  * 1 token ≈ 0.75 English words (or 1,000 tokens ≈ 750 words).
+  * Words are broken into subword units (e.g., "unbreakable" → `un`, `break`, `able`).
 * **The Transformer Architecture (Vaswani et al., 2017):**
   * *Self-Attention:* Computes the contextual relationship between every word in a sentence simultaneously, overcoming the memory bottlenecks of legacy Recurrent Neural Networks (RNNs) and LSTMs.
   * *Positional Encoding:* Injects token position vectors because transformers process words in parallel rather than sequentially.
@@ -106,15 +106,15 @@ flowchart LR
     Temp --> Token["Selected Output Token"]
 ```
 
-* **Temperature ($0.0 \le T \le 1.0$):**
+* **Temperature (0.0 ≤ T ≤ 1.0):**
   * Controls the randomness/flatness of the probability distribution.
   * *Low Temperature ($0.0 - 0.2$):* Deterministic, focused, analytical. Use for financial analysis, code generation, mathematical extraction.
   * *High Temperature ($0.7 - 1.0$):* Diverse, creative, unexpected. Use for marketing brainstorming, fiction writing, poem generation.
 * **Top-P (Nucleus Sampling):**
-  * Dynamically cuts off the vocabulary pool once the cumulative probability reaches threshold $P$ (e.g., $P = 0.90$).
+  * Dynamically cuts off the vocabulary pool once the cumulative probability reaches threshold $P$ (e.g., P = 0.90).
   * Adapts to the distribution: if one word has 95% probability, only that 1 word is considered; if 20 words share equal small probabilities, all 20 are evaluated.
 * **Top-K:**
-  * Statically limits sampling to the top $K$ most probable tokens (e.g., $K = 50$).
+  * Statically limits sampling to the top $K$ most probable tokens (e.g., K = 50).
 * **Stop Sequences:**
   * Strings that tell the model to cease generating output immediately (e.g., `User:`, `\n\n`, `Observation:`).
 * **Max Generation Length:**
@@ -141,9 +141,9 @@ flowchart TD
 ```
 
 * **Rule of Thumb for the Exam:**
-  * If the question asks for **frequently changing live enterprise data** with **zero model training**: $\rightarrow$ **RAG (Amazon Bedrock Knowledge Bases)**.
-  * If the question asks to make the model adopt a **specialized medical terminology, tone, or specific JSON schema**: $\rightarrow$ **Fine-Tuning**.
-  * If the question asks to train a model on **vast unlabelled proprietary internal documents**: $\rightarrow$ **Continued Pre-Training**.
+  * If the question asks for **frequently changing live enterprise data** with **zero model training**: → **RAG (Amazon Bedrock Knowledge Bases)**.
+  * If the question asks to make the model adopt a **specialized medical terminology, tone, or specific JSON schema**: → **Fine-Tuning**.
+  * If the question asks to train a model on **vast unlabelled proprietary internal documents**: → **Continued Pre-Training**.
 
 ---
 

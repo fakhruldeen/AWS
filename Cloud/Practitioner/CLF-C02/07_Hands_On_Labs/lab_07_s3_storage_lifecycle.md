@@ -12,8 +12,8 @@
 ### 1. Object Storage vs. Block/File Storage
 - **Object Storage (S3):** Stores data as independent **objects** (data file + rich metadata + unique key) inside a flat hierarchy called a **bucket**. Objects are accessed via HTTP REST APIs (`GET`, `PUT`, `DELETE`). S3 offers virtually unlimited capacity without pre-provisioning storage volumes.
 - **Durability vs. Availability:**
-  - **Durability ($99.999999999\%$ / 11 9s):** AWS automatically redundantly replicates your objects across at least **3 separate physical Availability Zones** within the Region. If you store 10,000,000 files, you would statistically expect to lose a single file once every 10,000 years!
-  - **Availability ($99.9\%$ to $99.99\%$):** The percentage of time the S3 API endpoint is reachable to return requests.
+  - **Durability (99.999999999% / 11 9s):** AWS automatically redundantly replicates your objects across at least **3 separate physical Availability Zones** within the Region. If you store 10,000,000 files, you would statistically expect to lose a single file once every 10,000 years!
+  - **Availability (99.9% to 99.99%):** The percentage of time the S3 API endpoint is reachable to return requests.
 
 ### 2. S3 Storage Classes Tiering Matrix
 | Storage Class | Use Case & Retrieval | Minimum Billable Duration | Retrieval Fee? |

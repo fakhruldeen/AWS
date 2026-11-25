@@ -52,7 +52,7 @@ A developer needs to host 800 distinct personalized customer recommendation mode
 ### Question 3
 What is the primary role of the **SageMaker Model Registry** in an enterprise MLOps lifecycle?
 
-- **A.** Centralizing model cataloging, versioning, metadata tracking, and enforcing manual or automated deployment approval gates (`PendingManualApproval` $\rightarrow$ `Approved`).
+- **A.** Centralizing model cataloging, versioning, metadata tracking, and enforcing manual or automated deployment approval gates (`PendingManualApproval` → `Approved`).
 - **B.** Storing raw uncompressed CSV training files.
 - **C.** Monitoring real-time GPU temperatures in data centers.
 - **D.** Managing DNS records in Route 53.

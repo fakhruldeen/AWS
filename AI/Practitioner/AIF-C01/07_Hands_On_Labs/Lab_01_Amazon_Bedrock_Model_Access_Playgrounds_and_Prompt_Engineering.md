@@ -175,7 +175,7 @@ $$P(y_i) = \frac{e^{z_i / T}}{\sum_j e^{z_j / T}}$$
    Think through this step-by-step before providing your final answer.
    ```
 2. Click **Run**.
-3. **Observation:** Because of the directive *"Think through this step-by-step"*, the model explicitly articulates each calculation step (Monday total: 650 GB -> Tuesday deletion: $650 - 130 = 520\text{ GB}$ -> Wednesday compression: $520 \times 0.5 = 260\text{ GB}$).
+3. **Observation:** Because of the directive *"Think through this step-by-step"*, the model explicitly articulates each calculation step (Monday total: 650 GB -> Tuesday deletion: 650 - 130 = 520 GB -> Wednesday compression: 520 × 0.5 = 260 GB).
 4. **Exam Connection:** Chain-of-Thought (CoT) prompting drastically improves mathematical and logical accuracy by allowing the transformer to generate reasoning tokens prior to emitting the terminal answer.
 
 ---

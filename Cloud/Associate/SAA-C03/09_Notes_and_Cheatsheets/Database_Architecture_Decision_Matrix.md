@@ -44,7 +44,7 @@ flowchart TD
    - **Multi-AZ:** Designed for **High Availability & Disaster Recovery**. Uses **synchronous replication** to a standby instance in another AZ. You **cannot read from the standby** (it has no endpoint).
    - **Read Replicas:** Designed for **Read Scalability**. Uses **asynchronous replication**. You **can read from read replicas** (each has its own endpoint).
 2. **Aurora Global Database vs Multi-Region RDS Replicas:**
-   - Aurora Global Database replicates storage at the physical storage layer with latency typically $< 1$ second, with zero compute impact on the primary writer. Failover takes $< 1$ minute.
+   - Aurora Global Database replicates storage at the physical storage layer with latency typically < 1 second, with zero compute impact on the primary writer. Failover takes < 1 minute.
    - RDS cross-region replicas replicate asynchronously over the network, incurring higher replication lag and requiring manual database promotion during outages.
 3. **DynamoDB Accelerator (DAX) vs ElastiCache Redis:**
    - **DAX:** In-memory write-through cache designed **specifically and exclusively for DynamoDB**. Seamlessly integrates with zero application code changes (just update SDK endpoint to DAX). Delivers microsecond read latency for read-heavy workloads.

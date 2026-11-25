@@ -38,7 +38,7 @@ flowchart TD
 ### 1.1 The Mathematics of Reliability: MTBF vs. MTTR
 In traditional engineering, availability was pursued by maximizing **Mean Time Between Failures (MTBF)**—buying increasingly expensive, military-grade hardware so components would never fail:
 $$\text{Availability} = \frac{\text{MTBF}}{\text{MTBF} + \text{MTTR}}$$
-* **The Cloud Architectural Shift:** Hardware *will* eventually fail (disks crash, fiber lines get cut, memory develops bit errors). The Well-Architected Framework shifts focus from preventing failure to **minimizing Mean Time to Recovery (MTTR)** through automated health checks, dynamic self-healing, and stateless horizontal scaling. If an instance can be replaced in 30 seconds by Auto Scaling, system availability approaches $99.999\%$ regardless of hardware flakiness.
+* **The Cloud Architectural Shift:** Hardware *will* eventually fail (disks crash, fiber lines get cut, memory develops bit errors). The Well-Architected Framework shifts focus from preventing failure to **minimizing Mean Time to Recovery (MTTR)** through automated health checks, dynamic self-healing, and stateless horizontal scaling. If an instance can be replaced in 30 seconds by Auto Scaling, system availability approaches 99.999% regardless of hardware flakiness.
 
 ### 1.2 Blast Radius Containment and Loose Coupling
 * **Monolithic Systems (Tight Coupling):** If a payment processing module encounters an unhandled exception or memory leak, the entire application server crashes, taking down the catalog, user login, and cart.
@@ -361,20 +361,20 @@ When reading a question scenario, search for these exact phrasing triggers:
 ### 2. The 3-Step Rapid Elimination Heuristic
 When evaluating a Well-Architected Framework question:
 1. **Step 1: Identify the Primary Goal in the Question Stem:**
-   - Is it about **deploying code, runbooks, or CI/CD rollbacks**? $\to$ **Operational Excellence**.
-   - Is it about **encryption, least privilege, or audit logging**? $\to$ **Security**.
-   - Is it about **recovering from outages, surviving hardware crashes, or multi-AZ**? $\to$ **Reliability**.
-   - Is it about **speed, latency, IOPS, or cutting-edge tech adoption**? $\to$ **Performance Efficiency**.
-   - Is it about **reducing the monthly bill, right-sizing, or stopping unused instances**? $\to$ **Cost Optimization**.
-   - Is it about **carbon emissions, power consumption, or eco-friendly hardware**? $\to$ **Sustainability**.
+   - Is it about **deploying code, runbooks, or CI/CD rollbacks**? → **Operational Excellence**.
+   - Is it about **encryption, least privilege, or audit logging**? → **Security**.
+   - Is it about **recovering from outages, surviving hardware crashes, or multi-AZ**? → **Reliability**.
+   - Is it about **speed, latency, IOPS, or cutting-edge tech adoption**? → **Performance Efficiency**.
+   - Is it about **reducing the monthly bill, right-sizing, or stopping unused instances**? → **Cost Optimization**.
+   - Is it about **carbon emissions, power consumption, or eco-friendly hardware**? → **Sustainability**.
 2. **Step 2: Watch for "Dual-Benefit" Traps:**
    - Many actions save money AND energy (e.g., turning off idle servers or migrating to Graviton). 
    - Look at the *stated motive* in the question stem:
-     - If the prompt says "reduce monthly expenditure" $\to$ **Cost Optimization**.
-     - If the prompt says "minimize environmental footprint / carbon intensity" $\to$ **Sustainability**.
+     - If the prompt says "reduce monthly expenditure" → **Cost Optimization**.
+     - If the prompt says "minimize environmental footprint / carbon intensity" → **Sustainability**.
 3. **Step 3: Differentiate Tooling (Well-Architected Tool vs. Trusted Advisor):**
-   - Did the question ask about an **architectural review against official AWS best practice questionnaires**? $\to$ **[AWS Well-Architected Tool](../../AWS_SERVICES_GLOSSARY.md#aws-well-architected-tool)**.
-   - Did it ask for an **automated dashboard scanning your live resources** for open security ports or unattached EBS volumes? $\to$ **[AWS Trusted Advisor](../../AWS_SERVICES_GLOSSARY.md#aws-trusted-advisor)**.
+   - Did the question ask about an **architectural review against official AWS best practice questionnaires**? → **[AWS Well-Architected Tool](../../AWS_SERVICES_GLOSSARY.md#aws-well-architected-tool)**.
+   - Did it ask for an **automated dashboard scanning your live resources** for open security ports or unattached EBS volumes? → **[AWS Trusted Advisor](../../AWS_SERVICES_GLOSSARY.md#aws-trusted-advisor)**.
 
 ### 3. High-Frequency Decoy Autopsy: Why AWS Tries to Trick You
 * **Decoy #1: "Operational Excellence" vs. "Reliability"**

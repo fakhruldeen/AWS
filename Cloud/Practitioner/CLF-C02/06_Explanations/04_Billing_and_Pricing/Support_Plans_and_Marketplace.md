@@ -85,7 +85,7 @@ graph TD
 * **Target Audience:** Developers experimenting with AWS or running non-production test/development environments.
 * **Support Channel:** Cloud Support Associates accessible **via email during local business hours**.
 * **Contact Limit:** **1 primary contact** authorized to open cases.
-* **Response SLAs:** General Guidance $< 24\text{ hours}$; System Impaired $< 12\text{ hours}$.
+* **Response SLAs:** General Guidance < 24 hours; System Impaired < 12 hours.
 
 ### 3.3 Business Support
 * **Cost:** Starts at **\$100/month** (tiered sliding scale: 10% down to 3% as usage scales).
@@ -94,7 +94,7 @@ graph TD
 * **Contact Limit:** **Unlimited contacts** (any IAM user with support permissions).
 * **Key Features:**
   - **Full [AWS Trusted Advisor](../../AWS_SERVICES_GLOSSARY.md#aws-trusted-advisor) Checks:** Unlocks all 115+ checks across Cost, Security, Fault Tolerance, Performance, and Quotas.
-  - **Production System Down SLA:** Guaranteed response in **$< 1\text{ hour}$**.
+  - **Production System Down SLA:** Guaranteed response in **< 1 hour**.
   - **AWS Support API:** Programmatic case management.
   - **Infrastructure Event Management (IEM):** Available for an additional fee.
 
@@ -105,7 +105,7 @@ graph TD
   1. **Designated Technical Account Manager (TAM):** A named, dedicated senior AWS engineer assigned to your account who provides proactive architectural guidance, coordinates Well-Architected reviews, and acts as your direct advocate inside AWS.
   2. **AWS Concierge Support Team:** Dedicated billing and account specialists who assist with complex enterprise billing structures, consolidated invoice analysis, and account reorganizations.
   3. **Infrastructure Event Management (IEM):** **Included at no extra fee**. Pre-event architectural reviews, capacity reservations, and 24/7 real-time operational bridge monitoring during high-visibility business events (e.g., Black Friday, product launches).
-  4. **Business-Critical System Down SLA:** Guaranteed rapid response in **$< 15\text{ minutes}$**.
+  4. **Business-Critical System Down SLA:** Guaranteed rapid response in **< 15 minutes**.
 
 ---
 
@@ -151,7 +151,7 @@ flowchart LR
 | **Technical Support Channels** | Customer service / billing only | **Email only** | **Phone, Web Chat, Email** | **Phone, Web Chat, Email** |
 | **Who Can Open Cases?** | Unlimited billing contacts | **1 primary contact** | **Unlimited contacts (IAM)** | **Unlimited contacts (IAM)** |
 | **Trusted Advisor Access** | 7 core security & quota checks | 7 core security & quota checks | **Full 115+ checks (All 5 pillars)** | **Full 115+ checks (All 5 pillars)** |
-| **Fastest Response SLA** | N/A | $< 12\text{ hours}$ (System impaired) | **$< 1\text{ hour}$ (Production down)** | **$< 15\text{ minutes}$ (Critical down)** |
+| **Fastest Response SLA** | N/A | < 12 hours (System impaired) | **< 1 hour (Production down)** | **< 15 minutes (Critical down)** |
 | **Technical Account Manager?** | None | None | None | **Designated TAM (Named individual)**|
 | **Concierge Billing Team?** | None | None | None | **Included** |
 | **Infrastructure Event Mgt (IEM)?**| None | None | Available for extra fee | **Included at zero extra cost** |
@@ -300,17 +300,17 @@ When reading a question scenario, search for these exact phrasing triggers:
 ### 2. The 3-Step Rapid Elimination Heuristic
 When evaluating an AWS Support Plan question:
 1. **Step 1: Check for "Dedicated Human Roles":**
-   - Mentions a **dedicated Technical Account Manager (TAM)** $\to$ **Enterprise Support** (Instant answer!).
-   - Mentions a **dedicated Concierge billing team** $\to$ **Enterprise Support**.
-   - Mentions **AWS Infrastructure Event Management (IEM)** included for free $\to$ **Enterprise Support**.
+   - Mentions a **dedicated Technical Account Manager (TAM)** → **Enterprise Support** (Instant answer!).
+   - Mentions a **dedicated Concierge billing team** → **Enterprise Support**.
+   - Mentions **AWS Infrastructure Event Management (IEM)** included for free → **Enterprise Support**.
 2. **Step 2: Check Incident Response SLA Speed:**
-   - **< 15 minutes** (Business-critical system down) $\to$ **Enterprise Support**.
-   - **< 1 hour** (Production system down) $\to$ **Business Support**.
-   - **< 12 to 24 hours** (General guidance / non-production system impaired) $\to$ **Developer Support**.
-   - **Zero technical cases** (Billing and account questions only) $\to$ **Basic Support**.
+   - **< 15 minutes** (Business-critical system down) → **Enterprise Support**.
+   - **< 1 hour** (Production system down) → **Business Support**.
+   - **< 12 to 24 hours** (General guidance / non-production system impaired) → **Developer Support**.
+   - **Zero technical cases** (Billing and account questions only) → **Basic Support**.
 3. **Step 3: Check Channels & Contacts:**
-   - **24/7 phone, live chat, and web tickets** with **unlimited contacts** $\to$ **Business** or **Enterprise**.
-   - **Business hours email only** with **1 primary contact** $\to$ **Developer Support**.
+   - **24/7 phone, live chat, and web tickets** with **unlimited contacts** → **Business** or **Enterprise**.
+   - **Business hours email only** with **1 primary contact** → **Developer Support**.
 
 ### 3. High-Frequency Decoy Autopsy: Why AWS Tries to Trick You
 * **Decoy #1: "Business Support" vs. "Enterprise Support" (The TAM Trap)**

@@ -17,8 +17,8 @@ Before creating cloud networks, students must master three fundamental concepts:
 
 ### 2. IPv4 CIDR Blocks & Subnetting Math
 A **CIDR (Classless Inter-Domain Routing)** block defines the range of IP addresses assigned to your network:
-- `10.0.0.0/16`: The `/16` prefix leaves 16 bits for hosts ($2^{16} = 65,536$ total IP addresses). This is standard for a VPC.
-- `10.0.1.0/24`: The `/24` prefix leaves 8 bits for hosts ($2^8 = 256$ total IP addresses). This is standard for a subnet.
+- `10.0.0.0/16`: The `/16` prefix leaves 16 bits for hosts (2¹⁶ = 65,536 total IP addresses). This is standard for a VPC.
+- `10.0.1.0/24`: The `/24` prefix leaves 8 bits for hosts (2⁸ = 256 total IP addresses). This is standard for a subnet.
 
 ### 3. The 5 AWS-Reserved IP Addresses per Subnet
 In every AWS subnet, **5 IP addresses are reserved** by AWS and cannot be assigned to instances:
@@ -27,7 +27,7 @@ In every AWS subnet, **5 IP addresses are reserved** by AWS and cannot be assign
 - `.2`: Reserved for internal DNS resolution (AmazonProvidedDNS).
 - `.3`: Reserved for future AWS internal use.
 - `.255`: Network broadcast address (AWS does not support broadcast, but reserves it).
-*Formula:* Available usable IPs in a subnet = $2^{(32 - \text{prefix})} - 5$. For a `/24` subnet: $256 - 5 = 251$ usable IPs.
+*Formula:* Available usable IPs in a subnet = 2^(32 − prefix) − 5. For a `/24` subnet: 256 - 5 = 251 usable IPs.
 
 ---
 
@@ -182,7 +182,7 @@ aws ec2 describe-nat-gateways \
 | Exam Scenario | Correct Recommendation | Why Distractors Fail |
 |---|---|---|
 | *"A company has backend database instances running in a private subnet that need to download OS security patches from the internet without allowing external users to initiate inbound connections."* | **Deploy a NAT Gateway in a public subnet and route private outbound traffic to it** | An Internet Gateway (IGW) attached directly to a private subnet allows bi-directional inbound traffic, exposing databases. A NAT Instance is unmanaged and lacks built-in HA. |
-| *"A network engineer creates a new subnet with CIDR block `10.0.1.0/24`. How many usable IP addresses are available for EC2 instances?"* | **251 Usable IP Addresses** | AWS always reserves **5 IP addresses** in every subnet (.0 network, .1 router, .2 Amazon DNS, .3 future use, .255 broadcast). $256 - 5 = 251$. |
+| *"A network engineer creates a new subnet with CIDR block `10.0.1.0/24`. How many usable IP addresses are available for EC2 instances?"* | **251 Usable IP Addresses** | AWS always reserves **5 IP addresses** in every subnet (.0 network, .1 router, .2 Amazon DNS, .3 future use, .255 broadcast). 256 - 5 = 251. |
 | *"What makes a subnet in Amazon VPC officially 'public' versus 'private'?"* | **Its associated route table has a default route (`0.0.0.0/0`) targeting an Internet Gateway (IGW)** | Simply attaching an Elastic IP does not make a subnet public without the route table entry pointing to an IGW. |
 | *"Which VPC component is redundant, highly available by default, and incurs zero additional hourly cost?"* | **Internet Gateway (IGW)** | NAT Gateways incur hourly charges per gateway plus data processing fees. IGWs are horizontally scaled and free. |
 

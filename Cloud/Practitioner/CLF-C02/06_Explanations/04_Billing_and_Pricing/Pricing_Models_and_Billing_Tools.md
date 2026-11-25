@@ -41,7 +41,7 @@ flowchart TD
   An enterprise commits to an hourly spend rate ($\$X/\text{hour}$) for a 1-year or 3-year term. Every hour, usage up to $\$X$ is billed at the discounted Savings Plan rate (up to 72% off), while any surge usage above $\$X$ is billed at the standard On-Demand rate.
 * **Payment Options Trade-Off:**
   1. *All Upfront (Highest Discount):* Pay the entire 1- or 3-year commitment on day one in cash.
-  2. *Partial Upfront (Balanced Discount):* Pay $\ge 50\%$ upfront; remainder billed monthly.
+  2. *Partial Upfront (Balanced Discount):* Pay ≥ 50% upfront; remainder billed monthly.
   3. *No Upfront (Lowest Discount):* Pay zero cash upfront; commitment billed entirely on monthly invoices.
 
 ### 1.2 Spot Instance Spare Capacity & The 2-Minute Interruption Notice
@@ -307,10 +307,10 @@ When reading a question scenario, search for these exact phrasing triggers:
 ### 2. The 3-Step Rapid Elimination Heuristic
 When evaluating a Billing & Cost Management question:
 1. **Step 1: Check the Time Orientation (Past vs. Future vs. Pre-Deployment):**
-   - **Pre-Deployment (Planning Phase):** How much *will* a 4-tier app cost next quarter? $\to$ **[AWS Pricing Calculator](../../AWS_SERVICES_GLOSSARY.md#aws-pricing-calculator)** (`calculator.aws`).
-   - **Historical Review (Last 12 Months):** Which AWS service generated the highest bill last month? $\to$ **[AWS Cost Explorer](../../AWS_SERVICES_GLOSSARY.md#aws-cost-explorer)**.
-   - **Proactive Monitoring (Current Month):** Warn me if my monthly EC2 bill crosses \$1,000! $\to$ **[AWS Budgets](../../AWS_SERVICES_GLOSSARY.md#aws-budgets)**.
-   - **Deep Dive Big Data Billing:** Need to run SQL queries in Athena on every single line item? $\to$ **[AWS Cost and Usage Report](../../AWS_SERVICES_GLOSSARY.md#aws-cost-and-usage-report) (CUR)**.
+   - **Pre-Deployment (Planning Phase):** How much *will* a 4-tier app cost next quarter? → **[AWS Pricing Calculator](../../AWS_SERVICES_GLOSSARY.md#aws-pricing-calculator)** (`calculator.aws`).
+   - **Historical Review (Last 12 Months):** Which AWS service generated the highest bill last month? → **[AWS Cost Explorer](../../AWS_SERVICES_GLOSSARY.md#aws-cost-explorer)**.
+   - **Proactive Monitoring (Current Month):** Warn me if my monthly EC2 bill crosses \$1,000! → **[AWS Budgets](../../AWS_SERVICES_GLOSSARY.md#aws-budgets)**.
+   - **Deep Dive Big Data Billing:** Need to run SQL queries in Athena on every single line item? → **[AWS Cost and Usage Report](../../AWS_SERVICES_GLOSSARY.md#aws-cost-and-usage-report) (CUR)**.
 2. **Step 2: Check Alerting Capability (Cost Explorer vs. Budgets):**
    - Cost Explorer is a **visualization tool**; it **does NOT send proactive alerts**.
    - If the question asks to **send an email, trigger an SNS topic, or stop an EC2 instance** when a budget is exceeded, the answer is **ALWAYS [AWS Budgets](../../AWS_SERVICES_GLOSSARY.md#aws-budgets)**.

@@ -41,10 +41,10 @@ By the end of this lecture, candidates will be able to:
 - *Whiteboard Equation:*
   $$W = W_0 + \Delta W = W_0 + B \times A$$
 - **Explain LoRA:**
-  - $W_0$ is the multi-gigabyte frozen foundation model weights.
-  - $A$ (Gaussian init) and $B$ (Zero init) are low-rank matrices where rank $r$ is tiny ($r=8$ or $r=16$).
+  - W₀ is the multi-gigabyte frozen foundation model weights.
+  - $A$ (Gaussian init) and $B$ (Zero init) are low-rank matrices where rank $r$ is tiny (r=8 or r=16).
   - Trainable parameters drop from 7,000,000,000 to ~7,000,000 (99.9% reduction!).
-  - **Catastrophic Forgetting:** Explain why freezing $W_0$ completely protects the base model's general common-sense and grammar knowledge.
+  - **Catastrophic Forgetting:** Explain why freezing W₀ completely protects the base model's general common-sense and grammar knowledge.
 
 ### 3. Distributed Training: DDP vs. Model Parallelism
 - **Data Parallelism (DDP):**

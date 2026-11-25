@@ -36,8 +36,8 @@ graph TD
 ### 1.1 The Mathematics of Hardware Utilization and Deadweight Loss
 In traditional IT, servers must be provisioned to survive the **peak annual demand** (e.g., Black Friday or end-of-quarter financial closing):
 $$\text{Average Capacity Utilization } (U) = \frac{\text{Mean Compute Demand}}{\text{Peak Provisioned Capacity}}$$
-* **The Reality of Idle Compute:** In traditional datacenters, average CPU utilization hovers around **$10\%\text{–}15\%$**. The remaining $85\%$ of server capacity represents **deadweight economic loss**—electricity, cooling, and capital depreciation expended on silicon doing zero productive work.
-* **Elasticity eliminates deadweight loss:** With AWS Auto Scaling, provisioned capacity dynamically tracks actual demand in real time, shifting utilization toward $100\%$ of active capacity and eliminating payments for idle capacity.
+* **The Reality of Idle Compute:** In traditional datacenters, average CPU utilization hovers around **10%–15%**. The remaining 85% of server capacity represents **deadweight economic loss**—electricity, cooling, and capital depreciation expended on silicon doing zero productive work.
+* **Elasticity eliminates deadweight loss:** With AWS Auto Scaling, provisioned capacity dynamically tracks actual demand in real time, shifting utilization toward 100% of active capacity and eliminating payments for idle capacity.
 
 ### 1.2 Depreciation vs. Operating Cash Flow
 * **CapEx (Capital Expenditure):** Hardware purchases are treated as fixed assets on corporate balance sheets. Under accounting standards (GAAP/IFRS), physical servers are depreciated using straight-line amortization over 3 to 5 years:
@@ -109,7 +109,7 @@ graph TD
 
 AWS operates under three foundational pricing principles:
 1. **Pay-as-you-go:** Pay only for the resources you actually consume. There are no minimum commitments, activation fees, or termination penalties.
-2. **Pay less when you reserve:** Save up to $72\%$ compared to On-Demand rates by committing to a consistent volume of compute usage for a 1-year or 3-year term (Savings Plans and Reserved Instances).
+2. **Pay less when you reserve:** Save up to 72% compared to On-Demand rates by committing to a consistent volume of compute usage for a 1-year or 3-year term (Savings Plans and Reserved Instances).
 3. **Pay even less as AWS grows (Volume-based discounts):** Tiered pricing structures reduce the per-unit cost as usage scales (e.g., [Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3) storage cost per GB drops as stored data exceeds 50 TB and 500 TB).
 
 ### 5.1 Data Transfer Pricing Rules (Crucial Exam Concept!)
@@ -282,9 +282,9 @@ When reading a question scenario, search for these exact phrasing triggers:
 When evaluating a Cloud Economics or Cloud Value question:
 1. **Step 1: Identify the 6 Advantages of Cloud Computing:**
    - Always remember the 6 official AWS Cloud Advantages:
-     1. Trade capital expense for variable expense (CapEx $\to$ OpEx).
-     2. Benefit from massive economies of scale (Virtuous cycle $\to$ lower prices).
-     3. Stop guessing capacity (Elasticity $\to$ scale with demand).
+     1. Trade capital expense for variable expense (CapEx → OpEx).
+     2. Benefit from massive economies of scale (Virtuous cycle → lower prices).
+     3. Stop guessing capacity (Elasticity → scale with demand).
      4. Increase speed and agility (Minutes to deploy).
      5. Stop spending money running and maintaining data centers (No undifferentiated heavy lifting).
      6. Go global in minutes (Worldwide AWS infrastructure).

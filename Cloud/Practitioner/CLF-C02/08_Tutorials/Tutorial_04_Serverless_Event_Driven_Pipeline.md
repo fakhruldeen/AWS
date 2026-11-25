@@ -258,12 +258,12 @@ flowchart TD
 ```
 
 1. **Step 1: Check Compute vs. Messaging:**
-   - Need to run custom application code without servers? $\to$ **AWS Lambda**.
-   - Need to run Docker images without servers? $\to$ **AWS Fargate**.
+   - Need to run custom application code without servers? → **AWS Lambda**.
+   - Need to run Docker images without servers? → **AWS Fargate**.
 2. **Step 2: Check Messaging Pattern:**
-   - Buffer traffic to protect a database/worker? $\to$ **Amazon SQS** (Pull).
-   - Send one notification to multiple destinations (email, mobile, queue)? $\to$ **Amazon SNS** (Push / Fan-out).
-   - Route third-party SaaS events (Shopify, Datadog) into AWS? $\to$ **Amazon EventBridge**.
+   - Buffer traffic to protect a database/worker? → **Amazon SQS** (Pull).
+   - Send one notification to multiple destinations (email, mobile, queue)? → **Amazon SNS** (Push / Fan-out).
+   - Route third-party SaaS events (Shopify, Datadog) into AWS? → **Amazon EventBridge**.
 3. **Step 3: Check Cost & Serverless Attribute:**
    - Serverless = Zero idle charge + automatic scaling + no OS patching + built-in high availability.
 

@@ -37,4 +37,4 @@ flowchart LR
 - [ ] **Domain 3 (Performance):** Completed Lecture 03 & Lab 04 (SQS/SNS Decoupling)
 - [ ] **Domain 4 (Cost Optimization):** Completed Lecture 04 & Storage/DB Decision Matrices
 - [ ] **1,019Q Community Pool:** Drilled 100+ questions with `--community`
-- [ ] **Full Timed Mock Simulation:** Scored $\ge 80\%$ on the 65-question timed mock exam (`--mode mock`)
+- [ ] **Full Timed Mock Simulation:** Scored ≥ 80% on the 65-question timed mock exam (`--mode mock`)

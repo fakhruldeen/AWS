@@ -42,12 +42,12 @@ flowchart TD
 ```
 
 ### 1.1 The Crucial Distinction: Metrics vs. Audit Logs vs. Configuration State
-* **[Amazon CloudWatch](../../AWS_SERVICES_GLOSSARY.md#amazon-cloudwatch) answers:** *"How is the system performing right now, and what operational threshold was breached?"* (Telemetry data: CPU utilization hit $92\%$, database connections dropped, HTTP 500 error rate spiked).
+* **[Amazon CloudWatch](../../AWS_SERVICES_GLOSSARY.md#amazon-cloudwatch) answers:** *"How is the system performing right now, and what operational threshold was breached?"* (Telemetry data: CPU utilization hit 92%, database connections dropped, HTTP 500 error rate spiked).
 * **[AWS CloudTrail](../../AWS_SERVICES_GLOSSARY.md#aws-cloudtrail) answers:** *"Who made the API call, from what IP address, at what exact millisecond, and on what resource?"* (Management and forensic data: `Alice` called `ec2:TerminateInstances` from IP `198.51.100.24` at `14:22:01 UTC`).
 * **[AWS Config](../../AWS_SERVICES_GLOSSARY.md#aws-config) answers:** *"What did the resource configuration look like last Tuesday at 3:00 PM compared to today, and does it comply with organizational security rules?"* (Configuration state data: Security Group `sg-01` had port 22 closed yesterday, but someone opened it to `0.0.0.0/0` today).
 
 ### 1.2 Mathematical Set Theory of Service Control Policies (SCPs)
-In AWS multi-account governance, an account's effective permissions are determined by the **intersection ($\cap$)** of Service Control Policies and IAM Identity Policies:
+In AWS multi-account governance, an account's effective permissions are determined by the **intersection (∩)** of Service Control Policies and IAM Identity Policies:
 $$\text{Effective Permissions} = \text{SCP Allowed Actions} \cap \text{IAM Allowed Actions}$$
 * **The Root User Constraint (Crucial Exam Concept!):** Service Control Policies (SCPs) apply to **all identities** in a member account, **including the member account root user**. Even the root user cannot bypass an explicit `Deny` in an SCP!
 
@@ -160,7 +160,7 @@ flowchart TD
   2. **Security:** Checks for public S3 buckets, unrestricted security group ports, missing root MFA, and exposed IAM access keys.
   3. **Fault Tolerance:** Checks for single-AZ RDS databases, missing S3 bucket lifecycle rules, and lack of EBS snapshots.
   4. **Performance:** Identifies compute and storage bottlenecks, high CPU utilization, and suboptimal CloudFront configurations.
-  5. **Service Quotas:** Alerts when resource usage exceeds $80\%$ of account service limits (e.g., approaching VPC or Elastic IP quotas).
+  5. **Service Quotas:** Alerts when resource usage exceeds 80% of account service limits (e.g., approaching VPC or Elastic IP quotas).
 * **Support Plan Tiers:**
   - *Basic & Developer Support:* Provides access to **7 core security and quota checks**.
   - *Business & Enterprise Support:* Unlocks the **full library of 115+ automated checks** with programmatic AWS Support API access.
@@ -324,8 +324,8 @@ When evaluating a Management & Observability question:
    - **CloudTrail:** *Who did what, when, and from where?* (Audit trail of API calls, security investigations, forensics).
    - **Config:** *What did the resource look like, and does it break our rules?* (Configuration history, drift, compliance rules).
 2. **Step 2: Differentiate Trusted Advisor vs. Compute Optimizer:**
-   - Mentions **5 pillars (Security, Cost, Fault Tolerance, Performance, Quotas)** $\to$ **[AWS Trusted Advisor](../../AWS_SERVICES_GLOSSARY.md#aws-trusted-advisor)**.
-   - Mentions **Machine Learning rightsizing of EC2 instances, EBS volumes, or Lambda memory** $\to$ **[AWS Compute Optimizer](../../AWS_SERVICES_GLOSSARY.md#aws-compute-optimizer)**.
+   - Mentions **5 pillars (Security, Cost, Fault Tolerance, Performance, Quotas)** → **[AWS Trusted Advisor](../../AWS_SERVICES_GLOSSARY.md#aws-trusted-advisor)**.
+   - Mentions **Machine Learning rightsizing of EC2 instances, EBS volumes, or Lambda memory** → **[AWS Compute Optimizer](../../AWS_SERVICES_GLOSSARY.md#aws-compute-optimizer)**.
 3. **Step 3: Service Control Policies (SCPs) Rules:**
    - SCPs **DO NOT grant permissions** (they only filter/restrict maximum allowable permissions).
    - SCPs **apply to member accounts**, including the member account root user.

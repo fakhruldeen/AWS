@@ -368,10 +368,10 @@ flowchart TD
 1. **Step 1: Check Frontend Security Boundaries:**
    - Any option suggesting placing IAM keys or AWS credentials into frontend mobile/web code is **immediately eliminated**.
 2. **Step 2: Check Session State Store:**
-   - Real-time conversational state $\to$ **Amazon DynamoDB**.
-   - Cold compliance archiving $\to$ **Amazon S3**.
+   - Real-time conversational state → **Amazon DynamoDB**.
+   - Cold compliance archiving → **Amazon S3**.
 3. **Step 3: Check Throttling and Protection:**
-   - Protect downstream Bedrock quotas from runaway usage $\to$ **API Gateway Usage Plans and Throttling**.
+   - Protect downstream Bedrock quotas from runaway usage → **API Gateway Usage Plans and Throttling**.
 
 ---
 

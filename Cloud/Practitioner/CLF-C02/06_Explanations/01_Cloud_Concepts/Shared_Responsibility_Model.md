@@ -324,9 +324,9 @@ When reading a question scenario, search for these exact phrasing triggers:
 When faced with a Shared Responsibility Model question:
 1. **Step 1: Check the Physical vs. Logical Plane:**
    - Can you **touch, kick, or walk into it**? (Concrete walls, diesel generators, disk shredders, hypervisor chips, air conditioners).
-     - $\to$ **100% AWS Responsibility**. Discard all customer options immediately.
+     - → **100% AWS Responsibility**. Discard all customer options immediately.
    - Is it made of **software, configuration, logins, or data**?
-     - $\to$ Proceed to Step 2.
+     - → Proceed to Step 2.
 2. **Step 2: Check the Service Model (IaaS vs. PaaS vs. Serverless):**
    - **IaaS ([Amazon EC2](../../AWS_SERVICES_GLOSSARY.md#amazon-ec2)):** Customer holds root/administrator. Customer patches the OS, installs updates, and configures firewalls.
    - **PaaS ([Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds)):** AWS patches the host OS and DB engine. Customer creates database users, schemas, and security group firewall rules.
@@ -338,7 +338,7 @@ When faced with a Shared Responsibility Model question:
 ### 3. High-Frequency Decoy Autopsy: Why AWS Tries to Trick You
 * **Decoy #1: "EC2 OS Patching" vs. "RDS OS Patching"**
   - *The Trap:* The exam will deliberately present "Operating system patching" without specifying the service, or will swap EC2 and RDS.
-  - *The Autopsy:* Always check the target service! On **EC2**, the customer is root $\to$ **Customer patches**. On **RDS**, the customer has no shell access $\to$ **AWS patches**.
+  - *The Autopsy:* Always check the target service! On **EC2**, the customer is root → **Customer patches**. On **RDS**, the customer has no shell access → **AWS patches**.
 * **Decoy #2: "Data Encryption at Rest" — Who is responsible?**
   - *The Trap:* The question asks who is responsible for encrypting sensitive customer data stored in [Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3) or EBS.
   - *The Autopsy:* Candidates frequently answer "AWS" because AWS supports default server-side encryption. However, under the Shared Responsibility Model, **Data Classification and Encryption is strictly a Customer Responsibility**. AWS provides the KMS service, but configuring encryption and protecting access keys rests with the customer.

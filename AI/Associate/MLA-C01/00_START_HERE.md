@@ -36,4 +36,4 @@ flowchart LR
 - [ ] **Domain 3:** Completed Lecture 03, Lab 01 (SageMaker Pipelines) & Lab 02 (4 Inference Modes)
 - [ ] **Domain 4:** Completed Lecture 04, Lab 03 (Model Monitor Drift) & Lab 05 (Clarify SHAP)
 - [ ] **106Q Community Practice Pool:** Completed drills with `--community`
-- [ ] **Full Timed Mock Simulation:** Scored $\ge 80\%$ on the 65-question timed mock exam (`--mode mock`)
+- [ ] **Full Timed Mock Simulation:** Scored ≥ 80% on the 65-question timed mock exam (`--mode mock`)

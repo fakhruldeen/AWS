@@ -65,7 +65,7 @@ sequenceDiagram
 ```
 
 1. **DNS Lookup:** Your computer does not know what "aws.amazon.com" means geographically; it only understands IP addresses. It queries a **DNS server** to resolve the name to `54.239.28.85`.
-2. **TCP 3-Way Handshake (Layer 4):** Your computer establishes a reliable connection with the web server by sending synchronization packets (`SYN` $\rightarrow$ `SYN-ACK` $\rightarrow$ `ACK`).
+2. **TCP 3-Way Handshake (Layer 4):** Your computer establishes a reliable connection with the web server by sending synchronization packets (`SYN` → `SYN-ACK` → `ACK`).
 3. **TLS Encryption Handshake (Layer 6):** Both machines negotiate a secure symmetric key to encrypt the session so eavesdroppers on Wi-Fi or fiber cables cannot read credit card numbers or passwords.
 4. **HTTP Request/Response (Layer 7):** The browser sends an `HTTP GET` request, and the server returns the requested web page data.
 
@@ -145,9 +145,9 @@ flowchart TD
 
 ### 1. IPv4 Architecture
 An **IPv4 address** is a 32-bit binary number represented in human-readable format as **4 decimal octets separated by dots** (e.g., `192.168.1.1`):
-- Each octet represents 8 bits: $8 \times 4 = 32$ total bits.
+- Each octet represents 8 bits: 8 × 4 = 32 total bits.
 - Each octet ranges from 0 (`00000000` in binary) to 255 (`11111111` in binary).
-- The total global IPv4 address space is $2^{32} \approx 4.29 \text{ billion addresses}$.
+- The total global IPv4 address space is 2³² ≈ 4.29 billion addresses.
 
 ### 2. Classless Inter-Domain Routing (CIDR) Demystified
 In the early days of networking, IP addresses were assigned in rigid, wasteful classes (Class A, B, C). Today, the entire internet and Amazon VPC use **CIDR notation** (e.g., `10.0.0.0/16`).
@@ -168,13 +168,13 @@ flowchart LR
 
 #### Step-by-Step Calculation Table:
 
-| CIDR Prefix | Host Bits ($32 - \text{Prefix}$) | Total IP Addresses ($2^{\text{Bits}}$) | Usable AWS IPs (Minus 5 Reserved) | Typical AWS Usage |
+| CIDR Prefix | Host Bits (32 - Prefix) | Total IP Addresses (2^Bits) | Usable AWS IPs (Minus 5 Reserved) | Typical AWS Usage |
 |:---:|:---:|:---:|:---:|:---|
-| **/16** | $32 - 16 = 16$ | $2^{16} = \mathbf{65,536}$ | 65,531 | Standard Amazon VPC Size |
-| **/20** | $32 - 20 = 12$ | $2^{12} = \mathbf{4,096}$ | 4,091 | Large Production Subnet |
-| **/24** | $32 - 24 = 8$ | $2^8 = \mathbf{256}$ | 251 | Standard Development Subnet |
-| **/28** | $32 - 28 = 4$ | $2^4 = \mathbf{16}$ | 11 | Minimum Subnet Size in AWS |
-| **/32** | $32 - 32 = 0$ | $2^0 = \mathbf{1}$ | 1 (Single Host) | Security Group Rule for 1 Admin IP |
+| **/16** | 32 - 16 = 16 | 2¹⁶ = **65,536** | 65,531 | Standard Amazon VPC Size |
+| **/20** | 32 - 20 = 12 | 2¹² = **4,096** | 4,091 | Large Production Subnet |
+| **/24** | 32 - 24 = 8 | 2⁸ = **256** | 251 | Standard Development Subnet |
+| **/28** | 32 - 28 = 4 | 2⁴ = **16** | 11 | Minimum Subnet Size in AWS |
+| **/32** | 32 - 32 = 0 | 2⁰ = **1** | 1 (Single Host) | Security Group Rule for 1 Admin IP |
 
 > [!IMPORTANT]
 > **The 5 AWS Reserved IPs in Every Subnet:**  
@@ -186,9 +186,9 @@ flowchart LR
 > 4. `10.0.1.3`: **Future AWS Use** (reserved by AWS).
 > 5. `10.0.1.255`: **Network Broadcast Address** (AWS VPC does not support broadcast, but reserves this for standard network compatibility).
 >
-> *Formula for exam calculations:* **$\text{Usable IPs} = 2^{(32 - \text{Prefix})} - 5$**.  
+> *Formula for exam calculations:* ****Usable IPs** = 2^(32 − Prefix) − 5**.  
 > If an exam question asks: *"How many usable IP addresses are in a `/28` subnet in AWS?"*  
-> Calculation: $2^{(32-28)} = 2^4 = 16$. Then $16 - 5 = \mathbf{11 \text{ usable IPs}}$.
+> Calculation: 2⁽³²⁻²⁸⁾ = 2⁴ = 16. Then 16 − 5 = **11 usable IPs**.
 
 ---
 

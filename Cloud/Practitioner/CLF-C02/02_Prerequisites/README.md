@@ -56,15 +56,15 @@ flowchart TD
 Ask yourself the following 5 questions. If you cannot answer any one of them with absolute confidence, study that specific prerequisite document before advancing to the core lectures:
 
 1. **Systems Architecture:** *What is the fundamental difference between what a Virtual Machine virtualizes versus what a Docker container virtualizes?*  
-   $\rightarrow$ If unsure, read [**01_Operating_Systems_and_Virtualization.md**](./01_Operating_Systems_and_Virtualization.md).
+   → If unsure, read [**01_Operating_Systems_and_Virtualization.md**](./01_Operating_Systems_and_Virtualization.md).
 2. **Networking:** *In AWS, why does a `/24` subnet yield exactly 251 usable IP addresses instead of 256, and what is the difference between a stateful Security Group and a stateless Network ACL?*  
-   $\rightarrow$ If unsure, read [**02_Networking_and_OSI_Model.md**](./02_Networking_and_OSI_Model.md).
+   → If unsure, read [**02_Networking_and_OSI_Model.md**](./02_Networking_and_OSI_Model.md).
 3. **Storage:** *Why can an Amazon EBS volume in `us-east-1a` NOT be attached to an EC2 instance in `us-east-1b`, and why would an enterprise choose S3 Intelligent-Tiering over Standard-IA?*  
-   $\rightarrow$ If unsure, read [**03_Storage_Paradigms.md**](./03_Storage_Paradigms.md).
+   → If unsure, read [**03_Storage_Paradigms.md**](./03_Storage_Paradigms.md).
 4. **Security:** *Using a real-world analogy, explain the difference between Authentication (AuthN) and Authorization (AuthZ), and how AWS KMS Envelope Encryption works.*  
-   $\rightarrow$ If unsure, read [**04_Security_and_Cryptography.md**](./04_Security_and_Cryptography.md).
+   → If unsure, read [**04_Security_and_Cryptography.md**](./04_Security_and_Cryptography.md).
 5. **Economics:** *What is the difference between CapEx and OpEx from both a corporate balance sheet and income tax perspective, and what are the hidden costs of the "Datacenter Iceberg"?*  
-   $\rightarrow$ If unsure, read [**05_Cloud_Economics_and_FinOps.md**](./05_Cloud_Economics_and_FinOps.md).
+   → If unsure, read [**05_Cloud_Economics_and_FinOps.md**](./05_Cloud_Economics_and_FinOps.md).
 
 ---
 

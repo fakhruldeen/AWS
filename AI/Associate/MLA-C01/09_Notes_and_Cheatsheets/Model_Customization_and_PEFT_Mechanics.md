@@ -38,17 +38,17 @@ flowchart LR
 ### 1. The Core Formulation
 In standard full fine-tuning, the updated weight matrix is:
 $$W = W_0 + \Delta W, \quad \text{where } W_0, \Delta W \in \mathbb{R}^{d \times k}$$
-Because $d$ and $k$ are large (e.g., $d = 4096, k = 4096 \implies 16.7\text{ million weights per matrix}$), updating $\Delta W$ across dozens of transformer layers consumes massive VRAM to store optimizer states (AdamW requires 8 bytes per parameter).
+Because $d$ and $k$ are large (e.g., d = 4096, k = 4096 ⇒ 16.7 million weights per matrix), updating ΔW across dozens of transformer layers consumes massive VRAM to store optimizer states (AdamW requires 8 bytes per parameter).
 
 ### 2. Low-Rank Decomposition
-LoRA hypothesizes that the weight updates during task adaptation have a **low intrinsic rank**. It decomposes $\Delta W$ into the product of two low-rank matrices:
+LoRA hypothesizes that the weight updates during task adaptation have a **low intrinsic rank**. It decomposes ΔW into the product of two low-rank matrices:
 $$\Delta W = B \times A, \quad \text{where } B \in \mathbb{R}^{d \times r}, A \in \mathbb{R}^{r \times k}, \text{ with rank } r \ll \min(d, k)$$
 - **Initialization:** Matrix $A$ is initialized from a Gaussian distribution $\mathcal{N}(0, \sigma^2)$, and Matrix $B$ is initialized to $0$. Therefore, at the start of training:
   $$\Delta W = B \times A = 0 \times A = 0$$
   The model begins with exactly the pre-trained base model behavior!
 - **Scaling Factor:** The forward pass computes:
   $$h = W_0 x + \Delta W x = W_0 x + \frac{\alpha}{r} (B A) x$$
-  where $\alpha$ is a constant scaling hyperparameter (typically $\alpha = 2 \times r$).
+  where α is a constant scaling hyperparameter (typically α = 2 × r).
 
 ---
 
@@ -58,9 +58,9 @@ $$\Delta W = B \times A, \quad \text{where } B \in \mathbb{R}^{d \times r}, A \i
    - **Fine-tuning does NOT reliably eliminate hallucinations.** Fine-tuned models still generate fluent, plausible-sounding false information because they lack explicit source citations.
    - **RAG is the primary architectural pattern to eliminate hallucinations and enforce factuality**, because answers are grounded directly in retrieved context chunks accompanied by source URLs.
 2. **LoRA Adapter Portability:**
-   - Because base weights $W_0$ remain untouched, a single base model (e.g., Llama 3 8B) loaded in GPU memory can serve:
+   - Because base weights W₀ remain untouched, a single base model (e.g., Llama 3 8B) loaded in GPU memory can serve:
      - Tenant A using Adapter A (Legal extraction, 25 MB).
      - Tenant B using Adapter B (Medical summary, 25 MB).
      - Tenant C using Adapter C (Code generation, 25 MB).
 3. **Quantized LoRA (QLoRA):**
-   - Compresses the frozen base model weights $W_0$ to **4-bit precision (NF4 - NormalFloat4)** while keeping LoRA adapter matrices in 16-bit Brain Floating Point (BF16). Enables fine-tuning a 70B parameter model on a single 48 GB GPU instance (like an AWS `g5.12xlarge`).
+   - Compresses the frozen base model weights W₀ to **4-bit precision (NF4 - NormalFloat4)** while keeping LoRA adapter matrices in 16-bit Brain Floating Point (BF16). Enables fine-tuning a 70B parameter model on a single 48 GB GPU instance (like an AWS `g5.12xlarge`).

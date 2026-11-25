@@ -21,10 +21,10 @@ flowchart TD
 
 ### Step 1: The Inverted Read (Read the Last Sentence First)
 The final sentence always contains the **governing constraint**. Identify which constraint is being tested:
-- *"With the least operational overhead / minimal management"* $\implies$ Reject custom scripts, EC2, cron jobs; look for **AWS managed or serverless services** (e.g., S3, RDS, Lambda, Secrets Manager).
-- *"At the lowest cost / most cost-effective"* $\implies$ Reject Multi-AZ, Provisioned IOPS, On-Demand; look for **S3 Intelligent-Tiering / Glacier Deep Archive**, **EC2 Spot**, or **Consolidated Billing**.
-- *"In real time / immediate notification"* $\implies$ Reject batch polling; look for **Amazon SNS**, **Amazon EventBridge**, or **CloudWatch Alarms**.
-- *"To decouple components"* $\implies$ Look for **Amazon SQS** or **Amazon SNS**.
+- *"With the least operational overhead / minimal management"* ⇒ Reject custom scripts, EC2, cron jobs; look for **AWS managed or serverless services** (e.g., S3, RDS, Lambda, Secrets Manager).
+- *"At the lowest cost / most cost-effective"* ⇒ Reject Multi-AZ, Provisioned IOPS, On-Demand; look for **S3 Intelligent-Tiering / Glacier Deep Archive**, **EC2 Spot**, or **Consolidated Billing**.
+- *"In real time / immediate notification"* ⇒ Reject batch polling; look for **Amazon SNS**, **Amazon EventBridge**, or **CloudWatch Alarms**.
+- *"To decouple components"* ⇒ Look for **Amazon SQS** or **Amazon SNS**.
 
 ### Step 2: Scan for Trigger Keywords (Fingerprinting)
 AWS exam writers use specific canonical terms. Once you spot a trigger keyword, your brain should immediately isolate the corresponding service (see the [Trigger Keyword Master Index](#-the-clf-c02-trigger-keyword-master-index) below).
@@ -118,9 +118,9 @@ $$\text{Security \textbf{OF} the Cloud (AWS)} \quad \longleftrightarrow \quad \t
   [FROZEN] G ── Glacier Deep Archive (Lowest cost in AWS: $0.00099/GB, 12-48h retrieval)
 ```
 * **Exam Clue:**
-  - *"Unknown or changing access patterns, no operational overhead, no retrieval fees"* $\implies$ **S3 Intelligent-Tiering**.
-  - *"Lowest storage cost across all AWS, retrieval within 12 hours acceptable"* $\implies$ **S3 Glacier Deep Archive**.
-  - *"Single Availability Zone, lower cost, data easily reproducible"* $\implies$ **S3 One Zone-IA**.
+  - *"Unknown or changing access patterns, no operational overhead, no retrieval fees"* ⇒ **S3 Intelligent-Tiering**.
+  - *"Lowest storage cost across all AWS, retrieval within 12 hours acceptable"* ⇒ **S3 Glacier Deep Archive**.
+  - *"Single Availability Zone, lower cost, data easily reproducible"* ⇒ **S3 One Zone-IA**.
 
 ---
 
@@ -133,8 +133,8 @@ $$\text{Security \textbf{OF} the Cloud (AWS)} \quad \longleftrightarrow \quad \t
   E ── Enterprise  ($15,000/mo, TAM, Concierge, Infrastructure Event Management, <15min down)
 ```
 * **Memory Trigger:**
-  - Need a **TAM** (Technical Account Manager)? $\implies$ **Enterprise Support** ONLY!
-  - Need **24/7 phone access** or **all Trusted Advisor checks**? $\implies$ **Business Support** (or Enterprise).
+  - Need a **TAM** (Technical Account Manager)? ⇒ **Enterprise Support** ONLY!
+  - Need **24/7 phone access** or **all Trusted Advisor checks**? ⇒ **Business Support** (or Enterprise).
 
 ---
 

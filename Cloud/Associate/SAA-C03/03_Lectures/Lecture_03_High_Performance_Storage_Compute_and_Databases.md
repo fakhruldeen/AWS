@@ -36,13 +36,13 @@ By the end of this lecture, candidates will be able to:
 
 ### 1. Storage Decision Framework (Whiteboard Prompt)
 - *Whiteboard Decision Tree:*
-  - Need block storage attached to a single EC2 instance? $\implies$ **Amazon EBS**.
-    - Baseline 3,000 IOPS / 125 MB/s up to 16,000 IOPS? $\implies$ **EBS gp3** (decoupled IOPS from size!).
-    - Extreme OLTP up to 256,000 IOPS and 4,000 MB/s? $\implies$ **EBS io2 Block Express**.
-  - Need POSIX shared Linux storage across hundreds of instances in multiple AZs? $\implies$ **Amazon EFS** (use Elastic Throughput mode!).
-  - Need Windows file share with Active Directory NTFS permissions? $\implies$ **Amazon FSx for Windows File Server**.
-  - Need massive parallel throughput for Linux HPC/ML reading from S3? $\implies$ **Amazon FSx for Lustre**.
-  - Need multi-protocol (NFS + SMB + iSCSI) with snapshots and deduplication? $\implies$ **Amazon FSx for NetApp ONTAP**.
+  - Need block storage attached to a single EC2 instance? ⇒ **Amazon EBS**.
+    - Baseline 3,000 IOPS / 125 MB/s up to 16,000 IOPS? ⇒ **EBS gp3** (decoupled IOPS from size!).
+    - Extreme OLTP up to 256,000 IOPS and 4,000 MB/s? ⇒ **EBS io2 Block Express**.
+  - Need POSIX shared Linux storage across hundreds of instances in multiple AZs? ⇒ **Amazon EFS** (use Elastic Throughput mode!).
+  - Need Windows file share with Active Directory NTFS permissions? ⇒ **Amazon FSx for Windows File Server**.
+  - Need massive parallel throughput for Linux HPC/ML reading from S3? ⇒ **Amazon FSx for Lustre**.
+  - Need multi-protocol (NFS + SMB + iSCSI) with snapshots and deduplication? ⇒ **Amazon FSx for NetApp ONTAP**.
 
 ### 2. Compute Placement Groups: Three Distinct Strategies
 - **Cluster Placement Group:** Instances packed closely together in a single AZ. Maximizes network throughput (up to 100 Gbps+) and delivers lowest inter-node latency. *Risk:* If the rack fails, all instances fail. Used for HPC, MPI, tightly coupled clusters.

@@ -200,4 +200,4 @@ flowchart TD
     python3 scripts/aws_revision_runner.py --cert AIF --mode mock
     ```
 - [ ] **Step 4 (Final Readiness Benchmark):**
-  - Verify overall readiness score $\ge 85\%$ before taking the real Pearson VUE test.
+  - Verify overall readiness score ≥ 85% before taking the real Pearson VUE test.

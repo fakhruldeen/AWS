@@ -77,7 +77,7 @@
 | **2** | **A** | OpenSearch Serverless | Amazon OpenSearch Serverless vector collections provide automated, zero-admin vector indexing for Bedrock Knowledge Bases. |
 | **3** | **B** | Prompt Caching | Caching large system prompts or reference documents avoids re-processing identical tokens, saving time and money. |
 | **4** | **B** | Few-Shot Prompting | Few-shot prompting guides the model via in-context demonstrations without updating internal parameters. |
-| **5** | **B** | PEFT / LoRA | LoRA trains low-rank adapter matrices ($<1\%$ of parameters), preserving base model knowledge and slashing compute costs. |
+| **5** | **B** | PEFT / LoRA | LoRA trains low-rank adapter matrices (<1% of parameters), preserving base model knowledge and slashing compute costs. |
 | **6** | **B** | ROUGE Metric | ROUGE measures $n$-gram recall (ROUGE-1, ROUGE-2, ROUGE-L) and is standard for evaluating text summarization. BLEU measures precision for translation. |
 | **7** | **B** | Action Groups | Action Groups connect the reasoning loop of a Bedrock Agent to real-world AWS Lambda executions. |
 | **8** | **B** | LLM-as-a-Judge | LLM-as-a-judge leverages advanced models to evaluate factual accuracy, coherence, and safety against scoring criteria. |

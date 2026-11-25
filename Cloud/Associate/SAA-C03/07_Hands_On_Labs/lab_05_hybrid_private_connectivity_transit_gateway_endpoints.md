@@ -91,9 +91,9 @@ flowchart TD
 ### Step 3.3: Configure VPC Route Tables to Route via Transit Gateway
 
 1. Open the Route Table for `vpc-prod`:
-   - Add Route: Destination `10.2.0.0/16` (Dev VPC CIDR) $\rightarrow$ Target: **Transit Gateway** (`tgw-xxxx`).
+   - Add Route: Destination `10.2.0.0/16` (Dev VPC CIDR) → Target: **Transit Gateway** (`tgw-xxxx`).
 2. Open the Route Table for `vpc-dev`:
-   - Add Route: Destination `10.1.0.0/16` (Prod VPC CIDR) $\rightarrow$ Target: **Transit Gateway** (`tgw-xxxx`).
+   - Add Route: Destination `10.1.0.0/16` (Prod VPC CIDR) → Target: **Transit Gateway** (`tgw-xxxx`).
    > Traffic between instances in `vpc-prod` and `vpc-dev` now traverses the high-speed AWS internal network fabric via Transit Gateway!
 
 ---

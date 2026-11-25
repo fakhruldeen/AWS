@@ -260,7 +260,7 @@ Which component should the company configure to integrate the database query wit
 | :--- | :--- | :--- | :--- |
 | **"Autonomous multi-step actions / Break tasks into steps"** | **Amazon Bedrock Agents (ReAct Loop)** | Analyzes natural language intent, determines logical execution sequence, invokes tools. | Bedrock Knowledge Bases (retrieves text; does not plan or execute API actions). |
 | **"Connect Bedrock Agent to an external API or database"** | **Action Groups + AWS Lambda** | Defines tool capabilities via OpenAPI schema; executes business logic in Lambda. | Hardcoding database connection strings into the prompt. |
-| **"Standardized open protocol connecting LLMs to tools via JSON-RPC"** | **Model Context Protocol (MCP)** | Standardized protocol allowing foundation models to discover tools, resources, and prompts. | Custom one-off REST API wrappers for each individual tool ($M \times N$ complexity). |
+| **"Standardized open protocol connecting LLMs to tools via JSON-RPC"** | **Model Context Protocol (MCP)** | Standardized protocol allowing foundation models to discover tools, resources, and prompts. | Custom one-off REST API wrappers for each individual tool (M × N complexity). |
 | **"Give an agent factual corporate guidelines during conversations"** | **Associate a Knowledge Base with the Agent** | Turnkey RAG integration: Agent automatically queries the KB when questions require policy facts. | Embedding 1,000 pages of text directly into the agent system prompt. |
 | **"Safety boundaries on autonomous agent outputs"** | **Amazon Bedrock Guardrails** | Intercepts agent reasoning traces and user inputs to prevent unauthorized topic exploration. | Hoping the LLM obeys natural language constraints without guardrails. |
 
@@ -281,12 +281,12 @@ flowchart TD
 ```
 
 1. **Step 1: Action vs. Retrieval Triage:**
-   - Reading documents, searching policies, answering FAQs? $\to$ **Knowledge Bases**.
-   - Writing to database, executing transactions, calling REST endpoints? $\to$ **Action Groups + Lambda**.
+   - Reading documents, searching policies, answering FAQs? → **Knowledge Bases**.
+   - Writing to database, executing transactions, calling REST endpoints? → **Action Groups + Lambda**.
 2. **Step 2: Check Planning Requirement:**
-   - Multi-turn conversation that requires reasoning, step-by-step tool invocation, and decision making? $\to$ **Amazon Bedrock Agents**.
+   - Multi-turn conversation that requires reasoning, step-by-step tool invocation, and decision making? → **Amazon Bedrock Agents**.
 3. **Step 3: Protocol Identification:**
-   - Open standard protocol for agent-tool connectivity? $\to$ **Model Context Protocol (MCP)**.
+   - Open standard protocol for agent-tool connectivity? → **Model Context Protocol (MCP)**.
 
 ---
 

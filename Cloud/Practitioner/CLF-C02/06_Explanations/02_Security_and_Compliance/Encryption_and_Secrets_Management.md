@@ -283,14 +283,14 @@ When reading a question scenario, search for these exact phrasing triggers:
 ### 2. The 3-Step Rapid Elimination Heuristic
 When evaluating an Encryption or Secrets question:
 1. **Step 1: Identify What is Being Protected (Data Keys vs. Passwords/Tokens):**
-   - Are you encrypting **S3 objects, EBS volumes, or RDS databases**? $\to$ **KMS** or **CloudHSM**.
-   - Are you storing **database passwords, API keys, or OAuth credentials**? $\to$ **Secrets Manager** or **Parameter Store**.
+   - Are you encrypting **S3 objects, EBS volumes, or RDS databases**? → **KMS** or **CloudHSM**.
+   - Are you storing **database passwords, API keys, or OAuth credentials**? → **Secrets Manager** or **Parameter Store**.
 2. **Step 2: Check Multi-Tenant vs. Dedicated Single-Tenant:**
-   - Multi-tenant, integrated with 100+ AWS services, FIPS 140-2 Level 3 validated $\to$ **[AWS KMS](../../AWS_SERVICES_GLOSSARY.md#aws-kms)**.
-   - Dedicated single-tenant appliance in your VPC, regulatory mandate for direct hardware access $\to$ **[AWS CloudHSM](../../AWS_SERVICES_GLOSSARY.md#aws-cloudhsm)**.
+   - Multi-tenant, integrated with 100+ AWS services, FIPS 140-2 Level 3 validated → **[AWS KMS](../../AWS_SERVICES_GLOSSARY.md#aws-kms)**.
+   - Dedicated single-tenant appliance in your VPC, regulatory mandate for direct hardware access → **[AWS CloudHSM](../../AWS_SERVICES_GLOSSARY.md#aws-cloudhsm)**.
 3. **Step 3: Check Rotation vs. Cost for Secrets:**
-   - Does the prompt require **automatic rotation of database passwords (e.g. for RDS)**? $\to$ **[AWS Secrets Manager](../../AWS_SERVICES_GLOSSARY.md#aws-secrets-manager)** (has built-in Lambda integration).
-   - Does the prompt require a **simple, free store for configuration strings and license keys**? $\to$ **[AWS Systems Manager](../../AWS_SERVICES_GLOSSARY.md#aws-systems-manager) Parameter Store**.
+   - Does the prompt require **automatic rotation of database passwords (e.g. for RDS)**? → **[AWS Secrets Manager](../../AWS_SERVICES_GLOSSARY.md#aws-secrets-manager)** (has built-in Lambda integration).
+   - Does the prompt require a **simple, free store for configuration strings and license keys**? → **[AWS Systems Manager](../../AWS_SERVICES_GLOSSARY.md#aws-systems-manager) Parameter Store**.
 
 ### 3. High-Frequency Decoy Autopsy: Why AWS Tries to Trick You
 * **Decoy #1: "[AWS KMS](../../AWS_SERVICES_GLOSSARY.md#aws-kms)" vs. "[AWS CloudHSM](../../AWS_SERVICES_GLOSSARY.md#aws-cloudhsm)"**

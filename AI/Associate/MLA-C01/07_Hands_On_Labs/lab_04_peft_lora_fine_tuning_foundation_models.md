@@ -42,9 +42,9 @@ flowchart TD
 ```
 
 ### Mathematical & Architectural Mechanics:
-- Instead of updating the full weight matrix $W_0 \in \mathbb{R}^{d \times k}$ (which contains billions of weights), LoRA decomposes the weight update $\Delta W$ into two low-rank matrices:
+- Instead of updating the full weight matrix $W_0 \in \mathbb{R}^{d \times k}$ (which contains billions of weights), LoRA decomposes the weight update ΔW into two low-rank matrices:
   $$\Delta W = B \times A, \quad \text{where } B \in \mathbb{R}^{d \times r}, A \in \mathbb{R}^{r \times k}, \text{ with rank } r \ll \min(d, k)$$
-- **Memory Savings:** Reduces trainable parameters by $>99\%$, allowing fine-tuning of 7B–13B models on a single GPU instance.
+- **Memory Savings:** Reduces trainable parameters by >99%, allowing fine-tuning of 7B–13B models on a single GPU instance.
 - **Hot-Swapping:** A single frozen base model in memory can serve dozens of different domain tasks simply by swapping the tiny 20 MB LoRA adapter weights!
 
 ---
@@ -79,7 +79,7 @@ flowchart TD
 
 In model customization jobs, key hyperparameters govern training:
 1. **LoRA Rank ($r$):** The rank of the low-rank update matrices (typically `8`, `16`, or `32`). Higher rank captures more complex domain knowledge, but increases memory and adapter size.
-2. **LoRA Alpha ($\alpha$):** A scaling factor for the weight updates (typically $2 \times r$, e.g., $\alpha = 32$ when $r = 16$).
+2. **LoRA Alpha (α):** A scaling factor for the weight updates (typically 2 × r, e.g., α = 32 when r = 16).
 3. **LoRA Dropout:** Regularization probability (typically `0.05` to `0.10`) to prevent overfitting on small domain datasets.
 4. **Learning Rate:** Typically `1e-4` to `5e-4` (substantially higher than full fine-tuning because base weights are frozen).
 5. **Epochs:** Typically `3` to `5` epochs to prevent overfitting.
@@ -139,7 +139,7 @@ aws bedrock get-model-customization-job \
 
 | Scenario / Exam Trap | What the Exam Asks | Architecturally Correct Decision | Why Alternatives Are Traps |
 |---|---|---|---|
-| **Trap 1: Catastrophic Forgetting Mitigation** | *"An ML engineer fine-tunes a base foundation model for specialized medical diagnosis. The model now produces excellent medical advice but has completely forgotten basic conversational skills and English grammar."* | Use **Parameter-Efficient Fine-Tuning (PEFT / LoRA)** instead of full fine-tuning. LoRA freezes base weights $W_0$, completely eliminating catastrophic forgetting of the model's core pre-trained knowledge. | Full fine-tuning overwrites base parametric weights, degrading general capabilities on out-of-domain tasks. |
+| **Trap 1: Catastrophic Forgetting Mitigation** | *"An ML engineer fine-tunes a base foundation model for specialized medical diagnosis. The model now produces excellent medical advice but has completely forgotten basic conversational skills and English grammar."* | Use **Parameter-Efficient Fine-Tuning (PEFT / LoRA)** instead of full fine-tuning. LoRA freezes base weights W₀, completely eliminating catastrophic forgetting of the model's core pre-trained knowledge. | Full fine-tuning overwrites base parametric weights, degrading general capabilities on out-of-domain tasks. |
 | **Trap 2: Fine-Tuning vs RAG for Dynamic Real-Time Data** | *"A company wants an LLM to answer questions about daily product inventory and stock prices that update every 15 minutes. An engineer proposes fine-tuning the model hourly."* | Fine-tuning is the **wrong architectural choice**. Implement **Retrieval-Augmented Generation (RAG)** using Bedrock Knowledge Bases. Fine-tuning teaches *style, formatting, and domain dialect*, while RAG provides *real-time factual knowledge*. | Fine-tuning cannot keep up with rapidly changing data, is computationally expensive, and hallucinates without live citations. |
 | **Trap 3: Bedrock Custom Model Hosting Prerequisite** | *"What purchasing option is strictly required to deploy and invoke a custom fine-tuned model on Amazon Bedrock?"* | **Provisioned Throughput (Model Units)**. Custom fine-tuned models on Bedrock cannot be invoked using on-demand token pricing. | Attempting to invoke a custom model via on-demand pay-per-token APIs will fail with validation errors. |
 | **Trap 4: Continued Pre-training vs Supervised Fine-Tuning** | *"A legal firm has 500,000 raw, unannotated PDF legal briefs and wants an LLM to learn specialized legal vocabulary and Latin terminology."* | Use **Continued Pre-training** (domain adaptation). Continued pre-training ingests **unlabeled raw text** using next-token self-supervision. Fine-tuning requires **labeled prompt-completion pairs**. | Attempting supervised fine-tuning on raw documents without prompt-response structures will corrupt the model's instruction-following abilities. |

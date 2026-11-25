@@ -179,7 +179,7 @@ flowchart TD
 
 > [!TIP]
 > **Trap 3: RAG vs Fine-Tuning Decision**  
-> If proprietary data changes hourly/daily $\rightarrow$ **RAG**. Fine-tuning cannot keep up with rapidly changing data and requires costly recurring retraining runs.
+> If proprietary data changes hourly/daily → **RAG**. Fine-tuning cannot keep up with rapidly changing data and requires costly recurring retraining runs.
 
 ---
 

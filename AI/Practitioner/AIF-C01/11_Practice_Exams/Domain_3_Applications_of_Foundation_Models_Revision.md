@@ -46,7 +46,7 @@ An AI architect wants to fine-tune an LLM to follow a specific medical clinical 
 - [ ] C) Pre-training from scratch on an EC2 UltraCluster
 - [ ] D) Unsupervised K-Means Clustering
 > **Correct Answer:** B  
-> **Rationale:** LoRA freezes the original pre-trained foundation weights and trains small adapter matrices ($<1\%$ of parameters), preventing catastrophic forgetting and minimizing compute hours.
+> **Rationale:** LoRA freezes the original pre-trained foundation weights and trains small adapter matrices (<1% of parameters), preventing catastrophic forgetting and minimizing compute hours.
 
 ---
 

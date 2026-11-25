@@ -12,7 +12,7 @@
 
 In classical software engineering, humans write explicit, deterministic algorithms (`if/else` rules, SQL queries, loops) that take data as input and compute answers as output. If a mortgage rule changes, a human programmer must manually update the business rule in code.
 
-**Machine Learning (ML)** fundamentally reverses this paradigm: we feed historical data and observed answers (labels) into an algorithm, and the machine statistically learns the underlying mathematical function $f(x) \approx y$ mapping features to outcomes.
+**Machine Learning (ML)** fundamentally reverses this paradigm: we feed historical data and observed answers (labels) into an algorithm, and the machine statistically learns the underlying mathematical function f(x) ≈ y mapping features to outcomes.
 
 ```mermaid
 flowchart TD
@@ -77,7 +77,7 @@ flowchart TD
 
 1. **Artificial Intelligence (AI):** The overarching discipline of computer science established in 1956 dedicated to creating systems capable of performing tasks that typically require human cognition (reasoning, perception, problem-solving, natural language understanding).
 2. **Machine Learning (ML):** A subfield of AI focused on algorithms that automatically improve their performance through experience and statistical exposure to data without being explicitly programmed.
-3. **Deep Learning (DL):** A subset of ML based on Artificial Neural Networks with representation learning across multiple hidden layers ($>3$ layers). DL algorithms (CNNs, RNNs, Transformers) automatically extract hierarchical features directly from raw, unstructured data (pixels, waveforms, characters) without manual feature engineering.
+3. **Deep Learning (DL):** A subset of ML based on Artificial Neural Networks with representation learning across multiple hidden layers (>3 layers). DL algorithms (CNNs, RNNs, Transformers) automatically extract hierarchical features directly from raw, unstructured data (pixels, waveforms, characters) without manual feature engineering.
 4. **Generative AI (GenAI):** A specialized frontier subset of Deep Learning that learns the joint probability distribution $P(X)$ of vast training corpora to generate brand-new, realistic, synthetic artifacts (coherent prose, photorealistic images, source code, synthesized voices).
 
 ---
@@ -100,7 +100,7 @@ flowchart LR
 ```
 
 ### 2.1 Supervised Learning (The Apprentice with an Answer Key)
-The algorithm is supplied with an input feature matrix $X$ and ground-truth target vector $y$. The objective is to learn a mapping function $y = f(X) + \epsilon$ that generalizes accurately to unseen inputs.
+The algorithm is supplied with an input feature matrix $X$ and ground-truth target vector $y$. The objective is to learn a mapping function y = f(X) + ε that generalizes accurately to unseen inputs.
 * **Classification (Categorical Target):**
   * *Binary Classification:* Predicting one of two discrete classes (e.g., Transaction Fraudulent: Yes/No, Customer Churn: True/False, Tumor: Malignant/Benign).
   * *Multi-Class Classification:* Predicting one of three or more mutually exclusive classes (e.g., Routing an IT ticket to Hardware, Software, Network, or Billing).
@@ -126,7 +126,7 @@ An autonomous computational entity (**Agent**) takes sequential actions within a
   * **State ($s_t$):** The current snapshot observation of the environment at time $t$.
   * **Action ($a_t$):** The move chosen by the agent from the available action space.
   * **Reward ($r_t$):** Immediate numerical feedback received from the environment (positive for beneficial actions, penalty for detrimental actions).
-  * **Policy ($\pi(a|s)$):** The probabilistic strategy mapping states to optimal actions.
+  * **Policy (π(a|s)):** The probabilistic strategy mapping states to optimal actions.
 * **AWS Canonical Implementations:** **AWS DeepRacer** (autonomous 1/18th scale race car driving via RL) and **AWS DeepComposer**.
 
 ---
@@ -182,14 +182,14 @@ flowchart LR
 * **Remedies:**
   1. Increase model capacity (e.g., switch from linear model to Random Forest or Deep Neural Network).
   2. Add more relevant features / domain feature engineering.
-  3. Decrease regularization penalties ($\lambda$ in $L_1/L_2$).
+  3. Decrease regularization penalties (λ in L1/L2).
 
 ### High Variance (Overfitting)
 * **Symptom:** Extremely low training error (e.g., 99.5% accuracy), but disastrously poor performance on validation and test data (e.g., 62% accuracy).
 * **Causes:** Model is overly complex; model memorized idiosyncratic training noise and outliers rather than underlying generalizable distributions; insufficient training dataset size.
 * **Remedies:**
   1. Collect more diverse training data.
-  2. Apply **Regularization**: $L_1$ Lasso (forces unimportant feature weights to zero, acting as feature selection) or $L_2$ Ridge (shrinks feature weights smoothly).
+  2. Apply **Regularization**: L1 Lasso (forces unimportant feature weights to zero, acting as feature selection) or L2 Ridge (shrinks feature weights smoothly).
   3. Prune decision trees (limit maximum depth, increase minimum samples per leaf).
   4. Apply **Dropout** in deep neural networks (randomly deactivating neurons during training).
   5. Implement **Early Stopping** (halting gradient descent when validation loss stops improving).
@@ -199,7 +199,7 @@ flowchart LR
 ## 📊 5. Comprehensive Model Evaluation Metrics
 
 ### 5.1 Classification Metrics: The Confusion Matrix
-For any binary classification problem, predictions fall into a $2 \times 2$ contingency table:
+For any binary classification problem, predictions fall into a 2 × 2 contingency table:
 
 | | Predicted Positive | Predicted Negative |
 | :--- | :---: | :---: |
@@ -228,9 +228,9 @@ flowchart TD
    *Goal:* Minimize False Negatives ($FN$).
 4. **Specificity (True Negative Rate):** What fraction of actual negative cases did the model correctly identify?
    $$\text{Specificity} = \frac{TN}{TN + FP}$$
-5. **$F_1$-Score:** The harmonic mean of Precision and Recall. Essential benchmark for class-imbalanced datasets.
+5. **F1-Score:** The harmonic mean of Precision and Recall. Essential benchmark for class-imbalanced datasets.
    $$F_1 = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}} = \frac{2TP}{2TP + FP + FN}$$
-6. **ROC-AUC (Receiver Operating Characteristic - Area Under Curve):** Plots True Positive Rate (Recall) against False Positive Rate ($1 - \text{Specificity}$) across all classification probability thresholds ($0.0 \le \tau \le 1.0$). An AUC of 1.0 represents a perfect classifier; 0.5 represents random guessing.
+6. **ROC-AUC (Receiver Operating Characteristic - Area Under Curve):** Plots True Positive Rate (Recall) against False Positive Rate (1 - Specificity) across all classification probability thresholds (0.0 ≤ τ ≤ 1.0). An AUC of 1.0 represents a perfect classifier; 0.5 represents random guessing.
 
 ---
 
@@ -239,9 +239,9 @@ flowchart TD
 | Metric | Full Name | Mathematical Formula | Key Characteristics & Exam Sweet Spot |
 | :--- | :--- | :---: | :--- |
 | **MAE** | Mean Absolute Error | $\frac{1}{n} \sum_{i=1}^n \|y_i - \hat{y}_i\|$ | Direct linear average error in natural units (e.g., dollars). Robust to extreme outliers. |
-| **MSE** | Mean Squared Error | $\frac{1}{n} \sum_{i=1}^n (y_i - \hat{y}_i)^2$ | Penalizes large errors heavily due to squaring. In squared units ($\text{units}^2$, e.g. dollars$^2$). |
+| **MSE** | Mean Squared Error | $\frac{1}{n} \sum_{i=1}^n (y_i - \hat{y}_i)^2$ | Penalizes large errors heavily due to squaring. In squared units (units², e.g. dollars²). |
 | **RMSE** | Root Mean Squared Error | $\sqrt{\frac{1}{n} \sum_{i=1}^n (y_i - \hat{y}_i)^2}$ | Returns squared error penalty back to natural units. Highly sensitive to outliers; default loss for regression. |
-| **$R^2$** | Coefficient of Determination | $1 - \frac{\sum (y_i - \hat{y}_i)^2}{\sum (y_i - \bar{y})^2}$ | Explains proportion of variance in $y$ captured by the model ($0 \le R^2 \le 1.0$). 1.0 = perfect prediction. |
+| **R²** | Coefficient of Determination | $1 - \frac{\sum (y_i - \hat{y}_i)^2}{\sum (y_i - \bar{y})^2}$ | Explains proportion of variance in $y$ captured by the model (0 ≤ R² ≤ 1.0). 1.0 = perfect prediction. |
 
 ---
 
@@ -314,7 +314,7 @@ flowchart TD
 
 **Correct Answer:** **B) High Variance (Overfitting); apply L1/L2 regularization and dropout**
 
-* **Why it's correct:** A massive gap between stellar training accuracy (99.8%) and mediocre validation accuracy (61.2%) is the textbook definition of Overfitting (High Variance). The model has memorized training noise. Applying regularization ($L_1$ Lasso, $L_2$ Ridge), adding Dropout layers, or gathering more training data constrains model complexity and restores generalizability.
+* **Why it's correct:** A massive gap between stellar training accuracy (99.8%) and mediocre validation accuracy (61.2%) is the textbook definition of Overfitting (High Variance). The model has memorized training noise. Applying regularization (L1 Lasso, L2 Ridge), adding Dropout layers, or gathering more training data constrains model complexity and restores generalizability.
 * **Distractor Analysis:**
   - *A is incorrect:* High Bias (Underfitting) yields poor accuracy on *both* training and validation sets.
   - *C is incorrect:* Data leakage usually produces artificially inflated, unrealistic test accuracy, not a dramatic drop in test performance.
@@ -346,19 +346,19 @@ When reading a question scenario, search for these exact phrasing triggers:
 ### 2. The 3-Step Rapid Elimination Heuristic
 When evaluating an ML Fundamentals question:
 1. **Step 1: Check for Labels ($Y$):**
-   - Are historical labels/targets provided? $\to$ **Supervised Learning**.
-     - Is the target a **category**? $\to$ **Classification**.
-     - Is the target a **continuous number**? $\to$ **Regression**.
-   - Are there **NO labels** (unlabeled exploration)? $\to$ **Unsupervised Learning**.
-   - Is an **agent interacting with an environment for rewards**? $\to$ **Reinforcement Learning**.
+   - Are historical labels/targets provided? → **Supervised Learning**.
+     - Is the target a **category**? → **Classification**.
+     - Is the target a **continuous number**? → **Regression**.
+   - Are there **NO labels** (unlabeled exploration)? → **Unsupervised Learning**.
+   - Is an **agent interacting with an environment for rewards**? → **Reinforcement Learning**.
 2. **Step 2: Check the Cost of Error (Precision vs. Recall):**
-   - Did the prompt emphasize **"we cannot afford to miss a single positive occurrence"**? $\to$ **RECALL**.
-   - Did the prompt emphasize **"we cannot afford to falsely accuse or flag an innocent sample"**? $\to$ **PRECISION**.
-   - Are classes **heavily imbalanced** (e.g. 99% vs 1%)? $\to$ **ELIMINATE Accuracy immediately**; choose **F1-Score** or **ROC-AUC**.
+   - Did the prompt emphasize **"we cannot afford to miss a single positive occurrence"**? → **RECALL**.
+   - Did the prompt emphasize **"we cannot afford to falsely accuse or flag an innocent sample"**? → **PRECISION**.
+   - Are classes **heavily imbalanced** (e.g. 99% vs 1%)? → **ELIMINATE Accuracy immediately**; choose **F1-Score** or **ROC-AUC**.
 3. **Step 3: Check Tooling Persona:**
-   - Business analyst, zero Python code, drag-and-drop $\to$ **SageMaker Canvas**.
-   - Visual data transformations and feature cleaning $\to$ **SageMaker Data Wrangler**.
-   - Developer wanting automated models + transparent Python notebooks $\to$ **SageMaker Autopilot**.
+   - Business analyst, zero Python code, drag-and-drop → **SageMaker Canvas**.
+   - Visual data transformations and feature cleaning → **SageMaker Data Wrangler**.
+   - Developer wanting automated models + transparent Python notebooks → **SageMaker Autopilot**.
 
 ### 3. High-Frequency Decoy Autopsy: Why AWS Tries to Trick You
 * **Decoy #1: "Accuracy" in Class-Imbalanced Problems**
@@ -367,8 +367,8 @@ When evaluating an ML Fundamentals question:
 * **Decoy #2: "Precision" vs. "Recall"**
   - *The Trap:* Medical diagnosis vs. spam email filtering.
   - *The Autopsy:* Memorize the penalty:
-    - **Cancer / Fraud / Safety:** Missed positive ($FN$) is fatal $\to$ **Recall** ($\frac{TP}{TP + FN}$).
-    - **Spam / Content Moderation / Innocent Accusation:** False alarm ($FP$) destroys trust $\to$ **Precision** ($\frac{TP}{TP + FP}$).
+    - **Cancer / Fraud / Safety:** Missed positive ($FN$) is fatal → **Recall** ($\frac{TP}{TP + FN}$).
+    - **Spam / Content Moderation / Innocent Accusation:** False alarm ($FP$) destroys trust → **Precision** ($\frac{TP}{TP + FP}$).
 * **Decoy #3: "SageMaker Canvas" vs. "SageMaker Data Wrangler"**
   - *The Trap:* A business analyst needs to prepare data and train a churn model without code.
   - *The Autopsy:* If the task is strictly **data import, cleaning, and feature engineering**, choose **Data Wrangler**. If the task is **building, training, and generating predictive models with a point-and-click UI**, choose **SageMaker Canvas**.

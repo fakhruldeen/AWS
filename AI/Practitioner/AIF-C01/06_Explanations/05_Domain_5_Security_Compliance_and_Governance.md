@@ -391,16 +391,16 @@ flowchart TD
 ```
 
 1. **Step 1: Identify the Layer of the Threat or Control:**
-   - Network layer? $\to$ Look for **PrivateLink / VPC Interface Endpoints**.
-   - Data-at-rest layer? $\to$ Look for **AWS KMS CMKs** and **Amazon Macie**.
-   - Application/Prompt layer? $\to$ Look for **Bedrock Guardrails**.
-   - Audit/Compliance layer? $\to$ Look for **CloudTrail**, **Audit Manager**, or **Artifact**.
+   - Network layer? → Look for **PrivateLink / VPC Interface Endpoints**.
+   - Data-at-rest layer? → Look for **AWS KMS CMKs** and **Amazon Macie**.
+   - Application/Prompt layer? → Look for **Bedrock Guardrails**.
+   - Audit/Compliance layer? → Look for **CloudTrail**, **Audit Manager**, or **Artifact**.
 2. **Step 2: Solve the Classic Logging Confusion:**
-   - If the auditor asks: *"Who invoked the model at 3:00 PM from which IP address?"* $\to$ **AWS CloudTrail**.
-   - If the compliance team asks: *"What exact text did the employee type into the prompt, and what was the model's reply?"* $\to$ **Bedrock Model Invocation Logging** (stored in S3/CloudWatch).
+   - If the auditor asks: *"Who invoked the model at 3:00 PM from which IP address?"* → **AWS CloudTrail**.
+   - If the compliance team asks: *"What exact text did the employee type into the prompt, and what was the model's reply?"* → **Bedrock Model Invocation Logging** (stored in S3/CloudWatch).
 3. **Step 3: Solve the Compliance Confusion:**
-   - Need to download a SOC 2 report to show a customer? $\to$ **AWS Artifact**.
-   - Need to continuously collect evidence across AWS accounts for an upcoming audit? $\to$ **AWS Audit Manager**.
+   - Need to download a SOC 2 report to show a customer? → **AWS Artifact**.
+   - Need to continuously collect evidence across AWS accounts for an upcoming audit? → **AWS Audit Manager**.
 
 ---
 

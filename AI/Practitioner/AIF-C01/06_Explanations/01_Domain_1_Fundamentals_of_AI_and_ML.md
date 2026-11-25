@@ -66,8 +66,8 @@ flowchart LR
   * **Anomaly Detection:** Identifying data points that deviate significantly from standard distributions (Isolation Forest, Random Cut Forest in SageMaker).
 
 #### C. Reinforcement Learning (RL)
-* **Definition:** An autonomous agent learns an optimal behavior policy $\pi(s)$ by interacting with an environment through trial and error, receiving scalar numerical rewards or penalties.
-* **Core Terminology:** Agent, Environment, State ($s$), Action ($a$), Reward ($r$), Policy ($\pi$), Value Function ($V(s)$).
+* **Definition:** An autonomous agent learns an optimal behavior policy π(s) by interacting with an environment through trial and error, receiving scalar numerical rewards or penalties.
+* **Core Terminology:** Agent, Environment, State ($s$), Action ($a$), Reward ($r$), Policy (π), Value Function ($V(s)$).
 * **AWS Service:** **AWS DeepRacer** (1/18th scale autonomous vehicle using RL to navigate tracks), **Amazon SageMaker RL**.
 
 ---
@@ -95,17 +95,17 @@ flowchart LR
 * **AWS Service:** **Amazon SageMaker Data Wrangler** (visual data prep with 300+ built-in transformations), **Amazon SageMaker Feature Store** (central repository for storing, discovering, and sharing curated ML features).
 
 ### 2. Model Training & Hyperparameter Tuning
-* **Training Process:** The mathematical optimization algorithm minimizes a loss function $\mathcal{L}(\theta)$ across training epochs by updating model weights $\theta$ via gradient descent.
+* **Training Process:** The mathematical optimization algorithm minimizes a loss function $\mathcal{L}(\theta)$ across training epochs by updating model weights θ via gradient descent.
 * **Parameters vs Hyperparameters:**
-  * **Parameters:** Internal variables learned automatically during training (e.g., neural network weights, regression coefficients $\beta$).
-  * **Hyperparameters:** External configuration settings set prior to training (e.g., learning rate $\alpha$, batch size, tree depth, number of estimators).
+  * **Parameters:** Internal variables learned automatically during training (e.g., neural network weights, regression coefficients β).
+  * **Hyperparameters:** External configuration settings set prior to training (e.g., learning rate α, batch size, tree depth, number of estimators).
 * **AWS Service:** **Amazon SageMaker Training Jobs**, **Amazon SageMaker Automatic Model Tuning (Hyperparameter Optimization - HPO)**.
 
 ### 3. Model Evaluation & Error Diagnostics
 * **Generalization:** A model's ability to accurately predict on unseen out-of-sample data.
 * **The Bias-Variance Tradeoff:**
   * **High Bias (Underfitting):** Model is overly simplistic; fails to capture underlying patterns in both training and test data. *Remedy:* Increase model complexity, add features, decrease regularization.
-  * **High Variance (Overfitting):** Model memorizes noise and specifics of training data; performs well on training set but poorly on test set. *Remedy:* Add more training data, apply regularization ($L_1$/$L_2$), use dropout, prune decision trees, simplify architecture.
+  * **High Variance (Overfitting):** Model memorizes noise and specifics of training data; performs well on training set but poorly on test set. *Remedy:* Add more training data, apply regularization (L1/L2), use dropout, prune decision trees, simplify architecture.
 
 ```mermaid
 graph TD
@@ -142,7 +142,7 @@ $$F_1\text{-Score} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text
 * **Mean Absolute Error (MAE):** $\frac{1}{n} \sum |y_i - \hat{y}_i|$ (Linear penalty, robust to outliers).
 * **Mean Squared Error (MSE):** $\frac{1}{n} \sum (y_i - \hat{y}_i)^2$ (Quadratic penalty, heavily penalizes large errors).
 * **Root Mean Squared Error (RMSE):** $\sqrt{\text{MSE}}$ (Interpreted in the original units of the target variable).
-* **$R^2$ (Coefficient of Determination):** Proportion of variance in the dependent variable predictable from the independent variables (scale: $-\infty$ to $1.0$).
+* **R² (Coefficient of Determination):** Proportion of variance in the dependent variable predictable from the independent variables (scale: -∞ to $1.0$).
 
 ---
 
@@ -251,7 +251,7 @@ Test your mastery of Domain 1 with these 10 exam-style practice questions:
 **A bank is building a credit card fraud detection model where only 0.1% of transactions are fraudulent. The data science team trains a model that achieves 99.9% accuracy, but investigation reveals the model predicted "Not Fraud" for every single transaction. Which metric should the team optimize instead of accuracy?**
 - A) Mean Squared Error (MSE)
 - B) Recall (Sensitivity)
-- C) R-Squared ($R^2$)
+- C) R-Squared (R²)
 - D) Latency
 
 <details>
@@ -262,7 +262,7 @@ Test your mastery of Domain 1 with these 10 exam-style practice questions:
 - **Distractor Analysis:**
   - *Option A is INCORRECT:* Mean Squared Error (MSE) is an evaluation loss metric for continuous numeric regression, not categorical binary classification.
   - *Option B is CORRECT:* Recall directly penalizes False Negatives, forcing the model to detect positive fraud cases.
-  - *Option C is INCORRECT:* R-Squared ($R^2$) measures the proportion of variance explained in linear regression models.
+  - *Option C is INCORRECT:* R-Squared (R²) measures the proportion of variance explained in linear regression models.
   - *Option D is INCORRECT:* Latency measures response time speed (in milliseconds), not classification prediction quality.
 </details>
 
@@ -438,7 +438,7 @@ When reading the exam scenario, train your eye to match the scenario's operative
 | **"Business analyst / no coding / point-and-click"** | **Amazon SageMaker Canvas** | Visual no-code AutoML workspace for non-technical users. | SageMaker Studio (requires writing Python/R code in notebooks). |
 | **"Prepare and clean data visually with 300+ transformations"** | **SageMaker Data Wrangler** | Low-code/visual data preparation, imputation, and feature engineering. | SageMaker Feature Store (stores features; does not visually prepare them). |
 | **"Central repository to store, share, and reuse features"** | **SageMaker Feature Store** | Online (low-latency inference) and offline (batch training) feature registry. | Amazon S3 alone (raw storage without feature metadata, TTL, or point-in-time joins). |
-| **"Statistical relationship between features and target changes"** | **Concept Drift** | $P(Y \mid X)$ alters due to real-world behavioral/economic shifts. | Data Drift ($P(X)$ changes, but relationship to $Y$ remains identical). |
+| **"Statistical relationship between features and target changes"** | **Concept Drift** | P(Y \| X) alters due to real-world behavioral/economic shifts. | Data Drift ($P(X)$ changes, but relationship to $Y$ remains identical). |
 | **"Extract key-value forms and tables from scanned PDFs"** | **Amazon Textract** | Document-aware OCR that understands tables, forms, and key-value layout. | Amazon Rekognition (general computer vision for objects/faces, not document layout). |
 | **"Analyze sentiment, entities, and syntax in text"** | **Amazon Comprehend** | Managed analytical Natural Language Processing (NLP). | Amazon Lex (conversational chatbot interface engine). |
 | **"Convert spoken audio (MP3/WAV) to written text"** | **Amazon Transcribe** | Automatic Speech Recognition (ASR). | Amazon Polly (converts written text to audio speech). |
@@ -471,8 +471,8 @@ flowchart TD
 ```
 
 1. **Step 1: Identify the Mathematical Target:**
-   - Is there a ground-truth label? If NO $\to$ Eliminate all Supervised options (Linear Regression, Logistic Regression, XGBoost). Look for K-Means, PCA, Anomaly Detection.
-   - If YES, is the label continuous or categorical? Continuous $\to$ Regression. Categorical $\to$ Classification.
+   - Is there a ground-truth label? If NO → Eliminate all Supervised options (Linear Regression, Logistic Regression, XGBoost). Look for K-Means, PCA, Anomaly Detection.
+   - If YES, is the label continuous or categorical? Continuous → Regression. Categorical → Classification.
 2. **Step 2: Check the Persona Constraint:**
    - If the question mentions "non-technical", "citizen data scientist", or "business analyst", instantly eliminate options requiring code, terminal, or Jupyter notebooks (SageMaker Studio, Python SDK, Docker). The answer is almost always **SageMaker Canvas**.
 3. **Step 3: Match the Modality Exactly:**
@@ -495,7 +495,7 @@ Below are the most common trap pairs engineered by AWS exam question writers in 
 * **The Decoy:** Confusing *Data Drift* with *Concept Drift*.
 * **The Decoy Test:**
   - **Data Drift ($P(X)$ changes):** The distribution of input features shifts, but the underlying relationship to the target stays the same. *Example:* An e-commerce app suddenly receives younger users; the feature distributions change.
-  - **Concept Drift ($P(Y \mid X)$ changes):** The statistical mapping between inputs and outcomes fundamentally flips. *Example:* During runaway inflation, people with $100k salaries suddenly stop buying luxury goods; the same feature value now yields a completely different behavioral target.
+  - **Concept Drift (P(Y | X) changes):** The statistical mapping between inputs and outcomes fundamentally flips. *Example:* During runaway inflation, people with $100k salaries suddenly stop buying luxury goods; the same feature value now yields a completely different behavioral target.
 
 #### Decoy Trap 3: Amazon Textract vs Amazon Rekognition
 * **The Exam Trap:** The scenario mentions "reading scanned images of receipts, invoices, or medical intake forms".

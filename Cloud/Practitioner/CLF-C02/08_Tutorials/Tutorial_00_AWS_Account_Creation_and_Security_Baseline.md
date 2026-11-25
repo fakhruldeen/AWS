@@ -165,7 +165,7 @@ flowchart TD
 ```
 
 1. **Step 1: Identify the Identity Context:**
-   - If the task is operational, provisioning, or daily management $\to$ **Eliminate any option that uses the root user**.
+   - If the task is operational, provisioning, or daily management → **Eliminate any option that uses the root user**.
 2. **Step 2: Check for Security Anti-Patterns:**
    - Eliminate options suggesting "sharing credentials", "creating multiple root users" (impossible), or "creating root access keys".
 3. **Step 3: Check for Root-Exclusive Tasks:**

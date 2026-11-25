@@ -208,15 +208,15 @@ flowchart TD
 ```
 
 1. **Step 1: Check Deployment Location:**
-   - On-device, vehicle, mobile, offline? $\to$ **Small Language Models (SLMs) on Edge**.
-   - Cloud API? $\to$ Evaluate SageMaker endpoint types.
+   - On-device, vehicle, mobile, offline? → **Small Language Models (SLMs) on Edge**.
+   - Cloud API? → Evaluate SageMaker endpoint types.
 2. **Step 2: Check Inference Traffic Pattern:**
-   - 24/7 steady traffic $\to$ **Real-Time Endpoints**.
-   - Spiky/idle traffic $\to$ **Serverless Inference**.
-   - Large daily offline files $\to$ **Batch Transform**.
+   - 24/7 steady traffic → **Real-Time Endpoints**.
+   - Spiky/idle traffic → **Serverless Inference**.
+   - Large daily offline files → **Batch Transform**.
 3. **Step 3: Check Governance & Drift:**
-   - Statistical distribution shift $\to$ **SageMaker Model Monitor**.
-   - Visualizing feature influence $\to$ **PDPs / SHAP**.
+   - Statistical distribution shift → **SageMaker Model Monitor**.
+   - Visualizing feature influence → **PDPs / SHAP**.
 
 ---
 

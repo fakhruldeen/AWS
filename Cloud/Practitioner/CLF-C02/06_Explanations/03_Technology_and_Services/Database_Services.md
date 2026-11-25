@@ -334,16 +334,16 @@ When reading a question scenario, search for these exact phrasing triggers:
 ### 2. The 3-Step Rapid Elimination Heuristic
 When evaluating an AWS Database question:
 1. **Step 1: Check the Data Model & Query Pattern:**
-   - **Relational Tables & SQL (OLTP):** ACID compliance, foreign keys, users, orders $\to$ **[Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds)** or **[Amazon Aurora](../../AWS_SERVICES_GLOSSARY.md#amazon-aurora)**.
-   - **Key-Value / JSON Documents (NoSQL):** Unstructured, massive scale, partition keys $\to$ **[Amazon DynamoDB](../../AWS_SERVICES_GLOSSARY.md#amazon-dynamodb)**.
-   - **In-Memory RAM (Microseconds):** Session stores, leaderboards, hot query cache $\to$ **[Amazon ElastiCache](../../AWS_SERVICES_GLOSSARY.md#amazon-elasticache)** (or **DynamoDB DAX**).
-   - **Columnar Analytical Warehouse (OLAP):** Aggregating millions of historical rows $\to$ **[Amazon Redshift](../../AWS_SERVICES_GLOSSARY.md#amazon-redshift)**.
-   - **Graph (Nodes & Edges):** Tracing who knows whom, fraud rings $\to$ **[Amazon Neptune](../../AWS_SERVICES_GLOSSARY.md#amazon-neptune)**.
+   - **Relational Tables & SQL (OLTP):** ACID compliance, foreign keys, users, orders → **[Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds)** or **[Amazon Aurora](../../AWS_SERVICES_GLOSSARY.md#amazon-aurora)**.
+   - **Key-Value / JSON Documents (NoSQL):** Unstructured, massive scale, partition keys → **[Amazon DynamoDB](../../AWS_SERVICES_GLOSSARY.md#amazon-dynamodb)**.
+   - **In-Memory RAM (Microseconds):** Session stores, leaderboards, hot query cache → **[Amazon ElastiCache](../../AWS_SERVICES_GLOSSARY.md#amazon-elasticache)** (or **DynamoDB DAX**).
+   - **Columnar Analytical Warehouse (OLAP):** Aggregating millions of historical rows → **[Amazon Redshift](../../AWS_SERVICES_GLOSSARY.md#amazon-redshift)**.
+   - **Graph (Nodes & Edges):** Tracing who knows whom, fraud rings → **[Amazon Neptune](../../AWS_SERVICES_GLOSSARY.md#amazon-neptune)**.
 2. **Step 2: Check Operational Latency Requirement:**
-   - **Microsecond latency:** $\to$ **[Amazon ElastiCache](../../AWS_SERVICES_GLOSSARY.md#amazon-elasticache)** (or **DAX** for DynamoDB).
-   - **Single-digit millisecond latency:** $\to$ **[Amazon DynamoDB](../../AWS_SERVICES_GLOSSARY.md#amazon-dynamodb)**.
-   - **Standard millisecond latency:** $\to$ **[Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds) / Aurora**.
-   - **Seconds to minutes (complex analytical aggregations):** $\to$ **[Amazon Redshift](../../AWS_SERVICES_GLOSSARY.md#amazon-redshift) / Athena**.
+   - **Microsecond latency:** → **[Amazon ElastiCache](../../AWS_SERVICES_GLOSSARY.md#amazon-elasticache)** (or **DAX** for DynamoDB).
+   - **Single-digit millisecond latency:** → **[Amazon DynamoDB](../../AWS_SERVICES_GLOSSARY.md#amazon-dynamodb)**.
+   - **Standard millisecond latency:** → **[Amazon RDS](../../AWS_SERVICES_GLOSSARY.md#amazon-rds) / Aurora**.
+   - **Seconds to minutes (complex analytical aggregations):** → **[Amazon Redshift](../../AWS_SERVICES_GLOSSARY.md#amazon-redshift) / Athena**.
 3. **Step 3: Check Aurora Differentiators:**
    - If the prompt specifically highlights **"5x performance of MySQL"**, **"6 storage copies replicated across 3 AZs"**, or **"storage that auto-grows up to 128 TiB"**, select **[Amazon Aurora](../../AWS_SERVICES_GLOSSARY.md#amazon-aurora)**.
 

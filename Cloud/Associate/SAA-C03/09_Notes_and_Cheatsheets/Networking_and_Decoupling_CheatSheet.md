@@ -31,7 +31,7 @@ flowchart TD
 ```
 
 ### Key Networking Rules:
-1. **Transitive Routing Rule:** VPC Peering **never** supports transitive routing. If $A \leftrightarrow B$ and $B \leftrightarrow C$, $A$ cannot communicate with $C$ through $B$. You must use **Transit Gateway** or create a direct peering link between $A$ and $C$.
+1. **Transitive Routing Rule:** VPC Peering **never** supports transitive routing. If A ↔ B and B ↔ C, $A$ cannot communicate with $C$ through $B$. You must use **Transit Gateway** or create a direct peering link between $A$ and $C$.
 2. **Overlapping CIDR Blocks:** You **cannot** peer two VPCs that have overlapping IPv4 CIDR blocks (e.g., both use `10.0.0.0/16`). To connect services across overlapping CIDRs, you must use **AWS PrivateLink** (which operates at the service level via ENIs).
 3. **Gateway Endpoints vs Interface Endpoints:**
    - **Gateway Endpoints:** Free, edits route tables, supported **only** for **Amazon S3** and **Amazon DynamoDB**.
@@ -46,7 +46,7 @@ flowchart TD
 | **Amazon SQS** | Point-to-Point Queue | **Pull (Polling)** | Consumers actively poll messages from queue (Short or Long Polling). | Decoupling slow backend workers from fast web producers; absorbing traffic spikes; buffering. |
 | **Amazon SNS** | Publish-Subscribe (Pub/Sub) | **Push (Broadcast)** | Pushes messages immediately to all subscribers (SQS, Lambda, HTTPS, SMS, Email). | Fan-out pattern (1 event replicated to 5 queues); alerting; mobile notifications. |
 | **Amazon EventBridge** | Event Bus | **Push (Content-based filtering)** | Routes JSON events to 20+ AWS targets based on declarative event patterns. | Serverless event-driven architectures, SaaS integration (Datadog, Zendesk, Auth0), AWS service state changes. |
-| **AWS Step Functions** | State Machine Workflow | **Orchestrated Workflow** | Manages multi-step distributed logic with branching, retries, and human approvals. | Complex multi-step business transactions (e.g., Order Processing: Charge Card $\rightarrow$ Check Inventory $\rightarrow$ Ship). |
+| **AWS Step Functions** | State Machine Workflow | **Orchestrated Workflow** | Manages multi-step distributed logic with branching, retries, and human approvals. | Complex multi-step business transactions (e.g., Order Processing: Charge Card → Check Inventory → Ship). |
 
 ---
 

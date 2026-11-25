@@ -221,13 +221,13 @@ flowchart TD
 ```
 
 1. **Step 1: Check Dynamic vs. Static Data:**
-   - Needs daily/weekly document updates? $\to$ **RAG (Bedrock Knowledge Bases)**.
-   - Needs domain vocabulary or tone changes? $\to$ **Fine-Tuning (PEFT/LoRA)**.
+   - Needs daily/weekly document updates? → **RAG (Bedrock Knowledge Bases)**.
+   - Needs domain vocabulary or tone changes? → **Fine-Tuning (PEFT/LoRA)**.
 2. **Step 2: Check Vector Storage Architecture:**
-   - Serverless vector search for Bedrock? $\to$ **Amazon OpenSearch Serverless**.
-   - Relational database with vector extension? $\to$ **Amazon Aurora PostgreSQL (`pgvector`)**.
+   - Serverless vector search for Bedrock? → **Amazon OpenSearch Serverless**.
+   - Relational database with vector extension? → **Amazon Aurora PostgreSQL (`pgvector`)**.
 3. **Step 3: Check Verification & Citations:**
-   - Must show the user where the answer came from? $\to$ RAG provides **grounding citations**.
+   - Must show the user where the answer came from? → RAG provides **grounding citations**.
 
 ---
 

@@ -351,14 +351,14 @@ When evaluating a CAF or Migration question:
    - **Business Capabilities:** Business (ROI/Value), People (Training/HR/Culture), Governance (FinOps/Portfolios).
    - **Technical Capabilities:** Platform (Landing Zones/Architecture), Security (IAM/Compliance), Operations (Daily runbooks/SLA monitoring).
 2. **Step 2: Trace the Migration Effort & Code Modification:**
-   - **Zero code changes, move raw VMs:** $\to$ **Rehost** (Lift and Shift).
-   - **Hypervisor lift (VMware to VMware):** $\to$ **Relocate**.
-   - **Swap underlying infrastructure to managed PaaS (e.g., DB to RDS):** $\to$ **Replatform**.
-   - **Full code rewrite to Serverless / Microservices:** $\to$ **Refactor** (Highest effort, highest agility).
-   - **Scrap code, buy third-party SaaS:** $\to$ **Repurchase**.
+   - **Zero code changes, move raw VMs:** → **Rehost** (Lift and Shift).
+   - **Hypervisor lift (VMware to VMware):** → **Relocate**.
+   - **Swap underlying infrastructure to managed PaaS (e.g., DB to RDS):** → **Replatform**.
+   - **Full code rewrite to Serverless / Microservices:** → **Refactor** (Highest effort, highest agility).
+   - **Scrap code, buy third-party SaaS:** → **Repurchase**.
 3. **Step 3: Keep vs. Kill (Retain vs. Retire):**
-   - If the business **continues running the app on-premises** $\to$ **Retain**.
-   - If the business **turns off the server and deletes the software** $\to$ **Retire**.
+   - If the business **continues running the app on-premises** → **Retain**.
+   - If the business **turns off the server and deletes the software** → **Retire**.
 
 ### 3. High-Frequency Decoy Autopsy: Why AWS Tries to Trick You
 * **Decoy #1: "People Perspective" vs. "Governance Perspective"**

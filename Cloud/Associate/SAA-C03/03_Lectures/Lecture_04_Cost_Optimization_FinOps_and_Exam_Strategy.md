@@ -45,7 +45,7 @@ By the end of this lecture, candidates will be able to:
 ### 2. Networking Cost Optimization: The NAT Gateway Fee Killer
 - **The Problem:** Private EC2 instances downloading 100 TB from S3 through a NAT Gateway incur:
   - Fixed hourly charge ($0.045/hr $	imes$ 720h = ~$32/month)
-  - Data processing fee ($0.045/GB $	imes$ 100,000 GB = **$4,500/month**!)
+  - Data processing fee ($0.045/GB $	imes100,000 GB = **4,500/month**!)
 - **The Solution:** Deploy a **Gateway VPC Endpoint for S3** in the VPC route table. Gateway Endpoints are completely **FREE** ($0.00/GB and $0.00/hr), saving $4,500/month instantly!
 
 ### 3. Compute Purchasing Strategies Compared
@@ -65,10 +65,10 @@ By the end of this lecture, candidates will be able to:
 
 ### How to Deconstruct an SAA-C03 Scenario Question:
 1. **Identify the Core Constraint:** Scan the last sentence first. Does the question ask for:
-   - *"With the lowest cost"* $\implies$ Look for Spot, S3 Intelligent-Tiering/Glacier Deep Archive, Gateway Endpoints, Serverless.
-   - *"With minimal operational overhead"* $\implies$ Look for managed AWS services (Aurora over EC2 MySQL, Fargate over EC2 clusters, Secrets Manager over custom scripts).
-   - *"With the lowest latency"* $\implies$ Look for Global Accelerator, CloudFront, DAX, ElastiCache, Cluster Placement Groups.
-   - *"With the highest availability"* $\implies$ Look for Multi-AZ, Aurora Global Database, Cross-Region replication.
+   - *"With the lowest cost"* ⇒ Look for Spot, S3 Intelligent-Tiering/Glacier Deep Archive, Gateway Endpoints, Serverless.
+   - *"With minimal operational overhead"* ⇒ Look for managed AWS services (Aurora over EC2 MySQL, Fargate over EC2 clusters, Secrets Manager over custom scripts).
+   - *"With the lowest latency"* ⇒ Look for Global Accelerator, CloudFront, DAX, ElastiCache, Cluster Placement Groups.
+   - *"With the highest availability"* ⇒ Look for Multi-AZ, Aurora Global Database, Cross-Region replication.
 2. **Eliminate Non-Viable Options:** Cross off options that violate constraints (e.g., using Public ACLs, using Classic Load Balancers, or storing static credentials in code).
 3. **Beware of Partial Truths:** An option might describe a valid configuration, but fails the specific constraint of the question (e.g., configuring Provisioned IOPS `io2` when the prompt specifically asked for the *most cost-effective* solution).
 
@@ -81,4 +81,4 @@ By the end of this lecture, candidates will be able to:
    ```bash
    python3 scripts/aws_revision_runner.py --cert SAA --mode mock
    ```
-4. **Target Benchmark:** Achieve $\ge 85\%$ on the Full-Length Mock Exam before scheduling the official Pearson VUE exam.
+4. **Target Benchmark:** Achieve ≥ 85% on the Full-Length Mock Exam before scheduling the official Pearson VUE exam.

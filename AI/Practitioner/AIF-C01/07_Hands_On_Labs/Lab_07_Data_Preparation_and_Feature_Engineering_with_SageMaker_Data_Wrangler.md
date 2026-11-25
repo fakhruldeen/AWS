@@ -16,7 +16,7 @@ By completing this guided lab, you will master:
 1. **Automated Data Quality & Insights Reporting:** Generating comprehensive data health reports in **Amazon SageMaker Data Wrangler** to detect **target leakage**, **outliers**, and **imbalanced distributions**.
 2. **Missing Value Imputation:** Applying statistical imputation strategies (Mean, Median, Mode) versus record dropping.
 3. **Categorical Encoding:** Choosing and applying **One-Hot Encoding** (for low-cardinality nominal categories) versus **Ordinal Encoding**.
-4. **Feature Scaling & Normalization:** Understanding when to apply **Min-Max Normalization** ($[0, 1]$ bounds) versus **Z-Score Standardization** ($\mu=0, \sigma=1$).
+4. **Feature Scaling & Normalization:** Understanding when to apply **Min-Max Normalization** ($[0, 1]$ bounds) versus **Z-Score Standardization** (μ=0, σ=1).
 5. **Feature Store Export:** Exporting curated feature pipelines to **Amazon S3** and **SageMaker Feature Store**.
 
 ---

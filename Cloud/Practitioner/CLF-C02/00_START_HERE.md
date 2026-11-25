@@ -221,7 +221,7 @@ flowchart TD
 ---
 
 ### 📅 Day 7: Final Strategy, High-Yield Pools & Timed Mock Simulations
-*Review exam trap patterns, memorize high-yield distinction triggers, complete verified authentic questions, and achieve $\ge 85\%$ on the full-length timed mock simulation.*
+*Review exam trap patterns, memorize high-yield distinction triggers, complete verified authentic questions, and achieve ≥ 85% on the full-length timed mock simulation.*
 
 - [ ] **Step 1 (Strategy & Traps):** Study [`09_Notes_and_Cheatsheets/Exam_Decryption_Playbook_and_Mnemonics.md`](./09_Notes_and_Cheatsheets/Exam_Decryption_Playbook_and_Mnemonics.md)
 - [ ] **Step 2 (Cheat Sheet Cram):** Review [`01_Syllabus/Exam_Distinction_CheatSheet.md`](./01_Syllabus/Exam_Distinction_CheatSheet.md) & [`09_Notes_and_Cheatsheets/Rapid_Review_Cheatsheet.md`](./09_Notes_and_Cheatsheets/Rapid_Review_Cheatsheet.md)
@@ -248,7 +248,7 @@ flowchart TD
     ```bash
     python3 scripts/aws_revision_runner.py --cert CLF --mode weakness
     ```
-- [ ] **Step 7 (Final Exam Readiness Sign-Off):** Achieved $\ge 85\%$ in mock simulation. You are ready to ace the real exam!
+- [ ] **Step 7 (Final Exam Readiness Sign-Off):** Achieved ≥ 85% in mock simulation. You are ready to ace the real exam!
 
 ---
 
@@ -263,7 +263,7 @@ Track your completion by checking off each module as you study:
 - [ ] **Day 5 (Security & Identity):** Read Lecture 05 & Complete Lab 01 (IAM & MFA)
 - [ ] **Day 6 (Billing & Support):** Read Lecture 06 & Review Support Plan SLAs
 - [ ] **Day 7 (Authentic Practice Pool):** Completed 25 questions from the November 2026 Release (`--release-2026`)
-- [ ] **Day 7 (Mock Simulation):** Scored $\ge 85\%$ on the 65-question timed mock exam (`--mode mock`)
+- [ ] **Day 7 (Mock Simulation):** Scored ≥ 85% on the 65-question timed mock exam (`--mode mock`)
 
 ---
 

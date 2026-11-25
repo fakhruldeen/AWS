@@ -28,7 +28,7 @@
 | **ROUGE-L** | ROUGE Longest Common Subsequence | Summarization fluency | Sentence structure & order | Higher is better ($0 - 1$) | Evaluating sentence flow and structural order of summary. |
 | **BLEU** | Bilingual Evaluation Understudy | **Machine Translation** | **Precision** + Brevity Penalty | Higher is better ($0 - 1$) | Checking translation accuracy against ground truth sentences. |
 | **BERTScore** | BERT Semantic Score | Open-ended text, synonyms | **Semantic Cosine Similarity** | Higher is better ($0 - 1$) | Words differ in phrasing/synonyms but share exact meaning. |
-| **Perplexity (PPL)** | Perplexity | Language model fluency | Uncertainty / entropy | **Lower is better** ($1 - \infty$) | Evaluating grammatical fluency and predictability of model output. |
+| **Perplexity (PPL)** | Perplexity | Language model fluency | Uncertainty / entropy | **Lower is better** (1 - ∞) | Evaluating grammatical fluency and predictability of model output. |
 
 ---
 
@@ -185,7 +185,7 @@ graph LR
 ## 11. Final 15-Minute Exam Day Review (Say These Out Loud!)
 
 1. **Bedrock** uses existing FMs via API. **SageMaker AI** builds, trains, and deploys custom ML.
-2. Stale or private company facts? $\to$ **RAG**. Custom organizational behavior and tone? $\to$ **Fine-Tuning**.
+2. Stale or private company facts? → **RAG**. Custom organizational behavior and tone? → **Fine-Tuning**.
 3. Always escalate in order: **Prompting first**, then **RAG**, then **Fine-Tuning**, and **Pre-Training last**.
 4. Low Temperature ($0.0 - 0.2$) = predictable and factual. High Temperature ($0.8 - 1.0$) = creative and varied.
 5. Embeddings compare semantic meaning. Tokens get counted for billing and context limits.
@@ -194,6 +194,6 @@ graph LR
 8. **AgentCore Identity** = who the agent is. **AgentCore Policy** = what the agent is allowed to do.
 9. Classification = category (including yes/no fraud). Regression = continuous number.
 10. **Recall** for costly missed cases (disease, fraud). **Precision** for costly false alarms (spam, blocking good users).
-11. **Hallucination $\neq$ Bias.** Hallucination is made-up output (fix with RAG). Bias is unfair skew across groups (fix with balanced data/Clarify).
+11. **Hallucination ≠ Bias.** Hallucination is made-up output (fix with RAG). Bias is unfair skew across groups (fix with balanced data/Clarify).
 12. **Context Engineering:** Controlling the full bundle of system instructions, retrieved documents, chat history, and tool execution results that enter the context window.
 

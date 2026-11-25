@@ -129,7 +129,7 @@ flowchart LR
 ### Parameter-Efficient Fine-Tuning (PEFT) and LoRA
 * **Low-Rank Adaptation (LoRA):** Freezes the pre-trained model weights and injects trainable rank-decomposition matrices into each layer of the Transformer architecture.
 * **Advantages:** 
-  * Reduces trainable parameters by $>90\%$.
+  * Reduces trainable parameters by >90%.
   * Prevents **Catastrophic Forgetting** (where an LLM loses its general reasoning abilities).
   * Drastically reduces GPU memory requirements.
 * **Amazon Bedrock Custom Models:** Supports PEFT fine-tuning on labeled training datasets stored in Amazon S3 (JSON Lines format with `prompt` and `completion` keys).
@@ -236,7 +236,7 @@ Test your mastery of Domain 3 with these 10 exam-style practice questions:
 <summary><b>Click to View Answer & Explanation</b></summary>
 
 **Correct Answer:** **B) LoRA freezes the original pre-trained model weights and trains a small set of low-rank adapter matrices (< 1% of parameters), reducing GPU memory and preventing catastrophic forgetting.**  
-- **Why it's correct:** LoRA decomposes parameter weight updates into two smaller low-rank matrices ($W = W_0 + B \times A$), freezing the original weights $W_0$. This slashes required GPU memory and training time by over 70% while safeguarding the base model against catastrophic forgetting.
+- **Why it's correct:** LoRA decomposes parameter weight updates into two smaller low-rank matrices (W = W₀ + B × A), freezing the original weights W₀. This slashes required GPU memory and training time by over 70% while safeguarding the base model against catastrophic forgetting.
 - **Distractor Analysis:**
   - *Option A is INCORRECT:* Training all weights from scratch is pre-training, which requires massive computational resources.
   - *Option B is CORRECT:* LoRA freezes base weights and trains lightweight adapter matrices.
@@ -393,7 +393,7 @@ Test your mastery of Domain 3 with these 10 exam-style practice questions:
 | **"Serverless vector store tightly integrated with Bedrock RAG"** | **Amazon OpenSearch Serverless** | Serverless vector database managing k-NN search without infrastructure ops. | Amazon DynamoDB (NoSQL key-value store; not optimized for dense vector cosine search). |
 | **"Adapt model style / vocabulary cheaply without retraining all weights"** | **PEFT / LoRA** | Parameter-Efficient Fine-Tuning trains low-rank adapter matrices (< 1% weights). | Full Fine-Tuning (expensive, GPU-heavy, risks catastrophic forgetting). |
 | **"Autonomous multi-step actions / API calls / Lambda execution"** | **Amazon Bedrock Agents** | ReAct framework decomposing user goals into Action Groups and Lambda calls. | Bedrock Knowledge Bases (retrieves documents; does not execute actions or APIs). |
-| **"Open standard protocol connecting agents to tools/data over JSON-RPC"** | **Model Context Protocol (MCP)** | Standardized protocol allowing LLMs to discover tools, resources, and prompts. | Proprietary custom API wrappers for every individual tool ($M \times N$ complexity). |
+| **"Open standard protocol connecting agents to tools/data over JSON-RPC"** | **Model Context Protocol (MCP)** | Standardized protocol allowing LLMs to discover tools, resources, and prompts. | Proprietary custom API wrappers for every individual tool (M × N complexity). |
 | **"Deploy a custom fine-tuned model on Amazon Bedrock"** | **Provisioned Throughput** | Custom models require dedicated Model Units under 1- or 6-month commitments. | On-Demand pay-per-token (only available for shared base foundation models). |
 | **"Non-real-time bulk summarization of S3 files at 50% discount"** | **Bedrock Batch Inference** | Asynchronous processing of bulk JSONL prompts from S3 within 24 hours. | Provisioned Throughput (committed real-time capacity). |
 | **"Enterprise employee assistant adhering to document ACL permissions"** | **Amazon Q Business** | 40+ connectors indexing SharePoint/Drive with strict user-level access controls. | Amazon Q Developer (developer coding tool for IDEs and CLI). |
@@ -422,15 +422,15 @@ flowchart TD
 ```
 
 1. **Step 1: Determine the Adaptation Strategy:**
-   - Need to incorporate new external documents that change frequently? $\to$ **RAG (Bedrock Knowledge Bases)**.
-   - Need to teach the model a specific tone, jargon, or output schema where facts don't change? $\to$ **PEFT (LoRA)**.
-   - Need the model to execute transactions (cancel flight, query database)? $\to$ **Bedrock Agents**.
+   - Need to incorporate new external documents that change frequently? → **RAG (Bedrock Knowledge Bases)**.
+   - Need to teach the model a specific tone, jargon, or output schema where facts don't change? → **PEFT (LoRA)**.
+   - Need the model to execute transactions (cancel flight, query database)? → **Bedrock Agents**.
 2. **Step 2: Check Bedrock Pricing Constraints:**
-   - Did the company fine-tune a model? $\to$ It **CANNOT** use On-Demand. It MUST purchase **Provisioned Throughput**.
-   - Is it processing millions of backlogged documents overnight? $\to$ Look for **Batch Inference** (50% cheaper).
+   - Did the company fine-tune a model? → It **CANNOT** use On-Demand. It MUST purchase **Provisioned Throughput**.
+   - Is it processing millions of backlogged documents overnight? → Look for **Batch Inference** (50% cheaper).
 3. **Step 3: Disambiguate Amazon Q:**
-   - Mentions developer, code completion, unit testing, git, or IDE? $\to$ **Amazon Q Developer**.
-   - Mentions business users, Jira, Salesforce, SharePoint, HR policies, or access control lists (ACLs)? $\to$ **Amazon Q Business**.
+   - Mentions developer, code completion, unit testing, git, or IDE? → **Amazon Q Developer**.
+   - Mentions business users, Jira, Salesforce, SharePoint, HR policies, or access control lists (ACLs)? → **Amazon Q Business**.
 
 ---
 

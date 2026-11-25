@@ -77,7 +77,7 @@
 | **2** | **B** | DPL (Pre-Training Bias) | DPL measures $q_a - q_d$ (the difference in favorable outcome rates between demographic facets in historical training data). |
 | **3** | **B** | SHAP Values | Grounded in cooperative game theory, SHAP values explain individual and global feature importance. |
 | **4** | **B** | Sensitive Information Filters | Bedrock Guardrails can either `ANONYMIZE` (mask with placeholders) or `BLOCK` predefined PII entities and regexes. |
-| **5** | **A** | Disparate Impact | Disparate Impact ($DI$) calculates the ratio of positive prediction rates. Values $<0.80$ indicate adverse disparate impact. |
+| **5** | **A** | Disparate Impact | Disparate Impact ($DI$) calculates the ratio of positive prediction rates. Values <0.80 indicate adverse disparate impact. |
 | **6** | **B** | SageMaker Model Cards | Model Cards provide an auditable source of truth detailing model intended uses, risk ratings, and evaluation benchmarks. |
 | **7** | **B** | Contextual Grounding Check | Contextual Grounding filters score responses for Grounding (factual adherence to RAG docs) and Relevance to the user query. |
 | **8** | **B** | IP Indemnification | AWS offers intellectual property indemnification for customers using Amazon Titan foundation models. |

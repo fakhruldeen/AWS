@@ -40,8 +40,8 @@ flowchart LR
 * **Synchronous vs. Asynchronous Replication:**
   - **Synchronous Replication (Multi-AZ):** A database transaction is only confirmed as committed after the Write-Ahead Log (WAL) block has been written to disk in **both** Availability Zone A and Availability Zone B:
     $$T_{\text{commit}} = T_{\text{local}} + \text{RTT}_{\text{cross-AZ}} + T_{\text{remote-fsync}}$$
-    Because AZs are connected via private dark fiber with $< 1\text{–}2\text{ ms}$ latency, synchronous replication is feasible without crippling database transaction throughput. **RPO = 0 (Zero data loss).**
-  - **Asynchronous Replication (Cross-Region):** Across continental distances ($> 1{,}000\text{ km}$), network propagation delays ($> 50\text{ ms}$) make synchronous replication impossible without bringing transactional databases to a standstill. Cross-region data replication (e.g., RDS Read Replicas or S3 Cross-Region Replication) is therefore **asynchronous**. Transactions are committed locally first and shipped across regions milliseconds later. **RPO > 0 (Small data loss window).**
+    Because AZs are connected via private dark fiber with < 1–2 ms latency, synchronous replication is feasible without crippling database transaction throughput. **RPO = 0 (Zero data loss).**
+  - **Asynchronous Replication (Cross-Region):** Across continental distances (> 1{,}000 km), network propagation delays (> 50 ms) make synchronous replication impossible without bringing transactional databases to a standstill. Cross-region data replication (e.g., RDS Read Replicas or S3 Cross-Region Replication) is therefore **asynchronous**. Transactions are committed locally first and shipped across regions milliseconds later. **RPO > 0 (Small data loss window).**
 
 ---
 
@@ -52,7 +52,7 @@ Before automated cloud disaster recovery, enterprise business continuity was one
 | Enterprise DR Challenge | Traditional On-Premises Data Center | AWS Cloud Resilience Paradigm |
 |---|---|---|
 | **Tape Archiving & Off-Site Vaulting** | Nightly backup tapes were written manually, packed into metal boxes, and driven by courier truck to underground limestone vaults (Iron Mountain). Restoring from tape took **2 to 5 days**. | **[Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3) & [AWS Backup](../../AWS_SERVICES_GLOSSARY.md#aws-backup)**. Automated, continuous snapshot replication across 3+ AZs with instant restore APIs. |
-| **Idle Secondary Data Centers** | Large enterprises built duplicate "hot sites" with identical hardware that sat $100\%$ idle 24/7/365, wasting tens of millions in capital expense. | **Cloud Elasticity**. With Infrastructure as Code (CloudFormation), secondary DR infrastructure can be spun up in minutes only when disaster strikes. |
+| **Idle Secondary Data Centers** | Large enterprises built duplicate "hot sites" with identical hardware that sat 100% idle 24/7/365, wasting tens of millions in capital expense. | **Cloud Elasticity**. With Infrastructure as Code (CloudFormation), secondary DR infrastructure can be spun up in minutes only when disaster strikes. |
 | **Annual Failover Disasters** | Companies ran mandatory DR failover drills once a year on weekends. Inevitably, IP address conflicts, obsolete drivers, and configuration drift caused the test to fail. | **Automated Chaos Testing**. Test failovers continuously during normal business hours using [AWS Fault Injection Service](../../AWS_SERVICES_GLOSSARY.md#aws-fault-injection-service) without impacting end users. |
 
 ---
@@ -284,16 +284,16 @@ When reading a question scenario, search for these exact phrasing triggers:
 ### 2. The 3-Step Rapid Elimination Heuristic
 When evaluating a Disaster Recovery or Availability question:
 1. **Step 1: Distinguish Data Loss (Point) from Downtime (Time):**
-   - Did the prompt mention **"how many minutes of database transactions can we afford to lose?"** $\to$ **RPO** (Think: Point in time where data was saved).
-   - Did the prompt mention **"how many minutes/hours can the site stay offline?"** $\to$ **RTO** (Think: Time clock ticking while users wait).
+   - Did the prompt mention **"how many minutes of database transactions can we afford to lose?"** → **RPO** (Think: Point in time where data was saved).
+   - Did the prompt mention **"how many minutes/hours can the site stay offline?"** → **RTO** (Think: Time clock ticking while users wait).
 2. **Step 2: Check What is Running in the Secondary Region:**
-   - **Zero compute, zero live database** (Only cold backups/snapshots in S3) $\to$ **Backup & Restore**.
-   - **Live database running/synced, ZERO compute instances running** (AMIs ready to boot) $\to$ **Pilot Light**.
-   - **Live database running, PLUS small scaled-down EC2 fleet running 24/7** $\to$ **Warm Standby**.
-   - **Full 100% production fleet handling live user traffic right now** $\to$ **Multi-Site Active/Active**.
+   - **Zero compute, zero live database** (Only cold backups/snapshots in S3) → **Backup & Restore**.
+   - **Live database running/synced, ZERO compute instances running** (AMIs ready to boot) → **Pilot Light**.
+   - **Live database running, PLUS small scaled-down EC2 fleet running 24/7** → **Warm Standby**.
+   - **Full 100% production fleet handling live user traffic right now** → **Multi-Site Active/Active**.
 3. **Step 3: Check RDS Multi-AZ vs. Read Replicas:**
-   - If the business wants **automated failover during an AZ outage** without losing data $\to$ **RDS Multi-AZ**.
-   - If the business wants **faster read queries for analytical reports or global readers** $\to$ **RDS Read Replicas**.
+   - If the business wants **automated failover during an AZ outage** without losing data → **RDS Multi-AZ**.
+   - If the business wants **faster read queries for analytical reports or global readers** → **RDS Read Replicas**.
    - *Trap rule:* You **CANNOT** connect your application to read from an RDS Multi-AZ standby replica! It is invisible until failover.
 
 ### 3. High-Frequency Decoy Autopsy: Why AWS Tries to Trick You

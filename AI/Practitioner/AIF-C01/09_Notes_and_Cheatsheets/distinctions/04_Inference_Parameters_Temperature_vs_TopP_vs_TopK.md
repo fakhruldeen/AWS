@@ -24,9 +24,9 @@ flowchart TD
 
 | Parameter | Mathematical Mechanism | Value Range | Low Value Impact | High Value Impact | Ideal Use Case |
 |---|---|---|---|---|---|
-| **Temperature ($T$)** | Divides raw logits prior to Softmax: $P(y_i) = \frac{e^{z_i / T}}{\sum_j e^{z_j / T}}$ | $0.0 \to 1.0$ (or up to $2.0$) | **$0.0 \to 0.2$:** Distribution becomes sharp and peaked. Picks the single highest-probability token (**Greedy Search**). Maximum determinism. | **$0.7 \to 1.0+$:** Flattens distribution, elevating tail tokens. Generates diverse, surprising, and creative outputs (higher hallucination risk). | Low: Fact extraction, SQL/code generation, math.  High: Brainstorming, marketing copy, poetry. |
-| **Top-P (Nucleus Sampling)** | Sorts tokens by probability and keeps the smallest dynamic subset whose cumulative sum reaches $P$. | $0.0 \to 1.0$ (typically $0.7 \to 0.95$) | **$0.1 \to 0.5$:** Highly restrictive; only top few candidate tokens are considered. Tight, focused output. | **$0.9 \to 1.0$:** Considers broad vocabulary pool, dynamically expanding when several tokens are equally likely. | Used in tandem with Temperature to dynamically adjust candidate pool width based on context certainty. |
-| **Top-K** | Hard cutoff retaining only the fixed $K$ highest-probability tokens; sets probability of all other tokens to zero. | Integer $\ge 1$ (typically $1 \to 250$) | **$K = 1$:** Identical to greedy search (purely deterministic). Low $K$ removes wild hallucinations. | **$K = 100+$:** Allows wider diversity of vocabulary choices. | Filtering out bizarre low-probability tokens without distorting probability ratios of top candidates. |
+| **Temperature ($T$)** | Divides raw logits prior to Softmax: $P(y_i) = \frac{e^{z_i / T}}{\sum_j e^{z_j / T}}$ | 0.0 → 1.0 (or up to $2.0$) | **0.0 → 0.2:** Distribution becomes sharp and peaked. Picks the single highest-probability token (**Greedy Search**). Maximum determinism. | **0.7 → 1.0+:** Flattens distribution, elevating tail tokens. Generates diverse, surprising, and creative outputs (higher hallucination risk). | Low: Fact extraction, SQL/code generation, math.  High: Brainstorming, marketing copy, poetry. |
+| **Top-P (Nucleus Sampling)** | Sorts tokens by probability and keeps the smallest dynamic subset whose cumulative sum reaches $P$. | 0.0 → 1.0 (typically 0.7 → 0.95) | **0.1 → 0.5:** Highly restrictive; only top few candidate tokens are considered. Tight, focused output. | **0.9 → 1.0:** Considers broad vocabulary pool, dynamically expanding when several tokens are equally likely. | Used in tandem with Temperature to dynamically adjust candidate pool width based on context certainty. |
+| **Top-K** | Hard cutoff retaining only the fixed $K$ highest-probability tokens; sets probability of all other tokens to zero. | Integer ≥ 1 (typically 1 → 250) | **K = 1:** Identical to greedy search (purely deterministic). Low $K$ removes wild hallucinations. | **K = 100+:** Allows wider diversity of vocabulary choices. | Filtering out bizarre low-probability tokens without distorting probability ratios of top candidates. |
 | **Stop Sequences** | One or more literal text strings that immediately halt token generation. | Array of strings (e.g. `["\n", "User:", "```"]`) | N/A | Halts generation as soon as matched, saving token costs and preventing output run-ons. | Multi-turn dialog turns, stopping code blocks, limiting to single lines. |
 
 ---
@@ -35,7 +35,7 @@ flowchart TD
 
 1. **Top-K is Static:** It always considers exactly $K$ words, regardless of whether the model is 99% certain or completely unsure.
 2. **Top-P is Dynamic:** 
-   - If the top token has probability $0.92$ and $P=0.90$, **only 1 token is considered**.
+   - If the top token has probability $0.92$ and P=0.90, **only 1 token is considered**.
    - If 10 tokens each have probability $0.09$, **all 10 tokens are considered**. Top-P adapts dynamically to the model's confidence!
 3. **Temperature transforms probabilities:** It does not filter candidate tokens out; it changes their relative weights before sampling.
 

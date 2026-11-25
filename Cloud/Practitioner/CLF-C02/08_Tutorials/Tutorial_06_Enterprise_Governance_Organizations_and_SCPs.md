@@ -226,14 +226,14 @@ flowchart TD
 ```
 
 1. **Step 1: Check Governance vs. Financial:**
-   - Multi-account billing, single invoice, aggregated volume pricing? $\to$ **AWS Organizations Consolidated Billing**.
-   - Multi-account security ceiling, disable regions, block S3 deletion? $\to$ **Service Control Policies (SCPs)**.
+   - Multi-account billing, single invoice, aggregated volume pricing? → **AWS Organizations Consolidated Billing**.
+   - Multi-account security ceiling, disable regions, block S3 deletion? → **Service Control Policies (SCPs)**.
 2. **Step 2: Remember the SCP Golden Rules:**
    - SCPs **never grant permissions**; they only filter/limit.
    - SCPs **apply to member account root users**.
    - SCPs **do not apply to the management (payer) account**.
 3. **Step 3: Central Security Enforcement:**
-   - If managing firewalls, WAF, or Security Groups across accounts $\to$ **AWS Firewall Manager**.
+   - If managing firewalls, WAF, or Security Groups across accounts → **AWS Firewall Manager**.
 
 ---
 

@@ -45,7 +45,7 @@ All vector databases compute similarity using distance metrics in $N$-dimensiona
    *Best for text embeddings where magnitude varies with sentence length.*
 2. **Euclidean Distance ($L2$):** Measures straight-line geometric distance between two points:
    $$d(A, B) = \sqrt{\sum_{i=1}^n (A_i - B_i)^2}$$
-3. **Dot Product (Inner Product):** Fastest computation when vectors are strictly unit-normalized ($\|A\| = 1$).
+3. **Dot Product (Inner Product):** Fastest computation when vectors are strictly unit-normalized (‖A‖ = 1).
 
 ---
 

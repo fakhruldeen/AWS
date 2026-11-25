@@ -14,9 +14,9 @@ Complete this rapid diagnostic retention check after reviewing Domain 1 material
 ### Question 1
 An ML engineer is building a feature engineering pipeline that ingests continuous IoT sensor telemetry from thousands of devices. The pipeline must compute rolling 10-minute averages and store features for both low-latency real-time online inference and batch offline training. Which architecture should be deployed?
 
-- **A.** Amazon Kinesis Data Streams $\rightarrow$ Amazon SageMaker Feature Store (with Online Store for real-time reads and Offline Store in Amazon S3).
-- **B.** Amazon CloudWatch Logs $\rightarrow$ AWS CloudTrail $\rightarrow$ Amazon DynamoDB.
-- **C.** Amazon SQS $\rightarrow$ AWS Lambda $\rightarrow$ Amazon EBS volume.
+- **A.** Amazon Kinesis Data Streams → Amazon SageMaker Feature Store (with Online Store for real-time reads and Offline Store in Amazon S3).
+- **B.** Amazon CloudWatch Logs → AWS CloudTrail → Amazon DynamoDB.
+- **C.** Amazon SQS → AWS Lambda → Amazon EBS volume.
 - **D.** AWS Glue ETL running on a monthly batch schedule.
 
 <details>
@@ -84,7 +84,7 @@ A machine learning engineer notices that 98% of values in a `Salary` column are 
 **Correct Answer:** **A**
 
 **Explanation:**
-Min-Max scaling and standard Z-score scaling are severely distorted by extreme outliers because they rely on minimum/maximum or mean/variance. **RobustScaler** scales features using statistics that are robust to outliers: median and IQR ($Q_3 - Q_1$).
+Min-Max scaling and standard Z-score scaling are severely distorted by extreme outliers because they rely on minimum/maximum or mean/variance. **RobustScaler** scales features using statistics that are robust to outliers: median and IQR (Q₃ - Q₁).
 </details>
 
 ---

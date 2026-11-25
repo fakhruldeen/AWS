@@ -34,7 +34,7 @@ Bias can infiltrate an AI system at every stage of the lifecycle—from raw data
 | **Observer Bias** | Preexisting expectations, stereotypes, or beliefs of researchers or data annotators unconsciously skewing data labeling. | Human annotators inconsistently labeling identical support tickets as "aggressive" based on user demographic tags. | Anonymized labeling in **SageMaker Ground Truth**; multi-annotator consensus. |
 | **Confirmation Bias** | Favoring data or model outcomes that confirm preexisting hypotheses while ignoring contradictory evidence. | Ignoring false negatives in a fraud detection pipeline because "that user profile seemed trustworthy". | Rigorous automated cross-validation and independent red-teaming. |
 | **Historical Bias** | Data accurately reflects historical conditions, but those historical conditions were socially biased or discriminatory. | Training hiring algorithms on 20 years of historical tech promotions where women were underrepresented. | Rebalancing datasets, synthetic data generation, constraint penalties. |
-| **Algorithmic Bias** | Model architecture or optimization function inadvertently exacerbates disparity between majority and minority classes. | Loss function prioritizing accuracy on a $99\%$ majority class while misclassifying the $1\%$ critical minority. | Class-weighted loss functions; metric adjustments (e.g., F1 over Accuracy). |
+| **Algorithmic Bias** | Model architecture or optimization function inadvertently exacerbates disparity between majority and minority classes. | Loss function prioritizing accuracy on a 99% majority class while misclassifying the 1% critical minority. | Class-weighted loss functions; metric adjustments (e.g., F1 over Accuracy). |
 
 ---
 

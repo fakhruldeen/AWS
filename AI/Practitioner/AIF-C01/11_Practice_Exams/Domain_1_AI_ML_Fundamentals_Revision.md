@@ -79,7 +79,7 @@ A telecommunications provider has an imbalanced dataset where only 2% of custome
 - [ ] C) Accuracy will be 2%; accuracy is misleading because it overweights minority classes.
 - [ ] D) Accuracy will be 0%; accuracy cannot be calculated on binary datasets.
 > **Correct Answer:** B  
-> **Rationale:** On imbalanced datasets, a naive model predicting the majority class achieves high accuracy (98%) while providing zero predictive utility. The $F_1$-score or AUC-ROC should be used instead.
+> **Rationale:** On imbalanced datasets, a naive model predicting the majority class achieves high accuracy (98%) while providing zero predictive utility. The F1-score or AUC-ROC should be used instead.
 
 ---
 
@@ -133,9 +133,9 @@ Which metric measures the proportion of predicted positive cases that were actua
 - [ ] A) Precision
 - [ ] B) Recall
 - [ ] C) Mean Squared Error
-- [ ] D) $R^2$
+- [ ] D) R²
 > **Correct Answer:** A  
-> **Rationale:** $\text{Precision} = TP / (TP + FP)$. High precision minimizes False Positives (e.g., misclassifying an important email as spam).
+> **Rationale:** Precision = TP / (TP + FP). High precision minimizes False Positives (e.g., misclassifying an important email as spam).
 
 ---
 
@@ -151,13 +151,13 @@ What is the primary function of the Amazon SageMaker Feature Store?
 ---
 
 ### Question 14
-A financial fraud model produces a Confusion Matrix with: $TP = 80$, $FP = 20$, $FN = 10$, $TN = 890$. What is the Precision of this model?
+A financial fraud model produces a Confusion Matrix with: TP = 80, FP = 20, FN = 10, TN = 890. What is the Precision of this model?
 - [ ] A) 80% ($80 / 100$)
 - [ ] B) 88.8% ($80 / 90$)
 - [ ] C) 90% ($890 / 988$)
 - [ ] D) 97% ($970 / 1000$)
 > **Correct Answer:** A  
-> **Rationale:** $\text{Precision} = TP / (TP + FP) = 80 / (80 + 20) = 80 / 100 = 0.80$ (80%).
+> **Rationale:** Precision = TP / (TP + FP) = 80 / (80 + 20) = 80 / 100 = 0.80 (80%).
 
 ---
 

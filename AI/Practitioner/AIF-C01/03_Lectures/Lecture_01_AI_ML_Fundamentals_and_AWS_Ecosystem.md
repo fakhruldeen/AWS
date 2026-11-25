@@ -20,7 +20,7 @@ Before delivering or attending this lecture, review the assigned chapters:
     * The ML Lifecycle: Data ingestion, feature store, training, hyperparameter tuning, MLOps, model registry.
     * Overfitting vs Underfitting, Bias-Variance tradeoff, regularization, validation splitting.
   * Chapter 11: *Machine Learning Evaluation Metrics* (pp. 415–438)
-    * Confusion matrix, Precision, Recall, F1-Score, Specificity, ROC-AUC curve, RMSE, MAE, $R^2$.
+    * Confusion matrix, Precision, Recall, F1-Score, Specificity, ROC-AUC curve, RMSE, MAE, R².
 * **Tom Taulli (*O'Reilly 2025*):**
   * Chapter 1: *Generative AI Foundations & Terminology* (pp. 5–18)
   * Chapter 2: *Traditional Predictive ML Paradigms & Evaluation* (pp. 19–38)

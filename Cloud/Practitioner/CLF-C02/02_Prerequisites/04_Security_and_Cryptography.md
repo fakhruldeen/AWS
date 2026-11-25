@@ -78,7 +78,7 @@ Students often use "hashing" and "encryption" interchangeably. They are fundamen
 
 | Dimension | Cryptographic Hashing | Encryption |
 |:---|:---|:---|
-| **Mathematical Nature** | **One-Way Function.** Impossible to reverse mathematically. | **Two-Way Function.** Plaintext $\leftrightarrow$ Ciphertext reversible with a key. |
+| **Mathematical Nature** | **One-Way Function.** Impossible to reverse mathematically. | **Two-Way Function.** Plaintext ↔ Ciphertext reversible with a key. |
 | **Output Size** | **Fixed Length** regardless of input size (e.g., SHA-256 always produces a 256-bit string). | **Variable Length** proportional to input data size. |
 | **Key Required?** | **No key required** (deterministic mathematical algorithm). | **Secret Key required** for encryption and decryption. |
 | **Primary Purpose** | Verifying **Integrity** and storing password hashes securely. | Guaranteeing **Confidentiality** across networks or disks. |

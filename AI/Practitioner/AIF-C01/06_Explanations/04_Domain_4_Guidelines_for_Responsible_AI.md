@@ -414,16 +414,16 @@ flowchart TD
 ```
 
 1. **Step 1: Determine the Operational Objective:**
-   - Are you analyzing statistical bias or feature importance? $\to$ **SageMaker Clarify**.
-   - Are you preventing toxic outputs, blocking prompt injection, or masking PII during live chat? $\to$ **Amazon Bedrock Guardrails**.
-   - Are you documenting model metadata and risk audits? $\to$ **Model Cards / Service Cards**.
-   - Are you escalating uncertain predictions to human reviewers? $\to$ **Amazon Augmented AI (A2I)**.
+   - Are you analyzing statistical bias or feature importance? → **SageMaker Clarify**.
+   - Are you preventing toxic outputs, blocking prompt injection, or masking PII during live chat? → **Amazon Bedrock Guardrails**.
+   - Are you documenting model metadata and risk audits? → **Model Cards / Service Cards**.
+   - Are you escalating uncertain predictions to human reviewers? → **Amazon Augmented AI (A2I)**.
 2. **Step 2: Differentiate Customer Artifacts vs AWS Artifacts:**
-   - If the enterprise created their own model $\to$ **SageMaker Model Cards**.
-   - If the enterprise is reviewing AWS's built-in services (e.g. Rekognition) $\to$ **AWS AI Service Cards**.
+   - If the enterprise created their own model → **SageMaker Model Cards**.
+   - If the enterprise is reviewing AWS's built-in services (e.g. Rekognition) → **AWS AI Service Cards**.
 3. **Step 3: Check Individual vs Population Explainability:**
-   - Explaining why a single applicant was rejected $\to$ **Local Explainability** (Local SHAP).
-   - Explaining which features overall matter most to the algorithm $\to$ **Global Explainability**.
+   - Explaining why a single applicant was rejected → **Local Explainability** (Local SHAP).
+   - Explaining which features overall matter most to the algorithm → **Global Explainability**.
 
 ---
 

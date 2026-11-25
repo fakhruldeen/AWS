@@ -41,16 +41,16 @@ flowchart TD
     end
 ```
 
-### 1.1 The Mathematics of 11 9s Durability ($99.999999999\%$)
-[Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3) Standard is engineered for **$99.999999999\%$ annual durability**:
+### 1.1 The Mathematics of 11 9s Durability (99.999999999%)
+[Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3) Standard is engineered for **99.999999999% annual durability**:
 $$\text{Annual Probability of Data Loss} = 1 - 0.99999999999 = 10^{-11} = 0.000000001\%$$
-* **What 11 9s means in physical reality:** If an enterprise stores $10{,}000{,}000$ (10 million) independent digital objects in [Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3), you can statistically expect to lose a single file once every **$10{,}000\text{ years}$**.
+* **What 11 9s means in physical reality:** If an enterprise stores $10{,}000{,}000$ (10 million) independent digital objects in [Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3), you can statistically expect to lose a single file once every **10{,}000 years**.
 * **Erasure Coding Under the Hood:** AWS achieves this resilience not by simple 3-way mirroring, but by using advanced Reed-Solomon erasure coding. Every file is decomposed into mathematical parity chunks and striped across multiple discrete physical storage facilities in at least **3 separate Availability Zones**. An entire data center can be destroyed, and S3 will reconstruct the original file on the fly with zero data corruption.
 
 ### 1.2 The Physics of Network Data Transfer: Sneakernet vs. Bandwidth
 When migrating massive data sets from on-premises datacenters to AWS, the speed of network data transfer is limited by the physical formula:
 $$T = \frac{\text{Total Data Volume (Bits)}}{\text{Effective Network Throughput (Bits/Sec)}}$$
-* **The Reality of Large Data Migration:** Attempting to transfer $100\text{ Terabytes}$ of video archives over a standard corporate $100\text{ Mbps}$ uplink:
+* **The Reality of Large Data Migration:** Attempting to transfer 100 Terabytes of video archives over a standard corporate 100 Mbps uplink:
   $$T = \frac{100 \times 10^{12} \times 8\text{ bits}}{100 \times 10^6\text{ bits/sec}} \approx 8{,}000{,}000\text{ seconds} \approx \mathbf{92.6\text{ days of continuous saturation}}!$$
 * **The Snowball Advantage:** Shipping an **AWS Snowball Edge** (80 TB appliance) via courier takes approximately 3 business days end-to-end, proving the famous computer science adage: *"Never underestimate the bandwidth of a station wagon full of tapes hurtling down the highway."*
 
@@ -91,7 +91,7 @@ graph TD
   - *Value:* The raw byte data payload (files can range from 0 bytes up to **5 Terabytes** per single object).
   - *Metadata:* Key-value pairs describing the object (content-type, creation date).
 * **[Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3) Storage Classes:**
-  1. **S3 Standard:** Default storage for frequently accessed data; low latency, high throughput ($> 3$ AZs).
+  1. **S3 Standard:** Default storage for frequently accessed data; low latency, high throughput (> 3 AZs).
   2. **S3 Intelligent-Tiering:** Automatically moves objects between 3 access tiers (Frequent, Infrequent, Archive Instant) based on machine-learned usage patterns with **zero operational overhead and zero retrieval fees**.
   3. **S3 Standard-Infrequent Access (Standard-IA):** For data accessed less frequently, but requiring rapid millisecond retrieval when requested. Lower storage fee; nominal per-GB retrieval fee.
   4. **S3 One Zone-Infrequent Access (One Zone-IA):** Stores data in a single AZ at 20% lower cost. Sacrifices multi-AZ resilience; data is permanently lost if that single AZ is destroyed. Ideal for reproducible secondary backups.
@@ -312,17 +312,17 @@ When reading a question scenario, search for these exact phrasing triggers:
 ### 2. The 3-Step Rapid Elimination Heuristic
 When evaluating a Storage question:
 1. **Step 1: Identify Storage Primitive (Block vs. File vs. Object):**
-   - Mounted as a virtual hard disk drive (`/dev/sda1` or `C:\`) for an OS $\to$ **Block Storage (EBS / Instance Store)**.
-   - Mounted as a shared network folder with directory paths for multiple machines $\to$ **File Storage (EFS / FSx)**.
-   - Accessed via HTTP/HTTPS REST API, web URLs, or SDKs (Buckets & Keys) $\to$ **Object Storage ([Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3))**.
+   - Mounted as a virtual hard disk drive (`/dev/sda1` or `C:\`) for an OS → **Block Storage (EBS / Instance Store)**.
+   - Mounted as a shared network folder with directory paths for multiple machines → **File Storage (EFS / FSx)**.
+   - Accessed via HTTP/HTTPS REST API, web URLs, or SDKs (Buckets & Keys) → **Object Storage ([Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3))**.
 2. **Step 2: Check Persistence & Durability:**
-   - Survives instance reboots, stops, and failures $\to$ **[Amazon EBS](../../AWS_SERVICES_GLOSSARY.md#amazon-ebs)**.
-   - Wiped permanently into nothingness when the instance stops $\to$ **Instance Store**.
-   - 11 9s durability across $\ge 3$ AZs $\to$ **[Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3)**.
+   - Survives instance reboots, stops, and failures → **[Amazon EBS](../../AWS_SERVICES_GLOSSARY.md#amazon-ebs)**.
+   - Wiped permanently into nothingness when the instance stops → **Instance Store**.
+   - 11 9s durability across ≥ 3 AZs → **[Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3)**.
 3. **Step 3: Check S3 Storage Class Economics:**
-   - Pattern unknown? $\to$ **Intelligent-Tiering**.
-   - Millisecond latency required? $\to$ **Standard**, **Standard-IA**, or **Glacier Instant Retrieval**.
-   - Hours tolerable, lowest monthly cost? $\to$ **Glacier Deep Archive**.
+   - Pattern unknown? → **Intelligent-Tiering**.
+   - Millisecond latency required? → **Standard**, **Standard-IA**, or **Glacier Instant Retrieval**.
+   - Hours tolerable, lowest monthly cost? → **Glacier Deep Archive**.
 
 ### 3. High-Frequency Decoy Autopsy: Why AWS Tries to Trick You
 * **Decoy #1: "[Amazon EBS](../../AWS_SERVICES_GLOSSARY.md#amazon-ebs)" vs. "[Amazon EC2](../../AWS_SERVICES_GLOSSARY.md#amazon-ec2) Instance Store"**

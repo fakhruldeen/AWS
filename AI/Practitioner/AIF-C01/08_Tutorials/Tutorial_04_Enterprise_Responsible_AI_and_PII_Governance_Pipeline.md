@@ -246,14 +246,14 @@ flowchart TD
 ```
 
 1. **Step 1: Check Lifecycle Placement:**
-   - Training dataset audit or feature importance? $\to$ **SageMaker Clarify**.
-   - Real-time conversation filtering, toxic blocking, PII masking? $\to$ **Amazon Bedrock Guardrails**.
-   - Model lineage and documentation for compliance auditors? $\to$ **SageMaker Model Cards**.
+   - Training dataset audit or feature importance? → **SageMaker Clarify**.
+   - Real-time conversation filtering, toxic blocking, PII masking? → **Amazon Bedrock Guardrails**.
+   - Model lineage and documentation for compliance auditors? → **SageMaker Model Cards**.
 2. **Step 2: Check Customer vs. AWS Ownership:**
-   - Documenting a company's in-house model? $\to$ **Model Cards**.
-   - Reviewing AWS's commercial terms for Rekognition? $\to$ **AI Service Cards**.
+   - Documenting a company's in-house model? → **Model Cards**.
+   - Reviewing AWS's commercial terms for Rekognition? → **AI Service Cards**.
 3. **Step 3: Check Human Oversight:**
-   - Need human review on uncertain predictions? $\to$ **Amazon A2I**.
+   - Need human review on uncertain predictions? → **Amazon A2I**.
 
 ---
 

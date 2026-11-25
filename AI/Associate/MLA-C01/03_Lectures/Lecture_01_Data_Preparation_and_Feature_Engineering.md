@@ -41,12 +41,12 @@ By the end of this lecture, candidates will be able to:
 - *Whiteboard Diagram:* Draw the Split Line between Training Set and Test Set.
 - **Key Instructor Emphasis:** *"Never fit scalers or imputers on the full dataset before splitting! Fit on the training set ONLY, then transform both train and test. Anything else is data leakage and will cause production models to fail catastrophically."*
 - **Encoding:**
-  - Nominal data (no order: Paris, London, Tokyo) $\implies$ **One-Hot Encoding**.
-  - Ordinal data (natural rank: Bronze, Silver, Gold) $\implies$ **Ordinal Encoding**.
+  - Nominal data (no order: Paris, London, Tokyo) ⇒ **One-Hot Encoding**.
+  - Ordinal data (natural rank: Bronze, Silver, Gold) ⇒ **Ordinal Encoding**.
 - **Scaling:**
-  - Normal distribution $\implies$ **StandardScaler (Z-Score)**.
-  - Uniform distribution, bounded range $\implies$ **MinMaxScaler**.
-  - Significant outliers $\implies$ **RobustScaler (Median / IQR)**.
+  - Normal distribution ⇒ **StandardScaler (Z-Score)**.
+  - Uniform distribution, bounded range ⇒ **MinMaxScaler**.
+  - Significant outliers ⇒ **RobustScaler (Median / IQR)**.
 
 ### 3. SageMaker Feature Store: The Dual-Store Pattern
 - Explain why enterprise teams use a Feature Store: to eliminate training-serving skew (where training code calculates a feature differently than production API code).

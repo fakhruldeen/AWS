@@ -44,8 +44,8 @@ flowchart TD
 ### 1.1 Queueing Theory and Little's Law
 Under operations research and queuing theory, the average number of requests in a system ($L$) is governed by **Little's Law**:
 $$L = \lambda \times W$$
-where $\lambda$ is the arrival rate of incoming requests and $W$ is the average processing time per request.
-* **The Reality of Traffic Spikes:** If a flash sale causes the arrival rate ($\lambda$) to multiply by $50\times$, a synchronous web server's connection pool saturates in seconds, causing catastrophic thread exhaustion and memory crashes.
+where λ is the arrival rate of incoming requests and $W$ is the average processing time per request.
+* **The Reality of Traffic Spikes:** If a flash sale causes the arrival rate (λ) to multiply by 50×, a synchronous web server's connection pool saturates in seconds, causing catastrophic thread exhaustion and memory crashes.
 * **The Queue as an Elastic Shock Absorber:** Introducing **[Amazon SQS](../../AWS_SERVICES_GLOSSARY.md#amazon-sqs)** decouples the arrival rate from the processing rate. Downstream worker nodes pull messages at their own sustainable pace, while the queue absorbs millions of messages safely.
 
 ### 1.2 Message Delivery Semantics: At-Least-Once vs. Exactly-Once
@@ -62,7 +62,7 @@ Before cloud application integration and Infrastructure as Code services were av
 |---|---|---|
 | **Cascading Failures in Monoliths** | When a single downstream billing microservice hung, it held open TCP sockets on upstream servers, triggering a domino effect that brought down the entire corporate website. | **Decouple with [Amazon SQS](../../AWS_SERVICES_GLOSSARY.md#amazon-sqs) & SNS**. Upstream systems publish messages and immediately return HTTP 200 to users, while background workers process jobs asynchronously. |
 | **Manual Point-to-Point Glue Code** | Connecting 10 microservices together required building and maintaining custom point-to-point webhook scripts and retry daemons. | **Event-Driven Architecture ([Amazon EventBridge](../../AWS_SERVICES_GLOSSARY.md#amazon-eventbridge))**. Microservices publish events to a central event bus; services subscribe independently using declarative JSON rules. |
-| **Complex Spaghetti State Machines** | Coordinating multi-step checkout workflows (Charge Card $\to$ Deduct Inventory $\to$ Dispatch Warehouse) required writing thousands of lines of fragile database transaction logic. | **[AWS Step Functions](../../AWS_SERVICES_GLOSSARY.md#aws-step-functions)**. Build resilient, serverless visual state machines with built-in error handling, timeouts, and automated retries. |
+| **Complex Spaghetti State Machines** | Coordinating multi-step checkout workflows (Charge Card → Deduct Inventory → Dispatch Warehouse) required writing thousands of lines of fragile database transaction logic. | **[AWS Step Functions](../../AWS_SERVICES_GLOSSARY.md#aws-step-functions)**. Build resilient, serverless visual state machines with built-in error handling, timeouts, and automated retries. |
 | **Manual Click-Ops Infrastructure Errors** | System engineers clicked through hundreds of web console screens to launch servers, load balancers, and databases, making staging environments completely inconsistent with production. | **Infrastructure as Code ([AWS CloudFormation](../../AWS_SERVICES_GLOSSARY.md#aws-cloudformation))**. Every server, database, and firewall rule is defined in version-controlled JSON/YAML templates that deploy identically every time. |
 
 ---
@@ -144,7 +144,7 @@ flowchart LR
 * **AWS CodeCommit:** Fully managed, secure source-control service hosting private Git repositories.
 * **[AWS CodeBuild](../../AWS_SERVICES_GLOSSARY.md#aws-codebuild):** Fully managed, serverless continuous integration service that compiles source code, executes unit tests, and produces deployable software artifact packages (e.g., Docker images or JAR files). You pay strictly per build minute.
 * **[AWS CodeDeploy](../../AWS_SERVICES_GLOSSARY.md#aws-codedeploy):** Automates software deployments to a variety of compute services, including [Amazon EC2](../../AWS_SERVICES_GLOSSARY.md#amazon-ec2), [AWS Fargate](../../AWS_SERVICES_GLOSSARY.md#aws-fargate), [AWS Lambda](../../AWS_SERVICES_GLOSSARY.md#aws-lambda), and on-premises servers, supporting rolling, blue/green, and canary deployment strategies.
-* **[AWS CodePipeline](../../AWS_SERVICES_GLOSSARY.md#aws-codepipeline):** A continuous delivery service that models, visualizes, and automates the software release phases (Source $\to$ Build $\to$ Test $\to$ Deploy).
+* **[AWS CodePipeline](../../AWS_SERVICES_GLOSSARY.md#aws-codepipeline):** A continuous delivery service that models, visualizes, and automates the software release phases (Source → Build → Test → Deploy).
 
 ---
 
@@ -298,21 +298,21 @@ When reading a question scenario, search for these exact phrasing triggers:
 | *"Upload application code (Python, Java, Node.js) and AWS automatically handles provisioning, load balancing, scaling"* | **[AWS Elastic Beanstalk](../../AWS_SERVICES_GLOSSARY.md#aws-elastic-beanstalk)** | *[AWS CloudFormation](../../AWS_SERVICES_GLOSSARY.md#aws-cloudformation)* (CloudFormation requires authoring resource templates) |
 | *"Compile source code, run automated tests, and produce deployable software packages in a serverless build environment"* | **[AWS CodeBuild](../../AWS_SERVICES_GLOSSARY.md#aws-codebuild)** | *[AWS CodeDeploy](../../AWS_SERVICES_GLOSSARY.md#aws-codedeploy)* (CodeDeploy deploys binaries; CodeBuild compiles/tests them) |
 | *"Automate software deployments to [Amazon EC2](../../AWS_SERVICES_GLOSSARY.md#amazon-ec2), [AWS Lambda](../../AWS_SERVICES_GLOSSARY.md#aws-lambda), or on-premises servers"* | **[AWS CodeDeploy](../../AWS_SERVICES_GLOSSARY.md#aws-codedeploy)** | *[AWS CodePipeline](../../AWS_SERVICES_GLOSSARY.md#aws-codepipeline)* (CodePipeline orchestrates the entire workflow) |
-| *"Orchestrate and visualize the complete end-to-end continuous delivery pipeline (Build $\to$ Test $\to$ Deploy)"* | **[AWS CodePipeline](../../AWS_SERVICES_GLOSSARY.md#aws-codepipeline)** | *[AWS CodeDeploy](../../AWS_SERVICES_GLOSSARY.md#aws-codedeploy)* |
+| *"Orchestrate and visualize the complete end-to-end continuous delivery pipeline (Build → Test → Deploy)"* | **[AWS CodePipeline](../../AWS_SERVICES_GLOSSARY.md#aws-codepipeline)** | *[AWS CodeDeploy](../../AWS_SERVICES_GLOSSARY.md#aws-codedeploy)* |
 
 ### 2. The 3-Step Rapid Elimination Heuristic
 When evaluating an Integration or DevOps question:
 1. **Step 1: Message Flow (Push vs. Pull):**
-   - Do worker servers **poll or pull messages from a buffer** so orders aren't lost when the backend is overwhelmed? $\to$ **[Amazon SQS](../../AWS_SERVICES_GLOSSARY.md#amazon-sqs)** (Pull-based).
-   - Does a publisher broadcast an update that immediately **pushes to multiple recipients simultaneously** (Fan-out)? $\to$ **[Amazon SNS](../../AWS_SERVICES_GLOSSARY.md#amazon-sns)** (Push-based).
+   - Do worker servers **poll or pull messages from a buffer** so orders aren't lost when the backend is overwhelmed? → **[Amazon SQS](../../AWS_SERVICES_GLOSSARY.md#amazon-sqs)** (Pull-based).
+   - Does a publisher broadcast an update that immediately **pushes to multiple recipients simultaneously** (Fan-out)? → **[Amazon SNS](../../AWS_SERVICES_GLOSSARY.md#amazon-sns)** (Push-based).
 2. **Step 2: Workflow vs. Event Routing:**
-   - Need to route an event (e.g. S3 file uploaded, ticket created in Zendesk) to a target? $\to$ **[Amazon EventBridge](../../AWS_SERVICES_GLOSSARY.md#amazon-eventbridge)**.
-   - Need a **multi-step stateful business process** with sequential steps, parallel branches, "wait" states, and failure retries? $\to$ **[AWS Step Functions](../../AWS_SERVICES_GLOSSARY.md#aws-step-functions)**.
+   - Need to route an event (e.g. S3 file uploaded, ticket created in Zendesk) to a target? → **[Amazon EventBridge](../../AWS_SERVICES_GLOSSARY.md#amazon-eventbridge)**.
+   - Need a **multi-step stateful business process** with sequential steps, parallel branches, "wait" states, and failure retries? → **[AWS Step Functions](../../AWS_SERVICES_GLOSSARY.md#aws-step-functions)**.
 3. **Step 3: The Developer / CI/CD Suite Roles:**
-   - Store Git code $\to$ **AWS CodeCommit**.
-   - Compile code & run unit tests $\to$ **[AWS CodeBuild](../../AWS_SERVICES_GLOSSARY.md#aws-codebuild)**.
-   - Install packages onto instances $\to$ **[AWS CodeDeploy](../../AWS_SERVICES_GLOSSARY.md#aws-codedeploy)**.
-   - Connect everything into an automated pipeline $\to$ **[AWS CodePipeline](../../AWS_SERVICES_GLOSSARY.md#aws-codepipeline)**.
+   - Store Git code → **AWS CodeCommit**.
+   - Compile code & run unit tests → **[AWS CodeBuild](../../AWS_SERVICES_GLOSSARY.md#aws-codebuild)**.
+   - Install packages onto instances → **[AWS CodeDeploy](../../AWS_SERVICES_GLOSSARY.md#aws-codedeploy)**.
+   - Connect everything into an automated pipeline → **[AWS CodePipeline](../../AWS_SERVICES_GLOSSARY.md#aws-codepipeline)**.
 
 ### 3. High-Frequency Decoy Autopsy: Why AWS Tries to Trick You
 * **Decoy #1: "[Amazon SQS](../../AWS_SERVICES_GLOSSARY.md#amazon-sqs)" vs. "[Amazon SNS](../../AWS_SERVICES_GLOSSARY.md#amazon-sns)"**

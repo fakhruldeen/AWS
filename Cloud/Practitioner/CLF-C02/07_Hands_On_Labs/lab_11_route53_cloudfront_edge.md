@@ -13,7 +13,7 @@
 AWS maintains hundreds of **Edge Locations** and **Regional Edge Caches** across the world connected directly to the AWS global private fiber network. Edge services (Route 53, CloudFront, AWS WAF, AWS Shield) run directly on these edge servers close to end users, minimizing latency and terminating security threats before they reach origin servers.
 
 ### 2. Route 53: Alias Records vs. CNAME Records
-- **CNAME (Canonical Name):** A standard DNS record that maps one hostname to another (e.g., `www.example.com` $\to$ `alb-1234.amazonaws.com`). **Cannot be used for the Zone Apex / Root Domain** (e.g., `example.com` without `www`).
+- **CNAME (Canonical Name):** A standard DNS record that maps one hostname to another (e.g., `www.example.com` → `alb-1234.amazonaws.com`). **Cannot be used for the Zone Apex / Root Domain** (e.g., `example.com` without `www`).
 - **Alias Record (AWS Proprietary):** An AWS extension to DNS. Can map the **Zone Apex (`example.com`) directly to AWS resources** (ALB, CloudFront, S3 Website, API Gateway). Dynamically updates if the underlying resource IP changes. **DNS queries to AWS Alias records are completely free of charge!**
 
 ### 3. Amazon CloudFront & Origin Access Control (OAC)

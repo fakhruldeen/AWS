@@ -228,11 +228,11 @@ flowchart TD
    - Database / Backend application? MUST be in private subnet.
    - Load Balancer / NAT Gateway / Bastion? MUST be in public subnet.
 2. **Step 2: Check Stateful vs. Stateless:**
-   - Mentions "stateful" or "instance level"? $\to$ **Security Group**.
-   - Mentions "stateless", "subnet level", or "explicit ephemeral port return rules"? $\to$ **Network ACL**.
+   - Mentions "stateful" or "instance level"? → **Security Group**.
+   - Mentions "stateless", "subnet level", or "explicit ephemeral port return rules"? → **Network ACL**.
 3. **Step 3: Check Directionality:**
-   - Outbound-only from private instances? $\to$ **NAT Gateway** (never IGW).
-   - Inbound management? $\to$ **Bastion Host** or **AWS Systems Manager Session Manager**.
+   - Outbound-only from private instances? → **NAT Gateway** (never IGW).
+   - Inbound management? → **Bastion Host** or **AWS Systems Manager Session Manager**.
 
 ---
 

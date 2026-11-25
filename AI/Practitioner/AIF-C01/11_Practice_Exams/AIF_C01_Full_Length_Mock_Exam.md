@@ -76,13 +76,13 @@ In the Transformer architecture, what is the mathematical function of the Positi
 5. Trigger the Knowledge Base Data Source Sync operation via the Bedrock console or API.
 
 *Select the correct sequence order:*
-- [ ] A) 2 $\rightarrow$ 5 $\rightarrow$ 1 $\rightarrow$ 4 $\rightarrow$ 3
-- [ ] B) 1 $\rightarrow$ 2 $\rightarrow$ 4 $\rightarrow$ 3 $\rightarrow$ 5
-- [ ] C) 5 $\rightarrow$ 2 $\rightarrow$ 1 $\rightarrow$ 4 $\rightarrow$ 3
-- [ ] D) 2 $\rightarrow$ 1 $\rightarrow$ 5 $\rightarrow$ 4 $\rightarrow$ 3
+- [ ] A) 2 → 5 → 1 → 4 → 3
+- [ ] B) 1 → 2 → 4 → 3 → 5
+- [ ] C) 5 → 2 → 1 → 4 → 3
+- [ ] D) 2 → 1 → 5 → 4 → 3
 
 ### Question 9 (Domain 4)
-Before deploying a credit decisioning model, a bank uses SageMaker Clarify to evaluate the training dataset. The report displays a Class Imbalance (CI) score of $-0.45$ for applicant age facet $<25$. What does this metric indicate?
+Before deploying a credit decisioning model, a bank uses SageMaker Clarify to evaluate the training dataset. The report displays a Class Imbalance (CI) score of $-0.45$ for applicant age facet <25. What does this metric indicate?
 - [ ] A) Applicants under 25 are under-represented in the training dataset.
 - [ ] B) Applicants under 25 received 45% more loan approvals.
 - [ ] C) The model has an error rate of 45%.
@@ -285,9 +285,9 @@ Under the AWS Generative AI Security Scoping Matrix, which deployment scope invo
 ### Question 36 (Domain 1)
 Which metric is the harmonic mean of Precision and Recall, making it ideal for evaluating models trained on imbalanced datasets?
 - [ ] A) Accuracy
-- [ ] B) $F_1$-Score
+- [ ] B) F1-Score
 - [ ] C) Mean Squared Error
-- [ ] D) $R^2$
+- [ ] D) R²
 
 ### Question 37 (Domain 2)
 Which foundation model in the Amazon Nova family is designed for complex reasoning, multi-step math, high-capability coding, and autonomous agent orchestration?
@@ -398,10 +398,10 @@ A machine learning engineer wants to prevent a Decision Tree model from overfitt
 
 ### Question 52 (Domain 2)
 In modern agentic AI systems, what sequence of actions defines the autonomous reasoning loop?
-- [ ] A) Thought $\rightarrow$ Action $\rightarrow$ Observation $\rightarrow$ Reflection
-- [ ] B) Predict $\rightarrow$ Delete $\rightarrow$ Train $\rightarrow$ Test
-- [ ] C) Encode $\rightarrow$ Decode $\rightarrow$ Encrypt $\rightarrow$ Decrypt
-- [ ] D) Compile $\rightarrow$ Execute $\rightarrow$ Commit $\rightarrow$ Push
+- [ ] A) Thought → Action → Observation → Reflection
+- [ ] B) Predict → Delete → Train → Test
+- [ ] C) Encode → Decode → Encrypt → Decrypt
+- [ ] D) Compile → Execute → Commit → Push
 
 ### Question 53 (Domain 3)
 A business application requires dedicated model throughput with zero risk of `ThrottlingException` errors during critical holiday sales. Which Bedrock purchasing option should be selected?
@@ -507,10 +507,10 @@ Which IAM policy element ensures that an application can only invoke Amazon Nova
 | **5** | **B** | 5 | Security Scope 2 | Customers own IAM, prompt guardrails, and data classification in managed Bedrock services. |
 | **6** | **B** | 1 | SageMaker Canvas | Canvas is AWS's visual, no-code AutoML tool for business analysts. |
 | **7** | **B** | 2 | Positional Encodings | Self-attention processes tokens in parallel; positional encodings restore word order. |
-| **8** | **A** | 3 | RAG Execution Sequence | 2 (S3 upload) $\rightarrow$ 5 (Trigger Sync) $\rightarrow$ 1 (Chunk text) $\rightarrow$ 4 (Generate Embeddings) $\rightarrow$ 3 (Store in OpenSearch). |
+| **8** | **A** | 3 | RAG Execution Sequence | 2 (S3 upload) → 5 (Trigger Sync) → 1 (Chunk text) → 4 (Generate Embeddings) → 3 (Store in OpenSearch). |
 | **9** | **A** | 4 | Class Imbalance (CI) | Negative CI indicates the demographic facet is under-represented relative to other groups. |
 | **10** | **B** | 5 | AWS PrivateLink | VPC Interface Endpoints keep inference traffic strictly within AWS's private network fabric. |
-| **11** | **B** | 1 | Recall Calculation | $\text{Recall} = TP / (TP + FN) = 90 / (90 + 30) = 90 / 120 = 75\%$. |
+| **11** | **B** | 1 | Recall Calculation | Recall = TP / (TP + FN) = 90 / (90 + 30) = 90 / 120 = 75%. |
 | **12** | **B** | 2 | Temperature 0.0 | Temperature 0 forces greedy decoding, selecting the highest-probability token deterministically. |
 | **13** | **B** | 3 | Few-Shot Prompting | Providing 2–5 structured demonstrations in the prompt is Few-Shot / In-Context Learning. |
 | **14** | **B** | 4 | Local SHAP Values | Local SHAP values quantify the positive or negative impact of each feature on a single decision. |
@@ -522,7 +522,7 @@ Which IAM policy element ensures that an application can only invoke Amazon Nova
 | **20** | **B** | 5 | Bedrock Zero-Training | AWS never uses customer inputs or completions to train base foundation models. |
 | **21** | **B** | 1 | Bias vs Variance | Model A: High Bias (Underfitting); Model B: High Variance (Overfitting). |
 | **22** | **B** | 2 | Amazon Nova Lite | Nova Lite is a cost-effective, high-speed multimodal model for text, images, and video. |
-| **23** | **B** | 3 | PEFT / LoRA | LoRA trains low-rank adapter matrices ($<1\%$ of weights), saving compute and preserving weights. |
+| **23** | **B** | 3 | PEFT / LoRA | LoRA trains low-rank adapter matrices (<1% of weights), saving compute and preserving weights. |
 | **24** | **B** | 4 | SageMaker Model Cards | Model Cards provide an auditable record of model intended use, bias scores, and risk ratings. |
 | **25** | **A** | 5 | CloudTrail Data Events | CloudTrail Data Events log runtime operations like `InvokeModel` and `RetrieveAndGenerate`. |
 | **26** | **A** | 1 | AI Services Matching | 1-Z (Polly=TTS), 2-Y (Transcribe=ASR), 3-X (Comprehend=NLP), 4-W (Rekognition=Vision). |
@@ -535,13 +535,13 @@ Which IAM policy element ensures that an application can only invoke Amazon Nova
 | **33** | **B** | 3 | LoRA Benefits | LoRA avoids catastrophic forgetting and slashes training compute by training lightweight adapters. |
 | **34** | **B** | 4 | Contextual Grounding | Grounding checks verify that generated claims adhere factually to retrieved RAG snippets. |
 | **35** | **D** | 5 | Security Scope 4 | Scope 4 is custom pre-training from scratch; customer owns 100% of data and architecture. |
-| **36** | **B** | 1 | $F_1$-Score | The $F_1$-score is the harmonic mean of Precision and Recall: $2(P \times R) / (P + R)$. |
+| **36** | **B** | 1 | F1-Score | The F1-score is the harmonic mean of Precision and Recall: 2(P × R) / (P + R). |
 | **37** | **C** | 2 | Amazon Nova Pro | Nova Pro is Amazon's frontier multimodal model for complex math, coding, and agent planning. |
 | **38** | **B** | 3 | Action Groups | Action Groups connect Bedrock Agents to Lambda functions using OpenAPI 3.0 schemas. |
 | **39** | **B** | 4 | IP Indemnification | AWS offers intellectual property indemnification for customers using Amazon Titan models. |
 | **40** | **B** | 5 | Model Access Control | All Bedrock models are disabled by default; access must be requested per account and region. |
 | **41** | **C** | 1 | Amazon Translate | Amazon Translate delivers neural machine translation across dozens of languages. |
-| **42** | **B** | 2 | Tokens | A token is the base textual unit processed by an LLM (1,000 tokens $\approx$ 750 words). |
+| **42** | **B** | 2 | Tokens | A token is the base textual unit processed by an LLM (1,000 tokens ≈ 750 words). |
 | **43** | **B** | 3 | Chain-of-Thought (CoT) | Instructing models to "think step-by-step" breaks down reasoning to reduce errors. |
 | **44** | **A** | 4 | DPL Interpretation | DPL ($+0.30$) shows historical data awarded favorable labels to Group A at a 30% higher rate. |
 | **45** | **B** | 5 | AWS Artifact | AWS Artifact provides on-demand downloads of official security and compliance reports. |
@@ -551,7 +551,7 @@ Which IAM policy element ensures that an application can only invoke Amazon Nova
 | **49** | **B** | 4 | Model Registry Approval | Models must be marked `Approved` before automated CI/CD pipelines can deploy them. |
 | **50** | **B** | 5 | `bedrock:InvokeModel` | `bedrock:InvokeModel` is the IAM action authorizing model inference requests. |
 | **51** | **A, B** | 1 | Decision Tree Pruning | Pruning tree depth and increasing minimum split samples prevents decision tree overfitting. |
-| **52** | **A** | 2 | ReAct Loop | Agents iterate through: Thought $\rightarrow$ Action $\rightarrow$ Observation $\rightarrow$ Reflection. |
+| **52** | **A** | 2 | ReAct Loop | Agents iterate through: Thought → Action → Observation → Reflection. |
 | **53** | **B** | 3 | Provisioned Throughput | Provisioned Throughput allocates Model Units (MUs) guaranteeing capacity without throttling. |
 | **54** | **B** | 4 | Invisible Watermarking | Titan Image Generator embeds invisible digital watermarks to verify AI provenance. |
 | **55** | **C** | 5 | KMS Customer Managed Keys | CMKs allow customers to control key rotation and immediately revoke decryption rights. |
@@ -574,6 +574,6 @@ To calculate your scaled score:
 $$\text{Percentage Score} = \left(\frac{\text{Number of Correct Answers}}{65}\right) \times 100$$
 $$\text{Estimated Scaled Score} = 100 + (\text{Percentage Score} \times 9.0)$$
 
-* **$\ge 700$ Scaled Score ($\ge 46$ / 65 correct):** **PASS** — Ready for the official AWS exam.
+* **≥ 700 Scaled Score (≥ 46 / 65 correct):** **PASS** — Ready for the official AWS exam.
 * **$600 - 690$ Scaled Score ($39 - 45$ correct):** **BORDERLINE** — Review weak domains in the table above before sitting the exam.
-* **$< 600$ Scaled Score ($< 39$ correct):** **NEEDS REVISION** — Review the 5 Domain Explanations and re-take the Knowledge Checks.
+* **< 600 Scaled Score (< 39 correct):** **NEEDS REVISION** — Review the 5 Domain Explanations and re-take the Knowledge Checks.

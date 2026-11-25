@@ -108,13 +108,13 @@ flowchart TD
 
 2. **Configure 4 Route Tables:**
    - **Public Route Table:** Associated with Public Subnet 1 & 2.
-     - Route: `0.0.0.0/0` $\rightarrow$ Target: `production-igw`
+     - Route: `0.0.0.0/0` → Target: `production-igw`
    - **Private App Route Table A:** Associated with Private App Subnet 1.
-     - Route: `0.0.0.0/0` $\rightarrow$ Target: `nat-gw-a`
+     - Route: `0.0.0.0/0` → Target: `nat-gw-a`
    - **Private App Route Table B:** Associated with Private App Subnet 2.
-     - Route: `0.0.0.0/0` $\rightarrow$ Target: `nat-gw-b`
+     - Route: `0.0.0.0/0` → Target: `nat-gw-b`
    - **Private DB Route Table:** Associated with Private DB Subnet 1 & 2.
-     - Local route only (`10.0.0.0/16` $\rightarrow$ `local`). Zero routes to IGW or NAT.
+     - Local route only (`10.0.0.0/16` → `local`). Zero routes to IGW or NAT.
 
 ---
 
@@ -218,7 +218,7 @@ echo "Public routing configured successfully."
 | Scenario / Exam Trap | What the Exam Asks | Architecturally Correct Decision | Why Alternatives Are Traps |
 |---|---|---|---|
 | **Trap 1: Single NAT Gateway in Multi-AZ VPC** | *"A company runs an EC2 Auto Scaling group across 3 AZs in private subnets. To minimize cost, they create 1 NAT Gateway in AZ-A. An AZ outage occurs in AZ-A."* | Deploy **one NAT Gateway per Availability Zone**. A single NAT Gateway is an architecture failure point; if AZ-A goes down, private instances in AZ-B and AZ-C lose outbound internet access. | Using 1 NAT Gateway saves money but violates the **Resilient Architecture** pillar (SPOF). |
-| **Trap 2: Public vs Private Subnet Definition** | *"What technically differentiates a public subnet from a private subnet in an AWS VPC?"* | A subnet is **public** if and only if its associated route table contains a route to an **Internet Gateway** (`0.0.0.0/0` $\rightarrow$ `igw-xxxx`). | IP address range does not determine public status; the presence of an IGW route in the route table is the sole determinant. |
+| **Trap 2: Public vs Private Subnet Definition** | *"What technically differentiates a public subnet from a private subnet in an AWS VPC?"* | A subnet is **public** if and only if its associated route table contains a route to an **Internet Gateway** (`0.0.0.0/0` → `igw-xxxx`). | IP address range does not determine public status; the presence of an IGW route in the route table is the sole determinant. |
 | **Trap 3: Database Direct Ingress** | *"A database needs to be updated with security patches from an external repository while remaining secure."* | Place the database in private subnets with **no route to the internet**. Download patches to a private repository or use VPC Endpoints. If outbound access is mandatory, route through a NAT Gateway, **never** give the database a public IP. | Giving a database a public IP or assigning it to an IGW route table creates severe compliance and security failure. |
 | **Trap 4: Security Group Chaining vs IP CIDRs** | *"How should backend application instances allow traffic only from the Application Load Balancer?"* | Configure the application security group to allow inbound traffic from the **ALB's Security Group ID** (`sg-xxxx`), NOT an IP CIDR block. | ALB IP addresses are dynamic and scale continuously. Hardcoding ALB IPs in security groups will break traffic routing. |
 | **Trap 5: NAT Gateway vs Gateway Endpoints for S3** | *"An application in a private subnet uploads gigabytes of image files to Amazon S3 daily. NAT Gateway data transfer costs are high."* | Create a **VPC Gateway Endpoint for Amazon S3**. Gateway Endpoints for S3 and DynamoDB are **completely free** and route traffic over the private AWS backbone without touching the NAT Gateway. | Increasing NAT Gateway size increases cost; NAT Gateways bill per GB processed. |

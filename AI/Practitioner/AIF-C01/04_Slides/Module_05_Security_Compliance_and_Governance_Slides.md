@@ -105,10 +105,10 @@ style: |
 
 # Domain 5 Summary Takeaways
 
-* ⚡ **Does Bedrock train on your company data?** $\rightarrow$ **Never**.
-* ⚡ **Private network traffic to Bedrock without Internet?** $\rightarrow$ **AWS PrivateLink (VPC Interface Endpoint)**.
-* ⚡ **Scanning S3 RAG buckets for sensitive PII?** $\rightarrow$ **Amazon Macie**.
-* ⚡ **Logging who invoked which Foundation Model?** $\rightarrow$ **CloudTrail Data Events**.
+* ⚡ **Does Bedrock train on your company data?** → **Never**.
+* ⚡ **Private network traffic to Bedrock without Internet?** → **AWS PrivateLink (VPC Interface Endpoint)**.
+* ⚡ **Scanning S3 RAG buckets for sensitive PII?** → **Amazon Macie**.
+* ⚡ **Logging who invoked which Foundation Model?** → **CloudTrail Data Events**.
 
 ---
 

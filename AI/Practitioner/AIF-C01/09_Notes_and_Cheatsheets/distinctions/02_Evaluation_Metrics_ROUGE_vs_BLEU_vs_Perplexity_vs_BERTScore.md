@@ -32,10 +32,10 @@ flowchart TD
 
 | Metric | Primary Focus | Calculation Base | Best Suited For | Target Direction | Key Limitation |
 |---|---|---|---|---|---|
-| **ROUGE** *(Recall-Oriented Understudy for Gisting Evaluation)* | **Recall** (Did the model capture all key points from reference?) | N-gram overlap ($ROUGE-1, ROUGE-2$) & Longest Common Subsequence ($ROUGE-L$) | **Text Summarization** & Abstractive synthesis | **Higher is better** ($0 \to 1$ or $0\% \to 100\%$) | Penalizes paraphrasing and valid synonyms that do not match reference verbatim. |
-| **BLEU** *(Bilingual Evaluation Understudy)* | **Precision** (Are generated n-grams genuinely present in reference?) | Modified n-gram precision + **Brevity Penalty** (BP) | **Machine Translation** & Code generation | **Higher is better** ($0 \to 1$ or $0 \to 100$) | Fails when valid translations use alternative vocabulary; vulnerable to word order quirks. |
-| **BERTScore** | **Semantic Similarity** | Pairwise cosine similarity between token contextual embeddings | Free-form generation, Q&A, Paraphrasing | **Higher is better** ($0 \to 1$) | Requires computing embeddings using a pretrained BERT model (slower, compute-heavy). |
-| **Perplexity (PPL)** | **Model Certainty / Fluency** | Exponential of average cross-entropy loss: $e^{H(p)}$ | Evaluating raw language model fluency & domain adaptation | **Lower is better** ($\downarrow$) | Low perplexity does NOT guarantee factual correctness; an LLM can generate fluent falsehoods. |
+| **ROUGE** *(Recall-Oriented Understudy for Gisting Evaluation)* | **Recall** (Did the model capture all key points from reference?) | N-gram overlap ($ROUGE-1, ROUGE-2$) & Longest Common Subsequence ($ROUGE-L$) | **Text Summarization** & Abstractive synthesis | **Higher is better** (0 → 1 or 0% → 100%) | Penalizes paraphrasing and valid synonyms that do not match reference verbatim. |
+| **BLEU** *(Bilingual Evaluation Understudy)* | **Precision** (Are generated n-grams genuinely present in reference?) | Modified n-gram precision + **Brevity Penalty** (BP) | **Machine Translation** & Code generation | **Higher is better** (0 → 1 or 0 → 100) | Fails when valid translations use alternative vocabulary; vulnerable to word order quirks. |
+| **BERTScore** | **Semantic Similarity** | Pairwise cosine similarity between token contextual embeddings | Free-form generation, Q&A, Paraphrasing | **Higher is better** (0 → 1) | Requires computing embeddings using a pretrained BERT model (slower, compute-heavy). |
+| **Perplexity (PPL)** | **Model Certainty / Fluency** | Exponential of average cross-entropy loss: $e^{H(p)}$ | Evaluating raw language model fluency & domain adaptation | **Lower is better** (↓) | Low perplexity does NOT guarantee factual correctness; an LLM can generate fluent falsehoods. |
 
 ---
 

@@ -114,10 +114,10 @@ style: |
 
 # Key Takeaways & Exam Traps
 
-* ⚡ **Private Data without Retraining?** $\rightarrow$ Always **RAG (Bedrock Knowledge Bases)**.
-* ⚡ **Tone & Style Customization?** $\rightarrow$ **Fine-Tuning / PEFT (LoRA)**.
-* ⚡ **Evaluating Summarization Recall?** $\rightarrow$ **ROUGE**.
-* ⚡ **Predictable Sub-Second Peak Throughput?** $\rightarrow$ **Provisioned Throughput (Model Units)**.
+* ⚡ **Private Data without Retraining?** → Always **RAG (Bedrock Knowledge Bases)**.
+* ⚡ **Tone & Style Customization?** → **Fine-Tuning / PEFT (LoRA)**.
+* ⚡ **Evaluating Summarization Recall?** → **ROUGE**.
+* ⚡ **Predictable Sub-Second Peak Throughput?** → **Provisioned Throughput (Model Units)**.
 
 ---
 

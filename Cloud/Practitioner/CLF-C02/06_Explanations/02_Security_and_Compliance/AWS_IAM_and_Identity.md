@@ -315,18 +315,18 @@ When reading a question scenario, search for these exact phrasing triggers:
 ### 2. The 3-Step Rapid Elimination Heuristic
 When evaluating an IAM question:
 1. **Step 1: Check the Entity Type (User vs. Group vs. Role vs. Root):**
-   - Is it a **human employee** logging into the AWS Console? $\to$ **IAM User** (or **IAM Identity Center**).
-   - Is it a **team of humans** sharing identical job functions? $\to$ **IAM Group**.
-   - Is it an **AWS service (EC2, Lambda)** or **external federated user**? $\to$ **IAM Role** (Uses STS temporary credentials).
-   - Is it **account billing, changing support plans, or closing the account**? $\to$ **Root User** only!
+   - Is it a **human employee** logging into the AWS Console? → **IAM User** (or **IAM Identity Center**).
+   - Is it a **team of humans** sharing identical job functions? → **IAM Group**.
+   - Is it an **AWS service (EC2, Lambda)** or **external federated user**? → **IAM Role** (Uses STS temporary credentials).
+   - Is it **account billing, changing support plans, or closing the account**? → **Root User** only!
 2. **Step 2: Check Policy Logic:**
    - Starts with: **Implicit Deny** (No access).
    - If an **Explicit Allow** exists: Access granted, **UNLESS**...
    - An **Explicit Deny** exists anywhere: Immediate **DENY** (Overrules everything!).
 3. **Step 3: Differentiate IAM Auditing Tools:**
-   - Need a **CSV spreadsheet of passwords & MFA**? $\to$ **IAM Credential Report**.
-   - Need to see **which permissions a user has NOT used in 90 days**? $\to$ **IAM Access Advisor**.
-   - Need to detect if an **S3 bucket is exposed to the public internet**? $\to$ **IAM Access Analyzer**.
+   - Need a **CSV spreadsheet of passwords & MFA**? → **IAM Credential Report**.
+   - Need to see **which permissions a user has NOT used in 90 days**? → **IAM Access Advisor**.
+   - Need to detect if an **S3 bucket is exposed to the public internet**? → **IAM Access Analyzer**.
 
 ### 3. High-Frequency Decoy Autopsy: Why AWS Tries to Trick You
 * **Decoy #1: "IAM Role" vs. "IAM User Access Keys" for EC2 Instances**
@@ -334,7 +334,7 @@ When evaluating an IAM question:
   - *The Autopsy:* AWS tests this incessantly. Options will suggest storing access keys in a config file, environment variable, or S3. The ONLY well-architected answer is an **IAM Role attached to the EC2 Instance Profile**.
 * **Decoy #2: "IAM Identity Center" vs. "[Amazon Cognito](../../AWS_SERVICES_GLOSSARY.md#amazon-cognito)"**
   - *The Trap:* A company needs single sign-on for their application users vs. corporate employees.
-  - *The Autopsy:* If the users are **internal corporate employees** accessing AWS management accounts $\to$ **IAM Identity Center**. If the users are **external public consumers** signing into a custom mobile/web app via Google or Apple $\to$ **[Amazon Cognito](../../AWS_SERVICES_GLOSSARY.md#amazon-cognito)**.
+  - *The Autopsy:* If the users are **internal corporate employees** accessing AWS management accounts → **IAM Identity Center**. If the users are **external public consumers** signing into a custom mobile/web app via Google or Apple → **[Amazon Cognito](../../AWS_SERVICES_GLOSSARY.md#amazon-cognito)**.
 * **Decoy #3: "IAM Groups as Policy Principals"**
   - *The Trap:* Asking whether an IAM policy can define an IAM Group as the "Principal".
   - *The Autopsy:* In [AWS IAM](../../AWS_SERVICES_GLOSSARY.md#aws-iam), an IAM Group is strictly a management container for users. A group **cannot** be listed as a Principal in a resource-based policy, and cannot be assumed like a role!

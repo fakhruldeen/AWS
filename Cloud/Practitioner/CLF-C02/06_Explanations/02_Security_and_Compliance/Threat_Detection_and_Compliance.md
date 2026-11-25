@@ -301,12 +301,12 @@ When reading a question scenario, search for these exact phrasing triggers:
 ### 2. The 3-Step Rapid Elimination Heuristic
 When evaluating a Threat Detection or Compliance question:
 1. **Step 1: Identify What is Being Examined:**
-   - **Data content inside [Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3):** SSNs, passport numbers, medical records $\to$ **[Amazon Macie](../../AWS_SERVICES_GLOSSARY.md#amazon-macie)**.
-   - **Software code/OS packages:** Unpatched Apache, OpenSSL buffer overflow, CVE database $\to$ **[Amazon Inspector](../../AWS_SERVICES_GLOSSARY.md#amazon-inspector)**.
-   - **Streaming logs & API behavior:** An instance calling Bitcoin mining pools, API calls from suspicious Tor nodes $\to$ **[Amazon GuardDuty](../../AWS_SERVICES_GLOSSARY.md#amazon-guardduty)**.
-   - **Compliance paperwork / certificates:** SOC 2 report, ISO certification, legal BAA $\to$ **[AWS Artifact](../../AWS_SERVICES_GLOSSARY.md#aws-artifact)**.
-   - **Incident forensics & root-cause graph:** Visualizing how an attacker traversed the environment $\to$ **[Amazon Detective](../../AWS_SERVICES_GLOSSARY.md#amazon-detective)**.
-   - **Single pane of glass dashboard:** Aggregated compliance scores across the enterprise $\to$ **[AWS Security Hub](../../AWS_SERVICES_GLOSSARY.md#aws-security-hub)**.
+   - **Data content inside [Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3):** SSNs, passport numbers, medical records → **[Amazon Macie](../../AWS_SERVICES_GLOSSARY.md#amazon-macie)**.
+   - **Software code/OS packages:** Unpatched Apache, OpenSSL buffer overflow, CVE database → **[Amazon Inspector](../../AWS_SERVICES_GLOSSARY.md#amazon-inspector)**.
+   - **Streaming logs & API behavior:** An instance calling Bitcoin mining pools, API calls from suspicious Tor nodes → **[Amazon GuardDuty](../../AWS_SERVICES_GLOSSARY.md#amazon-guardduty)**.
+   - **Compliance paperwork / certificates:** SOC 2 report, ISO certification, legal BAA → **[AWS Artifact](../../AWS_SERVICES_GLOSSARY.md#aws-artifact)**.
+   - **Incident forensics & root-cause graph:** Visualizing how an attacker traversed the environment → **[Amazon Detective](../../AWS_SERVICES_GLOSSARY.md#amazon-detective)**.
+   - **Single pane of glass dashboard:** Aggregated compliance scores across the enterprise → **[AWS Security Hub](../../AWS_SERVICES_GLOSSARY.md#aws-security-hub)**.
 2. **Step 2: Check Agent vs. Agentless:**
    - [Amazon GuardDuty](../../AWS_SERVICES_GLOSSARY.md#amazon-guardduty) is **100% agentless** (it reads AWS telemetry pipelines directly; zero performance impact).
    - [Amazon Inspector](../../AWS_SERVICES_GLOSSARY.md#amazon-inspector) scans software packages automatically using SSM agents or agentless snapshots.
