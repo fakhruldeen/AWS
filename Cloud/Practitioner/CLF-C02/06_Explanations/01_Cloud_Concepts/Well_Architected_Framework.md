@@ -201,6 +201,22 @@ flowchart LR
 | **Cost Optimization** | Eliminate financial waste; pay only for value | *Adopt consumption model; measure efficiency* | Cost Explorer, Budgets, Spot Instances, Savings Plans | Running Spot Instances with risk of 2-minute interruption notice |
 | **Sustainability** | Minimize environmental and carbon impact | *Maximize utilization; adopt Graviton* | Carbon Footprint Tool, Graviton3, Compute Optimizer | Restricting batch processing times to off-peak green energy windows |
 
+### 6.2 Resolving Confusing Pillar Overlaps ("Which Pillar Is This?")
+Many `CLF-C02` questions test design principles that sound similar across two pillars. Use this exact disambiguation key:
+
+| Confusing Concept | If the Question Emphasizes... | Choose This Pillar |
+| :--- | :--- | :--- |
+| **Automation** | *Defining runbooks & infrastructure as code, small reversible updates* | **Operational Excellence** |
+| **Automation** | *Automated self-healing, auto-failover, managing change via CI/CD to prevent outages* | **Reliability** |
+| **Automation** | *Auto-remediating misconfigured S3 buckets or security groups* | **Security** |
+| **Capacity / Scaling** | *Scaling horizontally to survive outages & never running out of capacity* | **Reliability** |
+| **Capacity / Scaling** | *Paying only for what you consume, rightsizing to cut the monthly bill* | **Cost Optimization** |
+| **Capacity / Scaling** | *Maximizing hardware utilization & eliminating idle servers to cut energy/carbon* | **Sustainability** |
+| **Managed / Serverless** | *Offloading heavy tech (ML, DBs) & experimenting faster without managing servers* | **Performance Efficiency** |
+| **Managed / Serverless** | *Reducing physical server energy waste via multi-tenant pooling* | **Sustainability** |
+| **Failure / Game Days** | *Pre-mortems, refining human procedures, learning from operational failures* | **Operational Excellence** |
+| **Failure / Game Days** | *Automatically recovering from failure & testing backup/restore procedures* | **Reliability** |
+
 ---
 
 ## 7. Exam Traps & 'Clue-to-Answer' Decryption

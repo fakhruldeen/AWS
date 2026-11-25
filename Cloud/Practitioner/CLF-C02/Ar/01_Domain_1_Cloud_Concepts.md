@@ -70,36 +70,161 @@
 
 ## رابعاً: إطار العمل المعماري الجيد (`AWS Well-Architected Framework`)
 
-يقدم هذا الإطار أفضل الممارسات الهندسية لبناء وتشغيل أنظمة آمنة وعالية الأداء ومرنة وفعالة من حيث التكلفة، ويقوم على **ستة أعمدة رئيسية (`6 Pillars`)**:
+يُعد **`AWS Well-Architected Framework`** الدليل الهندسي المرجعي الذي وضعته AWS لمساعدة المعماريين والمهندسين على تصميم وبناء وتشغيل أنظمة سحابية آمنة، عالية الأداء، مرنة، واقتصادية. وهو يجيب عن سؤال: **"كيف نصمّم التطبيق والبنية التحتية على السحابة بشكل صحيح؟"**
 
-| العمود (`Pillar`) | المبدأ الأساسي وأبرز الممارسات التصميمية |
-| :--- | :--- |
-| **1. Operational Excellence** (التميز التشغيلي) | تشغيل ومراقبة الأنظمة لتقديم قيمة مستمرة للأعمال وتحسين العمليات باستمرار. أبرز الممارسات: تنفيذ العمليات ككود (**Operations as Code**)، إجراء تغييرات صغيرة ومتكررة وقابلة للتراجع، وتوقع الأعطال والتعلم من كل حادث تشغيلي. |
-| **2. Security** (الأمان) | حماية البيانات والأنظمة والأصول عبر تقييم المخاطر واستراتيجيات التخفيف. أبرز الممارسات: تطبيق مبدأ أقل الصلاحيات (**Least Privilege**)، أتمتة الضوابط الأمنية، تشفير البيانات في حالتي السكون والنقل (`At Rest & In Transit`)، وتطبيق الأمان على جميع الطبقات (**Defense in Depth**). |
-| **3. Reliability** (الاعتمادية) | قدرة النظام على أداء وظيفته المقصودة بشكل صحيح ومستمر والتعافي السريع من الأعطال. أبرز الممارسات: التعافي التلقائي من الأعطال، التوسع الأفقي لزيادة التوافر، اختبار إجراءات الاستعادة (`Recovery Procedures`)، والتوزيع عبر عدة **`AZs`**. |
-| **4. Performance Efficiency** (كفاءة الأداء) | الاستخدام الأمثل لموارد الحوسبة لتلبية متطلبات النظام والحفاظ على هذه الكفاءة مع تطور التقنيات. أبرز الممارسات: اعتماد البنى بدون خوادم (**Serverless Architectures**)، استخدام خدمات مُدارة متخصصة، والنشر العالمي في دقائق. |
-| **5. Cost Optimization** (تحسين التكلفة) | تشغيل الأنظمة بأقل تكلفة ممكنة تحقق قيمة الأعمال دون هدر. أبرز الممارسات: تبني نموذج الاستهلاك الفعلي، قياس الكفاءة الكلية، إيقاف الموارد غير المستخدمة، والاستفادة من خطط الالتزام (`Savings Plans` / `Reserved Instances`). |
-| **6. Sustainability** (الاستدامة البيئية) | تقليل الأثر البيئي واستهلاك الطاقة الناتج عن تشغيل أحمال العمل السحابية عبر تعظيم كفاءة استخدام الخوادم، واستخدام الخدمات المُدارة، وتقليل حجم البيانات غير الضرورية المنقولة والمخزنة. |
-
----
-
-## خامساً: إطار تبني السحابة (`AWS Cloud Adoption Framework — CAF`)
-
-بينما يركز `Well-Architected Framework` على التصميم التقني للتطبيقات، يركز **`AWS CAF`** على **خطة التحول المؤسسي الشاملة** للانتقال من البنية التقليدية إلى السحابة، وينقسم إلى **ستة منظورات (`6 Perspectives`)**:
-
-### المنظورات الإدارية والتجارية (`Business Capabilities`):
-1. **`Business Perspective`:** ضمان توافق استثمارات السحابة مع الأهداف الاستراتيجية للمؤسسة وتسريع العائد التجاري.
-2. **`People Perspective`:** تهيئة الكوادر البشرية، وبرامج التدريب، وإدارة التغيير الثقافي والتنظيمي لتمكين الموظفين من العمل بفعالية في البيئة السحابية.
-3. **`Governance Perspective`:** وضع السياسات والضوابط لإدارة التكاليف (`Cloud Financial Management`) والمخاطر والامتثال وجودة المحفظة التقنية.
-
-### المنظورات التقنية (`Technical Capabilities`):
-4. **`Platform Perspective`:** تصميم وبناء منصة سحابية قابلة للتوسع وموحدة المعايير لتشغيل أحمال العمل.
-5. **`Security Perspective`:** تحقيق السرية والسلامة والتوافر للبيانات والتطبيقات السحابية.
-6. **`Operations Perspective`:** ضمان تشغيل الخدمات اليومية بكفاءة ومراقبتها واستجابتها السريعة للحوادث التشغيلية.
+### 1. المبادئ التصميمية العامة الستة (`6 General Design Principles`)
+قبل الدخول في الأعمدة الستة، يضع الإطار ستة مبادئ عامة تنطبق على جميع الأنظمة السحابية:
+1. **`Stop guessing your capacity needs`:** التوقف عن تخمين السعة المطلوبة لسنوات قادمة والاعتماد على التوسع التلقائي (`Auto Scaling`).
+2. **`Test systems at production scale`:** إنشاء نسخة اختبار مطابقة تماماً لبيئة الإنتاج، إجراء اختبارات الضغط، ثم حذفها خلال ساعات بدفع تكلفة ساعات الاختبار فقط.
+3. **`Automate to make architectural experimentation easier`:** أتمتة البنية التحتية ككود (`Infrastructure as Code`) لتسهيل التجربة والتراجع الآمن دون عمل يدوي متكرر.
+4. **`Allow for evolutionary architectures`:** تصميم أنظمة قابلة للتطور المستمر مع ظهور خدمات سحابية أحدث وأرخص دون قيود تقنية جامدة.
+5. **`Drive architectures using data`:** اتخاذ القرارات المعمارية بناءً على بيانات وقياسات حقيقية (`CloudWatch Metrics`, `Logs`) لا على التخمين.
+6. **`Improve through game days`:** محاكاة الأعطال والهجمات الدورية (`Game Days`) لاختبار جاهزية الفريق وخطط الاستعادة قبل وقوع أزمة حقيقية.
 
 ---
 
-## سادساً: مفاهيم التوسع والاستمرارية والتعافي من الكوارث
+### 2. الشرح التفصيلي للأعمدة الستة (`The 6 Pillars`)
+
+#### العمود الأول: `Operational Excellence` (التميز التشغيلي)
+* **الهدف الأساسي:** تشغيل ومراقبة الأنظمة لتقديم قيمة مستمرة للأعمال، والتحسين الدائم للعمليات والإجراءات التشغيلية.
+* **المبادئ التصميمية الأساسية (`Design Principles` — مهمة جداً في الاختبار):**
+  * **`Perform operations as code`:** تعريف البنية التحتية وإجراءات التشغيل بالكامل ككود (`AWS CloudFormation`, `AWS CDK`) لتقليل الأخطاء البشرية.
+  * **`Make frequent, small, reversible changes`:** تنفيذ تحديثات صغيرة ومتكررة يسهل التراجع عنها فوراً إذا ظهر خلل.
+  * **`Refine operations procedures frequently`:** مراجعة وتحديث أدلة التشغيل (`Runbooks`) باستمرار مع تطور النظام.
+  * **`Anticipate failure`:** إجراء تدريبات استباقية (`Pre-mortems`) لاكتشاف نقاط الضعف قبل إطلاق النظام.
+  * **`Learn from all operational failures`:** تحليل السبب الجذري (`Root Cause Analysis`) لكل عطل وتحويل الدروس المستفادة إلى تحسينات مؤتمتة.
+* **أبرز خدمات AWS المرتبطة:** `AWS CloudFormation`, `AWS Systems Manager`, `Amazon CloudWatch`, `AWS Config`.
+
+#### العمود الثاني: `Security` (الأمان)
+* **الهدف الأساسي:** حماية البيانات والأنظمة والأصول السحابية من خلال تقييم المخاطر وتطبيق الضوابط الأمنية في كل طبقة.
+* **المبادئ التصميمية الأساسية:**
+  * **`Implement a strong identity foundation`:** تطبيق مبدأ أقل الصلاحيات (`Least Privilege`)، المركزية في الهويات (`IAM Identity Center`)، وتفعيل `MFA`.
+  * **`Enable traceability`:** تسجيل ومراقبة جميع الأنشطة والتغييرات في الوقت الفعلي (`AWS CloudTrail`, `CloudWatch`).
+  * **`Apply security at all layers (Defense in Depth)`:** عدم الاعتماد على خط دفاع واحد؛ بل تأمين الحافة (`WAF`/`Shield`) والشبكة (`NACLs`/`Security Groups`) والنظام والبيانات معاً.
+  * **`Automate security best practices`:** معالجة الإعدادات الخاطئة تلقائياً عبر `AWS Config` و `Lambda`.
+  * **`Protect data in transit and at rest`:** فرض التشفير أثناء النقل (`TLS/HTTPS`) وأثناء السكون (`AWS KMS`).
+  * **`Keep people away from data`:** تقليل وصول البشر المباشر للبيانات الحساسة واستخدام خطوط معالجة مؤتمتة.
+  * **`Prepare for security events`:** إعداد خطط استجابة جاهزة ومحاكاة الحوادث الأمنية.
+* **أبرز خدمات AWS المرتبطة:** `AWS IAM`, `AWS KMS`, `AWS Secrets Manager`, `AWS Shield`, `AWS WAF`, `Amazon GuardDuty`, `AWS Security Hub`, `AWS CloudTrail`.
+
+#### العمود الثالث: `Reliability` (الاعتمادية)
+* **الهدف الأساسي:** ضمان قدرة النظام على أداء وظيفته المطلوبة بدقة واستمرارية، والتعافي السريع والتلقائي من أي عطل.
+* **المبادئ التصميمية الأساسية:**
+  * **`Automatically recover from failure`:** مراقبة مؤشرات الأداء وتفعيل الاستبدال والتعافي التلقائي (`Auto Scaling`, `RDS Multi-AZ`, `Route 53 Failover`).
+  * **`Test recovery procedures`:** اختبار النسخ الاحتياطية وعمليات التحويل الطارئ بانتظام (مثل `AWS Fault Injection Service`).
+  * **`Scale horizontally to increase aggregate workload availability`:** استبدال خادم واحد ضخم بعدة خوادم صغيرة موزعة عبر أكثر من `AZ` لمنع نقطة الفشل الواحدة (`Single Point of Failure`).
+  * **`Stop guessing capacity`:** ضبط السعة تلقائياً لمواجهة الزيادات المفاجئة دون انهيار الخدمة.
+  * **`Manage change in automation`:** تطبيق التعديلات عبر خطوط أتمتة (`CI/CD`) لا عبر تعديلات يدوية عرضة للخطأ.
+* **أبرز خدمات AWS المرتبطة:** `Amazon EC2 Auto Scaling`, `Elastic Load Balancing (ELB)`, `Amazon Route 53`, `AWS Backup`, `Amazon S3`.
+
+#### العمود الرابع: `Performance Efficiency` (كفاءة الأداء)
+* **الهدف الأساسي:** استخدام موارد الحوسبة بكفاءة مثلى لتلبية متطلبات النظام والحفاظ على هذه الكفاءة مع تغيّر حجم الطلب وتطور التقنيات.
+* **المبادئ التصميمية الأساسية:**
+  * **`Democratize advanced technologies`:** الاعتماد على خدمات AWS المُدارة لتقنيات معقدة (مثل `Amazon SageMaker` و `Amazon RDS`) بدلاً من إدارتها يدوياً.
+  * **`Go global in minutes`:** نشر التطبيق في عدة `Regions` واستخدام `Edge Locations` لتقليل زمن الاستجابة (`Latency`) عالمياً.
+  * **`Use serverless architectures`:** التخلص من عبء إدارة الخوادم باستخدام `AWS Lambda` و `AWS Fargate` و `DynamoDB`.
+  * **`Experiment more often`:** تجربة أنواع مختلفة من الخوادم والتخزين بسرعة بفضل السحابة.
+  * **`Consider mechanical sympathy`:** اختيار المورد الأنسب لطبيعة العمل (مثلاً خوادم `Memory-Optimized` للذاكرة المؤقتة، و `Compute-Optimized` للحسابات المكثفة).
+* **أبرز خدمات AWS المرتبطة:** `AWS Lambda`, `Amazon CloudFront`, `Amazon ElastiCache`, `AWS Compute Optimizer`.
+
+#### العمود الخامس: `Cost Optimization` (تحسين التكلفة)
+* **الهدف الأساسي:** تشغيل الأنظمة بأقل تكلفة ممكنة تحقق القيمة المرجوة للأعمال دون إهدار مالي.
+* **المبادئ التصميمية الأساسية:**
+  * **`Implement Cloud Financial Management (FinOps)`:** بناء ثقافة وإدارة مالية واعية لتكاليف السحابة.
+  * **`Adopt a consumption model`:** الدفع فقط مقابل الموارد المستهلكة فعلياً وإيقاف بيئات التطوير خارج أوقات العمل.
+  * **`Measure overall efficiency`:** قياس العائد التجاري مقارنة بتكلفة تشغيل البنية التحتية.
+  * **`Stop spending money on undifferentiated heavy lifting`:** الاعتماد على خدمات AWS المُدارة بدلاً من الإنفاق على صيانة الخوادم ومراكز البيانات.
+  * **`Analyze and attribute expenditure`:** استخدام `Cost Allocation Tags` لتحديد إنفاق كل مشروع أو قسم بدقة.
+* **أبرز خدمات AWS المرتبطة:** `AWS Cost Explorer`, `AWS Budgets`, `Savings Plans`, `EC2 Spot Instances`, `AWS Trusted Advisor`.
+
+#### العمود السادس: `Sustainability` (الاستدامة البيئية)
+* **الهدف الأساسي:** تقليل الأثر البيئي واستهلاك الطاقة والانبعاثات الكربونية الناتجة عن تشغيل الأنظمة السحابية.
+* **المبادئ التصميمية الأساسية:**
+  * **`Understand your impact`:** قياس البصمة الكربونية لأحمال عملك باستخدام **`AWS Customer Carbon Footprint Tool`**.
+  * **`Establish sustainability goals`:** وضع أهداف طويلة المدى لخفض استهلاك الطاقة لكل وحدة عمل.
+  * **`Maximize utilization`:** رفع نسبة استغلال الخوادم وحذف الموارد الخاملة (`Idle Resources`) لتجنب استهلاك كهرباء دون فائدة.
+  * **`Adopt new, more efficient hardware and software offerings`:** الانتقال إلى معالجات **`AWS Graviton`** التي تستهلك طاقة أقل بنسبة تصل إلى 60% لنفس الأداء.
+  * **`Use managed services`:** الخدمات المُدارة المشتركة (`S3`, `Lambda`) تعظّم كفاءة استخدام العتاد الفيزيائي.
+  * **`Reduce the downstream impact`:** ضغط البيانات وتقليل حجم النقل لتقليل استهلاك الطاقة على أجهزة المستخدمين.
+
+---
+
+### 3. أداة المراجعة المجانية (`AWS Well-Architected Tool`)
+توفر AWS أداة مجانية داخل لوحة التحكم تُسمى **`AWS Well-Architected Tool`** تتيح للمؤسسات مراجعة أنظمتها عبر الإجابة عن أسئلة منظمة للأعمدة الستة، ثم تُصدر تلقائياً تقريراً يحدد **المخاطر العالية والمتوسطة (`High/Medium-Risk Issues`)** وخطة تحسين عملية. كما تدعم **عدسات متخصصة (`Well-Architected Lenses`)** مثل `Serverless Lens`, `SaaS Lens`, و `Generative AI Lens`.
+
+### 4. جدول التمييز بين الأعمدة المتشابهة في أسئلة الاختبار
+كثيراً ما تتشابه الكلمات بين عمودين؛ استخدم هذه القاعدة الحاسمة للتفريق:
+
+| الفكرة المتشابهة | إذا ركّز السؤال على... | فالعمود الصحيح هو... |
+| :--- | :--- | :--- |
+| **الأتمتة (`Automation`)** | كتابة الإجراءات والبنية التحتية ككود (`Runbooks / IaC`) وتحديثات صغيرة قابلة للتراجع | **`Operational Excellence`** |
+| **الأتمتة (`Automation`)** | التعافي التلقائي من الأعطال وتجنب التوقف عبر خطوط `CI/CD` | **`Reliability`** |
+| **الأتمتة (`Automation`)** | إصلاح الثغرات والإعدادات الأمنية الخاطئة تلقائياً | **`Security`** |
+| **السعة والتوسع (`Scaling`)** | التوسع الأفقي للنجاة من الأعطال ومنع نفاد الموارد | **`Reliability`** |
+| **السعة والتوسع (`Scaling`)** | تقليص الأحجام وإيقاف الموارد غير المستغلة لتخفيض الفاتورة الشهرية | **`Cost Optimization`** |
+| **السعة والتوسع (`Scaling`)** | تعظيم استغلال العتاد وإلغاء الخوادم الخاملة لتقليل استهلاك الطاقة والكربون | **`Sustainability`** |
+
+---
+
+## خامساً: إطار تبني السحابة (`AWS Cloud Adoption Framework — AWS CAF 3.0`)
+
+بينما يجيب `Well-Architected Framework` عن سؤال **"كيف نصمّم التطبيق تقنياً؟"**، يجيب **`AWS CAF`** عن سؤال **"كيف تنجح المؤسسة ككل (إدارةً وبشراً وعملياتٍ وتقنيةً) في التحول إلى السحابة بأقل مخاطر؟"**
+
+### 1. نتائج الأعمال الأربع المستهدفة (`4 Foundational Business Outcomes`)
+يربط `AWS CAF` التحول السحابي بأربع نتائج ملموسة تسأل عنها اختبارات `CLF-C02`:
+1. **`Reduced business risk`:** تقليل المخاطر الأمنية والتنظيمية ومخاطر توقف الأعمال.
+2. **`Improved ESG performance`:** تحسين الأداء البيئي والاجتماعي والحوكمة (خفض الانبعاثات الكربونية).
+3. **`Increased revenue`:** زيادة الإيرادات عبر إطلاق منتجات رقمية جديدة والوصول لأسواق عالمية أسرع.
+4. **`Increased operational efficiency`:** رفع الكفاءة التشغيلية وخفض التكاليف وتسريع إنتاجية الفرق.
+
+### 2. مجالات التحول الأربعة (`4 Transformation Domains`)
+* **`Technology`:** ترحيل وتحديث البنية التحتية والتطبيقات ومنصات البيانات.
+* **`Process`:** رقمنة وأتمتة وتحسين إجراءات العمل اليومية باستخدام الذكاء الاصطناعي والتحليلات.
+* **`Organization`:** إعادة هيكلة فرق العمل ونماذج التشغيل (بما في ذلك إنشاء **مركز تميز سحابي `Cloud Center of Excellence — CCoE`** يجمع ممثلي الأعمال والأمان والبنية التحتية لكسر العزلة بين الأقسام).
+* **`Product`:** ابتكار نماذج عمل ومنتجات رقمية جديدة وتجربة عملاء متطورة.
+
+### 3. المنظورات الستة في `AWS CAF` بالتفصيل (`6 Perspectives`)
+
+| الفئة | المنظور (`Perspective`) | أصحاب المصلحة (`Stakeholders`) | الهدف الدقيق والقدرات الأساسية (`Core Capabilities`) |
+| :---: | :--- | :--- | :--- |
+| **Business** | **1. `Business`** | `CEO`, `CFO`, `COO`, مديرو الأعمال | ضمان توافق الاستثمار السحابي مع استراتيجية الشركة، قياس العائد (`ROI`)، إدارة المنتجات، الابتكار التجاري، وتحقيق القيمة (`Strategy & Value Realization`). |
+| **Business** | **2. `People`** | `CHRO`, الموارد البشرية، التدريب | الجسر بين التقنية والبشر: **تطوير المهارات والتدريب والشهادات**، تطور الثقافة التنظيمية (`Culture Evolution`)، إدارة التغيير، واستقطاب الكفاءات. |
+| **Business** | **3. `Governance`** | `CIO`, `CTO`, مديرو البرامج، `FinOps` | توجيه برامج التحول السحابي، إدارة المحفظة والمخاطر، **الإدارة المالية للسحابة (`Cloud Financial Management / FinOps`)**، وإدارة المنافع والتراخيص. |
+| **Technical** | **4. `Platform`** | `CTO`, معماريو السحابة، مهندسو البيانات | تصميم وبناء البيئة السحابية الأساسية القابلة للتوسع (**`Landing Zones`**)، **هندسة البيانات (`Data Architecture`)**، تحديث التطبيقات، وخطوط `CI/CD`. |
+| **Technical** | **5. `Security`** | `CISO`, مهندسو الأمن، التدقيق | ضمان السرية والسلامة والتوافر: إدارة الهويات (`IAM`)، حماية البيانات والتشفير، كشف التهديدات، إدارة الثغرات، الاستجابة للحوادث، والامتثال القانوني. |
+| **Technical** | **6. `Operations`** | `COO`, مهندسو الاعتمادية (`SRE`), `ITSM` | ضمان تشغيل الخدمات يومياً وفق اتفاقيات مستوى الخدمة (`SLAs`): **المراقبة (`Observability`)**، إدارة الحوادث والتغييرات، والتعافي واستمرارية الأعمال. |
+
+### 4. مراحل رحلة التحول السحابي الأربع (`4 Cloud Transformation Journey Phases`)
+*(من أكثر نقاط `CAF` تكراراً في اختبار `CLF-C02`):*
+1. **`Envision` (التصور والرؤية):** توضيح كيف تسرّع السحابة تحقيق أهداف الأعمال، وتحديد الفرص ذات الأثر الأعلى، وتوحيد رؤية الإدارة العليا.
+2. **`Align` (المواءمة):** تحديد فجوات الجاهزية والقدرات عبر المنظورات الستة (`6 Perspectives`)، معالجة مخاوف أصحاب المصلحة، وبناء خطة عمل متوافقة.
+3. **`Launch` (الإطلاق التجريبي):** تنفيذ مشاريع تجريبية (`Pilot Initiatives`) في بيئة الإنتاج لإثبات القيمة العملية بسرعة وتصحيح المسار قبل التوسع الشامل.
+4. **`Scale` (التوسع المؤسسي):** تعميم النماذج الناجحة على نطاق المؤسسة بالكامل بأتمتة كاملة لتحقيق القيمة الاستراتيجية القصوى.
+
+---
+
+## سادساً: استراتيجيات الانتقال إلى السحابة (`The 7 Rs`) ومراحل الترحيل
+
+عندما تقرر مؤسسة نقل عشرات أو مئات التطبيقات المحلية (`On-Premises`) إلى AWS، لا تنقلها جميعاً بنفس الطريقة؛ بل تصنف كل تطبيق وفق **استراتيجيات الانتقال السبع (`The 7 Rs of Cloud Migration`)**:
+
+| الاستراتيجية | الوصف الدقيق | مثال عملي واقعي | السرعة | الجهد الهندسي | الفائدة السحابية طويلة المدى | الأداة الأساسية في AWS |
+| :--- | :--- | :--- | :---: | :---: | :---: | :--- |
+| **1. `Rehost`** *(Lift-and-Shift)* | نقل الخوادم والتطبيقات كما هي **دون أي تعديل في الكود**. | عقد إيجار مركز البيانات ينتهي خلال شهر ونريد الإخلاء فوراً إلى `EC2`. | **الأسرع** | منخفض جداً | متوسطة | `AWS Application Migration Service (MGN)` |
+| **2. `Replatform`** *(Lift, Tinker & Shift)* | نقل التطبيق مع **تعديل بسيط للاستفادة من خدمة مُدارة** دون إعادة كتابة الكود الأساسي. | نقل قاعدة `MySQL` مدارة يدوياً إلى **`Amazon RDS`** أو نقل التطبيق إلى `Elastic Beanstalk`. | سريعة | منخفض | متوسطة إلى عالية | `Amazon RDS`, `AWS DMS`, `Elastic Beanstalk` |
+| **3. `Repurchase`** *(Drop and Shop)* | الاستغناء عن النظام القديم وشراء منتج سحابي جاهز (**`SaaS`**). | إيقاف نظام `CRM` أو بريد محلي قديم والانتقال إلى Salesforce أو منتج من `AWS Marketplace`. | متوسطة | منخفض إلى متوسط | عالية | `AWS Marketplace` |
+| **4. `Refactor / Rearchitect`** | **إعادة تصميم وكتابة التطبيق بالكامل** بمعمارية سحابية أصلية (`Cloud-Native`). | تفكيك تطبيق متكامل قديم (`Monolith`) إلى `Microservices` باستخدام `AWS Lambda` و `DynamoDB`. | **الأبطأ** | **الأعلى** | **الأعلى على الإطلاق** | `AWS Lambda`, `ECS/EKS`, `API Gateway`, `DynamoDB` |
+| **5. `Relocate`** *(Hypervisor-Level Lift)* | نقل الآلات الافتراضية على مستوى الـ `Hypervisor` دون تغيير الكود أو عناوين `IP`. | نقل بيئة `VMware` المحلية مباشرة إلى **`VMware Cloud on AWS`**. | سريعة جداً | منخفض جداً | متوسطة | `VMware Cloud on AWS` |
+| **6. `Retain`** *(Revisit)* | **الإبقاء على التطبيق محلياً** في الوقت الحالي لعدم جاهزيته أو لقيود تنظيمية. | نظام صناعي مرتبط بجهاز مادي خاص أو تم تحديثه حديثاً جداً. | — | صفر | — | `AWS Outposts`, `Storage Gateway` |
+| **7. `Retire`** *(Decommission)* | **إيقاف وحذف** التطبيقات القديمة غير المستخدمة (تمثل عادةً 10%–20% من تطبيقات الشركات). | نظام تقارير قديم لم يسجل أحد الدخول إليه منذ عامين. | فورية | منخفض جداً | **توفير مالي فوري** | `AWS Application Discovery Service` |
+
+### مراحل الترحيل المؤسسي الثلاث (`3 Migration Phases — AWS MAP`):
+1. **`Assess` (التقييم):** قياس جاهزية المؤسسة، واكتشاف الخوادم المحلية وتبعياتها (`AWS Application Discovery Service`)، وبناء دراسة الجدوى والتكلفة الكلية (`AWS Migration Evaluator`).
+2. **`Mobilize` (التجهيز والتعبئة):** سد فجوات المهارات، وبناء بيئة متعددة الحسابات آمنة (`Landing Zone` عبر `AWS Control Tower`)، وتنفيذ أول موجة تجريبية.
+3. **`Migrate and Modernize` (الترحيل والتحديث):** تنفيذ الترحيل على نطاق واسع (`AWS MGN`, `AWS DMS`, `DataSync`, `Snow Family`) مع المتابعة المركزية عبر `AWS Migration Hub`، ثم التحديث التدريجي نحو الخدمات المُدارة و `Serverless`.
+
+---
+
+## سابعاً: مفاهيم التوسع والاستمرارية والتعافي من الكوارث
 
 ### 1. الفرق الدقيق بين `Scalability` و `Elasticity`
 * **قابلية التوسع (`Scalability`):** قدرة النظام على استيعاب زيادة في حجم العمل عبر إضافة موارد، وتتم بطريقتين:
@@ -136,7 +261,18 @@
 | **"Run AWS managed infrastructure and services on-premises using AWS hardware"** | **`AWS Outposts`** |
 | **"Embed AWS compute inside 5G telecommunication networks"** | **`AWS Wavelength`** |
 | **"Update workforce skills and organizational culture during cloud migration"** | **`People Perspective` (`AWS CAF`)** |
-| **"Minimize energy consumption and carbon footprint of cloud workloads"** | **`Sustainability Pillar` (`Well-Architected Framework`)** |
+| **"Design cloud architecture, Landing Zones, and Data Architecture"** | **`Platform Perspective` (`AWS CAF`)** |
+| **"Cloud Financial Management (FinOps), portfolio & risk oversight"** | **`Governance Perspective` (`AWS CAF`)** |
+| **"4 phases of AWS CAF transformation journey"** | **`Envision → Align → Launch → Scale`** |
+| **"Perform operations as code / frequent small reversible changes"** | **`Operational Excellence Pillar`** |
+| **"Automatically recover from failure / horizontal scaling / test recovery"** | **`Reliability Pillar`** |
+| **"Democratize advanced technologies / mechanical sympathy / serverless"** | **`Performance Efficiency Pillar`** |
+| **"Minimize energy consumption and carbon footprint (`AWS Graviton`)"** | **`Sustainability Pillar`** |
+| **"Free tool to review workloads against the 6 pillars and find high-risk issues"** | **`AWS Well-Architected Tool`** |
+| **"Lift-and-shift with zero code changes (`AWS MGN`)"** | **`Rehost`** |
+| **"Move self-managed DB to `Amazon RDS` without rewriting app code"** | **`Replatform`** |
+| **"Rewrite monolith into cloud-native serverless microservices"** | **`Refactor / Rearchitect`** |
+| **"Replace legacy in-house software with a commercial SaaS product"** | **`Repurchase`** |
 
 ---
 

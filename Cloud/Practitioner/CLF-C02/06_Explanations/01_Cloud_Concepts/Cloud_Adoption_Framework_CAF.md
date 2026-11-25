@@ -103,7 +103,37 @@ The AWS Cloud Adoption Framework (AWS CAF 3.0) structures transformation guidanc
 
 ---
 
-## 4. The 7 Rs of Cloud Migration Strategies
+### 3.3 Complete AWS CAF 3.0 Architecture: Outcomes, Transformation Domains & 4 Journey Phases
+
+A common exam mistake is memorizing only the 6 Perspectives while missing **how AWS CAF 3.0 connects them to business results and execution phases**:
+
+#### A. The 4 Foundational Business Outcomes of AWS CAF
+Every CAF initiative is measured against four concrete business outcomes:
+1. **Reduced Business Risk:** Lowering security, compliance, operational, and reputational risk (fewer outages, stronger data protection).
+2. **Improved ESG (Environmental, Social, and Governance) Performance:** Reducing carbon footprint and energy waste by moving from underutilized on-premises hardware to energy-efficient AWS data centers.
+3. **Increased Revenue:** Launching new digital products, reaching global markets faster, and unlocking AI/analytics insights.
+4. **Increased Operational Efficiency:** Lowering IT operating costs, automating manual processes, and improving developer productivity.
+
+#### B. The 4 Transformation Domains
+AWS CAF organizes organizational change across four domains:
+* **Technology:** Migrating and modernizing legacy infrastructure, applications, and data platforms.
+* **Process:** Digitizing, automating, and optimizing business operations (leveraging AI/ML and new workflows).
+* **Organization:** Reimagining operating models, team structures (e.g., cross-functional product teams and Cloud Center of Excellence), and workforce skills.
+* **Product:** Reimagining business models by creating new cloud-enabled value propositions and customer experiences.
+
+#### C. The 4 Cloud Transformation Journey Phases (`Envision → Align → Launch → Scale`)
+*(Heavily tested in `CLF-C02`!)*
+
+| Phase | Core Purpose | What Happens in Practice? |
+| :--- | :--- | :--- |
+| **1. Envision** | **Demonstrate how cloud accelerates business outcomes** | Identify high-impact transformation opportunities, link them to strategic business goals, and align executive sponsors around a shared vision. |
+| **2. Align** | **Identify capability gaps across the 6 CAF Perspectives** | Assess organizational readiness across Business, People, Governance, Platform, Security, and Operations; resolve stakeholder conflicts and build an actionable roadmap. |
+| **3. Launch** | **Deliver pilot initiatives in production** | Build and deploy initial production pilot workloads to demonstrate incremental business value quickly, validate assumptions, and adjust the approach before mass migration. |
+| **4. Scale** | **Expand production pilots to enterprise scale** | Replicate proven patterns across the entire organization, automate landing zones and governance, and realize full business value at scale. |
+
+---
+
+## 4. The 7 Rs of Cloud Migration Strategies & The 3 Migration Phases
 
 When evaluating an existing enterprise portfolio of on-premises applications for cloud migration, AWS defines the **7 Rs Migration Framework**:
 
@@ -140,6 +170,20 @@ graph TD
    * Keeping workloads on-premises because they were recently upgraded, have heavy physical dependencies, or are subject to unresolved regulatory mandates.
 7. **Retire ("Decommission"):**
    * Turning off applications, servers, and storage volumes that are discovered to be obsolete, redundant, or no longer used by the business (typically 10%–20% of an enterprise portfolio).
+
+### 4.2 The 3 AWS Migration Acceleration Program (MAP) Phases
+In real-world enterprise migrations, AWS structures the end-to-end journey into **3 sequential phases**:
+1. **Assess:** Evaluate cloud readiness (`AWS Migration Readiness Assessment — MRA`), discover existing on-premises servers and dependencies (`AWS Application Discovery Service`), and build a Total Cost of Ownership (TCO) business case (`AWS Migration Evaluator`).
+2. **Mobilize:** Close readiness gaps identified in Assess, build the secure multi-account **Landing Zone** (`AWS Control Tower` & `AWS Organizations`), train staff, establish security/operations baselines, and execute initial pilot migrations.
+3. **Migrate and Modernize:** Execute large-scale migration waves using `AWS Application Migration Service (MGN)`, `AWS DMS`, `AWS DataSync`, and `AWS Snow Family`, tracked centrally in `AWS Migration Hub`, then modernize workloads toward managed and serverless architectures.
+
+### 4.3 Real-World 7 Rs Decision Walkthrough (How to Choose in Exam Scenarios)
+Imagine a retail bank migrating 5 legacy systems to AWS:
+* **System A (Legacy Billing Server — Lease expires in 30 days, zero time to touch code):** Choose **Rehost** (`AWS MGN`) to evacuate the data center immediately.
+* **System B (Self-managed MySQL database on Linux — Team is tired of OS/DB patching, app code stays identical):** Choose **Replatform** (move DB to `Amazon RDS`).
+* **System C (Old in-house CRM tool — Commercial cloud CRM already does everything better):** Choose **Repurchase** (move to SaaS like Salesforce / AWS Marketplace).
+* **System D (Core Mobile Banking API — Needs instant auto-scaling for millions of users & new features):** Choose **Refactor / Rearchitect** (rewrite as serverless microservices using `AWS Lambda`, `API Gateway`, `DynamoDB`).
+* **System E (2014 Internal Holiday Tracker — Zero logins in 18 months):** Choose **Retire** (decommission immediately to save money).
 
 ---
 
