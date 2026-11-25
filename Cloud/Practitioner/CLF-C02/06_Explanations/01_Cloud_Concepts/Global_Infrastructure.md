@@ -56,7 +56,7 @@ graph TD
 
 ### 1.1 The Beginner's Guide to Network Latency & Speed of Light
 * **What is Latency in Plain English?** Latency is simply the travel time (lag) it takes for a message to leave your laptop, travel across optical glass cables to a server, and return with an answer.
-* **Why Can't One Supercomputer in California Serve the Whole World?** Even though light travels fast (300{,}000 km/s in a vacuum), inside standard glass fiber optic cables, light slows down to roughly 204{,}000 km/s.
+* **Why Can't One Supercomputer in California Serve the Whole World?** Even though light travels fast (300,000 km/s in a vacuum), inside standard glass fiber optic cables, light slows down to roughly 204{,}000 km/s.
   - Traveling from London to Tokyo and back takes at least **150 milliseconds** of raw light transit time.
   - While 150 ms sounds fast to a human, to a database running 50,000 transactions per second, that lag causes applications to freeze and fail.
 * **The Engineering Consequence:** You cannot keep databases synchronously in sync across continents. This is why **Availability Zones** are clustered close together (within tens of kilometers) to guarantee < 1–2 ms latency, while **Regions** are placed around the globe to serve local populations with low latency.

@@ -51,7 +51,11 @@ flowchart TD
 
 ### 1.1 The Mathematics of CIDR Subnetting & The 5 Reserved AWS IPs
 In IPv4 Classless Inter-Domain Routing (CIDR), network sizes are designated by bitmasks:
-$$\text{Total IP Addresses} = 2^{32 - \text{Prefix Length}}$$
+
+$$
+\text{Total IP Addresses} = 2^{32 - \text{Prefix Length}}
+$$
+
 For a standard `/24` subnet: 2^(32 − 24) = 2⁸ = **256 total addresses**.
 * **The 5 Reserved AWS IP Addresses (High-Yield Exam Trap!):** In *every* AWS VPC subnet, AWS reserves exactly **5 IP addresses** for internal infrastructure routing; they cannot be assigned to customer resources:
   1. `10.0.0.0`: **Network address** (first IP).
@@ -60,7 +64,10 @@ For a standard `/24` subnet: 2^(32 − 24) = 2⁸ = **256 total addresses**.
   4. `10.0.0.3`: **Reserved by AWS for future use**.
   5. `10.0.0.255`: **Network broadcast address** (AWS VPC does not support broadcast, but address is reserved).
 * **Usable Host Capacity Formula:**
-  $$\text{Usable Host IPs} = 2^{32 - \text{Prefix}} - 5 \implies 256 - 5 = \mathbf{251\text{ usable host IPs}}$$
+
+  $$
+  \text{Usable Host IPs} = 2^{32 - \text{Prefix}} - 5 \implies 256 - 5 = \mathbf{251\text{ usable host IPs}}
+  $$
 
 ### 1.2 Stateful vs. Stateless Filtering Mechanics
 * **Stateful Filtering (Security Groups):** The firewall software maintains an active **connection tracking table** in kernel memory. When an incoming packet is permitted on an allowed port (e.g., inbound TCP 443), the firewall automatically creates a temporary reverse entry in the state table. Return outbound traffic is **automatically allowed** regardless of outbound rules.
@@ -372,7 +379,7 @@ When evaluating an AWS Networking question:
   - *The Autopsy:* **CloudFront** is a CDN that **caches** HTTP/HTTPS files (HTML, images, videos) at edge locations. **Global Accelerator** does **not cache** data; it provides two static Anycast IP addresses to route non-HTTP (TCP/UDP, VoIP, gaming) traffic directly onto AWS's private high-speed global fiber backbone.
 * **Decoy #3: "VPC Peering" vs. "[AWS Transit Gateway](../../AWS_SERVICES_GLOSSARY.md#aws-transit-gateway)"**
   - *The Trap:* Connecting 50 VPCs together.
-  - *The Autopsy:* VPC Peering is non-transitive (VPC A → B and B → C does NOT mean A can talk to C). Connecting 50 VPCs with peering requires 50 × 49 / 2 = 1{,}225 peerings! For hub-and-spoke interconnectivity across many VPCs, the answer is **[AWS Transit Gateway](../../AWS_SERVICES_GLOSSARY.md#aws-transit-gateway)**.
+  - *The Autopsy:* VPC Peering is non-transitive (VPC A → B and B → C does NOT mean A can talk to C). Connecting 50 VPCs with peering requires 50 × 49 / 2 = 1,225 peerings! For hub-and-spoke interconnectivity across many VPCs, the answer is **[AWS Transit Gateway](../../AWS_SERVICES_GLOSSARY.md#aws-transit-gateway)**.
 
 ### 4. 10-Second Visual Decision Flowchart
 

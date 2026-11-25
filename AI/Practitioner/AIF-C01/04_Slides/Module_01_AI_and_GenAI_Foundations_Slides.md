@@ -113,7 +113,11 @@ style: |
 
 * **Embeddings:** High-dimensional numerical arrays (vectors) representing the semantic meaning of text or images.
 * Words and sentences with similar meanings map close together in vector space:
-  $$\text{Vector}(\text{"Physician"}) \approx \text{Vector}(\text{"Doctor"})$$
+
+  $$
+  \text{Vector}(\text{"Physician"}) \approx \text{Vector}(\text{"Doctor"})
+  $$
+
 * **AWS Services for Embeddings:**
   * **Amazon Titan Text Embeddings V2:** Generates high-accuracy vectors.
   * **Vector Databases:** Amazon OpenSearch Serverless, Aurora PostgreSQL with `pgvector`, Neptune Analytics.

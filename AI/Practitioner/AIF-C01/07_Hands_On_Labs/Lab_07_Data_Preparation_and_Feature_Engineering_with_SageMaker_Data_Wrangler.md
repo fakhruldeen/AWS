@@ -128,7 +128,11 @@ Features with huge numerical ranges (like `TotalCharges` up to $23,000) will ove
 1. In the transform catalog, select **Scale values**.
 2. **Transform:** `Standardize (Z-score)`.
 3. Formula:
-   $$z = \frac{x - \mu}{\sigma}$$
+
+   $$
+   z = \frac{x - \mu}{\sigma}
+   $$
+
    *(Transforms the distribution to have a mean of 0 and a standard deviation of 1).*
 4. **Input column:** `TotalCharges`.
 5. Click **Preview**, then click **Add**.

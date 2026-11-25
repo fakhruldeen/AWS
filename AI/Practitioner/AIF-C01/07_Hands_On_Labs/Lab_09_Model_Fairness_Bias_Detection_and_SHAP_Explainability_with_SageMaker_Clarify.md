@@ -50,21 +50,37 @@ flowchart TD
 
 ### 1. Class Imbalance ($CI$)
 Measures whether one demographic group is underrepresented in the training data:
-$$CI = \frac{n_a - n_d}{n_a + n_d}$$
+
+$$
+CI = \frac{n_a - n_d}{n_a + n_d}
+$$
+
 - Where $n_a$ is the count of privileged facet members (e.g. `Age >= 40`), and $n_d$ is the unprivileged group (`Age < 40`).
 - If CI > 0, the privileged group dominates the training data. A value near $0.0$ indicates perfect balance.
 
 ### 2. Difference in Positive Proportions in Labels ($DPL$)
 Measures the historical difference in positive outcomes between groups:
-$$DPL = q_a - q_d$$
+
+$$
+DPL = q_a - q_d
+$$
+
 - Where $q_a$ is the proportion of privileged applicants who received loans, and $q_d$ is the proportion of unprivileged applicants who received loans.
 - A value significantly greater than $0.0$ indicates historical training bias favoring group $a$.
 
 ### 3. Disparate Impact ($DI$) & The 80% Rule of Thumb
 The ratio of positive prediction rates:
-$$DI = \frac{q_d}{q_a}$$
+
+$$
+DI = \frac{q_d}{q_a}
+$$
+
 - **The Legal 80% Rule:** Under US Federal EEOC guidelines, a selection rate for any group which is less than four-fifths (80%) of the rate for the group with the highest rate is evidence of adverse impact:
-  $$0.80 \le DI \le 1.25$$
+
+  $$
+  0.80 \le DI \le 1.25
+  $$
+
   - If DI < 0.80: Severe disparate adverse impact against the unprivileged group.
 
 ---

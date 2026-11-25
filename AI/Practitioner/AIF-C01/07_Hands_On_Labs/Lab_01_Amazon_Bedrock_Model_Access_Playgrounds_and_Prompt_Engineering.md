@@ -101,7 +101,10 @@ The Bedrock Chat Playground allows real-time interactive benchmarking of decodin
 
 ### Step 3: Experimenting with Temperature & Determinism
 Temperature scales the logits before the Softmax layer is applied:
-$$P(y_i) = \frac{e^{z_i / T}}{\sum_j e^{z_j / T}}$$
+
+$$
+P(y_i) = \frac{e^{z_i / T}}{\sum_j e^{z_j / T}}
+$$
 
 #### Experiment 3A: High Temperature (Creative & Exploratory)
 1. In the Configuration panel, set:

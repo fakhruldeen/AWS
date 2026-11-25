@@ -59,7 +59,11 @@ flowchart TD
 
 #### Core Components:
 1. **Self-Attention Mechanism:** Computes pairwise relevance between every token in a sequence regardless of distance:
-   $$\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V$$
+
+   $$
+   \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
+   $$
+
    * $Q$ (Query): What the current token is seeking.
    * $K$ (Key): What each token in the sequence offers.
    * $V$ (Value): The actual information content carried by the token.

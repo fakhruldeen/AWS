@@ -39,7 +39,11 @@ By the end of this lecture, candidates will be able to:
 
 ### 2. The Customization Spectrum & LoRA Mechanics
 - *Whiteboard Equation:*
-  $$W = W_0 + \Delta W = W_0 + B \times A$$
+
+  $$
+  W = W_0 + \Delta W = W_0 + B \times A
+  $$
+
 - **Explain LoRA:**
   - W₀ is the multi-gigabyte frozen foundation model weights.
   - $A$ (Gaussian init) and $B$ (Zero init) are low-rank matrices where rank $r$ is tiny (r=8 or r=16).

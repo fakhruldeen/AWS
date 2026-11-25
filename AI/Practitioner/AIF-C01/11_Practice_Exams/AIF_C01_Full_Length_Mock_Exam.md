@@ -571,8 +571,14 @@ Which IAM policy element ensures that an application can only invoke Amazon Nova
 ## 📊 Score Diagnostic Breakdown
 
 To calculate your scaled score:
-$$\text{Percentage Score} = \left(\frac{\text{Number of Correct Answers}}{65}\right) \times 100$$
-$$\text{Estimated Scaled Score} = 100 + (\text{Percentage Score} \times 9.0)$$
+
+$$
+\text{Percentage Score} = \left(\frac{\text{Number of Correct Answers}}{65}\right) \times 100
+$$
+
+$$
+\text{Estimated Scaled Score} = 100 + (\text{Percentage Score} \times 9.0)
+$$
 
 * **≥ 700 Scaled Score (≥ 46 / 65 correct):** **PASS** — Ready for the official AWS exam.
 * **$600 - 690$ Scaled Score ($39 - 45$ correct):** **BORDERLINE** — Review weak domains in the table above before sitting the exam.

@@ -48,7 +48,9 @@ Verify against the memorized mental acronyms detailed below.
 
 ### 1. The Model Adaptation Ladder: `P-R-F-C`
 
-$$\text{Lowest Cost / Frozen Weights} \quad \xrightarrow{\hspace{6cm}} \quad \text{Highest Cost / Heavy Weight Updates}$$
+$$
+\text{Lowest Cost / Frozen Weights} \quad \xrightarrow{\hspace{6cm}} \quad \text{Highest Cost / Heavy Weight Updates}
+$$
 
 ```
   P ── Prompt Engineering     (0 weight changes, 0 training compute, frozen knowledge)
@@ -83,7 +85,10 @@ $$\text{Lowest Cost / Frozen Weights} \quad \xrightarrow{\hspace{6cm}} \quad \te
 
 * **Mnemonic:** *"The more **perplexed** the model is, the **worse** it performs!"*
 * **Mathematical Rule:** Perplexity measures the model's uncertainty.
-  $$\text{Lower Perplexity} \implies \text{Higher Fluency, Accuracy, and Confidence}$$
+
+  $$
+  \text{Lower Perplexity} \implies \text{Higher Fluency, Accuracy, and Confidence}
+  $$
 
 ---
 

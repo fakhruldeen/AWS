@@ -35,13 +35,21 @@ graph TD
 
 ### 1.1 The Mathematics of Hardware Utilization and Deadweight Loss
 In traditional IT, servers must be provisioned to survive the **peak annual demand** (e.g., Black Friday or end-of-quarter financial closing):
-$$\text{Average Capacity Utilization } (U) = \frac{\text{Mean Compute Demand}}{\text{Peak Provisioned Capacity}}$$
+
+$$
+\text{Average Capacity Utilization } (U) = \frac{\text{Mean Compute Demand}}{\text{Peak Provisioned Capacity}}
+$$
+
 * **The Reality of Idle Compute:** In traditional datacenters, average CPU utilization hovers around **10%–15%**. The remaining 85% of server capacity represents **deadweight economic loss**—electricity, cooling, and capital depreciation expended on silicon doing zero productive work.
 * **Elasticity eliminates deadweight loss:** With AWS Auto Scaling, provisioned capacity dynamically tracks actual demand in real time, shifting utilization toward 100% of active capacity and eliminating payments for idle capacity.
 
 ### 1.2 Depreciation vs. Operating Cash Flow
 * **CapEx (Capital Expenditure):** Hardware purchases are treated as fixed assets on corporate balance sheets. Under accounting standards (GAAP/IFRS), physical servers are depreciated using straight-line amortization over 3 to 5 years:
-  $$\text{Annual Depreciation Expense} = \frac{\text{Initial Capital Cost} - \text{Salvage Value}}{\text{Useful Life (Years)}}$$
+
+  $$
+  \text{Annual Depreciation Expense} = \frac{\text{Initial Capital Cost} - \text{Salvage Value}}{\text{Useful Life (Years)}}
+  $$
+
   This locks corporate capital into rapidly depreciating silicon that becomes obsolete before it is fully amortized.
 * **OpEx (Operational Expenditure):** Cloud consumption is billed as an ongoing day-to-day business operational expense. It does not tie up working capital, requires zero debt financing, and is immediately tax-deductible in the current operating year.
 

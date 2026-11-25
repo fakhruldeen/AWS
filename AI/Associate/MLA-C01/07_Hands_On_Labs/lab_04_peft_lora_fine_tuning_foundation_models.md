@@ -43,7 +43,11 @@ flowchart TD
 
 ### Mathematical & Architectural Mechanics:
 - Instead of updating the full weight matrix $W_0 \in \mathbb{R}^{d \times k}$ (which contains billions of weights), LoRA decomposes the weight update ΔW into two low-rank matrices:
-  $$\Delta W = B \times A, \quad \text{where } B \in \mathbb{R}^{d \times r}, A \in \mathbb{R}^{r \times k}, \text{ with rank } r \ll \min(d, k)$$
+
+  $$
+  \Delta W = B \times A, \quad \text{where } B \in \mathbb{R}^{d \times r}, A \in \mathbb{R}^{r \times k}, \text{ with rank } r \ll \min(d, k)
+  $$
+
 - **Memory Savings:** Reduces trainable parameters by >99%, allowing fine-tuning of 7B–13B models on a single GPU instance.
 - **Hot-Swapping:** A single frozen base model in memory can serve dozens of different domain tasks simply by swapping the tiny 20 MB LoRA adapter weights!
 

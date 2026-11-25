@@ -39,9 +39,13 @@ flowchart LR
 * **The CAP Theorem:** In any distributed data store, you can only guarantee at most two out of three properties: **Consistency (C)**, **Availability (A)**, and **Partition Tolerance (P)**. Because physical network partitions ($P$) between datacenters are inevitable over time, distributed systems must choose between Consistency ($CP$) or Availability ($AP$).
 * **Synchronous vs. Asynchronous Replication:**
   - **Synchronous Replication (Multi-AZ):** A database transaction is only confirmed as committed after the Write-Ahead Log (WAL) block has been written to disk in **both** Availability Zone A and Availability Zone B:
-    $$T_{\text{commit}} = T_{\text{local}} + \text{RTT}_{\text{cross-AZ}} + T_{\text{remote-fsync}}$$
+
+    $$
+    T_{\text{commit}} = T_{\text{local}} + \text{RTT}_{\text{cross-AZ}} + T_{\text{remote-fsync}}
+    $$
+
     Because AZs are connected via private dark fiber with < 1–2 ms latency, synchronous replication is feasible without crippling database transaction throughput. **RPO = 0 (Zero data loss).**
-  - **Asynchronous Replication (Cross-Region):** Across continental distances (> 1{,}000 km), network propagation delays (> 50 ms) make synchronous replication impossible without bringing transactional databases to a standstill. Cross-region data replication (e.g., RDS Read Replicas or S3 Cross-Region Replication) is therefore **asynchronous**. Transactions are committed locally first and shipped across regions milliseconds later. **RPO > 0 (Small data loss window).**
+  - **Asynchronous Replication (Cross-Region):** Across continental distances (> 1,000 km), network propagation delays (> 50 ms) make synchronous replication impossible without bringing transactional databases to a standstill. Cross-region data replication (e.g., RDS Read Replicas or S3 Cross-Region Replication) is therefore **asynchronous**. Transactions are committed locally first and shipped across regions milliseconds later. **RPO > 0 (Small data loss window).**
 
 ---
 

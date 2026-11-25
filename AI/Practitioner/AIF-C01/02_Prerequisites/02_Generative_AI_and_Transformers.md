@@ -86,7 +86,10 @@ For every input token vector, the model computes three distinct linear represent
 3. **Value ($V$):** The actual substantive information conveyed by the token.
 
 The core scaled dot-product attention formula is:
-$$\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{Q K^T}{\sqrt{d_k}}\right) V$$
+
+$$
+\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{Q K^T}{\sqrt{d_k}}\right) V
+$$
 
 * **Why scale by $\sqrt{d_k}$?** When the vector dimension $d_k$ is large, dot products grow large, pushing the softmax function into regions with tiny gradients. Scaling prevents gradient vanishing.
 * **The Analogy (The Library Catalog):**  
@@ -137,7 +140,11 @@ Large Language Models do not read whole words or raw characters; they break text
 
 ### 3.2 Context Windows & KV Caching
 The **Context Window** represents the maximum memory span an LLM can process in a single invocation, encompassing both the input prompt and the output completion.
-$$\text{Total Tokens} = \text{Input Prompt Tokens} + \text{Output Completion Tokens} \le \text{Context Window Limit}$$
+
+$$
+\text{Total Tokens} = \text{Input Prompt Tokens} + \text{Output Completion Tokens} \le \text{Context Window Limit}
+$$
+
 * Context window capacities have expanded exponentially: from 2,048 tokens in legacy GPT-3 to **200,000+ tokens** in Anthropic Claude 3.5 Sonnet and Amazon Nova Pro (enough to ingest an entire 500-page technical book in a single prompt).
 * **KV Caching (Key-Value Caching):** Accelerates multi-turn chat by caching the computed Key ($K$) and Value ($V$) attention matrices of previous conversation turns in GPU memory, avoiding redundant matrix multiplications.
 * **Prompt Caching in Bedrock:** Allows developers to cache large static system prompts or reference documents in Bedrock memory, slashing Time to First Token (TTFT) by up to 80% and input costs by up to 50%.
@@ -155,11 +162,18 @@ flowchart LR
 
 An **Embedding** is a learned, dense numerical vector representing the semantic meaning of text, audio, or images in continuous multi-dimensional space.
 * **Semantic Proximity:** Words or concepts with similar meanings cluster closely together in vector space, allowing computers to compute mathematical relationships between ideas:
-  $$\vec{\text{King}} - \vec{\text{Man}} + \vec{\text{Woman}} \approx \vec{\text{Queen}}$$
+
+  $$
+  \vec{\text{King}} - \vec{\text{Man}} + \vec{\text{Woman}} \approx \vec{\text{Queen}}
+  $$
 
 ### Vector Distance / Similarity Metrics:
 1. **Cosine Similarity:** Measures the cosine of the angle between two vectors. Normalized between -1.0 and +1.0 (1.0 = identical direction). Independent of vector magnitude; the gold standard for text semantic search.
-   $$\text{Cosine Similarity} = \frac{A \cdot B}{\|A\| \|B\|}$$
+
+   $$
+   \text{Cosine Similarity} = \frac{A \cdot B}{\|A\| \|B\|}
+   $$
+
 2. **Dot Product:** Measures both angle and magnitude. Extremely fast to compute when vectors are pre-normalized to unit length (‖A‖ = 1).
 3. **Euclidean Distance (L2 Distance):** Measures the straight-line geometric distance between two vector coordinates in Euclidean space. Lower distance indicates higher similarity.
 

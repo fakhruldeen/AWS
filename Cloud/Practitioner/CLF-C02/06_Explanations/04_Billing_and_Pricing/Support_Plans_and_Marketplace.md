@@ -33,9 +33,13 @@ flowchart LR
 
 ### 1.1 The Economics of Outage Cost vs. Support Tier Pricing
 For an enterprise processing millions of dollars per hour in digital transactions:
-$$\text{Cost of Downtime} = \text{MTTR (Hours)} \times \text{Hourly Business Revenue Loss}$$
-* If an e-commerce platform generates $\$120{,}000/\text{hour}$ in revenue, a 1-hour delay in engaging support engineers costs $\$120{,}000$.
-* Spending $\$15{,}000/\text{month}$ on **Enterprise Support** to guarantee a **$< 15\text{-minute}$ response SLA** from a designated Technical Account Manager (TAM) who already understands your system architecture provides immediate, positive return on investment during a single major incident.
+
+$$
+\text{Cost of Downtime} = \text{MTTR (Hours)} \times \text{Hourly Business Revenue Loss}
+$$
+
+* If an e-commerce platform generates \$120,000/hour in revenue, a 1-hour delay in engaging support engineers costs $\$120{,}000$.
+* Spending \$15,000/month on **Enterprise Support** to guarantee a **< 15-minute response SLA** from a designated Technical Account Manager (TAM) who already understands your system architecture provides immediate, positive return on investment during a single major incident.
 
 ### 1.2 Programmatic Incident Management via AWS Support API
 * Under the **Business** and **Enterprise** support plans, engineering teams gain programmatic access to the **AWS Support API**.

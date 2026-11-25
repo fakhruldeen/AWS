@@ -41,10 +41,18 @@ flowchart TD
 
 All vector databases compute similarity using distance metrics in $N$-dimensional space:
 1. **Cosine Similarity / Distance:** Measures the angle between two normalized vectors:
-   $$\text{Cosine Similarity} = \frac{A \cdot B}{\|A\| \|B\|}$$
+
+   $$
+   \text{Cosine Similarity} = \frac{A \cdot B}{\|A\| \|B\|}
+   $$
+
    *Best for text embeddings where magnitude varies with sentence length.*
 2. **Euclidean Distance ($L2$):** Measures straight-line geometric distance between two points:
-   $$d(A, B) = \sqrt{\sum_{i=1}^n (A_i - B_i)^2}$$
+
+   $$
+   d(A, B) = \sqrt{\sum_{i=1}^n (A_i - B_i)^2}
+   $$
+
 3. **Dot Product (Inner Product):** Fastest computation when vectors are strictly unit-normalized (‖A‖ = 1).
 
 ---

@@ -54,7 +54,11 @@ style: |
   * **Difference in Positive Proportions (DPL):** Disparity in favorable labels assigned in historical data.
 * **Post-Training Bias (In Model Inferences):**
   * **Disparate Impact (DI):** Ratio of positive prediction rates for disfavored vs favored groups.
-  $$\text{DI} = \frac{P(\hat{Y}=1 | \text{Disfavored})}{P(\hat{Y}=1 | \text{Favored})}$$
+
+  $$
+  \text{DI} = \frac{P(\hat{Y}=1 | \text{Disfavored})}{P(\hat{Y}=1 | \text{Favored})}
+  $$
+
   * A DI below $0.80$ triggers regulatory scrutiny under anti-discrimination guidelines.
 
 ---

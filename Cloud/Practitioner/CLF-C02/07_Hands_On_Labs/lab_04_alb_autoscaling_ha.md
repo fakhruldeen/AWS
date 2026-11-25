@@ -17,7 +17,11 @@
 - **Application Load Balancer (ALB):** Distributes incoming web traffic evenly across healthy target instances across multiple Availability Zones.
 - **Auto Scaling Group (ASG):** Monitors fleet capacity and instance health. If an instance crashes or fails health checks, the ASG automatically terminates the failed instance and launches a fresh replacement (self-healing).
 - **Capacity Triangle:**
-  $$\mathbf{Min \le Desired \le Max}$$
+
+  $$
+  \mathbf{Min \le Desired \le Max}
+  $$
+
   - *Minimum Capacity:* The baseline floor (never scales below this).
   - *Desired Capacity:* The current active operating target.
   - *Maximum Capacity:* The safety ceiling to prevent unexpected budget runaways.

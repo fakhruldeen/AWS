@@ -46,7 +46,11 @@ flowchart TD
 ### Core Bias & Explainability Metrics Explained:
 1. **Class Imbalance (CI):** Measures the disparity in representation between facet values (e.g., if 85% of applicants are Male and 15% Female, CI > 0).
 2. **Difference in Positive Proportions in Labels (DPPL):** Evaluates whether the historical training labels favored one group over another:
-   $$\text{DPPL} = q_a - q_d, \quad \text{where } q_a \text{ is acceptance rate of favored group, } q_d \text{ of disfavored group}$$
+
+   $$
+   \text{DPPL} = q_a - q_d, \quad \text{where } q_a \text{ is acceptance rate of favored group, } q_d \text{ of disfavored group}
+   $$
+
 3. **Disparate Impact (DI):** The ratio of positive outcomes between groups. DI < 0.80 typically triggers regulatory legal scrutiny (the 80% four-fifths rule).
 4. **SHAP (Shapley Additive Explanations):** Derives from cooperative game theory to quantify the exact marginal contribution of each feature to pushing a prediction away from the baseline average.
 

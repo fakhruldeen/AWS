@@ -37,7 +37,11 @@ flowchart TD
 
 ### 1.1 The Mathematics of Reliability: MTBF vs. MTTR
 In traditional engineering, availability was pursued by maximizing **Mean Time Between Failures (MTBF)**—buying increasingly expensive, military-grade hardware so components would never fail:
-$$\text{Availability} = \frac{\text{MTBF}}{\text{MTBF} + \text{MTTR}}$$
+
+$$
+\text{Availability} = \frac{\text{MTBF}}{\text{MTBF} + \text{MTTR}}
+$$
+
 * **The Cloud Architectural Shift:** Hardware *will* eventually fail (disks crash, fiber lines get cut, memory develops bit errors). The Well-Architected Framework shifts focus from preventing failure to **minimizing Mean Time to Recovery (MTTR)** through automated health checks, dynamic self-healing, and stateless horizontal scaling. If an instance can be replaced in 30 seconds by Auto Scaling, system availability approaches 99.999% regardless of hardware flakiness.
 
 ### 1.2 Blast Radius Containment and Loose Coupling

@@ -157,7 +157,10 @@ flowchart TD
 The ultimate goal of any machine learning model is **generalization**: performing accurately on previously unseen real-world test data rather than merely memorizing the training dataset.
 
 The total prediction error of a model can be mathematically decomposed as:
-$$\text{Total Expected Error} = \text{Bias}^2 + \text{Variance} + \sigma^2 \text{ (Irreducible Error)}$$
+
+$$
+\text{Total Expected Error} = \text{Bias}^2 + \text{Variance} + \sigma^2 \text{ (Irreducible Error)}
+$$
 
 ```mermaid
 flowchart LR
@@ -218,18 +221,38 @@ flowchart TD
 
 #### Core Mathematical Formulas:
 1. **Accuracy:** Overall proportion of correct predictions across all classes.
-   $$\text{Accuracy} = \frac{TP + TN}{TP + TN + FP + FN}$$
+
+   $$
+   \text{Accuracy} = \frac{TP + TN}{TP + TN + FP + FN}
+   $$
+
    *Warning:* Accuracy is notoriously misleading on imbalanced datasets! If 99% of transactions are legitimate and 1% are fraud, a dumb model predicting "Legitimate" 100% of the time achieves 99% accuracy while catching 0% of fraud!
 2. **Precision:** What fraction of predicted positive cases were actually positive?
-   $$\text{Precision} = \frac{TP}{TP + FP}$$
+
+   $$
+   \text{Precision} = \frac{TP}{TP + FP}
+   $$
+
    *Goal:* Minimize False Positives ($FP$).
 3. **Recall (Sensitivity / True Positive Rate):** What fraction of actual positive cases did the model successfully identify?
-   $$\text{Recall} = \frac{TP}{TP + FN}$$
+
+   $$
+   \text{Recall} = \frac{TP}{TP + FN}
+   $$
+
    *Goal:* Minimize False Negatives ($FN$).
 4. **Specificity (True Negative Rate):** What fraction of actual negative cases did the model correctly identify?
-   $$\text{Specificity} = \frac{TN}{TN + FP}$$
+
+   $$
+   \text{Specificity} = \frac{TN}{TN + FP}
+   $$
+
 5. **F1-Score:** The harmonic mean of Precision and Recall. Essential benchmark for class-imbalanced datasets.
-   $$F_1 = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}} = \frac{2TP}{2TP + FP + FN}$$
+
+   $$
+   F_1 = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}} = \frac{2TP}{2TP + FP + FN}
+   $$
+
 6. **ROC-AUC (Receiver Operating Characteristic - Area Under Curve):** Plots True Positive Rate (Recall) against False Positive Rate (1 - Specificity) across all classification probability thresholds (0.0 ≤ τ ≤ 1.0). An AUC of 1.0 represents a perfect classifier; 0.5 represents random guessing.
 
 ---

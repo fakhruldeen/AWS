@@ -48,7 +48,11 @@ flowchart TD
 
 ### 1.2 Mathematical Set Theory of Service Control Policies (SCPs)
 In AWS multi-account governance, an account's effective permissions are determined by the **intersection (∩)** of Service Control Policies and IAM Identity Policies:
-$$\text{Effective Permissions} = \text{SCP Allowed Actions} \cap \text{IAM Allowed Actions}$$
+
+$$
+\text{Effective Permissions} = \text{SCP Allowed Actions} \cap \text{IAM Allowed Actions}
+$$
+
 * **The Root User Constraint (Crucial Exam Concept!):** Service Control Policies (SCPs) apply to **all identities** in a member account, **including the member account root user**. Even the root user cannot bypass an explicit `Deny` in an SCP!
 
 ---

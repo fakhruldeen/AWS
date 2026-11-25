@@ -154,8 +154,13 @@ In the early days of networking, IP addresses were assigned in rigid, wasteful c
 
 The number after the slash (`/prefix`) tells you **how many bits are locked for the network prefix**. The remaining bits are available for individual host/instance addresses:
 
-$$\text{Available Host Bits} = 32 - \text{Prefix}$$
-$$\text{Total IP Addresses} = 2^{(32 - \text{Prefix})}$$
+$$
+\text{Available Host Bits} = 32 - \text{Prefix}
+$$
+
+$$
+\text{Total IP Addresses} = 2^{(32 - \text{Prefix})}
+$$
 
 ```mermaid
 flowchart LR

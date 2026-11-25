@@ -128,13 +128,21 @@ The evaluation begins with the **Confusion Matrix**:
 | **Actual Positive** | True Positive (TP) | False Negative (FN) - Type II Error |
 | **Actual Negative** | False Positive (FP) - Type I Error | True Negative (TN) |
 
-$$\text{Accuracy} = \frac{\text{TP} + \text{TN}}{\text{TP} + \text{TN} + \text{FP} + \text{FN}}$$
+$$
+\text{Accuracy} = \frac{\text{TP} + \text{TN}}{\text{TP} + \text{TN} + \text{FP} + \text{FN}}
+$$
 
-$$\text{Precision} = \frac{\text{TP}}{\text{TP} + \text{FP}} \quad \text{(Quality of positive predictions; crucial when False Positives are expensive, e.g., Spam detection)}$$
+$$
+\text{Precision} = \frac{\text{TP}}{\text{TP} + \text{FP}} \quad \text{(Quality of positive predictions; crucial when False Positives are expensive, e.g., Spam detection)}
+$$
 
-$$\text{Recall (Sensitivity)} = \frac{\text{TP}}{\text{TP} + \text{FN}} \quad \text{(Completeness of positive predictions; crucial when False Negatives are catastrophic, e.g., Cancer detection)}$$
+$$
+\text{Recall (Sensitivity)} = \frac{\text{TP}}{\text{TP} + \text{FN}} \quad \text{(Completeness of positive predictions; crucial when False Negatives are catastrophic, e.g., Cancer detection)}
+$$
 
-$$F_1\text{-Score} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}} \quad \text{(Harmonic mean balancing precision and recall, especially for imbalanced datasets)}$$
+$$
+F_1\text{-Score} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}} \quad \text{(Harmonic mean balancing precision and recall, especially for imbalanced datasets)}
+$$
 
 * **AUC-ROC (Area Under Receiver Operating Characteristic Curve):** Measures performance across all classification thresholds, plotting True Positive Rate vs False Positive Rate. An AUC of $1.0$ is perfect; $0.5$ is random guessing.
 

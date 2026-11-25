@@ -43,13 +43,20 @@ flowchart TD
 
 ### 1. ROUGE Variants Breakdown
 - **ROUGE-1:** Unigram (single word) overlap recall:
-  $$\text{ROUGE-1 Recall} = \frac{\text{Count of matching unigrams in Reference}}{\text{Total unigrams in Reference}}$$
+
+  $$
+  \text{ROUGE-1 Recall} = \frac{\text{Count of matching unigrams in Reference}}{\text{Total unigrams in Reference}}
+  $$
+
 - **ROUGE-2:** Bigram (two-word sequence) overlap recall: tests local phrasing fluency.
 - **ROUGE-L:** Longest Common Subsequence (LCS): captures sentence-level structure without requiring contiguous n-grams.
 
 ### 2. BLEU Brevity Penalty
 - If a model produces very short output (e.g. 1 word that matches), precision would be 100%. BLEU adds a **Brevity Penalty (BP)** to penalize overly terse candidate responses:
-  $$\text{BLEU} = \text{BP} \times \exp\left( \sum_{n=1}^N w_n \ln p_n \right)$$
+
+  $$
+  \text{BLEU} = \text{BP} \times \exp\left( \sum_{n=1}^N w_n \ln p_n \right)
+  $$
 
 ### 3. Perplexity Intuition
 - Perplexity measures how "surprised" the language model is by the test text.

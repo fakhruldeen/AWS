@@ -43,7 +43,11 @@ flowchart TD
 
 ### 1.1 Queueing Theory and Little's Law
 Under operations research and queuing theory, the average number of requests in a system ($L$) is governed by **Little's Law**:
-$$L = \lambda \times W$$
+
+$$
+L = \lambda \times W
+$$
+
 where λ is the arrival rate of incoming requests and $W$ is the average processing time per request.
 * **The Reality of Traffic Spikes:** If a flash sale causes the arrival rate (λ) to multiply by 50×, a synchronous web server's connection pool saturates in seconds, causing catastrophic thread exhaustion and memory crashes.
 * **The Queue as an Elastic Shock Absorber:** Introducing **[Amazon SQS](../../AWS_SERVICES_GLOSSARY.md#amazon-sqs)** decouples the arrival rate from the processing rate. Downstream worker nodes pull messages at their own sustainable pace, while the queue absorbs millions of messages safely.

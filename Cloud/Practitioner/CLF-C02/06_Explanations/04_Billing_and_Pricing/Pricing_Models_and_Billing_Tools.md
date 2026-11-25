@@ -36,7 +36,11 @@ flowchart TD
 
 ### 1.1 The Mathematics of Compute Commitments (Savings Plans vs. On-Demand)
 * **On-Demand Cost Formula:**
-  $$\text{Total Cost} = \text{Active Instance Hours} \times \text{Hourly Retail Rate}$$
+
+  $$
+  \text{Total Cost} = \text{Active Instance Hours} \times \text{Hourly Retail Rate}
+  $$
+
 * **Savings Plans Commitment Formula:**
   An enterprise commits to an hourly spend rate ($\$X/\text{hour}$) for a 1-year or 3-year term. Every hour, usage up to $\$X$ is billed at the discounted Savings Plan rate (up to 72% off), while any surge usage above $\$X$ is billed at the standard On-Demand rate.
 * **Payment Options Trade-Off:**

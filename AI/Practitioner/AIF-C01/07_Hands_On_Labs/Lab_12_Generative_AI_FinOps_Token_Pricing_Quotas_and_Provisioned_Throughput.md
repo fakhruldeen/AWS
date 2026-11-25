@@ -49,7 +49,11 @@ flowchart TD
 ### 1. Input Tokens vs. Output Tokens (Why Output is 3x–5x More Expensive)
 - **Input Tokens (Prompt Processing):** The model processes all input prompt tokens in parallel using GPU matrix multiplications. This is compute-efficient.
 - **Output Tokens (Autoregressive Generation):** The model generates text sequentially **one token at a time**, re-running the entire neural network for every single generated token:
-  $$\text{Latency} \propto N_{\text{output}} \times \text{Transformer Depth}$$
+
+  $$
+  \text{Latency} \propto N_{\text{output}} \times \text{Transformer Depth}
+  $$
+
 - *Example Pricing (Claude 3.5 Sonnet / Nova Pro):*
   - Input tokens: $\approx \$3.00$ per million tokens.
   - Output tokens: $\approx \$15.00$ per million tokens (5x higher!).

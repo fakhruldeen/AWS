@@ -87,7 +87,11 @@ The central reasoning engine. For agentic workloads, the model must possess stro
 
 ### 1.2 Planning & Reasoning Frameworks
 1. **ReAct (Reason + Act):** The agent generates a thought, selects an action, executes it, receives an observation, and repeats.
-   $$\text{Thought} \rightarrow \text{Action} \rightarrow \text{Observation} \rightarrow \text{Thought} \dots$$
+
+   $$
+   \text{Thought} \rightarrow \text{Action} \rightarrow \text{Observation} \rightarrow \text{Thought} \dots
+   $$
+
 2. **Chain-of-Thought (CoT):** Breaks down complex multi-hop problems into intermediate reasoning steps.
 3. **Plan-and-Solve:** The agent first outlines a global plan containing all sub-tasks, then executes each sub-task systematically.
 4. **Self-Reflection & Critique:** After receiving tool execution errors or subpar results, the agent evaluates its progress and replans without requiring human intervention.

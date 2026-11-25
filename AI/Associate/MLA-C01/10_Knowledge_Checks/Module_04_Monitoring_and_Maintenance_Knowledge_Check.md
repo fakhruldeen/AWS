@@ -82,7 +82,11 @@ In Amazon SageMaker Clarify pre-training bias metrics, what does a **Difference 
 **Correct Answer:** **A**
 
 **Explanation:**
-$$\text{DPPL} = q_a - q_d$$
+
+$$
+\text{DPPL} = q_a - q_d
+$$
+
 where $q_a$ is the proportion of positive labels in the favored facet (e.g., Male) and $q_d$ is the proportion in the disfavored facet (e.g., Female). When DPPL > 0, the historical dataset reflects a historical disparity favoring group $a$.
 </details>
 

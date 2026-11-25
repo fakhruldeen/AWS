@@ -37,17 +37,33 @@ flowchart LR
 
 ### 1. The Core Formulation
 In standard full fine-tuning, the updated weight matrix is:
-$$W = W_0 + \Delta W, \quad \text{where } W_0, \Delta W \in \mathbb{R}^{d \times k}$$
+
+$$
+W = W_0 + \Delta W, \quad \text{where } W_0, \Delta W \in \mathbb{R}^{d \times k}
+$$
+
 Because $d$ and $k$ are large (e.g., d = 4096, k = 4096 ⇒ 16.7 million weights per matrix), updating ΔW across dozens of transformer layers consumes massive VRAM to store optimizer states (AdamW requires 8 bytes per parameter).
 
 ### 2. Low-Rank Decomposition
 LoRA hypothesizes that the weight updates during task adaptation have a **low intrinsic rank**. It decomposes ΔW into the product of two low-rank matrices:
-$$\Delta W = B \times A, \quad \text{where } B \in \mathbb{R}^{d \times r}, A \in \mathbb{R}^{r \times k}, \text{ with rank } r \ll \min(d, k)$$
+
+$$
+\Delta W = B \times A, \quad \text{where } B \in \mathbb{R}^{d \times r}, A \in \mathbb{R}^{r \times k}, \text{ with rank } r \ll \min(d, k)
+$$
+
 - **Initialization:** Matrix $A$ is initialized from a Gaussian distribution $\mathcal{N}(0, \sigma^2)$, and Matrix $B$ is initialized to $0$. Therefore, at the start of training:
-  $$\Delta W = B \times A = 0 \times A = 0$$
+
+  $$
+  \Delta W = B \times A = 0 \times A = 0
+  $$
+
   The model begins with exactly the pre-trained base model behavior!
 - **Scaling Factor:** The forward pass computes:
-  $$h = W_0 x + \Delta W x = W_0 x + \frac{\alpha}{r} (B A) x$$
+
+  $$
+  h = W_0 x + \Delta W x = W_0 x + \frac{\alpha}{r} (B A) x
+  $$
+
   where α is a constant scaling hyperparameter (typically α = 2 × r).
 
 ---

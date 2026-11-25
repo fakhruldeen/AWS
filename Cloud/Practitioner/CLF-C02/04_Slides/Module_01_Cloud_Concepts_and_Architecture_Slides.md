@@ -148,7 +148,10 @@ Organizes transformation guidance into **6 Perspectives**:
 * **OpEx (Operational Expenditure):** Ongoing day-to-day operational expenses where you pay only for resources consumed (Pay-As-You-Go).
 
 ### The Total Cost of Ownership (TCO) Equation:
-$$TCO_{OnPrem} = Hardware + RealEstate + Power + Cooling + Cabling + AdminStaff$$
+
+$$
+TCO_{OnPrem} = Hardware + RealEstate + Power + Cooling + Cabling + AdminStaff
+$$
 
 AWS eliminates the **indirect costs** (real estate, electricity, cooling, physical security, hardware repairs).
 

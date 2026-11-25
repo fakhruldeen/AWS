@@ -14,7 +14,11 @@ An **AMI** is a pre-configured template containing the operating system, archite
 
 ### 2. Decoding EC2 Instance Family Naming Conventions
 AWS instance names follow a standardized formula:
-$$\underbrace{\mathbf{t}}_{\text{Family}} \overbrace{\mathbf{4g}}^{\text{Generation + Tech}} . \underbrace{\mathbf{micro}}_{\text{Size}}$$
+
+$$
+\underbrace{\mathbf{t}}_{\text{Family}} \overbrace{\mathbf{4g}}^{\text{Generation + Tech}} . \underbrace{\mathbf{micro}}_{\text{Size}}
+$$
+
 - **Family:** `t` = Burstable general purpose, `c` = Compute optimized, `m` = General purpose balanced, `r` = Memory optimized, `i` = Storage optimized.
 - **Generation:** Higher numbers represent newer, more cost-effective hardware (e.g., generation 4 vs. 3).
 - **Additional Capabilities:** `g` = AWS Graviton processor (ARM-based, high performance per dollar), `i` = Intel processor, `a` = AMD processor, `n` = Network enhanced.

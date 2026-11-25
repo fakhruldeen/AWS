@@ -77,13 +77,21 @@ flowchart LR
 Before training occurs, SageMaker Clarify evaluates the training dataset for statistical imbalances:
 * **Class Imbalance (CI):** Measures the proportional disparity between the favored facet (group $a$) and the disfavored facet (group $d$). Values range from $-1$ to $1$; values near $0$ indicate balanced representation.
 * **Difference in Positive Proportions in Labels (DPL):** Measures the difference in the proportion of positive target labels assigned to the favored group versus the disfavored group.
-  $$\text{DPL} = q_a - q_d$$
+
+  $$
+  \text{DPL} = q_a - q_d
+  $$
+
   A high DPL indicates that historical labeling favored one demographic group over another.
 
 ### 2. Post-Training Bias Metrics (Model Prediction Level)
 Evaluates whether model inferences demonstrate disparate impact across groups:
 * **Disparate Impact (DI):** The ratio between the proportion of positive predictions for the disfavored group versus the favored group.
-  $$\text{DI} = \frac{P(\hat{Y}=1 | D)}{P(\hat{Y}=1 | A)}$$
+
+  $$
+  \text{DI} = \frac{P(\hat{Y}=1 | D)}{P(\hat{Y}=1 | A)}
+  $$
+
   In employment lending standards (the "80% rule"), a DI below $0.8$ often indicates legal bias.
 * **Difference in Recall / False Positive Rates:** Detects if a model generates higher error rates for specific demographic subsets.
 

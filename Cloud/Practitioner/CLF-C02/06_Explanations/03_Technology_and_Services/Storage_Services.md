@@ -43,15 +43,27 @@ flowchart TD
 
 ### 1.1 The Mathematics of 11 9s Durability (99.999999999%)
 [Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3) Standard is engineered for **99.999999999% annual durability**:
-$$\text{Annual Probability of Data Loss} = 1 - 0.99999999999 = 10^{-11} = 0.000000001\%$$
-* **What 11 9s means in physical reality:** If an enterprise stores $10{,}000{,}000$ (10 million) independent digital objects in [Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3), you can statistically expect to lose a single file once every **10{,}000 years**.
+
+$$
+\text{Annual Probability of Data Loss} = 1 - 0.99999999999 = 10^{-11} = 0.000000001\%
+$$
+
+* **What 11 9s means in physical reality:** If an enterprise stores 10,000,000 (10 million) independent digital objects in [Amazon S3](../../AWS_SERVICES_GLOSSARY.md#amazon-s3), you can statistically expect to lose a single file once every **10{,}000 years**.
 * **Erasure Coding Under the Hood:** AWS achieves this resilience not by simple 3-way mirroring, but by using advanced Reed-Solomon erasure coding. Every file is decomposed into mathematical parity chunks and striped across multiple discrete physical storage facilities in at least **3 separate Availability Zones**. An entire data center can be destroyed, and S3 will reconstruct the original file on the fly with zero data corruption.
 
 ### 1.2 The Physics of Network Data Transfer: Sneakernet vs. Bandwidth
 When migrating massive data sets from on-premises datacenters to AWS, the speed of network data transfer is limited by the physical formula:
-$$T = \frac{\text{Total Data Volume (Bits)}}{\text{Effective Network Throughput (Bits/Sec)}}$$
+
+$$
+T = \frac{\text{Total Data Volume (Bits)}}{\text{Effective Network Throughput (Bits/Sec)}}
+$$
+
 * **The Reality of Large Data Migration:** Attempting to transfer 100 Terabytes of video archives over a standard corporate 100 Mbps uplink:
-  $$T = \frac{100 \times 10^{12} \times 8\text{ bits}}{100 \times 10^6\text{ bits/sec}} \approx 8{,}000{,}000\text{ seconds} \approx \mathbf{92.6\text{ days of continuous saturation}}!$$
+
+  $$
+  T = \frac{100 \times 10^{12} \times 8\text{ bits}}{100 \times 10^6\text{ bits/sec}} \approx 8,000,000\text{ seconds} \approx \mathbf{92.6\text{ days of continuous saturation}}!
+  $$
+
 * **The Snowball Advantage:** Shipping an **AWS Snowball Edge** (80 TB appliance) via courier takes approximately 3 business days end-to-end, proving the famous computer science adage: *"Never underestimate the bandwidth of a station wagon full of tapes hurtling down the highway."*
 
 ---

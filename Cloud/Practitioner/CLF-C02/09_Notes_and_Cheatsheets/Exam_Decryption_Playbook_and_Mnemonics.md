@@ -93,7 +93,9 @@ Verify your choice against the memorized mental acronyms detailed below.
 
 ### 4. The Shared Responsibility Model: The "IN" vs. "OF" Rule
 
-$$\text{Security \textbf{OF} the Cloud (AWS)} \quad \longleftrightarrow \quad \text{Security \textbf{IN} the Cloud (Customer)}$$
+$$
+\text{Security \textbf{OF} the Cloud (AWS)} \quad \longleftrightarrow \quad \text{Security \textbf{IN} the Cloud (Customer)}
+$$
 
 | Dimension | AWS Responsibility (**OF** the Cloud) | Customer Responsibility (**IN** the Cloud) |
 |---|---|---|
