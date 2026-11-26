@@ -929,8 +929,7 @@ cloud as part of the AWS shared responsibility
 A company has set up a VPC on AWS. The company needs a dedicated connection
 between the VPC and the company's on-premises network.
 Which action should the company take to meet this requirement?
-
- A. Establish a VPN connection between the VPC and the company's on-premises network.
+- **A)** Establish a VPN connection between the VPC and the company's on-premises network.
 
 - **B)** Establish an AWS Direct Connect connection between the VPC and the company's onpremises network.
 - **C)** Attach an internet gateway to the VPC. Use the AWS public endpoints for connectivity.
@@ -3609,8 +3608,7 @@ A company is migrating its applications from on-premises to the AWS Cloud. The c
 wants to ensure that the applications are assigned only the minimum permissions that are
 needed to perform all operations.
 Which AWS service will meet these requirements'?
-
- A. AWS Identity and Access Management (IAM)
+- **A)** AWS Identity and Access Management (IAM)
 
 - **B)** Amazon CloudWatch
 - **C)** Amazon Macie
@@ -3934,8 +3932,7 @@ AWS Security Groups
 A company needs to identify who accessed an AWS service and what action was
 performed for a given time period.
 Which AWS service should the company use to meet this requirement?
-
- A. Amazon CloudWatch
+- **A)** Amazon CloudWatch
 
 - **B)** AWS CloudTrail
 - **C)** AWS Security Hub
@@ -6113,7 +6110,7 @@ Which AWS service is always provided at no charge?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** `C`
+**Correct Answer:** `B`
 
 AWS Identity and Access Management (IAM) is a web service that helps you securely
 control access to AWS resources. You can use IAM to create and manage AWS users and
@@ -6257,8 +6254,7 @@ that are the responsib
 A software engineer wants to launch a virtual machine (VM) and MySQL database on
 AWS.
 Which AWS service will meet these requirements with the LEAST operational effort?
-
- A. Amazon Elastic Container Service (Amazon ECS)
+- **A)** Amazon Elastic Container Service (Amazon ECS)
 
 - **B)** AWS Elastic Beanstalk
 - **C)** Amazon Lightsail
@@ -6300,7 +6296,7 @@ the aggregate usage of all AWS users?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** `A`
+**Correct Answer:** `C`
 
 The benefit of the AWS Cloud that helps companies achieve lower usage costs because of
 the aggregate usage of all AWS users is economies of scale. Economies of scale means
@@ -7231,8 +7227,7 @@ the requirement of rotating dat
 A company needs to migrate all of its development teams to a cloud-based integrated
 development environment (IDE).
 Which AWS service should the company use?
-
- A. AWS CodeBuild
+- **A)** AWS CodeBuild
 
 - **B)** AWS Cloud9
 - **C)** AWS OpsWorks
@@ -8625,8 +8620,7 @@ customer must grant the IAM users the minimum permissions that they need t
 An AWS user wants to proactively detect when an instance or account might be
 compromised or if there are threats from attacks.
 Which AWS service should the user choose?
-
- A. Amazon GuardDuty
+- **A)** Amazon GuardDuty
 
 - **B)** AWS WAF
 - **C)** AWS Shield
@@ -8691,8 +8685,7 @@ Amazon Aurora2.
 > **Domain:** `Domain 4: Billing, Pricing, and Support (12%)` | **Priority:** `🔷 Tier 2: Core Architecture & Services` | **ID:** `ACTUAL-2026-Q286`
 
 Which of the following are AWS Cloud design principles? (Select TWO.)
-
- A. Pay for compute resources in advance.
+- **A)** Pay for compute resources in advance.
 
 - **B)** Make data-driven decisions to determine cloud architectural design.
 - **C)** Emphasize manual processes to allow for changes.
@@ -9535,8 +9528,7 @@ Verified authentic candidate practice response from the November 2026 revision p
 
 A company wants to migrate its on-premises NoSQL workload to Amazon DynamoDB.
 Which AWS service will meet this requirement?
-
- A. Migration Evaluator
+- **A)** Migration Evaluator
 
 - **B)** AWS Migration Hub
 - **C)** AWS Application Migration Service
@@ -10650,7 +10642,7 @@ AWS Cloud Adoption Framework (AWS CAF)? (Select TWO.)
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** `E`
+**Correct Answer:** `AC`
 
 Realigning teams to focus on products and value streams, and using agile methods to
 rapidly iterate and evolve are tasks that the company should perform to meet the
@@ -11460,8 +11452,7 @@ the edge of the 5G network. None of these se
 A company notices suspicious network activity against an application that is running on a
 fleet of Amazon EC2 instances. The suspicious activity is coming from a single IP address.
 Which AWS service should the company use to block access from this IP address?
-
- A. AWS Shield
+- **A)** AWS Shield
 
 - **B)** AWS Config
 - **C)** Amazon GuardDuty
@@ -11940,7 +11931,7 @@ capability for well-designed data and analytics architecture?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** `C`
+**Correct Answer:** `D`
 
 The correct answer is D. Platform.
 The Platform perspective in the AWS Cloud Adoption Framework (AWS CAF) includes a

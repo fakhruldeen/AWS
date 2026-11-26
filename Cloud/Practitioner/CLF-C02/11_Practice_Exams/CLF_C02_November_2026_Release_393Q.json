@@ -5059,7 +5059,7 @@
       "C": "Elastic Load Balancers",
       "D": "AWS WAF"
     },
-    "answer": "C",
+    "answer": "B",
     "explanation": "AWS Identity and Access Management (IAM) is a web service that helps you securely\ncontrol access to AWS resources. You can use IAM to create and manage AWS users and\ngroups, and use permissions to allow and deny their access to AWS resources. IAM is\nalways provided at nocharge12. Reference: 1: AWS Identity and Access Management\n(IAM) - Amazon Web Services (AWS), 2: Which aws service is always provided at no\ncharge? - Brainly.in",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -5208,7 +5208,7 @@
       "C": "Economies of scale",
       "D": "Increased speed and agility"
     },
-    "answer": "A",
+    "answer": "C",
     "explanation": "The benefit of the AWS Cloud that helps companies achieve lower usage costs because of\nthe aggregate usage of all AWS users is economies of scale. Economies of scale means\nthat AWS can achieve lower costs and higher efficiency by operating at a massive scale\nand passing the savings to the customers. AWS leverages the aggregate usage of all AWS\nusers to negotiate better prices with hardware vendors, optimize power consumption, and\n\n improve operational processes. As a result, AWS can offer lower and more flexible pricing\noptions to the customers, such as pay-as-you-go, reserved, and spot pricing models. No\nneed to guess capacity, ability to go global in minutes, and increased speed and agility are\nother benefits of the AWS Cloud, but they are not directly related to the aggregate usage of\nall AWS users. No need to guess capacity means that AWS customers can avoid the risk\nof over-provisioning or under-provisioning resources, and scale up or down as needed.\nAbility to go global in minute",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -8804,7 +8804,7 @@
       "D": "Use a new data and analytics platform to create actionable insights.",
       "E": "Migrate and modernize legacy infrastructure."
     },
-    "answer": "E",
+    "answer": "AC",
     "explanation": "Realigning teams to focus on products and value streams, and using agile methods to\nrapidly iterate and evolve are tasks that the company should perform to meet the\nrequirements of becoming more responsive to customer inquiries and feedback, according\nto the AWS Cloud Adoption Framework (AWS CAF). AWS CAF organizes guidance into\nsix areas of focus, called perspectives: business, people, governance, platform, security,\nand operations. Each perspective is divided into capabilities, which describe the skills and\nprocesses to execute the transition effectively. The people perspective helps you prepare\nyour organization for cloud adoption, and includes capabilities such as organizational\nchange management, staff skills and readiness, and organizational alignment. The\nbusiness perspective helps you align IT strategy with business strategy, and includes\ncapabilities such as business case development, value proposition, and product\nownership. Creating new value propositions with new products a",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -9834,7 +9834,7 @@
       "C": "Operations",
       "D": "Platform"
     },
-    "answer": "C",
+    "answer": "D",
     "explanation": "The correct answer is D. Platform.\nThe Platform perspective in the AWS Cloud Adoption Framework (AWS CAF) includes a\ncapability for well-designed data and analytics architecture. This capability helps you\ndesign, implement, and optimize your data and analytics solutions on AWS, using services\nsuch as Amazon S3, Amazon Redshift, Amazon EMR, Amazon Kinesis, Amazon Athena,\nand Amazon QuickSight.A well-designed data and analytics architecture enables you to\ncollect, store, process, analyze, and visualize data from various sources, and derive\ninsights that can drive your business decisions12.\nThe Security perspective does not include a capability for data and analytics architecture,\nbut it does include a capability for data protection, which helps you secure your data at rest\nand in transit using encryption, key management, access control, and auditing13.\nThe Governance perspective does not include a capability for data and analytics\narchitecture, but it does include a capability for data g",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
