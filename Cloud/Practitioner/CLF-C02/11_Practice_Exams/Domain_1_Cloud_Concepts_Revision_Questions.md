@@ -197,7 +197,7 @@ the aggregate usage of all AWS users?
 - **D)** Increased speed and agility
 
 <details>
-<summary><b>View Answer & Rationale (Answer: A)</b></summary>
+<summary><b>View Answer & Rationale (Answer: C)</b></summary>
 
 The benefit of the AWS Cloud that helps companies achieve lower usage costs because of
 the aggregate usage of all AWS users is economies of scale. Economies of scale means
@@ -3050,7 +3050,7 @@ capability for well-designed data and analytics architecture?
 - **D)** Platform
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
 The correct answer is D. Platform.
 The Platform perspective in the AWS Cloud Adoption Framework (AWS CAF) includes a

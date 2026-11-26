@@ -1188,7 +1188,7 @@
       "C": "Programmatic case management",
       "D": "AWS technical account manager (TAM)"
     },
-    "answer": "A",
+    "answer": "B",
     "explanation": "TheAWS Developer Forumsare always free to use, regardless of the user's AWS Support\nplan. They provide a platform for users to ask questions, share knowledge, and collaborate\nwith the AWS community.\nA . AWS Developer Support: Incorrect, as it is a paid support plan option.\nC . Programmatic case management: Incorrect, as this feature is available only with certain\nAWS Support plans (Business and Enterprise).\nD . AWS Technical Account Manager (TAM): Incorrect, as a TAM is provided only under\nthe AWS Enterprise Support plan, which is a paid support option.\nAWS Cloud Reference:\nAWS Support Plans",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -2645,7 +2645,7 @@
       "C": "Store passwords in AWS Storage Gateway.",
       "D": "Store passwords in AWS Secrets Manager."
     },
-    "answer": "A",
+    "answer": "D",
     "explanation": "AWS Secrets Manageris the most secure way to store and manage sensitive information,\nsuch as passwords, database credentials, and API keys. Secrets Manager allows you to:\nSecurely store and rotate secrets.\nAutomatically manage secret rotation without disrupting applications.\nIntegrate with AWS services and third-party applications to retrieve secrets securely.\nWhy other options are not suitable:\n\n A . Store passwords in an Amazon S3 bucket: Although S3 is secure, it is not designed for\nsecret management. It lacks built-in secret rotation and fine-grained access control for\nsensitive data.\nB . Store passwords as AWS CloudFormation parameters: CloudFormation is used for\nmanaging infrastructure as code, not for securely storing passwords.\nC . Store passwords in AWS Storage Gateway: A service for hybrid storage integration, not\nsuitable for storing secrets or passwords.\nReference:\nAWS Secrets Manager Documentation",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",
@@ -3289,7 +3289,7 @@
       "C": "Spot Instances",
       "D": "AWS Free Tier"
     },
-    "answer": "A",
+    "answer": "B",
     "explanation": "Reserved Instances (RIs)offer a significant discount (up to 75%) compared to On-Demand\npricing in exchange for committing to use AWS for a period of 1 or 3 years. This pricing\nmodel is ideal for applications with predictable usage patterns or long-term commitments,\nsuch as critical production systems that will be running for at least 3 years.\nA . On-Demand Instances: Incorrect, as they provide flexibility without commitment but are\nmore expensive over the long term.\nC . Spot Instances: Incorrect, as they offer the lowest cost for non-critical, interruptible\nworkloads but are not suitable for critical production systems due to their potential for\nsudden termination.\nD . AWS Free Tier: Incorrect, as it provides limited free usage for certain AWS services for\na short period (typically one year) and is not intended for long-term production workloads.\nAWS Cloud Reference:\nAmazon EC2 Reserved Instances",
     "sources": [
       "Amazon_CLF_C02_Nov2026_Recall_393Q",

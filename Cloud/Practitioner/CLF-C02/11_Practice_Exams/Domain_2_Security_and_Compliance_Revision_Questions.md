@@ -8610,7 +8610,7 @@ Which AWS service is always provided at no charge?
 - **D)** AWS WAF
 
 <details>
-<summary><b>View Answer & Rationale (Answer: C)</b></summary>
+<summary><b>View Answer & Rationale (Answer: B)</b></summary>
 
 AWS Identity and Access Management (IAM) is a web service that helps you securely
 control access to AWS resources. You can use IAM to create and manage AWS users and
@@ -18757,7 +18757,7 @@ What is the MOST secure way to store passwords on AWS?
 - **D)** Store passwords in AWS Secrets Manager.
 
 <details>
-<summary><b>View Answer & Rationale (Answer: A)</b></summary>
+<summary><b>View Answer & Rationale (Answer: D)</b></summary>
 
 AWS Secrets Manageris the most secure way to store and manage sensitive information,
 such as passwords, database credentials, and API keys. Secrets Manager allows you to:

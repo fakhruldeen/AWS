@@ -1452,7 +1452,7 @@ plan?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** `A`
+**Correct Answer:** `B`
 
 TheAWS Developer Forumsare always free to use, regardless of the user's AWS Support
 plan. They provide a platform for users to ask questions, share knowledge, and collaborate
@@ -3224,7 +3224,7 @@ What is the MOST secure way to store passwords on AWS?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** `A`
+**Correct Answer:** `D`
 
 AWS Secrets Manageris the most secure way to store and manage sensitive information,
 such as passwords, database credentials, and API keys. Secrets Manager allows you to:
@@ -4002,7 +4002,7 @@ Which solution will meet these requirements?
 <details>
 <summary><b>🔍 Reveal Verified Answer & Architectural Rationale</b></summary>
 
-**Correct Answer:** `A`
+**Correct Answer:** `B`
 
 Reserved Instances (RIs)offer a significant discount (up to 75%) compared to On-Demand
 pricing in exchange for committing to use AWS for a period of 1 or 3 years. This pricing
