@@ -1,47 +1,62 @@
 <div dir="rtl">
 
-# 05 — المجال الخامس: الأمن والامتثال والحوكمة لحلول الذكاء الاصطناعي (`Domain 5 — 14%`)
+# المجال الخامس: الأمن والامتثال والحوكمة لحلول الذكاء الاصطناعي (`Domain 5 — 14%`)
 
-> **الوزن النسبي في الاختبار:** `14%`  
-> **المهام الرسمية:** `Task 5.1` (تأمين أنظمة الذكاء الاصطناعي) • `Task 5.2` (الحوكمة واللوائح التنظيمية والامتثال)
-
----
-
-## 1. نموذج المسؤولية المشتركة (`AWS Shared Responsibility Model`) للذكاء الاصطناعي
-- **مسؤولية AWS (`Security OF the Cloud`):** أمن مراكز البيانات الفيزيائية، العتاد والـ `GPUs`، البنية التحتية لخدمة `Amazon Bedrock`، وعزل النماذج الأساسية — **قاعدة ذهبية: بياناتك وأوامرك (`Prompts & Completions`) في `Amazon Bedrock` لا تُستخدم أبداً لتدريب النماذج الأساسية ولا تُشارك مع مزودي النماذج**.
-- **مسؤولية العميل (`Security IN the Cloud`):** سياسات [`AWS IAM`](../AWS_AI_SERVICES_GLOSSARY.md#aws-iam) بأقل صلاحية (`Least Privilege`)، التشفير عبر [`AWS KMS`](../AWS_AI_SERVICES_GLOSSARY.md#aws-kms)، العزل الشبكي عبر [`AWS PrivateLink`](../AWS_AI_SERVICES_GLOSSARY.md#amazon-vpc)، إعداد `Bedrock Guardrails`، وتنظيف البيانات قبل التدريب أو `RAG`.
+يمثل المجال الخامس **14%** من إجمالي درجات اختبار `AIF-C01` (حوالي 7 أسئلة مُقيّمة). يغطي هذا المجال منهجيات تأمين أنظمة الذكاء الاصطناعي والوكلاء الأذكياء وحماية البيانات (`Task 5.1`)، والتعرف على لوائح الحوكمة والامتثال التنظيمي وأطر تقييم المخاطر (`Task 5.2`).
 
 ---
 
-## 2. خدمات وميزات تأمين أنظمة الذكاء الاصطناعي والوكلاء (`v1.2`)
-- **[`Amazon Bedrock AgentCore Identity`](../AWS_AI_SERVICES_GLOSSARY.md#amazon-bedrock-agentcore):** إدارة هويات الوكلاء الذكيين وتفويض صلاحيات `OAuth/IAM` محدودة النطاق بالنيابة عن المستخدم.
-- **`Policy in AgentCore`:** فرض سياسات حتمية (`Allow / Forbid`) تتحقق من صلاحية كل استدعاء لأداة (`Tool Invocation`) قبل تنفيذه فعلياً.
-- **[`AWS PrivateLink`](../AWS_AI_SERVICES_GLOSSARY.md#amazon-vpc):** ربط تطبيقات `VPC` بخدمتي `Bedrock` و `SageMaker` عبر `Interface VPC Endpoints` دون مرور البيانات عبر الإنترنت العام.
-- **[`Amazon Macie`](../AWS_AI_SERVICES_GLOSSARY.md#amazon-macie):** اكتشاف وتصنيف البيانات الحساسة (`PII`) في حاويات `Amazon S3` قبل إدخالها في خطوط التدريب أو `RAG`.
-- **`Bedrock Model Invocation Logging`:** تسجيل جميع الأوامر والردود في `S3` أو `CloudWatch Logs` لأغراض التدقيق والمراقبة.
-- **التأصيل وكشف الهلوسة (`Grounding & Hallucination Detection`):** الجمع بين `RAG Grounding` + فحص `Contextual Grounding` في `Guardrails` + التحقق من المخرجات (`Output Validation`) وتوثيق المصادر (`Source Citation` و `Data Lineage`).
+## أولاً: نموذج المسؤولية المشتركة (`AWS Shared Responsibility Model`) للذكاء الاصطناعي
+
+كما في الحوسبة السحابية، تتوزع المسؤولية الأمنية بوضوح بين أمازون والعميل:
+
+* **مسؤولية `AWS` (أمن السحابة نفسها — `Security OF the Cloud`):** حماية مراكز البيانات المادية، وأجهزة المعالجة والـ `GPUs`، والبنية التحتية المُدارة لخدمتي `Amazon Bedrock` و `Amazon SageMaker AI`، وعزل النماذج الأساسية. **قاعدة ذهبية مؤكدة في الاختبار:** بيانات العميل وأوامره ومخرجاته (`Prompts & Completions`) داخل `Amazon Bedrock` **لا تُستخدم أبداً لتدريب النماذج الأساسية ولا تُشارك مع مزودي النماذج**.
+* **مسؤولية العميل (الأمن داخل السحابة — `Security IN the Cloud`):** تطبيق مبدأ أقل صلاحية عبر [`AWS IAM`](../AWS_AI_SERVICES_GLOSSARY.md#aws-iam)، وتشفير بيانات التدريب وقواعد المتجهات والنماذج المخصصة عبر [`AWS KMS`](../AWS_AI_SERVICES_GLOSSARY.md#aws-kms)، وتفعيل الاتصال الشبكي الخاص عبر `AWS PrivateLink`، وتنقية البيانات من المعلومات الشخصية قبل التدريب، وتكوين حواجز الحماية (`Bedrock Guardrails`) وفحص المخرجات.
 
 ---
 
-## 3. مصفوفة نطاق أمن الذكاء الاصطناعي التوليدي (`Generative AI Security Scoping Matrix`)
+## ثانياً: منظومة الخدمات والميزات الأمنية لأنظمة الذكاء الاصطناعي (`Task 5.1`)
 
-| النطاق (`Scope`) | نوع الاستخدام | الضوابط الأمنية الرئيسية |
+تعتمد `AWS` مبدأ **الدفاع المتعمق (`Defense in Depth`)** بوضع عدة طبقات حماية مستقلة حول أنظمة الذكاء الاصطناعي:
+
+* **أمن الوكلاء الأذكياء في الإنتاج (تحديث `v1.2`):**
+  * **هوية الوكيل (`Amazon Bedrock AgentCore Identity`):** تدير هويات الوكلاء وتفويض صلاحيات `OAuth` و `IAM` محدودة النطاق بالنيابة عن المستخدم، بحيث لا يتجاوز الوكيل الصلاحيات الممنوحة للمستخدم الأصلي.
+  * **السياسات الحتمية (`Policy in AgentCore`):** تفرض قواعد سماح ومنع حتمية (`Allow / Forbid`) تفحص كل طلب لاستدعاء أداة خارجية *قبل* تنفيذه فعلياً، لمنع تنفيذ أي إجراء غير مصرح به حتى لو تعرض النموذج لمحاولة حقن أوامر.
+* **العزل الشبكي (`AWS PrivateLink` و `Interface VPC Endpoints`):** يبقي جميع اتصالات التطبيقات بخدمتي `Amazon Bedrock` و `SageMaker` داخل الشبكة الخاصة لـ `AWS` دون أن تمر البيانات مطلقاً عبر الإنترنت العام.
+* **التشفير وحماية الأسرار:** تشفير البيانات أثناء التخزين (`Encryption at Rest`) بمفاتيح العميل المُدارة في [`AWS KMS`](../AWS_AI_SERVICES_GLOSSARY.md#aws-kms)، والتشفير أثناء النقل (`TLS`)، وتخزين مفاتيح الواجهات البرمجية وكلمات مرور قواعد البيانات بأمان مع التدوير التلقائي عبر [`AWS Secrets Manager`](../AWS_AI_SERVICES_GLOSSARY.md#aws-secrets-manager).
+* **اكتشاف البيانات الحساسة (`Amazon Macie`):** خدمة مدعومة بتعلّم الآلة تفحص حاويات `Amazon S3` تلقائياً لاكتشاف وتصنيف البيانات الشخصية (`PII`) قبل إدخالها في عمليات التدريب أو قواعد المعرفة (`RAG`).
+* **توثيق المصادر ونسب البيانات (`Source Citation & Data Lineage`):** تتبع أصل البيانات وتحولاتها والنماذج التي استخدمتها عبر فهرس بيانات [`AWS Glue`](../AWS_AI_SERVICES_GLOSSARY.md#aws-glue) وبطاقات `SageMaker Model Cards`، وتطبيق تقنيات تعزيز الخصوصية مثل إخفاء الهوية (`Anonymization`) والخصوصية التفاضلية (`Differential Privacy`).
+* **كشف الهلوسة والتأصيل (`Hallucination Detection & Grounding` — تحديث `v1.2`):** رفع موثوقية المخرجات عبر الجمع بين التأصيل بمصادر `RAG`، وفحص التأصيل السياقي في `Bedrock Guardrails`، والتحقق الآلي من المخرجات (`Output Validation`)، ومؤشرات الثقة (`Confidence Scoring`).
+* **سجلات التدقيق التفاعلي (`Bedrock Model Invocation Logging`):** تسجيل نصوص الأوامر والردود الكاملة داخل `S3` أو `CloudWatch Logs` لأغراض المراجعة الأمنية والتحقيق.
+
+---
+
+## ثالثاً: مصفوفة نطاق أمن الذكاء الاصطناعي التوليدي (`Generative AI Security Scoping Matrix`)
+
+تُقسّم `AWS` تطبيقات الذكاء الاصطناعي التوليدي إلى خمسة نطاقات أمنية تتدرج من الأقل تحكماً إلى الأعلى مسؤولية:
+
+| النطاق الأمني | طبيعة الاستخدام المؤسسي | الضوابط الأمنية المطلوبة |
 | :---: | :--- | :--- |
-| **Scope 1** | تطبيقات المستهلكين العامة (مثل روبوتات الويب العامة) | سياسة الاستخدام المقبول (`Acceptable Use Policy`) والتوعية فقط |
-| **Scope 2** | تطبيقات المؤسسات المُدارة (`Amazon Quick`, `Kiro`) | تسجيل الدخول الموحد (`SSO`)، صلاحيات `IAM`، وحوكمة الوصول للبيانات |
-| **Scope 3** | بناء تطبيقات فوق نماذج جاهزة عبر API (`Amazon Bedrock` + `RAG`) | `Guardrails`، `PrivateLink`، `KMS`، `Invocation Logging`، وحماية `Prompt Injection` |
-| **Scope 4** | ضبط النماذج (`Fine-Tuning` / `Continued Pre-Training`) ببيانات الشركة | فحص `Macie`، منع تسميم البيانات (`Data Poisoning`)، وتقييد الوصول للنموذج المخصص |
-| **Scope 5** | تدريب نموذج تأسيسي من الصفر (`Pre-training from Scratch`) | أمن كامل للبنية التحتية، سلاسل التوريد، وعناقيد التدريب (`GPU/Trainium Clusters`) |
+| **النطاق الأول (`Scope 1`)** | استخدام الموظفين لتطبيقات مستهلكين عامة على الإنترنت | وضع سياسة الاستخدام المقبول (`Acceptable Use Policy`) والتوعية بعدم إدخال أسرار الشركة. |
+| **النطاق الثاني (`Scope 2`)** | استخدام تطبيقات مؤسسية جاهزة ومُدارة (مثل `Amazon Quick` و `Kiro`) | تسجيل الدخول الموحد (`SSO`)، وضبط صلاحيات `IAM`، والتحكم بوصول المستخدمين لبيانات الشركة. |
+| **النطاق الثالث (`Scope 3`)** | بناء تطبيقات مخصصة فوق نماذج جاهزة عبر API (مثل `Amazon Bedrock` مع `RAG`) | `PrivateLink`، وتشفير `KMS`، وحواجز `Guardrails`، وحماية حقن الأوامر، وتسجيل الاستدعاءات (`Invocation Logs`). |
+| **النطاق الرابع (`Scope 4`)** | تخصيص وضبط النماذج (`Fine-Tuning` أو `Continued Pre-Training`) ببيانات الشركة | فحص `Macie`، ومنع تسميم البيانات (`Data Poisoning`)، وتقييد الوصول للنماذج المخصصة. |
+| **النطاق الخامس (`Scope 5`)** | تدريب نموذج تأسيسي من الصفر على بنية تحتية ذاتية | أمن شامل للبنية التحتية، وسلاسل التوريد، وعناقيد التدريب، وأمن الحاويات والشبكات. |
 
 ---
 
-## 4. خدمات الحوكمة والامتثال التنظيمي في AWS (`Task 5.2`)
-- **[`AWS Artifact`](../AWS_AI_SERVICES_GLOSSARY.md#aws-artifact):** تحميل تقارير الامتثال الرسمية (`SOC 2`, `ISO 27001`, `PCI DSS`) واتفاقيات `HIPAA BAA`.
-- **[`AWS CloudTrail`](../AWS_AI_SERVICES_GLOSSARY.md#aws-cloudtrail):** سجل تدقيق كامل لجميع استدعاءات `API` الإدارية (من نفّذ ماذا ومتى).
-- **[`AWS Config`](../AWS_AI_SERVICES_GLOSSARY.md#aws-config):** تتبع تاريخ إعدادات الموارد والتحقق المستمر من التزامها بقواعد الامتثال.
-- **[`Amazon Inspector`](../AWS_AI_SERVICES_GLOSSARY.md#amazon-inspector):** فحص آلي مستمر للثغرات الأمنية (`CVEs`) في `EC2` وحاويات `ECR` ودوال `Lambda`.
-- **[`AWS Trusted Advisor`](../AWS_AI_SERVICES_GLOSSARY.md#aws-trusted-advisor):** فحوصات أفضل الممارسات للأمن، التكلفة، الأداء، وحدود الخدمة (`Service Quotas`).
-- **إقامة البيانات (`Data Residency`):** اختيار `AWS Region` المناسبة يضمن بقاء بيانات التدريب والاستدلال داخل النطاق الجغرافي المطلوب قانونياً (مثل `GDPR`).
+## رابعاً: خدمات الحوكمة والامتثال التنظيمي في `AWS` (`Task 5.2`)
+
+| الخدمة السحابية | الدور الدقيق في الحوكمة والامتثال |
+| :--- | :--- |
+| **[`AWS Artifact`](../AWS_AI_SERVICES_GLOSSARY.md#aws-artifact)** | البوابة الذاتية لتحميل تقارير الامتثال الرسمية (`SOC 2`، و `ISO 27001`، و `PCI DSS`) وتوقيع اتفاقيات مثل `HIPAA BAA`. |
+| **[`AWS CloudTrail`](../AWS_AI_SERVICES_GLOSSARY.md#aws-cloudtrail)** | سجل تدقيق غير قابل للتعديل لكل استدعاء برمجي (`API Call`) يجري داخل الحساب (من نفّذ الإجراء، ومتى، ومن أي عنوان). |
+| **[`AWS Config`](../AWS_AI_SERVICES_GLOSSARY.md#aws-config)** | تتبع تاريخ إعدادات الموارد وتقييم التزامها المستمر بقواعد الامتثال (مثل التأكد من بقاء حاويات التدريب مشفّرة وغير عامة). |
+| **[`Amazon Inspector`](../AWS_AI_SERVICES_GLOSSARY.md#amazon-inspector)** | فحص آلي مستمر للثغرات البرمجية (`CVEs`) في خوادم `EC2`، وصور حاويات `ECR`، ودوال `AWS Lambda`. |
+| **[`AWS Trusted Advisor`](../AWS_AI_SERVICES_GLOSSARY.md#aws-trusted-advisor)** | فحوصات تلقائية لأفضل الممارسات في الأمن والتكلفة والأداء وحدود الخدمة (`Service Quotas`). |
+| **إقامة البيانات (`Data Residency`) والاحتفاظ بها** | اختيار المنطقة الجغرافية المناسبة (`AWS Region`) يضمن بقاء البيانات داخل الحدود القانونية (مثل `GDPR`)، مع إدارة دورات الحياة والأرشفة عبر `S3 Lifecycle` و `S3 Glacier`. |
+
+---
 
 **الخطوة التالية:** [06_Exam_Tricks_and_Comparison_CheatSheet.md](./06_Exam_Tricks_and_Comparison_CheatSheet.md)
 

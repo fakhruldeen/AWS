@@ -1,37 +1,45 @@
 <div dir="rtl">
 
-# 06 — دليل المقارنات الذهبية وحيل الاختبار (`X vs Y` — `AIF-C01 v1.2`)
+# المراجعة النهائية: دليل المقارنات الذهبية وحيل فك شفرة اختبار `AIF-C01`
 
-> **الهدف:** جدول مراجعة سريعة ليلة الاختبار لفك شفرة الكلمات المفتاحية (`Keywords`) في أسئلة `Multiple Choice` و `Ordering` و `Matching` خلال ثوانٍ.
-
----
-
-## 1. جدول المقارنات الذهبية (`X vs Y`)
-
-| المقارنة | الخيار الأول (`X`) | الخيار الثاني (`Y`) | الكلمة المفتاحية الفاصلة في السؤال |
-| :--- | :--- | :--- | :--- |
-| **`RAG` vs `Fine-Tuning`** | `RAG`: يضيف **حقائق مؤسسية متغيرة** مع توثيق المصادر دون إعادة تدريب | `Fine-Tuning`: يغيّر **الأسلوب والنبرة والتنسيق** عبر أمثلة مُصنّفة | "up-to-date docs + citations" ← **`RAG`** \| "specific tone/style" ← **`Fine-Tuning`** |
-| **`Fine-Tuning` vs `Continued Pre-Training`** | `Instruction Fine-Tuning`: بيانات **مُصنّفة (`Labeled`)** | `Continued Pre-Training`: نصوص قطاعية **غير مُصنّفة (`Unlabeled`)** ضخمة | "labeled prompt-completion" ← **`Fine-Tuning`** \| "massive unlabeled domain corpus" ← **`Continued Pre-Training`** |
-| **`Model Distillation` vs `Prompt Caching`** | `Distillation`: نموذج طالب صغير/سريع/رخيص يحاكي نموذجاً كبيراً | `Prompt Caching`: تخزين مؤقت لبادئة نصية ثابتة متكررة | "smaller faster cheaper student model" ← **`Distillation`** \| "repeated static prefix" ← **`Prompt Caching`** |
-| **`Bedrock` vs `SageMaker JumpStart`** | `Bedrock`: Serverless API بدون إدارة خوادم | `JumpStart`: تحكم كامل بالبنية التحتية والـ `GPUs` للنماذج مفتوحة المصدر | "serverless / no infra" ← **`Bedrock`** \| "dedicated infra / full control" ← **`JumpStart`** |
-| **`Bedrock Guardrails` vs `SageMaker Clarify`** | `Guardrails`: تصفية فورية **أثناء التشغيل** (`PII`, `Denied Topics`, `Grounding`) | `Clarify`: قياس **التحيز** (`Bias`) وتفسير **`SHAP`** للبيانات والنماذج | "block topics / redact PII at runtime" ← **`Guardrails`** \| "bias / disparate impact / SHAP" ← **`Clarify`** |
-| **`ROUGE` vs `BLEU` vs `BERTScore` vs `LLM-as-a-Judge`** | `ROUGE` = **تلخيص** \| `BLEU` = **ترجمة** | `BERTScore` = **تشابه دلالي** \| `LLM-as-a-Judge` = **تقييم مفتوح واسع النطاق** | Summarization ← **`ROUGE`** \| Translation ← **`BLEU`** \| Paraphrase semantics ← **`BERTScore`** |
-| **`Precision` vs `Recall` vs `F1`** | `Precision`: تقليل `False Positives` (بريد مزعج) | `Recall`: تقليل `False Negatives` (سرطان/احتيال) \| `F1`: بيانات غير متوازنة | "cannot miss positive cases" ← **`Recall`** \| "imbalanced classes" ← **`F1`** |
-| **`Textract` vs `Rekognition` vs `Comprehend`** | `Textract`: جداول ونماذج `PDF` \| `Rekognition`: صور وفيديو | `Comprehend`: مشاعر وكيانات `NLP` من النص | "forms & tables" ← **`Textract`** \| "objects/faces" ← **`Rekognition`** \| "sentiment/entities" ← **`Comprehend`** |
-| **`Strands Agents` vs `Bedrock AgentCore` vs `Kiro`** | `Strands`: SDK لبناء الوكلاء \| `AgentCore`: تشغيل وتأمين الوكلاء بالإنتاج | `Kiro`: بيئة تطوير وكيلة `IDE` موجهة بالمواصفات | "open-source SDK" ← **`Strands`** \| "Identity/Policy/Runtime" ← **`AgentCore`** \| "spec-driven IDE" ← **`Kiro`** |
-| **`CloudTrail` vs `Config` vs `Artifact` vs `Macie`** | `CloudTrail`: سجل `API` \| `Config`: امتثال الإعدادات | `Artifact`: تقارير `SOC/ISO` \| `Macie`: كشف `PII` في `S3` | "who called API" ← **`CloudTrail`** \| "discover PII in S3" ← **`Macie`** \| "download SOC/HIPAA" ← **`Artifact`** |
+صُمّم هذا الدليل ليكون مرجعك السريع ليلة الاختبار. يجمع أهم المقارنات المعمارية التي يبني عليها واضعو أسئلة `AWS` الخيارات المضللة (`Distractors`)، مع الكلمات المفتاحية الفاصلة التي تقودك للإجابة الصحيحة في ثوانٍ.
 
 ---
 
-## 2. نصائح ذهبية للتعامل مع أنماط الأسئلة الأربعة
-1. **أسئلة `Multiple Response` (`Choose TWO`):** استبعد فوراً الخيارات الخارجة عن نطاق الخدمة أو المبالغ فيها، وتأكد أن الخيارين معاً يغطيان شقّي السؤال.
-2. **أسئلة `Ordering` (الترتيب):** حدد دائماً **الخطوة الأولى** (تحديد المشكلة / جمع البيانات / تقطيع المستندات / فحص الإدخال) و**الخطوة الأخيرة** (النشر والمراقبة / التوثيق / تسليم الإجابة) — هذا يحسم الترتيب بدقة 100%.
-3. **أسئلة `Matching` (المطابقة):** اربط الأزواج التي تعرفها بيقين كامل أولاً لتقليص الخيارات المتبقية.
-4. **إدارة الوقت:** 90 دقيقة لـ 65 سؤالاً (~1.38 دقيقة لكل سؤال) — لا تتردد في طلب **`ESL +30`** قبل حجز الاختبار لتحصل على **120 دقيقة** كاملة!
+## أولاً: جدول المقارنات الذهبية (`X` مقابل `Y`)
 
-**الخطوة التالية للتطبيق العملي:**
-- تدريبات الترتيب والمطابقة: [`AIF_C01_Ordering_and_Matching_Drills.md`](../11_Practice_Exams/AIF_C01_Ordering_and_Matching_Drills.md)
-- أهم 300 سؤال متكرر: [`AIF_C01_Top_300_Most_Frequent_Exam_Questions.md`](../11_Practice_Exams/AIF_C01_Top_300_Most_Frequent_Exam_Questions.md)
-- الاختبار التجريبي الكامل (`v1.2`): [`AIF_C01_Full_Length_Mock_Exam_2_v1.2.md`](../11_Practice_Exams/AIF_C01_Full_Length_Mock_Exam_2_v1.2.md)
+| المقارنة | متى تختار الخيار الأول؟ | متى تختار الخيار الثاني؟ |
+| :--- | :--- | :--- |
+| **تعلّم الآلة التقليدي مقابل النماذج التأسيسية** | بيانات جدولية مهيكلة، أو حاجة لتفسير تنظيمي واضح، أو تكلفة تشغيل منخفضة (`XGBoost` / الانحدار اللوجستي). | بيانات غير مهيكلة (نصوص، صور، فيديو)، أو توليد محتوى جديد، أو تلخيص وفهم متعدد الوسائط. |
+| **الاستدلال الفوري مقابل الدفعي مقابل غير المتزامن** | **الفوري (`Real-Time`):** أجزاء من الثانية وحركة ثابتة. **بدون خوادم (`Serverless`):** حركة متقطعة وحمولة حتى `4 MB`. | **غير المتزامن (`Async`):** ملفات ضخمة حتى `1 GB` وزمن معالجة طويل. **الدفعي (`Batch`):** ملايين السجلات في `S3` دون استعجال. |
+| **التوليد المعزز (`RAG`) مقابل الضبط الدقيق (`Fine-Tuning`)** | بيانات ومستندات مؤسسية متغيرة باستمرار مع الحاجة لتوثيق المصادر وتقليل الهلوسة دون إعادة تدريب (`Bedrock Knowledge Bases`). | تغيير أسلوب النموذج أو نبرته أو بنية مخرجاته باستخدام أمثلة مُصنّفة (`Labeled Prompt-Completion Pairs`). |
+| **الضبط الدقيق مقابل استكمال التدريب الأولي** | **الضبط الدقيق (`Instruction Fine-Tuning`):** يعتمد على بيانات **مُصنّفة (`Labeled`)** لتعليم مهمة أو تنسيق محدد. | **استكمال التدريب (`Continued Pre-Training`):** يعتمد على نصوص قطاعية ضخمة **غير مُصنّفة (`Unlabeled`)** لتعلّم مفردات المجال. |
+| **تقطير النماذج (`Distillation`) مقابل التخزين المؤقت (`Prompt Caching`)** | **التقطير:** إنشاء نموذج طالب صغير وسريع ورخيص يحاكي دقة نموذج معلم ضخم لمهمة ضيقة عالية الكثافة. | **التخزين المؤقت:** إعادة استخدام بادئة نصية ثابتة ومتكررة عبر الطلبات لخفض تكلفة رموز الإدخال وزمن الاستجابة. |
+| **أمازون بيدروك مقابل ساج ميكر جامب ستارت** | **بيدروك (`Amazon Bedrock`):** واجهة برمجية بدون خوادم (`Serverless`) وسرعة إطلاق دون إدارة بنية تحتية. | **جامب ستارت (`SageMaker JumpStart`):** استضافة وضبط نماذج مفتوحة الوزن على خوادم مخصصة مع تحكم كامل بالبنية التحتية. |
+| **حواجز بيدروك مقابل ساج ميكر كلاريفاي** | **حواجز الحماية (`Bedrock Guardrails`):** تصفية فورية **أثناء التشغيل** للمواضيع المحظورة و `PII` والهلوسة (`Contextual Grounding`). | **كلاريفاي (`SageMaker Clarify`):** قياس **التحيز** (`Class Imbalance` / `Disparate Impact`) وحساب تفسيرات **`SHAP`** للميزات. |
+| **مقاييس التقييم التوليدية (`ROUGE` / `BLEU` / `BERTScore` / `LLM-as-a-Judge`)** | **`ROUGE`:** للتلخيص النصي. **`BLEU`:** للترجمة الآلية. **`Perplexity`:** لجودة توقع اللغة (الأقل أفضل). | **`BERTScore`:** للتشابه الدلالي عبر التضمينات. **`LLM-as-a-Judge`:** لتقييم الإجابات المفتوحة آلياً على نطاق واسع. |
+| **الضبط (`Precision`) مقابل الاستدعاء (`Recall`) مقابل `F1`** | **الضبط (`Precision`):** عند تقليل الإنذارات الكاذبة (فلتر البريد المزعج). **الاستدعاء (`Recall`):** عند تجنب تفويت الحالات الحقيقية (السرطان والاحتيال). | **معامل `F1 Score`:** عند تقييم مصنّف على بيانات **غير متوازنة (`Imbalanced Datasets`)**. |
+| **خدمات المستندات والصور والنصوص (`Textract` / `Rekognition` / `Comprehend`)** | **`Textract`:** استخراج النصوص والجداول والنماذج من `PDF`. **`Rekognition`:** تحليل الصور والفيديو والوجوه. | **`Comprehend`:** تحليل المشاعر واستخراج الكيانات واللغة من النصوص. |
+| **منظومة الوكلاء في تحديث `v1.2` (`Strands` / `AgentCore` / `Kiro`)** | **`Strands Agents`:** مكتبة `Python` مفتوحة المصدر لبناء الوكلاء مع `MCP`. **`Kiro`:** بيئة تطوير وكيلة موجهة بالمواصفات. | **`Bedrock AgentCore`:** منصة الإنتاج السحابية للوكلاء (`Runtime` و `Memory` و `Identity` و `Policy in AgentCore`). |
+| **خدمات الأمن والتدقيق (`CloudTrail` / `Config` / `Macie` / `Artifact`)** | **`CloudTrail`:** من استدعى الـ `API`؟ **`Config`:** هل إعدادات الموارد مطابقة لقواعد الامتثال؟ | **`Macie`:** اكتشاف `PII` داخل حاويات `S3`. **`Artifact`:** تحميل تقارير `SOC` و `ISO` واتفاقية `HIPAA`. |
+
+---
+
+## ثانياً: منهجية التعامل مع أنماط الأسئلة الأربعة في الاختبار
+
+1. **أسئلة الاختيار من متعدد (`Multiple Choice`):** ابحث أولاً عن الكلمات الحاكمة في السؤال مثل «أقل جهد تشغيلي» (`Least operational overhead` ← `Amazon Bedrock`)، أو «بدون إعادة تدريب» (`Without retraining` ← `RAG`)، أو «نتيجة حتمية 100%» (`Rule-based software`).
+2. **أسئلة الاختيار المتعدد (`Multiple Response` — اختر إجابتين):** لا يوجد نصف درجة؛ تأكد أن الخيارين اللذين اخترتهما يكملان بعضهما ويغطيان جزأي السؤال (مثلاً تفريغ صوت ثم تحليل مشاعر ← `Transcribe` + `Comprehend`، أو أمن هوية الوكيل وسياساته ← `AgentCore Identity` + `Policy in AgentCore`).
+3. **أسئلة الترتيب (`Ordering` — 3 إلى 5 خطوات):** ثبّت دائماً **الخطوة الأولى** (تحديد المشكلة، أو تقطيع المستندات، أو فحص الإدخال، أو اكتشاف `PII`) و**الخطوة الأخيرة** (النشر والمراقبة، أو التوليد الموثق، أو التوثيق في `Model Cards`)؛ فذلك يحسم الترتيب بدقة عالية.
+4. **أسئلة المطابقة (`Matching` — 3 إلى 7 أزواج):** ابدأ بربط الخدمات والمقاييس التي تعرفها بيقين تام (مثل `Textract` للجداول و `ROUGE` للتلخيص و `Macie` لبيانات `S3`) لتقليص الخيارات المتبقية تلقائياً.
+5. **إدارة الوقت الذكية:** تذكّر أن لديك 90 دقيقة لـ 65 سؤالاً (أو 120 دقيقة إذا فعّلت ميزة `ESL +30` المجانية قبل حجز موعدك). لا تتوقف طويلاً عند سؤال غامض؛ ضع عليه علامة مراجعة (`Flag`) وأكمل بقية الأسئلة ثم عد إليه بهدوء.
+
+---
+
+## ثالثاً: محطتك التالية للتطبيق العملي والاختبار
+
+* تدريبات أسئلة الترتيب والمطابقة: [AIF_C01_Ordering_and_Matching_Drills.md](../11_Practice_Exams/AIF_C01_Ordering_and_Matching_Drills.md)
+* أهم 300 سؤال متكرر ومرتب حسب الأولوية: [AIF_C01_Top_300_Most_Frequent_Exam_Questions.md](../11_Practice_Exams/AIF_C01_Top_300_Most_Frequent_Exam_Questions.md)
+* الاختبار التجريبي الكامل الثاني (`v1.2` — 65 سؤالاً / 90 دقيقة): [AIF_C01_Full_Length_Mock_Exam_2_v1.2.md](../11_Practice_Exams/AIF_C01_Full_Length_Mock_Exam_2_v1.2.md)
+* قائمة المراجعة النهائية السريعة: [AIF-C01_Exam_Essentials_Master_Checklist.md](../09_Notes_and_Cheatsheets/AIF-C01_Exam_Essentials_Master_Checklist.md)
 
 </div>
