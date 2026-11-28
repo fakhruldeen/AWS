@@ -477,3 +477,12 @@ flowchart TD
     
     Req -->|"Human Review of Borderline Inferences"| A2IFlow["Amazon Augmented AI (A2I)"]
 ```
+
+
+---
+
+## 🆕 Official Exam Guide v1.2 (October 2026) — Domain 4 Additions
+
+* **Sustainable Model Selection (Task 4.1):** Minimize environmental and energy impact by choosing right-sized or distilled models (`Amazon Nova Micro`, `Model Distillation`), enabling `Prompt Caching`, avoiding unnecessary retraining, and running on `AWS Trainium`/`Inferentia`.
+* **Bias & Truthfulness Audits:** Complement `SageMaker Clarify` with **subgroup analysis**, **label quality reviews**, and **human audits** to catch demographic disparities hidden by aggregate metrics.
+* **Human-Centered Design for Explainable AI (Task 4.2):** Pair transparent AI decision explanations (confidence, rationale, source citations) with explicit **user-feedback mechanisms** so users can contest or escalate outcomes.

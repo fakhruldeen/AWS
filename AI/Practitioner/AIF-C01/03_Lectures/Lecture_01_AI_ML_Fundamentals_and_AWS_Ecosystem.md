@@ -205,3 +205,12 @@ Which SageMaker inference option meets these requirements?
 ## 🚀 Post-Lecture Student Transition
 * Direct students to review [01_Domain_1_Fundamentals_of_AI_and_ML.md](../06_Explanations/01_Domain_1_Fundamentals_of_AI_and_ML.md).
 * Transition to hands-on practice: [Lab 06: No-Code ML with SageMaker Canvas](../07_Hands_On_Labs/Lab_06_No_Code_Predictive_ML_with_Amazon_SageMaker_Canvas.md) and [Lab 07: Data Prep with Data Wrangler](../07_Hands_On_Labs/Lab_07_Data_Preparation_and_Feature_Engineering_with_SageMaker_Data_Wrangler.md).
+
+
+---
+
+## 🆕 Official Exam Guide v1.2 (October 2026) — Instructor Update Notes
+
+* **Expanded AI/ML Pipeline Tools (Task 1.3):** Highlight **`Kiro`** (AWS's spec-driven agentic AI IDE bridging requirements → design specs → verified code) and **`Amazon Quick`** (unified AI-powered BI, natural-language analytics, and enterprise workflow automation) alongside `Amazon Bedrock` and `Amazon SageMaker AI`.
+* **Neural Network Families Quick Distinction:** Remind students of `CNN` (computer vision/images), `RNN/LSTM` (sequential/time-series), `GAN` (generator vs. discriminator synthetic generation), `VAE` (probabilistic latent-space generation), `Transformer` (self-attention for LLMs), and `Diffusion` (iterative denoising for images/video).
+* **When NOT to Use AI/ML (Task 1.2):** Emphasize that deterministic rules requiring 100% exact outputs (e.g., statutory tax formulas) should use standard rule-based code or `RPA` rather than probabilistic ML models.

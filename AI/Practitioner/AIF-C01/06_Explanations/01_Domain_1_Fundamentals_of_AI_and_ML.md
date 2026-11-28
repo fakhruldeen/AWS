@@ -537,3 +537,12 @@ flowchart TD
     Q4 -->|"Conversational Chatbot / Dialog"| Lex["Amazon Lex"]
     Q4 -->|"Language Translation"| Translat["Amazon Translate"]
 ```
+
+
+---
+
+## 🆕 Official Exam Guide v1.2 (October 2026) — Domain 1 Additions
+
+* **AI/ML Pipeline Services (Task 1.3):** In addition to `Amazon SageMaker AI` and `Amazon Bedrock`, Exam Guide v1.2 explicitly places **`Kiro`** (AWS's spec-driven agentic AI IDE) and **`Amazon Quick`** (unified AI-powered BI, research, and workflow automation) in the AI/ML lifecycle.
+* **Neural Network Specialization Matrix:** `CNN` (computer vision/image classification), `RNN`/`LSTM` (sequential/time-series), `GAN` (generator vs. discriminator synthetic generation), `VAE` (probabilistic latent-space generation), `Transformer` (self-attention for LLMs), and `Diffusion` (iterative denoising for image/video generation).
+* **Parameters vs. Hyperparameters & Drift:** Parameters (weights/biases) are learned automatically via **backpropagation**; Hyperparameters (learning rate, epochs, batch size) are configured before training. Monitor live **Data Drift** (input distribution shift) and **Concept Drift** (input-to-label shift) via `SageMaker Model Monitor`.

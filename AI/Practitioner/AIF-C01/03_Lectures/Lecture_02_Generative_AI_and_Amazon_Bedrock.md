@@ -283,3 +283,15 @@ Which factor will drive the inference costs?
 - **Why [D] is Wrong:** Total training time relates to model creation costs, not per-request inference consumption costs in Amazon Bedrock.
 
 </details>
+
+
+---
+
+## 🆕 Official Exam Guide v1.2 (October 2026) — Context Engineering & Agentic Stack
+
+* **Context Engineering (Task 2.1):** Teach students the difference between *Prompt Engineering* (crafting instructions) and **Context Engineering** (systematically curating the entire runtime context window: system rules + RAG chunks + short/long-term memory + tool outputs within token limits).
+* **Agentic AI & `MCP` (Task 2.1 & 2.3):**
+  * **Model Context Protocol (`MCP`):** Open standard connecting AI agents/models to external tools, enterprise APIs, and data sources.
+  * **Strands Agents:** Open-source, model-driven Python SDK from AWS for building single- and multi-agent apps with native `MCP` support.
+  * **Amazon Bedrock AgentCore:** Serverless enterprise runtime (`Runtime`, `Memory`, `Gateway` for MCP, `Identity`, `Policy`, `Observability`) for operating production agents at scale.
+  * **Kiro & Amazon Quick & AWS Transform:** `Kiro` (spec-driven agentic IDE), `Amazon Quick` (no-code AI BI & enterprise workflows), and `AWS Transform` (agentic modernization of legacy `.NET`/`Java`/`VMware`/`Mainframe` workloads).

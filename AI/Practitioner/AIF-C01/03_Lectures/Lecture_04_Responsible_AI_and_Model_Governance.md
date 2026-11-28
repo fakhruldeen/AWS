@@ -258,3 +258,12 @@ Which technique will solve the problem?
 - **Option D is INCORRECT:** Watermark detection identifies synthetic provenance markers or copyright stamps on media, having zero impact on training dataset diversity or demographic fairness.
 
 </details>
+
+
+---
+
+## 🆕 Official Exam Guide v1.2 (October 2026) — Sustainability & Human-Centered Explainability
+
+* **Sustainable Model Selection (Task 4.1):** Highlight choosing right-sized or distilled models (`Amazon Nova Micro`, `Model Distillation`), enabling `Prompt Caching`, and leveraging `AWS Trainium`/`Inferentia` to minimize energy usage and carbon footprint.
+* **Bias & Truthfulness Monitoring:** Pair automated tools (`SageMaker Clarify`) with **subgroup analysis**, **label quality reviews**, and **human audits** to uncover hidden disparities masked by overall accuracy.
+* **Human-Centered Design for Explainable AI (Task 4.2):** Emphasize clear AI decision transparency (communicating rationale, confidence, and source citations) paired with explicit **user-feedback mechanisms** so humans can contest or escalate AI decisions.

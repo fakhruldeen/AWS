@@ -203,3 +203,15 @@ style: |
    * C) AWS DeepRacer
    * D) Amazon Kendra
 
+
+
+---
+
+# 🆕 Exam Guide v1.2 (2026) — Context Engineering & AWS Agentic Stack
+
+- **Context Engineering:** Curating the *entire runtime context window* (system prompt + RAG + memory + tool outputs) within token limits
+- **Model Context Protocol (`MCP`):** Open standard connecting AI agents to external tools, APIs, and data sources
+- **AWS v1.2 GenAI & Agentic Offerings:**
+  - **`Strands Agents`:** Open-source model-driven Python SDK for multi-agent apps with `MCP`
+  - **`Amazon Bedrock AgentCore`:** Serverless enterprise runtime (`Runtime`, `Memory`, `Gateway`, `Identity`, `Policy`, `Observability`)
+  - **`Kiro`** (spec-driven IDE) • **`Amazon Quick`** (AI BI) • **`AWS Transform`** (agentic legacy modernization)

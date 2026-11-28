@@ -238,3 +238,14 @@ Which AWS service can the company use to meet this requirement?
 - **Option D is INCORRECT:** AWS Data Exchange allows organizations to discover, license, and ingest third-party commercial datasets, not audit compliance packages.
 
 </details>
+
+
+---
+
+## 🆕 Official Exam Guide v1.2 (October 2026) — AgentCore Security & Grounding Controls
+
+* **Securing Production AI Agents (Task 5.1):**
+  * **`Amazon Bedrock AgentCore Identity`:** Manages secure OAuth/IAM delegation and scoped least-privilege credentials so agents act strictly within authorized user permissions.
+  * **`Policy in AgentCore`:** Enforces deterministic allow/forbid policies on every agent tool invocation *before* the external action executes.
+* **Hallucination Detection & Grounding (Task 5.1):** Combine `RAG` grounding, `Bedrock Guardrails` contextual grounding checks, confidence scoring, and output validation with source citations (`Data Lineage` + `SageMaker Model Cards`).
+* **Data Governance & Residency (Task 5.2):** Selecting the appropriate `AWS Region` enforces regulatory **data residency**; pair with `S3 Lifecycle`/`Glacier` retention policies, `AWS Config`, `Amazon Inspector`, `AWS CloudTrail`, and `AWS Artifact`.

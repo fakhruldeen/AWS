@@ -477,3 +477,14 @@ flowchart TD
     QAssist -->|"Software Developers in IDE"| QD["Amazon Q Developer"]
     QAssist -->|"Business Staff querying company files"| QB["Amazon Q Business"]
 ```
+
+
+---
+
+## 🆕 Official Exam Guide v1.2 (October 2026) — Domain 3 Additions
+
+* **Model Distillation (Task 3.1 & 3.3):** Transfers task-specific accuracy from a large **Teacher FM** into a smaller, faster, lower-cost **Student Model** — ideal for high-volume narrow tasks where large FMs are too slow or expensive.
+* **Prompt Caching & `Amazon Bedrock Prompt Management` (Task 3.1 & 3.2):**
+  * **Prompt Caching:** Caches static prompt prefixes across requests to cut input token costs and latency.
+  * **Amazon Bedrock Prompt Management:** Centralizes versioning, testing, comparison, and deployment of prompt templates across environments.
+* **Modern Evaluation (`BERTScore` & `LLM-as-a-Judge` — Task 3.4):** Use **`BERTScore`** for contextual embedding semantic similarity across paraphrases, **`LLM-as-a-Judge`** (`Amazon Bedrock Model Evaluation`) for scalable automated grading of open-ended outputs, and business alignment metrics (**task completion rate**, **user satisfaction**, **cost per interaction**).

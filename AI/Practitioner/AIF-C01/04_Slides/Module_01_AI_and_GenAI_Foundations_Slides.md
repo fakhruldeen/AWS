@@ -219,3 +219,15 @@ style: |
    * C) Data drift; retrain the model on the same training set
    * D) High precision; increase learning rate
 
+
+
+---
+
+# 🆕 Exam Guide v1.2 (2026) — AI/ML Pipeline & Architecture Quick Map
+
+- **Neural Network Families:** `CNN` (Vision) • `RNN/LSTM` (Sequences) • `GAN` & `VAE` (Synthetic Gen) • `Transformer` (LLMs) • `Diffusion` (Images/Video)
+- **Expanded AWS Pipeline Services (Task 1.3):**
+  - **`Kiro`:** AWS spec-driven agentic AI IDE (requirements → design specs → verified code)
+  - **`Amazon Quick`:** Unified AI-powered BI, natural-language analytics & enterprise workflows
+  - **`Amazon SageMaker AI`** & **`Amazon Bedrock`**
+- **When NOT to Use ML:** Deterministic rules needing 100% exact results → use rule-based code or `RPA`

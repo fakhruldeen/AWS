@@ -131,3 +131,14 @@ style: |
    * C) Amazon GuardDuty
    * D) AWS Shield Advanced
 
+
+
+---
+
+# 🆕 Exam Guide v1.2 (2026) — Sustainability & Human-Centered XAI
+
+- **Sustainable AI Model Selection (Task 4.1):**
+  - Pick right-sized or distilled models (`Amazon Nova Micro`, `Model Distillation`)
+  - Enable `Prompt Caching` and use energy-efficient `AWS Trainium` / `Inferentia`
+- **Bias & Truthfulness Audits:** Combine `SageMaker Clarify` with **subgroup analysis**, label quality audits, and human reviews
+- **Human-Centered Explainable AI (Task 4.2):** Clear AI decision transparency + explicit **user-feedback mechanisms**

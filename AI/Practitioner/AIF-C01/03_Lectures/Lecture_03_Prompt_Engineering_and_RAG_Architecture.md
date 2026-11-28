@@ -273,3 +273,17 @@ Which action will reduce these risks?
 - **Option D is INCORRECT:** Restricting input token length impairs legitimate queries and context windows without preventing concise adversarial prompt injections (e.g., "Ignore previous instructions").
 
 </details>
+
+
+---
+
+## 🆕 Official Exam Guide v1.2 (October 2026) — Distillation, Prompt Management & LLM-as-a-Judge
+
+* **Model Distillation (Task 3.1 & 3.3):** Transfers task-specific capabilities from a large, high-accuracy **Teacher FM** into a smaller, faster, lower-cost **Student Model** — the exam answer whenever a scenario wants *teacher-level quality at lower latency and cost for a narrow high-volume task*.
+* **Prompt Caching & `Amazon Bedrock Prompt Management` (Task 3.1 & 3.2):**
+  * **Prompt Caching:** Caches static prompt prefixes (long system instructions or reference docs) across calls to slash input token cost and latency.
+  * **Amazon Bedrock Prompt Management:** Centralizes versioning, testing, comparison, and deployment of reusable prompt templates across dev/staging/prod.
+* **Expanded FM & App Evaluation (Task 3.4):**
+  * **`BERTScore`:** Contextual embedding semantic similarity (captures paraphrases unlike exact n-gram `ROUGE`/`BLEU`).
+  * **`LLM-as-a-Judge`:** Uses a strong evaluator FM in `Amazon Bedrock Model Evaluation` to score open-ended outputs at scale for correctness, faithfulness, and helpfulness.
+  * **Business Alignment Metrics:** Task completion rate, user satisfaction, and cost per interaction.

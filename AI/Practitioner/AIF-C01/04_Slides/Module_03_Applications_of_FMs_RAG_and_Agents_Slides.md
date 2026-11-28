@@ -141,3 +141,14 @@ style: |
    * C) Amazon Bedrock Model Evaluation
    * D) Amazon Bedrock Watermarking
 
+
+
+---
+
+# 🆕 Exam Guide v1.2 (2026) — Distillation, Prompt Management & Evaluation
+
+- **Model Distillation:** Transfer large **Teacher FM** accuracy into a smaller, faster, cheaper **Student Model** for narrow high-volume tasks
+- **Prompt Caching:** Cache repeated static prompt prefixes → lower input token cost & lower latency
+- **Amazon Bedrock Prompt Management:** Centralized prompt versioning, testing, comparison & deployment
+- **Modern FM Evaluation Metrics:**
+  - **`ROUGE`** (Summarization) • **`BLEU`** (Translation) • **`BERTScore`** (Semantic Embeddings) • **`LLM-as-a-Judge`** (Open-ended quality at scale)

@@ -494,3 +494,15 @@ flowchart TD
     MetricType -->|"Text Summarization"| ROUGE["ROUGE (Recall-oriented)"]
     MetricType -->|"Machine Translation"| BLEU["BLEU (Precision with brevity penalty)"]
 ```
+
+
+---
+
+## 🆕 Official Exam Guide v1.2 (October 2026) — Domain 2 Additions
+
+* **Context Engineering (Task 2.1):** Extends beyond writing a single prompt to systematically curating the **entire runtime context window** — system instructions, retrieved RAG passages, short/long-term agent memory, and external tool definitions/outputs — while managing token budgets and preventing context rot.
+* **Agentic AI & `MCP` (Task 2.1 & 2.3):**
+  * **Model Context Protocol (`MCP`):** Open standard connecting AI agents and models to external tools, APIs, and enterprise data repositories.
+  * **`Strands Agents`:** AWS's open-source, model-driven Python SDK for building single- and multi-agent workflows with native `MCP` tool integration.
+  * **`Amazon Bedrock AgentCore`:** Serverless enterprise platform (`Runtime`, `Memory`, `Gateway` for MCP, `Identity`, `Policy`, `Observability`) for operating agents at scale.
+  * **`Kiro`**, **`Amazon Quick`**, and **`AWS Transform`:** Spec-driven agentic IDE (`Kiro`), AI-powered enterprise BI & workflow automation (`Amazon Quick`), and agentic legacy modernization for `.NET`/`Java`/`VMware`/`Mainframe` (`AWS Transform`).

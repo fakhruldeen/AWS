@@ -132,3 +132,14 @@ style: |
    * C) AWS Certificate Manager (ACM)
    * D) Amazon Cognito User Pools
 
+
+
+---
+
+# 🆕 Exam Guide v1.2 (2026) — AgentCore Security & Grounding Controls
+
+- **Securing Autonomous AI Agents (Task 5.1):**
+  - **`Amazon Bedrock AgentCore Identity`:** Scoped OAuth/IAM user-delegated credentials for agents
+  - **`Policy in AgentCore`:** Deterministic allow/forbid enforcement *before* tool invocations execute
+- **Hallucination Detection & Grounding:** `RAG` grounding + `Bedrock Guardrails` contextual grounding + source citations (`Data Lineage`)
+- **Governance & Data Residency (Task 5.2):** `AWS Region` selection + `CloudTrail` + `Config` + `Inspector` + `Artifact` + `Trusted Advisor`

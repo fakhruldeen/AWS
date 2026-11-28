@@ -449,3 +449,14 @@ flowchart TD
     LogScope -->|"Continuous evidence collection for audit"| AuditMgr["AWS Audit Manager"]
     LogScope -->|"Detect PII in S3 training buckets"| Macie["Amazon Macie"]
 ```
+
+
+---
+
+## 🆕 Official Exam Guide v1.2 (October 2026) — Domain 5 Additions
+
+* **AgentCore Security Controls (Task 5.1):**
+  * **`Amazon Bedrock AgentCore Identity`:** Manages scoped OAuth/IAM delegation so AI agents only access downstream resources authorized for the calling user.
+  * **`Policy in AgentCore`:** Enforces deterministic allow/forbid policies on every agent tool invocation *before* external actions execute.
+* **Hallucination Detection & Grounding (Task 5.1):** Combine `RAG` grounding, `Bedrock Guardrails` contextual grounding checks, confidence scoring, and output validation with documented source citations (`Data Lineage` + `SageMaker Model Cards`).
+* **Governance & Data Residency (Task 5.2):** Enforce regulatory **data residency** through `AWS Region` selection, paired with `AWS Config`, `Amazon Inspector`, `AWS CloudTrail`, `AWS Artifact`, `AWS Trusted Advisor`, and `S3 Lifecycle`/`Glacier` retention policies.
