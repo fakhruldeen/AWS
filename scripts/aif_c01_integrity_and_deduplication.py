@@ -30,6 +30,8 @@ CERTSAFARI_PATH = VAULT_DIR / "Questions_Bank/CertSafari_AI_Practitioner_Questio
 EDURELY_PATH = VAULT_DIR / "Questions_Bank/Edurely_AI_Practitioner_Questions/edurely_ai_practitioner_master.json"
 OREILLY_PATH = VAULT_DIR / "Questions_Bank/OReilly_Taulli_AIF_C01_Questions/oreilly_taulli_aif_c01_questions.json"
 WILEY_PATH = VAULT_DIR / "Questions_Bank/Wiley_Elango_AIF_C01_Questions/wiley_elango_aif_c01_questions.json"
+EXAMPREPPER_PATH = VAULT_DIR / "Questions_Bank/ExamPrepper_AI_Practitioner_Questions/examprepper_aif_c01_450q.json"
+CERTSHERO_PATH = VAULT_DIR / "Questions_Bank/CertsHero_AI_Practitioner_Questions/certshero_aif_c01_page1_7q.json"
 
 WORK_AIF_DIR = WORK_DIR / "AI/Practitioner/AIF-C01"
 WORK_REPORT_PATH = WORK_AIF_DIR / "AIF_C01_TOPIC_TAXONOMY_AND_DEDUPLICATION_REPORT.md"
@@ -566,10 +568,18 @@ def main():
         print(f"Loaded existing AIF-C01 Master Bank: {len(existing)} questions")
         raw_records.extend(existing)
 
-    for label, path in [("O'Reilly Taulli 2025", OREILLY_PATH), ("Wiley Elango 2025", WILEY_PATH)]:
+    for label, path in [
+        ("O'Reilly Taulli 2025", OREILLY_PATH),
+        ("Wiley Elango 2025", WILEY_PATH),
+        ("ExamPrepper 450Q", EXAMPREPPER_PATH),
+        ("CertsHero Page 1", CERTSHERO_PATH),
+    ]:
         if path.is_file():
             bk = json.load(open(path, encoding="utf-8"))
-            print(f"Loaded Private Vault Book Bank ({label}): {len(bk)} questions")
+            print(f"Loaded Vault Bank ({label}): {len(bk)} questions")
+            for rec in bk:
+                if not rec.get("sources"):
+                    rec["sources"] = [label.replace(" ", "_")]
             raw_records.extend(bk)
 
     print(f"Injecting Curated v1.2 (Oct 2026) Gap-Fill Questions: {len(V12_CURATED_QUESTIONS)}")
