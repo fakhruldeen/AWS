@@ -35,10 +35,20 @@ flowchart TD
 ```text
 AI/Practitioner/AIF-C01/
 ├── README.md                                             <-- Master Course Portal (This File)
+├── 00_START_HERE.md                                      <-- 10-Day Student Study Dashboard
+├── QUICK_REVISION_POINTS.md                              <-- Full-Course Bullet-Only Cram Sheet (v1.2)
+├── AWS_AI_SERVICES_GLOSSARY.md                           <-- Complete In-Scope AWS AI Services Anchor Glossary
+├── AIF_C01_TOPIC_TAXONOMY_AND_DEDUPLICATION_REPORT.md    <-- 4-Tier Question Bank Taxonomy & Deduplication Report
 │
-├── 01_Syllabus/                              <-- Official Blueprint & Course Syllabus
+├── 01_Syllabus/                              <-- Official Blueprint & Per-Domain v1.2 Syllabus
 │   ├── AIF-C01_Course_Syllabus.md                        (Pedagogical outline & timeline)
-│   └── AIF-C01_Exam_Guide_and_Blueprint.md               (Official v1.2 Exam Guide & Domains)
+│   ├── AIF-C01_Exam_Guide_and_Blueprint.md               (Official v1.2 Exam Guide & Domains)
+│   ├── Domain_1_AI_ML_Fundamentals.md                    (Task Statements 1.1–1.3)
+│   ├── Domain_2_GenAI_Fundamentals.md                    (Task Statements 2.1–2.3)
+│   ├── Domain_3_Foundation_Models_Applications.md        (Task Statements 3.1–3.4)
+│   ├── Domain_4_Responsible_AI.md                        (Task Statements 4.1–4.2)
+│   ├── Domain_5_Security_Compliance_Governance.md        (Task Statements 5.1–5.2)
+│   └── SkillBuilder_Prep_Plan.md                         (Official AWS Skill Builder Roadmap)
 │
 ├── 02_Prerequisites/                         <-- Machine Learning & Data Science Foundations
 │   ├── README.md                                         (Prerequisites master index)
@@ -125,18 +135,30 @@ AI/Practitioner/AIF-C01/
 │   ├── Module_04_Responsible_AI_Knowledge_Check.md       (10 Questions + Key)
 │   └── Module_05_Security_Compliance_and_Governance_Knowledge_Check.md (10 Questions + Key)
 │
-├── 11_Practice_Exams/                    <-- Revision Questions & Full Mock Exam
+├── 11_Practice_Exams/                    <-- Revision Questions, Top 300, Ordering/Matching & Mocks
 │   ├── README.md                                         (Revision suite index)
-│   ├── Domain_1_AI_ML_Fundamentals_Revision.md           (15 Questions)
-│   ├── Domain_2_Generative_AI_Fundamentals_Revision.md   (15 Questions)
-│   ├── Domain_3_Applications_of_Foundation_Models_Revision.md (15 Questions)
-│   ├── Domain_4_Responsible_AI_Guidelines_Revision.md    (15 Questions)
-│   ├── Domain_5_Security_Compliance_Governance_Revision.md (15 Questions)
-│   └── AIF_C01_Full_Length_Mock_Exam.md                  (Official 65-Question Timed Simulation)
+│   ├── AIF_C01_Top_300_Most_Frequent_Exam_Questions.md   (Top 300 High-Yield Consensus Questions + JSON)
+│   ├── AIF_C01_Ordering_and_Matching_Drills.md           (Official Ordering & Matching Question Drills)
+│   ├── Domain_1_AI_ML_Fundamentals_Revision.md           (Domain 1 Drill)
+│   ├── Domain_2_Generative_AI_Fundamentals_Revision.md   (Domain 2 Drill)
+│   ├── Domain_3_Applications_of_Foundation_Models_Revision.md (Domain 3 Drill)
+│   ├── Domain_4_Responsible_AI_Guidelines_Revision.md    (Domain 4 Drill)
+│   ├── Domain_5_Security_Compliance_Governance_Revision.md (Domain 5 Drill)
+│   ├── AIF_C01_Full_Length_Mock_Exam.md                  (Mock Exam #1 — 65Q / 90 min)
+│   └── AIF_C01_Full_Length_Mock_Exam_2_v1.2.md           (Mock Exam #2 — 65Q / 90 min v1.2)
 │
-└── 12_Sources/                               <-- Deep-Dive Reference Textbooks (Offline Literature)
-    ├── README.md                                         (Literature citation index & reading guides)
-    └── [Authoritative EPUBs & PDFs]                      (Wiley, O'Reilly, Official Guide)
+├── 12_Sources/                               <-- Literature Citation Index (Books kept strictly private)
+│   └── README.md                                         (Bibliography & reading map)
+│
+└── Ar/                                       <-- Comprehensive Arabic (RTL) Study Guide (8 Modules)
+    ├── README.md                                         (Arabic Index & 10-Day Study Plan)
+    ├── 00_Prerequisites_Asasiyat_AlAI_walML.md           (AI/ML/DL/GenAI/Agentic Foundations)
+    ├── 01_Domain_1_Fundamentals_of_AI_and_ML.md          (Domain 1 — 20%)
+    ├── 02_Domain_2_Fundamentals_of_GenAI.md              (Domain 2 — 24%)
+    ├── 03_Domain_3_Applications_of_Foundation_Models.md  (Domain 3 — 28%)
+    ├── 04_Domain_4_Responsible_AI.md                     (Domain 4 — 14%)
+    ├── 05_Domain_5_Security_Compliance_and_Governance.md (Domain 5 — 14%)
+    └── 06_Exam_Tricks_and_Comparison_CheatSheet.md       (X vs Y Matrix & Exam Tactics)
 ```
 
 ---

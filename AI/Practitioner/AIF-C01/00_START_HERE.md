@@ -183,18 +183,23 @@ flowchart TD
 ### 📅 Day 10: Master Review, 233Q Community Pool & Timed Mocks
 *Consolidate pattern recognition, drill high-yield trap questions, and sit for a full-length 65-question timed mock exam.*
 
-- [ ] **Step 1 (Master Cheatsheets & Mnemonics):**
+- [ ] **Step 1 (Master Cheatsheets, Glossary & Mnemonics):**
+  - [ ] Rapid cram sheet: [`QUICK_REVISION_POINTS.md`](./QUICK_REVISION_POINTS.md)
+  - [ ] In-scope services anchor glossary: [`AWS_AI_SERVICES_GLOSSARY.md`](./AWS_AI_SERVICES_GLOSSARY.md)
   - [ ] Read [`09_Notes_and_Cheatsheets/06_AIF-C01_Exam_CheatSheet.md`](./09_Notes_and_Cheatsheets/06_AIF-C01_Exam_CheatSheet.md)
   - [ ] Memorize [`09_Notes_and_Cheatsheets/Exam_Decryption_Playbook_and_Mnemonics.md`](./09_Notes_and_Cheatsheets/Exam_Decryption_Playbook_and_Mnemonics.md)
-- [ ] **Step 2 (High-Yield Focus Sets):**
-  - [ ] Review [`11_Practice_Exams/Community_High_Yield_Focus_Set.md`](./11_Practice_Exams/Community_High_Yield_Focus_Set.md)
-  - [ ] Work through [`11_Practice_Exams/AIF_C01_Community_Practice_Pool_233Q.md`](./11_Practice_Exams/AIF_C01_Community_Practice_Pool_233Q.md)
+  - [ ] Arabic RTL Study Guide: [`Ar/README.md`](./Ar/README.md)
+- [ ] **Step 2 (High-Yield Focus Sets, Top 300 & Ordering/Matching):**
+  - [ ] Drill the 4-tier ranked [`11_Practice_Exams/AIF_C01_Top_300_Most_Frequent_Exam_Questions.md`](./11_Practice_Exams/AIF_C01_Top_300_Most_Frequent_Exam_Questions.md)
+  - [ ] Master official non-MCQ formats: [`11_Practice_Exams/AIF_C01_Ordering_and_Matching_Drills.md`](./11_Practice_Exams/AIF_C01_Ordering_and_Matching_Drills.md)
+  - [ ] Review [`11_Practice_Exams/Community_High_Yield_Focus_Set.md`](./11_Practice_Exams/Community_High_Yield_Focus_Set.md) & [`AIF_C01_TOPIC_TAXONOMY_AND_DEDUPLICATION_REPORT.md`](./AIF_C01_TOPIC_TAXONOMY_AND_DEDUPLICATION_REPORT.md)
   - [ ] Run community questions interactively:
     ```bash
     python3 scripts/aws_revision_runner.py --cert AIF --community --mode practice -n 25 --tricks
     ```
-- [ ] **Step 3 (Full-Length Timed Mock Exam):**
-  - [ ] Sit for the 65-question practice exam: [`11_Practice_Exams/AIF_C01_Full_Length_Mock_Exam.md`](./11_Practice_Exams/AIF_C01_Full_Length_Mock_Exam.md)
+- [ ] **Step 3 (Full-Length Timed Mock Exams — 65Q / 90 Minutes):**
+  - [ ] Sit for Mock Exam #1: [`11_Practice_Exams/AIF_C01_Full_Length_Mock_Exam.md`](./11_Practice_Exams/AIF_C01_Full_Length_Mock_Exam.md)
+  - [ ] Sit for Mock Exam #2 (`v1.2 Oct 2026`): [`11_Practice_Exams/AIF_C01_Full_Length_Mock_Exam_2_v1.2.md`](./11_Practice_Exams/AIF_C01_Full_Length_Mock_Exam_2_v1.2.md)
   - [ ] Execute the official timed exam simulation CLI:
     ```bash
     python3 scripts/aws_revision_runner.py --cert AIF --mode mock

@@ -358,9 +358,30 @@ AIF_MANIFEST = {
         "AI/Practitioner/AIF-C01/09_Notes_and_Cheatsheets/03_Amazon_Bedrock_and_RAG.md",
         "AI/Practitioner/AIF-C01/09_Notes_and_Cheatsheets/06_AIF-C01_Exam_CheatSheet.md",
         "AI/Practitioner/AIF-C01/09_Notes_and_Cheatsheets/Exam_Decryption_Playbook_and_Mnemonics.md",
+        "AI/Practitioner/AIF-C01/QUICK_REVISION_POINTS.md",
+        "AI/Practitioner/AIF-C01/AWS_AI_SERVICES_GLOSSARY.md",
         "AI/Practitioner/AIF-C01/08_Tutorials/Tutorial_01_Enterprise_RAG_Knowledge_Base_Architecture.md",
         "AI/Practitioner/AIF-C01/08_Tutorials/Tutorial_02_Multi_Agent_Autonomous_System_with_Bedrock_AgentCore_and_MCP.md",
         "AI/Practitioner/AIF-C01/08_Tutorials/Tutorial_06_Serverless_Generative_AI_App_Bedrock_APIGateway_Lambda.md",
+    ]
+}
+
+AIF_AR_MANIFEST = {
+    "cert_code": "AIF-C01-Ar",
+    "title": "AWS Certified AI Practitioner (AIF-C01) — Arabic Handbook",
+    "cover_title": "الدليل العربي الشامل لشهادة AWS Certified AI Practitioner (AIF-C01)",
+    "subtitle": "شرح تفصيلي ومنهجي للذكاء الاصطناعي التوليدي وتعلم الآلة وخدمات AWS وفق دليل الاختبار v1.2 (2026)",
+    "rtl": True,
+    "lang": "ar",
+    "sources": [
+        "AI/Practitioner/AIF-C01/Ar/README.md",
+        "AI/Practitioner/AIF-C01/Ar/00_Prerequisites_Asasiyat_AlAI_walML.md",
+        "AI/Practitioner/AIF-C01/Ar/01_Domain_1_Fundamentals_of_AI_and_ML.md",
+        "AI/Practitioner/AIF-C01/Ar/02_Domain_2_Fundamentals_of_GenAI.md",
+        "AI/Practitioner/AIF-C01/Ar/03_Domain_3_Applications_of_Foundation_Models.md",
+        "AI/Practitioner/AIF-C01/Ar/04_Domain_4_Responsible_AI.md",
+        "AI/Practitioner/AIF-C01/Ar/05_Domain_5_Security_Compliance_and_Governance.md",
+        "AI/Practitioner/AIF-C01/Ar/06_Exam_Tricks_and_Comparison_CheatSheet.md",
     ]
 }
 
@@ -735,7 +756,7 @@ def generate_manifest():
 
 def main():
     parser = argparse.ArgumentParser(description="AWS Delivery Artifacts Packaging Engine")
-    parser.add_argument("--cert", choices=["CLF", "CLF-AR", "AIF", "ALL"], default="ALL", help="Target certification")
+    parser.add_argument("--cert", choices=["CLF", "CLF-AR", "AIF", "AIF-AR", "ALL"], default="ALL", help="Target certification")
     parser.add_argument("--target", choices=["handbook", "slides", "all"], default="all", help="Target component")
     parser.add_argument("--format", choices=["pdf", "epub", "html", "all"], default="all", help="Target format")
     args = parser.parse_args()
@@ -747,6 +768,8 @@ def main():
         certs.append(("CLF-C02-Ar", CLF_AR_MANIFEST, False))
     if args.cert in ["AIF", "ALL"]:
         certs.append(("AIF-C01", AIF_MANIFEST, True))
+    if args.cert in ["AIF-AR", "ALL"]:
+        certs.append(("AIF-C01-Ar", AIF_AR_MANIFEST, False))
 
     for cert_code, manifest, has_slides in certs:
         if args.target in ["handbook", "all"]:

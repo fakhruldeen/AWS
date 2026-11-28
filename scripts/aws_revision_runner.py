@@ -95,7 +95,7 @@ MOCK_DISTRIBUTION = {
 
 MOCK_TIME_LIMIT_MINUTES = {
     "CLF": 90,
-    "AIF": 85,
+    "AIF": 90,
     "MLA": 130,
     "SAA": 130,
 }
@@ -104,6 +104,49 @@ MOCK_TIME_LIMIT_MINUTES = {
 # EXAM DECRYPTION & MNEMONIC TRIGGERS DATABASE
 # =====================================================================
 TRIGGERS_DB = [
+    # AIF-C01 v1.2 Generative AI, RAG, Agents & Responsible AI Triggers
+    {
+        "patterns": [r"up-to-date\w*.*document", r"proprietary\w*.*citation", r"knowledge base", r"\brag\b"],
+        "target": "Retrieval-Augmented Generation (RAG) / Amazon Bedrock Knowledge Bases",
+        "mnemonic": "RAG = Fresh Facts + Citations Without Retraining.",
+        "trap": "Do NOT choose Fine-Tuning or Continued Pre-Training when company documents change frequently and require citations."
+    },
+    {
+        "patterns": [r"distill\w*", r"smaller.*faster.*cheaper", r"teacher.*student"],
+        "target": "Model Distillation (Amazon Bedrock)",
+        "mnemonic": "Distillation = Large Teacher quality compressed into a fast, low-cost Student model.",
+        "trap": "Don't confuse Model Distillation (smaller custom model) with Prompt Caching (reusing static input prefixes)."
+    },
+    {
+        "patterns": [r"static.*prefix", r"repeated.*system prompt", r"prompt caching"],
+        "target": "Amazon Bedrock Prompt Caching",
+        "mnemonic": "Prompt Caching = Cache repeated static prefixes to slash input token cost & latency.",
+        "trap": "Prompt Caching does not change model weights; it optimizes repeated context prefixes."
+    },
+    {
+        "patterns": [r"agentcore", r"policy in agentcore", r"agent.*identity", r"scoped credential"],
+        "target": "Amazon Bedrock AgentCore (Identity & Policy)",
+        "mnemonic": "AgentCore Identity = OAuth/IAM delegation; Policy in AgentCore = deterministic allow/forbid tool enforcement.",
+        "trap": "Guardrails filter text content/PII; AgentCore Identity & Policy govern agent credentials and tool execution."
+    },
+    {
+        "patterns": [r"denied topic", r"redact.*pii", r"contextual grounding", r"bedrock guardrails"],
+        "target": "Amazon Bedrock Guardrails",
+        "mnemonic": "Guardrails = Runtime Shield (Content Filters, Denied Topics, PII Redaction, Contextual Grounding).",
+        "trap": "SageMaker Clarify measures bias/SHAP during dev/eval; Bedrock Guardrails enforce runtime safety on prompts/outputs."
+    },
+    {
+        "patterns": [r"\bclarify\b", r"\bshap\b", r"disparate impact", r"class imbalance"],
+        "target": "Amazon SageMaker Clarify",
+        "mnemonic": "Clarify = Pre/Post-training Bias Detection + SHAP Feature Attribution Explainability.",
+        "trap": "Clarify detects bias & explains features; Model Cards document governance; Guardrails filter GenAI runtime I/O."
+    },
+    {
+        "patterns": [r"\brouge\b", r"\bbleu\b", r"bertscore", r"llm-as-a-judge"],
+        "target": "FM Evaluation Metrics (ROUGE / BLEU / BERTScore / LLM-as-a-Judge)",
+        "mnemonic": "ROUGE = Summarization (Recall) • BLEU = Translation (Precision) • BERTScore = Semantic Embeddings • LLM-as-a-Judge = Open-ended at scale.",
+        "trap": "Never pick BLEU for summarization or ROUGE for exact semantic paraphrase evaluation."
+    },
     # Messaging & Decoupling
     {
         "patterns": [r"decouple\w*", r"asynchronous\w*", r"queue\w*", r"buffer\w* spikes"],
