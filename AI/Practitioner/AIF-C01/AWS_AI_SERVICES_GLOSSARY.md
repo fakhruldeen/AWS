@@ -14,6 +14,7 @@
 - [Security, Identity & Compliance](#-security-identity--compliance)
 - [Management, Governance & FinOps](#-management-governance--finops)
 - [Networking & Content Delivery](#-networking--content-delivery)
+- [Core AI, ML, Deep Learning & GenAI Terminology](#-core-ai-ml-deep-learning--genai-terminology)
 
 ---
 
@@ -246,3 +247,34 @@
 ### Amazon CloudFront
 - **What it is:** Global Content Delivery Network (`CDN`) caching static/dynamic content and routing API requests at 600+ Edge Locations with low latency.
 - **When to use it:** To accelerate global user access to AI web applications and protect front-end GenAI endpoints at the edge.
+
+---
+
+## 🧠 Core AI, ML, Deep Learning & GenAI Terminology
+
+### Neural Network Architectures (`CNN`, `RNN`, `GAN`, `VAE`, `Transformer`, `Diffusion`)
+- **Convolutional Neural Network (`CNN`):** Deep learning architecture specialized for grid/spatial data such as **image classification, object detection, and computer vision**.
+- **Recurrent Neural Network (`RNN` / `LSTM`):** Sequential neural network processing ordered data step-by-step (time-series, speech); largely superseded in NLP by Transformers.
+- **Generative Adversarial Network (`GAN`):** Two competing neural networks — a **Generator** (creates synthetic data/images) and a **Discriminator** (distinguishes real vs. fake) — trained together.
+- **Variational Autoencoder (`VAE`):** Probabilistic encoder-decoder generative model that compresses data into a continuous latent space and samples new realistic variations.
+- **Transformer:** Modern self-attention architecture that processes entire token sequences in parallel, powering all modern `LLMs` and multimodal `Foundation Models`.
+- **Diffusion Model:** Generative architecture that creates high-resolution images/video by learning to reverse an iterative Gaussian noise-addition process.
+
+### Training, Parameters & Data Preparation
+- **Backpropagation:** Core neural-network training algorithm that computes error gradients backward from output to input layers so weights can be updated to minimize loss.
+- **Parameter vs. Hyperparameter:** **Parameters** (weights, biases) are *learned automatically* by the model during training; **Hyperparameters** (learning rate, batch size, number of epochs, tree depth) are *configured by engineers before training* (`Hyperparameter Optimization / HPO`).
+- **Feature Engineering:** Transforming raw data into informative model inputs (scaling, encoding categories, creating ratios, extracting date parts) to boost predictive accuracy.
+- **Lemmatization & Tokenization:** NLP preprocessing — **Lemmatization** reduces words to their dictionary root (`running` → `run`); **Tokenization** splits text into sub-word units processed by LLMs.
+- **Bias vs. Variance:** **High Bias** causes **Underfitting** (model too simple); **High Variance** causes **Overfitting** (model memorizes training noise and fails to generalize).
+- **Data Drift vs. Concept Drift:** **Data Drift** occurs when live input distributions shift from training data; **Concept Drift** occurs when the underlying relationship between inputs and target labels changes over time (detected by `SageMaker Model Monitor`).
+- **Robotic Process Automation (`RPA`) vs. Agentic AI:** `RPA` executes rigid, deterministic UI/workflow scripts on predictable screens; **Agentic AI** uses Foundation Models, memory, and `MCP` tools to reason dynamically over unstructured goals and exceptions.
+
+### GenAI Safety, Security & Governance Terms
+- **Prompt Injection / Hijacking:** Adversarial user input crafted to override a system prompt and force unauthorized FM behavior.
+- **Prompt Leaking (Exposure):** Extracting confidential system instructions, internal rules, or private RAG context from an FM.
+- **Jailbreaking:** Bypassing built-in model safety guardrails to elicit harmful or restricted outputs.
+- **Model / Data Poisoning:** Injecting malicious or corrupted samples into training data or RAG knowledge stores to degrade accuracy or implant backdoors.
+- **Defense in Depth:** Layering multiple independent security controls (`IAM`, `PrivateLink`, `KMS`, `Macie`, `Bedrock Guardrails`, `AgentCore Policy`, `CloudTrail`) so no single failure compromises the AI system.
+- **Data Lineage:** End-to-end record of where training/RAG data originated, how it was transformed, and which models consumed it.
+- **Controllability:** Responsible AI principle ensuring humans can steer, constrain, audit, or override an AI system's autonomous actions.
+- **Regression & Classification Formulas:** `MSE` / `RMSE` (penalize large numeric errors), `MAE` (average absolute error), `R²` (proportion of variance explained, `0`–`1`), `Precision` ($\frac{TP}{TP+FP}$), `Recall` ($\frac{TP}{TP+FN}$), `F1` (harmonic mean of Precision & Recall).

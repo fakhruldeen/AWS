@@ -185,7 +185,8 @@ flowchart TD
 
 - [ ] **Step 1 (Master Cheatsheets, Glossary & Mnemonics):**
   - [ ] Rapid cram sheet: [`QUICK_REVISION_POINTS.md`](./QUICK_REVISION_POINTS.md)
-  - [ ] In-scope services anchor glossary: [`AWS_AI_SERVICES_GLOSSARY.md`](./AWS_AI_SERVICES_GLOSSARY.md)
+  - [ ] Final-night mastery checklist: [`09_Notes_and_Cheatsheets/AIF-C01_Exam_Essentials_Master_Checklist.md`](./09_Notes_and_Cheatsheets/AIF-C01_Exam_Essentials_Master_Checklist.md)
+  - [ ] In-scope services & AI terminology glossary: [`AWS_AI_SERVICES_GLOSSARY.md`](./AWS_AI_SERVICES_GLOSSARY.md)
   - [ ] Read [`09_Notes_and_Cheatsheets/06_AIF-C01_Exam_CheatSheet.md`](./09_Notes_and_Cheatsheets/06_AIF-C01_Exam_CheatSheet.md)
   - [ ] Memorize [`09_Notes_and_Cheatsheets/Exam_Decryption_Playbook_and_Mnemonics.md`](./09_Notes_and_Cheatsheets/Exam_Decryption_Playbook_and_Mnemonics.md)
   - [ ] Arabic RTL Study Guide: [`Ar/README.md`](./Ar/README.md)
